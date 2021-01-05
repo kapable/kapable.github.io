@@ -5,6 +5,8 @@ import ResultToIntro from './components/ResultToIntro'
 import TESTS from './api/TESTS'
 import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 import Result from './components/Result';
+import MAINHEADER from './main-header.png'
+import { Helmet } from 'react-helmet';
 
 class App extends Component {
   constructor(props){
@@ -51,6 +53,18 @@ class App extends Component {
   render() {
     return(
     <Fragment>
+      {/* Meta tag setting */}
+      <Helmet>
+        <title>취향 분석 테스트</title>
+        <meta
+            name="description"
+            content="진짜 내 모습을 찾아가는 취향 분석 테스트 모음"
+            data-react-helmet="true"
+        />
+        <img src={MAINHEADER} alt="취향 분석 테스트 모음"/>
+        <link rel="main" href={window.location.href}/>
+      </Helmet>
+
       {this.reloadPage()}
       <Router basename="/personality-test/">
         <Switch>

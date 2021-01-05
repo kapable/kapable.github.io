@@ -132,9 +132,6 @@ body {
   margin: 0.5em;
   word-break: keep-all;
   white-space: pre-line;
-  /* background-color: #c17675; */
-  /* color: var(--font-color); */
-  /* border-color: #c17675; */
 }
 
 .question-progress {

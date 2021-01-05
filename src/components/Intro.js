@@ -6,6 +6,7 @@ import TESTS from '../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Typist from 'react-typist';
+import { Helmet } from 'react-helmet';
 
 class Intro extends Component {
     constructor(props){
@@ -163,7 +164,6 @@ class Intro extends Component {
                 <Router basename={"/personality-test/"+this.state.current_test.info.mainUrl}>
                     <Route path={this.state.result_url+final_score_query} component={Result}/>
                     <Redirect to={this.state.result_url+final_score_query} />
-                    {/* <Result result={result_contents}/> */}
                 </Router>
             )   
         }
@@ -172,6 +172,17 @@ class Intro extends Component {
     render(){
         return (
             <Fragment>
+                {/* Meta tag setting */}
+                <Helmet>
+                    <title>{this.state.current_test.info.mainTitle}-K테스트</title>
+                    <meta
+                        name="description"
+                        content={this.state.current_test.info.subTitle}
+                        data-react-helmet="true"
+                    />
+                    <img src={this.state.current_test.info.mainImage} alt={this.state.current_test.info.mainTitle}/>
+                    <link rel="eachtest" href={this.state.quiz_url}/>
+                </Helmet>
                 {this.state.mode === "intro" ? this.introPageRender() : this.quizPageRender()}
             </Fragment>
         );
