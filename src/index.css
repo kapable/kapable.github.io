@@ -48,12 +48,6 @@ body {
   margin: 2.5rem auto;
 }
 
-.logo-img {
-  float: center;
-  height: 5.5rem;
-  width: 5rem;
-}
-
 .title {
   color: var(--font-color);
   font-family: var(--title-font);
@@ -144,7 +138,7 @@ body {
 }
 
 .question-progress {
-  margin: 3rem 5rem;
+  margin: 3rem 10rem;
   position: relative;
   display: block;
 }
@@ -215,12 +209,6 @@ body {
   font-family: var(--title-font);
   margin: 1rem 0.5rem;
   color: var(--font-color);
-}
-
-.result-logo-image {
-  height: 3rem;
-  width: auto;
-  margin: 0.5rem auto;
 }
 
 .result-img {

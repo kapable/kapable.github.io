@@ -3,7 +3,6 @@ import Quiz from './Quiz'
 import Result from './Result'
 import Loading from './Loading'
 import TESTS from '../api/TESTS'
-import Logo from '../k_test_logo.png'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Typist from 'react-typist';
@@ -53,7 +52,6 @@ class Intro extends Component {
         
         return (
             <div className="intro container">
-                {/* <img className='logo-img' src={Logo} alt="rea"/> */}
                 <h1 className='title'>{_mainTitle}</h1>  
                 <h5 className='sub-title'>{_subTitle}</h5>
                 <div className='btn-positioner'></div>

@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import Intro from './Intro'
 import TESTS from '../api/TESTS'
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
-import Logo from '../k_test_logo.png'
 import App from '../App'
 import { Button, Card } from 'react-bootstrap';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
@@ -99,8 +98,7 @@ class Result extends Component {
         return(
             <div className="result">
                 <div className="result-header">
-                    {/* <img src={Logo} className="result-logo-image" alt="result_img"/> */}
-                    <h5 className="result-title">당신의 성향은</h5>
+                    <h5 className="result-title">당신의 성향은..!</h5>
                     <div className="result-value">
                         {this.resultRender()}
                     </div>

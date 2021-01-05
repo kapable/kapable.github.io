@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom'
-import Logo from '../k_test_logo.png'
 import MAINHEADER from '../main-header.png'
 import TESTS from '../api/TESTS'
 
@@ -22,7 +21,6 @@ class MainPage extends Component{
         return (
             <Fragment>
                 <div>
-                    {/* <img className='logo-img' src={Logo} alt="logo"/>    */}
                     <img className='main-header' src={MAINHEADER} alt="K-test"/>
                 </div>
                 <div className="main-link-div">
