@@ -16,13 +16,21 @@ body {
 
 /* main start */
 
+.main-header {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 400px;
+  height: 250px;
+}
+
 .main-link-div {
   margin: auto 1rem;
 }
 
 .main-link-block {
   display: inline-block;
-  margin: auto 1rem;
+  margin: auto 0.8rem;
 }
 
 .main-card {
@@ -36,17 +44,13 @@ body {
 }
 
 .test-img {
-  margin: 2rem auto;
-  height: 100px;
+  margin: 1rem auto;
+  width: 150px;
+  height: auto;
 }
 
 /* intro start */
 
-img {
-  height: 2rem;
-  width: 2rem;
-  margin: 2rem auto;
-}
 .intro {
   margin: 2.5rem auto;
 }
@@ -90,7 +94,7 @@ img {
 }
 
 .intro-footer {
-  margin: 6rem auto;
+  margin: 3rem auto;
   font-family: var(--title-font);
   color: #cecfd0;
 }
@@ -177,7 +181,7 @@ img {
 /* result start */
 .result {
   max-width: 100%;
-  margin: 3rem 1rem 1rem 1rem;
+  margin: 0rem 1rem 1rem 1rem;
   text-align: center;
   position: relative;
   display: flex;
@@ -221,9 +225,9 @@ img {
 }
 
 .result-logo-image {
-  height: 2rem;
-  width: 2rem;
-  margin: 1rem auto;
+  height: 3rem;
+  width: auto;
+  margin: 0.5rem auto;
 }
 
 .result-img {

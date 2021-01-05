@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom'
 import Logo from '../k_test_logo.png'
-import { Card } from 'react-bootstrap';
+import MAINHEADER from '../main-header.png'
 import TESTS from '../api/TESTS'
 
 class MainPage extends Component{
@@ -10,7 +10,7 @@ class MainPage extends Component{
         let i = 0;
         let _all_tests_url = [];
         while (i<TESTS.length) {
-        _all_tests_url.push(['/'+TESTS[i].info.mainUrl+'/', TESTS[i].results[0].img_src, TESTS[i].info.mainTitle])
+        _all_tests_url.push(['/'+TESTS[i].info.mainUrl+'/', TESTS[i].info.mainImage, TESTS[i].info.mainTitle])
         i = i + 1;
         }
         this.state = {
@@ -21,24 +21,15 @@ class MainPage extends Component{
     render(){
         return (
             <Fragment>
-                <div className="main container">
-                    <img className='logo-img' src={Logo} alt="rea"/>
-                    <h1 className='title'>K-test</h1>
-                    <h5 className='sub-title'>취향 분석 테스트</h5>
+                <div>
+                    <img className='logo-img' src={Logo} alt="logo"/>   
+                    <img className='main-header' src={MAINHEADER} alt="K-test"/>
                 </div>
                 <div className="main-link-div">
                     {this.state.all_tests_url.map((item)=>(
-                            <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                                <Card className="main-card">
-                                    <Card.Img
-                                        src={item[1]}
-                                        className="test-img"/>
-                                    <Card.Body>
-                                        <Card.Text>{item[2]}</Card.Text>
-                                    </Card.Body>
-                                </Card>
-                                
-                            </Link>
+                        <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
+                            <img className="test-img" src={item[1]}/>                               
+                        </Link>
                     ))}
                 </div>
             </Fragment>

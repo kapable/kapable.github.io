@@ -29,6 +29,7 @@ var TESTS = [
             subTitle:"이시국엔 집에 붙어 있자 꼭!",
             mainUrl:"zipkok",
             scoreType:"numberScoring",
+            mainImage:"https://dl.dropboxusercontent.com/s/m5f6f8df57f4qdf/zipkok-main.png?dl=0"
         },
         questions:[
             {
@@ -269,6 +270,7 @@ var TESTS = [
             subTitle:"내가 강아지 라면?",
             mainUrl:"daengdaeng",
             scoreType:"typeCounting",
+            mainImage:"https://dl.dropboxusercontent.com/s/lbvs0wpqhf9ohno/daengdaeng-main.png?dl=0"
         },
         questions:[
             {

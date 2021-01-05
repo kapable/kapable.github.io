@@ -39,9 +39,6 @@ class App extends Component {
       final_render_routes:_final_render_routes,
     }
   }
-  // componentDidMount(){
-  //   window.location.reload();
-  // }
 
   reloadPage() { 
     var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
@@ -57,10 +54,12 @@ class App extends Component {
       {this.reloadPage()}
       <Router basename="/personality-test/">
         <Switch>
+
           {/* "Main" page */}
           <Route path='/' exact>
               <MainPage/>
           </Route>
+
           {/* go to "Intro" page */}
           {this.state.all_tests_url.map((item)=>(
             <Route
@@ -83,6 +82,7 @@ class App extends Component {
           ))}
         </Switch>
       </Router>
+
       {/* footer */}
       <div className="intro-footer">
           <p>MAKER - 케이테스트</p>
