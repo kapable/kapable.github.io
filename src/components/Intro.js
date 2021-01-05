@@ -26,6 +26,10 @@ class Intro extends Component {
         for(j=0;j<_current_test.questions[0].answers.length;j++) {
             _answer_type_obj[_current_test.questions[0].answers[j].type] = 0;
         };
+        // for randomizing participants number(range)
+        let min = 1402052;
+        let max = 2000000;
+        
         this.state = {
             mode:'intro',
             current_test:_current_test,
@@ -36,6 +40,7 @@ class Intro extends Component {
             counted_score:0, // < ------------- for calculating scores
             result_url:'/result/',
             quiz_url:window.location.href,
+            participants:Math.trunc((Math.random() * (max - min) + min)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
     }
@@ -57,7 +62,7 @@ class Intro extends Component {
                 <h5 className='sub-title'>{_subTitle}</h5>
                 <div className='btn-positioner'></div>
                 <Typist className="start-btn-participants">
-                    현재 총 1,402,052명이 참여했어요.
+                    현재 총 {this.state.participants}명이 참여했어요.
                 </Typist>
                 <div className="start-btn-div">
                     <Button
