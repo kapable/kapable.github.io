@@ -52,7 +52,6 @@ class App extends Component {
   render() {
     return(
     <Fragment>
-      {/* Meta tag setting */}
       <Helmet>        
         {/* <!-- Primary Meta Tags --> */}
         <title>취향 분석 테스트</title>

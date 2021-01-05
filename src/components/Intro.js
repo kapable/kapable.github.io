@@ -172,7 +172,6 @@ class Intro extends Component {
     render(){
         return (
             <Fragment>
-                {/* Meta tag setting */}
                 <Helmet>
                     {/* <!-- Primary Meta Tags --> */}
                     <title>{this.state.current_test.info.mainTitle}-K테스트</title>
