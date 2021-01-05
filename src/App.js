@@ -54,15 +54,28 @@ class App extends Component {
     return(
     <Fragment>
       {/* Meta tag setting */}
-      <Helmet>
+      <Helmet>        
+        {/* <!-- Primary Meta Tags --> */}
         <title>취향 분석 테스트</title>
-        <meta
-            name="description"
-            content="진짜 내 모습을 찾아가는 취향 분석 테스트 모음"
-            data-react-helmet="true"
-        />
-        <img src={MAINHEADER} alt="취향 분석 테스트 모음"/>
+        <meta name="title" content="취향 분석 테스트"/>
+        <meta name="description" content="진짜 내 모습을 찾아가는 취향 분석 테스트 모음" data-react-helmet="true"/>
         <link rel="main" href={window.location.href}/>
+          
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://kapable.github.io/personality-test/"/>
+        <meta property="og:title" content="취향 분석 테스트"/>
+        <meta property="og:description" content="진짜 내 모습을 찾아가는 취향 분석 테스트 모음"/>
+        <meta property="og:image" content={MAINHEADER}/>
+        <meta property="og:image:alt" content="진짜 내 모습을 찾아가는 취향 분석 테스트 모음" />
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://kapable.github.io/personality-test/"/>
+        <meta property="twitter:title" content="취향 분석 테스트"/>
+        <meta property="twitter:description" content="진짜 내 모습을 찾아가는 취향 분석 테스트 모음"/>
+        <meta property="twitter:image" content={MAINHEADER}/>
+        <meta property="twitter:image:alt" content="진짜 내 모습을 찾아가는 취향 분석 테스트 모음" />
       </Helmet>
 
       {this.reloadPage()}
