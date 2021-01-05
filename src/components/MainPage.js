@@ -14,7 +14,7 @@ class MainPage extends Component{
         i = i + 1;
         }
         this.state = {
-            all_tests_url:_all_tests_url,
+            all_tests_url:_all_tests_url.reverse(), // order tests with newly date order
         }
     }
 
