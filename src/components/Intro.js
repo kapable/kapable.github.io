@@ -174,14 +174,27 @@ class Intro extends Component {
             <Fragment>
                 {/* Meta tag setting */}
                 <Helmet>
+                    {/* <!-- Primary Meta Tags --> */}
                     <title>{this.state.current_test.info.mainTitle}-K테스트</title>
-                    <meta
-                        name="description"
-                        content={this.state.current_test.info.subTitle}
-                        data-react-helmet="true"
-                    />
-                    <img src={this.state.current_test.info.mainImage} alt={this.state.current_test.info.mainTitle}/>
-                    <link rel="eachtest" href={this.state.quiz_url}/>
+                    <meta name="title" content={this.state.current_test.info.mainTitle+'-K테스트'}/>
+                    <meta name="description" content={this.state.current_test.info.subTitle} data-react-helmet="true"/>
+                    <link rel="main-url" href={this.state.quiz_url}/>
+                    
+                    {/* <!-- Open Graph / Facebook --> */}
+                    <meta property="og:type" content="website"/>
+                    <meta property="og:url" content={this.state.quiz_url}/>
+                    <meta property="og:title" content={this.state.current_test.info.mainTitle}/>
+                    <meta property="og:description" content={this.state.current_test.info.subTitle}/>
+                    <meta property="og:image" content={this.state.current_test.info.mainImage}/>
+                    <meta property="og:image:alt" content={this.state.current_test.info.mainTitle} />
+
+                    {/* <!-- Twitter --> */}
+                    <meta property="twitter:card" content="summary_large_image"/>
+                    <meta property="twitter:url" content={this.state.quiz_url}/>
+                    <meta property="twitter:title" content={this.state.current_test.info.mainTitle}/>
+                    <meta property="twitter:description" content={this.state.current_test.info.subTitle}/>
+                    <meta property="twitter:image" content={this.state.current_test.info.mainImage}/>
+                    <meta property="twitter:image:alt" content={this.state.current_test.info.mainTitle} />
                 </Helmet>
                 {this.state.mode === "intro" ? this.introPageRender() : this.quizPageRender()}
             </Fragment>
