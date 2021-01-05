@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/personality-test/static/css/main.69488593.chunk.css",
-    "main.js": "/personality-test/static/js/main.322d8ffa.chunk.js",
-    "main.js.map": "/personality-test/static/js/main.322d8ffa.chunk.js.map",
+    "main.js": "/personality-test/static/js/main.18c01275.chunk.js",
+    "main.js.map": "/personality-test/static/js/main.18c01275.chunk.js.map",
     "runtime-main.js": "/personality-test/static/js/runtime-main.5a8614fc.js",
     "runtime-main.js.map": "/personality-test/static/js/runtime-main.5a8614fc.js.map",
-    "static/js/2.73e06920.chunk.js": "/personality-test/static/js/2.73e06920.chunk.js",
-    "static/js/2.73e06920.chunk.js.map": "/personality-test/static/js/2.73e06920.chunk.js.map",
+    "static/js/2.3e76cdbd.chunk.js": "/personality-test/static/js/2.3e76cdbd.chunk.js",
+    "static/js/2.3e76cdbd.chunk.js.map": "/personality-test/static/js/2.3e76cdbd.chunk.js.map",
     "static/js/3.9e1b1bcd.chunk.js": "/personality-test/static/js/3.9e1b1bcd.chunk.js",
     "static/js/3.9e1b1bcd.chunk.js.map": "/personality-test/static/js/3.9e1b1bcd.chunk.js.map",
     "index.html": "/personality-test/index.html",
     "static/css/main.69488593.chunk.css.map": "/personality-test/static/css/main.69488593.chunk.css.map",
-    "static/js/2.73e06920.chunk.js.LICENSE.txt": "/personality-test/static/js/2.73e06920.chunk.js.LICENSE.txt",
+    "static/js/2.3e76cdbd.chunk.js.LICENSE.txt": "/personality-test/static/js/2.3e76cdbd.chunk.js.LICENSE.txt",
     "static/media/main-header.28536f9e.png": "/personality-test/static/media/main-header.28536f9e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5a8614fc.js",
-    "static/js/2.73e06920.chunk.js",
+    "static/js/2.3e76cdbd.chunk.js",
     "static/css/main.69488593.chunk.css",
-    "static/js/main.322d8ffa.chunk.js"
+    "static/js/main.18c01275.chunk.js"
   ]
 }
