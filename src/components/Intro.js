@@ -162,7 +162,7 @@ class Intro extends Component {
             let final_score_query = result_contents.query // <----------------query export
             
             return(
-                <Router basename={"/personality_test_app/"+this.state.current_test.info.mainUrl}>
+                <Router basename={"/personality-test/"+this.state.current_test.info.mainUrl}>
                     <Route path={this.state.result_url+final_score_query} component={Result}/>
                     <Redirect to={this.state.result_url+final_score_query} />
                     {/* <Result result={result_contents}/> */}

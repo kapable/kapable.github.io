@@ -19,7 +19,7 @@ class ResultToIntro extends Component {
     }
     introPageRender(){
         return(
-            <Router basename="/personality_test_app/">
+            <Router basename="/personality-test/">
                 <Switch>
                     <Route path={this.state.test_main_url} component={Intro} exact/>
                     <Redirect to={this.state.test_main_url} />
