@@ -30,23 +30,13 @@ body {
 
 .main-link-block {
   display: inline-block;
-  margin: auto 0.8rem;
+  margin: auto 1rem;
 }
 
-.main-card {
-  margin: 2rem auto;
-  width: 150px;
-  height: 240px;
-  color: var(--bg-color);
-  border-radius: 7%;
-  background-color: #c17675;
-  font-family: var(--title-font);
-}
-
-.test-img {
+.test-main-img {
   margin: 1rem auto;
-  width: 150px;
-  height: auto;
+  height: 220px;
+  width: auto;
 }
 
 /* intro start */
@@ -232,7 +222,7 @@ body {
 
 .result-img {
   height: auto;
-  width: 18rem;
+  width: 20rem;
   margin: 1rem auto 0rem;
   font-family: var(--title-font);
   color: var(--font-color);
