@@ -99,7 +99,7 @@ class Result extends Component {
         return(
             <div className="result">
                 <div className="result-header">
-                    <img src={Logo} className="result-logo-image" alt="result_img"/>
+                    {/* <img src={Logo} className="result-logo-image" alt="result_img"/> */}
                     <h5 className="result-title">당신의 성향은</h5>
                     <div className="result-value">
                         {this.resultRender()}

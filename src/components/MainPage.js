@@ -22,7 +22,7 @@ class MainPage extends Component{
         return (
             <Fragment>
                 <div>
-                    <img className='logo-img' src={Logo} alt="logo"/>   
+                    {/* <img className='logo-img' src={Logo} alt="logo"/>    */}
                     <img className='main-header' src={MAINHEADER} alt="K-test"/>
                 </div>
                 <div className="main-link-div">

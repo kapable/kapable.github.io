@@ -53,7 +53,7 @@ class Intro extends Component {
         
         return (
             <div className="intro container">
-                <img className='logo-img' src={Logo} alt="rea"/>
+                {/* <img className='logo-img' src={Logo} alt="rea"/> */}
                 <h1 className='title'>{_mainTitle}</h1>  
                 <h5 className='sub-title'>{_subTitle}</h5>
                 <div className='btn-positioner'></div>

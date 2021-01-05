@@ -25,17 +25,20 @@ body {
 }
 
 .main-link-div {
-  margin: auto 1rem;
+  margin: auto 0;
+  max-width: 360;
 }
 
 .main-link-block {
   display: inline-block;
   margin: auto 1rem;
+  max-width: 360;
 }
 
 .test-main-img {
   margin: 1rem auto;
-  height: 220px;
+  height: 11.1rem;
+  max-width: 320px;
   width: auto;
 }
 
