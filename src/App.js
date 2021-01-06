@@ -81,7 +81,7 @@ class App extends Component {
       </Helmet>
 
       {this.reloadPage()}
-      <Router basename='/k-test/'>
+      <Router basename='/kapable.github.io/'>
         <Switch>
 
           {/* "Main" page */}
