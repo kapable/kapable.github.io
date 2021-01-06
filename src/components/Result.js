@@ -82,7 +82,7 @@ class Result extends Component {
 
     mainPageRender(){
         return(
-            <Router basename='/k-test/'> 
+            <Router > 
                 <Switch>
                     <Route path='/' component={App} exact/>
                     <Redirect to='/' />
