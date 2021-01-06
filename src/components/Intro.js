@@ -83,7 +83,7 @@ class Intro extends Component {
                     </Button>
                 </div>
                 <div className="test-intro-with-friend">
-                    <h5>친구와 함께 해보기</h5>
+                    <h5>친구들과 함께 해보기</h5>
                     <CopyToClipboard text={this.state.quiz_url}>
                         <Button 
                             className="test-intro-with-friend-btn"

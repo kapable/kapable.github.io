@@ -75,7 +75,7 @@ body {
 }
 
 .test-intro-with-friend {
-  margin: 3rem auto 1rem;
+  margin: 3.5rem auto 1rem;
   font-family: var(--title-font);
 }
 
@@ -87,7 +87,8 @@ body {
   margin-top: 2.5rem;
   height: 2.5rem;
   font-family: var(--title-font);
-  opacity: 80%;
+  background-color: #cecfd0;
+  border-color: #cecfd0;
 }
 
 .start-btn-participants {
