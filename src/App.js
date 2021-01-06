@@ -53,11 +53,13 @@ class App extends Component {
   render() {
     return(
     <Fragment>
+      {/* Kakao Adfit Script */}
       <ins class="kakao_ad_area" style={{display:"none" }}
             data-ad-unit    = "DAN-5uTvHF7JYzWKUe3H" 
             data-ad-width   = "320" 
             data-ad-height  = "50"></ins> 
       <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+      
       <Helmet>        
         {/* <!-- Primary Meta Tags --> */}
         <title>취향 분석 테스트</title>
