@@ -150,7 +150,6 @@ class Result extends Component {
         return(
             <div>
                 {this.pageRenderer()}
-                {/* {this.state.mode === "result" ? this.resultPageRender() : this.introPageRender()} */}
             </div>
         );
     }

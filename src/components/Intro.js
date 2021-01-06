@@ -6,6 +6,7 @@ import TESTS from '../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Typist from 'react-typist';
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Helmet } from 'react-helmet';
 
 class Intro extends Component {
@@ -43,11 +44,18 @@ class Intro extends Component {
             participants:Math.trunc((Math.random() * (max - min) + min)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
+        this._onMainButtonClick = this._onMainButtonClick.bind(this);
     }
 
     _onStartButtonClick(){
         this.setState({
             mode:'quiz'
+        })
+    }
+
+    _onMainButtonClick(){
+        this.setState({
+            mode:'main'
         })
     }
 
@@ -73,6 +81,23 @@ class Intro extends Component {
                         bsPrefix="btn"
                     >시작하기
                     </Button>
+                </div>
+                <div className="test-intro-with-friend">
+                    <h5>친구와 함께 해보기</h5>
+                    <CopyToClipboard text={this.state.quiz_url}>
+                        <Button 
+                            className="test-intro-with-friend-btn"
+                            variant="dark"
+                            onClick={function(){alert("링크가 복사됐어요!")}}>🔗 테스트 링크 복사</Button>
+                    </CopyToClipboard>
+                </div>
+                <div className="test-intro-to-main">
+                    <Button
+                        onClick={this._onMainButtonClick}
+                        variant="dark"
+                        className="test-intro-to-main-btn"
+                        bsPrefix="btn"
+                    >⇦ 다른 테스트 하러 뒤로가기</Button>
                 </div>
             </div>
         );
@@ -150,28 +175,47 @@ class Intro extends Component {
                 // do nothing yet but exception handling 
             }
             return this._page
-            
-        } else if(this.state.mode === "loading"){
-            return(
-                <div className="loading-upper">
-                    <Loading />
-                    {setTimeout(function(){
-                        this.setState({mode:"result"})
-                    }.bind(this), 2700)}
-                </div>
-            )
-        } else if(this.state.mode === "result"){
-            // go to result page
-            let result_contents = this.resultCaculator();
-            let final_score_query = result_contents.query // <----------------query export
-            
-            return(
-                <Router basename={"/personality-test/"+this.state.current_test.info.mainUrl}>
-                    <Route path={this.state.result_url+final_score_query} component={Result}/>
-                    <Redirect to={this.state.result_url+final_score_query} />
-                </Router>
-            )   
+        } 
+    }
+
+    lodingPageRender(){
+        return(
+            <div className="loading-upper">
+                <Loading />
+                {setTimeout(function(){
+                    this.setState({mode:"result"})
+                }.bind(this), 2700)}
+            </div>
+        )
+    }
+
+    resultPageRender(){
+        // go to result page
+        let result_contents = this.resultCaculator();
+        let final_score_query = result_contents.query // <----------------query export
+        
+        return(
+            <Router basename={"/personality-test/"+this.state.current_test.info.mainUrl}>
+                <Route path={this.state.result_url+final_score_query} component={Result}/>
+                <Redirect to={this.state.result_url+final_score_query} />
+            </Router>
+        )   
+    }
+
+    pageRenderer(){
+        let _page = []
+        if(this.state.mode === "intro") {
+            _page = this.introPageRender()
+        } else if (this.state.mode === "quiz") {
+            _page =  this.quizPageRender()
+        } else if (this.state.mode === "main") {
+            _page = this.props.history.push('/')
+        } else if (this.state.mode === "loading") {
+            _page = this.lodingPageRender()
+        } else if (this.state.mode === "result") {
+            _page = this.resultPageRender()
         }
+        return _page
     }
     
     render(){
@@ -200,7 +244,7 @@ class Intro extends Component {
                     <meta property="twitter:image" content={this.state.current_test.info.mainImage}/>
                     <meta property="twitter:image:alt" content={this.state.current_test.info.mainTitle} />
                 </Helmet>
-                {this.state.mode === "intro" ? this.introPageRender() : this.quizPageRender()}
+                {this.pageRenderer()}
             </Fragment>
         );
     }
