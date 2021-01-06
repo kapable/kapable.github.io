@@ -85,7 +85,7 @@ class App extends Component {
         <Switch>
 
           {/* "Main" page */}
-          <Route path='/' exact>
+          <Route path='/kapable.github.io/' exact>
               <MainPage/>
           </Route>
 
