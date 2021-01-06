@@ -3,8 +3,9 @@ import Quiz from './Quiz'
 import Result from './Result'
 import Loading from './Loading'
 import TESTS from '../api/TESTS'
-import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, withRouter, Switch } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import App from '../App'
 import Typist from 'react-typist';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Helmet } from 'react-helmet';
@@ -69,9 +70,9 @@ class Intro extends Component {
                 <h1 className='title'>{_mainTitle}</h1>  
                 <h5 className='sub-title'>{_subTitle}</h5>
                 <div className='btn-positioner'></div>
-                <Typist className="start-btn-participants">
+                {/* <Typist className="start-btn-participants">
                     현재 총 {this.state.participants}명이 참여했어요.
-                </Typist>
+                </Typist> */}
                 <div className="start-btn-div">
                     <Button
                         onClick={this._onStartButtonClick}
@@ -202,6 +203,17 @@ class Intro extends Component {
         )   
     }
 
+    mainPageRender(){
+        return(
+            <Router basename="/personality-test/"> 
+                <Switch>
+                    <Route path='/' component={App} exact/>
+                    <Redirect to='/' />
+                </Switch>
+            </Router>
+        )
+    }
+
     pageRenderer(){
         let _page = []
         if(this.state.mode === "intro") {
@@ -209,7 +221,8 @@ class Intro extends Component {
         } else if (this.state.mode === "quiz") {
             _page =  this.quizPageRender()
         } else if (this.state.mode === "main") {
-            _page = this.props.history.push('/')
+            // _page = this.props.history.push('/')
+            _page = this.mainPageRender()
         } else if (this.state.mode === "loading") {
             _page = this.lodingPageRender()
         } else if (this.state.mode === "result") {
