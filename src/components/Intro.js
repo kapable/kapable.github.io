@@ -195,7 +195,7 @@ class Intro extends Component {
         let final_score_query = result_contents.query // <----------------query export
         
         return(
-            <Router basename={'/kapable.github.io/'+this.state.current_test.info.mainUrl}>
+            <Router basename={'/k-test/'+this.state.current_test.info.mainUrl}>
                 <Route path={this.state.result_url+final_score_query} component={Result}/>
                 <Redirect to={this.state.result_url+final_score_query} />
             </Router>
