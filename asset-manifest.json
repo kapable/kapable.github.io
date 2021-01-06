@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/personality-test/static/css/main.7754b0b2.chunk.css",
+    "main.css": "/personality-test/static/css/main.5d2ddc66.chunk.css",
     "main.js": "/personality-test/static/js/main.2b29a149.chunk.js",
     "main.js.map": "/personality-test/static/js/main.2b29a149.chunk.js.map",
     "runtime-main.js": "/personality-test/static/js/runtime-main.5a8614fc.js",
@@ -10,14 +10,14 @@
     "static/js/3.9e1b1bcd.chunk.js": "/personality-test/static/js/3.9e1b1bcd.chunk.js",
     "static/js/3.9e1b1bcd.chunk.js.map": "/personality-test/static/js/3.9e1b1bcd.chunk.js.map",
     "index.html": "/personality-test/index.html",
-    "static/css/main.7754b0b2.chunk.css.map": "/personality-test/static/css/main.7754b0b2.chunk.css.map",
+    "static/css/main.5d2ddc66.chunk.css.map": "/personality-test/static/css/main.5d2ddc66.chunk.css.map",
     "static/js/2.5c4043b5.chunk.js.LICENSE.txt": "/personality-test/static/js/2.5c4043b5.chunk.js.LICENSE.txt",
     "static/media/main-header.28536f9e.png": "/personality-test/static/media/main-header.28536f9e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5a8614fc.js",
     "static/js/2.5c4043b5.chunk.js",
-    "static/css/main.7754b0b2.chunk.css",
+    "static/css/main.5d2ddc66.chunk.css",
     "static/js/main.2b29a149.chunk.js"
   ]
 }
