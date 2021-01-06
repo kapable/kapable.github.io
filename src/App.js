@@ -53,12 +53,8 @@ class App extends Component {
   render() {
     return(
     <Fragment>
-      {/* Kakao Adfit Script */}
-      <ins class="kakao_ad_area" style={{display:"none" }}
-            data-ad-unit    = "DAN-5uTvHF7JYzWKUe3H" 
-            data-ad-width   = "320" 
-            data-ad-height  = "50"></ins> 
-      <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+      {/* Google Adsense Script */}
+      <ScriptTag data-ad-client="ca-pub-9402902854137342" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
       
       <Helmet>        
         {/* <!-- Primary Meta Tags --> */}
