@@ -68,8 +68,9 @@ class Result extends Component {
         // return final result option
         return (
             <Fragment>
+                <img src={img_src} className='result-img' alt={final_type} />
                 <Card className="result-card" bg="light">
-                    <Card.Img variant='top' src={img_src} className='result-img' alt={final_type} />
+                    {/* <Card.Img variant='top' src={img_src} className='result-img' alt={final_type} /> */}
                     <Card.Body className="result-p">
                         <Card.Text>{final_desc}</Card.Text>
                     </Card.Body>

@@ -26,7 +26,7 @@ class MainPage extends Component{
                 <div className="main-link-div">
                     {this.state.all_tests_url.map((item)=>(
                         <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                            <img className="test-main-img" src={item[1]}/>                               
+                            <img className="test-main-img" src={item[1]} alt={item[2]}/>                               
                         </Link>
                     ))}
                 </div>

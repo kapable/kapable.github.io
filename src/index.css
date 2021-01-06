@@ -210,8 +210,8 @@ body {
 
 .result-img {
   height: auto;
-  width: 20rem;
-  margin: 1rem auto 0rem;
+  width: 23rem;
+  margin: 1rem auto 2rem;
   font-family: var(--title-font);
   color: var(--font-color);
 }
