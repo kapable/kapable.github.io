@@ -69,7 +69,7 @@ class App extends Component {
           
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://kapable.github.io/personality-test/"/>
+        <meta property="og:url" content="https://kapable.github.io/"/>
         <meta property="og:title" content="취향 분석 테스트"/>
         <meta property="og:description" content="진짜 내 모습을 찾아가는 취향 분석 테스트 모음"/>
         <meta property="og:image" content="https://dl.dropboxusercontent.com/s/n9pr74fbv6gdiub/main-header.png?dl=0"/>
@@ -77,7 +77,7 @@ class App extends Component {
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content="https://kapable.github.io/personality-test/"/>
+        <meta property="twitter:url" content="https://kapable.github.io/"/>
         <meta property="twitter:title" content="취향 분석 테스트"/>
         <meta property="twitter:description" content="진짜 내 모습을 찾아가는 취향 분석 테스트 모음"/>
         <meta property="twitter:image" content="https://dl.dropboxusercontent.com/s/n9pr74fbv6gdiub/main-header.png?dl=0"/>
@@ -85,7 +85,7 @@ class App extends Component {
       </Helmet>
 
       {this.reloadPage()}
-      <Router basename="/personality-test/">
+      <Router >
         <Switch>
 
           {/* "Main" page */}
