@@ -5,6 +5,7 @@ import ResultToIntro from './components/ResultToIntro'
 import TESTS from './api/TESTS'
 import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 import Result from './components/Result';
+import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 
 class App extends Component {
@@ -52,6 +53,11 @@ class App extends Component {
   render() {
     return(
     <Fragment>
+      <ins class="kakao_ad_area" style={{display:"none" }}
+            data-ad-unit    = "DAN-5uTvHF7JYzWKUe3H" 
+            data-ad-width   = "320" 
+            data-ad-height  = "50"></ins> 
+      <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
       <Helmet>        
         {/* <!-- Primary Meta Tags --> */}
         <title>취향 분석 테스트</title>
