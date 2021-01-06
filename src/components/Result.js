@@ -32,7 +32,7 @@ class Result extends Component {
 
         const current_tests_path = '/' + this.state.current_test + '/';
         return(
-            <Router > 
+            <Router basename='/'> 
                 <Switch>
                     <Route path={current_tests_path} component={()=><Intro test={this.state.current_test}/>} exact/>
                     <Redirect to={current_tests_path} />

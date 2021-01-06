@@ -81,7 +81,7 @@ class App extends Component {
       </Helmet>
 
       {this.reloadPage()}
-      <Router >
+      <Router basename='/'>
         <Switch>
 
           {/* "Main" page */}
