@@ -611,7 +611,7 @@ var TESTS = [
             subTitle:"내 애인의 바람끼는 어느 정도일까.?",
             mainUrl:"wind",
             scoreType:"numberScoring",
-            mainImage:"https://dl.dropboxusercontent.com/s/n89rnprisj41xgw/wind-main.png?dl=0"
+            mainImage:"https://dl.dropboxusercontent.com/s/u5oxd4jj4csh3p6/wind-main.png?dl=0"
         },
         questions:[
             {
