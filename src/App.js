@@ -53,8 +53,6 @@ class App extends Component {
   render() {
     return(
     <Fragment>
-      {/* Google Adsense Script */}
-      <ScriptTag data-ad-client="ca-pub-7365638386197005" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
       <Helmet>        
         {/* <!-- Primary Meta Tags --> */}
         <title>취향 분석 테스트</title>
