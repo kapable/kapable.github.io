@@ -209,7 +209,7 @@ class Intro extends Component {
         } else if (this.state.mode === "quiz") {
             _page =  this.quizPageRender()
         } else if (this.state.mode === "main") {
-            _page = this.props.history.push('/')
+            _page = this.props.history.history('/')
         } else if (this.state.mode === "loading") {
             _page = this.lodingPageRender()
         } else if (this.state.mode === "result") {

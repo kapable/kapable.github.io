@@ -54,8 +54,7 @@ class App extends Component {
     return(
     <Fragment>
       {/* Google Adsense Script */}
-      <ScriptTag data-ad-client="ca-pub-9402902854137342" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
-      
+      <ScriptTag data-ad-client="ca-pub-7365638386197005" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
       <Helmet>        
         {/* <!-- Primary Meta Tags --> */}
         <title>취향 분석 테스트</title>
@@ -116,7 +115,7 @@ class App extends Component {
       <div className="intro-footer">
           <p>MAKER - 케이테스트</p>
           <h5>광고 및 후원 문의</h5>
-          <p>skjoldenstore@gmail.com</p>
+          <p>ktestktest3@gmail.com</p>
       </div>
     </Fragment>
     )
