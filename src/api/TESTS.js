@@ -1,3 +1,5 @@
+// typeCounting or numberScoring
+
 function range(start, stop, step) {
     if (typeof stop == 'undefined') {
         // one param defined
@@ -293,6 +295,205 @@ var TESTS = [
                 query: "vmfhwlrwlsfj",
                 score_range:range(86, 101),
                 img_src:'https://dl.dropboxusercontent.com/s/b2pc7i6x3w15kga/lovelevel_4.png?dl=0'
+            },
+        ]
+    },
+    {
+        info : {
+            mainTitle:"철벽남녀 테스트",
+            subTitle:"이성이 다가올 때 나의 반응은?",
+            mainUrl:"humanwall",
+            scoreType:"typeCounting",
+            mainImage:"https://dl.dropboxusercontent.com/s/mwr3jeq156wut6r/humanwall-main.png?dl=0"
+        },
+        questions:[
+            {
+                question: '남녀사이에 우정이란?',
+                answers:[
+                    {
+                        type: "철벽인",
+                        score: 2,
+                        content: '있을 수 없어. 같이 있으면 있을수록 감정은 생기기 마련!'
+                    },
+                    {
+                        type: "자동문",
+                        score: 5,
+                        content: '친구는 친구지. 이성으로 생각한 적 1도 없다! '
+                    },
+                ],
+            },
+            {
+                question: "마음에 드는 이성과 함께 있을 때 나는?",
+                answers:[
+                    {
+                        type: "철벽인",
+                        score: 2,
+                        content: "표현하지 않지만 이미 머릿속으로 이 사람과 사귀게 됐을 때 모습을 상상한다."
+                    },
+                    {
+                        type: "자동문",
+                        score: 5,
+                        content: "적극적으로 리액션 하며 호감을 표현하려고 노력한다."
+                    },
+                ]
+            },
+            {
+                question: "좋아하는 이성이 다가올 때 나는?",
+                answers:[
+                    {
+                        type: "철벽인",
+                        score: 2,
+                        content: "너무 좋아했지만 막상 나에게 다가오면 피하게 된다."
+                    },
+                    {
+                        type: "자동문",
+                        score: 5,
+                        content: "서로의 마음이 어느 정도 확인했으니 적극적으로 표현한다."
+                    },
+                ]
+            },
+            {
+                question: "헤어질 것이 뻔한 인연이라는 걸 알고 있을 때 나의 선택은?",
+                answers:[
+                    {
+                        type: "철벽인",
+                        score: 2,
+                        content: "헤어질 인연이라면 시작하지도 않겠다."
+                    },
+                    {
+                        type: "자동문",
+                        score: 5,
+                        content: "헤어질 걸 알아도 시작은 해본다."
+                    },
+                ]
+            },
+            {
+                question: "마음에 들지 않는 상대에게 계속 연락이 온다.",
+                answers:[
+                    {
+                        type: "철벽인",
+                        score: 2,
+                        content: '연락을 그만 했으면 좋겠다는 의사를 확실하게 표현한다.'
+                    },
+                    {
+                        type: "자동문",
+                        score: 5,
+                        content: "드문드문 답장하거나 안읽씹한다."
+                    },
+                ]
+            },
+            {
+                question: "생전 처음 보는 사람과 과제를 같이 하게 되었다.",
+                answers:[
+                    {
+                        type: "철벽인",
+                        score: 2,
+                        content: "상대방이 먼저 말 걸어줄 때까지 가만히 있는 편이다."
+                    },
+                    {
+                        type: "자동문",
+                        score: 5,
+                        content: "먼저 다가가 말을 걸며 인사하는 편이다."
+                    },
+                ]
+            },
+            {
+                question: "소개팅을 제안하는 친구!",
+                answers:[
+                    {
+                        type: "철벽인",
+                        score: 2,
+                        content: "소개팅…하고는 싶지만 어색함 너무 싫어 난 자만추 스타일!"
+                    },
+                    {
+                        type: "자동문",
+                        score: 5,
+                        content: "무조건 오케이~ 사람 인연이라는 것이 어디서 만날지 몰라~"
+                    },
+                ]
+            },
+            {
+                question: "내가 더 선호하는 연애스타일은?",
+                answers:[
+                    {
+                        type: "철벽인",
+                        score: 5,
+                        content: "친구 같은 편안한 연애"
+                    },
+                    {
+                        type: "자동문",
+                        score: 10,
+                        content: "매 순간에 설렘이 가득한 연애 "
+                    },
+                ]
+            },
+            {
+                question: "연애할 때 나는?",
+                answers:[
+                    {
+                        type: "철벽인",
+                        score: 5,
+                        content: "사주나 타로 어플을 자주 이용한다."
+                    },
+                    {
+                        type: "자동문",
+                        score: 10,
+                        content: "나는 내 스타일대로~ 내 맘대로 해야지!"
+                    },
+                ]
+            },
+            {
+                question: "나는 연애의 대한 고민상담을",
+                answers:[
+                    {
+                        type: "철벽인",
+                        score: 2,
+                        content: "들어주는 편이다."
+                    },
+                    {
+                        type: "자동문",
+                        score: 5,
+                        content: "친구들에게 요청하는 편이다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "철벽인",
+                desc: `접근금지 확실한 철벽수비수 \n
+                ✓   연애는 하고 싶지만 연애에 대한 환상이 크고,\n
+                ✓   자존심이 높아 자신의 이상형에 미치지 못하는 사람들이 아예 접근하지 못하도록 방어하는 당신은 ‘철벽인’\n
+                ✓   만리장성은 저리 가라 할 정도로 엄청난 철벽을 치고 있는 당신! \n
+                ✓   남들의 연애 상담은 빠삭하지만 실전은 너무 약한... \n
+                ✓   상대방을 너무 좋아하지만 정작 상대방이 적극적으로 다가오면 부담스러워서 피하고, \n
+                ✓   상대방의 이상한 오점을 발견하면 바로 마음을 접어버려요. \n
+                ✓   나는 눈이 낮다고 하지만 높은 거랍니다. \n
+                ✓   이제 너무 철벽만 치지 마세요! \n
+                ✓   그 벽 얼른 허무시고 행복하고 즐거운 연애해야죠!
+                `,
+                query: "cjfqurdls",
+                score_range:range(31),
+                img_src:'https://dl.dropboxusercontent.com/s/gxoe6v1b5rl3ks9/humanwall-1.png?dl=0'
+            },
+            {
+                type: "자동문",
+                desc: `철벽이 뭐죠? 오픈마인드의 소유자 \n
+                ✓   철벽이 뭐죠?\n
+                ✓   연애 경험은 많을수록 좋은 거라고 했어요~ \n
+                ✓   철벽이라는 단어 자체가 어울리지 않는 당신! \n
+                ✓   들어오는 소개팅, 미팅은 다 받는데! \n
+                ✓   인연이면 만나는 거고 아니면 친구로 만들어버리는~ \n
+                ✓   살짝 금사빠 기질도? \n
+                ✓   한번 사랑에 빠지면 간이고 쓸개고 다 줄 것처럼 직진하는 직진인!  \n
+                ✓   하지만 포인트 하나 나가면 식는 것도 한순간인 당신! \n
+                ✓   공백기가 짧은 타입이랍니다! \n
+                ✓   세상은 넓고 인연은 많으니 이쁜 사랑 많이 하자~ \n
+                ✓   많이 만나야 미래의 배우자를 잘 만나지! ><
+                `,
+                query: "wkehdans",
+                score_range:range(31, 66),
+                img_src:'https://dl.dropboxusercontent.com/s/j2rckbsmm7bzvql/humanwall-2.png?dl=0'
             },
         ]
     },
