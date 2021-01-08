@@ -143,7 +143,7 @@ var TESTS = [
                     {
                         type: "비글",
                         score: 5,
-                        content: "먼커플로 착용할 수 있는 아이템을 선물한다."
+                        content: "커플로 착용할 수 있는 아이템을 선물한다."
                     },
                     {
                         type: "리트리버",
@@ -256,7 +256,7 @@ var TESTS = [
                 ✓   세상은 넓고 내 사람은 분명 찾을 수 있으니까요! 걱정하지 마세요!
                 `,
                 query: "dusdoRNfjrl",
-                score_range:range(66, 86),
+                score_range:range(31, 66),
                 img_src:'https://dl.dropboxusercontent.com/s/6jcly4mn4m14ypc/lovelevel_2.png?dl=0'
             },
             {
