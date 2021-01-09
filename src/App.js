@@ -53,7 +53,7 @@ class App extends Component {
   render() {
     return(
     <Fragment>
-      <Helmet>        
+      <Helmet>
         {/* <!-- Primary Meta Tags --> */}
         <title>취향 분석 테스트</title>
         <meta name="title" content="취향 분석 테스트"/>
@@ -78,9 +78,16 @@ class App extends Component {
       </Helmet>
 
       {this.reloadPage()}
+
+      {/* Kakao Adfit Upper */}
+      <ins class="kakao_ad_area" style={{display:"none"}}
+      data-ad-unit    = "DAN-2heOjnHUdZLjBuFC" 
+      data-ad-width   = "320" 
+      data-ad-height  = "100"></ins> 
+      <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+
       <Router basename='/kapable.github.io/'>
         <Switch>
-
           {/* "Main" page */}
           <Route path='/' exact>
               <MainPage/>
@@ -108,6 +115,13 @@ class App extends Component {
           ))}
         </Switch>
       </Router>
+
+      {/* Kakao Adfit footer */}
+      <ins class="kakao_ad_area" style={{display:"none"}} 
+      data-ad-unit    = "DAN-rgfAOJhp6Faz2JFX" 
+      data-ad-width   = "300" 
+      data-ad-height  = "250"></ins> 
+      <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
 
       {/* footer */}
       <div className="intro-footer">
@@ -146,3 +160,6 @@ export default withRouter(App);
 //   "predeploy": "npm run build && npm run cname && npm run nojekyll",
 //   "deploy": "gh-pages --add --dotfiles -d build"
 // },
+
+// <!-- Google Adsense Script -->
+{/* <script data-ad-client="ca-pub-7365638386197005" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> */}
