@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import MainPage from './components/MainPage';
 import Intro from './components/Intro'
 import ResultToIntro from './components/ResultToIntro'
+import ScrollToTop from './components/ScrollToTop'
 import TESTS from './api/TESTS'
 import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 import Result from './components/Result';
@@ -87,33 +88,35 @@ class App extends Component {
       <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
 
       <Router basename='/kapable.github.io/'>
-        <Switch>
-          {/* "Main" page */}
-          <Route path='/' exact>
-              <MainPage/>
-          </Route>
+        <ScrollToTop>
+          <Switch>
+            {/* "Main" page */}
+            <Route path='/' exact>
+                <MainPage/>
+            </Route>
 
-          {/* go to "Intro" page */}
-          {this.state.all_tests_url.map((item)=>(
-            <Route
-              path={item}
-              component={() => <Intro test={item.replaceAll('/','')}/>}
-              key={item.replaceAll('/','')}
-              exact
-            />
-          ))}
+            {/* go to "Intro" page */}
+            {this.state.all_tests_url.map((item)=>(
+              <Route
+                path={item}
+                component={() => <Intro test={item.replaceAll('/','')}/>}
+                key={item.replaceAll('/','')}
+                exact
+              />
+            ))}
 
-          {/* go to "Result to Start" page */}
-          <Route path={this.state.all_tests_result_url} component={ResultToIntro} exact/>
+            {/* go to "Result to Start" page */}
+            <Route path={this.state.all_tests_result_url} component={ResultToIntro} exact/>
 
-          {/* go to "Each Result contents" page */}
-          {this.state.final_render_routes.map((item)=>(
-            <Route
-              path={'/'+item[1]+'/'+this.state.result_route+item[0]}
-              component={Result}
-              key={item[1]+'_'+item[0]} exact/>
-          ))}
-        </Switch>
+            {/* go to "Each Result contents" page */}
+            {this.state.final_render_routes.map((item)=>(
+              <Route
+                path={'/'+item[1]+'/'+this.state.result_route+item[0]}
+                component={Result}
+                key={item[1]+'_'+item[0]} exact/>
+            ))}
+          </Switch>
+        </ScrollToTop>
       </Router>
 
       {/* Kakao Adfit footer */}
