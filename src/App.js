@@ -81,7 +81,7 @@ class App extends Component {
       {this.reloadPage()}
 
       {/* Kakao Adfit Upper */}
-      <ins class="kakao_ad_area" style={{display:"none"}}
+      <ins className="kakao_ad_area" style={{display:"none"}}
       data-ad-unit    = "DAN-2heOjnHUdZLjBuFC" 
       data-ad-width   = "320" 
       data-ad-height  = "100"></ins> 
@@ -120,7 +120,7 @@ class App extends Component {
       </Router>
 
       {/* Kakao Adfit footer */}
-      <ins class="kakao_ad_area" style={{display:"none"}} 
+      <ins className="kakao_ad_area" style={{display:"none"}} 
       data-ad-unit    = "DAN-rgfAOJhp6Faz2JFX" 
       data-ad-width   = "300" 
       data-ad-height  = "250"></ins> 
