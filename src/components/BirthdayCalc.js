@@ -76,6 +76,10 @@ class BirthdayCalc extends Component {
                                 if(final_result.toString().length === 2) {
                                     _finalBirth = final_result.toString()
                                     final_result = Number(_finalBirth[0]) + Number(_finalBirth[1])
+                                    if(final_result.toString().length === 2) {
+                                        _finalBirth = final_result.toString()
+                                        final_result = Number(_finalBirth[0]) + Number(_finalBirth[1])
+                                    }
                                 }
                                 this.props.onChangeMode(final_result, "loading");
                             } else {
