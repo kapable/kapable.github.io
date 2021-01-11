@@ -128,9 +128,11 @@ class App extends Component {
 
       {/* footer */}
       <div className="intro-footer">
-          <p>MAKER - 케이테스트</p>
+          {/* <p>MAKER - 케이테스트</p> */}
           <h5>광고 및 후원 문의</h5>
-          <p>ktestktest3@gmail.com</p>
+          <p>soumy21@naver.com</p>
+          <p>Disclaimer: All content is provided for fun and entertainment purposes only</p>
+          <p>©Soumy21 All Rights Reserved. 2021.</p>
       </div>
     </Fragment>
     )
