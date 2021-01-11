@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Quiz from './Quiz'
 import Result from './Result'
 import Loading from './Loading'
+import BirthdayCalc from './BirthdayCalc'
 import TESTS from '../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
@@ -104,7 +105,7 @@ class Intro extends Component {
     }
 
     resultCaculator(){
-        if (this.state.scoreType === "numberScoring"){
+        if (this.state.scoreType === "numberScoring" || this.state.scoreType === "birthdayCalc"){
             let final_score = this.state.counted_score;
             for (let k = 0; k < this.state.current_test.results.length; k++){
                 if(this.state.current_test.results[k].score_range.includes(final_score)){
@@ -130,7 +131,7 @@ class Intro extends Component {
                     return this.state.current_test.results[z]
                 }
             }
-        }
+        } 
         
     }
     quizPageRender(){
@@ -171,8 +172,16 @@ class Intro extends Component {
                     })
                 }.bind(this)}></Quiz>
                 return _page
-            } else {
-                // do nothing yet but exception handling 
+            } else if (this.state.scoreType === "birthdayCalc"){
+                let _page = <BirthdayCalc
+                onChangeMode={
+                    function(_final_result, _mode) {
+                    this.setState({
+                        counted_score:_final_result,
+                        mode:_mode
+                    })
+                }.bind(this)}></BirthdayCalc>
+                return _page
             }
             return this._page
         } 

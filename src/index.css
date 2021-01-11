@@ -168,6 +168,23 @@ body {
   font-family: var(--title-font);
 }
 
+/* for birthday Calculating */
+.birth-title {
+  margin: 2rem auto;
+}
+.birth-input {
+  font-family: var(--title-font);
+  margin: 5rem 2rem;
+}
+
+.birthday-submit-btn {
+  margin: 3rem 1rem;
+}
+
+.private-info-desc {
+  color: #cecfd0;
+}
+
 /* loading start */
 
 .loading {
