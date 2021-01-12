@@ -27,6 +27,7 @@ body {
 .main-link-div {
   margin: 0 auto;
   max-width: 550px;
+  background-color: grey;
 }
 
 .main-link-block {
@@ -35,7 +36,7 @@ body {
 }
 
 .test-main-img {
-  margin: 0.5rem auto;
+  margin: 0rem auto 0.5rem;
   width: 100%;
   max-width: 500px;
   display: block;
