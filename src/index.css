@@ -6,7 +6,7 @@
   --content-font: "Nanum Gothic", sans-serif;
 }
 body {
-  height: 100%;
+  height: auto;
   display: block;
   /* position: -webkit-sticky; */
   background-color: var(--bg-color);
@@ -21,7 +21,7 @@ body {
   justify-content: center;
   margin: 0 auto;
   width: 400px;
-  height: 250px;
+  height: auto;
 }
 
 .main-link-div {
@@ -45,7 +45,14 @@ body {
 /* intro start */
 
 .intro {
-  margin: 2.5rem auto;
+  margin: 0rem auto 2.5rem;
+  padding: 0rem 0rem;
+}
+
+.intro-main-img {
+  margin: 0rem auto;
+  width: 414px;
+  height: auto;
 }
 
 .title {

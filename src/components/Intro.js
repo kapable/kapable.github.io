@@ -4,7 +4,7 @@ import Result from './Result'
 import Loading from './Loading'
 import BirthdayCalc from './BirthdayCalc'
 import TESTS from '../api/TESTS'
-import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, withRouter, Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Typist from 'react-typist';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
@@ -67,10 +67,11 @@ class Intro extends Component {
         
         return (
             <div className="intro container">
-                <h1 className='title'>{_mainTitle}</h1>  
+                <img className="intro-main-img" onClick={this._onStartButtonClick} src="https://dl.dropboxusercontent.com/s/gdodghilu1nz0pl/daengdaeng-intro.png?dl=0" alt={_mainTitle}/>
+                {/* <h1 className='title'>{_mainTitle}</h1>  
                 <h5 className='sub-title'>{_subTitle}</h5>
                 <div className='btn-positioner'></div>
-                {/* <Typist className="start-btn-participants">
+                <Typist className="start-btn-participants">
                     현재 총 {this.state.participants}명이 참여했어요.
                 </Typist> */}
                 <div className="start-btn-div">
