@@ -31,7 +31,8 @@ var TESTS = [
             subTitle:"탄생숫자로 알아보는 숨겨진 나의 성격",
             mainUrl:"birthNum",
             scoreType:"birthdayCalc",
-            mainImage:"https://dl.dropboxusercontent.com/s/dxi9t872gwky52t/birthNum-main.png?dl=0"
+            mainImage:"https://dl.dropboxusercontent.com/s/dxi9t872gwky52t/birthNum-main.png?dl=0",
+            thumbImage:"https://dl.dropboxusercontent.com/s/kflu8jrufx4drvt/birthNum-thumbnail.png?dl=0"
         },
         questions:[
             {
@@ -371,7 +372,8 @@ var TESTS = [
             subTitle:"나의 연애 점수는?",
             mainUrl:"lovelevel",
             scoreType:"numberScoring",
-            mainImage:"https://dl.dropboxusercontent.com/s/p15gxfr46pn5qho/lovelevel-main.png?dl=0"
+            mainImage:"https://dl.dropboxusercontent.com/s/p15gxfr46pn5qho/lovelevel-main.png?dl=0",
+            thumbImage:"https://dl.dropboxusercontent.com/s/rlcajn2j71jbl69/lovelevel-thumbnail.png?dl=0"
         },
         questions:[
             {
@@ -644,7 +646,8 @@ var TESTS = [
             subTitle:"이성이 다가올 때 나의 반응은?",
             mainUrl:"humanwall",
             scoreType:"typeCounting",
-            mainImage:"https://dl.dropboxusercontent.com/s/mwr3jeq156wut6r/humanwall-main.png?dl=0"
+            mainImage:"https://dl.dropboxusercontent.com/s/mwr3jeq156wut6r/humanwall-main.png?dl=0",
+            thumbImage:"https://dl.dropboxusercontent.com/s/s0axjefdw5y6tr8/humanwall-thumbnail.png?dl=0"
         },
         questions:[
             {
@@ -843,7 +846,8 @@ var TESTS = [
             subTitle:"내 애인의 바람끼는 어느 정도일까.?",
             mainUrl:"wind",
             scoreType:"numberScoring",
-            mainImage:"https://dl.dropboxusercontent.com/s/u5oxd4jj4csh3p6/wind-main.png?dl=0"
+            mainImage:"https://dl.dropboxusercontent.com/s/u5oxd4jj4csh3p6/wind-main.png?dl=0",
+            thumbImage:"https://dl.dropboxusercontent.com/s/uo7kyuil4tmchx3/wind-thumbnail.png?dl=0"
         },
         questions:[
             {
@@ -1108,7 +1112,8 @@ var TESTS = [
             subTitle:"내가 강아지 라면?",
             mainUrl:"daengdaeng",
             scoreType:"typeCounting",
-            mainImage:"https://dl.dropboxusercontent.com/s/lbvs0wpqhf9ohno/daengdaeng-main.png?dl=0"
+            mainImage:"https://dl.dropboxusercontent.com/s/lbvs0wpqhf9ohno/daengdaeng-main.png?dl=0",
+            thumbImage:"https://dl.dropboxusercontent.com/s/gcj4xe1dfy6ggz6/daengdaeng-thumbnail.png?dl=0"
         },
         questions:[
             {
@@ -1449,7 +1454,8 @@ var TESTS = [
             subTitle:"이시국엔 집에 붙어 있자 꼭!",
             mainUrl:"zipkok",
             scoreType:"numberScoring",
-            mainImage:"https://dl.dropboxusercontent.com/s/m5f6f8df57f4qdf/zipkok-main.png?dl=0"
+            mainImage:"https://dl.dropboxusercontent.com/s/m5f6f8df57f4qdf/zipkok-main.png?dl=0",
+            thumbImage:"https://dl.dropboxusercontent.com/s/kk2cmemfraywht5/zipkok-thumbnail.png?dl=0"
         },
         questions:[
             {

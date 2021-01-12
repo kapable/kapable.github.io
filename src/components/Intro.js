@@ -64,26 +64,20 @@ class Intro extends Component {
         
         let _mainTitle = this.state.current_test.info.mainTitle;
         let _subTitle = this.state.current_test.info.subTitle;
+        let _thumbImage = this.state.current_test.info.mainImage;
         
         return (
             <div className="intro container">
-                <img className="intro-main-img" onClick={this._onStartButtonClick} src="https://dl.dropboxusercontent.com/s/gdodghilu1nz0pl/daengdaeng-intro.png?dl=0" alt={_mainTitle}/>
-                {/* <h1 className='title'>{_mainTitle}</h1>  
-                <h5 className='sub-title'>{_subTitle}</h5>
-                <div className='btn-positioner'></div>
-                <Typist className="start-btn-participants">
+                <img
+                    className="intro-main-img"
+                    onClick={this._onStartButtonClick}
+                    src={_thumbImage}
+                    alt={_mainTitle + '|' + _subTitle}/>
+                
+                {/* <Typist className="start-btn-participants">
                     현재 총 {this.state.participants}명이 참여했어요.
                 </Typist> */}
-                <div className="start-btn-div">
-                    <Button
-                        onClick={this._onStartButtonClick}
-                        variant="dark"
-                        size="lg"
-                        className="start-btn"
-                        bsPrefix="btn"
-                    >시작하기
-                    </Button>
-                </div>
+                
                 <div className="test-intro-with-friend">
                     <h5>친구들과 함께 해보기</h5>
                     <CopyToClipboard text={this.state.quiz_url}>
@@ -194,7 +188,7 @@ class Intro extends Component {
                 <Loading />
                 {setTimeout(function(){
                     this.setState({mode:"result"})
-                }.bind(this), 2700)}
+                }.bind(this), 4700)}
             </div>
         )
     }

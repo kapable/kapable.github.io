@@ -9,7 +9,7 @@ class MainPage extends Component{
         let i = 0;
         let _all_tests_url = [];
         while (i<TESTS.length) {
-        _all_tests_url.push(['/'+TESTS[i].info.mainUrl+'/', TESTS[i].info.mainImage, TESTS[i].info.mainTitle])
+        _all_tests_url.push(['/'+TESTS[i].info.mainUrl+'/', TESTS[i].info.thumbImage, TESTS[i].info.mainTitle])
         i = i + 1;
         }
         this.state = {

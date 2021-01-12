@@ -25,21 +25,21 @@ body {
 }
 
 .main-link-div {
-  margin: auto 0;
-  max-width: 360;
+  margin: 0 auto;
+  max-width: 550px;
 }
 
 .main-link-block {
   display: inline-block;
-  margin: auto 1rem;
-  max-width: 360;
+  margin: auto 0rem;
 }
 
 .test-main-img {
-  margin: 1rem auto;
-  height: 11.1rem;
-  max-width: 320px;
-  width: auto;
+  margin: 0.5rem auto;
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  cursor: pointer;
 }
 
 /* intro start */
@@ -51,31 +51,13 @@ body {
 
 .intro-main-img {
   margin: 0rem auto;
-  width: 414px;
+  max-width: 450px;
+  width: 75%;
   height: auto;
-}
-
-.title {
-  color: var(--font-color);
   font-family: var(--title-font);
+  cursor: pointer;
 }
 
-.sub-title {
-  color: var(--font-color);
-  font-family: var(--title-font);
-}
-
-.btn-positioner {
-  margin: 7rem;
-  display: block;
-}
-
-.start-btn-div {
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
-  font-family: var(--title-font);
-}
 .start-btn {
   height: 3.5em;
   width: 20rem;
@@ -196,6 +178,7 @@ body {
 
 .loading {
   margin-top: 12rem;
+  margin-bottom: 3rem;
 }
 
 .loading-upper {
