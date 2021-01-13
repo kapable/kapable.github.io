@@ -33,7 +33,7 @@ var TESTS = [
             mainUrl:"birthNum",
             scoreType:"birthdayCalc",
             mainImage:"https://dl.dropboxusercontent.com/s/dxi9t872gwky52t/birthNum-main.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/kflu8jrufx4drvt/birthNum-thumbnail.png?dl=0"
+            thumbImage:"https://dl.dropboxusercontent.com/s/0ah4be0khny1lwn/birthNum-thumb.png?dl=0"
         },
         questions:[
             {
@@ -375,7 +375,7 @@ var TESTS = [
             mainUrl:"lovelevel",
             scoreType:"numberScoring",
             mainImage:"https://dl.dropboxusercontent.com/s/p15gxfr46pn5qho/lovelevel-main.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/zlmqkloem6na9ot/lovelevel--thumnail.png?dl=0"
+            thumbImage:"https://dl.dropboxusercontent.com/s/m8mapf8lfecsid9/lovelevel-thumb.png?dl=0"
         },
         questions:[
             {
@@ -650,7 +650,7 @@ var TESTS = [
             mainUrl:"humanwall",
             scoreType:"typeCounting",
             mainImage:"https://dl.dropboxusercontent.com/s/mwr3jeq156wut6r/humanwall-main.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/s0axjefdw5y6tr8/humanwall-thumbnail.png?dl=0"
+            thumbImage:"https://dl.dropboxusercontent.com/s/1rtjq11i71aldiw/humanWall-thumb.png?dl=0"
         },
         questions:[
             {
@@ -851,7 +851,7 @@ var TESTS = [
             mainUrl:"wind",
             scoreType:"numberScoring",
             mainImage:"https://dl.dropboxusercontent.com/s/u5oxd4jj4csh3p6/wind-main.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/uo7kyuil4tmchx3/wind-thumbnail.png?dl=0"
+            thumbImage:"https://dl.dropboxusercontent.com/s/fxmrxspeuerw3sg/wind-thumb.png?dl=0"
         },
         questions:[
             {
@@ -1118,7 +1118,7 @@ var TESTS = [
             mainUrl:"daengdaeng",
             scoreType:"typeCounting",
             mainImage:"https://dl.dropboxusercontent.com/s/lbvs0wpqhf9ohno/daengdaeng-main.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/gcj4xe1dfy6ggz6/daengdaeng-thumbnail.png?dl=0"
+            thumbImage:"https://dl.dropboxusercontent.com/s/it0yl4yc078iwiq/daenngdaeng-thumb.png?dl=0"
         },
         questions:[
             {
@@ -1461,7 +1461,7 @@ var TESTS = [
             mainUrl:"zipkok",
             scoreType:"numberScoring",
             mainImage:"https://dl.dropboxusercontent.com/s/m5f6f8df57f4qdf/zipkok-main.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/7fxjusp8de34ix6/zipkok--thumnail.png?dl=0"
+            thumbImage:"https://dl.dropboxusercontent.com/s/9a9t07zx63jcm5d/zipkok-thumb.png?dl=0"
         },
         questions:[
             {
