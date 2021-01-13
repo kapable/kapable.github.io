@@ -25,6 +25,7 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // birthNum
     {
         info : {
             mainTitle:"탄생수 테스트",
@@ -366,6 +367,7 @@ var TESTS = [
             },
         ]
     },
+    // loveLevel
     {
         info : {
             mainTitle:"연애고수 테스트",
@@ -373,7 +375,7 @@ var TESTS = [
             mainUrl:"lovelevel",
             scoreType:"numberScoring",
             mainImage:"https://dl.dropboxusercontent.com/s/p15gxfr46pn5qho/lovelevel-main.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/rlcajn2j71jbl69/lovelevel-thumbnail.png?dl=0"
+            thumbImage:"https://dl.dropboxusercontent.com/s/zlmqkloem6na9ot/lovelevel--thumnail.png?dl=0"
         },
         questions:[
             {
@@ -640,6 +642,7 @@ var TESTS = [
             },
         ]
     },
+    // humanWall
     {
         info : {
             mainTitle:"철벽남녀 테스트",
@@ -840,6 +843,7 @@ var TESTS = [
             },
         ]
     },
+    // wind
     {
         info : {
             mainTitle:"바람끼 테스트",
@@ -1106,6 +1110,7 @@ var TESTS = [
             },
         ]
     },
+    // daengdaeng
     {
         info : {
             mainTitle:"강아지로 보는 성격 테스트",
@@ -1448,6 +1453,7 @@ var TESTS = [
             },
         ]
     },
+    // zipkok
     {
         info : {
             mainTitle:"프로 집콕러 테스트",
@@ -1455,7 +1461,7 @@ var TESTS = [
             mainUrl:"zipkok",
             scoreType:"numberScoring",
             mainImage:"https://dl.dropboxusercontent.com/s/m5f6f8df57f4qdf/zipkok-main.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/kk2cmemfraywht5/zipkok-thumbnail.png?dl=0"
+            thumbImage:"https://dl.dropboxusercontent.com/s/7fxjusp8de34ix6/zipkok--thumnail.png?dl=0"
         },
         questions:[
             {

@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router
 import Result from './components/Result';
 import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 
 class App extends Component {
   constructor(props){
@@ -42,7 +43,11 @@ class App extends Component {
       final_render_routes:_final_render_routes,
     }
   }
-
+  componentDidMount(){
+    ReactGA.initialize('G-9GH17W9Z1C');
+    ReactGA.set({page:window.location.pathname})
+    ReactGA.pageview(window.location.pathname);
+  }
   reloadPage() { 
     var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
     var now = Date.now(); 
