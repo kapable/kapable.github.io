@@ -50,9 +50,8 @@ class App extends Component {
         siteSpeedSampleRate: 100
       }
     });
-    // ReactGA.set({page:window.location.pathname+window.location.search})
+    ReactGA.set({page:window.location.pathname+window.location.search})
     ReactGA.pageview(window.location.pathname+window.location.search);
-    console.log(window.location.pathname+window.location.search);
   }
   reloadPage() { 
     var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
