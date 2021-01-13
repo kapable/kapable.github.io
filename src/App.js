@@ -44,9 +44,15 @@ class App extends Component {
     }
   }
   componentDidMount(){
-    ReactGA.initialize('G-9GH17W9Z1C');
-    ReactGA.set({page:window.location.pathname})
-    ReactGA.pageview(window.location.pathname);
+    ReactGA.initialize('G-9GH17W9Z1C', {
+      debug: true,
+      gaOptions:{
+        siteSpeedSampleRate: 100
+      }
+    });
+    // ReactGA.set({page:window.location.pathname+window.location.search})
+    ReactGA.pageview(window.location.pathname+window.location.search);
+    console.log(window.location.pathname+window.location.search);
   }
   reloadPage() { 
     var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
