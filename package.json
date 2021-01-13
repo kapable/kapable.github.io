@@ -20,7 +20,7 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-script-tag": "^1.1.2",
-    "react-scripts": "^4.0.1",
+    "react-scripts": "^3.4.3",
     "react-snap": "^1.23.0",
     "react-typist": "^2.0.5",
     "regenerator-runtime": "^0.13.7",
