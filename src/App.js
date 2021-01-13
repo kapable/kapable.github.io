@@ -44,7 +44,7 @@ class App extends Component {
     }
   }
   componentDidMount(){
-    ReactGA.initialize('G-9GH17W9Z1C', {
+    ReactGA.initialize('UA-186793588-1', {
       debug: true,
       gaOptions:{
         siteSpeedSampleRate: 100
