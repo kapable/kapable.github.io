@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.5.3",
     "core-js": "^3.8.2",
+    "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-app-polyfill": "^2.0.0",
     "react-bootstrap": "^1.4.0",
@@ -28,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "node ./update-build.js && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -57,5 +58,6 @@
   },
   "devDependencies": {
     "gh-pages": "^3.1.0"
-  }
+  },
+  "buildDate": 1610688639481
 }
