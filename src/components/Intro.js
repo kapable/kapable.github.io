@@ -9,6 +9,8 @@ import { Button } from 'react-bootstrap';
 import Typist from 'react-typist';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Helmet } from 'react-helmet';
+import COPYBTN from '../api/DefaultImg/test-intro-copy-link-btn.png';
+import BACKBTN from '../api/DefaultImg/test-intro-other-tests-btn.png';
 
 class Intro extends Component {
     constructor(props){
@@ -47,7 +49,6 @@ class Intro extends Component {
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
         this._onMainButtonClick = this._onMainButtonClick.bind(this);
     }
-
     _onStartButtonClick(){
         this.setState({
             mode:'quiz'
@@ -79,21 +80,22 @@ class Intro extends Component {
                 </Typist> */}
                 
                 <div className="test-intro-with-friend">
-                    <h5>친구들과 함께 해보기</h5>
                     <CopyToClipboard text={this.state.quiz_url}>
-                        <Button 
-                            className="test-intro-with-friend-btn"
-                            variant="dark"
-                            onClick={function(){alert("링크가 복사됐어요!")}}>🔗 테스트 링크 복사</Button>
+                        <Button className="test-intro-with-friend-btn">
+                            <img 
+                                src={COPYBTN}
+                                className="test-intro-with-friend-img"
+                                onClick={function(){alert("링크가 복사됐어요!")}}
+                                alt="테스트 링크 복사"/>
+                        </Button>
                     </CopyToClipboard>
                 </div>
                 <div className="test-intro-to-main">
-                    <Button
+                    <img
+                        className="test-intro-to-main-img"
+                        src={BACKBTN}
                         onClick={this._onMainButtonClick}
-                        variant="dark"
-                        className="test-intro-to-main-btn"
-                        bsPrefix="btn"
-                    >⇦ 다른 테스트 하러 뒤로가기</Button>
+                        alt="다른 테스트 하러 뒤로가기"/>
                 </div>
             </div>
         );

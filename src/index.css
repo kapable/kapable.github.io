@@ -69,15 +69,26 @@ body {
 }
 
 .test-intro-with-friend-btn {
-  height: 2.5rem;
+  height: 6rem;
+  width: auto;
+  background-color: var(--bg-color);
+  border-color: var(--bg-color);
 }
 
-.test-intro-to-main-btn {
-  margin-top: 2.5rem;
-  height: 2.5rem;
-  font-family: var(--title-font);
-  background-color: #cecfd0;
-  border-color: #cecfd0;
+.test-intro-with-friend-btn:focus,
+.test-intro-with-friend-btn:active,
+.test-intro-with-friend-btn:visited,
+.test-intro-with-friend-btn:hover {
+  outline: none;
+  outline-offset: none;
+  box-shadow: none;
+  background-color: var(--bg-color);
+  border-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+.test-intro-to-main-img {
+  cursor: pointer;
 }
 
 .start-btn-participants {
@@ -246,10 +257,29 @@ body {
   color: var(--font-color);
 }
 
-.share-btn {
+.share {
   font-family: var(--title-font);
   display: inline;
-  margin: 3rem 1rem;
+  margin: 3rem 0.5rem;
+}
+
+.share-btn {
+  height: 6rem;
+  width: auto;
+  background-color: var(--bg-color);
+  border-color: var(--bg-color);
+}
+
+.share-btn:focus,
+.share-btn:active,
+.share-btn:visited,
+.share-btn:hover {
+  outline: none;
+  outline-offset: none;
+  box-shadow: none;
+  background-color: var(--bg-color);
+  border-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 .re-test-btn {
@@ -258,10 +288,18 @@ body {
   margin: 3rem 1rem;
 }
 
+.re-test-btn-img {
+  cursor: pointer;
+}
+
 .back-to-main {
   font-family: var(--title-font);
   display: inline;
-  margin: 3rem 1rem 0rem;
+  margin: 1.5rem 1rem 0rem;
+}
+
+.back-to-main-btn-img {
+  cursor: pointer;
 }
 
 /* result guide start */

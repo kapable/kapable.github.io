@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-d
 import App from '../App'
 import { Button, Card } from 'react-bootstrap';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import COPYBTN from '../api/DefaultImg/result-copy-link-btn.png';
+import AGAINBTN from '../api/DefaultImg/result-to-again-btn.png';
+import TOHOMEBTN from '../api/DefaultImg/result-to-home-btn.png';
 
 class Result extends Component {
     constructor(props){
@@ -106,27 +109,38 @@ class Result extends Component {
                 </div>
                 <div className="share">
                     <h5 className="share-title">친구에게 공유하기</h5>
-                    <div className="share-btn">
+                    <div className="share">
                         <CopyToClipboard text={this.state.sharable_url}>
-                            <Button 
-                                variant="dark"
-                                onClick={function(){alert("링크가 복사됐어요!")}}>🔗 링크 복사</Button>
+                            <Button className="share-btn">
+                                <img
+                                    src={COPYBTN}
+                                    onClick={function(){alert("링크가 복사됐어요!")}}
+                                    className="share-btn-img"
+                                    alt="링크 복사"
+                                    />
+                            </Button>
                         </CopyToClipboard>
                     </div>
                     <div className="re-test-btn">
-                        <Button onClick={this._onBackToStartButtonClick} className="retest-btn" variant="dark">⟲ 테스트 다시하기</Button>
+                        <img
+                            src={AGAINBTN}
+                            className="re-test-btn-img"
+                            onClick={this._onBackToStartButtonClick}
+                            alt="테스트 다시하기"/>
                     </div>
                 </div>
                 <div className="back-to-main">
-                    <Button
-                        variant="dark"
+                    <img
+                        src={TOHOMEBTN}
                         onClick={function(e) {
                             e.preventDefault();
                             this.setState({
                                 mode:"main"
                             })
                         }.bind(this)}
-                        >⌂ 다른 테스트 하러가기</Button>
+                        className="back-to-main-btn-img"
+                        alt="다른 테스트 하러가기"
+                        />
                 </div>
             </div>
             

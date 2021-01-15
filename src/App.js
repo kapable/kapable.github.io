@@ -152,29 +152,3 @@ class App extends Component {
 
 
 export default withRouter(App);
-
-// <<in package.json>>
-// below just use github domain
-// "scripts": {
-//   "start": "react-scripts start",
-//   "build": "react-scripts build",
-//   "test": "react-scripts test",
-//   "eject": "react-scripts eject",
-//   "predeploy": "npm run build",
-//   "deploy": "gh-pages -d build"
-// },
-
-// below use custom domain
-// "scripts": {
-//   "start": "react-scripts start",
-//   "build": "react-scripts build",
-//   "test": "react-scripts test",
-//   "eject": "react-scripts eject",
-//   "cname": "echo test.k-test.net > build/CNAME",
-//   "nojekyll": "echo > build/.nojekyll",
-//   "predeploy": "npm run build && npm run cname && npm run nojekyll",
-//   "deploy": "gh-pages --add --dotfiles -d build"
-// },
-
-// <!-- Google Adsense Script -->
-{/* <script data-ad-client="ca-pub-7365638386197005" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> */}
