@@ -9,15 +9,8 @@ import Result from './components/Result';
 import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
-import withClearCache from "./ClearCache";
 
-const ClearCacheComponent = withClearCache(MainApp);
-
-function App() {
-  return <ClearCacheComponent />;
-}
-
-class MainApp extends Component {
+class App extends Component {
   constructor(props){
     super(props)
     let i = 0;
