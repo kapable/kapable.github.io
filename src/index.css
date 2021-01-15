@@ -37,7 +37,7 @@ body {
 .test-main-img {
   margin: 0rem auto 0.5rem;
   width: 100%;
-  max-width: 500px;
+  max-width: 450px;
   display: block;
   cursor: pointer;
 }
@@ -51,8 +51,8 @@ body {
 
 .intro-main-img {
   margin: 0rem auto;
-  max-width: 450px;
-  width: 75%;
+  max-width: 550px;
+  width: 100%;
   height: auto;
   font-family: var(--title-font);
   cursor: pointer;
@@ -260,7 +260,7 @@ body {
 .share {
   font-family: var(--title-font);
   display: inline;
-  margin: 3rem 0.5rem;
+  margin: 3rem 0.5rem 0rem;
 }
 
 .share-btn {
