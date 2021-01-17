@@ -8,6 +8,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import COPYBTN from '../api/DefaultImg/result-copy-link-btn.png';
 import AGAINBTN from '../api/DefaultImg/result-to-again-btn.png';
 import TOHOMEBTN from '../api/DefaultImg/result-to-home-btn.png';
+import ReactGA from 'react-ga';
 
 class Result extends Component {
     constructor(props){
@@ -24,12 +25,24 @@ class Result extends Component {
             current_result:_current_result,
         }
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this)
+        this._eventSenderGA = this._eventSenderGA.bind(this);
+        this._onShareButtonClick = this._onShareButtonClick.bind(this);
     }
-
+    _eventSenderGA(category, action, label){
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+          });
+    }
     _onBackToStartButtonClick(){
+        this._eventSenderGA("Paging", "Click Re-test Button", "result page");
         this.setState({
             mode:"intro"
         })
+    }
+    _onShareButtonClick(){
+        alert("링크가 복사됐어요!");
     }
     introPageRender(){
 
@@ -114,7 +127,7 @@ class Result extends Component {
                             <Button className="share-btn">
                                 <img
                                     src={COPYBTN}
-                                    onClick={function(){alert("링크가 복사됐어요!")}}
+                                    onClick={this._onShareButtonClick}
                                     className="share-btn-img"
                                     alt="링크 복사"
                                     />
@@ -134,6 +147,7 @@ class Result extends Component {
                         src={TOHOMEBTN}
                         onClick={function(e) {
                             e.preventDefault();
+                            this._eventSenderGA("Paging", "Click Back-to-main Button", "result page");
                             this.setState({
                                 mode:"main"
                             })

@@ -11,6 +11,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Helmet } from 'react-helmet';
 import COPYBTN from '../api/DefaultImg/test-intro-copy-link-btn.png';
 import BACKBTN from '../api/DefaultImg/test-intro-other-tests-btn.png';
+import ReactGA from 'react-ga';
 
 class Intro extends Component {
     constructor(props){
@@ -52,8 +53,18 @@ class Intro extends Component {
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
         this._onMainButtonClick = this._onMainButtonClick.bind(this);
+        this._onShareButtonClick = this._onShareButtonClick.bind(this);
+        this._eventSenderGA = this._eventSenderGA.bind(this);
+    }
+    _eventSenderGA(category, action, label){
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+          });
     }
     _onStartButtonClick(){
+        this._eventSenderGA("Paging", "Click Start-test Button", "intro page");
         this.setState({
             mode:'quiz'
         })
@@ -63,6 +74,11 @@ class Intro extends Component {
         this.setState({
             mode:'main'
         })
+        this._eventSenderGA("Paging", "Click Back-to-main Button", "intro page");
+    }
+
+    _onShareButtonClick(){
+        alert("링크가 복사됐어요!");
     }
 
     introPageRender(){
@@ -88,7 +104,7 @@ class Intro extends Component {
                             <img 
                                 src={COPYBTN}
                                 className="test-intro-with-friend-img"
-                                onClick={function(){alert("링크가 복사됐어요!")}}
+                                onClick={this._onShareButtonClick}
                                 alt="테스트 링크 복사"/>
                         </Button>
                     </CopyToClipboard>
