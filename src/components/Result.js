@@ -23,6 +23,7 @@ class Result extends Component {
             current_url:_current_url,
             current_test:_current_test,
             current_result:_current_result,
+            num_shares_count:0,
         }
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this)
         this._eventSenderGA = this._eventSenderGA.bind(this);
@@ -42,6 +43,10 @@ class Result extends Component {
         })
     }
     _onShareButtonClick(){
+        this.setState({
+            num_shares_count:this.state.num_shares_count+1
+        })
+        this._eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
         alert("링크가 복사됐어요!");
     }
     introPageRender(){

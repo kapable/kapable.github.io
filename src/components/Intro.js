@@ -50,6 +50,7 @@ class Intro extends Component {
             result_url:'/result/',
             quiz_url:window.location.href,
             participants:(Number(month+date+hour+minute)-66000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+            num_shares_count:0,
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
         this._onMainButtonClick = this._onMainButtonClick.bind(this);
@@ -78,6 +79,10 @@ class Intro extends Component {
     }
 
     _onShareButtonClick(){
+        this.setState({
+            num_shares_count:this.state.num_shares_count+1
+        })
+        this._eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
         alert("링크가 복사됐어요!");
     }
 
