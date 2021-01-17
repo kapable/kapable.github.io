@@ -4,7 +4,7 @@ import Result from './Result'
 import Loading from './Loading'
 import BirthdayCalc from './BirthdayCalc'
 import TESTS from '../api/TESTS'
-import { BrowserRouter as Router, Redirect, Route, withRouter, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Typist from 'react-typist';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
@@ -30,9 +30,13 @@ class Intro extends Component {
         for(j=0;j<_current_test.questions[0].answers.length;j++) {
             _answer_type_obj[_current_test.questions[0].answers[j].type] = 0;
         };
-        // for randomizing participants number(range)
-        let min = 1402052;
-        let max = 2000000;
+
+        // get Full Today
+        let today = new Date();
+        let year = String(today.getFullYear()).slice(-2);
+        let month = String(today.getMonth() + 1).padStart(2, '0');
+        let date = String(today.getDate()).padStart(2, '0');
+        let hour = String(today.getHours());
         
         this.state = {
             mode:'intro',
@@ -44,7 +48,8 @@ class Intro extends Component {
             counted_score:0, // < ------------- for calculating scores
             result_url:'/result/',
             quiz_url:window.location.href,
-            participants:Math.trunc((Math.random() * (max - min) + min)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+            // participants:Math.trunc((Math.random() * (max - min) + min)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+            participants:Math.ceil(Number(year+month+date+hour)/20).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
         this._onMainButtonClick = this._onMainButtonClick.bind(this);
@@ -75,9 +80,9 @@ class Intro extends Component {
                     src={_thumbImage}
                     alt={_mainTitle + '|' + _subTitle}/>
                 
-                {/* <Typist className="start-btn-participants">
+                <Typist className="start-btn-participants">
                     현재 총 {this.state.participants}명이 참여했어요.
-                </Typist> */}
+                </Typist>
                 
                 <div className="test-intro-with-friend">
                     <CopyToClipboard text={this.state.quiz_url}>
