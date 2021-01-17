@@ -48,7 +48,6 @@ class Intro extends Component {
             counted_score:0, // < ------------- for calculating scores
             result_url:'/result/',
             quiz_url:window.location.href,
-            // participants:Math.trunc((Math.random() * (max - min) + min)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             participants:Math.ceil(Number(year+month+date+hour)/20).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
@@ -79,7 +78,6 @@ class Intro extends Component {
                     onClick={this._onStartButtonClick}
                     src={_thumbImage}
                     alt={_mainTitle + '|' + _subTitle}/>
-                
                 <Typist className="start-btn-participants">
                     현재 총 {this.state.participants}명이 참여했어요.
                 </Typist>
