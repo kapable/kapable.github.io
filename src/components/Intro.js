@@ -33,7 +33,6 @@ class Intro extends Component {
 
         // get Full Today
         let today = new Date();
-        // let year = String(today.getFullYear()).slice(-2);
         let month = String(today.getMonth() + 1)//.padStart(2, '0');
         let date = String(today.getDate()).padStart(2, '0');
         let hour = String(today.getHours()).padStart(2, '0');
@@ -49,7 +48,7 @@ class Intro extends Component {
             counted_score:0, // < ------------- for calculating scores
             result_url:'/result/',
             quiz_url:window.location.href,
-            participants:Number(month+date+hour+minute).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+            participants:(Number(month+date+hour+minute)-66000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
         this._onMainButtonClick = this._onMainButtonClick.bind(this);
