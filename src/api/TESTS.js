@@ -25,6 +25,376 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // otherLookMe
+    {
+        info : {
+            mainTitle:"남들이 보는 나는?",
+            subTitle:"남들이 보는 나는 과연 어떤 모습일까?",
+            mainUrl:"otherlookme",
+            scoreType:"numberScoring",
+            mainImage:"https://dl.dropboxusercontent.com/s/rqgnassmgqlioih/otherlookme-intro.png?dl=0",
+            thumbImage:"https://dl.dropboxusercontent.com/s/jwyvulnwsyihzk8/otherlookme-thumb.png?dl=0"
+        },
+        questions:[
+            {
+                question: '내가 가장 좋아하는 색깔은?',
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: '갈색 or 회색'
+                    },
+                    {
+                        type: "너구리",
+                        score: 2,
+                        content: '화이트'
+                    },
+                    {
+                        type: "펭귄",
+                        score: 3,
+                        content: '진파랑 or 보라'
+                    },
+                    {
+                        type: "사자",
+                        score: 4,
+                        content: '녹색'
+                    },
+                    {
+                        type: "너구리",
+                        score: 5,
+                        content: '노랑 or 연파랑'
+                    },
+                    {
+                        type: "펭귄",
+                        score: 6,
+                        content: '빨강 or 주황'
+                    },
+                    {
+                        type: "펭귄",
+                        score: 7,
+                        content: '검정'
+                    },
+                ],
+            },
+            {
+                question: "파티 날 나의 등장은?",
+                answers:[
+                    {
+                        type: "사자",
+                        score: 2,
+                        content: "최대한 시선이 집중되지 않도록 조용히 들어간다."
+                    },
+                    {
+                        type: "너구리",
+                        score: 4,
+                        content: "차분하게 들어가 주변을 두리번거린다."
+                    },
+                    {
+                        type: "펭귄",
+                        score: 6,
+                        content: "화려하게 모두가 날 볼 수 있도록 등장"
+                    },
+                ]
+            },
+            {
+                question: "잠들기 전 나의 포즈는?",
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: "이불을 머리 끝까지 덮고 자는 자세"
+                    },
+                    {
+                        type: "너구리",
+                        score: 2,
+                        content: "한 팔을 베고 있는 자세"
+                    },
+                    {
+                        type: "펭귄",
+                        score: 3,
+                        content: "옆으로 누워 웅크린 자세"
+                    },
+                    {
+                        type: "너구리",
+                        score: 4,
+                        content: "엎드려서 자는 자세"
+                    },
+                    {
+                        type: "펭귄",
+                        score: 5,
+                        content: "몸을 바르게 펴고 누운 자세"
+                    },
+                ]
+            },
+            {
+                question: "간만에 집중하고 있는 날 누군가 방해한다.",
+                answers:[
+                    {
+                        type: "사자",
+                        score: 2,
+                        content: "나 지금 짜증났다고 투덜거린다"
+                    },
+                    {
+                        type: "너구리",
+                        score: 4,
+                        content: "속으로 짜증내지만 티 안내기"
+                    },
+                    {
+                        type: "펭귄",
+                        score: 6,
+                        content: "오케이! 이 기회에 휴식타임"
+                    },
+                ]
+            },
+            {
+                question: "편히 앉으라고 했을 때 나는?",
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: "한 쪽 다리를 접어 깔고 앉기"
+                    },
+                    {
+                        type: "너구리",
+                        score: 2,
+                        content: "다리를 쭉 펴고 앉기"
+                    },
+                    {
+                        type: "펭귄",
+                        score: 4,
+                        content: "정자세로 앉기 (지하철에서의 자세) "
+                    },
+                    {
+                        type: "펭귄",
+                        score: 6,
+                        content: "다리 꼬고 앉기"
+                    },
+                ]
+            },
+            {
+                question: "배꼽이 빠질 듯 재밌는 일이 있을 때 나는?",
+                answers:[
+                    {
+                        type: "사자",
+                        score: 3,
+                        content: "미소 천사처럼 웃음 소리 내지 않기"
+                    },
+                    {
+                        type: "너구리",
+                        score: 4,
+                        content: "조용한 소리로 웃기"
+                    },
+                    {
+                        type: "펭귄",
+                        score: 5,
+                        content: "적당한 웃음 소리로 별로 크지 않게 웃기"
+                    },
+                    {
+                        type: "펭귄",
+                        score: 6,
+                        content: "나 지금 웃고 있다는 사실을 알리는 것처럼 숨기지 않고 크게 웃기"
+                    },
+                ]
+            },
+            {
+                question: "사람들과 대화할 때 나는",
+                answers:[
+                    {
+                        type: "사자",
+                        score: 2,
+                        content: "두 손을 잡으면서"
+                    },
+                    {
+                        type: "너구리",
+                        score: 4,
+                        content: "셀프 팔짱 끼고 서서"
+                    },
+                    {
+                        type: "펭귄",
+                        score: 5,
+                        content: "한 손이나 양손을 허리에 올리고"
+                    },
+                    {
+                        type: "너구리",
+                        score: 6,
+                        content: "내 몸이나 머리카락은 만지작거리며"
+                    },
+                    {
+                        type: "펭귄",
+                        score: 7,
+                        content: "상대를 터치하며"
+                    },
+                ]
+            },
+            {
+                question: "나는 평소 걸을 때",
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: "느리게 걷기"
+                    },
+                    {
+                        type: "너구리",
+                        score: 2,
+                        content: "바닥을 보며 빠르지 않게"
+                    },
+                    {
+                        type: "펭귄",
+                        score: 4,
+                        content: "보폭은 좁게 빨리"
+                    },
+                    {
+                        type: "너구리",
+                        score: 6,
+                        content: "보폭은 넓고 빨리"
+                    },
+                    {
+                        type: "펭귄",
+                        score: 7,
+                        content: "정면을 바라보며 너무 빠르지 않게"
+                    },
+                ]
+            },
+            {
+                question: "하루 중 가장 기분이 좋을 때",
+                answers:[
+                    {
+                        type: "사자",
+                        score: 2,
+                        content: "아침"
+                    },
+                    {
+                        type: "너구리",
+                        score: 4,
+                        content: "오후나 이른 저녁"
+                    },
+                    {
+                        type: "펭귄",
+                        score: 6,
+                        content: "늦은 밤"
+                    },
+                ]
+            },
+            {
+                question: "내가 주로 꾸는 꿈은?",
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: "기분 좋은 느낌인 꿈"
+                    },
+                    {
+                        type: "너구리",
+                        score: 2,
+                        content: "싸우는 꿈"
+                    },
+                    {
+                        type: "펭귄",
+                        score: 3,
+                        content: "계속 찾는 꿈"
+                    },
+                    {
+                        type: "사자",
+                        score: 4,
+                        content: "어디서 떨어지는 꿈"
+                    },
+                    {
+                        type: "너구리",
+                        score: 5,
+                        content: "날거나 떠오르는 그런 꿈?"
+                    },
+                    {
+                        type: "펭귄",
+                        score: 6,
+                        content: "꿈은 잘..."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "나는야 소심쟁이",
+                desc: `나는야 소심쟁이\n
+                ✓   남들이 보는 당신은 부끄럼이 많고, 조금 소심하며 우유부단해 보입니다.\n
+                ✓   본인의 일을 잘 결정을 못하는 선택장애라 조금 답답해 보이고 뭔가 대신해줘야 할 것 같은…\n
+                ✓   보호본능을 일으킨 달까?\n
+                ✓   또한 걱정을 사서하는 타입!\n
+                ✓   그래서 친해지면 아니라는 걸 알지만,\n
+                ✓   당신과 친해지기 전까지 잘 모르는 사람은 당신을 조금 지루한 사람이라고 생각하기도 합니다.
+                `,
+                query: "thtlawoddl",
+                score_range:range(21),
+                img_src:'https://dl.dropboxusercontent.com/s/wht4x7rlz0xzecl/otherlookme-1.png?dl=0'
+            },
+            {
+                type: "나는야 깐깐쟁이",
+                desc: `나는야 깐깐쟁이\n
+                ✓   남들이 보는 당신은 조금 집요하고 고집 센 깐깐쟁이로 보입니다.\n
+                ✓   상당히 신중하고 조심스러운 사람이라 조금 느릴 수 있지만 꾸준하게 성실하고 전진하는 사람.\n
+                ✓   그래서 당신의 충동적인 행동은 주변 친구들에게 충격으로 다가온다고요!\n
+                ✓   무슨 일이든 꼼꼼하게 계획하며 결정하는 것을 선호하는 당신!\n
+                ✓   No!라고 당당하게 말하기 때문에 대부분 퇴짜 놓는 사람이 되어버리는…
+                `,
+                query: "RksRkswoddl",
+                score_range:range(21, 31),
+                img_src:'https://dl.dropboxusercontent.com/s/vafmgqwwv67csq7/otherlookme-2.png?dl=0'
+            },
+            {
+                type: "나는야 겸손쟁이",
+                desc: `나는야 겸손쟁이\n
+                ✓   남들이 보는 당신은 현명하고 신중한 겸손쟁이입니다.\n
+                ✓   당신은 똑똑하고 재능과 능력이 있지만 겸손한 자세로 주변에서 인정받는 사람이네요.\n
+                ✓   그러한 당신은 사람을 사귈 때 다급하게 결정하지 않고 가볍게 접근하지 않으며,\n
+                ✓   나의 사람들에겐 매우 잘해주고 자신도 그만큼의 대우를 받기 원합니다!\n
+                ✓   신뢰는 인간관계에서 가장 중요한 것!\n
+                ✓   그 신뢰가 무너지면 극복이 힘들어요…
+                `,
+                query: "ruathswoddl",
+                score_range:range(31, 41),
+                img_src:'https://dl.dropboxusercontent.com/s/k7ohhag4qfcm9ab/otherlookme-3.png?dl=0'
+            },
+            {
+                type: "나는야 매력쟁이",
+                desc: `나는야 매력쟁이\n
+                ✓   남들이 보는 당신은 매우 발랄하고, 매력적이며, 재밌고 현실적인 사람이라고 생각해요.\n
+                ✓   어디서든 주목을 사로잡는 사람이라고 생각하고 적당한 눈치도 가지고 있어,\n
+                ✓   교만해지지 않고 주위를 잘 살핀다고 느껴요.\n
+                ✓   다정한 부분도 있고 친절하며 이해심이 많아 다른 사람을 잘 도와줍니다!\n
+                ✓   그런 당신은 늘 분위기 메이커!
+                `,
+                query: "aofurwoddl",
+                score_range:range(41, 51),
+                img_src:'https://dl.dropboxusercontent.com/s/cqpvfc11i24ftv4/otherlookme-4.png?dl=0'
+            },
+            {
+                type: "나는야 행동쟁이",
+                desc: `나는야 행동쟁이\n
+                ✓   남들이 보는 당신은 잘 흥분하고, 변덕스러우며 충동적인 사람이라고 생각해요.\n
+                ✓   그래서 리더형으로 빠른 결정을 내릴 수 있고 과감하고 모험성이 있는 타입~\n
+                ✓   호기심이 매우 있는 편이라 모든 해보려고 하는 당신!\n
+                ✓   그런 당신의 친구들은 당신이 발하는 강렬하고 진취적인 모습에 강력하게 끌립니다!
+                `,
+                query: "godehdwoddl",
+                score_range:range(51, 61),
+                img_src:'https://dl.dropboxusercontent.com/s/zh5cmasp1zxvwws/otherlookme-5.png?dl=0'
+            },
+            {
+                type: "나는야 지배쟁이",
+                desc: `태양처럼 주위를 밝게 비추는 타입\n
+                ✓   남들이 보는 당신은 약간의 허영심이 있고,\n
+                ✓   남을 지배하고 싶은 욕구가 강해 보입니다.\n
+                ✓   남이 해주는 칭찬을 좋아하고 칭찬에 약하지만,\n
+                ✓   남에게 칭찬을 잘 못해주는 양면적인 성격!\n
+                ✓   그런 당신의 당당한 성격을 부러워하고 우러러보는,\n
+                ✓   사람들이 있지만 정작 그렇게 될까 두려워할 수도 있어요!
+                `,
+                query: "wlqowoddl",
+                score_range:range(61, 101),
+                img_src:'https://dl.dropboxusercontent.com/s/onxg2rqsbimsw51/otherlookme-6.png?dl=0'
+            },
+        ]
+    },
     // whosFault
     {
         info : {
