@@ -17,6 +17,7 @@ class Result extends Component {
         const _current_url = _sharable_url.split('/')
         const _current_test = _current_url.reverse()[2]
         const _current_result = _current_url[0]
+
         this.state = {
             mode:"result",
             sharable_url:_sharable_url,
@@ -69,8 +70,10 @@ class Result extends Component {
         let final_desc = ''
         let img_src = ''
         let i = 0;
+        let _current_test_contents ;
         while(i<TESTS.length){
             if(TESTS[i].info.mainUrl === this.state.current_test){
+                _current_test_contents = TESTS[i] // for storytelling
                 let j = 0;
                 while(j<TESTS[i].results.length){
                     if(TESTS[i].results[j].query === this.state.current_result){
@@ -87,18 +90,29 @@ class Result extends Component {
         }
 
         // return final result option
-        return (
-            <Fragment>
-                <img src={img_src} className='result-img' alt={final_type} />
-                <Card className="result-card" bg="light">
-                    {/* <Card.Img variant='top' src={img_src} className='result-img' alt={final_type} /> */}
-                    <Card.Body className="result-p">
-                        <Card.Text>{final_desc}</Card.Text>
-                    </Card.Body>
-                </Card>
-            </Fragment>
-                
-        )
+        // in case of storyTelling Type Quiz
+        if(_current_test_contents.info.scoreType === "storyTelling"){
+            return (
+                <Fragment>
+                    <img src={img_src} className='result-img' alt={final_type} />
+                </Fragment>
+            )
+        //  and other case of Type Quizes
+        }else{
+            return (
+                <Fragment>
+                    <img src={img_src} className='result-img' alt={final_type} />
+                    <Card className="result-card" bg="light">
+                        {/* <Card.Img variant='top' src={img_src} className='result-img' alt={final_type} /> */}
+                        <Card.Body className="result-p">
+                            <Card.Text>{final_desc}</Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Fragment>
+                    
+            )
+        }
+        
     }
 
     mainPageRender(){

@@ -3,6 +3,7 @@ import Quiz from './Quiz'
 import Result from './Result'
 import Loading from './Loading'
 import BirthdayCalc from './BirthdayCalc'
+import StoryTelling from './StoryTelling'
 import TESTS from '../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
@@ -126,7 +127,7 @@ class Intro extends Component {
     }
 
     resultCaculator(){
-        if (this.state.scoreType === "numberScoring" || this.state.scoreType === "birthdayCalc"){
+        if (this.state.scoreType === "numberScoring" || this.state.scoreType === "birthdayCalc" || this.state.scoreType === "storyTelling"){
             let final_score = this.state.counted_score;
             for (let k = 0; k < this.state.current_test.results.length; k++){
                 if(this.state.current_test.results[k].score_range.includes(final_score)){
@@ -202,6 +203,20 @@ class Intro extends Component {
                         mode:_mode
                     })
                 }.bind(this)}></BirthdayCalc>
+                return _page
+            } else if (this.state.scoreType === "storyTelling"){
+                let _page = <StoryTelling
+                qAndA={this.state.qAndA}
+                quizNum={this.state.quizNumber}
+                scoreType={this.state.scoreType}
+                onChangeMode={
+                    function(_quizNum, _mode) {
+                        this.setState({
+                            quizNumber:_quizNum,
+                            mode:_mode
+                        })
+                    }.bind(this)}
+                ></StoryTelling>
                 return _page
             }
             return this._page

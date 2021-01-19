@@ -185,6 +185,13 @@ body {
   color: #cecfd0;
 }
 
+/* for storyTelling Quiz */
+.storytelling-img {
+  height: auto;
+  width: 23rem;
+  margin: 1rem auto;
+}
+
 /* loading start */
 
 .loading {
@@ -237,7 +244,7 @@ body {
 }
 
 .result-header {
-  margin: 5rem auto;
+  margin: 5rem auto 2rem;
   font-family: var(--title-font);
   margin: 1rem 0.5rem;
   color: var(--font-color);
@@ -260,7 +267,7 @@ body {
 .share {
   font-family: var(--title-font);
   display: inline;
-  margin: 3rem 0.5rem 0rem;
+  margin: 1rem 0.5rem 0rem;
 }
 
 .share-btn {

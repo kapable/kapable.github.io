@@ -25,6 +25,108 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // whosFault
+    {
+        info : {
+            mainTitle:"누구의 잘못일까?",
+            subTitle:"도대체 누구의 잘못일까?",
+            mainUrl:"whosFault",
+            scoreType:"storyTelling",
+            mainImage:"https://dl.dropboxusercontent.com/s/gprokshd3vvztgh/whosFault-intro.png?dl=0",
+            thumbImage:"https://dl.dropboxusercontent.com/s/5vshoajotg3hrmg/whosFault-thumb.png?dl=0"
+        },
+        questions:[
+            {
+                question: 'whosFault-0',
+                answers:[
+                    {
+                        type: "whosFault-0",
+                        score: 0,
+                        content: 'https://dl.dropboxusercontent.com/s/j3j1dv09q38bdfp/whosFault-0.png?dl=0'
+                    }
+                ]
+            },
+            {
+                question: "whosFault-1",
+                answers:[
+                    {
+                        type: "whosFault-1",
+                        score: 0,
+                        content: "https://dl.dropboxusercontent.com/s/loiye53gfcw937p/whosFault-1.png?dl=0"
+                    }
+                ]
+            },
+            {
+                question: "whosFault-2",
+                answers:[
+                    {
+                        type: "whosFault-2",
+                        score: 0,
+                        content: "https://dl.dropboxusercontent.com/s/p3zwmvahijv4db2/whosFault-2.png?dl=0"
+                    }
+                ]
+            },
+            {
+                question: "whosFault-3",
+                answers:[
+                    {
+                        type: "whosFault-3",
+                        score: 0,
+                        content: "https://dl.dropboxusercontent.com/s/i344z7503jngw11/whosFault-3.png?dl=0"
+                    }
+                ]
+            },
+            {
+                question: "whosFault-4",
+                answers:[
+                    {
+                        type: "whosFault-4",
+                        score: 0,
+                        content: 'https://dl.dropboxusercontent.com/s/o34ouhblsqffj35/whosFault-4.png?dl=0'
+                    }
+                ]
+            },
+            {
+                question: "whosFault-5",
+                answers:[
+                    {
+                        type: "whosFault-5",
+                        score: 0,
+                        content: "https://dl.dropboxusercontent.com/s/r64a7ftvbve705n/whosFault-5.png?dl=0"
+                    }
+                ]
+            },
+            {
+                question: "whosFault-6",
+                answers:[
+                    {
+                        type: "whosFault-6",
+                        score: 0,
+                        content: "https://dl.dropboxusercontent.com/s/cv5ci9515uohz5r/whosFault-6.png?dl=0"
+                    }
+                ]
+            },
+            {
+                question: "whosFault-7",
+                answers:[
+                    {
+                        type: "whosFault-7",
+                        score: 0,
+                        content: "https://dl.dropboxusercontent.com/s/6r6q9g7hlraruq8/whosFault-7.png?dl=0"
+                    }
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "whosFault-result",
+                desc: `whosFault-result`,
+                query: "snrndmlwkfaht",
+                score_range:range(2),
+                img_src:'https://dl.dropboxusercontent.com/s/66dkboa6bpmgj1n/whosFault-8.png?dl=0'
+            }
+        ]
+    },
     // birthNum
     {
         info : {
