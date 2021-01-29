@@ -78,6 +78,26 @@ class Quiz extends Component {
                         size="lg"
                         className="option-btn"
                     >{qAndA.answers[i].content}</Button>)
+            } else if (this.props.scoreType === "typeCountingMBTI"){
+                _questions.push(
+                    <Button
+                        key={this.props.quizNum-i}
+                        value={qAndA.answers[i].type}
+                        onClick={function(e) {
+                            e.preventDefault();
+                            if(this.props.quizNum === this.props.qAndA.length-1){
+                                this.props.onChangeMode(nextQuizNum, e.target.value, "loading"); //result
+                            } else {
+                                this.setState({
+                                    quizCount:this.state.quizCount+1 // for Quiz Counting => QuestionCount.js
+                                })
+                                this.props.onChangeMode(nextQuizNum, e.target.value, "quiz");
+                            }
+                        }.bind(this)}
+                        variant="outline-dark" 
+                        size="lg"
+                        className="option-btn"
+                    >{qAndA.answers[i].content}</Button>)
             }
             i = i + 1;
         }

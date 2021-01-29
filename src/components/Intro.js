@@ -26,12 +26,14 @@ class Intro extends Component {
             }
             i = i + 1
         }
+
         // create answer option object for counting each question's answer
-        var _answer_type_obj = {};
-        var j = 0;
-        for(j=0;j<_current_test.questions[0].answers.length;j++) {
-            _answer_type_obj[_current_test.questions[0].answers[j].type] = 0;
-        };
+        let _answer_type_obj = {};
+        for(let k=0; k<_current_test.questions.length; k++) {
+            for(let l=0; l<_current_test.questions[k].answers.length; l++){
+                _answer_type_obj[_current_test.questions[k].answers[l].type] = 0;
+            }
+        }
 
         // get Full Today
         let today = new Date();
@@ -153,7 +155,38 @@ class Intro extends Component {
                     return this.state.current_test.results[z]
                 }
             }
-        } 
+        } else if (this.state.scoreType === "typeCountingMBTI") {
+            let final_result_obj = this.state.answer_type_obj;
+
+            // for creating an array which contains VS between types ex.["EI", "SN", "TF", "JP"]
+            function onlyUnique(value, index, self) {
+                return self.indexOf(value) === index;
+              }
+            let _which_type_arr = [];
+            for(let k=0; k<this.state.current_test.questions.length; k++) {
+                _which_type_arr.push(this.state.current_test.questions[k].which);
+            }
+            _which_type_arr = _which_type_arr.filter(onlyUnique);
+            
+            // get max value & type from Each VS
+            let final_type = '';
+            for(let i=0; i<_which_type_arr.length; i++){
+                let first_type = _which_type_arr[i][0]
+                let second_type = _which_type_arr[i][1]
+                let type_arr = [first_type, second_type]
+
+                let max_val = Math.max(final_result_obj[first_type], final_result_obj[second_type])
+                // eslint-disable-next-line
+                type_arr.filter(item => final_result_obj[item] === max_val).forEach(item => final_type += item)
+            }
+
+            // return 'THE' result TYPE from TESTS.js
+            for (let z=0;z<this.state.current_test.results.length;z++){
+                if(final_type === this.state.current_test.results[z].type){
+                    return this.state.current_test.results[z]
+                }
+            }
+        }
         
     }
     quizPageRender(){
@@ -217,6 +250,22 @@ class Intro extends Component {
                         })
                     }.bind(this)}
                 ></StoryTelling>
+                return _page
+            } else if (this.state.scoreType === "typeCountingMBTI") {
+                let _page = <Quiz
+                qAndA={this.state.qAndA}
+                quizNum={this.state.quizNumber}
+                scoreType={this.state.scoreType}
+                onChangeMode={
+                    function(_quizNum, _answer, _mode) {
+                    var _answer_obj = Object.assign({}, this.state.answer_type_obj);
+                    _answer_obj[_answer] = _answer_obj[_answer] + 1;
+                    this.setState({
+                        quizNumber:_quizNum,
+                        answer_type_obj:_answer_obj,
+                        mode:_mode
+                    })
+                }.bind(this)}></Quiz>
                 return _page
             }
             return this._page

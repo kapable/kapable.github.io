@@ -91,7 +91,7 @@ class Result extends Component {
 
         // return final result option
         // in case of storyTelling Type Quiz
-        if(_current_test_contents.info.scoreType === "storyTelling"){
+        if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI"){
             return (
                 <Fragment>
                     <img src={img_src} className='result-img' alt={final_type} />
