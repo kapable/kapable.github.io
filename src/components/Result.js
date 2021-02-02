@@ -98,19 +98,29 @@ class Result extends Component {
                 </Fragment>
             )
         //  and other case of Type Quizes
-        }else{
-            return (
-                <Fragment>
-                    <img src={img_src} className='result-img' alt={final_type} />
-                    <Card className="result-card" bg="light">
-                        {/* <Card.Img variant='top' src={img_src} className='result-img' alt={final_type} /> */}
-                        <Card.Body className="result-p">
-                            <Card.Text>{final_desc}</Card.Text>
-                        </Card.Body>
-                    </Card>
-                </Fragment>
-                    
-            )
+        } else {
+            // if there are not description text === only result img
+            if(final_desc === ``){
+                return (
+                    <Fragment>
+                        <img src={img_src} className='result-img' alt={final_type} />
+                    </Fragment>
+                        
+                )
+            } else {
+                return (
+                    <Fragment>
+                        <img src={img_src} className='result-img' alt={final_type} />
+                        <Card className="result-card" bg="light">
+                            {/* <Card.Img variant='top' src={img_src} className='result-img' alt={final_type} /> */}
+                            <Card.Body className="result-p">
+                                <Card.Text>{final_desc}</Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Fragment>
+                        
+                )
+            }
         }
         
     }

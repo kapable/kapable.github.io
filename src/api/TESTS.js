@@ -25,6 +25,8 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    
+    // persoanlColor
     {
         info : {
             mainTitle:"퍼스널 컬러 테스트",
@@ -713,6 +715,162 @@ var TESTS = [
                 query: "wlqowoddl",
                 score_range:range(61, 101),
                 img_src:'https://dl.dropboxusercontent.com/s/onxg2rqsbimsw51/otherlookme-6.png?dl=0'
+            },
+        ]
+    },
+    // latte
+    {
+        info : {
+            mainTitle:"라떼 테스트",
+            subTitle:"과연 나는 라떼일까?",
+            mainUrl:"latte",
+            scoreType:"numberScoring",
+            mainImage:"https://dl.dropboxusercontent.com/s/r3nk2bx2cx9d22j/latte-main.png?dl=0",
+            thumbImage:"https://dl.dropboxusercontent.com/s/8ht6pqj2v2i6999/latte-thumb.png?dl=0"
+        },
+        questions:[
+            {
+                question: '누군가 내 의견에 반대하면?',
+                answers:[
+                    {
+                        type: "포메라니안",
+                        score: 1,
+                        content: '그럴 수도 있지! '
+                    },
+                    {
+                        type: "치와와",
+                        score: 2,
+                        content: '가슴속에서 분노가…'
+                    },
+                ],
+            },
+            {
+                question: "처음 만나는 사람을 보면?",
+                answers:[
+                    {
+                        type: "포메라니안",
+                        score: 1,
+                        content: "나이부터 확인한다."
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 2,
+                        content: "상대방이 먼저 나이를 물어본다."
+                    },
+                ]
+            },
+            {
+                question: "여러 사람들과 밥을 먹을 때",
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 1,
+                        content: "가위/바위/보나 분할해 계좌 이체하기"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 2,
+                        content: "연장자가 계산한다"
+                    },
+                ]
+            },
+            {
+                question: "회식 때 나의 모습은?",
+                answers:[
+                    {
+                        type: "비글",
+                        score: 1,
+                        content: "마지막까지 남아 있어야지!"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 2,
+                        content: "눈치껏 집에 가서 쉬어야지!"
+                    },
+                ]
+            },
+            {
+                question: "고기 먹을 때",
+                answers:[
+                    {
+                        type: "리트리버",
+                        score: 1,
+                        content: '제일 어린 사람이 굽지 않고 먹기만 하면 화가나!'
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 2,
+                        content: "그냥 누가 구워도 상관 노노!"
+                    },
+                ]
+            },
+            {
+                question: "회사에서 보너스를 받았다.",
+                answers:[
+                    {
+                        type: "포메라니안",
+                        score: 1,
+                        content: "나를 위해 써야지~사고 싶은 거 구입하기!"
+                    },
+                    {
+                        type: "비글",
+                        score: 2,
+                        content: "미래를 위해 저축해두자! 통장에 입금하기!"
+                    },
+                ]
+            },
+            {
+                question: "퇴근할 때 나는?",
+                answers:[
+                    {
+                        type: "비글",
+                        score: 1,
+                        content: "바로 퇴근한다."
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 2,
+                        content: "주변 눈치를 보며 퇴근 타이밍을 본다."
+                    },
+                ]
+            },
+            {
+                question: "식당에 가면?",
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 1,
+                        content: "수저, 젓가락을 먼저 세팅한다."
+                    },
+                    {
+                        type: "리트리버",
+                        score: 2,
+                        content: "누군가 늘 미리 먼저 세팅해 놓는다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "따뜻한 우유",
+                desc: ``,
+                query: "milk",
+                score_range:range(11),
+                img_src:'https://dl.dropboxusercontent.com/s/yx1fjxjo23w7ckc/milk.png?dl=0'
+            },
+            {
+                type: "밀크 커피",
+                desc: ``,
+                query: "milkCoffee",
+                score_range:range(11, 14),
+                img_src:'https://dl.dropboxusercontent.com/s/u60536l4gh4emhx/milkCoffee.png?dl=0'
+            },
+            {
+                type: "라떼",
+                desc: ``,
+                query: "latte",
+                score_range:range(14, 20),
+                img_src:'https://dl.dropboxusercontent.com/s/ewjfbva27nq5vlu/latte.png?dl=0'
             },
         ]
     },
