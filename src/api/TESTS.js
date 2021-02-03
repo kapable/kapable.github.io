@@ -33,8 +33,8 @@ var TESTS = [
             subTitle:"나에게 어울리는 컬러는 무엇일까?",
             mainUrl:"personalColor",
             scoreType:"typeCountingMBTI",
-            mainImage:"https://dl.dropboxusercontent.com/s/w8s0b25wapob7zd/personalColor-intro.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/133jatlzhjb6exj/personalColor-thumb.png?dl=0"
+            mainImage:"https://i.imgur.com/N0KYVqX.png",
+            thumbImage:"https://i.imgur.com/aKYlJKg.png"
         },
         questions:[
             {
@@ -237,35 +237,35 @@ var TESTS = [
                 `,
                 query: "ESTJ",
                 score_range:range(26),
-                img_src:'https://dl.dropboxusercontent.com/s/l891g3hn0vqdm7l/ESTJ.png?dl=0'
+                img_src:'https://i.imgur.com/aWYS21u.png'
             },
             {
                 type: "ESTP",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "ESTP",
                 score_range:range(26, 51),
-                img_src:'https://dl.dropboxusercontent.com/s/qlvwgi1duv7u96n/ESTP.png?dl=0'
+                img_src:'https://i.imgur.com/uQktEiL.png'
             },
             {
                 type: "ESFJ",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "ESFJ",
                 score_range:range(51, 75),
-                img_src:'https://dl.dropboxusercontent.com/s/ugaq2hmjp6466a6/ESFJ.png?dl=0'
+                img_src:'https://i.imgur.com/aGqFCbv.png'
             },
             {
                 type: "ESFP",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "ESFP",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/lbo1wprgqnd92i3/ESFP.png?dl=0'
+                img_src:'https://i.imgur.com/eqLZcLu.png'
             },
             {
                 type: "ENTJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ENTJ",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/ojduoy0zqn2efya/ENTJ.png?dl=0'
+                img_src:'https://i.imgur.com/YwisEbz.png'
             },
             {
                 type: "ENTP",
@@ -273,42 +273,42 @@ var TESTS = [
                 `,
                 query: "ENTP",
                 score_range:range(26),
-                img_src:'https://dl.dropboxusercontent.com/s/m9gfq4dvcaujneq/ENTP.png?dl=0'
+                img_src:'https://i.imgur.com/ovQ5n6b.png'
             },
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "ENFJ",
                 score_range:range(26, 51),
-                img_src:'https://dl.dropboxusercontent.com/s/auczn89j5nexwao/ENFJ.png?dl=0'
+                img_src:'https://i.imgur.com/5hKnw2V.png'
             },
             {
                 type: "ENFP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "ENFP",
                 score_range:range(51, 75),
-                img_src:'https://dl.dropboxusercontent.com/s/yfcc05qmybdjypz/ENFP.png?dl=0'
+                img_src:'https://i.imgur.com/kQh7LKo.png'
             },
             {
                 type: "ISTJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "ISTJ",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/1zso3b2fp4c5ix4/ISTJ.png?dl=0'
+                img_src:'https://i.imgur.com/2fe6qr5.png'
             },
             {
                 type: "ISTP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ISTP",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/m1ufgg8xljab7qx/ISTP.png?dl=0'
+                img_src:'https://i.imgur.com/uVx8om9.png'
             },
             {
                 type: "ISFJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ISFJ",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/s3bnn8tkpso6fkr/ISFJ.png?dl=0'
+                img_src:'https://i.imgur.com/fYvmTKx.png'
             },
             {
                 type: "ISFP",
@@ -316,35 +316,35 @@ var TESTS = [
                 `,
                 query: "ISFP",
                 score_range:range(26),
-                img_src:'https://dl.dropboxusercontent.com/s/rq0fiqxjzpn5jc1/ISFP.png?dl=0'
+                img_src:'https://i.imgur.com/QErZlS2.png'
             },
             {
                 type: "INTJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "INTJ",
                 score_range:range(26, 51),
-                img_src:'https://dl.dropboxusercontent.com/s/hg4g8djhdz71kh4/INTJ.png?dl=0'
+                img_src:'https://i.imgur.com/6ErlhIw.png'
             },
             {
                 type: "INTP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "INTP",
                 score_range:range(51, 75),
-                img_src:'https://dl.dropboxusercontent.com/s/tl4imb26yh0vpcd/INTP.png?dl=0'
+                img_src:'https://i.imgur.com/DeMXSa3.png'
             },
             {
                 type: "INFJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "INFJ",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/ohfb9qloroxulvn/INFJ.png?dl=0'
+                img_src:'https://i.imgur.com/dfvV6mW.png'
             },
             {
                 type: "INFP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "INFP",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/0d35ti38g2pvagb/INFP.png?dl=0'
+                img_src:'https://i.imgur.com/q66rznN.png'
             },
         ]
     },
