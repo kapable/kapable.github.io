@@ -131,18 +131,17 @@ class App extends Component {
         </ScrollToTop>
       </Router>
 
+      {/* PPL Ads */}
+      <a href="http://bit.ly/3oCEzEA">
+        <img className="PPL-Ads-link" src={BARISTA} alt="thePersons"/>
+      </a>
+
       {/* Kakao Adfit footer */}
       <ins className="kakao_ad_area" style={{display:"none"}} 
       data-ad-unit    = "DAN-rgfAOJhp6Faz2JFX" 
       data-ad-width   = "300" 
       data-ad-height  = "250"></ins> 
       <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
-
-      {/* PPL Ads */}
-      <a href="http://bit.ly/3oCEzEA">
-        <img className="PPL-Ads-link" src={BARISTA} alt="thePersons"/>
-      </a>
-
 
       {/* footer */}
       <div className="intro-footer">
