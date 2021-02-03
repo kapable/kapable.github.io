@@ -10,8 +10,6 @@ import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
 
-import BARISTA from './api/DefaultImg/thepersons-barista.png'
-
 class App extends Component {
   constructor(props){
     super(props)
@@ -130,11 +128,6 @@ class App extends Component {
           </Switch>
         </ScrollToTop>
       </Router>
-
-      {/* PPL Ads */}
-      <a href="http://bit.ly/3oCEzEA">
-        <img className="PPL-Ads-link" src={BARISTA} alt="thePersons"/>
-      </a>
 
       {/* Kakao Adfit footer */}
       <ins className="kakao_ad_area" style={{display:"none"}} 
