@@ -891,7 +891,7 @@ var TESTS = [
                     {
                         type: "whosFault-0",
                         score: 0,
-                        content: 'https://dl.dropboxusercontent.com/s/j3j1dv09q38bdfp/whosFault-0.png?dl=0'
+                        content: 'https://images2.imgbox.com/fa/27/K6PG7Q5L_o.png'
                     }
                 ]
             },
@@ -901,7 +901,7 @@ var TESTS = [
                     {
                         type: "whosFault-1",
                         score: 0,
-                        content: "https://dl.dropboxusercontent.com/s/loiye53gfcw937p/whosFault-1.png?dl=0"
+                        content: "https://images2.imgbox.com/ef/06/3rxYO4k8_o.png"
                     }
                 ]
             },
@@ -911,7 +911,7 @@ var TESTS = [
                     {
                         type: "whosFault-2",
                         score: 0,
-                        content: "https://dl.dropboxusercontent.com/s/p3zwmvahijv4db2/whosFault-2.png?dl=0"
+                        content: "https://images2.imgbox.com/c8/58/MIoVASCM_o.png"
                     }
                 ]
             },
@@ -921,7 +921,7 @@ var TESTS = [
                     {
                         type: "whosFault-3",
                         score: 0,
-                        content: "https://dl.dropboxusercontent.com/s/i344z7503jngw11/whosFault-3.png?dl=0"
+                        content: "https://images2.imgbox.com/31/a4/sjbnozyw_o.png"
                     }
                 ]
             },
@@ -931,7 +931,7 @@ var TESTS = [
                     {
                         type: "whosFault-4",
                         score: 0,
-                        content: 'https://dl.dropboxusercontent.com/s/o34ouhblsqffj35/whosFault-4.png?dl=0'
+                        content: 'https://images2.imgbox.com/73/af/1HfxSAXB_o.png'
                     }
                 ]
             },
@@ -941,7 +941,7 @@ var TESTS = [
                     {
                         type: "whosFault-5",
                         score: 0,
-                        content: "https://dl.dropboxusercontent.com/s/r64a7ftvbve705n/whosFault-5.png?dl=0"
+                        content: "https://images2.imgbox.com/f1/7b/Qyzd3rgd_o.png"
                     }
                 ]
             },
@@ -951,7 +951,7 @@ var TESTS = [
                     {
                         type: "whosFault-6",
                         score: 0,
-                        content: "https://dl.dropboxusercontent.com/s/cv5ci9515uohz5r/whosFault-6.png?dl=0"
+                        content: "https://images2.imgbox.com/55/2d/q21IpYjW_o.png"
                     }
                 ]
             },
@@ -961,7 +961,7 @@ var TESTS = [
                     {
                         type: "whosFault-7",
                         score: 0,
-                        content: "https://dl.dropboxusercontent.com/s/6r6q9g7hlraruq8/whosFault-7.png?dl=0"
+                        content: "https://images2.imgbox.com/63/8e/jKaXW7Bs_o.png"
                     }
                 ]
             },
@@ -972,7 +972,7 @@ var TESTS = [
                 desc: `whosFault-result`,
                 query: "snrndmlwkfaht",
                 score_range:range(2),
-                img_src:'https://dl.dropboxusercontent.com/s/66dkboa6bpmgj1n/whosFault-8.png?dl=0'
+                img_src:'https://images2.imgbox.com/3e/0d/lnSenmiW_o.png'
             }
         ]
     },
