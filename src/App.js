@@ -10,6 +10,8 @@ import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
 
+import BARISTA from './api/DefaultImg/thepersons-barista.png'
+
 class App extends Component {
   constructor(props){
     super(props)
@@ -135,6 +137,12 @@ class App extends Component {
       data-ad-width   = "300" 
       data-ad-height  = "250"></ins> 
       <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+
+      {/* PPL Ads */}
+      <a href="http://bit.ly/3oCEzEA">
+        <img className="PPL-Ads-link" src={BARISTA} alt="thePersons"/>
+      </a>
+
 
       {/* footer */}
       <div className="intro-footer">

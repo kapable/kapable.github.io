@@ -42,6 +42,12 @@ body {
   cursor: pointer;
 }
 
+.PPL-Ads-link {
+  margin: 3rem auto 0.5rem;
+  max-width: 450px;
+  cursor: pointer;
+}
+
 /* intro start */
 
 .intro {
