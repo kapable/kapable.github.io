@@ -33,7 +33,7 @@ var TESTS = [
             subTitle:"나에게 어울리는 컬러는 무엇일까?",
             mainUrl:"personalColor",
             scoreType:"typeCountingMBTI",
-            mainImage:"https://images2.imgbox.com/92/f9/rnkaIUFZ_o.png",
+            mainImage:"https://images2.imgbox.com/4c/dc/RGZrn8BM_o.png",
             thumbImage:"https://images2.imgbox.com/88/32/dcrxKdtV_o.png"
         },
         questions:[
@@ -355,8 +355,8 @@ var TESTS = [
             subTitle:"남들이 보는 나는 과연 어떤 모습일까?",
             mainUrl:"otherlookme",
             scoreType:"numberScoring",
-            mainImage:"https://dl.dropboxusercontent.com/s/rqgnassmgqlioih/otherlookme-intro.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/jwyvulnwsyihzk8/otherlookme-thumb.png?dl=0"
+            mainImage:"https://images2.imgbox.com/15/d1/5szEspZQ_o.png",
+            thumbImage:"https://images2.imgbox.com/d1/d8/JKeh3X1u_o.png"
         },
         questions:[
             {
@@ -648,7 +648,7 @@ var TESTS = [
                 `,
                 query: "thtlawoddl",
                 score_range:range(21),
-                img_src:'https://dl.dropboxusercontent.com/s/wht4x7rlz0xzecl/otherlookme-1.png?dl=0'
+                img_src:'https://images2.imgbox.com/59/9e/RE8K2aMH_o.png'
             },
             {
                 type: "나는야 깐깐쟁이",
@@ -661,7 +661,7 @@ var TESTS = [
                 `,
                 query: "RksRkswoddl",
                 score_range:range(21, 31),
-                img_src:'https://dl.dropboxusercontent.com/s/vafmgqwwv67csq7/otherlookme-2.png?dl=0'
+                img_src:'https://images2.imgbox.com/9f/8f/su5lj3Tz_o.png'
             },
             {
                 type: "나는야 겸손쟁이",
@@ -675,7 +675,7 @@ var TESTS = [
                 `,
                 query: "ruathswoddl",
                 score_range:range(31, 41),
-                img_src:'https://dl.dropboxusercontent.com/s/k7ohhag4qfcm9ab/otherlookme-3.png?dl=0'
+                img_src:'https://images2.imgbox.com/6e/71/piDh9QlH_o.png'
             },
             {
                 type: "나는야 매력쟁이",
@@ -688,7 +688,7 @@ var TESTS = [
                 `,
                 query: "aofurwoddl",
                 score_range:range(41, 51),
-                img_src:'https://dl.dropboxusercontent.com/s/cqpvfc11i24ftv4/otherlookme-4.png?dl=0'
+                img_src:'https://images2.imgbox.com/1f/db/ArJMHxq1_o.png'
             },
             {
                 type: "나는야 행동쟁이",
@@ -700,7 +700,7 @@ var TESTS = [
                 `,
                 query: "godehdwoddl",
                 score_range:range(51, 61),
-                img_src:'https://dl.dropboxusercontent.com/s/zh5cmasp1zxvwws/otherlookme-5.png?dl=0'
+                img_src:'https://images2.imgbox.com/94/77/SQVP0CJu_o.png'
             },
             {
                 type: "나는야 지배쟁이",
@@ -714,7 +714,7 @@ var TESTS = [
                 `,
                 query: "wlqowoddl",
                 score_range:range(61, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/onxg2rqsbimsw51/otherlookme-6.png?dl=0'
+                img_src:'https://images2.imgbox.com/40/4f/Zb6T04PO_o.png'
             },
         ]
     },
@@ -725,8 +725,8 @@ var TESTS = [
             subTitle:"과연 나는 라떼일까?",
             mainUrl:"latte",
             scoreType:"numberScoring",
-            mainImage:"https://dl.dropboxusercontent.com/s/r3nk2bx2cx9d22j/latte-main.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/8ht6pqj2v2i6999/latte-thumb.png?dl=0"
+            mainImage:"https://images2.imgbox.com/e2/01/fei3Ui6G_o.png",
+            thumbImage:"https://images2.imgbox.com/b2/ce/UBX6uFMV_o.png"
         },
         questions:[
             {
@@ -856,21 +856,21 @@ var TESTS = [
                 desc: ``,
                 query: "milk",
                 score_range:range(11),
-                img_src:'https://dl.dropboxusercontent.com/s/yx1fjxjo23w7ckc/milk.png?dl=0'
+                img_src:'https://images2.imgbox.com/d5/64/bI0I7xX4_o.png'
             },
             {
                 type: "밀크 커피",
                 desc: ``,
                 query: "milkCoffee",
                 score_range:range(11, 14),
-                img_src:'https://dl.dropboxusercontent.com/s/u60536l4gh4emhx/milkCoffee.png?dl=0'
+                img_src:'https://images2.imgbox.com/9c/59/CoTXEvJ1_o.png'
             },
             {
                 type: "라떼",
                 desc: ``,
                 query: "latte",
                 score_range:range(14, 20),
-                img_src:'https://dl.dropboxusercontent.com/s/ewjfbva27nq5vlu/latte.png?dl=0'
+                img_src:'https://images2.imgbox.com/75/7a/bWhVsHv9_o.png'
             },
         ]
     },
@@ -881,8 +881,8 @@ var TESTS = [
             subTitle:"도대체 누구의 잘못일까?",
             mainUrl:"whosFault",
             scoreType:"storyTelling",
-            mainImage:"https://dl.dropboxusercontent.com/s/gprokshd3vvztgh/whosFault-intro.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/5vshoajotg3hrmg/whosFault-thumb.png?dl=0"
+            mainImage:"https://images2.imgbox.com/9a/e5/CmxnAw9d_o.png",
+            thumbImage:"https://images2.imgbox.com/75/c7/ebUJKKFG_o.png"
         },
         questions:[
             {
@@ -983,8 +983,8 @@ var TESTS = [
             subTitle:"탄생숫자로 알아보는 숨겨진 나의 성격",
             mainUrl:"birthNum",
             scoreType:"birthdayCalc",
-            mainImage:"https://dl.dropboxusercontent.com/s/9zewr5d68b1tbac/birthNum-intro.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/0ah4be0khny1lwn/birthNum-thumb.png?dl=0"
+            mainImage:"https://images2.imgbox.com/3b/7c/jb1G92SU_o.png",
+            thumbImage:"https://images2.imgbox.com/e4/aa/iCxMmrN2_o.png"
         },
         questions:[
             {
@@ -1191,7 +1191,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn1",
                 score_range:range(2),
-                img_src:'https://dl.dropboxusercontent.com/s/auuooi5a7h2jdu1/birthNum_1.png?dl=0'
+                img_src:'https://images2.imgbox.com/aa/68/43KkYos5_o.png'
             },
             {
                 type: "탄생수 2",
@@ -1205,7 +1205,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn2",
                 score_range:range(2, 3),
-                img_src:'https://dl.dropboxusercontent.com/s/hctxtegfbcsgkz9/birthNum_2.png?dl=0'
+                img_src:'https://images2.imgbox.com/ad/b8/kUHt6e4j_o.png'
             },
             {
                 type: "탄생수 3",
@@ -1219,7 +1219,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn3",
                 score_range:range(3, 4),
-                img_src:'https://dl.dropboxusercontent.com/s/b5h0emmae9rb0z4/birthNum_3.png?dl=0'
+                img_src:'https://images2.imgbox.com/2f/e4/TEW4fAJK_o.png'
             },
             {
                 type: "탄생수 4",
@@ -1234,7 +1234,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn4",
                 score_range:range(4, 5),
-                img_src:'https://dl.dropboxusercontent.com/s/gzjbt2ybf6uii5u/birthNum_4.png?dl=0'
+                img_src:'https://images2.imgbox.com/7e/ee/tvEZznBU_o.png'
             },
             {
                 type: "탄생수 5",
@@ -1250,7 +1250,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn5",
                 score_range:range(5, 6),
-                img_src:'https://dl.dropboxusercontent.com/s/sqswoirmppre8ua/birthNum_5.png?dl=0'
+                img_src:'https://images2.imgbox.com/fd/51/1rwg4tI3_o.png'
             },
             {
                 type: "탄생수 6",
@@ -1267,7 +1267,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn6",
                 score_range:range(6, 7),
-                img_src:'https://dl.dropboxusercontent.com/s/3tb6o6fiw3lyc0j/birthNum_6.png?dl=0'
+                img_src:'https://images2.imgbox.com/e1/c6/kvzE2A9n_o.png'
             },
             {
                 type: "탄생수 7",
@@ -1284,7 +1284,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn7",
                 score_range:range(7, 8),
-                img_src:'https://dl.dropboxusercontent.com/s/7cv225c99nshjgd/birthNum_7.png?dl=0'
+                img_src:'https://images2.imgbox.com/01/63/Z6cBNgDp_o.png'
             },
             {
                 type: "탄생수 8",
@@ -1299,7 +1299,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn8",
                 score_range:range(8, 9),
-                img_src:'https://dl.dropboxusercontent.com/s/ozr8fveqrm4q8f2/birthNum_8.png?dl=0'
+                img_src:'https://images2.imgbox.com/05/85/G9QTF1BN_o.png'
             },
             {
                 type: "탄생수 9",
@@ -1314,7 +1314,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn9",
                 score_range:range(9, 10),
-                img_src:'https://dl.dropboxusercontent.com/s/nag86mj4rssyle8/birthNum_9.png?dl=0'
+                img_src:'https://images2.imgbox.com/15/8f/YqnNxV6V_o.png'
             },
         ]
     },
@@ -1325,8 +1325,8 @@ var TESTS = [
             subTitle:"나의 연애 점수는?",
             mainUrl:"lovelevel",
             scoreType:"numberScoring",
-            mainImage:"https://dl.dropboxusercontent.com/s/hgz3v1erbqzwbwy/lovelevel-intro.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/m8mapf8lfecsid9/lovelevel-thumb.png?dl=0"
+            mainImage:"https://images2.imgbox.com/33/64/5tLBlgyf_o.png",
+            thumbImage:"https://images2.imgbox.com/10/ab/Hea6QICS_o.png"
         },
         questions:[
             {
@@ -1537,7 +1537,7 @@ var TESTS = [
                 `,
                 query: "vmfhakdtkdfj",
                 score_range:range(31),
-                img_src:'https://dl.dropboxusercontent.com/s/8jdoqluxabw92i8/lovelevel_1.png?dl=0'
+                img_src:'https://images2.imgbox.com/af/8d/xbi9j3JF_o.png'
             },
             {
                 type: "연애꾸러기",
@@ -1554,7 +1554,7 @@ var TESTS = [
                 `,
                 query: "dusdoRNfjrl",
                 score_range:range(31, 66),
-                img_src:'https://dl.dropboxusercontent.com/s/6jcly4mn4m14ypc/lovelevel_2.png?dl=0'
+                img_src:'https://images2.imgbox.com/6d/d3/8K2oDwEV_o.png'
             },
             {
                 type: "아수라백작",
@@ -1572,7 +1572,7 @@ var TESTS = [
                 `,
                 query: "dusdoRnfjrl",
                 score_range:range(66, 86),
-                img_src:'https://dl.dropboxusercontent.com/s/zumbalk3wvhdlzu/lovelevel_3.png?dl=0'
+                img_src:'https://images2.imgbox.com/04/59/lL2lRphy_o.png'
             },
             {
                 type: "프로직진러",
@@ -1589,7 +1589,7 @@ var TESTS = [
                 `,
                 query: "vmfhwlrwlsfj",
                 score_range:range(86, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/b2pc7i6x3w15kga/lovelevel_4.png?dl=0'
+                img_src:'https://images2.imgbox.com/cd/42/CnYDECdH_o.png'
             },
         ]
     },
@@ -1600,8 +1600,8 @@ var TESTS = [
             subTitle:"이성이 다가올 때 나의 반응은?",
             mainUrl:"humanwall",
             scoreType:"typeCounting",
-            mainImage:"https://dl.dropboxusercontent.com/s/3gamfniyno18fa0/humanWall-intro.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/1rtjq11i71aldiw/humanWall-thumb.png?dl=0"
+            mainImage:"https://images2.imgbox.com/d2/47/rSqnogm2_o.png",
+            thumbImage:"https://images2.imgbox.com/d2/62/qciSWPB7_o.png"
         },
         questions:[
             {
@@ -1771,7 +1771,7 @@ var TESTS = [
                 `,
                 query: "cjfqurdls",
                 score_range:range(31),
-                img_src:'https://dl.dropboxusercontent.com/s/gxoe6v1b5rl3ks9/humanwall-1.png?dl=0'
+                img_src:'https://images2.imgbox.com/1c/a1/A41DqYcx_o.png'
             },
             {
                 type: "자동문",
@@ -1790,7 +1790,7 @@ var TESTS = [
                 `,
                 query: "wkehdans",
                 score_range:range(31, 66),
-                img_src:'https://dl.dropboxusercontent.com/s/j2rckbsmm7bzvql/humanwall-2.png?dl=0'
+                img_src:'https://images2.imgbox.com/5c/76/otpVi0ol_o.png'
             },
         ]
     },
@@ -1801,8 +1801,8 @@ var TESTS = [
             subTitle:"내 애인의 바람끼는 어느 정도일까.?",
             mainUrl:"wind",
             scoreType:"numberScoring",
-            mainImage:"https://dl.dropboxusercontent.com/s/ya7cpqwe2nrwp3f/wind-intro.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/fxmrxspeuerw3sg/wind-thumb.png?dl=0"
+            mainImage:"https://images2.imgbox.com/54/a9/bmBf15uS_o.png",
+            thumbImage:"https://images2.imgbox.com/ff/1d/cNkLbD6J_o.png"
         },
         questions:[
             {
@@ -2024,7 +2024,7 @@ var TESTS = [
                 `,
                 query: "goqkfkrl",
                 score_range:range(51),
-                img_src:'https://dl.dropboxusercontent.com/s/lmxhin0m876d6ad/wind_goqofkrl.png?dl=0'
+                img_src:'https://images2.imgbox.com/c8/c7/2D8iFTOi_o.png'
             },
             {
                 type: "관심러",
@@ -2040,7 +2040,7 @@ var TESTS = [
                 `,
                 query: "rhkstlafj",
                 score_range:range(51, 81),
-                img_src:'https://dl.dropboxusercontent.com/s/i5hf49fkbqkcgf3/wind_rhkstlafj.png?dl=0'
+                img_src:'https://images2.imgbox.com/91/fd/wzEOcxTG_o.png'
             },
             {
                 type: "매력쟁이",
@@ -2057,7 +2057,7 @@ var TESTS = [
                 `,
                 query: "aofurwoddl",
                 score_range:range(81, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/pkisl9r1t75c0t1/wind_aofurwoddl.png?dl=0'
+                img_src:'https://images2.imgbox.com/ec/19/st78d6Va_o.png'
             },
         ]
     },
@@ -2068,8 +2068,8 @@ var TESTS = [
             subTitle:"내가 강아지 라면?",
             mainUrl:"daengdaeng",
             scoreType:"typeCounting",
-            mainImage:"https://dl.dropboxusercontent.com/s/sadog3w5v1u5hsn/daengdaeng-intro.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/it0yl4yc078iwiq/daenngdaeng-thumb.png?dl=0"
+            mainImage:"https://images2.imgbox.com/49/2e/nh6NSyyH_o.png",
+            thumbImage:"https://images2.imgbox.com/b9/cb/Is6IpV5s_o.png"
         },
         questions:[
             {
@@ -2339,7 +2339,7 @@ var TESTS = [
                 `,
                 query: "1chqhwlqzhrfj",
                 score_range:range(26),
-                img_src:'https://dl.dropboxusercontent.com/s/yyvtej5cg2o9b4n/daengdaeng_pome.png?dl=0'
+                img_src:'https://images2.imgbox.com/3a/2f/7qWFe0TM_o.png'
             },
             {
                 type: "치와와",
@@ -2356,7 +2356,7 @@ var TESTS = [
                 ✓   참는 걸 극도로 싫어해요.`,
                 query: "2tjsxorgudwlqzhrfj",
                 score_range:range(26, 51),
-                img_src:'https://dl.dropboxusercontent.com/s/n3hj9d48qzemle2/daengdaeng_chiwawa.png?dl=0'
+                img_src:'https://images2.imgbox.com/68/1b/Z13HLqU9_o.png'
             },
             {
                 type: "웰시코기",
@@ -2371,7 +2371,7 @@ var TESTS = [
                 ✓   이성에게 인기가 많은 타입이에요. 난 그냥 이 사람을 도와준 것 뿐인데 보면 저를 좋아하고 있더라구요. 왤까요? 하면서 다른 사람이 가지지 못한 마성의 매력`,
                 query: "3ehfdusqusdlwlqzhrfj",
                 score_range:range(51, 75),
-                img_src:'https://dl.dropboxusercontent.com/s/5cvgrsniqlwtzu2/daengdaeng_wealthy.png?dl=0'
+                img_src:'https://images2.imgbox.com/2a/15/Ifcj8Sqd_o.png'
             },
             {
                 type: "리트리버",
@@ -2386,7 +2386,7 @@ var TESTS = [
                 ✓   인내심 최강자이면서 예의도 바르지만 또 장난꾸러기 하지만 머리도 좋아 뭐야 못하는게 뭐야~~완전 워너비 애인상이로구나!`,
                 query: "4vmfhwlqzhrfj",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/lfm5aj3j4dqcct0/daengdaeng_retriever.png?dl=0'
+                img_src:'https://images2.imgbox.com/78/15/MNulrHzE_o.png'
             },
             {
                 type: "비글",
@@ -2400,7 +2400,7 @@ var TESTS = [
                 ✓   될 대로 돼라~~~라는 마인드 늘 긍정적이고 낙천적인 마인드의 소유자`,
                 query: "4vmfhwlqzhrfj",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/l1smzkp0z8tqiyr/daengdaeng_beagle.png?dl=0'
+                img_src:'https://images2.imgbox.com/6e/a3/m8Zqjdoo_o.png'
             },
         ]
     },
@@ -2411,8 +2411,8 @@ var TESTS = [
             subTitle:"이시국엔 집에 붙어 있자 꼭!",
             mainUrl:"zipkok",
             scoreType:"numberScoring",
-            mainImage:"https://dl.dropboxusercontent.com/s/b9syaukabfkwzt8/zipkok-intro.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/9a9t07zx63jcm5d/zipkok-thumb.png?dl=0"
+            mainImage:"https://images2.imgbox.com/ae/c7/6RK7Pj08_o.png",
+            thumbImage:"https://images2.imgbox.com/e4/fb/lr6P4lWL_o.png"
         },
         questions:[
             {
@@ -2622,28 +2622,28 @@ var TESTS = [
                 desc: "집에 있으면 있지만 심심하면 집 밖을 나가고 싶어하는 \n 초보집콕러~ \n 아직은 집이랑 서먹서먹한 42~ \n 이틀이상 집에 있으면 나가고 싶어서 안달난 마치 라푼젤같은 그대! \n 집에 있다가도 나오라면 바로 나오는 오케이맨~!",
                 query: "chqhwlqzhrfj",
                 score_range:range(26),
-                img_src:'https://dl.dropboxusercontent.com/s/fkt02q4cy8onjr7/zipkok_chqhwlqzhrfj.png?dl=0'
+                img_src:'https://images2.imgbox.com/ba/5b/ewUHe9Vk_o.png'
             },
             {
                 type: "Level 2. 선택형 집콕러",
                 desc: "주말엔 집에서 쉬는게 최고지만~~ \n 날 만나고 싶다면 ~ 나가줘야지~~~~ 뭐할건데? \n 꼭 재밌는 일이 있으면 무조건 튀어나가는 그대는 바로 \n 선택형 집콕러! \n 당신은 집에 있는 걸 좋아하지만 선택장애의 면모가 리를 빗 \n 있기때문에 친구들의 설득과 흥미 딘딘한 일이 있으면 \n 바로 집에서 튀어나가버리곤 하지~~",
                 query: "tjsxorgudwlqzhrfj",
                 score_range:range(26, 51),
-                img_src:'https://dl.dropboxusercontent.com/s/m46a1ar0zsod71d/zipkok_tjsxorgudwlqzhrfj.png?dl=0'
+                img_src:'https://images2.imgbox.com/3a/6d/sYa6KZIP_o.png'
             },
             {
                 type: "Level 3. 돌연변이 집콕러",
                 desc: "극과극인 정말 집콕하고 싶을때 집에서 절대 나오지 않z...! \n 하지만 어느순간 또 약속 줄줄 잡아 버리는 그대! \n 성수기와 비성수기가 확실한 당신은 바로 \n 돌연변이 집콕러! \n 집에서도 밖에서도 최선을 다해 노는 당신! \n 한번 놀고 나면 꼭 충분한 휴식이 필요하지~",
                 query: "ehfdusqusdlwlqzhrfj",
                 score_range:range(51, 75),
-                img_src:'https://dl.dropboxusercontent.com/s/vwl7j0xc5rrueev/zipkok_ehfdusqusdlwlqzhrfj.png?dl=0'
+                img_src:'https://images2.imgbox.com/f2/17/oOcYH0AE_o.png'
             },
             {
                 type: "Level 4. 프로 집콕러",
                 desc: "집이 곧 나의 삶의 전부일세, 당신은 바로 \n 프로 집콕러~ \n 집을 왜 나가~~ 집밖은 위험해~ \n 주변에 아무리 불러도 순순히 나가지 않지!! 마치 나는 신비주의~!! \n 하지만 그냥 나가기 귀찮은 사람 ^^ \n 개인적인 시간은 필수! 집에서 나가는 것 조차 큰 결심이 필요해요~ \n 집에 놀거리 가득하면 집 밖에 더더욱 안나갈 자신이 있어~~~~~",
                 query: "vmfhwlqzhrfj",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/6jwrj44gjfi3g5g/zipkok_vmfhwlqzhrfj.png?dl=0'
+                img_src:'https://images2.imgbox.com/1c/1a/xvQg25qQ_o.png'
             },
         ]
     },
