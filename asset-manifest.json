@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.c4bc4cc2.chunk.css",
+    "main.css": "/static/css/main.d0298069.chunk.css",
     "main.js": "/static/js/main.fe7cffd4.chunk.js",
     "main.js.map": "/static/js/main.fe7cffd4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.766a5161.js",
@@ -10,16 +10,16 @@
     "static/js/3.9e228060.chunk.js": "/static/js/3.9e228060.chunk.js",
     "static/js/3.9e228060.chunk.js.map": "/static/js/3.9e228060.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.578e836a641ef873acbc91d2f7a7aa3e.js": "/precache-manifest.578e836a641ef873acbc91d2f7a7aa3e.js",
+    "precache-manifest.cc7fefdc829cbf8fc4c919345fefeac3.js": "/precache-manifest.cc7fefdc829cbf8fc4c919345fefeac3.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.c4bc4cc2.chunk.css.map": "/static/css/main.c4bc4cc2.chunk.css.map",
+    "static/css/main.d0298069.chunk.css.map": "/static/css/main.d0298069.chunk.css.map",
     "static/media/main-header.png": "/static/media/main-header.24b84a38.png",
     "static/media/thepersons-barista.png": "/static/media/thepersons-barista.87dce72b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.766a5161.js",
     "static/js/2.04dd7feb.chunk.js",
-    "static/css/main.c4bc4cc2.chunk.css",
+    "static/css/main.d0298069.chunk.css",
     "static/js/main.fe7cffd4.chunk.js"
   ]
 }
