@@ -66,15 +66,15 @@ class App extends Component {
     <Fragment>
       <Helmet>
         {/* <!-- Primary Meta Tags --> */}
-        <title>취향 분석 테스트</title>
-        <meta name="title" content="케이 테스트 - 퍼스널 컬러 테스트"/>
+        <title>취향 분석 테스트 - 케이테스트</title>
+        <meta name="title" content="케이테스트 - 퍼스널 컬러 테스트"/>
         <meta name="description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트" data-react-helmet="true"/>
         <link rel="main-url" href={window.location.href}/>
           
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://kapable.github.io/"/>
-        <meta property="og:title" content="케이 테스트 - 퍼스널 컬러 테스트"/>
+        <meta property="og:title" content="케이테스트 - 퍼스널 컬러 테스트"/>
         <meta property="og:description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트"/>
         <meta property="og:image" content="https://dl.dropboxusercontent.com/s/n9pr74fbv6gdiub/main-header.png?dl=0"/>
         <meta property="og:image:alt" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트" />
@@ -82,7 +82,7 @@ class App extends Component {
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://kapable.github.io/"/>
-        <meta property="twitter:title" content="케이 테스트 - 퍼스널 컬러 테스트"/>
+        <meta property="twitter:title" content="케이테스트 - 퍼스널 컬러 테스트"/>
         <meta property="twitter:description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트"/>
         <meta property="twitter:image" content="https://dl.dropboxusercontent.com/s/n9pr74fbv6gdiub/main-header.png?dl=0"/>
         <meta property="twitter:image:alt" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트" />
