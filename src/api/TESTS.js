@@ -44,12 +44,12 @@ var TESTS = [
                     {
                         type: "E",
                         score: 2,
-                        content: '먼저 말을 건낸다.'
+                        content: '내가 먼저 말을 건낸다.'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '대게 다른 친구가 먼저 말을 건낸다. '
+                        content: '대부분 다른 친구가 먼저 말을 건낸다. '
                     },
                 ],
             },
