@@ -30,7 +30,7 @@ var TESTS = [
         info : {
             mainTitle:"퍼스널 컬러 궁합 테스트",
             subTitle:"우리에게 어울리는 컬러는 무엇일까?",
-            mainUrl:"peoplelColor",
+            mainUrl:"peopleColor",
             scoreType:"dualMBTI",
             mainImage:"https://images2.imgbox.com/69/e2/3VWTb4Ir_o.png",
             thumbImage:"https://images2.imgbox.com/26/7b/i0AB1QPX_o.png"
