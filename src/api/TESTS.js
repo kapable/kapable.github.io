@@ -25,7 +25,6 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
-    
     // persoanlColor
     {
         info : {

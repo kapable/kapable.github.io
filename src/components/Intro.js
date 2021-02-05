@@ -103,7 +103,8 @@ class Intro extends Component {
                     src={_thumbImage}
                     alt={_mainTitle + '|' + _subTitle}/>
                 <Typist className="start-btn-participants">
-                    현재까지 총 {this.state.participants}명이 참여했어요.
+                    {/* 현재까지 총 {this.state.participants}명이 참여했어요. */}
+                    현재까지 총 4,975,544명이 참여했어요.
                 </Typist>
                 
                 <div className="test-intro-with-friend">
