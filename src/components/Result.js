@@ -50,6 +50,24 @@ class Result extends Component {
         this._eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
         alert("링크가 복사됐어요!");
     }
+
+    // if personalColor test's Result page for Link Banner
+    peopleColorTestRedirector(){
+        window.open('https://kapable.github.io/kapable.github.io/peopleColor')
+    }
+    personalColorLinkRenderer(){
+        if(this.state.current_test === "personalColor") {
+            return(
+                <Fragment>
+                    <p className="to-peopleColor-test-banner-text">!!실검 1위 기념 궁합테스트 출시!! 감사합니다!</p>
+                    <img src="https://images2.imgbox.com/b3/8b/YNErBixR_o.png"
+                    className="to-peopleColor-test-banner-img"
+                    onClick={this.peopleColorTestRedirector}
+                    alt="퍼스널 컬러 궁합 테스트 하러가기"/>
+                </Fragment>
+            )
+        }
+    }
     introPageRender(){
 
         const current_tests_path = '/' + this.state.current_test + '/';
@@ -91,7 +109,7 @@ class Result extends Component {
 
         // return final result option
         // in case of storyTelling Type Quiz
-        if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI"){
+        if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             return (
                 <Fragment>
                     <img src={img_src} className='result-img' alt={final_type} />
@@ -144,11 +162,13 @@ class Result extends Component {
         return(
             <div className="result">
                 <div className="result-header">
-                    <h5 className="result-title">당신의 성향은..!</h5>
+                    <h5 className="result-title">결과는...</h5>
                     <div className="result-value">
                         {this.resultRender()}
                     </div>
                 </div>
+                {/* if personalColor test's Result page for Link Banner */}
+                {this.personalColorLinkRenderer()}
                 <div className="share">
                     <h5 className="share-title">친구에게 공유하기</h5>
                     <div className="share">

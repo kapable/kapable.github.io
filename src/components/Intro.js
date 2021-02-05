@@ -3,6 +3,7 @@ import Quiz from './Quiz'
 import Result from './Result'
 import Loading from './Loading'
 import BirthdayCalc from './BirthdayCalc'
+import DualMbti from './DualMbti'
 import StoryTelling from './StoryTelling'
 import TESTS from '../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
@@ -187,6 +188,13 @@ class Intro extends Component {
                     return this.state.current_test.results[z]
                 }
             }
+        } else if (this.state.scoreType === "dualMBTI") {
+            let final_type = this.state.counted_score;
+            for (let k = 0; k < this.state.current_test.results.length; k++){
+                if(this.state.current_test.results[k].type === final_type){
+                    return this.state.current_test.results[k];
+                }
+            }
         }
         
     }
@@ -237,6 +245,16 @@ class Intro extends Component {
                         mode:_mode
                     })
                 }.bind(this)}></BirthdayCalc>
+                return _page
+            } else if (this.state.scoreType === "dualMBTI") {
+                let _page = <DualMbti
+                onChangeMode={
+                    function(_final_result, _mode) {
+                    this.setState({
+                        counted_score:_final_result,
+                        mode:_mode
+                    })
+                }.bind(this)}></DualMbti>
                 return _page
             } else if (this.state.scoreType === "storyTelling"){
                 let _page = <StoryTelling

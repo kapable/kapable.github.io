@@ -210,6 +210,33 @@ body {
   color: var(--bg-color);
 }
 
+/* for DualMBTI Quiz */
+.dualColor-title {
+  margin: 2rem auto;
+}
+.dualColor-input {
+  font-family: var(--title-font);
+  margin: 5rem auto;
+}
+.dualColor-input-group {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dualColor-eachForm {
+  margin: 0rem 1rem;
+}
+
+.dualMBTI-submit-btn {
+  margin: 3rem 1rem;
+}
+
+.to-personalColor-test-btn {
+  margin: 0rem auto 2rem;
+}
+
 /* result start */
 .result {
   max-width: 100%;
@@ -223,7 +250,7 @@ body {
 }
 
 .result-value {
-  margin: 1rem 0.5rem;
+  margin: 0rem 0.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -259,9 +286,16 @@ body {
 .result-img {
   height: auto;
   width: 23rem;
-  margin: 1rem auto 2rem;
+  margin: 0rem auto 0.5rem;
   font-family: var(--title-font);
   color: var(--font-color);
+}
+/* in Result Page for Personal Color Test */
+.to-peopleColor-test-banner-text {
+  font-family: var(--title-font);
+}
+.to-peopleColor-test-banner-img {
+  max-width: 414px;
 }
 
 .share-title {
