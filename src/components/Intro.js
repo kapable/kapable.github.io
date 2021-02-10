@@ -335,8 +335,8 @@ class Intro extends Component {
             <Fragment>
                 <Helmet>
                     {/* <!-- Primary Meta Tags --> */}
-                    <title>{this.state.current_test.info.mainTitle}-K테스트</title>
-                    <meta name="title" content={this.state.current_test.info.mainTitle+'-K테스트'}/>
+                    <title>{this.state.current_test.info.mainTitle}-케이테스트</title>
+                    <meta name="title" content={this.state.current_test.info.mainTitle+'-케이테스트'}/>
                     <meta name="description" content={this.state.current_test.info.subTitle} data-react-helmet="true"/>
                     <link rel="main-url" href={this.state.quiz_url}/>
                     

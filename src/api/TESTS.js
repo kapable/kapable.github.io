@@ -28,9 +28,9 @@ var TESTS = [
     // Cyworld
     {
         info : {
-            mainTitle:"그때그시절 테스트",
-            subTitle:"[1995-2000년생 모여라]",
-            mainUrl:"cyworld",
+            mainTitle:"케이테스트 도토리테스트",
+            subTitle:"나의 도토리력은? , 싸이월드테스트, 도토리테스트",
+            mainUrl:"dotori",
             scoreType:"numberScoringImg",
             mainImage:"https://images2.imgbox.com/c3/21/cGoRT4W6_o.png",
             thumbImage:"https://images2.imgbox.com/a6/4b/PJGYopTq_o.png"
