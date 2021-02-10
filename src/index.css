@@ -176,6 +176,7 @@ body {
 
 .answer-option-img {
   margin: 0rem auto 2rem;
+  max-width: 414px;
 }
 
 /* for birthday Calculating */
