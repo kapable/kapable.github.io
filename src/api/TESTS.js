@@ -310,7 +310,7 @@ var TESTS = [
                 type: "100%",
                 desc: ``,
                 query: "vmfhaktmxj",
-                score_range:range(8, 10),
+                score_range:range(8, 11),
                 img_src:'https://images2.imgbox.com/8b/30/oiC9hYqe_o.png'
             },
         ]
