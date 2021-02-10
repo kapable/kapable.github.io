@@ -97,7 +97,7 @@ class App extends Component {
       data-ad-height  = "100"></ins> 
       <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
 
-      <Router basename='/kapable.github.io/'>
+      <Router basename='/kapable.github.io/'> 
         <ScrollToTop>
           <Switch>
             {/* "Main" page */}

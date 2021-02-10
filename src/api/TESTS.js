@@ -25,6 +25,296 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // Cyworld
+    {
+        info : {
+            mainTitle:"그때그시절 테스트",
+            subTitle:"[1995-2000년생 모여라]",
+            mainUrl:"cyworld",
+            scoreType:"numberScoringImg",
+            mainImage:"https://images2.imgbox.com/c3/21/cGoRT4W6_o.png",
+            thumbImage:"https://images2.imgbox.com/a6/4b/PJGYopTq_o.png"
+        },
+        questions:[
+            {
+                question: '싸이월드의 캐쉬는?',
+                answers:[
+                    {
+                        type: "포메라니안",
+                        score: 0,
+                        content: '도토리묵'
+                    },
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: '밤'
+                    },
+                    {
+                        type: "포메라니안",
+                        score: 0,
+                        content: '쿠키'
+                    },
+                    {
+                        type: "치와와",
+                        score: 1,
+                        content: '도토리'
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: "다음중 미니홈피에서 서로 친구를 맺는 단어는?",
+                answers:[
+                    {
+                        type: "포메라니안",
+                        score: 0,
+                        content: "이종사촌"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 0,
+                        content: "버디버디"
+                    },
+                    {
+                        type: "포메라니안",
+                        score: 1,
+                        content: "일촌"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 0,
+                        content: "서이추"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: "'ㅈㅉ ㅈㅅ'의 뜻은 무엇인가?",
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: "진짜 죄송합니다"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 1,
+                        content: "전체쪽지 죄송합니다"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 0,
+                        content: "전체쪽지 조심하세요"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: "박태준이 유명해진 이유는?",
+                answers:[
+                    {
+                        type: "비글",
+                        score: 0,
+                        content: "외모지상주의 웹툰"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 1,
+                        content: "가캐 주인공이라"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "잘생긴 웹툰 작가라서"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: "다음 중 가끔 눈물 흘리는 사람은?",
+                answers:[
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: '광수'
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 0,
+                        content: "지석진"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 1,
+                        content: '채연'
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 0,
+                        content: "홍록기"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: "다음중 미니홈피 bgm과 어울리지 않는 노래는?",
+                answers:[
+                    {
+                        type: "포메라니안",
+                        score: 0,
+                        content: "에픽하이 LoveLoveLove"
+                    },
+                    {
+                        type: "비글",
+                        score: 1,
+                        content: "방탄소년단 피땀눈물"
+                    },
+                    {
+                        type: "포메라니안",
+                        score: 0,
+                        content: "프리스타일 Y"
+                    },
+                    {
+                        type: "비글",
+                        score: 0,
+                        content: "엠씨몽 I Love u Oh Thank U"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: "다음중 빈칸에 들어갈 순서로 알맞는 것은?",
+                answers:[
+                    {
+                        type: "비글",
+                        score: 0,
+                        content: "교실, 교복, 출소"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 0,
+                        content: "집, 유니폼, 출소"
+                    },
+                    {
+                        type: "비글",
+                        score: 1,
+                        content: "교실, 교복, 석방"
+                    },
+                ],
+                questionImage:'https://images2.imgbox.com/c4/a3/Qo7BYLFo_o.jpeg',
+            },
+            {
+                question: "다음 사진의 명칭은?",
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: "플로피"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 1,
+                        content: "플로피디스켓"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "디스켓플로피"
+                    },
+                ],
+                questionImage:'https://images2.imgbox.com/c1/7f/SxIA8qKk_o.jpeg',
+            },
+            {
+                question: "쥬니어 네이버의 슈 게임이 아닌것은? \n (슈의는 생략)",
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: "미용실"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "신속배달"
+                    },
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: "라면가게"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 1,
+                        content: "동물농장"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: "도토리 한 개의 가격은?",
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: "10원"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "90원"
+                    },
+                    {
+                        type: "치와와",
+                        score: 1,
+                        content: "100원"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "110원"
+                    },
+                ],
+                questionImage:'',
+            },
+        ],
+        results:[
+            {
+                type: "20%",
+                desc: ``,
+                query: "alemdfhr",
+                score_range:range(2),
+                img_src:'https://images2.imgbox.com/39/a1/L0otWIk7_o.png'
+            },
+            {
+                type: "40%",
+                desc: ``,
+                query: "ghldnjsrkdlq",
+                score_range:range(2, 4),
+                img_src:'https://images2.imgbox.com/ff/57/TSe4uHMY_o.png'
+            },
+            {
+                type: "60%",
+                desc: ``,
+                query: "gmrdurtk",
+                score_range:range(4, 6),
+                img_src:'https://images2.imgbox.com/38/cc/IhUzMrgp_o.png'
+            },
+            {
+                type: "80%",
+                desc: ``,
+                query: "rkRmasnsanf",
+                score_range:range(6, 8),
+                img_src:'https://images2.imgbox.com/c1/68/d23GXDHr_o.png'
+            },
+            {
+                type: "100%",
+                desc: ``,
+                query: "vmfhaktmxj",
+                score_range:range(8, 10),
+                img_src:'https://images2.imgbox.com/8b/30/oiC9hYqe_o.png'
+            },
+        ]
+    },
     // peopleColor
     {
         info : {

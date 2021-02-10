@@ -105,7 +105,7 @@ class Intro extends Component {
                     alt={_mainTitle + '|' + _subTitle}/>
                 <Typist className="start-btn-participants">
                     {/* 현재까지 총 {this.state.participants}명이 참여했어요. */}
-                    현재까지 총 6,975,544명이 참여했어요.
+                    현재까지 총 9,175,735명이 참여했어요.
                 </Typist>
                 
                 <div className="test-intro-with-friend">
@@ -131,7 +131,7 @@ class Intro extends Component {
     }
 
     resultCaculator(){
-        if (this.state.scoreType === "numberScoring" || this.state.scoreType === "birthdayCalc" || this.state.scoreType === "storyTelling"){
+        if (this.state.scoreType === "numberScoring" || this.state.scoreType === "birthdayCalc" || this.state.scoreType === "storyTelling" || this.state.scoreType === "numberScoringImg" ){
             let final_score = this.state.counted_score;
             for (let k = 0; k < this.state.current_test.results.length; k++){
                 if(this.state.current_test.results[k].score_range.includes(final_score)){
@@ -201,14 +201,13 @@ class Intro extends Component {
     quizPageRender(){
         if(this.state.mode === "quiz"){
             // when the type is cummulative number scoring
-            if (this.state.scoreType === "numberScoring") {
+            if (this.state.scoreType === "numberScoring" || this.state.scoreType === "numberScoringImg") {
                 let _page = <Quiz
                 qAndA={this.state.qAndA}
                 quizNum={this.state.quizNumber}
                 scoreType={this.state.scoreType}
                 onChangeMode={
                     function(_quizNum, _score, _mode) {
-                    // e.preventDefault();
                     let _scores = this.state.counted_score + Number(_score)
                     this.setState({
                         quizNumber:_quizNum,
@@ -306,9 +305,9 @@ class Intro extends Component {
         // go to result page
         let result_contents = this.resultCaculator();
         let final_score_query = result_contents.query // <----------------query export
-        
+
         return(
-            <Router basename={'/kapable.github.io/'+this.state.current_test.info.mainUrl}>
+            <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
                 <Route path={this.state.result_url+final_score_query} component={Result}/>
                 <Redirect to={this.state.result_url+final_score_query} />
             </Router>

@@ -29,15 +29,25 @@ class Quiz extends Component {
         
         return array;
     }
+    renderImgAnswerOptions(){
+        let qAndA = this.props.qAndA[this.props.quizNum];
+        let qAndAImg = qAndA.questionImage
+        if(this.props.scoreType === "numberScoringImg" && qAndA.questionImage !== ''){
+            return(
+                <div>
+                    <img src={qAndAImg} className='answer-option-img' alt={qAndA.question} />
+                </div>
+            )
+        }
+    }
     renderAnswerOptions(){
-        var qAndA = null;
-        qAndA = this.props.qAndA[this.props.quizNum];
+        let qAndA = this.props.qAndA[this.props.quizNum];
         var _questions = [];
         var i = 0;
         var nextQuizNum = this.props.quizNum + 1;
         while(i < qAndA.answers.length){
             // when the type is cummulative number scoring
-            if(this.props.scoreType === "numberScoring"){
+            if(this.props.scoreType === "numberScoring" || this.props.scoreType === "numberScoringImg"){
                 _questions.push(
                     <Button
                         key={this.props.quizNum-i}
@@ -98,7 +108,7 @@ class Quiz extends Component {
                         size="lg"
                         className="option-btn"
                     >{qAndA.answers[i].content}</Button>)
-            }
+            } 
             i = i + 1;
         }
         _questions = this.arrayShuffler(_questions) // randomize answer option btn
@@ -111,6 +121,10 @@ class Quiz extends Component {
         return(
             <Fragment>
                 <Question question={this.props.qAndA[this.props.quizNum].question}></Question>
+                {/* In case of Quiz with Image Options */}
+                <Fragment>
+                    {this.renderImgAnswerOptions()}
+                </Fragment>
                 <div className="option-btn-div">
                     {this.renderAnswerOptions()}
                 </div>
