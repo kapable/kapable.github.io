@@ -56,7 +56,7 @@ class Result extends Component {
         window.open('https://kapable.github.io/kapable.github.io/peopleColor')
     }
     personalColorLinkRenderer(){
-        if(this.state.current_test === "personalColor") {
+        if(this.state.current_test === "NonepersonalColor") {
             return(
                 <Fragment>
                     <p className="to-peopleColor-test-banner-text">!!실검 1위 기념 궁합테스트 출시!! 감사합니다!</p>
