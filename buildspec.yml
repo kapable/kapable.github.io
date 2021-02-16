@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - npm install --unsafe-perm
+      - npm install babel-cli cross-env webpack-cli --global
+  build:
+    commands:
+       - npm run build
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'dist'
+cache:
+  paths:
+    - './node_modules/**/*'
