@@ -13,6 +13,7 @@ import ReactGA from 'react-ga';
 class App extends Component {
   constructor(props){
     super(props)
+    const _sharable_url = window.location.href;
     let i = 0;
     let _all_tests_url = [];
     while (i<TESTS.length) {
@@ -41,6 +42,7 @@ class App extends Component {
       all_tests_url:_all_tests_url,
       all_tests_result_url:_all_tests_result_url,
       final_render_routes:_final_render_routes,
+      sharable_url:_sharable_url,
     }
   }
   componentDidMount(){
@@ -59,6 +61,32 @@ class App extends Component {
     var tenSec = 10 * 1000;
     var plusTenSec = currentDocumentTimestamp + tenSec;
     if (now > plusTenSec) { window.location.reload(); } else {}
+  }
+
+  kakaoUpperScriptor(){
+    if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) {
+      return(
+        <Fragment>
+          <ins className="kakao_ad_area" style={{display:"none"}}
+          data-ad-unit    = "DAN-q3lQrzFnTNGEBQSA" 
+          data-ad-width   = "320" 
+          data-ad-height  = "100"></ins> 
+          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+          {console.log("test one")}
+        </Fragment>
+      )
+    } else if(this.state.sharable_url.includes("https://kapable.github.io/")) {
+      return(
+        <Fragment>
+          <ins className="kakao_ad_area" style={{display:"none"}}
+          data-ad-unit    = "DAN-2heOjnHUdZLjBuFC"
+          data-ad-width   = "320" 
+          data-ad-height  = "100"></ins> 
+          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+          {console.log("kapable")}
+        </Fragment>
+      )
+    }
   }
 
   render() {
@@ -91,12 +119,13 @@ class App extends Component {
       {this.reloadPage()}
 
       {/* Kakao Adfit Upper */}
-      <ins className="kakao_ad_area" style={{display:"none"}}
+      {/* <ins className="kakao_ad_area" style={{display:"none"}}
       data-ad-unit    = "DAN-2heOjnHUdZLjBuFC" 
       data-ad-width   = "320" 
       data-ad-height  = "100"></ins> 
-      <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+      <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag> */}
 
+      {this.kakaoUpperScriptor()}
       <Router basename='/kapable.github.io/'> 
         <ScrollToTop>
           <Switch>
