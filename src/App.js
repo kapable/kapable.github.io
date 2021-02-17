@@ -72,7 +72,6 @@ class App extends Component {
           data-ad-width   = "320" 
           data-ad-height  = "100"></ins> 
           <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
-          {console.log("test one")}
         </Fragment>
       )
     } else if(this.state.sharable_url.includes("https://kapable.github.io/")) {
@@ -83,7 +82,30 @@ class App extends Component {
           data-ad-width   = "320" 
           data-ad-height  = "100"></ins> 
           <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
-          {console.log("kapable")}
+        </Fragment>
+      )
+    }
+  }
+
+  kakaoFooterScriptor(){
+    if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) {
+      return(
+        <Fragment>
+          <ins className="kakao_ad_area" style={{display:"none"}}
+          data-ad-unit    = "DAN-M3XcjSrV4BrUGCJG" 
+          data-ad-width   = "300" 
+          data-ad-height  = "250"></ins> 
+          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+        </Fragment>
+      )
+    } else if(this.state.sharable_url.includes("https://kapable.github.io/")) {
+      return(
+        <Fragment>
+          <ins className="kakao_ad_area" style={{display:"none"}} 
+          data-ad-unit    = "DAN-rgfAOJhp6Faz2JFX" 
+          data-ad-width   = "300" 
+          data-ad-height  = "250"></ins> 
+          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
         </Fragment>
       )
     }
@@ -119,13 +141,8 @@ class App extends Component {
       {this.reloadPage()}
 
       {/* Kakao Adfit Upper */}
-      {/* <ins className="kakao_ad_area" style={{display:"none"}}
-      data-ad-unit    = "DAN-2heOjnHUdZLjBuFC" 
-      data-ad-width   = "320" 
-      data-ad-height  = "100"></ins> 
-      <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag> */}
-
       {this.kakaoUpperScriptor()}
+
       <Router basename='/kapable.github.io/'> 
         <ScrollToTop>
           <Switch>
@@ -159,11 +176,7 @@ class App extends Component {
       </Router>
 
       {/* Kakao Adfit footer */}
-      <ins className="kakao_ad_area" style={{display:"none"}} 
-      data-ad-unit    = "DAN-rgfAOJhp6Faz2JFX" 
-      data-ad-width   = "300" 
-      data-ad-height  = "250"></ins> 
-      <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+      {this.kakaoFooterScriptor()}
 
       {/* footer */}
       <div className="intro-footer">
