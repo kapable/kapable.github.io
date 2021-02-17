@@ -295,12 +295,18 @@ body {
   font-family: var(--title-font);
   color: var(--font-color);
 }
+
 /* in Result Page for Personal Color Test */
 .to-peopleColor-test-banner-text {
   font-family: var(--title-font);
 }
 .to-peopleColor-test-banner-img {
   max-width: 414px;
+}
+
+.to-personalColorJP-test-banner-text {
+  font-size: 1rem;
+  font-family: var(--title-font);
 }
 
 .share-title {

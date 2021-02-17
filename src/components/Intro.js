@@ -89,6 +89,32 @@ class Intro extends Component {
         this._eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
         alert("링크가 복사됐어요!");
     }
+    
+    personalColorLinkRenderer(){
+        if(this.state.current_test.info.mainUrl === "personalColor") {
+            return(
+                <Fragment>
+                    <a  
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://kapable.github.io/kapable.github.io/personalColorJP"
+                        className="to-personalColorJP-test-banner-text"
+                    >[ 日本語バージョンをやりに行く。 ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test.info.mainUrl === "personalColorJP") {
+            return(
+                <Fragment>
+                    <a  
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://kapable.github.io/kapable.github.io/personalColor"
+                        className="to-personalColorJP-test-banner-text"
+                    >한국어 버전으로 하러가기</a>
+                </Fragment>
+            )
+        }
+    }
 
     introPageRender(){
         
@@ -103,9 +129,10 @@ class Intro extends Component {
                     onClick={this._onStartButtonClick}
                     src={_thumbImage}
                     alt={_mainTitle + '|' + _subTitle}/>
+                {this.personalColorLinkRenderer()}
                 <Typist className="start-btn-participants">
                     {/* 현재까지 총 {this.state.participants}명이 참여했어요. */}
-                    현재까지 총 9,175,735명이 참여했어요.
+                    현재까지 총 11,871,767명이 참여했어요.
                 </Typist>
                 
                 <div className="test-intro-with-friend">
