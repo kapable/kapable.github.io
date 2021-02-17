@@ -234,35 +234,35 @@ var TESTS = [
                 `,
                 query: "ESTJ",
                 score_range:range(26),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3cu_0iZ5_siel1IiNkMW4Lv1ctmhFPBHoOMfcMTE6Oi7ISjH4Z6-u7Ir58zdjbIjSM3bjlQgMQ-5wkYlnw9lhX3WtpbZYD3bjxEqkWHNsMREPNqTh3Rlqj8myO_4W_kO4drMEXSyhji-D_9h6rrTLo=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/cc/fc/PBfEBbWG_o.png'
             },
             {
                 type: "ESTP",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "ESTP",
                 score_range:range(26, 51),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3cyJamLRUyFJnyVNspVJ-LkSXq2ayV9hFkMMr_MflqRQLYCm0S7MYV6_9pM2ZmRo9y_fPoJX6mWyUj56y2j-2r31fCgM7qCrkIuBjSdbOheSItZ6xVrk5Nswzr56QwXxwH37CztM12EPr0tW9NhriI=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/82/f4/Mj6rRZwO_o.png'
             },
             {
                 type: "ESFJ",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "ESFJ",
                 score_range:range(51, 75),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3fmR4e8lRAso970KSt7jTeaS3aHtun5f2QUOtHPF5lfX14FuMczDY8x-ZIggjf7U9VWcwWHDwEvOjzAQN6NqaRMsIqhn1tqbyhSNr9r6iCc3B0PGZfDV3o9oGdZ2WCWutfHkiCU2qvDhEWSalPDrDk=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/6d/5a/OKtTbfoE_o.png'
             },
             {
                 type: "ESFP",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "ESFP",
                 score_range:range(76, 101),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3cxbXI-IU-zCeZQ4oDJWkZX6uNiq3E0F44pdEQnfepUW9tva9uhqwlcRUtR4ZnXuYeCXy3cG9_XLmpIZE8CcBgDolBIYCVhOY_E8EEeeTn1a4N9Td7zfPejZAXRy1p7Ddw6ea2AZ2OclGAQwPBNd8M=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/c8/e8/TSwJ9DA2_o.png'
             },
             {
                 type: "ENTJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ENTJ",
                 score_range:range(76, 101),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3eLi7W6jkJAjDEukaWGTmUHW_7ARxtQ7YpaCFgAvl9sM2V5zIwZRFpobUsE0gd3GkvZY7M7gUb5ZYDiZMiwbA7-qDadFBymh4EvHI3-wHiuFNE-IkpsxJJl86ybPZgCs7QyfsixBIGWMzfxSYlk1bg=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/3e/a0/5991ryJT_o.png'
             },
             {
                 type: "ENTP",
@@ -270,42 +270,42 @@ var TESTS = [
                 `,
                 query: "ENTP",
                 score_range:range(26),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3eD834WyqIf8uWrVOK8qztN70iEIfa3VatVlj3fgVEuIwFsmAKLuSeqTa4txvccDWnQqNTECOhPBI3JKTbOIWyWMdHv_L26yQ70WlpCyoD1WSvzihCvfYH-6GrlYM-v8Yac575onjpE-U39-7k9c1Q=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/5c/ff/cPCbya9O_o.png'
             },
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "ENFJ",
                 score_range:range(26, 51),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3c8dtjXRdIKzyR_ChR1bcnsCQKmbTAUEQ79S5KlUed1riRwS0FmfEUq1COMjR7jigcvDwozuw71xlYQO6l3KOsJ0xBFata2FWkriFsBzTh97LE4c8csl03NcCamB-LW18wrtlW4XEOrq26IuNvuW3E=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/9d/d1/DheWpzcg_o.png'
             },
             {
                 type: "ENFP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "ENFP",
                 score_range:range(51, 75),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3exv89GwyMe40lzecIIQhrOxc-l3tFDonBb4_ec92FGwF73opPpK1SBiLbcdmqk_fHf2Ij2fStrrPLQzpc-5p_mn8U2R_C4_-8Y4tEWorIni3ZFk1QmC8IekfiZvbhP273M0A6R9_HH-uphkXS8Jbc=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/f5/72/cVDtKNvg_o.png'
             },
             {
                 type: "ISTJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "ISTJ",
                 score_range:range(76, 101),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3dZ0Ithds7ecVSZ7Y64NNXSuAtbJwr7zDq0cWYGjvdSUIKq9_XtK2zSG9ynpnTAve4HT-mQ1TgWCD7_CtR1H8iJl9WKZ1UxiQHEfRt56mUiL2j2_RTA5d5YCtOOhF324yYc9pulYHJV9eADvIc6mNw=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/02/ca/st4oB5Fj_o.png'
             },
             {
                 type: "ISTP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ISTP",
                 score_range:range(76, 101),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3e1ITW26n2TgOI2Uc5Zw4O-22LzgAwvtHCpd71SJawb9PoNOc0f0fHABF9eYx8_0UUM52tbH1XWs3Df5fzrPm4Drb3izKVbBtag9U5LUvf65viWH0lwr4LicMfyfiPWF4Z0jwX4a9rc4HNuqmSRQik=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/ff/8d/U8Courfe_o.png'
             },
             {
                 type: "ISFJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ISFJ",
                 score_range:range(76, 101),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3efAhoW8XBnl77481TUXVclVxsy6jmyjkprq52bytQzDDE3dAP1ru9c9c-zz9wPnn-ZUBUZSyDR-HeCr0Im2qhOGa5CkuKvSAzZTZQf_PSVg-fSFRNFG-98KVhV9QLOtLQaxZnLr_qPH5q0GQEEshI=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/2e/f9/kSKxqjul_o.png'
             },
             {
                 type: "ISFP",
@@ -313,35 +313,35 @@ var TESTS = [
                 `,
                 query: "ISFP",
                 score_range:range(26),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3ehw9yXsxLKPhPISldklB9I4smHduKhC1_boGImJQ1_COGxcnBrlTyLxcRQDXnZ18oCxztsduYzJ23RcYM_Z9dspuHFjshJ_F4G8vCqz7WkpJLi9FUs6vhxoSHlLxCLMRoZFBWplHeq1q8430WvZ-0=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/7a/1f/oeELAnZt_o.png'
             },
             {
                 type: "INTJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "INTJ",
                 score_range:range(26, 51),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3cx3q2HSc9D9O6zJ3PoAbSMLQvjflg6XSMM4tqUwpCCXysHBjbZWrz1xl3dy17l0LQkx0Rxo_GIxhUwsjCQ6gJ7XafX-hSPlv9bh7bKJBQ2S4QCnYVsW3k-lKturoBNTiYZrE_R4xJwIA3UlGMrxlY=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/5f/a3/O5T8Ad53_o.png'
             },
             {
                 type: "INTP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "INTP",
                 score_range:range(51, 75),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3eLsw30wWmmbsTFy3qUx29YEolSOaWjyZyOpGLcKIyKH8kOcqS6K-X_N11HGXXhZO4rX69_1wGp8oMob8sbRy2jG_xf-_BNN7cxvcT8OPevaEnGkbyWxB__41mNLDa19qcQzMTEdCojiM5xr9H3yyk=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/2a/ac/wRQgu2OL_o.png'
             },
             {
                 type: "INFJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "INFJ",
                 score_range:range(76, 101),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3e3kJBVnr9hFNlJ2AUhOOTTf8i-abFYPvXmOYUBbbcSiiD-83KhePF1UIlQAK1cnzUWtOfr9EwosLx-gQls2-FYmdPcTpVHL8DJv_zGo00F17Qi1PFq8_zuHKfUWrWv4R6uCQ90SRnFZCPMhBmMJpA=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/e6/ec/DrPZnxea_o.png'
             },
             {
                 type: "INFP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "INFP",
                 score_range:range(76, 101),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3emHUJPRRT4JRuCwksnY9fr3XbL_DsGZkylCYJpUtD5wK4Fxu3CHwpNmZZn22Lg5Hf-Zah70A_ey4VINB43OO0UG_G_K84aLqZ5ZFozSuEZdIGsvjJjbwLq5bn8GZhBsFYvPoMglf6UuqesUBsciJ4=w389-h969-no?authuser=4'
+                img_src:'https://images2.imgbox.com/c1/01/YzQBHf7D_o.png'
             },
         ]
     },
