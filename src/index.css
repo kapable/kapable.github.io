@@ -307,6 +307,13 @@ body {
 .to-personalColorJP-test-banner-text {
   font-size: 1rem;
   font-family: var(--title-font);
+  margin: 0.1rem auto;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .share-title {

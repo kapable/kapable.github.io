@@ -110,7 +110,7 @@ class Intro extends Component {
                         rel="noopener noreferrer"
                         href="https://kapable.github.io/kapable.github.io/personalColor"
                         className="to-personalColorJP-test-banner-text"
-                    >한국어 버전으로 하러가기</a>
+                    >[ 한국어 버전으로 하러가기 ]</a>
                 </Fragment>
             )
         }
