@@ -42,7 +42,7 @@ class Intro extends Component {
         let date = String(today.getDate()).padStart(2, '0');
         let hour = String(today.getHours()).padStart(2, '0');
         let minute = String(today.getMinutes()).padStart(2, '0');
-        
+
         this.state = {
             mode:'intro',
             current_test:_current_test,
@@ -89,18 +89,18 @@ class Intro extends Component {
         this._eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
         alert("링크가 복사됐어요!");
     }
-    
+
     personalColorLinkRenderer(){
         if(this.state.current_test.info.mainUrl === "personalColor") {
             return(
                 <Fragment>
-                    <a  
+                    <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng"
                         className="to-personalColorOut-test-banner-text"
                     >[ Go to English ver. ]</a>
-                    <a  
+                    <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorJP"
@@ -111,13 +111,13 @@ class Intro extends Component {
         } else if(this.state.current_test.info.mainUrl === "personalColorJP") {
             return(
                 <Fragment>
-                    <a  
+                    <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColor"
                         className="to-personalColorOut-test-banner-text"
                     >[ 한국어 버전으로 하러가기 ]</a>
-                    <a  
+                    <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng"
@@ -128,13 +128,13 @@ class Intro extends Component {
         } else if(this.state.current_test.info.mainUrl === "personalColorEng") {
             return(
                 <Fragment>
-                    <a  
+                    <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColor"
                         className="to-personalColorOut-test-banner-text"
                     >[ 한국어 버전으로 하러가기 ]</a>
-                    <a  
+                    <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorJP"
@@ -146,11 +146,11 @@ class Intro extends Component {
     }
 
     introPageRender(){
-        
+
         let _mainTitle = this.state.current_test.info.mainTitle;
         let _subTitle = this.state.current_test.info.subTitle;
         let _thumbImage = this.state.current_test.info.mainImage;
-        
+
         return (
             <div className="intro container">
                 <img
@@ -163,11 +163,11 @@ class Intro extends Component {
                     {/* 현재까지 총 {this.state.participants}명이 참여했어요. */}
                     현재까지 총 11,871,767명이 참여했어요.
                 </Typist>
-                
+
                 <div className="test-intro-with-friend">
                     <CopyToClipboard text={this.state.quiz_url}>
                         <Button className="test-intro-with-friend-btn">
-                            <img 
+                            <img
                                 src={COPYBTN}
                                 className="test-intro-with-friend-img"
                                 onClick={this._onShareButtonClick}
@@ -225,7 +225,7 @@ class Intro extends Component {
                 _which_type_arr.push(this.state.current_test.questions[k].which);
             }
             _which_type_arr = _which_type_arr.filter(onlyUnique);
-            
+
             // get max value & type from Each VS
             let final_type = '';
             for(let i=0; i<_which_type_arr.length; i++){
@@ -252,7 +252,7 @@ class Intro extends Component {
                 }
             }
         }
-        
+
     }
     quizPageRender(){
         if(this.state.mode === "quiz"){
@@ -273,7 +273,7 @@ class Intro extends Component {
                 }.bind(this)}></Quiz>
                 return(
                     _page
-                ) 
+                )
             // when the type is each type counting
             } else if (this.state.scoreType === "typeCounting") {
                 let _page = <Quiz
@@ -343,7 +343,7 @@ class Intro extends Component {
                 return _page
             }
             return this._page
-        } 
+        }
     }
 
     lodingPageRender(){
@@ -367,7 +367,7 @@ class Intro extends Component {
                 <Route path={this.state.result_url+final_score_query} component={Result}/>
                 <Redirect to={this.state.result_url+final_score_query} />
             </Router>
-        )   
+        )
     }
 
     pageRenderer(){
@@ -385,17 +385,18 @@ class Intro extends Component {
         }
         return _page
     }
-    
+
     render(){
         return (
             <Fragment>
+                {this.pageRenderer()}
                 <Helmet>
                     {/* <!-- Primary Meta Tags --> */}
                     <title>{this.state.current_test.info.mainTitle}-케이테스트</title>
                     <meta name="title" content={this.state.current_test.info.mainTitle+'-케이테스트'}/>
                     <meta name="description" content={this.state.current_test.info.subTitle} data-react-helmet="true"/>
                     <link rel="main-url" href={this.state.quiz_url}/>
-                    
+
                     {/* <!-- Open Graph / Facebook --> */}
                     <meta property="og:type" content="website"/>
                     <meta property="og:url" content={this.state.quiz_url}/>
@@ -412,7 +413,7 @@ class Intro extends Component {
                     <meta property="twitter:image" content={this.state.current_test.info.mainImage}/>
                     <meta property="twitter:image:alt" content={this.state.current_test.info.mainTitle} />
                 </Helmet>
-                {this.pageRenderer()}
+
             </Fragment>
         );
     }
