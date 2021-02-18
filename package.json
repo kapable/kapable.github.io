@@ -33,8 +33,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "postbuild": "react-snap"
+    "deploy": "gh-pages -d build"
   },
   "reactSnap": {
     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"]
