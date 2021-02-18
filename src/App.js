@@ -44,6 +44,7 @@ class App extends Component {
       final_render_routes:_final_render_routes,
       sharable_url:_sharable_url,
     }
+    console.log(_sharable_url)
   }
   componentDidMount(){
     ReactGA.initialize('UA-186793588-1', {
@@ -60,7 +61,8 @@ class App extends Component {
     var now = Date.now();
     var tenSec = 10 * 1000;
     var plusTenSec = currentDocumentTimestamp + tenSec;
-    if (now > plusTenSec) { window.location.reload(); } else {}
+    console.log('reloadPage', now , plusTenSec)
+    // if (now > plusTenSec) { window.location.reload(); } else {}
   }
 
   kakaoUpperScriptor(){
@@ -71,7 +73,7 @@ class App extends Component {
           data-ad-unit    = "DAN-q3lQrzFnTNGEBQSA"
           data-ad-width   = "320"
           data-ad-height  = "100"></ins>
-          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+
         </Fragment>
       )
     } else if(this.state.sharable_url.includes("https://kapable.github.io/")) {
@@ -81,7 +83,7 @@ class App extends Component {
           data-ad-unit    = "DAN-2heOjnHUdZLjBuFC"
           data-ad-width   = "320"
           data-ad-height  = "100"></ins>
-          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+
         </Fragment>
       )
     }
