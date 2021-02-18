@@ -13,14 +13,14 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!--script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js"></script>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
-    />
+    /-->
     <!-- below for github page deploy related to 404 Error for SPA -->
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
@@ -34,16 +34,16 @@
       // When the single page app is loaded further down in this file,
       // the correct url will be waiting in the browser's history for
       // the single page app to route accordingly.
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) {
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      }(window.location))
+      // (function(l) {
+      //   if (l.search[1] === '/' ) {
+      //     var decoded = l.search.slice(1).split('&').map(function(s) {
+      //       return s.replace(/~and~/g, '&')
+      //     }).join('?');
+      //     window.history.replaceState(null, null,
+      //         l.pathname.slice(0, -1) + decoded + l.hash
+      //     );
+      //   }
+      // }(window.location))
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
   </head>
@@ -61,8 +61,8 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script src="//www.mediacategory.com/mediaCategory/js/mobileChk_min.js"></script><script type="text/javascript"> if (!mobileCheck()) { document.write("<iframe src='//www.mediacategory.com/servlet/iadbn?from="+escape(document.referrer)+"&s=506858&psb=99' scrolling='no' frameborder=0 width=0 height=0></iframe>"); }</script>
-
-    <script src="//www.mediacategory.com/mediaCategory/js/mobileChk_min.js"></script><script type="text/javascript"> if (mobileCheck()) { document.write('<scr'+'ipt src="//www.mediacategory.com/servlet/adbnMobileBanner?from='+escape(document.referrer)+'&s=506859&types=ico_m&bCover=true" type="text/javascript"></scr'+'ipt>'); }</script>
+    <script src="//www.mediacategory.com/mediaCategory/js/mobileChk_min.js"></script>
+    <script type="text/javascript"> if (!mobileCheck()) { document.write("<iframe src='//www.mediacategory.com/servlet/iadbn?from="+escape(document.referrer)+"&s=506858&psb=99' scrolling='no' frameborder=0 width=0 height=0></iframe>"); }</script>
+    <script type="text/javascript"> if (mobileCheck()) { document.write('<scr'+'ipt src="//www.mediacategory.com/servlet/adbnMobileBanner?from='+escape(document.referrer)+'&s=506859&types=ico_m&bCover=true" type="text/javascript"></scr'+'ipt>'); }</script>
   </body>
 </html>
