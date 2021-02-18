@@ -53,22 +53,22 @@ class Result extends Component {
 
     // if personalColor test's Result page for Link Banner
     peopleColorTestRedirector(){
-        window.open('https://kapable.github.io/kapable.github.io/peopleColor')
+        window.open('https://kapable.github.io/kapable.github.io/peopleColor/')
     }
     personalColorLinkRenderer(){
         if(this.state.current_test === "personalColor") {
             return(
                 <Fragment>
-                    <a  
+                    <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://ktestone.com/kapable.github.io/personalColorEng"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
                     >[ Go to English ver. ]</a>
-                    <a  
+                    <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://ktestone.com/kapable.github.io/personalColorJP"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 日本語バージョンをやりに行く。 ]</a>
                 </Fragment>
@@ -76,16 +76,16 @@ class Result extends Component {
         } else if(this.state.current_test === "personalColorJP") {
             return(
                 <Fragment>
-                    <a  
+                    <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://ktestone.com/kapable.github.io/personalColor"
+                        href="https://ktestone.com/kapable.github.io/personalColor/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 한국어 버전으로 하러가기 ]</a>
-                    <a  
+                    <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://ktestone.com/kapable.github.io/personalColorEng"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
                     >[ Go to English ver. ]</a>
                 </Fragment>
@@ -93,16 +93,16 @@ class Result extends Component {
         } else if(this.state.current_test === "personalColorEng") {
             return(
                 <Fragment>
-                    <a  
+                    <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://ktestone.com/kapable.github.io/personalColor"
+                        href="https://ktestone.com/kapable.github.io/personalColor/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 한국어 버전으로 하러가기 ]</a>
-                    <a  
+                    <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://ktestone.com/kapable.github.io/personalColorJP"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 日本語バージョンをやりに行く。 ]</a>
                 </Fragment>
@@ -113,7 +113,7 @@ class Result extends Component {
 
         const current_tests_path = '/' + this.state.current_test + '/';
         return(
-            <Router basename='/kapable.github.io/'> 
+            <Router basename='/kapable.github.io/'>
                 <Switch>
                     <Route path={current_tests_path} component={()=><Intro test={this.state.current_test}/>} exact/>
                     <Redirect to={current_tests_path} />
@@ -164,7 +164,7 @@ class Result extends Component {
                     <Fragment>
                         <img src={img_src} className='result-img' alt={final_type} />
                     </Fragment>
-                        
+
                 )
             } else {
                 return (
@@ -177,16 +177,16 @@ class Result extends Component {
                             </Card.Body>
                         </Card>
                     </Fragment>
-                        
+
                 )
             }
         }
-        
+
     }
 
     mainPageRender(){
         return(
-            <Router > 
+            <Router >
                 <Switch>
                     <Route path='/' component={App} exact/>
                     <Redirect to='/' />
@@ -248,7 +248,7 @@ class Result extends Component {
                         />
                 </div>
             </div>
-            
+
         );
     }
 
@@ -264,7 +264,7 @@ class Result extends Component {
         return _page
     }
 
-    
+
     render(){
         return(
             <div>
