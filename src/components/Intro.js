@@ -97,7 +97,7 @@ class Intro extends Component {
                     <a  
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://kapable.github.io/kapable.github.io/personalColorJP"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP"
                         className="to-personalColorJP-test-banner-text"
                     >[ 日本語バージョンをやりに行く。 ]</a>
                 </Fragment>
@@ -108,7 +108,7 @@ class Intro extends Component {
                     <a  
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://kapable.github.io/kapable.github.io/personalColor"
+                        href="https://ktestone.com/kapable.github.io/personalColor"
                         className="to-personalColorJP-test-banner-text"
                     >[ 한국어 버전으로 하러가기 ]</a>
                 </Fragment>

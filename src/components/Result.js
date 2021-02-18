@@ -62,14 +62,9 @@ class Result extends Component {
                     <a  
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://kapable.github.io/kapable.github.io/personalColorJP"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP"
                         className="to-personalColorJP-test-banner-text"
                     >[ 日本語バージョンをやりに行く。 ]</a>
-                    {/* <p className="to-peopleColor-test-banner-text">!!실검 1위 기념 궁합테스트 출시!! 감사합니다!</p>
-                    <img src="https://images2.imgbox.com/b3/8b/YNErBixR_o.png"
-                    className="to-peopleColor-test-banner-img"
-                    onClick={this.peopleColorTestRedirector}
-                    alt="퍼스널 컬러 궁합 테스트 하러가기"/> */}
                 </Fragment>
             )
         } else if(this.state.current_test === "personalColorJP") {
@@ -78,7 +73,7 @@ class Result extends Component {
                     <a  
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://kapable.github.io/kapable.github.io/personalColor"
+                        href="https://ktestone.com/kapable.github.io/personalColor"
                         className="to-personalColorJP-test-banner-text"
                     >[ 한국어 버전으로 하러가기 ]</a>
                 </Fragment>
