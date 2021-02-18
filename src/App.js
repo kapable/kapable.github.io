@@ -4,7 +4,7 @@ import Intro from './components/Intro'
 import ResultToIntro from './components/ResultToIntro'
 import ScrollToTop from './components/ScrollToTop'
 import TESTS from './api/TESTS'
-import { BrowserRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Result from './components/Result';
 import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
@@ -28,7 +28,7 @@ class App extends Component {
     }
     let _final_render_routes = [];
     var k = 0;
-    
+
     while(k<TESTS.length){
       var l=  0;
       while(l<TESTS[k].results.length){
@@ -55,9 +55,9 @@ class App extends Component {
     ReactGA.set({page:window.location.pathname+window.location.search})
     ReactGA.pageview(window.location.pathname+window.location.search);
   }
-  reloadPage() { 
+  reloadPage() {
     var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
-    var now = Date.now(); 
+    var now = Date.now();
     var tenSec = 10 * 1000;
     var plusTenSec = currentDocumentTimestamp + tenSec;
     if (now > plusTenSec) { window.location.reload(); } else {}
@@ -68,9 +68,9 @@ class App extends Component {
       return(
         <Fragment>
           <ins className="kakao_ad_area" style={{display:"none"}}
-          data-ad-unit    = "DAN-q3lQrzFnTNGEBQSA" 
-          data-ad-width   = "320" 
-          data-ad-height  = "100"></ins> 
+          data-ad-unit    = "DAN-q3lQrzFnTNGEBQSA"
+          data-ad-width   = "320"
+          data-ad-height  = "100"></ins>
           <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
         </Fragment>
       )
@@ -79,8 +79,8 @@ class App extends Component {
         <Fragment>
           <ins className="kakao_ad_area" style={{display:"none"}}
           data-ad-unit    = "DAN-2heOjnHUdZLjBuFC"
-          data-ad-width   = "320" 
-          data-ad-height  = "100"></ins> 
+          data-ad-width   = "320"
+          data-ad-height  = "100"></ins>
           <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
         </Fragment>
       )
@@ -92,19 +92,19 @@ class App extends Component {
       return(
         <Fragment>
           <ins className="kakao_ad_area" style={{display:"none"}}
-          data-ad-unit    = "DAN-M3XcjSrV4BrUGCJG" 
-          data-ad-width   = "300" 
-          data-ad-height  = "250"></ins> 
+          data-ad-unit    = "DAN-M3XcjSrV4BrUGCJG"
+          data-ad-width   = "300"
+          data-ad-height  = "250"></ins>
           <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
         </Fragment>
       )
     } else if(this.state.sharable_url.includes("https://kapable.github.io/")) {
       return(
         <Fragment>
-          <ins className="kakao_ad_area" style={{display:"none"}} 
-          data-ad-unit    = "DAN-rgfAOJhp6Faz2JFX" 
-          data-ad-width   = "300" 
-          data-ad-height  = "250"></ins> 
+          <ins className="kakao_ad_area" style={{display:"none"}}
+          data-ad-unit    = "DAN-rgfAOJhp6Faz2JFX"
+          data-ad-width   = "300"
+          data-ad-height  = "250"></ins>
           <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
         </Fragment>
       )
@@ -113,6 +113,7 @@ class App extends Component {
 
   render() {
     return(
+    <Router>
     <Fragment>
       <Helmet>
         {/* <!-- Primary Meta Tags --> */}
@@ -120,7 +121,7 @@ class App extends Component {
         <meta name="title" content="케이테스트 - 퍼스널 컬러 테스트"/>
         <meta name="description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트,퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러" data-react-helmet="true"/>
         <link rel="main-url" href={window.location.href}/>
-          
+
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://kapable.github.io/"/>
@@ -143,7 +144,7 @@ class App extends Component {
       {/* Kakao Adfit Upper */}
       {this.kakaoUpperScriptor()}
 
-      <Router basename='/kapable.github.io/'> 
+      <Router basename='/kapable.github.io/'>
         <ScrollToTop>
           <Switch>
             {/* "Main" page */}
@@ -187,10 +188,11 @@ class App extends Component {
           <p>©주식회사 위드썸컴퍼니 All Rights Reserved. 2021.</p>
       </div>
     </Fragment>
+    </Router>
     )
   }
-  
+
 }
 
 
-export default withRouter(App);
+export default App;
