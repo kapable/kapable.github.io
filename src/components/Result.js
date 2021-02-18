@@ -62,8 +62,14 @@ class Result extends Component {
                     <a  
                         target="_blank"
                         rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to English ver. ]</a>
+                    <a  
+                        target="_blank"
+                        rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorJP"
-                        className="to-personalColorJP-test-banner-text"
+                        className="to-personalColorOut-test-banner-text"
                     >[ 日本語バージョンをやりに行く。 ]</a>
                 </Fragment>
             )
@@ -74,8 +80,31 @@ class Result extends Component {
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColor"
-                        className="to-personalColorJP-test-banner-text"
+                        className="to-personalColorOut-test-banner-text"
                     >[ 한국어 버전으로 하러가기 ]</a>
+                    <a  
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to English ver. ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test === "personalColorEng") {
+            return(
+                <Fragment>
+                    <a  
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColor"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                    <a  
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 日本語バージョンをやりに行く。 ]</a>
                 </Fragment>
             )
         }

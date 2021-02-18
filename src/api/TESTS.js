@@ -23,6 +23,328 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // persoanlColor in English
+    {
+        info : {
+            mainTitle:"Personal color test",
+            subTitle:"What is my perosnal color test?",
+            mainUrl:"personalColorEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/personalColorEng-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorEng-thumb.png"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'How do I behave to new friends?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I talk to him first.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Most of the time, other friends talk to me first.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What do I enjoy doing on the weekend?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I enjoy meeting people."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I don't hate being alone."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What kind of atmosphere do I like when I play with my friends?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I like a noisy and exciting atmosphere."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I like to have small conversations with a few friends."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What is more important to me?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Without the present,\nthere is no future."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "If I don't think about the future, there will be no progress."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What situations are comfortable for me when I work?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "It's better to follow what others do."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "It's better to make my own way."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do people around me say to me?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I often hear that I am consistent and patient."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "I often hear that I'm creative."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What do I say when I have to say no?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I say I can't do it firmly."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I tend to listen to most of them after thinking about it."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "How do I behave when I'm angry?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I argue while talking logically."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I have a lot to say,\nbut I'm so angry that I'm tearing up."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Listening to my friend's concerns,\nI think it's his fault.\nHow do I say that then?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I tell my fridend the wrong thing about him."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I'm afraid my friend won't like it if I speak directly."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "How do I behave when I prepare the supplies?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I prepare a day in advance."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "There are many times when I think,\n'I\"ll take care of it tomorrow,'\nbut I forget it."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "I was going to go home and study afterwards,\nbut my friends hold me to play.\nHow do I behave?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "It wasn't planned...I'm very embarrassed."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Okay! Life doesn't go as planned! Let's play!!!!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What kind of travel destination do I want to go to?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Just like I planned! I like to proceed in order of work in a planned!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Do what comes to mind when I think of it!\nI like to be flexible!"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/INFP.png'
+            },
+        ]
+    },
     // persoanlColor for Japan
     {
         info : {
@@ -30,8 +352,8 @@ var TESTS = [
             subTitle:"私に似合うカラーは何だろう？ パーソナルカラーテスト - ケイテスト",
             mainUrl:"personalColorJP",
             scoreType:"typeCountingMBTI",
-            mainImage:"https://dl.dropboxusercontent.com/s/p2vvah7jf9tftd2/personalColorJP-intro.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/22ivvcgtsmr0dvj/personalColorJP-thumb.png?dl=0"
+            mainImage:"https://images.ktestone.com/introImages/personalColorJP-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorJP-thumb.png"
         },
         questions:[
             {
@@ -234,35 +556,35 @@ var TESTS = [
                 `,
                 query: "ESTJ",
                 score_range:range(26),
-                img_src:'https://dl.dropboxusercontent.com/s/b5sc429q8ufy6x2/ESTJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/ESTJ.png'
             },
             {
                 type: "ESTP",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "ESTP",
                 score_range:range(26, 51),
-                img_src:'https://dl.dropboxusercontent.com/s/ndvlmwf60ouk5lg/ESTP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/ESTP.png'
             },
             {
                 type: "ESFJ",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "ESFJ",
                 score_range:range(51, 75),
-                img_src:'https://dl.dropboxusercontent.com/s/6cf2j7gr6c3k7nm/ESFJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/ESFJ.png'
             },
             {
                 type: "ESFP",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "ESFP",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/65y3o7ayimsahcs/ESFP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/ESFP.png'
             },
             {
                 type: "ENTJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ENTJ",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/kvhmddtvjznmt7k/ENTJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/ENTJ.png'
             },
             {
                 type: "ENTP",
@@ -270,42 +592,42 @@ var TESTS = [
                 `,
                 query: "ENTP",
                 score_range:range(26),
-                img_src:'https://dl.dropboxusercontent.com/s/xlm5nr8qs39sbot/ENTP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/ENTP.png'
             },
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "ENFJ",
                 score_range:range(26, 51),
-                img_src:'https://dl.dropboxusercontent.com/s/di3l9bso81ra33n/ENFJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/ENFJ.png'
             },
             {
                 type: "ENFP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "ENFP",
                 score_range:range(51, 75),
-                img_src:'https://dl.dropboxusercontent.com/s/a717dzbn4c41d5o/ENFP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/ENFP.png'
             },
             {
                 type: "ISTJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "ISTJ",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/z8ak0ki2bucz4vk/ISTJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/ISTJ.png'
             },
             {
                 type: "ISTP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ISTP",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/6x2m31jfgv5zusm/ISTP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/ISTP.png'
             },
             {
                 type: "ISFJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ISFJ",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/12xo24ev345wvtf/ISFJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/ISFJ.png'
             },
             {
                 type: "ISFP",
@@ -313,35 +635,35 @@ var TESTS = [
                 `,
                 query: "ISFP",
                 score_range:range(26),
-                img_src:'https://dl.dropboxusercontent.com/s/k8y2ogq3nr2worp/ISFP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/ISFP.png'
             },
             {
                 type: "INTJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "INTJ",
                 score_range:range(26, 51),
-                img_src:'https://dl.dropboxusercontent.com/s/5gxqavh6eg8trf8/INTJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/INTJ.png'
             },
             {
                 type: "INTP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "INTP",
                 score_range:range(51, 75),
-                img_src:'https://dl.dropboxusercontent.com/s/rq5wkwmos38ov4z/INTP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/INTP.png'
             },
             {
                 type: "INFJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "INFJ",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/dcrnjvevpr4oyey/INFJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/INFJ.png'
             },
             {
                 type: "INFP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "INFP",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/hqnlet9wzy9gvkq/INFP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColorJP/INFP.png'
             },
         ]
     },
@@ -1953,8 +2275,8 @@ var TESTS = [
             subTitle:"나에게 어울리는 컬러는 무엇일까?",
             mainUrl:"personalColor",
             scoreType:"typeCountingMBTI",
-            mainImage:"https://dl.dropboxusercontent.com/s/s8c12m532dkauoc/personalColor-intro.png?dl=0",
-            thumbImage:"https://dl.dropboxusercontent.com/s/sgqrqu1kouco596/personalColor-thumb.png?dl=0"
+            mainImage:"https://images.ktestone.com/introImages/personalColor-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColor-thumb.png"
         },
         questions:[
             {
@@ -2157,35 +2479,35 @@ var TESTS = [
                 `,
                 query: "ESTJ",
                 score_range:range(26),
-                img_src:'https://dl.dropboxusercontent.com/s/rpqc8pjb6bbcbv8/ESTJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/ESTJ.png'
             },
             {
                 type: "ESTP",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "ESTP",
                 score_range:range(26, 51),
-                img_src:'https://dl.dropboxusercontent.com/s/hrwmq2fiv0r0u7c/ESTP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/ESTP.png'
             },
             {
                 type: "ESFJ",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "ESFJ",
                 score_range:range(51, 75),
-                img_src:'https://dl.dropboxusercontent.com/s/09pe3tkzx1xvymz/ESFJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/ESFJ.png'
             },
             {
                 type: "ESFP",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "ESFP",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/esu9nn4179ry6bk/ESFP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/ESFP.png'
             },
             {
                 type: "ENTJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ENTJ",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/4wqmj2kq2ok0ez0/ENTJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/ENTJ.png'
             },
             {
                 type: "ENTP",
@@ -2193,42 +2515,42 @@ var TESTS = [
                 `,
                 query: "ENTP",
                 score_range:range(26),
-                img_src:'https://dl.dropboxusercontent.com/s/m555cdsvvkbjmbj/ENTP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/ENTP.png'
             },
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "ENFJ",
                 score_range:range(26, 51),
-                img_src:'https://dl.dropboxusercontent.com/s/1l820firlc3r7y3/ENFJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/ENFJ.png'
             },
             {
                 type: "ENFP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "ENFP",
                 score_range:range(51, 75),
-                img_src:'https://dl.dropboxusercontent.com/s/6ghd6qbm5c3e6pv/ENFP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/ENFP.png'
             },
             {
                 type: "ISTJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "ISTJ",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/vq7rd6ixaf6t47v/ISTJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/ISTJ.png'
             },
             {
                 type: "ISTP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ISTP",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/6npy5lge7s61b1g/ISTP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/ISTP.png'
             },
             {
                 type: "ISFJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ISFJ",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/5zqofbtxa9jcd9z/ISFJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/ISFJ.png'
             },
             {
                 type: "ISFP",
@@ -2236,35 +2558,35 @@ var TESTS = [
                 `,
                 query: "ISFP",
                 score_range:range(26),
-                img_src:'https://dl.dropboxusercontent.com/s/7y0k4nl72pzawer/ISFP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/ISFP.png'
             },
             {
                 type: "INTJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "INTJ",
                 score_range:range(26, 51),
-                img_src:'https://dl.dropboxusercontent.com/s/5jrw283vm2yhv5n/INTJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/INTJ.png'
             },
             {
                 type: "INTP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "INTP",
                 score_range:range(51, 75),
-                img_src:'https://dl.dropboxusercontent.com/s/15xk29gfokzohcm/INTP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/INTP.png'
             },
             {
                 type: "INFJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "INFJ",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/6am6eij9ko1hhu8/INFJ.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/INFJ.png'
             },
             {
                 type: "INFP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "INFP",
                 score_range:range(76, 101),
-                img_src:'https://dl.dropboxusercontent.com/s/c6u0f0ya52j0mb0/INFP.png?dl=0'
+                img_src:'https://images.ktestone.com/resultImages/personalColor/INFP.png'
             },
         ]
     },
