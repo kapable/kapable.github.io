@@ -84,7 +84,7 @@ var TESTS = [
             },
             {
                 which:"SN",
-                question: "私がもっと重要に考えていることは？",
+                question: "私がより重要と考えていることは？",
                 answers:[
                     {
                         type: "S",
@@ -137,12 +137,12 @@ var TESTS = [
                     {
                         type: "T",
                         score: 2,
-                        content: "強力にはできない」と話す。"
+                        content: "「協力はできない」と話す。"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "悩んだ末\n大半は聞いてくれる方だが、"
+                        content: "悩んだ末\n大半は聞いてあげる。"
                     },
                 ]
             },
@@ -169,7 +169,7 @@ var TESTS = [
                     {
                         type: "T",
                         score: 2,
-                        content: "友人の不始末を物語る"
+                        content: "友人の過ちを指摘する"
                     },
                     {
                         type: "F",
@@ -217,12 +217,12 @@ var TESTS = [
                     {
                         type: "J",
                         score: 2,
-                        content: "私が計画した通り！\n計画的に仕事を順番通りに進めるのが好きだよ！"
+                        content: "私が計画した通り！\n計画的に物事を順番通りに進めるのが好きだよ！"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "その時その時の思いつく通りに仕事処理！\n融通を利かせるのが好きだ！"
+                        content: "その時その時の思いつく通りに用事をこなす！\n柔軟にするのが好きだ！"
                     },
                 ]
             },
