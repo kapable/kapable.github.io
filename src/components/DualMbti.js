@@ -17,7 +17,7 @@ class DualMbti extends Component {
     }
 
     personalColorTestRedirector(){
-        window.open('https://kapable.github.io/kapable.github.io/personalColor')
+        window.open('https://ktestone.com/kapable.github.io/personalColor/')
     }
     renderColorOptions(who){
         let _colors = Object.keys(this.state.personal_colors)
@@ -76,7 +76,7 @@ class DualMbti extends Component {
                                 let _final_result = this.state.myMBTI + this.state.yourMBTI
                                 this.props.onChangeMode(_final_result, "loading");
                             }
-                            
+
                         }.bind(this)} key="dualMBTIBtn" className="dualMBTI-submit-btn" variant="secondary">➥ 궁합 결과 보러가기</Button>
                     </div>
                     <p>내 퍼스널 컬러를 모른다면?</p>
