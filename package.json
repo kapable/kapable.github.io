@@ -38,7 +38,7 @@
   },
   "reactSnap": {
     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
-    "skipThirdPartyRequests": false,
+    "skipThirdPartyRequests": true,
     "minifyHtml": {
       "collapseWhitespace": true,
       "removeComments": true
