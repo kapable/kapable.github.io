@@ -36,6 +36,9 @@
     "deploy": "gh-pages -d build",
     "postbuild": "react-snap"
   },
+  "reactSnap": {
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"]
+  },
   "eslintConfig": {
     "extends": [
       "react-app"
