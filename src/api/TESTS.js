@@ -674,8 +674,8 @@ var TESTS = [
             subTitle:"나의 도토리력은? , 싸이월드테스트, 도토리테스트",
             mainUrl:"dotori",
             scoreType:"numberScoringImg",
-            mainImage:"https://lh3.googleusercontent.com/pw/ACtC-3fM5S4H21uL3IZ4int1tZqB0qT_CaDRc2x6BUKGR3QT00QFrH7FIUa2vlnUlHI-tXDGSbhIvuDAVtSWjzJcgH52wt_qPEqpQCGfq4uI8VtAHIpcqb8YLN9PZMg5RHXGZprvGj3BjriUo8LWC-yGy-c=w768-h489-no?authuser=4",
-            thumbImage:"https://lh3.googleusercontent.com/pw/ACtC-3dN6dRP9vszZ1xY8bqEpYC-tRKt5mwkunyivb8rG0XKv6AnPivgAdwiKHsPGOHPdVxa2MF0CFP5aOWEkuA_dS2gdC9ghaf85RjGSIo-8Ff1LhDAQdkv2-CA-IVudqKcZH7UasUpcuWEqD2BXjBLSUk=w768-h620-no?authuser=4"
+            mainImage:"https://images.ktestone.com/introImages/cyworld-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/cyworld-thumb.png"
         },
         questions:[
             {
@@ -843,7 +843,7 @@ var TESTS = [
                         content: "교실, 교복, 석방"
                     },
                 ],
-                questionImage:'https://lh3.googleusercontent.com/pw/ACtC-3eNcHwMwOfx8nBSimWn5SKmT9CkVYQ5cMRDMFpadDU2eAwNRjDYrXs0dvP5ltGGjf0JT7xuK-qDf0jE7irjuY0xwe0P3ALUuJHwF7y9ZDkJhrhGeXkF-rDv9YHzVmuDDNoBByPBux4WHvTOjqmpyls=w482-h470-no?authuser=4',
+                questionImage:'https://images.ktestone.com/storyImages/cyworld/cyworld_option_7.jpeg',
             },
             {
                 question: "다음 사진의 명칭은?",
@@ -864,7 +864,7 @@ var TESTS = [
                         content: "디스켓플로피"
                     },
                 ],
-                questionImage:'https://lh3.googleusercontent.com/pw/ACtC-3djamT8LRMzomz93GICBAHg-tKvxH3cmX5glUFOcwXQtEeU9SkC5yXF4VuyFKabYSbhrdMGmt7vpMHSQdVXqLG9WGUBqDePbJGt4pJaKRcRFjtvBoF4_2n3uKQJZgXw7bsv16PXtXGP9XafHowU4mc=w414-h279-no?authuser=4',
+                questionImage:'https://images.ktestone.com/storyImages/cyworld/cyworld_option_8.jpeg',
             },
             {
                 question: "쥬니어 네이버의 슈 게임이 아닌것은? \n (슈의는 생략)",
@@ -925,35 +925,35 @@ var TESTS = [
                 desc: ``,
                 query: "alemdfhr",
                 score_range:range(2),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3cOQDfzpXn6i9cVnORUNk8HdNj-b0NM1Zx3wkLAJJBI02q9bMv9oiHHhFue-1jGOVPcmy29PgPNO8JpdBWrH7XgTakY0BNjCDtTLyQBvawNHXNjnQa1o0yUZeVJqgTgb7N1sCR6T00zY925Wjtxs1g=w768-h940-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/cyworld/cyworld-1.png'
             },
             {
                 type: "40%",
                 desc: ``,
                 query: "ghldnjsrkdlq",
                 score_range:range(2, 4),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3fCrUAub8INwW5dxA8bFsmTEBGVTK_bG6EpzrR0VOyXDYNDnuRpIU9PCe7LsZLreBxPfs4Qm_V7XNUpV8A2ByeF7pQnvgSGUTPn2U7YCc79TKysQZD5IdW7lTGMxkZPvJbmo9VI_bnDRcfC9q07c-8=w768-h940-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/cyworld/cyworld-2.png'
             },
             {
                 type: "60%",
                 desc: ``,
                 query: "gmrdurtk",
                 score_range:range(4, 6),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3eakB5MqyJCsRSl9L9ZlcKEgJHcAzheakK7G8Ix7FIFOlkz1fGeFf4BXji5mrkjo9ENdL4npu52SOfO-xG3B-TPSXKw02IFZsuUiHZab8nojHilsyT_fbPY7vdHmrh5PiWsB6VgqyEYZOh3pkoZLgc=w768-h940-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/cyworld/cyworld-3.png'
             },
             {
                 type: "80%",
                 desc: ``,
                 query: "rkRmasnsanf",
                 score_range:range(6, 8),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3dITLOe3DwzBH98lAEkfEK3f8msIhtyLF6BDnPaUUJDVC4zNK6t0VVnQL2637azzaaWhjb07FFFjJyf9Xbui8uv2d4HMIrmE5R0l8J5qaSpY_YxbMbhozKAh1bTB2kLMe4PcXSswh8icNd0LOmZV7w=w768-h940-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/cyworld/cyworld-4.png'
             },
             {
                 type: "100%",
                 desc: ``,
                 query: "vmfhaktmxj",
                 score_range:range(8, 11),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3eYTS4tZ5RmdLNc7ATiRiEL2fXfbnP4_ES2PlT--tuUSIfaEQYmj-1klb_bNZ4mSFCG0xNTjYl_FTq9Hczp5TcYEhOid5QWLiRNC4TeBjnCUf9ryfoPIzc-BqPmxi_jxjVsVW0ZhM24fFc0tYZmY5M=w768-h940-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/cyworld/cyworld-5.png'
             },
         ]
     },
@@ -964,8 +964,8 @@ var TESTS = [
             subTitle:"우리에게 어울리는 컬러는 무엇일까?",
             mainUrl:"peopleColor",
             scoreType:"dualMBTI",
-            mainImage:"https://lh3.googleusercontent.com/CiTsbA9L_U7L76vG0CFN9_AfwuzbCqSti6Z9qHcjf6VUZQsML0o1-OLYyuu4JOJ5WuYyg15c9PQTsbG5dGlHSW94rkLSXf4EaozgeY1eSM4etFYILcWoqqGRImor8ONC7CyOAvTxckFseGUK23pMgB08iSnBFeUQuluPl1mek5pr_-4vYcQbH9JfletfakmGe1Al_PaLjyTs2xuSNAbukezJ2EPos580nX7ZOAmAQXSN5jtFcJHy_ulg_n_-JFhGiftXUw1mvlPcOglh-QUuxvyj3MpoUiuLx09hVJySlvRfWkLP02coAfjQUR-nrvvNnNG5ZH3K3r87jWh-NQauRrofRe17_lKMiQKLh-bSITqjSQN3E3msB1WTyfPtEFVn2FJJ5B91ZS_bEmiyswoEIT_fkx2SYxMy-wW30CTqF2NgEIFtNtru8Yrt7jrKn0aGrJUTiBMfwP_ncyh62NCjg2_3e-QGuJwgyYTUQMeR_WtLL9rITctydxqhux7mGQYFZFhIbNXugOIWby4xq_myQlEN6Z7noln7xxzkXr5_P5yOq0uG-PU-3gqZ3NtzpH1LxpFdMbXJ93GDuMCb8SOfx_IKYsrUGN2-2t-yIfn9qDN0QTDBA40AvvdyMgR208u4ieOsTINpnYyAXkzUmbKDvtQHrU7ZcbHI_YFMC1OcMAdIqZ7YjgkJ=w768-h944-no?authuser=4",
-            thumbImage:"https://lh3.googleusercontent.com/viEp-tOHfnWBvSolDuJNFAihApGS_FE_dbnLyoEJ-S-e6Q4AhEv0TjRadNbG2EQO4jgxMd40aT0ckKqvFuOC4B95SUgBxQuAR88sm8EUh4v_VYm5DPj2so-kQJ-7dDs-T5IeTssblDDLNbpkYVojf8rBoQ7xDKTuNg-Mk0niiyrRfNoTbnV2zRuTXrqaEdwD8Fwyw4Bec_zZ16_aeJufVo_2ac_Rilbr18ZU2ybSgD_2SpWHMrm0ar9dOh5pviAw4K7HiH9RKkW8RsCpePylvuubCA_VLtD4OSAqhOjQTn5K98CEdq0UdFup7dtxu3GKlFkAJeZL-9fkWhBreCtahEabi7EUaHiOn2b4l5nx-iCP4v71ZMqtv1sqiaT43W4r-i_iS7aKbp6t7mOQikJq2JZdM3lytUTQ7k4kvoxO-BeKclcRg5Np8OG8MJupcBgMU3p_GiuqRBjlqcbXXGh8ocOUeUXPHRUIkE8MHOxpN4Cii5hupojKNWXy-rwboSx7ai0S_fB8YJpmW3dsxWVNtfZieF-2VXrj3UUom8_P4k_YNBmoNMiUYFx0IWKeZRBY4L6vCu7_N0LaCYXuExFqfaWYHMkUHPjwjVdX9F1323HKC9jjO9ul5Sxgkz3RB-PqQCUzr1wIyQH8ODyl_psV9nsfolvFDLDZqESyA4Uu1MFajn9X7sIS=w768-h620-no?authuser=4"
+            mainImage:"https://images.ktestone.com/introImages/peopleColor-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/peopleColor-thumb.png"
         },
         questions:[
             {
@@ -2597,8 +2597,8 @@ var TESTS = [
             subTitle:"남들이 보는 나는 과연 어떤 모습일까?",
             mainUrl:"otherlookme",
             scoreType:"numberScoring",
-            mainImage:"https://lh3.googleusercontent.com/pw/ACtC-3d3jT4fHl5I04weA_g60jLofJBMR83YM1N5nPgDVzd339nhH3PkN2fU8jhlXXoCt1kZ4XNAwPNscZwzRQmfmcbQV48VgbM8FUMtAYcUoNz8t4QPeYIwDpWXSlbdAT2shKtZD0CJaZMb7L4vfqsJ2vc=w768-h944-no?authuser=4",
-            thumbImage:"https://lh3.googleusercontent.com/pw/ACtC-3ce42kHIv4CHF02MF7MnAzgtwPpmDzhZ_kxbPuYsxgLHfL7rOTdE5KpbnJh_WJFoBB_OCcj0wgyefTJj-MWlqQ9n25SS6PLr2iWSZPZ3jaHyt_VxXlnqRewVbpDMep8BVDUZFn7DL-3lYXvHcSQJL0=w768-h620-no?authuser=4"
+            mainImage:"https://images.ktestone.com/introImages/otherlookme-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/otherlookme-thumb.png"
         },
         questions:[
             {
@@ -2890,7 +2890,7 @@ var TESTS = [
                 `,
                 query: "thtlawoddl",
                 score_range:range(21),
-                img_src:'https://lh3.googleusercontent.com/ZNBa5W6S8TMJ9wCqS4_fgnTInyrvZq3novpRg5P-dV1Bl3_6oL3p-LdBYhzD3CHBGEe18bTItTpg0joU5STvpUu8TNWwZT8_WjG8jNjfyZsywXSLbi8V1LGoIBEZ8BC900BYgX4JHEOV9e56xH5AwIqatA8AGJb-7da9YP1sHPOzzLM8JlsYFQUgoX59R_FzvL7AOGh4UCAPIqGekV4cghnZw833RQhB6vwm2bHmC_MjlqNhbQ78z1oLGhvYtAXtIU8QHXgikCUsz3Ad34Ykv7Q1X8JT4zWrRH_Kr25FUeZazo7WZ0yFM9_rEJeuDPxGUz-y-62Dgip91N4rulbwWPoAUtcxFJNoogi_shu0N8H2vDcp2EMfIEV3KrnYaL-xDX-2nFzuAvToe4VbrfxMz8LlYhhiFIAj37DecNaHyXAn6_C0g6MuDmAYKFyzyNFNgQUGIY4sN4WM9q_TMrtsSuKRJwOfXG_3vf7gbogs8jMKrHEEsqh3a05BgjpVODVt03cEpZzuy-ibZ0GPUoO5rZhp0Za1miXDwp34o1ox8IH3jQjg4XowXefSHH-IcCiEWTLmdVZOpZ5WcTZuXpkH3rvfduBzHzMHupft8itrqRUjT-jifgjBkYMNbJRFqaJAdrjCDcLHVDTisCxy65NbrLdQ2OYc6qVkkJhUr67KEEUBJmz80LKGTg=w768-h193-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/otherlookme//otherlookme-1.png'
             },
             {
                 type: "나는야 깐깐쟁이",
@@ -2903,7 +2903,7 @@ var TESTS = [
                 `,
                 query: "RksRkswoddl",
                 score_range:range(21, 31),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3dAGruKC9wrveKxTluBP7LskPyDgj_vc8gECKsoRvJxgy-rtDUwGW-NuMYPgmhObpqaAKDDyDp78SPqtUDGmkn3vkjdgQw6fNhCBycmp0-yuH0wey1H8s_kNHRlEnaobTWhODbct7wyCx_7t-rUEcI=w768-h193-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/otherlookme//otherlookme-2.png'
             },
             {
                 type: "나는야 겸손쟁이",
@@ -2917,7 +2917,7 @@ var TESTS = [
                 `,
                 query: "ruathswoddl",
                 score_range:range(31, 41),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3dNacjenpNzcYet7tAkC_zG2e7ig2oB6q4L3tHmXbc6JhKPX60OwtD6ujWDSEmQSkv3QaNcqNFu_ETBgeg2V9BYZawklj_UPlmPHXLnIbNelov8LtSzC0hXttfE-aohc-aLcv7XPwJPdF8e_dvINsg=w768-h193-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/otherlookme//otherlookme-3.png'
             },
             {
                 type: "나는야 매력쟁이",
@@ -2930,7 +2930,7 @@ var TESTS = [
                 `,
                 query: "aofurwoddl",
                 score_range:range(41, 51),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3fVGKcdB_UBWpFEg5HE41kRENSt_cppG2Yl3msWzIXYFWDzB4hYvho-jWFER3balVwbqZx_qdjwPw6mNp0kYEUKV-Io7io9Oigw3Oer5zCRFMQUH76jOHZOCT7obvia7lKWjcW8lI0Z-g5hStPXhTc=w768-h193-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/otherlookme//otherlookme-4.png'
             },
             {
                 type: "나는야 행동쟁이",
@@ -2942,7 +2942,7 @@ var TESTS = [
                 `,
                 query: "godehdwoddl",
                 score_range:range(51, 61),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3cuemgcugLmcvXIdDAvkYnH3VSBM1AtTYuoUR7vD079wRghFtxPITeOyUCq7KscAsYkH4jcl3CTIeGpfXR0IcgCidFVSm7WJk_ejbgijvWGRIxtK5WviEX3zRu1VooT-hKvwFOkaKggvQKUA-bpDms=w768-h193-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/otherlookme//otherlookme-5.png'
             },
             {
                 type: "나는야 지배쟁이",
@@ -2956,7 +2956,7 @@ var TESTS = [
                 `,
                 query: "wlqowoddl",
                 score_range:range(61, 101),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3di84hRLdB4DNWjF9gxhi7eGy2sdSgheY9MX8U484FF5JqeTtPaOWNjFKzZeZpn70zfcU8wP1FFTlmVBnlUuTSJsq7suo_SQ_BA5Ta0qrTzG2hI4MUs0h-_XaY_COQVl3X_V1OJFww6ijc3od9sdTg=w768-h193-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/otherlookme//otherlookme-6.png'
             },
         ]
     },
@@ -2967,8 +2967,8 @@ var TESTS = [
             subTitle:"과연 나는 라떼일까?",
             mainUrl:"latte",
             scoreType:"numberScoring",
-            mainImage:"https://lh3.googleusercontent.com/pw/ACtC-3fiNa0jjnQ8bdFWWw_AwXEECn-sr9I_Ax3OAVmBU0ecQg6dRjfHP064U9DyTE2WA0gMkKv1wl_fcJamkOCV3stEkgGukVvXnhZCF8sgnL1r2dma3_7fbF33CxUVwuhcNQjO959f__0XxYqxeHR_Nrk=w768-h944-no?authuser=4",
-            thumbImage:"https://lh3.googleusercontent.com/pw/ACtC-3df-3z3426qtEbDLyjS2p2BT_Q_s_0f5zk4b8AT6IHU2myGu1J2-4I3MWsn_SF4wEy2oEdBfkJKg_EhzfiD76L6wtQ-pin6PCq1v-maPSnkGTn3bSGiWC8cewg1k6QAUjDulw3xS9hKCsH3cK9R8R0=w768-h620-no?authuser=4"
+            mainImage:"https://images.ktestone.com/introImages/latte-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/latte-thumb.png"
         },
         questions:[
             {
@@ -3098,21 +3098,21 @@ var TESTS = [
                 desc: ``,
                 query: "milk",
                 score_range:range(11),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3ct1jA5ulDNkrvtSpLk6DSd3lVetjv7IFe4Vd2pVxk6xIEP8LmOsBI5KgkjUDGaFRtSJB5_KtNQ2SiKAIXzTcsEYvjxFdg1gYXeK3aNlpzq3zpFcdbmiPmt8ey3E1jvpa4PCNUbein4D9xkAbeFPXQ=w768-h946-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/latte/milk.png'
             },
             {
                 type: "밀크 커피",
                 desc: ``,
                 query: "milkCoffee",
                 score_range:range(11, 14),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3eRmD8NeSTbyHnY6qxhWmixt0qv5nyIYVb4ZcOfxqAvwIDZS3Q_c3RF1BZgJKf_hS6PhGnyqycJbFX3Qa9HcI6pz55rZVv9iN5SeSLN5UKAJKEk93vfvnhIxkIfVhNlLqNH5uvjQ_te47ocNHIgEno=w768-h946-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/latte/milkCoffee.png'
             },
             {
                 type: "라떼",
                 desc: ``,
                 query: "latte",
                 score_range:range(14, 20),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3dMrGAoY1EyAvCGSTDRLpJigUaTMAwUdRBqQLH-3xqCRumf_D-KVyKBhbVKiDjknjDRnUvKNfp5cEcY-oB4WD40Ip2Tq-vwLpVjCtAIhCEb9dgjl4lSFacIutqqn6LJz7JI5dsSoqr-cI7laY7PqfI=w768-h946-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/latte/latte.png'
             },
         ]
     },
@@ -3123,8 +3123,8 @@ var TESTS = [
             subTitle:"도대체 누구의 잘못일까?",
             mainUrl:"whosFault",
             scoreType:"storyTelling",
-            mainImage:"https://lh3.googleusercontent.com/pw/ACtC-3egLgzkcDus41oZ2c03_rR-W80mA57e_IOqzab3WIJcv7qUIb9qLMTC-p-Z2yl_7VOYPMJDGpwuWpUhlk8B-485NX1uanNRL0VaHFhowJGK11cCT3IOFsyDMIsEBBIhhTP1GHUYtkRjh6A0EYRGtYs=w768-h944-no?authuser=4",
-            thumbImage:"https://lh3.googleusercontent.com/pw/ACtC-3dflu75Lpqwlp1aj8VoiAsGjmwn2l0exmAcgUskYhyFclAHGW0C6bELi3lGucuYo0QA-aJvx0yzJ2gZ2YXeXfoCSmCl-Qk67WL-LVd42CEtUlFnnxg_mVnLfBuct2pO0mBuILWiReqj-TgbdpNh_Eo=w768-h620-no?authuser=4"
+            mainImage:"https://images.ktestone.com/introImages/whosFault-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/whosFault-thumb.png"
         },
         questions:[
             {
@@ -3133,7 +3133,7 @@ var TESTS = [
                     {
                         type: "whosFault-0",
                         score: 0,
-                        content: 'https://lh3.googleusercontent.com/pw/ACtC-3dD5369syTGV7Ucqi7CnOFlTMCtPqEZ1w7m8mm6wydAVW5fa7Wj_w3SM6dRPiHEcCXo5NN_WvEpkdfu4f3zZ98gR3q3l002s-GOthmAUXaWtDsARjaHbteU3mlfhiHNNVnI2zOm1DIAFAA0goJn-AI=w1188-h1000-no?authuser=4'
+                        content: 'https://images.ktestone.com/storyImages/whosFault/whosFault-0.png'
                     }
                 ]
             },
@@ -3143,7 +3143,7 @@ var TESTS = [
                     {
                         type: "whosFault-1",
                         score: 0,
-                        content: "https://lh3.googleusercontent.com/pw/ACtC-3cO6pqL8zis7usb-PSe70rKcfGb1-YjWR-iLCuGo-UigfYCcn411xbkQttqz8_RYUnM3pn8wWqKx4KQAYx-J1JsjRERVwXcmmkG6PA2ikkISnk1I_32WPosLBULTV56hRYVKlr4Z1m5Aw4s1GGDgtE=w1188-h1000-no?authuser=4"
+                        content: "https://images.ktestone.com/storyImages/whosFault/whosFault-1.png"
                     }
                 ]
             },
@@ -3153,7 +3153,7 @@ var TESTS = [
                     {
                         type: "whosFault-2",
                         score: 0,
-                        content: "https://lh3.googleusercontent.com/pw/ACtC-3eRkfPt8xGwKpqFzb5dqdv08mOSg9nZOoxRRAov3pVFgad5I7RIXlfuB9tK9wWpv1x8lw6uAY1tNqdhEkHC6MjlR4Est1a3BR7xB5m72rtIPr_brQB0osTZjJPleFt8WLrffSetuUCtkN21iaboUZw=w1188-h1000-no?authuser=4"
+                        content: "https://images.ktestone.com/storyImages/whosFault/whosFault-2.png"
                     }
                 ]
             },
@@ -3163,7 +3163,7 @@ var TESTS = [
                     {
                         type: "whosFault-3",
                         score: 0,
-                        content: "https://lh3.googleusercontent.com/pw/ACtC-3foK9ciPjLGVO8W-HfIlGHCX4Kh6xYxmx6MhO2oPDGDlpPzJ-QjbJl-nKskrKHdTXhu58ItVjGbzmQJNnO4Gbhxi5gEdbdwfxRX5Mf2nr1Uq2k8fhngyhbZ2p031AXN7a3Ga87jbW8zu8TNNefEl50=w1188-h1000-no?authuser=4"
+                        content: "https://images.ktestone.com/storyImages/whosFault/whosFault-3.png"
                     }
                 ]
             },
@@ -3173,7 +3173,7 @@ var TESTS = [
                     {
                         type: "whosFault-4",
                         score: 0,
-                        content: 'https://lh3.googleusercontent.com/pw/ACtC-3ccZp72kVx0AJacH64FUY9cOjPyYqlhT2wJ26z-nlMuMwaunRuO7-8RW90OCdSFXYN1hv9hJBaMqdGCVWN5gMSnps7j719zeqtugWX1OSeKs2xtwdM-MupVE6Upr_q-NBVDNjnPEesb3JNLDZbVwLg=w1188-h1000-no?authuser=4'
+                        content: 'https://images.ktestone.com/storyImages/whosFault/whosFault-4.png'
                     }
                 ]
             },
@@ -3183,7 +3183,7 @@ var TESTS = [
                     {
                         type: "whosFault-5",
                         score: 0,
-                        content: "https://lh3.googleusercontent.com/pw/ACtC-3dGWjWTfR7kSMHN3tJNIVMG-oA3mPKob103FBGg8G_5POY46TVzofUjcpVNMpGu5AFCW4sStguSWT-DSpI1Bv9162R6r4BK7ovRF0cwX8L0bwmlblhcP4YNJYgXYQgbwRKyZpcKx_UYkwd3eSCp6ts=w1188-h1000-no?authuser=4"
+                        content: "https://images.ktestone.com/storyImages/whosFault/whosFault-5.png"
                     }
                 ]
             },
@@ -3193,7 +3193,7 @@ var TESTS = [
                     {
                         type: "whosFault-6",
                         score: 0,
-                        content: "https://lh3.googleusercontent.com/pw/ACtC-3dLFovTEtYG_PQiKjYAy2BXK6Fuqbw0oQIz1e9ehtWrvQhV6idXHcNqhLvBxHNMURUjpE8W4AqBaq-NihOhsUvJT5jD18aR7yA4VKwiWPD6gefGL8nwh342REEa7n_W35tRrW7UEbwsXjD9Y6bjVDo=w1188-h1000-no?authuser=4"
+                        content: "https://images.ktestone.com/storyImages/whosFault/whosFault-6.png"
                     }
                 ]
             },
@@ -3203,7 +3203,7 @@ var TESTS = [
                     {
                         type: "whosFault-7",
                         score: 0,
-                        content: "https://lh3.googleusercontent.com/pw/ACtC-3f2CeKMg3EJrGvlfJ27dol0czOt7O86xOP29BFdXO5Q0NZKDZboNpnhWueaKfUhT6jNTeOKYQaZczwoNz-A09xF2Q-4Cyz_UI1OeXux6poJOdFgqWyHwaYsOpjNIZZ2XalvXLxxAsa8ShsbukYbpg0=w1188-h1000-no?authuser=4"
+                        content: "https://images.ktestone.com/storyImages/whosFault/whosFault-7.png"
                     }
                 ]
             },
@@ -3214,7 +3214,7 @@ var TESTS = [
                 desc: `whosFault-result`,
                 query: "snrndmlwkfaht",
                 score_range:range(2),
-                img_src:'https://lh3.googleusercontent.com/FXHZ8XRaWCySIgkgQu7ncxDfjUQti_3YkckBObuyRd2DbqfYJCRQOvtjx8vl29MNHWJc5ZgbONmqnqXvqEdyDdgXH-7ewY41qfGE3VAAq7RKymValm_vj7vcDAG1lkvKdHv3nwnmWuprMyw-uDkIYxxINccu6ELVEpv_sMPUkgYFZ7tojtwm9WmwRHZUyqGqlrY5WEbEwmtZ9ZF7iBpUdb24AkG_JaKuuUDmCHdHzP_o4rqyG8i-TbcyN0UUt6l_D3MD3mFXpjzA-oVmHk9luFbrMPKa_L0HI8peYLn7q5SG0_iJ-qLBpO3hb7kfGHoGVNWmODZI8Ep-zsss44A9hgUOxYsHa6emCGWJJluBP8rT_p-JHZJFU_4xvPzDZEajwxXK89BJZ-TrNsSN1fkapSLvn6-HZCYQ7zMEulUqttRZLxiL6j7hDiywmLtal-0pGJWwemnoxKf9hB8zBBDXUFuuWLAA_CfhBkyizb2lpm_h71F3frKVdKlYOrK05hHo7qoFRS4tiTYhy3FvRj_13puPsCFyMQ7SeT64pYYFRtWqE4JlNhOab1Fi1f3SZJVVO58v609TWuHhOBW95Ic8lqh_wLF4YvxJTcGnWio5_l3yICCxl00TvKBxDsodD1dJdcO4TcWEkF1TXzfCnbrpWLjlxi0OYvxphprZXUepp9q-OQsBlZtZpA=w1188-h1000-no?authuser=4'
+                img_src:'https://images.ktestone.com/storyImages/whosFault/whosFault-8.png'
             }
         ]
     },
@@ -3225,8 +3225,8 @@ var TESTS = [
             subTitle:"탄생숫자로 알아보는 숨겨진 나의 성격",
             mainUrl:"birthNum",
             scoreType:"birthdayCalc",
-            mainImage:"https://lh3.googleusercontent.com/pw/ACtC-3eXMfdKH2Pe-J6oQH0mF77fRnkzl4oKmBWAp-OmKUSBDsi8CYbg64rQcJ4-znLh8y17rSwiFiKCXLL8xcqlgggLGZZcSMa8gan0t4_qc8eHYqMHLckKcHGn6K3tncPLHtlgDJFtvRSrSXuApywDHCw=w768-h944-no?authuser=4",
-            thumbImage:"https://lh3.googleusercontent.com/pw/ACtC-3coCY2HGiTskA1ECcJ-EV7tfn1ZTPXwKiHrXB7omv5pDeWq4qDTtJ7ZLjoTTOf1sEtUX0seAL0xSoeSe4x591mspXYiJ-eGghtd2vGP5YseLmIKUGf_V9RaogBRswApUchi3QKk9NLdMnYO_DDR5TI=w768-h620-no?authuser=4"
+            mainImage:"https://images.ktestone.com/introImages/birthNum-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/birthNum-thumb.png"
         },
         questions:[
             {
@@ -3433,7 +3433,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn1",
                 score_range:range(2),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3fcAfOEGkhfN3xMI0fM-rUbyIbfGHnslNCGqWnJA7oPx1tNdo1DY0ltw1Pvmetgm7-b-aJAr60SY7UzDRjwCm-wCPPjAVhwOEJ6uykv55Cz4w7lqqoBo_PLwB05FB-E714Io9dxoVe_lwfdQA8zmdI=w1000-h397-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/birthNum/birthNum_1.png'
             },
             {
                 type: "탄생수 2",
@@ -3447,7 +3447,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn2",
                 score_range:range(2, 3),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3eodJXVo9M365VYQ-nrK696uZTuoOAsjdg3RSQHpfWOdPh-TiTPujNRH-UVT4cVaqTW-Wi34WejX_DLUTo0m1fCuwe5uvUgPltr4k4qSf3Mjqa-0fwEaiHG5TwJZGQ7jClwntbLC0OLffq0L8seeHA=w1000-h397-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/birthNum/birthNum_2.png'
             },
             {
                 type: "탄생수 3",
@@ -3461,7 +3461,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn3",
                 score_range:range(3, 4),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3ctHYO9a-DMCAPAUh2-hsVgU0eqJmsjDNEiCCoCf5Vs9828pCmXkGvlVY-Fyi4cO7aOzYx1SgqYAzA5hUxTiUciej7A72mGNSfRCX4aG2XYrNIXyqwtNs7rgXCGE5v7uL5uNXSHJNnnb1lVgjqf8ak=w1000-h397-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/birthNum/birthNum_3.png'
             },
             {
                 type: "탄생수 4",
@@ -3476,7 +3476,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn4",
                 score_range:range(4, 5),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3fPlR3p6vpIr_sCnh5K8cNbfG5MWLDPsffQJWkkqQcwtulETqt41hgtt-yzzuZUsg2-1HmkqNS6-dvyc-ENjeMGyo1xktoEfeGW5zvMvR-hSTw7EWGuZ5rzs95fzSqlWDBfBRakH2Uy9SpxAx3AgZM=w1000-h397-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/birthNum/birthNum_4.png'
             },
             {
                 type: "탄생수 5",
@@ -3492,7 +3492,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn5",
                 score_range:range(5, 6),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3cFd1mycvhFH0gDs41-Zxu18Je4Mv1XOZs2KHops9nWuuG_88R0kGvgMKY8r1_OiB7FlUUWOv1w6uFZQjamvX50rRMsad7g0su2vJ1oHH_QDUwM-mhKCX1ut5WQHPo4k0xC0uAK6EKPRy00xUHxMWg=w1000-h397-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/birthNum/birthNum_5.png'
             },
             {
                 type: "탄생수 6",
@@ -3509,7 +3509,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn6",
                 score_range:range(6, 7),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3cUxhR9IWk55uD6pZW_SpKjaB1_aiDtWJtBmLcLRu5XVlAc_mxuUkUKbTg7FPEgiNowB8GvI9csWS1QwLYvy1inhZ6mZOaoA29T-4RTAXfgdjR2NE4BZ9Y4vX53eY5Sb2IfMCYzotiNduoNSxTB9Xc=w1000-h397-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/birthNum/birthNum_6.png'
             },
             {
                 type: "탄생수 7",
@@ -3526,7 +3526,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn7",
                 score_range:range(7, 8),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3ffS0YOOYd8cHQE5nYjMhj5II6cab_QTdH7ewiY71Fue3qNVscUPHTmCQQiLtmH8Wash0MRZaZuaCBsXZF7W5MqQjt4U1tozWQ9riSK0umSbDRZgOeS-qza5Zq1a96eiNsZE_PKpKEEiogcMp-3L4k=w1000-h397-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/birthNum/birthNum_7.png'
             },
             {
                 type: "탄생수 8",
@@ -3541,7 +3541,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn8",
                 score_range:range(8, 9),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3eYtbHNREWZQik9GYLHfKRaOt9yqOLD5ijHcbymmZQ-QRpi8Fs29dKPgXbueiLMlk4Ek_a5E5wp1PFdK1M9Ov4hZtK4g_bC2Rv1q6jST0uWKj5oJVb50AQEuQkZ1WSHjrAhgrbpgTkelgCgVdRJVSI=w1000-h397-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/birthNum/birthNum_8.png'
             },
             {
                 type: "탄생수 9",
@@ -3556,7 +3556,7 @@ var TESTS = [
                 `,
                 query: "xkstodtn9",
                 score_range:range(9, 10),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3cl63wSK0O8HPvh5OZG4urFgK2w2MqOCJ6A7gIzH9fcMSxXj5nS--3gzEUBgWGOjCQPkQTCEhCzyLlEKgz4J30HY0TtCmMhxYkXgCaN76spP8z36lBkHmDB0xlMfvcqSdj9VgU9qmcxiiI2W6rO3r4=w1000-h397-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/birthNum/birthNum_9.png'
             },
         ]
     },
@@ -3567,8 +3567,8 @@ var TESTS = [
             subTitle:"나의 연애 점수는?",
             mainUrl:"lovelevel",
             scoreType:"numberScoring",
-            mainImage:"https://lh3.googleusercontent.com/pw/ACtC-3fciur24kn_7wsh1g1xG-zKlOe8Wbvu0YSYIeyVb_cYKEaOPMTo0OehMoqzWtv0lqW3rvmXX4qjpBC7nZ0UoaeSD1wFcufd5oOijlTFwcMhlgmg5VNUkxfrT7BLPpxPyPSMuatyouyOVCjs57e7U-o=w768-h944-no?authuser=4",
-            thumbImage:"https://lh3.googleusercontent.com/pw/ACtC-3fKqDiZ56Mj_V78qpiR9dK1vORJU6NNYLABBdEoDGPZRYOe7Erv4b4-I8jxryjszI0ixOTbSrWIuINb85tZNE-puPrw-jP1aCu3lz8mh2NJP-g7ctoueQgG--U8JeVaTdOjl1jRCqpvLp-Q7Tbuz9g=w768-h620-no?authuser=4"
+            mainImage:"https://images.ktestone.com/introImages/lovelevel-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/lovelevel-thumb.png"
         },
         questions:[
             {
@@ -3779,7 +3779,7 @@ var TESTS = [
                 `,
                 query: "vmfhakdtkdfj",
                 score_range:range(31),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3ecoYjNt5TQw1QWVusJgHv1jnEf4Mq1dGwgvhj28BbuGRCnrikszoYqlrl4aURySfije0AE-zlqUn_mnwqLfTjAVSpFpiKwCblO_2Lf5kr3snT_wIEzcWytGXSCv7xSbi5U2scFhHiS2EsBC2wnYFE=w690-h603-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/lovelevel/lovelevel_1.png'
             },
             {
                 type: "연애꾸러기",
@@ -3796,7 +3796,7 @@ var TESTS = [
                 `,
                 query: "dusdoRNfjrl",
                 score_range:range(31, 66),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3eA0Pp5gwAw2fcr-WdsnzX6l5lJPv2R8mcUIi7UBy3DW9DfPOvK-wY3ttO_apuI0-ess0rkgtmtYGEGxsZKejuD6YkQceDZRRW3TGiGK3ma1Lo_1Tq_QF0Vg1jwXDe36o387ythYMgv8BelneQl0Xc=w690-h603-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/lovelevel/lovelevel_2.png'
             },
             {
                 type: "아수라백작",
@@ -3814,7 +3814,7 @@ var TESTS = [
                 `,
                 query: "dusdoRnfjrl",
                 score_range:range(66, 86),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3c6sl6J6d5uXgd4LHemWRTCj-O1INnuu6QV7pARr9E-up8bJXOm8TXoiRmqtNjf0V9W7-LQsTq6IAhC5ULaZUrD6yulK5f8S2_Ce_fTjg_YfqRTJSkBCjHPMTprT7Qzdnd5ScZrJvo0iXI1GZyVH1M=w690-h603-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/lovelevel/lovelevel_3.png'
             },
             {
                 type: "프로직진러",
@@ -3831,7 +3831,7 @@ var TESTS = [
                 `,
                 query: "vmfhwlrwlsfj",
                 score_range:range(86, 101),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3ftTEL3xZmElQbQNNtVm472Pv1rzgaHmESKG2ydvdBq9Zox_Uaj5U4od21bb--lZiGYocUL-8PKV4_efyyRM_oDmEDRdreO1Dhk8NjXY-p7fv0aDpszVXLf96Etuph7m3dXyIDhopZKzCOKEwi8pD4=w690-h603-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/lovelevel/lovelevel_4.png'
             },
         ]
     },
@@ -3842,8 +3842,8 @@ var TESTS = [
             subTitle:"이성이 다가올 때 나의 반응은?",
             mainUrl:"humanwall",
             scoreType:"typeCounting",
-            mainImage:"https://lh3.googleusercontent.com/pw/ACtC-3eqfRZZkCZcNK55XU4dt2xjLsJWPKXWK2pf3czkAXPej6nTjWcsGZBPheKcF0jsY0oAY14AT7nJKfrIaCNTo6T1dBK3e_C7n8yv6WSak5nLgnDVD5chMVYZgeVAWpjjN0uGQh6AWSHs7M5mdgzLkgI=w768-h944-no?authuser=4",
-            thumbImage:"https://lh3.googleusercontent.com/pw/ACtC-3fTuFma9GF62NTMSP2of81uUR5IcrSfrlHFmrL3fxEM-4SJvyk3hI7GLQ8xxalpXYjF9uWqLExivzb81OF72awW8rHQNYOnz-c1H8gN9TfMsOnniTjvs3dOC-C9Sl0V_BjVoRAw8mFdX_gnwe1Ksv4=w768-h620-no?authuser=4"
+            mainImage:"https://images.ktestone.com/introImages/humanwall-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/humanwall-thumb.png"
         },
         questions:[
             {
@@ -4013,7 +4013,7 @@ var TESTS = [
                 `,
                 query: "cjfqurdls",
                 score_range:range(31),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3d_oRRgK93tTZhp2bgWWWYxZm1VI4cBvGW7b8CCVOOSBddH55E7R4GV6nbtkNkgcfgWAFyjdLcu_Z473mZz0GJM0r1p8QdZ-zl92nbAUYaKYGxKjcxy9mdmRn7gBk7v2IIfLNNc5oTWNti8EvfZdeI=w1000-h547-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/humanwall/humanwall-1.png'
             },
             {
                 type: "자동문",
@@ -4032,7 +4032,7 @@ var TESTS = [
                 `,
                 query: "wkehdans",
                 score_range:range(31, 66),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3d5Un_MgrokzGWWjUcuIy6q-V8YWxUqKcIiOj3RmRtzZkBsx-6pkVnhCS6dQWBrroc8kI2-eE70sZciQ0AYvdJNTwKOqw2_6vO9RqADH18_WrzNzq30SgGf3ChiyZx-y3a__wKuA9BO8BPS1DKICFw=w1000-h547-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/humanwall/humanwall-2.png'
             },
         ]
     },
@@ -4043,8 +4043,8 @@ var TESTS = [
             subTitle:"내 애인의 바람끼는 어느 정도일까.?",
             mainUrl:"wind",
             scoreType:"numberScoring",
-            mainImage:"https://lh3.googleusercontent.com/pw/ACtC-3fXTH_qo-BZi0zWdugyTGl_fjBLcQ4e4uthJj6DFmAgHj6jfVShKmHQQ_tcqtAiyOu8hhvn_ECMi63vGDfqBMGlWYCWwuxP_EEVwsdTu6LDAEoPq5CpaUJ6pVCjfeckH0GnWVXRJE4EDxZImhYkgFI=w768-h944-no?authuser=4",
-            thumbImage:"https://lh3.googleusercontent.com/pw/ACtC-3cmld-Ja2We4zNt5mCd-Z_0P5depSOYtCMUaf0z4KRImoz82pwrhyTbTWqPk_5kRFXfGp_taQuYgpdlUzRK8JD8c7DeUV2QMnypsstgJHqaYPpzBJDf2ekDn7Vg2HjhuDmsagvpYomvZv9Q-oyhD7o=w768-h620-no?authuser=4"
+            mainImage:"https://images.ktestone.com/introImages/wind-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/wind-thumb.png"
         },
         questions:[
             {
@@ -4266,7 +4266,7 @@ var TESTS = [
                 `,
                 query: "goqkfkrl",
                 score_range:range(51),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3e4Dt1pXDrsWNPjdmIgSqnKtUfm595y5JEdZI1WHy_sXq-SqFpKp0hXsHUeV36mI8h3qkOj9gJKLRRKDAZKDpUu0viUlUhr4pYwtzo1DHQkz-6m4rlO4e3mRc0VNMFZh7X0h61_GspnCft-UM1WNZ8=w1000-h340-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/wind/wind_goqofkrl.png'
             },
             {
                 type: "관심러",
@@ -4282,7 +4282,7 @@ var TESTS = [
                 `,
                 query: "rhkstlafj",
                 score_range:range(51, 81),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3dy9YA-GC8jEcT9lKNuI3D7h9j9NFnRfAuokUhwDfTB7jaCpYy4d5l6f_VPF4S24kn6HPqkeQMSOb4ten-ai6SQz2XwVvquguHGxIrcUyNjz5v9PLoSeMm7ZEMCNNjJ2HA8WpM97UMhujeXH8SLxlk=w1000-h319-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/wind/wind_rhkstlafj.png'
             },
             {
                 type: "매력쟁이",
@@ -4299,7 +4299,7 @@ var TESTS = [
                 `,
                 query: "aofurwoddl",
                 score_range:range(81, 101),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3cNCBz15XLINH-OC461mt_CxPYmDQ10IZh1HBGv0jGPBxz68TtekjkZReTYWBRnIk_BM8BjeijgGYkOzNzX5kg6XrKJW-AA4JTlYWiwofYW_xQyYlu9xUEZoaOcd_YzAZq34sHvOUBx15xa-wOO4Cc=w1000-h330-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/wind/wind_aofurwoddl.png'
             },
         ]
     },
@@ -4310,8 +4310,8 @@ var TESTS = [
             subTitle:"내가 강아지 라면?",
             mainUrl:"daengdaeng",
             scoreType:"typeCounting",
-            mainImage:"https://lh3.googleusercontent.com/pw/ACtC-3dpglKNqd2Bd5h0rkvjTLHvlJ5a_y99igdxbX0epCbI1tidE4GBIWXxzCCSi-EjcfoqOW9XEVhC951B5E9Z3UNiDN3wi5lkNO9YUdplDRb9Gf4VT3Jlr-HO4w7IHTkmNqYUHbfkugpsPXTLdb3YQxI=w768-h944-no?authuser=4",
-            thumbImage:"https://lh3.googleusercontent.com/pw/ACtC-3dWL-fn_ujYXKqvGQgqz7HIf0mTawoCp5syAwqXZz8bYsSee3WANs99pvfvmllMJV3mLiSpyZs0svc51POKVCWzugv9_1OrSuIIBsEVEeJI4uOTPyA7ErODSK9IJFrFA8RG6T8lc19MjVq8H85YkLU=w768-h620-no?authuser=4"
+            mainImage:"https://images.ktestone.com/introImages/daengdaeng-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/daengdaeng-thumb.png"
         },
         questions:[
             {
@@ -4581,7 +4581,7 @@ var TESTS = [
                 `,
                 query: "1chqhwlqzhrfj",
                 score_range:range(26),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3fNUTFSt0j5q3NQ_Pi0sgZmIYl4uB239fQxVZaTVTgv9aiFOWOPTF-UAm9QltahuflPPpSrrhEvwwIOX1C7_FgAwin-vbgtjcrzITiK_87gEAhWMxYM-glVxquhhH8b2xeeBL6PpIgTjxA2C0HItL8=w860-h745-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/daengdaeng/daengdaeng_pome.png'
             },
             {
                 type: "치와와",
@@ -4598,7 +4598,7 @@ var TESTS = [
                 ✓   참는 걸 극도로 싫어해요.`,
                 query: "2tjsxorgudwlqzhrfj",
                 score_range:range(26, 51),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3dPuDlSq8zF2lTz2r5FK8To0WsvrBzOhXKaKqtEnSlGKc5L4fJCmxgHAzT1usZbaBZYNdQFnKUMD7xwTcYLgx71qViTrShZp3C9Xr4SUX-HbgyNV9K7lZYAatdmRZi8G7nj84_g43E3iintsaP3UEQ=w860-h745-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/daengdaeng/daengdaeng_chiwawa.png'
             },
             {
                 type: "웰시코기",
@@ -4613,7 +4613,7 @@ var TESTS = [
                 ✓   이성에게 인기가 많은 타입이에요. 난 그냥 이 사람을 도와준 것 뿐인데 보면 저를 좋아하고 있더라구요. 왤까요? 하면서 다른 사람이 가지지 못한 마성의 매력`,
                 query: "3ehfdusqusdlwlqzhrfj",
                 score_range:range(51, 75),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3edSQ14M8nH5DX-dcXXQ-i_boiT-bsv04XGyNXNNhMlbeSCIUI7Br0A7eYrTlbVJ6WM9YBr6A1q9_RPYmjc5VKVkKD5_13jnbTP3etnB8If2fa0UAMGPJFjIjnZF6KwipxiEmZqiXRI3XquJ-orfUQ=w860-h745-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/daengdaeng/daengdaeng_wealthy.png'
             },
             {
                 type: "리트리버",
@@ -4628,7 +4628,7 @@ var TESTS = [
                 ✓   인내심 최강자이면서 예의도 바르지만 또 장난꾸러기 하지만 머리도 좋아 뭐야 못하는게 뭐야~~완전 워너비 애인상이로구나!`,
                 query: "4vmfhwlqzhrfj",
                 score_range:range(76, 101),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3floNszlNws41szcvGGNTZOFZEt4SKrqVud7kgxNr77lT10GyGl3Nt3PSY9qauFqQ_w023icDuhrOOjISvwT6ax1ySsVIrMG4Bw0999q7r39SHIVhEz8vlFvQ_FpvX1mdmvsqhiyFy_M5Slgi42D90=w860-h745-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/daengdaeng/daengdaeng_retriever.png'
             },
             {
                 type: "비글",
@@ -4642,7 +4642,7 @@ var TESTS = [
                 ✓   될 대로 돼라~~~라는 마인드 늘 긍정적이고 낙천적인 마인드의 소유자`,
                 query: "4vmfhwlqzhrfj",
                 score_range:range(76, 101),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3e_jgtExDj9E-XRKofxwpsVkdGgiPxfxt4Uvy8UZBmG8WuvifmA4rj4NBwa12lg-x7U2Ywj0to3QSXZ_nUs9Vwiwp6vAiBOIh6sv2fXa6hPuB_Flrdm7IQqaorsW-mylFSInuTXAE8ltT9rdqwnRX8=w860-h745-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/daengdaeng/daengdaeng_beagle.png'
             },
         ]
     },
@@ -4653,8 +4653,8 @@ var TESTS = [
             subTitle:"이시국엔 집에 붙어 있자 꼭!",
             mainUrl:"zipkok",
             scoreType:"numberScoring",
-            mainImage:"https://lh3.googleusercontent.com/pw/ACtC-3e0_-_LohCouLQAxHlu5w0l8dMCLSslLwCB0Or13Fxk5tSeX1B9HPyJhldbJ11t3SrblJaUEQHJbWfD4wvMtD2tYnpXyklXyXySpmM2T9dt56TRpsq5VZPEl8a61lBsSEvIGVBQs2Of6IwqTPbQ9tc=w768-h944-no?authuser=4",
-            thumbImage:"https://lh3.googleusercontent.com/pw/ACtC-3ekSQC8znAZUOfscu3ZjUWKmMb57pq273mhfBp1FLWXs-aWcWi7jwnRPGeUVB3EIBcF4SYFGZZJy-CRU_kRteMj4L9CfYQWlmx0avaCNG5LHYJNUclCB4oMqAV2wsilH0We0JevyRFk0sKCq3IQyAs=w768-h620-no?authuser=4"
+            mainImage:"https://images.ktestone.com/introImages/zipkok-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/zipkok-thumb.png"
         },
         questions:[
             {
@@ -4864,28 +4864,28 @@ var TESTS = [
                 desc: "집에 있으면 있지만 심심하면 집 밖을 나가고 싶어하는 \n 초보집콕러~ \n 아직은 집이랑 서먹서먹한 42~ \n 이틀이상 집에 있으면 나가고 싶어서 안달난 마치 라푼젤같은 그대! \n 집에 있다가도 나오라면 바로 나오는 오케이맨~!",
                 query: "chqhwlqzhrfj",
                 score_range:range(26),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3dHgTB0XMIH4psSe03EW7skti62E9P0Dp3KEnM0XLrvs2vUyZl_o7TMlqxSdLNSo2FTBkx6GUrsIsnFWQrGZZaefaKftPBk5RweUkaH2rlzUFU0cEfH0G0921yjJb8CRfUM8lxHM3sIIczITJDIQbw=w458-h163-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/zipkok/zipkok_chqhwlqzhrfj.png'
             },
             {
                 type: "Level 2. 선택형 집콕러",
                 desc: "주말엔 집에서 쉬는게 최고지만~~ \n 날 만나고 싶다면 ~ 나가줘야지~~~~ 뭐할건데? \n 꼭 재밌는 일이 있으면 무조건 튀어나가는 그대는 바로 \n 선택형 집콕러! \n 당신은 집에 있는 걸 좋아하지만 선택장애의 면모가 리를 빗 \n 있기때문에 친구들의 설득과 흥미 딘딘한 일이 있으면 \n 바로 집에서 튀어나가버리곤 하지~~",
                 query: "tjsxorgudwlqzhrfj",
                 score_range:range(26, 51),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3eui5IWAXyDzWDltHzuqEMzf7H9VvCa9uNlhUMctC55BYXKjs8bgGTNog15XjIqJ-HgGxyJ3WUDblWxz2IEj10_4FaCgaHV3ZvFwexOJWJ5iffmcb3-zPvX7UsIACpEnJC6RUKSWi7CfQhgfRR1ZzA=w458-h163-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/zipkok/zipkok_tjsxorgudwlqzhrfj.png'
             },
             {
                 type: "Level 3. 돌연변이 집콕러",
                 desc: "극과극인 정말 집콕하고 싶을때 집에서 절대 나오지 않z...! \n 하지만 어느순간 또 약속 줄줄 잡아 버리는 그대! \n 성수기와 비성수기가 확실한 당신은 바로 \n 돌연변이 집콕러! \n 집에서도 밖에서도 최선을 다해 노는 당신! \n 한번 놀고 나면 꼭 충분한 휴식이 필요하지~",
                 query: "ehfdusqusdlwlqzhrfj",
                 score_range:range(51, 75),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3d5zlPKVz0kiKelpsI_cUqHR5OnKl2yoymQ8F9EZIKDLtP_ZXdZ9C8SOVINx5UPwyXDjd6AEoCf6Ug_ow-0ILkMIWO5Hlt0UQGgcjcV_jIeDW9ygKysaQpCIHTgg068SiJZJOqGtqR2-dpoX-hoJO4=w458-h163-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/zipkok/zipkok_ehfdusqusdlwlqzhrfj.png'
             },
             {
                 type: "Level 4. 프로 집콕러",
                 desc: "집이 곧 나의 삶의 전부일세, 당신은 바로 \n 프로 집콕러~ \n 집을 왜 나가~~ 집밖은 위험해~ \n 주변에 아무리 불러도 순순히 나가지 않지!! 마치 나는 신비주의~!! \n 하지만 그냥 나가기 귀찮은 사람 ^^ \n 개인적인 시간은 필수! 집에서 나가는 것 조차 큰 결심이 필요해요~ \n 집에 놀거리 가득하면 집 밖에 더더욱 안나갈 자신이 있어~~~~~",
                 query: "vmfhwlqzhrfj",
                 score_range:range(76, 101),
-                img_src:'https://lh3.googleusercontent.com/pw/ACtC-3fwZMtlQqNMTAjS8arBXtLVHaE0jmpiPTcB7WSlaNyst6-f82db4GqZP1hxi4qYCg2oTnF6JgWHPsUQgpqYY-Kup0RVJUX98SCyitn-2GWMk1GsAvJcZONxhmr7ZtWDhCcYxoV5ncPSbyprkcOkL54=w458-h163-no?authuser=4'
+                img_src:'https://images.ktestone.com/resultImages/zipkok/zipkok_vmfhwlqzhrfj.png'
             },
         ]
     },
