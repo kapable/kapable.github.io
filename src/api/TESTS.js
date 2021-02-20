@@ -4311,7 +4311,7 @@ var TESTS = [
             mainUrl:"daengdaeng",
             scoreType:"typeCounting",
             mainImage:"https://images.ktestone.com/introImages/daengdaeng-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/daengdaeng-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/daenngdaeng-thumb.png"
         },
         questions:[
             {
