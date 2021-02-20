@@ -2967,7 +2967,7 @@ var TESTS = [
             subTitle:"과연 나는 라떼일까?",
             mainUrl:"latte",
             scoreType:"numberScoring",
-            mainImage:"https://images.ktestone.com/introImages/latte-intro.png",
+            mainImage:"https://images.ktestone.com/introImages/latte-main.png",
             thumbImage:"https://images.ktestone.com/main-thumbnail/latte-thumb.png"
         },
         questions:[
@@ -3842,8 +3842,8 @@ var TESTS = [
             subTitle:"이성이 다가올 때 나의 반응은?",
             mainUrl:"humanwall",
             scoreType:"typeCounting",
-            mainImage:"https://images.ktestone.com/introImages/humanwall-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/humanwall-thumb.png"
+            mainImage:"https://images.ktestone.com/introImages/humanWall-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/humanWall-thumb.png"
         },
         questions:[
             {
