@@ -204,7 +204,6 @@ class Result extends Component {
             <div className="result">
                 <div className="result-header">
                     <h5 className="result-title">결과는...</h5>
-                    <p>*현재 접속자가 많아 결과 이미지가 늦게 뜰 수 있습니다.<br></br>~ 조금만 기다려주세요. ~</p>
                     <div className="result-value">
                         {this.resultRender()}
                     </div>

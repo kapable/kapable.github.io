@@ -183,7 +183,7 @@ class App extends Component {
       {/* footer */}
       <div className="intro-footer">
           {/* <p>MAKER - 케이테스트</p> */}
-          <h5>광고 및 후원 문의</h5>
+          <h5>광고 및 후원 문의<br></br>Advertising and Sponsorship Contact</h5>
           <p>soumy21@naver.com</p>
           <p>Disclaimer:<br></br>All content is provided for fun and entertainment purposes only</p>
           <p>©주식회사 위드썸컴퍼니 All Rights Reserved. 2021.</p>
