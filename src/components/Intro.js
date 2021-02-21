@@ -122,7 +122,7 @@ class Intro extends Component {
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to English ver. ]</a>
+                    >[ Go to English ver.]</a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -145,7 +145,7 @@ class Intro extends Component {
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to English ver. ]</a>
+                    >[ Go to English ver.]</a>
                 </Fragment>
             )
         } else if(this.state.current_test.info.mainUrl === "personalColorEng") {
