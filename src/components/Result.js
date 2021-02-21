@@ -9,6 +9,7 @@ import COPYBTN from '../api/DefaultImg/result-copy-link-btn.png';
 import AGAINBTN from '../api/DefaultImg/result-to-again-btn.png';
 import TOHOMEBTN from '../api/DefaultImg/result-to-home-btn.png';
 import ReactGA from 'react-ga';
+import ScriptTag from 'react-script-tag'
 
 class Result extends Component {
     constructor(props){
@@ -50,11 +51,29 @@ class Result extends Component {
         this._eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
         alert("링크가 복사됐어요!");
     }
-
-    // if personalColor test's Result page for Link Banner
-    peopleColorTestRedirector(){
-        window.open('https://kapable.github.io/kapable.github.io/peopleColor/')
-    }
+    kakaoResultFooterScriptor(){
+        if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) {
+          return(
+            <Fragment>
+              <ins class="kakao_ad_area" style={{display:"none"}} 
+                data-ad-unit    = "DAN-9iBiNdMXgMni4I3u" 
+                data-ad-width   = "320" 
+                data-ad-height  = "100"></ins> 
+              <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+            </Fragment>
+          )
+        } else if(this.state.sharable_url.includes("https://kapable.github.io/")) {
+          return(
+            <Fragment>
+              <ins class="kakao_ad_area" style={{display:"none"}}
+                data-ad-unit    = "DAN-oXGz3zjd52vzl7Qh" 
+                data-ad-width   = "320" 
+                data-ad-height  = "100"></ins> 
+              <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+            </Fragment>
+          )
+        }
+      }
     personalColorLinkRenderer(){
         if(this.state.current_test === "personalColor") {
             return(
@@ -210,6 +229,10 @@ class Result extends Component {
                 </div>
                 {/* if personalColor test's Result page for Link Banner */}
                 {this.personalColorLinkRenderer()}
+
+                {/* Kakao Adfit Result footer */}
+                {this.kakaoResultFooterScriptor()}
+
                 <div className="share">
                     <h5 className="share-title">친구에게 공유하기</h5>
                     <div className="share">
