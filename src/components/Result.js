@@ -227,11 +227,12 @@ class Result extends Component {
                         {this.resultRender()}
                     </div>
                 </div>
-                {/* if personalColor test's Result page for Link Banner */}
-                {this.personalColorLinkRenderer()}
 
                 {/* Kakao Adfit Result footer */}
                 {this.kakaoResultFooterScriptor()}
+
+                {/* if personalColor test's Result page for Link Banner */}
+                {this.personalColorLinkRenderer()}
 
                 <div className="share">
                     <h5 className="share-title">친구에게 공유하기</h5>
