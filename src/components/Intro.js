@@ -13,6 +13,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Helmet } from 'react-helmet';
 import COPYBTN from '../api/DefaultImg/test-intro-copy-link-btn.png';
 import BACKBTN from '../api/DefaultImg/test-intro-other-tests-btn.png';
+import ScriptTag from 'react-script-tag'
 import ReactGA from 'react-ga';
 
 class Intro extends Component {
@@ -53,7 +54,7 @@ class Intro extends Component {
             counted_score:0, // < ------------- for calculating scores
             result_url:'/result/',
             quiz_url:window.location.href,
-            participants:(Number(month+date+hour+minute)-66000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+            participants:(Number(month+date+hour+minute)*10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             num_shares_count:0,
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
@@ -89,7 +90,29 @@ class Intro extends Component {
         this._eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
         alert("링크가 복사됐어요!");
     }
-
+    kakaoIntroFooterScriptor(){
+        if(this.state.quiz_url.includes("localhost") || this.state.quiz_url.includes("ktestone.com")) {
+          return(
+            <Fragment>
+              <ins class="kakao_ad_area" style={{display:"none"}} 
+                data-ad-unit    = "DAN-zutyUS1LJQDp2SK0" 
+                data-ad-width   = "320" 
+                data-ad-height  = "100"></ins> 
+              <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+            </Fragment>
+          )
+        } else if(this.state.quiz_url.includes("https://kapable.github.io/")) {
+          return(
+            <Fragment>
+              <ins class="kakao_ad_area" style={{display:"none"}}
+                data-ad-unit    = "DAN-zIzDEpvl7LL78fMU" 
+                data-ad-width   = "320" 
+                data-ad-height  = "100"></ins> 
+              <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+            </Fragment>
+          )
+        }
+      }
     personalColorLinkRenderer(){
         if(this.state.current_test.info.mainUrl === "personalColor") {
             return(
@@ -160,9 +183,11 @@ class Intro extends Component {
                     alt={_mainTitle + '|' + _subTitle}/>
                 {this.personalColorLinkRenderer()}
                 <Typist className="start-btn-participants">
-                    {/* 현재까지 총 {this.state.participants}명이 참여했어요. */}
-                    현재까지 총 11,871,767명이 참여했어요.
+                    현재까지 총 {this.state.participants}명이 참여했어요.
                 </Typist>
+
+                {/* Kakao Adfit Intro footer */}
+                {this.kakaoIntroFooterScriptor()}
 
                 <div className="test-intro-with-friend">
                     <CopyToClipboard text={this.state.quiz_url}>
