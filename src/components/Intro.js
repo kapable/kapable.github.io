@@ -129,6 +129,12 @@ class Intro extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 日本語バージョンをやりに行く。 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 汉语版本试 ]</a>
                 </Fragment>
             )
         } else if(this.state.current_test.info.mainUrl === "personalColorJP") {
@@ -146,6 +152,12 @@ class Intro extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
                     >[ Go to English version ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 汉语版本试 ]</a>
                 </Fragment>
             )
         } else if(this.state.current_test.info.mainUrl === "personalColorEng") {
@@ -163,6 +175,35 @@ class Intro extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 日本語バージョンをやりに行く。 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 汉语版本试 ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test.info.mainUrl === "personalColorCN") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColor/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 日本語バージョンをやりに行く。 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to English version ]</a>
                 </Fragment>
             )
         }
