@@ -65,7 +65,7 @@ class App extends Component {
 
   cpcBannerUpperScriptor(){
     console.log(this.state.sharable_url);
-    if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) {
+    if( this.state.sharable_url.includes("ktestone.com")) {
       return(
         <Fragment>
           <ins className="kakao_ad_area" style={{display:"none"}}
@@ -104,7 +104,7 @@ class App extends Component {
   }
 
   cpcBannerFooterScriptor(){
-    if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) {
+    if( this.state.sharable_url.includes("ktestone.com")) {
       return(
         <Fragment>
           <ins className="kakao_ad_area" style={{display:"none"}}
