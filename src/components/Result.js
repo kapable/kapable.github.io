@@ -73,7 +73,7 @@ class Result extends Component {
             </Fragment>
           )
         }
-      }
+    }
     personalColorLinkRenderer(){
         if(this.state.current_test === "personalColor") {
             return(
@@ -126,6 +126,40 @@ class Result extends Component {
                     >[ 日本語バージョンをやりに行く。 ]</a>
                 </Fragment>
             )
+        }
+    }
+    pplBannerRenderer(){
+        if(this.state.current_test === "personalIncense"){
+            if(["BFleur","CMusk","HGreen","LBlanc","LBloom","PViolet"].includes(this.state.current_result)){
+                let banner_img_src = 'https://images.ktestone.com/resultImages/duftDoft/bodySpray.jpeg'
+                return(
+                    <Fragment>
+                        <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncense/"
+                        className="to-ppl-banner-text"
+                        >
+                            <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} />
+                        </a>
+                    </Fragment>
+                )
+            } else {
+                let banner_img_src = 'https://images.ktestone.com/resultImages/duftDoft/handCreme.jpeg'
+                return(
+                    <Fragment>
+                        <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncense/"
+                        className="to-ppl-banner-text"
+                        >
+                            <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} />
+                        </a>
+                    </Fragment>
+                )
+            }
+            
         }
     }
     introPageRender(){
@@ -226,6 +260,8 @@ class Result extends Component {
                     <div className="result-value">
                         {this.resultRender()}
                     </div>
+                    {/* PPL banner image */}
+                    {this.pplBannerRenderer()}
                 </div>
 
                 {/* Kakao Adfit Result footer */}

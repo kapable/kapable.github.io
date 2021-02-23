@@ -5304,17 +5304,17 @@ var TESTS = [
             },
             {
                 which:"SN",
-                question: "제육볶음을 만들어보자",
+                question: "여행을 간다면?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "제육이는 사뒀니?"
+                        content: "즉흥적으로 여행을 간다"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "양념은 어떻게 만드니?"
+                        content: "계획적인 세우고 여행을 간다"
                     },
                 ]
             },
