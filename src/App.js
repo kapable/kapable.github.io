@@ -87,7 +87,7 @@ class App extends Component {
     } else if(this.state.sharable_url.includes("niair.xyz")) {
       return(
         <Fragment>
-
+          
         </Fragment>
       )
     }
@@ -117,7 +117,9 @@ class App extends Component {
     } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {
       return(
         <Fragment>
-            <ScriptTag data-ad-client="ca-pub-2382342018701919" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
+          <Helmet>
+            <script data-ad-client="ca-pub-2382342018701919" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          </Helmet>
         </Fragment>
       )
     }
