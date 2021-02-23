@@ -54,6 +54,7 @@ class App extends Component {
     });
     ReactGA.set({page:window.location.pathname+window.location.search})
     ReactGA.pageview(window.location.pathname+window.location.search);
+    if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
   reloadPage() {
     var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
@@ -64,7 +65,6 @@ class App extends Component {
   }
 
   cpcBannerUpperScriptor(){
-    console.log(this.state.sharable_url);
     if( this.state.sharable_url.includes("ktestone.com")) {
       return(
         <Fragment>
@@ -84,10 +84,12 @@ class App extends Component {
           data-ad-height  = "100"></ins>
         </Fragment>
       )
-    } else if(this.state.sharable_url.includes("niair.xyz")) {
+    } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {
       return(
         <Fragment>
-          
+          <Helmet>
+            <script data-ad-client="ca-pub-2382342018701919" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          </Helmet>
         </Fragment>
       )
     }
@@ -117,9 +119,12 @@ class App extends Component {
     } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {
       return(
         <Fragment>
-          <Helmet>
-            <script data-ad-client="ca-pub-2382342018701919" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          </Helmet>
+          <ins class="adsbygoogle"
+             style={{display:"block"}}
+             data-ad-client="ca-pub-2382342018701919"
+             data-ad-slot="8429103833"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
         </Fragment>
       )
     }
@@ -132,7 +137,7 @@ class App extends Component {
 
       {this.reloadPage()}
 
-      {/* Kakao Adfit Upper */}
+      {/* CPC Banner Upper */}
       {this.cpcBannerUpperScriptor()}
 
       <Router basename='/kapable.github.io/'>
@@ -190,7 +195,7 @@ class App extends Component {
         </ScrollToTop>
       </Router>
 
-      {/* Kakao Adfit footer */}
+      {/* CPC Banner footer */}
       {this.cpcBannerFooterScriptor()}
 
       {/* footer */}
