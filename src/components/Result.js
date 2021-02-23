@@ -51,7 +51,7 @@ class Result extends Component {
         this._eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
         alert("링크가 복사됐어요!");
     }
-    kakaoResultFooterScriptor(){
+    cpcBannerResultFooterScriptor(){
         if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) {
           return(
             <Fragment>
@@ -72,7 +72,23 @@ class Result extends Component {
               <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
           )
-        }
+        } else if(this.state.sharable_url.includes("niair.xyz")) {
+            return(
+              <Fragment>
+                <ScriptTag async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
+                {/* 반응형기본 */}
+                <ins class="adsbygoogle"
+                    style={{display:"block"}}
+                    data-ad-client="ca-pub-2382342018701919"
+                    data-ad-slot="8429103833"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <ScriptTag>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </ScriptTag>
+              </Fragment>
+            )
+          }
     }
     personalColorLinkRenderer(){
         if(this.state.current_test === "personalColor") {
@@ -265,7 +281,7 @@ class Result extends Component {
                 </div>
 
                 {/* Kakao Adfit Result footer */}
-                {this.kakaoResultFooterScriptor()}
+                {this.cpcBannerResultFooterScriptor()}
 
                 {/* if personalColor test's Result page for Link Banner */}
                 {this.personalColorLinkRenderer()}

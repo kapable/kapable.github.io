@@ -5320,22 +5320,6 @@ var TESTS = [
             },
             {
                 which:"SN",
-                question: "주변 사람들이 나에게 하는 말은?",
-                answers:[
-                    {
-                        type: "S",
-                        score: 2,
-                        content: "꾸준하고 참을성이 있다는 말을 자주한다."
-                    },
-                    {
-                        type: "N",
-                        score: 5,
-                        content: "창의적이고 독창적이라는 말을 자주한다."
-                    },
-                ]
-            },
-            {
-                which:"SN",
                 question: "둘 중 한곳에 살아야 한다면?",
                 answers:[
                     {

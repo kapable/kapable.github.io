@@ -90,7 +90,7 @@ class Intro extends Component {
         this._eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
         alert("링크가 복사됐어요!");
     }
-    kakaoIntroFooterScriptor(){
+    cpcBannerIntroFooterScriptor(){
         if(this.state.quiz_url.includes("localhost") || this.state.quiz_url.includes("ktestone.com")) {
           return(
             <Fragment>
@@ -111,7 +111,23 @@ class Intro extends Component {
               <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
           )
-        }
+        } else if(this.state.quiz_url.includes("niair.xyz")) {
+            return(
+              <Fragment>
+                <ScriptTag async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
+                {/* 반응형기본 */}
+                <ins class="adsbygoogle"
+                    style={{display:"block"}}
+                    data-ad-client="ca-pub-2382342018701919"
+                    data-ad-slot="8429103833"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <ScriptTag>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </ScriptTag>
+              </Fragment>
+            )
+          }
       }
     personalColorLinkRenderer(){
         if(this.state.current_test.info.mainUrl === "personalColor") {
@@ -228,7 +244,7 @@ class Intro extends Component {
                 </Typist>
 
                 {/* Kakao Adfit Intro footer */}
-                {this.kakaoIntroFooterScriptor()}
+                {this.cpcBannerIntroFooterScriptor()}
 
                 <div className="test-intro-with-friend">
                     <CopyToClipboard text={this.state.quiz_url}>

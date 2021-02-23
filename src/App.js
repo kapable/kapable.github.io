@@ -62,8 +62,8 @@ class App extends Component {
     var plusTenSec = currentDocumentTimestamp + tenSec;
     if (now > plusTenSec) { window.location.reload(); } else {}
   }
-
-  kakaoUpperScriptor(){
+  
+  cpcBannerUpperScriptor(){
     if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) {
       return(
         <Fragment>
@@ -84,10 +84,26 @@ class App extends Component {
           <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
         </Fragment>
       )
+    } else if(this.state.sharable_url.includes("niair.xyz")) {
+      return(
+        <Fragment>
+          <ScriptTag async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
+          {/* 반응형기본 */}
+          <ins class="adsbygoogle"
+              style={{display:"block"}}
+              data-ad-client="ca-pub-2382342018701919"
+              data-ad-slot="8429103833"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <ScriptTag>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+          </ScriptTag>
+        </Fragment>
+      )
     }
   }
 
-  kakaoFooterScriptor(){
+  cpcBannerFooterScriptor(){
     if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) {
       return(
         <Fragment>
@@ -108,6 +124,22 @@ class App extends Component {
           <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
         </Fragment>
       )
+    } else if(this.state.sharable_url.includes("niair.xyz")) {
+      return(
+        <Fragment>
+          <ScriptTag async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
+          {/* 반응형기본 */}
+          <ins class="adsbygoogle"
+              style={{display:"block"}}
+              data-ad-client="ca-pub-2382342018701919"
+              data-ad-slot="8429103833"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <ScriptTag>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+          </ScriptTag>
+        </Fragment>
+      )
     }
   }
 
@@ -116,11 +148,10 @@ class App extends Component {
     <Router>
     <Fragment>
 
-
       {this.reloadPage()}
 
       {/* Kakao Adfit Upper */}
-      {this.kakaoUpperScriptor()}
+      {this.cpcBannerUpperScriptor()}
 
       <Router basename='/kapable.github.io/'>
         <ScrollToTop>
@@ -178,7 +209,7 @@ class App extends Component {
       </Router>
 
       {/* Kakao Adfit footer */}
-      {this.kakaoFooterScriptor()}
+      {this.cpcBannerFooterScriptor()}
 
       {/* footer */}
       <div className="intro-footer">
