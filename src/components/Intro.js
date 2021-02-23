@@ -91,7 +91,7 @@ class Intro extends Component {
         alert("링크가 복사됐어요!");
     }
     cpcBannerIntroFooterScriptor(){
-        if(this.state.quiz_url.includes("localhost") || this.state.quiz_url.includes("ktestone.com")) {
+        if( this.state.quiz_url.includes("ktestone.com")) {
           return(
             <Fragment>
               <ins class="kakao_ad_area" style={{display:"none"}}
@@ -108,7 +108,7 @@ class Intro extends Component {
                 data-ad-unit    = "DAN-zIzDEpvl7LL78fMU"
                 data-ad-width   = "320"
                 data-ad-height  = "100"></ins>
-            
+
             </Fragment>
           )
         } else if(this.state.quiz_url.includes("niair.xyz")) {

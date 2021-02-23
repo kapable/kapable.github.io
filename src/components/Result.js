@@ -52,13 +52,13 @@ class Result extends Component {
         alert("링크가 복사됐어요!");
     }
     cpcBannerResultFooterScriptor(){
-        if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) {
+        if( this.state.sharable_url.includes("ktestone.com")) {
           return(
             <Fragment>
-              <ins class="kakao_ad_area" style={{display:"none"}} 
-                data-ad-unit    = "DAN-9iBiNdMXgMni4I3u" 
-                data-ad-width   = "320" 
-                data-ad-height  = "100"></ins> 
+              <ins class="kakao_ad_area" style={{display:"none"}}
+                data-ad-unit    = "DAN-9iBiNdMXgMni4I3u"
+                data-ad-width   = "320"
+                data-ad-height  = "100"></ins>
               <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
           )
@@ -66,9 +66,9 @@ class Result extends Component {
           return(
             <Fragment>
               <ins class="kakao_ad_area" style={{display:"none"}}
-                data-ad-unit    = "DAN-oXGz3zjd52vzl7Qh" 
-                data-ad-width   = "320" 
-                data-ad-height  = "100"></ins> 
+                data-ad-unit    = "DAN-oXGz3zjd52vzl7Qh"
+                data-ad-width   = "320"
+                data-ad-height  = "100"></ins>
               <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
           )
@@ -175,7 +175,7 @@ class Result extends Component {
                     </Fragment>
                 )
             }
-            
+
         }
     }
     introPageRender(){

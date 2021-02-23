@@ -87,17 +87,7 @@ class App extends Component {
     } else if(this.state.sharable_url.includes("niair.xyz")) {
       return(
         <Fragment>
-          <ScriptTag async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
-          {/* 반응형기본 */}
-          <ins class="adsbygoogle"
-              style={{display:"block"}}
-              data-ad-client="ca-pub-2382342018701919"
-              data-ad-slot="8429103833"
-              data-ad-format="auto"
-              data-full-width-responsive="true"></ins>
-          <ScriptTag>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-          </ScriptTag>
+          
         </Fragment>
       )
     }
@@ -124,20 +114,12 @@ class App extends Component {
 
         </Fragment>
       )
-    } else if(this.state.sharable_url.includes("niair.xyz")) {
+    } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {
       return(
         <Fragment>
-          <ScriptTag async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
-          {/* 반응형기본 */}
-          <ins class="adsbygoogle"
-              style={{display:"block"}}
-              data-ad-client="ca-pub-2382342018701919"
-              data-ad-slot="8429103833"
-              data-ad-format="auto"
-              data-full-width-responsive="true"></ins>
-          <ScriptTag>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-          </ScriptTag>
+          <Helmet>
+            <script data-ad-client="ca-pub-2382342018701919" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          </Helmet>
         </Fragment>
       )
     }
