@@ -51,7 +51,7 @@ class Result extends Component {
         this._eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
         alert("링크가 복사됐어요!");
     }
-    kakaoResultFooterScriptor(){
+    cpcBannerResultFooterScriptor(){
         if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) {
           return(
             <Fragment>
@@ -72,8 +72,24 @@ class Result extends Component {
               <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
           )
-        }
-      }
+        } else if(this.state.sharable_url.includes("niair.xyz")) {
+            return(
+              <Fragment>
+                <ScriptTag async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
+                {/* 반응형기본 */}
+                <ins class="adsbygoogle"
+                    style={{display:"block"}}
+                    data-ad-client="ca-pub-2382342018701919"
+                    data-ad-slot="8429103833"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <ScriptTag>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </ScriptTag>
+              </Fragment>
+            )
+          }
+    }
     personalColorLinkRenderer(){
         if(this.state.current_test === "personalColor") {
             return(
@@ -126,6 +142,40 @@ class Result extends Component {
                     >[ 日本語バージョンをやりに行く。 ]</a>
                 </Fragment>
             )
+        }
+    }
+    pplBannerRenderer(){
+        if(this.state.current_test === "personalIncense"){
+            if(["BFleur","CMusk","HGreen","LBlanc","LBloom","PViolet"].includes(this.state.current_result)){
+                let banner_img_src = 'https://images.ktestone.com/resultImages/duftDoft/bodySpray.jpeg'
+                return(
+                    <Fragment>
+                        <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncense/"
+                        className="to-ppl-banner-text"
+                        >
+                            <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} />
+                        </a>
+                    </Fragment>
+                )
+            } else {
+                let banner_img_src = 'https://images.ktestone.com/resultImages/duftDoft/handCreme.jpeg'
+                return(
+                    <Fragment>
+                        <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncense/"
+                        className="to-ppl-banner-text"
+                        >
+                            <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} />
+                        </a>
+                    </Fragment>
+                )
+            }
+            
         }
     }
     introPageRender(){
@@ -226,10 +276,12 @@ class Result extends Component {
                     <div className="result-value">
                         {this.resultRender()}
                     </div>
+                    {/* PPL banner image */}
+                    {this.pplBannerRenderer()}
                 </div>
 
                 {/* Kakao Adfit Result footer */}
-                {this.kakaoResultFooterScriptor()}
+                {this.cpcBannerResultFooterScriptor()}
 
                 {/* if personalColor test's Result page for Link Banner */}
                 {this.personalColorLinkRenderer()}

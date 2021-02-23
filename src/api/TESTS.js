@@ -5304,33 +5304,17 @@ var TESTS = [
             },
             {
                 which:"SN",
-                question: "제육볶음을 만들어보자",
+                question: "여행을 간다면?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "제육이는 사뒀니?"
+                        content: "즉흥적으로 여행을 간다"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "양념은 어떻게 만드니?"
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "주변 사람들이 나에게 하는 말은?",
-                answers:[
-                    {
-                        type: "S",
-                        score: 2,
-                        content: "꾸준하고 참을성이 있다는 말을 자주한다."
-                    },
-                    {
-                        type: "N",
-                        score: 5,
-                        content: "창의적이고 독창적이라는 말을 자주한다."
+                        content: "계획적인 세우고 여행을 간다"
                     },
                 ]
             },
