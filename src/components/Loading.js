@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Fragment } from 'react';
 import Lottie from 'react-lottie';
 import * as loading from '../loading-animation.json'
-// import ScriptTag from 'react-script-tag'
+import ScriptTag from 'react-script-tag'
 
 const defaultOptions = {
     loop: true,
