@@ -31,6 +31,11 @@ class Result extends Component {
         this._eventSenderGA = this._eventSenderGA.bind(this);
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
     }
+
+    componentDidMount(){
+        if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }
+
     _eventSenderGA(category, action, label){
         ReactGA.event({
             category: category,
@@ -72,20 +77,15 @@ class Result extends Component {
               <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
           )
-        } else if(this.state.sharable_url.includes("niair.xyz")) {
+        } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {
             return(
               <Fragment>
-                <ScriptTag async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
-                {/* 반응형기본 */}
                 <ins class="adsbygoogle"
-                    style={{display:"block"}}
-                    data-ad-client="ca-pub-2382342018701919"
-                    data-ad-slot="8429103833"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <ScriptTag>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </ScriptTag>
+                   style={{display:"block"}}
+                   data-ad-client="ca-pub-2382342018701919"
+                   data-ad-slot="8429103833"
+                   data-ad-format="auto"
+                   data-full-width-responsive="true"></ins>
               </Fragment>
             )
           }

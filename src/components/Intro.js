@@ -62,6 +62,11 @@ class Intro extends Component {
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
         this._eventSenderGA = this._eventSenderGA.bind(this);
     }
+
+    componentDidMount(){
+        if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+      
     _eventSenderGA(category, action, label){
         ReactGA.event({
             category: category,
@@ -98,7 +103,7 @@ class Intro extends Component {
                 data-ad-unit    = "DAN-zutyUS1LJQDp2SK0"
                 data-ad-width   = "320"
                 data-ad-height  = "100"></ins>
-
+                <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
           )
         } else if(this.state.quiz_url.includes("https://kapable.github.io/")) {
@@ -108,13 +113,12 @@ class Intro extends Component {
                 data-ad-unit    = "DAN-zIzDEpvl7LL78fMU"
                 data-ad-width   = "320"
                 data-ad-height  = "100"></ins>
-
+                <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
           )
-        } else if(this.state.quiz_url.includes("niair.xyz")) {
+        } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {
             return(
               <Fragment>
-                <ScriptTag async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></ScriptTag>
                 {/* 반응형기본 */}
                 <ins class="adsbygoogle"
                     style={{display:"block"}}
@@ -122,9 +126,6 @@ class Intro extends Component {
                     data-ad-slot="8429103833"
                     data-ad-format="auto"
                     data-full-width-responsive="true"></ins>
-                <ScriptTag>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </ScriptTag>
               </Fragment>
             )
           }
