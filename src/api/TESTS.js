@@ -5211,6 +5211,392 @@ var TESTS = [
             },
         ]
     },
+    // DUFT&DOFT ...ing
+    {
+        info : {
+            mainTitle:"퍼스널 향 테스트",
+            subTitle:"나에게 어울리는 향은 무엇일까?",
+            mainUrl:"personalIncense",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/personalColor-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '남들에게 나는 어떤 사람?!',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '쉽게 다가갈 수 있는 사람'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '조심스럽게 다가가야 하는 사람'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "무리에서 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "무리의 상황을 잘 파악하고 있다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "보통 다른 사람이 소식을 전해준다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "전화할 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "그냥 바로 전화받자마자 말한다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "할 말 미리 준비해두고 전화한다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "내가 향을 선택할 때?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "주변인들에게 추천을 받는다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "직접 가서 향을 맡아본다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 좋아하는 책은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "추리 가능한 추리소설"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "로맨스 소설이나 무한으로 상상이 가능한 책"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "제육볶음을 만들어보자",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "제육이는 사뒀니?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "양념은 어떻게 만드니?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "주변 사람들이 나에게 하는 말은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "꾸준하고 참을성이 있다는 말을 자주한다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "창의적이고 독창적이라는 말을 자주한다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "둘 중 한곳에 살아야 한다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "편견 없는 세상"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "인정이 많은 세상"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 향수를 뿌리는 이유는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "내가 좋은 향을 맡기 위해 "
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "주변 사람에게 잘 보이기 위해"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "열심히 한 프로젝트가 실패했다",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "일등을 못 했다니... 열심히 했어도 일등 못했으니 끝이지 뭐"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "수고했어~ 열심히 했으니까 된 거야! "
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "나는 이런 사람이다.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "공정한 판사 같은 사람"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "궁예처럼 관대한 사람"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "난 부탁할 때",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "본론을 꺼내기 위해 서론이 길어진다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "바로 본론부터"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "약속을 잡을 때 나는",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "고민 없이 바로 오카이!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "멈칫멈칫 고민... 잠깐만... 음..."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "오늘의 일정은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "아침에 일찍 일어나서 운동하고 밥 먹고 공부 좀 하자...\n후 근데 안 했네 ^^"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일정이라... 그냥 숨쉬기?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "과제 할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "시작은 달콤하게 계획부터"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "각 잡으려면 일단 시작해"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나는 향을 맡을 때",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "달달한 냄새가 나는 게 바닐라인가?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "오~ 굿! 마이스타일~"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ISTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Ssoapy",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/Ssoapy.png'
+            },
+            {
+                type: "ESFP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "BabyS",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/BabyS.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "PBreeze",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/PBreeze.png'
+            },
+            {
+                type: "INTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "CMusk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/CMusk.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ACotton",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/ACotton.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "SDilicious",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/SDilicious.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "SDelight",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/SDelight.png'
+            },
+            {
+                type: "INFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "Intensive",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/Intensive.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "LBlanc",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/LBlanc.png'
+            },
+            {
+                type: "ESTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "CF",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/CF.png'
+            },
+            {
+                type: "INFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "SFlower",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/SFlower.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "LBloom",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/LBloom.png'
+            },
+            {
+                type: "ESTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "HGreen",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/HGreen.png'
+            },
+            {
+                type: "ISFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "BFleur",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/BFleur.png'
+            },
+            {
+                type: "INTP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "SRose",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/SRose.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "PViolet",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/PViolet.png'
+            },
+        ]
+    },
 ]
 
 export default TESTS;
