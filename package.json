@@ -42,7 +42,8 @@
     "minifyHtml": {
       "collapseWhitespace": true,
       "removeComments": true
-    }
+    },
+    "cacheAjaxRequests": false
   },
   "eslintConfig": {
     "extends": [

@@ -72,7 +72,7 @@ class App extends Component {
           data-ad-unit    = "DAN-q3lQrzFnTNGEBQSA"
           data-ad-width   = "320"
           data-ad-height  = "100"></ins>
-          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+
         </Fragment>
       )
     } else if(this.state.sharable_url.includes("https://kapable.github.io/")) {
@@ -82,7 +82,6 @@ class App extends Component {
           data-ad-unit    = "DAN-2heOjnHUdZLjBuFC"
           data-ad-width   = "320"
           data-ad-height  = "100"></ins>
-          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
         </Fragment>
       )
     } else if(this.state.sharable_url.includes("niair.xyz")) {
@@ -122,7 +121,7 @@ class App extends Component {
           data-ad-unit    = "DAN-rgfAOJhp6Faz2JFX"
           data-ad-width   = "300"
           data-ad-height  = "250"></ins>
-          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+
         </Fragment>
       )
     } else if(this.state.sharable_url.includes("niair.xyz")) {

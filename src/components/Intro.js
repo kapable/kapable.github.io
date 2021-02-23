@@ -94,21 +94,21 @@ class Intro extends Component {
         if(this.state.quiz_url.includes("localhost") || this.state.quiz_url.includes("ktestone.com")) {
           return(
             <Fragment>
-              <ins class="kakao_ad_area" style={{display:"none"}} 
-                data-ad-unit    = "DAN-zutyUS1LJQDp2SK0" 
-                data-ad-width   = "320" 
-                data-ad-height  = "100"></ins> 
-              <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+              <ins class="kakao_ad_area" style={{display:"none"}}
+                data-ad-unit    = "DAN-zutyUS1LJQDp2SK0"
+                data-ad-width   = "320"
+                data-ad-height  = "100"></ins>
+
             </Fragment>
           )
         } else if(this.state.quiz_url.includes("https://kapable.github.io/")) {
           return(
             <Fragment>
               <ins class="kakao_ad_area" style={{display:"none"}}
-                data-ad-unit    = "DAN-zIzDEpvl7LL78fMU" 
-                data-ad-width   = "320" 
-                data-ad-height  = "100"></ins> 
-              <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+                data-ad-unit    = "DAN-zIzDEpvl7LL78fMU"
+                data-ad-width   = "320"
+                data-ad-height  = "100"></ins>
+            
             </Fragment>
           )
         } else if(this.state.quiz_url.includes("niair.xyz")) {
@@ -323,7 +323,7 @@ class Intro extends Component {
                 } else {
                     final_type += type_arr[0]
                 }
-                
+
             }
 
             // return 'THE' result TYPE from TESTS.js
