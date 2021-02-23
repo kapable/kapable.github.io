@@ -62,8 +62,9 @@ class App extends Component {
     var plusTenSec = currentDocumentTimestamp + tenSec;
     if (now > plusTenSec) { window.location.reload(); } else {}
   }
-  
+
   cpcBannerUpperScriptor(){
+    console.log(this.state.sharable_url);
     if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) {
       return(
         <Fragment>
