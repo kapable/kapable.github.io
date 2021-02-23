@@ -298,10 +298,16 @@ class Intro extends Component {
                 let first_type = _which_type_arr[i][0]
                 let second_type = _which_type_arr[i][1]
                 let type_arr = [first_type, second_type]
-
-                let max_val = Math.max(final_result_obj[first_type], final_result_obj[second_type])
-                // eslint-disable-next-line
-                type_arr.filter(item => final_result_obj[item] === max_val).forEach(item => final_type += item)
+                let max_val = 0
+                // for split in case of odd | even questions in the same which(ex. EI/SN..)
+                if(final_result_obj[first_type] !== final_result_obj[second_type]) {
+                    max_val = Math.max(final_result_obj[first_type], final_result_obj[second_type])
+                    // eslint-disable-next-line
+                    type_arr.filter(item => final_result_obj[item] === max_val).forEach(item => final_type += item)
+                } else {
+                    final_type += type_arr[0]
+                }
+                
             }
 
             // return 'THE' result TYPE from TESTS.js
