@@ -54,7 +54,7 @@ class App extends Component {
     });
     ReactGA.set({page:window.location.pathname+window.location.search})
     ReactGA.pageview(window.location.pathname+window.location.search);
-    if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
+    // if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
   reloadPage() {
     var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
@@ -72,7 +72,7 @@ class App extends Component {
           data-ad-unit    = "DAN-q3lQrzFnTNGEBQSA"
           data-ad-width   = "320"
           data-ad-height  = "100"></ins>
-
+          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
         </Fragment>
       )
     } else if(this.state.sharable_url.includes("https://kapable.github.io/")) {
@@ -82,6 +82,7 @@ class App extends Component {
           data-ad-unit    = "DAN-2heOjnHUdZLjBuFC"
           data-ad-width   = "320"
           data-ad-height  = "100"></ins>
+          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
         </Fragment>
       )
     } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {

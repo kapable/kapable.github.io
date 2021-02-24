@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-d
 import App from '../App'
 import { Button, Card } from 'react-bootstrap';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { Helmet } from 'react-helmet';
 import COPYBTN from '../api/DefaultImg/result-copy-link-btn.png';
 import AGAINBTN from '../api/DefaultImg/result-to-again-btn.png';
 import TOHOMEBTN from '../api/DefaultImg/result-to-home-btn.png';
@@ -76,6 +77,9 @@ class Result extends Component {
         } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {
             return(
               <Fragment>
+                <Helmet>
+                    <script data-ad-client="ca-pub-2382342018701919" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                </Helmet>
                 <ins class="adsbygoogle"
                    style={{display:"block"}}
                    data-ad-client="ca-pub-2382342018701919"

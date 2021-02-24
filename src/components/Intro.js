@@ -115,6 +115,9 @@ class Intro extends Component {
         } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {
             return(
               <Fragment>
+                <Helmet>
+                    <script data-ad-client="ca-pub-2382342018701919" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                </Helmet>
                 {/* 반응형기본 */}
                 <ins class="adsbygoogle"
                     style={{display:"block"}}
