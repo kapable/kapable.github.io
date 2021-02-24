@@ -31,12 +31,6 @@ class Result extends Component {
         this._eventSenderGA = this._eventSenderGA.bind(this);
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
     }
-
-    componentDidMount(){
-        if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")){
-            if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
-        }
-    }
     
     _eventSenderGA(category, action, label){
         ReactGA.event({
