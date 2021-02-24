@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-d
 import App from '../App'
 import { Button, Card } from 'react-bootstrap';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-import { Helmet } from 'react-helmet';
 import COPYBTN from '../api/DefaultImg/result-copy-link-btn.png';
 import AGAINBTN from '../api/DefaultImg/result-to-again-btn.png';
 import TOHOMEBTN from '../api/DefaultImg/result-to-home-btn.png';

@@ -3,7 +3,6 @@ import { Fragment } from 'react';
 import Lottie from 'react-lottie';
 import * as loading from '../loading-animation.json'
 import ScriptTag from 'react-script-tag'
-import { Helmet } from 'react-helmet';
 
 const defaultOptions = {
     loop: true,
