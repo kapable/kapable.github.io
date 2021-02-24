@@ -54,7 +54,11 @@ class App extends Component {
     });
     ReactGA.set({page:window.location.pathname+window.location.search})
     ReactGA.pageview(window.location.pathname+window.location.search);
-    if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
+
+    // if condition for Adsense domain
+    if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")){
+      if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }
   }
   reloadPage() {
     var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();

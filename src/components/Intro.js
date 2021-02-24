@@ -64,6 +64,7 @@ class Intro extends Component {
     }
 
     componentDidMount(){
+        // if condition for Adsense domain
         if(this.state.quiz_url.includes("localhost") || this.state.quiz_url.includes("niair.xyz")){
             if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
         }

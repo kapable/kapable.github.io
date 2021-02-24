@@ -16,6 +16,7 @@ const defaultOptions = {
 
 class Loading extends Component {
   componentDidMount(){
+    // if condition for Adsense domain
     if(window.location.href.includes("localhost") || window.location.href.includes("niair.xyz")){
         if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
     }
