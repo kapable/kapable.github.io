@@ -84,7 +84,7 @@ class Result extends Component {
                     data-ad-format="auto"
                     data-full-width-responsive="true"></ins>
                 <ScriptTag>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
                 </ScriptTag>
               </Fragment>
             )
