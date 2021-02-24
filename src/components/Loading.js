@@ -14,7 +14,11 @@ const defaultOptions = {
     }
   };
 
+
 class Loading extends Component {
+    componentDidMount(){
+      if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }
     render(){
         if(window.location.href.includes("ktestone.com")) {
             return(
@@ -45,9 +49,6 @@ class Loading extends Component {
           } else if(window.location.href.includes("localhost") || window.location.href.includes("niair.xyz")) {
             return(
               <Fragment>
-                <Helmet>
-                    <script data-ad-client="ca-pub-2382342018701919" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                </Helmet>
                 {/* 반응형기본 */}
                 <ins class="adsbygoogle"
                     style={{display:"block"}}

@@ -62,6 +62,9 @@ class Intro extends Component {
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
         this._eventSenderGA = this._eventSenderGA.bind(this);
     }
+    componentDidMount(){
+        if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }
 
     _eventSenderGA(category, action, label){
         ReactGA.event({
@@ -115,9 +118,6 @@ class Intro extends Component {
         } else if(this.state.quiz_url.includes("localhost") || this.state.quiz_url.includes("niair.xyz")) {
             return(
               <Fragment>
-                <Helmet>
-                    <script data-ad-client="ca-pub-2382342018701919" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                </Helmet>
                 {/* 반응형기본 */}
                 <ins class="adsbygoogle"
                     style={{display:"block"}}
