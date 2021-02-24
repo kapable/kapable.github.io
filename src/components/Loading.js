@@ -52,6 +52,9 @@ class Loading extends Component {
                     data-ad-slot="4650135764"
                     data-ad-format="auto"
                     data-full-width-responsive="true"></ins>
+                <ScriptTag>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </ScriptTag>
                 <div className="loading" >
                     <Lottie options={defaultOptions} height={120} width={120}/>
                 </div>

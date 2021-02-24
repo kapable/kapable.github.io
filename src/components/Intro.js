@@ -122,6 +122,9 @@ class Intro extends Component {
                     data-ad-slot="3153221262"
                     data-ad-format="auto"
                     data-full-width-responsive="true"></ins>
+                <ScriptTag>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </ScriptTag>
               </Fragment>
             )
           }
