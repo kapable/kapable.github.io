@@ -63,6 +63,12 @@ class Intro extends Component {
         this._eventSenderGA = this._eventSenderGA.bind(this);
     }
 
+    componentDidMount(){
+        if(this.state.quiz_url.includes("localhost") || this.state.quiz_url.includes("niair.xyz")){
+            if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
+        }
+    }
+
     _eventSenderGA(category, action, label){
         ReactGA.event({
             category: category,
@@ -122,9 +128,6 @@ class Intro extends Component {
                     data-ad-slot="3153221262"
                     data-ad-format="auto"
                     data-full-width-responsive="true"></ins>
-                <ScriptTag>
-                    if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
-                </ScriptTag>
               </Fragment>
             )
           }
