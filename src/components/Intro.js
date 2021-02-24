@@ -154,6 +154,12 @@ class Intro extends Component {
                         href="hhttps://niair.xyz/kapable.github.io/personalColorCN/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 汉语版本试 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://niair.xyz/kapable.github.io/personalColorES/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ paso a la versión española ]</a>
                 </Fragment>
             )
         } else if(this.state.current_test.info.mainUrl === "personalColorJP") {
