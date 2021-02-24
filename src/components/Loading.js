@@ -52,7 +52,7 @@ class Loading extends Component {
                 <ins class="adsbygoogle"
                     style={{display:"block"}}
                     data-ad-client="ca-pub-2382342018701919"
-                    data-ad-slot="8429103833"
+                    data-ad-slot="4650135764"
                     data-ad-format="auto"
                     data-full-width-responsive="true"></ins>
                 <div className="loading" >

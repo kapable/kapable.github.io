@@ -81,11 +81,11 @@ class Result extends Component {
                     <script data-ad-client="ca-pub-2382342018701919" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 </Helmet>
                 <ins class="adsbygoogle"
-                   style={{display:"block"}}
-                   data-ad-client="ca-pub-2382342018701919"
-                   data-ad-slot="8429103833"
-                   data-ad-format="auto"
-                   data-full-width-responsive="true"></ins>
+                    style={{display:"block"}}
+                    data-ad-client="ca-pub-2382342018701919"
+                    data-ad-slot="3364974256"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
               </Fragment>
             )
           }
