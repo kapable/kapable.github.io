@@ -48,7 +48,7 @@ class Loading extends Component {
           } else if(window.location.href.includes("localhost") || window.location.href.includes("niair.xyz")) {
             return(
               <Fragment>
-                {/* 반응형기본 */}
+                {/* 로딩 중앙 */}
                 <ins class="adsbygoogle"
                     style={{display:"block"}}
                     data-ad-client="ca-pub-2382342018701919"

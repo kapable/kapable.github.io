@@ -76,6 +76,7 @@ class Result extends Component {
         } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {
             return(
               <Fragment>
+                {/* 결과 푸터 */}
                 <ins class="adsbygoogle"
                     style={{display:"block"}}
                     data-ad-client="ca-pub-2382342018701919"

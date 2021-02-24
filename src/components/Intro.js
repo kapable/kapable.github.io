@@ -118,11 +118,11 @@ class Intro extends Component {
         } else if(this.state.quiz_url.includes("localhost") || this.state.quiz_url.includes("niair.xyz")) {
             return(
               <Fragment>
-                {/* 반응형기본 */}
+                {/* 인트로 공유 위 수평 */}
                 <ins class="adsbygoogle"
                     style={{display:"block"}}
                     data-ad-client="ca-pub-2382342018701919"
-                    data-ad-slot="2023972426"
+                    data-ad-slot="3153221262"
                     data-ad-format="auto"
                     data-full-width-responsive="true"></ins>
               </Fragment>
