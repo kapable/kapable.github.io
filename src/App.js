@@ -56,7 +56,7 @@ class App extends Component {
     ReactGA.pageview(window.location.pathname+window.location.search);
 
     // if condition for Adsense domain
-    if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")){
+    if(this.state.sharable_url.includes("niair.xyz")){
       if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
     }
   }
