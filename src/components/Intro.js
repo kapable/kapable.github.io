@@ -62,9 +62,6 @@ class Intro extends Component {
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
         this._eventSenderGA = this._eventSenderGA.bind(this);
     }
-    componentDidMount(){
-        if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
-    }
 
     _eventSenderGA(category, action, label){
         ReactGA.event({

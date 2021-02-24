@@ -15,9 +15,6 @@ const defaultOptions = {
 
 
 class Loading extends Component {
-    componentDidMount(){
-      if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
-    }
     render(){
         if(window.location.href.includes("ktestone.com")) {
             return(
