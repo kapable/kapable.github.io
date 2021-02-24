@@ -3,6 +3,7 @@ import { Fragment } from 'react';
 import Lottie from 'react-lottie';
 import * as loading from '../loading-animation.json'
 import ScriptTag from 'react-script-tag'
+import { Helmet } from 'react-helmet';
 
 const defaultOptions = {
     loop: true,
@@ -15,19 +16,51 @@ const defaultOptions = {
 
 class Loading extends Component {
     render(){
-        return(
-            <Fragment>
+        if(window.location.href.includes("ktestone.com")) {
+            return(
+              <Fragment>
+                <ins className="kakao_ad_area" style={{display:"none"}}
+                data-ad-unit    = "DAN-M3XcjSrV4BrUGCJG"
+                data-ad-width   = "300"
+                data-ad-height  = "250"></ins>
+                <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+                <div className="loading" >
+                    <Lottie options={defaultOptions} height={120} width={120}/>
+                </div>
+              </Fragment>
+            )
+          } else if(window.location.href.includes("https://kapable.github.io/")) {
+            return(
+              <Fragment>
                 <ins className="kakao_ad_area" style={{display:"none"}}
                 data-ad-unit    = "DAN-rgfAOJhp6Faz2JFX"
                 data-ad-width   = "300"
                 data-ad-height  = "250"></ins>
-                {/* <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag> */}
+                <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
                 <div className="loading" >
                     <Lottie options={defaultOptions} height={120} width={120}/>
                 </div>
-
-            </Fragment>
-        )
+              </Fragment>
+            )
+          } else if(window.location.href.includes("localhost") || window.location.href.includes("niair.xyz")) {
+            return(
+              <Fragment>
+                <Helmet>
+                    <script data-ad-client="ca-pub-2382342018701919" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                </Helmet>
+                {/* 반응형기본 */}
+                <ins class="adsbygoogle"
+                    style={{display:"block"}}
+                    data-ad-client="ca-pub-2382342018701919"
+                    data-ad-slot="8429103833"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <div className="loading" >
+                    <Lottie options={defaultOptions} height={120} width={120}/>
+                </div>
+              </Fragment>
+            )
+          }
     }
 }
 
