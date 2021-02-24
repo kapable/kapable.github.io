@@ -112,7 +112,7 @@ class Intro extends Component {
                 <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
           )
-        } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {
+        } else if(this.state.quiz_url.includes("localhost") || this.state.quiz_url.includes("niair.xyz")) {
             return(
               <Fragment>
                 <Helmet>
@@ -243,7 +243,7 @@ class Intro extends Component {
                     현재까지 총 {this.state.participants}명이 참여했어요.
                 </Typist>
 
-                {/* Kakao Adfit Intro footer */}
+                {/* CPC Banner Intro footer */}
                 {this.cpcBannerIntroFooterScriptor()}
 
                 <div className="test-intro-with-friend">

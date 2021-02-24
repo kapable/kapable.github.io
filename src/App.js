@@ -54,7 +54,7 @@ class App extends Component {
     });
     ReactGA.set({page:window.location.pathname+window.location.search})
     ReactGA.pageview(window.location.pathname+window.location.search);
-    // if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
+    if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
   reloadPage() {
     var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
