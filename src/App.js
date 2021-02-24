@@ -69,7 +69,7 @@ class App extends Component {
   }
 
   cpcBannerUpperScriptor(){
-    if( this.state.sharable_url.includes("ktestone.com")) {
+    if( this.state.sharable_url.includes("ktestone.com") || this.state.sharable_url.includes("localhost") ) {
       return(
         <Fragment>
           <ins className="kakao_ad_area" style={{display:"none"}}
@@ -89,7 +89,7 @@ class App extends Component {
           <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
         </Fragment>
       )
-    } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {
+    } else if(this.state.sharable_url.includes("niair.xyz")) {
       return(
         <Fragment>
           <Helmet>
@@ -101,7 +101,7 @@ class App extends Component {
   }
 
   cpcBannerFooterScriptor(){
-    if( this.state.sharable_url.includes("ktestone.com")) {
+    if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) {
       return(
         <Fragment>
           <ins className="kakao_ad_area" style={{display:"none"}}
@@ -121,7 +121,7 @@ class App extends Component {
           <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
         </Fragment>
       )
-    } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {
+    } else if(this.state.sharable_url.includes("niair.xyz")) {
       return(
         <Fragment>
           {/* 반응형 기본 */}
