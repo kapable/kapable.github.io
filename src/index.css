@@ -58,6 +58,7 @@ body {
   height: 3rem;
   width: 13rem;
   margin: 0.5rem auto;
+  display: block;
 }
 
 /* intro start */

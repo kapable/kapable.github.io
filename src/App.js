@@ -138,7 +138,7 @@ class App extends Component {
 
   buyMeACoffeeBtn(){
     return(
-      <Fragment>
+      <div>
         <a
             target="_blank"
             rel="noopener noreferrer"
@@ -149,7 +149,7 @@ class App extends Component {
               Buy Me A Coffee, Click!
           </button>
         </a>
-      </Fragment>
+      </div>
     )
   }
 
