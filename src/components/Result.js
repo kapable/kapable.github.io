@@ -277,9 +277,6 @@ class Result extends Component {
                     {this.pplBannerRenderer()}
                 </div>
 
-                {/* Kakao Adfit Result footer */}
-                {this.cpcBannerResultFooterScriptor()}
-
                 {/* if personalColor test's Result page for Link Banner */}
                 {this.personalColorLinkRenderer()}
 
@@ -319,11 +316,15 @@ class Result extends Component {
                         alt="다른 테스트 하러가기"
                         />
                 </div>
+
+                {/* CPC Banner Result footer */}
+                {this.cpcBannerResultFooterScriptor()}
+
             </div>
 
         );
     }
-
+    
     pageRenderer(){
         let _page = []
         if(this.state.mode === "result") {

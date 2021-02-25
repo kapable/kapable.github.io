@@ -48,6 +48,18 @@ body {
   cursor: pointer;
 }
 
+.to-buymeacoffee-btn {
+  background-color: gold;
+  font-size: 1rem;
+  font-family: var(--title-font);
+  cursor: pointer;
+  border-color: transparent;
+  border-radius: 2px;
+  height: 3rem;
+  width: 13rem;
+  margin: 0.5rem auto;
+}
+
 /* intro start */
 
 .intro {

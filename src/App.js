@@ -136,6 +136,23 @@ class App extends Component {
     }
   }
 
+  buyMeACoffeeBtn(){
+    return(
+      <Fragment>
+        <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.buymeacoffee.com/ktestone"
+            className="to-buymeacoffee-link"
+        ><button
+            className="to-buymeacoffee-btn">
+              Buy Me A Coffee, Click!
+          </button>
+        </a>
+      </Fragment>
+    )
+  }
+
   render() {
     return(
     <Router>
@@ -203,6 +220,9 @@ class App extends Component {
 
       {/* CPC Banner footer */}
       {this.cpcBannerFooterScriptor()}
+
+      {/* BMAF Button */}
+      {this.buyMeACoffeeBtn()}
 
       {/* footer */}
       <div className="intro-footer">
