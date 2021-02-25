@@ -140,13 +140,13 @@ class Intro extends Component {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorEng/"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
                     >[ Go to English version ]</a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorJP/"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 日本語バージョンをやりに行く。 ]</a>
                     <a
@@ -158,7 +158,7 @@ class Intro extends Component {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorES/"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
                         className="to-personalColorOut-test-banner-text"
                     >[ paso a la versión española ]</a>
                 </Fragment>
@@ -169,13 +169,13 @@ class Intro extends Component {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColor/"
+                        href="https://ktestone.com/kapable.github.io/personalColor/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 한국어 버전으로 하러가기 ]</a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorEng/"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
                     >[ Go to English version ]</a>
                     <a
@@ -187,7 +187,7 @@ class Intro extends Component {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorES/"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
                         className="to-personalColorOut-test-banner-text"
                     >[ paso a la versión española ]</a>
                 </Fragment>
@@ -198,13 +198,13 @@ class Intro extends Component {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColor/"
+                        href="https://ktestone.com/kapable.github.io/personalColor/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 한국어 버전으로 하러가기 ]</a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorJP/"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 日本語バージョンをやりに行く。 ]</a>
                     <a
@@ -216,7 +216,7 @@ class Intro extends Component {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorES/"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
                         className="to-personalColorOut-test-banner-text"
                     >[ paso a la versión española ]</a>
                 </Fragment>
@@ -227,25 +227,25 @@ class Intro extends Component {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColor/"
+                        href="https://ktestone.com/kapable.github.io/personalColor/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 한국어 버전으로 하러가기 ]</a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorJP/"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 日本語バージョンをやりに行く。 ]</a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorEng/"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
                     >[ Go to the English version ]</a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorES/"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
                         className="to-personalColorOut-test-banner-text"
                     >[ paso a la versión española ]</a>
                 </Fragment>
@@ -256,19 +256,19 @@ class Intro extends Component {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColor/"
+                        href="https://ktestone.com/kapable.github.io/personalColor/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 한국어 버전으로 하러가기 ]</a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorJP/"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 日本語バージョンをやりに行く。 ]</a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorEng/"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
                     >[ Go to the English version ]</a>
                     <a
