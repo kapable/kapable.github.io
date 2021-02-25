@@ -152,7 +152,7 @@ class Intro extends Component {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="hhttps://niair.xyz/kapable.github.io/personalColorCN/"
+                        href="https://niair.xyz/kapable.github.io/personalColorCN/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 汉语版本试 ]</a>
                     <a
