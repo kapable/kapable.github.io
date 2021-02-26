@@ -680,12 +680,12 @@ var TESTS = [
         questions:[
             {
                 which:"EI",
-                question: 'How do I behave to new friends?',
+                question: 'How do you behave in front of your friends?',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: 'I talk to him first.'
+                        content: 'I talk to them first.'
                     },
                     {
                         type: "I",
@@ -696,7 +696,7 @@ var TESTS = [
             },
             {
                 which:"EI",
-                question: "What do I enjoy doing on the weekend?",
+                question: "What do you enjoy doing on the weekend?",
                 answers:[
                     {
                         type: "E",
@@ -706,13 +706,13 @@ var TESTS = [
                     {
                         type: "I",
                         score: 5,
-                        content: "I don't hate being alone."
+                        content: "I'd rather stay home."
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "What kind of atmosphere do I like when I play with my friends?",
+                question: "What kind of atmosphere do you like when you play with your friends?",
                 answers:[
                     {
                         type: "E",
@@ -722,13 +722,13 @@ var TESTS = [
                     {
                         type: "I",
                         score: 5,
-                        content: "I like to have small conversations with a few friends."
+                        content: "I like to have conversations with a few friends in a calm atmosphere."
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "What is more important to me?",
+                question: "What is more important to you?",
                 answers:[
                     {
                         type: "S",
@@ -744,7 +744,7 @@ var TESTS = [
             },
             {
                 which:"SN",
-                question: "What situations are comfortable for me when I work?",
+                question: "What situations are comfortable for you when you work?",
                 answers:[
                     {
                         type: "S",
@@ -760,7 +760,7 @@ var TESTS = [
             },
             {
                 which:"SN",
-                question: "What do people around me say to me?",
+                question: "What do people around you say about you?",
                 answers:[
                     {
                         type: "S",
@@ -776,23 +776,23 @@ var TESTS = [
             },
             {
                 which:"TF",
-                question: "What do I say when I have to say no?",
+                question: "How do you tell someone no?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "I say I can't do it firmly."
+                        content: "I firmly tell them no."
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "I tend to listen to most of them after thinking about it."
+                        content: "I gently decline after thinking about it."
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "How do I behave when I'm angry?",
+                question: "How do you behave when you're angry?",
                 answers:[
                     {
                         type: "T",
@@ -808,23 +808,23 @@ var TESTS = [
             },
             {
                 which:"TF",
-                question: "Listening to my friend's concerns,\nI think it's his fault.\nHow do I say that then?",
+                question: "Your friend is complaining about their problems,\nyou think it's their fault.\nHow do you tell them?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "I tell my fridend the wrong thing about him."
+                        content: "I tell my friend it's their fault."
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "I'm afraid my friend won't like it if I speak directly."
+                        content: "I worry my friend will get mad if I speak bluntly."
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "How do I behave when I prepare the supplies?",
+                question: "How do you prepare for a project?",
                 answers:[
                     {
                         type: "J",
@@ -834,39 +834,39 @@ var TESTS = [
                     {
                         type: "P",
                         score: 5,
-                        content: "There are many times when I think,\n'I\"ll take care of it tomorrow,'\nbut I forget it."
+                        content: "I prepare last minute, but I wanted to do it yesturday."
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "I was going to go home and study afterwards,\nbut my friends hold me to play.\nHow do I behave?",
+                question: "You were going to go home and study,\nbut your friend wants to study together.\nHow do you react?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "It wasn't planned...I'm very embarrassed."
+                        content: "It will ruin my plans...I'm can't."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "Okay! Life doesn't go as planned! Let's play!!!!"
+                        content: "Ok! Life doesn't go as planned! Let's go!!!"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "What kind of travel destination do I want to go to?",
+                question: "You're on vacation, how do you start the day?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "Just like I planned! I like to proceed in order of work in a planned!"
+                        content: "I make a list of all the things I want to do then do them!"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "Do what comes to mind when I think of it!\nI like to be flexible!"
+                        content: "I do what comes to mind when I think of it!\nI like to be flexible!"
                     },
                 ]
             },
