@@ -5541,7 +5541,7 @@ var TESTS = [
             mainUrl:"personalIncense",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/duftDoft-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/duftDoft-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png"
         },
         questions:[
             {
