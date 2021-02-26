@@ -5,6 +5,7 @@ import Loading from './Loading'
 import BirthdayCalc from './BirthdayCalc'
 import DualMbti from './DualMbti'
 import StoryTelling from './StoryTelling'
+import BuyMeACoffee from './BuyMeACoffee'
 import TESTS from '../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
@@ -321,6 +322,8 @@ class Intro extends Component {
                         onClick={this._onMainButtonClick}
                         alt="다른 테스트 하러 뒤로가기"/>
                 </div>
+                {/* BMAF Button */}
+                <BuyMeACoffee/>
             </div>
         );
     }

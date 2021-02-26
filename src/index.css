@@ -304,7 +304,7 @@ body {
 .result-img {
   height: auto;
   width: 23rem;
-  margin: 0rem auto 0.5rem;
+  margin: 0rem auto 0rem;
   font-family: var(--title-font);
   color: var(--font-color);
 }
@@ -312,7 +312,7 @@ body {
 /* in Result Page for PPL banner */
 .ppl-banner-img {
   width: 23rem;
-  margin: 0.5rem auto;
+  margin: 0rem auto;
 }
 
 /* in Result Page for Personal Color Test */

@@ -137,20 +137,25 @@ class App extends Component {
   }
 
   buyMeACoffeeBtn(){
-    return(
-      <div>
-        <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.buymeacoffee.com/ktestone"
-            className="to-buymeacoffee-link"
-        ><button
-            className="to-buymeacoffee-btn">
-              Buy Me A Coffee, Click!
-          </button>
-        </a>
-      </div>
-    )
+    console.log(window.location.href);
+    if (window.location.href.includes("personalIncense")){
+      return(null);
+    } else {
+      return(
+        <div>
+          <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.buymeacoffee.com/ktestone"
+              className="to-buymeacoffee-link"
+          ><button
+              className="to-buymeacoffee-btn">
+                Buy Me A Coffee, Click!
+            </button>
+          </a>
+        </div>
+      )
+    }
   }
 
   render() {
@@ -222,7 +227,7 @@ class App extends Component {
       {this.cpcBannerFooterScriptor()}
 
       {/* BMAF Button */}
-      {this.buyMeACoffeeBtn()}
+      {/* {this.buyMeACoffeeBtn()} */}
 
       {/* footer */}
       <div className="intro-footer">

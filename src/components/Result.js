@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Intro from './Intro'
 import TESTS from '../api/TESTS'
+import BuyMeACoffee from './BuyMeACoffee'
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import App from '../App'
 import { Button, Card } from 'react-bootstrap';
@@ -53,7 +54,8 @@ class Result extends Component {
         alert("링크가 복사됐어요!");
     }
     cpcBannerResultFooterScriptor(){
-        if( this.state.sharable_url.includes("ktestone.com")) {
+        // Delete Adfit for PPL contents
+        if( this.state.sharable_url.includes("ktestone.com") && this.state.current_test !== "personalIncense") {
           return(
             <Fragment>
               <ins class="kakao_ad_area" style={{display:"none"}}
@@ -143,38 +145,28 @@ class Result extends Component {
     }
     pplBannerRenderer(){
         if(this.state.current_test === "personalIncense"){
-            if(["BFleur","CMusk","HGreen","LBlanc","LBloom","PViolet"].includes(this.state.current_result)){
-                let banner_img_src = 'https://images.ktestone.com/resultImages/duftDoft/bodySpray.jpeg'
-                return(
-                    <Fragment>
-                        <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://ktestone.com/kapable.github.io/personalIncense/"
-                        className="to-ppl-banner-text"
-                        >
-                            <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} />
-                        </a>
-                    </Fragment>
-                )
-            } else {
-                let banner_img_src = 'https://images.ktestone.com/resultImages/duftDoft/handCreme.jpeg'
-                return(
-                    <Fragment>
-                        <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://ktestone.com/kapable.github.io/personalIncense/"
-                        className="to-ppl-banner-text"
-                        >
-                            <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} />
-                        </a>
-                    </Fragment>
-                )
+            const incense_list = ["ACotton", "BabyS", "BFleur", "CF", "CMusk","HGreen", "Intensive", "LBlanc","LBloom", "PBreeze", "PViolet", "SDelight", "SDilicious", "SFlower", "SRose", "Ssoapy"]
+            for (let incense of incense_list) {
+                if(incense.includes(this.state.current_result)) {
+                    let banner_img_src = 'https://images.ktestone.com/resultImages/duftDoft/' + incense + '-back.png'
+                    return(
+                        <Fragment>
+                            <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://ktestone.com/kapable.github.io/personalIncense/"
+                            className="to-ppl-banner-text"
+                            >
+                                <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} />
+                            </a>
+                        </Fragment>
+                    )
+                }
+                
             }
-
         }
     }
+
     introPageRender(){
 
         const current_tests_path = '/' + this.state.current_test + '/';
@@ -316,6 +308,9 @@ class Result extends Component {
                         alt="다른 테스트 하러가기"
                         />
                 </div>
+
+                {/* BMAF Button */}
+                <BuyMeACoffee/>
 
                 {/* CPC Banner Result footer */}
                 {this.cpcBannerResultFooterScriptor()}

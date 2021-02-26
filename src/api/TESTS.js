@@ -5540,8 +5540,8 @@ var TESTS = [
             subTitle:"나에게 어울리는 향은 무엇일까?",
             mainUrl:"personalIncense",
             scoreType:"typeCountingMBTI",
-            mainImage:"https://images.ktestone.com/introImages/personalColor-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png"
+            mainImage:"https://images.ktestone.com/introImages/duftDoft-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/duftDoft-thumb.png"
         },
         questions:[
             {
