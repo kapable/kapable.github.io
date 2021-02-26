@@ -13,7 +13,7 @@ class BuyMeACoffee extends Component{
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.buymeacoffee.com/ktestone"
+                    href="paypal.me/ktest3"
                     className="to-buymeacoffee-link"
                 ><button
                     className="to-buymeacoffee-btn">
