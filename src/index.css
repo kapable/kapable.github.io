@@ -54,10 +54,10 @@ body {
   font-family: var(--title-font);
   cursor: pointer;
   border-color: transparent;
-  border-radius: 2px;
-  height: 3rem;
-  width: 13rem;
-  margin: 0.5rem auto;
+  border-radius: 3px;
+  height: 4.5rem;
+  width: 19rem;
+  margin: 0.5rem auto 3rem;
   display: block;
 }
 

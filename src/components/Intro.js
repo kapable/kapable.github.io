@@ -304,6 +304,9 @@ class Intro extends Component {
                 {/* CPC Banner Intro footer */}
                 {this.cpcBannerIntroFooterScriptor()}
 
+                {/* BMAF Button */}
+                <BuyMeACoffee/>
+
                 <div className="test-intro-with-friend">
                     <CopyToClipboard text={this.state.quiz_url}>
                         <Button className="test-intro-with-friend-btn">
@@ -322,8 +325,6 @@ class Intro extends Component {
                         onClick={this._onMainButtonClick}
                         alt="다른 테스트 하러 뒤로가기"/>
                 </div>
-                {/* BMAF Button */}
-                <BuyMeACoffee/>
             </div>
         );
     }

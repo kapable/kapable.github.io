@@ -272,6 +272,9 @@ class Result extends Component {
                 {/* if personalColor test's Result page for Link Banner */}
                 {this.personalColorLinkRenderer()}
 
+                {/* BMAF Button */}
+                <BuyMeACoffee/>
+
                 <div className="share">
                     <h5 className="share-title">친구에게 공유하기</h5>
                     <div className="share">
@@ -308,9 +311,6 @@ class Result extends Component {
                         alt="다른 테스트 하러가기"
                         />
                 </div>
-
-                {/* BMAF Button */}
-                <BuyMeACoffee/>
 
                 {/* CPC Banner Result footer */}
                 {this.cpcBannerResultFooterScriptor()}

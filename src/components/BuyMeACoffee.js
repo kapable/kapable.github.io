@@ -17,7 +17,8 @@ class BuyMeACoffee extends Component{
                     className="to-buymeacoffee-link"
                 ><button
                     className="to-buymeacoffee-btn">
-                      Buy Me A Coffee, Click!
+                    转到赞助服务器费用<br></br>
+                    Feel free to server costs Sponsorship
                   </button>
                 </a>
               </div>
