@@ -154,7 +154,7 @@ class Result extends Component {
                             <a
                             target="_blank"
                             rel="noopener noreferrer"
-                            href="https://ktestone.com/kapable.github.io/personalIncense/"
+                            href="https://m.oliveyoung.co.kr/m/common/partner.do?chlNo=27&chlDtlNo=351&sndType=planshop&sndVal=500000101420075"
                             className="to-ppl-banner-text"
                             >
                                 <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} />
