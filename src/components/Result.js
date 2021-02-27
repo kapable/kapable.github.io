@@ -105,6 +105,18 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 日本語バージョンをやりに行く。 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 汉语版本试 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ paso a la versión española ]</a>
                 </Fragment>
             )
         } else if(this.state.current_test === "personalColorJP") {
@@ -122,6 +134,18 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
                     >[ Go to English ver. ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 汉语版本试 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ paso a la versión española ]</a>
                 </Fragment>
             )
         } else if(this.state.current_test === "personalColorEng") {
@@ -139,6 +163,76 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 日本語バージョンをやりに行く。 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 汉语版本试 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ paso a la versión española ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test === "personalColorCN") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColor/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 日本語バージョンをやりに行く。 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to the English version ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ paso a la versión española ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test === "personalColorES") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColor/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 日本語バージョンをやりに行く。 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to the English version ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://niair.xyz/kapable.github.io/personalColorCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 汉语版本试 ]</a>
                 </Fragment>
             )
         }
@@ -154,7 +248,7 @@ class Result extends Component {
                             <a
                             target="_blank"
                             rel="noopener noreferrer"
-                            href="https://m.oliveyoung.co.kr/m/common/partner.do?chlNo=27&chlDtlNo=351&sndType=planshop&sndVal=500000101420075"
+                            href="https://m.oliveyoung.co.kr/m/display/getBrandShopDetail.do?onlBrndCd=A001218#load_BrndLst"
                             className="to-ppl-banner-text"
                             >
                                 <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} />

@@ -153,7 +153,7 @@ class Intro extends Component {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorCN/"
+                        href="https://ktestone.com/kapable.github.io/personalColorCN/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 汉语版本试 ]</a>
                     <a
@@ -182,7 +182,7 @@ class Intro extends Component {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorCN/"
+                        href="https://ktestone.com/kapable.github.io/personalColorCN/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 汉语版本试 ]</a>
                     <a
@@ -211,7 +211,7 @@ class Intro extends Component {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorCN/"
+                        href="https://ktestone.com/kapable.github.io/personalColorCN/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 汉语版本试 ]</a>
                     <a
