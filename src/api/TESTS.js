@@ -5636,7 +5636,7 @@ var TESTS = [
                     {
                         type: "N",
                         score: 5,
-                        content: "계획적인 세우고 여행을 간다"
+                        content: "계획을 세우고 여행을 간다"
                     },
                 ]
             },
