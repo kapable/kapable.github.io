@@ -422,7 +422,7 @@ var TESTS = [
             },
             {
                 which:"SN",
-                question: "作时的我是？",
+                question: "工作时的我是？",
                 answers:[
                     {
                         type: "S",
