@@ -17,9 +17,10 @@ class Result extends Component {
     constructor(props){
         super(props)
         const _sharable_url = window.location.href;
-        const _current_url = _sharable_url.split('/')
+        const _current_url = _sharable_url.split('/').filter(function(t) {return t !== ""})
         const _current_test = _current_url.reverse()[2]
         const _current_result = _current_url[0]
+        console.log(_current_url);
 
         this.state = {
             mode:"result",
@@ -398,7 +399,7 @@ class Result extends Component {
                     <div className="share">
                         <h5 className="share-title">친구에게 공유하기</h5>
                         <div className="share">
-                            <CopyToClipboard text={this.state.sharable_url}>
+                            <CopyToClipboard text={this.state.sharable_url+'/'}>
                                 <Button className="share-btn">
                                     <img
                                         src={COPYBTN}

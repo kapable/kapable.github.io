@@ -23,11 +23,11 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
-    // DUFT&DOFT ...ing
+    // DUFT&DOFT
     {
         info : {
             mainTitle:"퍼스널 향 테스트",
-            subTitle:"나에게 어울리는 향은 무엇일까?",
+            subTitle:"나에게 어울리는 향은 무엇일까? 향비티아이",
             mainUrl:"personalIncense",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/duftDoft-intro.png",
