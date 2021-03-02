@@ -103,7 +103,7 @@ class Intro extends Component {
         if( this.state.quiz_url.includes("ktestone.com")) {
           return(
             <Fragment>
-              <ins class="kakao_ad_area" style={{display:"none"}}
+              <ins className="kakao_ad_area" style={{display:"none"}}
                 data-ad-unit    = "DAN-zutyUS1LJQDp2SK0"
                 data-ad-width   = "320"
                 data-ad-height  = "100"></ins>
@@ -113,7 +113,7 @@ class Intro extends Component {
         } else if(this.state.quiz_url.includes("https://kapable.github.io/")) {
           return(
             <Fragment>
-              <ins class="kakao_ad_area" style={{display:"none"}}
+              <ins className="kakao_ad_area" style={{display:"none"}}
                 data-ad-unit    = "DAN-zIzDEpvl7LL78fMU"
                 data-ad-width   = "320"
                 data-ad-height  = "100"></ins>
@@ -124,7 +124,7 @@ class Intro extends Component {
             return(
               <Fragment>
                 {/* 인트로 공유 위 수평 */}
-                <ins class="adsbygoogle"
+                <ins className="adsbygoogle"
                     style={{display:"block"}}
                     data-ad-client="ca-pub-2382342018701919"
                     data-ad-slot="3153221262"

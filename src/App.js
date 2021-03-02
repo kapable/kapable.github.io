@@ -126,7 +126,7 @@ class App extends Component {
       return(
         <Fragment>
           {/* 반응형 기본 */}
-          <ins class="adsbygoogle"
+          <ins className="adsbygoogle"
              style={{display:"block"}}
              data-ad-client="ca-pub-2382342018701919"
              data-ad-slot="8429103833"

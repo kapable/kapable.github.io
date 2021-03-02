@@ -52,7 +52,7 @@ class Loading extends Component {
             return(
               <Fragment>
                 {/* 로딩 중앙 */}
-                <ins class="adsbygoogle"
+                <ins className="adsbygoogle"
                     style={{display:"block"}}
                     data-ad-client="ca-pub-2382342018701919"
                     data-ad-slot="4650135764"

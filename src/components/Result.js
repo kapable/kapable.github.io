@@ -16,11 +16,18 @@ import ScriptTag from 'react-script-tag'
 class Result extends Component {
     constructor(props){
         super(props)
-        const _sharable_url = window.location.href;
+
+        // for applying meta tag url with slash -> prevent doulbe slash at the last chars in the sharable url
+        let _sharable_url = window.location.href
+        if(window.location.href.slice(-1) === '/'){
+            _sharable_url = window.location.href.slice(0, -1)
+        } else {
+            _sharable_url = window.location.href
+        }
+
         const _current_url = _sharable_url.split('/').filter(function(t) {return t !== ""})
         const _current_test = _current_url.reverse()[2]
         const _current_result = _current_url[0]
-        console.log(_current_url);
 
         this.state = {
             mode:"result",
@@ -60,7 +67,7 @@ class Result extends Component {
         if( this.state.sharable_url.includes("ktestone.com") && this.state.current_test !== "personalIncense") {
           return(
             <Fragment>
-              <ins class="kakao_ad_area" style={{display:"none"}}
+              <ins className="kakao_ad_area" style={{display:"none"}}
                 data-ad-unit    = "DAN-9iBiNdMXgMni4I3u"
                 data-ad-width   = "320"
                 data-ad-height  = "100"></ins>
@@ -70,7 +77,7 @@ class Result extends Component {
         } else if(this.state.sharable_url.includes("https://kapable.github.io/")) {
           return(
             <Fragment>
-              <ins class="kakao_ad_area" style={{display:"none"}}
+              <ins className="kakao_ad_area" style={{display:"none"}}
                 data-ad-unit    = "DAN-oXGz3zjd52vzl7Qh"
                 data-ad-width   = "320"
                 data-ad-height  = "100"></ins>
@@ -81,7 +88,7 @@ class Result extends Component {
             return(
               <Fragment>
                 {/* 결과 푸터 */}
-                <ins class="adsbygoogle"
+                <ins className="adsbygoogle"
                     style={{display:"block"}}
                     data-ad-client="ca-pub-2382342018701919"
                     data-ad-slot="3364974256"
@@ -349,7 +356,6 @@ class Result extends Component {
                     <Fragment>
                         <img src={img_src} className='result-img' alt={final_type} />
                         <Card className="result-card" bg="light">
-                            {/* <Card.Img variant='top' src={img_src} className='result-img' alt={final_type} /> */}
                             <Card.Body className="result-p">
                                 <Card.Text>{final_desc}</Card.Text>
                             </Card.Body>
