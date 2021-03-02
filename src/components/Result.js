@@ -251,7 +251,7 @@ class Result extends Component {
             const incense_list = ["ACotton", "BabyS", "BFleur", "CF", "CMusk","HGreen", "Intensive", "LBlanc","LBloom", "PBreeze", "PViolet", "SDelight", "SDilicious", "SFlower", "SRose", "Ssoapy"]
             for (let incense of incense_list) {
                 if(incense.includes(this.state.current_result)) {
-                    let banner_img_src = 'https://ktestimages.s3.ap-northeast-2.amazonaws.com/resultImages/duftDoft/' + incense + '-back.png'
+                    let banner_img_src = 'https://images.ktestone.com/resultImages/duftDoft/' + incense + '-back-.png'
                     return(
                         <Fragment>
                             <a
