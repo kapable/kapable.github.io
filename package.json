@@ -43,7 +43,28 @@
       "collapseWhitespace": true,
       "removeComments": true
     },
-    "cacheAjaxRequests": false
+    "cacheAjaxRequests": false,
+    "include":[
+      "/",
+      "/kapable.github.io/zipkok",
+      "/kapable.github.io/daengdaeng",
+      "/kapable.github.io/wind",
+      "/kapable.github.io/humanwall",
+      "/kapable.github.io/lovelevel",
+      "/kapable.github.io/birthNum",
+      "/kapable.github.io/whosFault",
+      "/kapable.github.io/latte",
+      "/kapable.github.io/otherlookme",
+      "/kapable.github.io/personalColor",
+      "/kapable.github.io/peopleColor",
+      "/kapable.github.io/dotori",
+      "/kapable.github.io/personalColorJP",
+      "/kapable.github.io/personalColorEng",
+      "/kapable.github.io/personalColorCN",
+      "/kapable.github.io/personalColorES",
+      "/kapable.github.io/personalIncense",
+      "/kapable.github.io/personalIncense/result"
+    ]
   },
   "eslintConfig": {
     "extends": [

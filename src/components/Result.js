@@ -300,6 +300,7 @@ class Result extends Component {
             }
             i = i + 1;
         }
+        
 
         // return final result option
         // in case of storyTelling Type Quiz
@@ -353,7 +354,6 @@ class Result extends Component {
                             </Card.Body>
                         </Card>
                     </Fragment>
-
                 )
             }
         }
@@ -377,63 +377,66 @@ class Result extends Component {
 
     resultPageRender(){
         return(
-            <div className="result">
-                <div className="result-header">
-                    <h5 className="result-title">결과는...</h5>
-                    <div className="result-value">
-                        {this.resultRender()}
+            <Fragment>
+                
+                <div className="result">
+                    <div className="result-header">
+                        <h5 className="result-title">결과는...</h5>
+                        <div className="result-value">
+                            {this.resultRender()}
+                        </div>
+                        {/* PPL banner image */}
+                        {this.pplBannerRenderer()}
                     </div>
-                    {/* PPL banner image */}
-                    {this.pplBannerRenderer()}
-                </div>
 
-                {/* if personalColor test's Result page for Link Banner */}
-                {this.personalColorLinkRenderer()}
+                    {/* if personalColor test's Result page for Link Banner */}
+                    {this.personalColorLinkRenderer()}
 
-                {/* BMAF Button */}
-                <BuyMeACoffee/>
+                    {/* BMAF Button */}
+                    <BuyMeACoffee/>
 
-                <div className="share">
-                    <h5 className="share-title">친구에게 공유하기</h5>
                     <div className="share">
-                        <CopyToClipboard text={this.state.sharable_url}>
-                            <Button className="share-btn">
-                                <img
-                                    src={COPYBTN}
-                                    onClick={this._onShareButtonClick}
-                                    className="share-btn-img"
-                                    alt="링크 복사"
-                                    />
-                            </Button>
-                        </CopyToClipboard>
+                        <h5 className="share-title">친구에게 공유하기</h5>
+                        <div className="share">
+                            <CopyToClipboard text={this.state.sharable_url}>
+                                <Button className="share-btn">
+                                    <img
+                                        src={COPYBTN}
+                                        onClick={this._onShareButtonClick}
+                                        className="share-btn-img"
+                                        alt="링크 복사"
+                                        />
+                                </Button>
+                            </CopyToClipboard>
+                        </div>
+                        <div className="re-test-btn">
+                            <img
+                                src={AGAINBTN}
+                                className="re-test-btn-img"
+                                onClick={this._onBackToStartButtonClick}
+                                alt="테스트 다시하기"/>
+                        </div>
                     </div>
-                    <div className="re-test-btn">
+                    <div className="back-to-main">
                         <img
-                            src={AGAINBTN}
-                            className="re-test-btn-img"
-                            onClick={this._onBackToStartButtonClick}
-                            alt="테스트 다시하기"/>
+                            src={TOHOMEBTN}
+                            onClick={function(e) {
+                                e.preventDefault();
+                                this._eventSenderGA("Paging", "Click Back-to-main Button", "result page");
+                                this.setState({
+                                    mode:"main"
+                                })
+                            }.bind(this)}
+                            className="back-to-main-btn-img"
+                            alt="다른 테스트 하러가기"
+                            />
                     </div>
-                </div>
-                <div className="back-to-main">
-                    <img
-                        src={TOHOMEBTN}
-                        onClick={function(e) {
-                            e.preventDefault();
-                            this._eventSenderGA("Paging", "Click Back-to-main Button", "result page");
-                            this.setState({
-                                mode:"main"
-                            })
-                        }.bind(this)}
-                        className="back-to-main-btn-img"
-                        alt="다른 테스트 하러가기"
-                        />
-                </div>
 
-                {/* CPC Banner Result footer */}
-                {this.cpcBannerResultFooterScriptor()}
+                    {/* CPC Banner Result footer */}
+                    {this.cpcBannerResultFooterScriptor()}
 
-            </div>
+                </div>
+            </Fragment>
         );
     }
     
