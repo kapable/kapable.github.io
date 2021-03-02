@@ -10,6 +10,7 @@ import COPYBTN from '../api/DefaultImg/result-copy-link-btn.png';
 import AGAINBTN from '../api/DefaultImg/result-to-again-btn.png';
 import TOHOMEBTN from '../api/DefaultImg/result-to-home-btn.png';
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 import ScriptTag from 'react-script-tag'
 
 class Result extends Component {
