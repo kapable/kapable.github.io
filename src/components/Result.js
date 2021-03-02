@@ -289,6 +289,8 @@ class Result extends Component {
         let final_type = ''
         let final_desc = ''
         let img_src = ''
+        let test_current = ''
+        let desc_test_current = ''
         let i = 0;
         let _current_test_contents ;
         while(i<TESTS.length){
@@ -300,6 +302,8 @@ class Result extends Component {
                         final_type = TESTS[i].results[j].type
                         final_desc = TESTS[i].results[j].desc
                         img_src = TESTS[i].results[j].img_src
+                        test_current = TESTS[i].info.mainTitle
+                        desc_test_current = TESTS[i].info.subTitle
                         break
                     }
                     j = j + 1;
@@ -317,24 +321,24 @@ class Result extends Component {
                 <Fragment>
                     <Helmet>
                         {/* <!-- Primary Meta Tags --> */}
-                        <title>{this.state.current_test}-케이테스트</title>
-                        <meta name="title" content={this.state.current_test+'-케이테스트'}/>
-                        <meta name="description" content={this.state.current_result} data-react-helmet="true"/>
+                        <title>{test_current}-케이테스트</title>
+                        <meta name="title" content={test_current+'-케이테스트'}/>
+                        <meta name="description" content={this.state.current_result + ':' + desc_test_current} data-react-helmet="true"/>
                         <link rel="main-url" href={this.state.sharable_url}/>
 
                         {/* <!-- Open Graph / Facebook --> */}
                         <meta property="og:type" content="website"/>
                         <meta property="og:url" content={this.state.sharable_url}/>
-                        <meta property="og:title" content={this.state.current_test}/>
-                        <meta property="og:description" content={this.state.current_result}/>
+                        <meta property="og:title" content={test_current+'-케이테스트'}/>
+                        <meta property="og:description" content={this.state.current_result + ':' + desc_test_current}/>
                         <meta property="og:image" content={img_src}/>
                         <meta property="og:image:alt" content={this.state.current_result} />
 
                         {/* <!-- Twitter --> */}
                         <meta property="twitter:card" content="summary_large_image"/>
                         <meta property="twitter:url" content={this.state.sharable_url}/>
-                        <meta property="twitter:title" content={this.state.current_test}/>
-                        <meta property="twitter:description" content={this.state.current_result}/>
+                        <meta property="twitter:title" content={test_current+'-케이테스트'}/>
+                        <meta property="twitter:description" content={this.state.current_result + ':' + desc_test_current}/>
                         <meta property="twitter:image" content={img_src}/>
                         <meta property="twitter:image:alt" content={this.state.current_result} />
                     </Helmet>

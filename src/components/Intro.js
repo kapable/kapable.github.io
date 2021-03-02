@@ -38,6 +38,14 @@ class Intro extends Component {
             }
         }
 
+        // for applying meta tag url with slash -> prevent doulbe slash at the last chars in the sharable url
+        let _sharable_url = window.location.href
+        if(window.location.href.slice(-1) === '/'){
+            _sharable_url = window.location.href.slice(0, -1)
+        } else {
+            _sharable_url = window.location.href
+        }
+
         // get Full Today
         let today = new Date();
         let month = String(today.getMonth() + 1)//.padStart(2, '0');
@@ -54,7 +62,7 @@ class Intro extends Component {
             quizNumber:0,
             counted_score:0, // < ------------- for calculating scores
             result_url:'/result/',
-            quiz_url:window.location.href,
+            quiz_url:_sharable_url,
             participants:(Number(month+date+hour+minute)*10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             num_shares_count:0,
         }
@@ -331,7 +339,7 @@ class Intro extends Component {
                 <BuyMeACoffee/>
 
                 <div className="test-intro-with-friend">
-                    <CopyToClipboard text={this.state.quiz_url}>
+                    <CopyToClipboard text={this.state.quiz_url+'/'}>
                         <Button className="test-intro-with-friend-btn">
                             <img
                                 src={COPYBTN}
