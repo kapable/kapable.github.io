@@ -305,6 +305,29 @@ class Result extends Component {
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             return (
                 <Fragment>
+                    <Helmet>
+                        {/* <!-- Primary Meta Tags --> */}
+                        <title>{this.state.current_test}-케이테스트</title>
+                        <meta name="title" content={this.state.current_test+'-케이테스트'}/>
+                        <meta name="description" content={this.state.current_result} data-react-helmet="true"/>
+                        <link rel="main-url" href={this.state.sharable_url}/>
+
+                        {/* <!-- Open Graph / Facebook --> */}
+                        <meta property="og:type" content="website"/>
+                        <meta property="og:url" content={this.state.sharable_url}/>
+                        <meta property="og:title" content={this.state.current_test}/>
+                        <meta property="og:description" content={this.state.current_result}/>
+                        <meta property="og:image" content={img_src}/>
+                        <meta property="og:image:alt" content={this.state.current_result} />
+
+                        {/* <!-- Twitter --> */}
+                        <meta property="twitter:card" content="summary_large_image"/>
+                        <meta property="twitter:url" content={this.state.sharable_url}/>
+                        <meta property="twitter:title" content={this.state.current_test}/>
+                        <meta property="twitter:description" content={this.state.current_result}/>
+                        <meta property="twitter:image" content={img_src}/>
+                        <meta property="twitter:image:alt" content={this.state.current_result} />
+                    </Helmet>
                     <img src={img_src} className='result-img' alt={final_type} />
                 </Fragment>
             )
@@ -410,7 +433,6 @@ class Result extends Component {
                 {this.cpcBannerResultFooterScriptor()}
 
             </div>
-
         );
     }
     
