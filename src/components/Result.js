@@ -249,21 +249,35 @@ class Result extends Component {
     pplBannerRenderer(){
         if(this.state.current_test === "personalIncense"){
             const incense_list = ["ACotton", "BabyS", "BFleur", "CF", "CMusk","HGreen", "Intensive", "LBlanc","LBloom", "PBreeze", "PViolet", "SDelight", "SDilicious", "SFlower", "SRose", "Ssoapy"]
+            const body_spray_list = ["LBlanc", "LBloom", "BFleur", "CMusk", "PViolet", "HGreen"]
             for (let incense of incense_list) {
-                if(incense.includes(this.state.current_result)) {
+                if(this.state.current_result === incense) {
                     let banner_img_src = 'https://images.ktestone.com/resultImages/duftDoft/' + incense + '-back-.png'
-                    return(
-                        <Fragment>
-                            <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="https://m.oliveyoung.co.kr/m/display/getBrandShopDetail.do?onlBrndCd=A001218#load_BrndLst"
-                            className="to-ppl-banner-text"
-                            >
-                                <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} />
-                            </a>
-                        </Fragment>
-                    )
+                    if(body_spray_list.includes(this.state.current_result)){
+                        let duft_outlink = "https://bit.ly/386CyuP"
+                        return(
+                            <Fragment>
+                                <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={duft_outlink}
+                                className="to-ppl-banner-text"
+                                > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                            </Fragment>
+                        )
+                    } else {
+                        let duft_outlink = "https://bit.ly/2NOBEMQ"
+                        return(
+                            <Fragment>
+                                <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={duft_outlink}
+                                className="to-ppl-banner-text"
+                                > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                            </Fragment>
+                        )
+                    }
                 }
                 
             }
