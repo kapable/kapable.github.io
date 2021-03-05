@@ -141,7 +141,8 @@ class Intro extends Component {
               </Fragment>
             )
           }
-      }
+    }
+    
     personalColorLinkRenderer(){
         if(this.state.current_test.info.mainUrl === "personalColor") {
             return(
@@ -291,6 +292,61 @@ class Intro extends Component {
         }
     }
 
+    personalIncenseLinkRenderer(){
+        if(this.state.current_test.info.mainUrl === "personalIncense") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncenseEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to English version ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncenseJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 日本語バージョンをやりに行く。 ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test.info.mainUrl === "personalIncenseJP") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncense/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncenseEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to English version ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test.info.mainUrl === "personalIncenseEng") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncense/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncenseJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 日本語バージョンをやりに行く。 ]</a>
+                </Fragment>
+            )
+        } 
+    }
+
     introPageRender(){
 
         let _mainTitle = this.state.current_test.info.mainTitle;
@@ -328,6 +384,7 @@ class Intro extends Component {
                     src={_thumbImage}
                     alt={_mainTitle + '|' + _subTitle}/>
                 {this.personalColorLinkRenderer()}
+                {this.personalIncenseLinkRenderer()}
                 <Typist className="start-btn-participants">
                     현재까지 총 {this.state.participants}명이 참여했어요.
                 </Typist>

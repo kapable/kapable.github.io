@@ -246,6 +246,60 @@ class Result extends Component {
             )
         }
     }
+    personalIncenseLinkRenderer(){
+        if(this.state.current_test=== "personalIncense") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncenseEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to English version ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncenseJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 日本語バージョンをやりに行く。 ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test === "personalIncenseJP") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncense/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncenseEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to English version ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test === "personalIncenseEng") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncense/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalIncenseJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 日本語バージョンをやりに行く。 ]</a>
+                </Fragment>
+            )
+        } 
+    }
     pplBannerRenderer(){
         let personalIncenseList = ["personalIncense", "personalIncenseEng", "personalIncenseJP"]
         if(personalIncenseList.includes(this.state.current_test)){
@@ -417,6 +471,9 @@ class Result extends Component {
 
                     {/* if personalColor test's Result page for Link Banner */}
                     {this.personalColorLinkRenderer()}
+
+                    {/* if personalIncense test's Result page for Link Banner */}
+                    {this.personalIncenseLinkRenderer()}
 
                     {/* BMAF Button */}
                     <BuyMeACoffee/>
