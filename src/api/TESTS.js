@@ -23,7 +23,747 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
-    // DUFT&DOFT
+    // personalIncenseJP
+    {
+        info : {
+            mainTitle:"香りでBTI_香りでわかる性格診断",
+            subTitle:"香りでBTI_香りでわかる性格診断",
+            mainUrl:"personalIncenseJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/personalIncenseJP-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalIncenseJP-thumb.png"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '周りからどんな人だと言われてる？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '近づきやすい人 '
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '近寄りがたい人 '
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "集まりがあるときの自分は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "集まりの状況をよく把握している。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "人から聞いて知ることが多い。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "電話をかけるときの自分は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "相手が電話に出るとすぐ用件を言い出す。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "予め用件を整理してから電話をかける。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "香りの選択基準は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "実際にお店で香りをお試しする。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "周りの人にオススメを教えてもらう。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "好きな本のジャンルは？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "推理できる推理小説 "
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "ロマンス小説や無限に想像が広がるような本 "
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "旅行に行くなら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "計画を立てる。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "思いつきで度に出る旅に出る。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "いずれか一つの世界に住めるなら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "偏見のない世界 "
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "人情味あふれる世界"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "香水をつける理由は？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "自分が良い香りを感じたいから"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "周りから好かれたいから"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "頑張ったプロジェクトが失敗に終わった。\n自分の反応は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "失敗か…頑張ったけど、\n失敗したら終わりだね。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "お疲れ様～頑張ったからこれでいいんだ！"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "自分はどのタイプ？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "公正な判断ができる人"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "寛大な心を持つ人"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "人に頼み事をするときの自分は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "本論に入る前の前置きが長い。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "早速本論に入る。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "人と待ち合わせをするときの自分は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "迷いなくすぐにOK！"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "どうしようかな…ちょっと待って…うーん… "
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "今日の予定は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "早朝に起きて運動して、\n朝ごはん食べたら勉強しようか…はっ、\nでもやってないな(笑)"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "予定ね…呼吸をすることくらい？"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "学校の課題（宿題）があるときの自分は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "計画を立てるところから。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "まずはやり始めよう。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "香りを嗅ぐときの自分は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "甘い匂いがするけど、バニラかな？"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "おっ、良いね！私好みの香りだよ～"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ISTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Ssoapy",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/Ssoapy.png'
+            },
+            {
+                type: "ESFP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "BabyS",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/BabyS.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "PBreeze",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/PBreeze.png'
+            },
+            {
+                type: "INTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "CMusk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/CMusk.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ACotton",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/ACotton.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "SDilicious",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/SDilicious.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "SDelight",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/SDelight.png'
+            },
+            {
+                type: "INFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "Intensive",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/Intensive.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "LBlanc",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/LBlanc.png'
+            },
+            {
+                type: "ESTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "CF",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/CF.png'
+            },
+            {
+                type: "INFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "SFlower",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/SFlower.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "LBloom",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/LBloom.png'
+            },
+            {
+                type: "ESTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "HGreen",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/HGreen.png'
+            },
+            {
+                type: "ISFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "BFleur",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/BFleur.png'
+            },
+            {
+                type: "INTP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "SRose",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/SRose.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "PViolet",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseJP/PViolet.png'
+            },
+        ]
+    },
+    // personalIncenseEng
+    {
+        info : {
+            mainTitle:"Incense BTI_My Personality reflected by Incense",
+            subTitle:"Incense BTI_My Personality reflected by Incense",
+            mainUrl:"personalIncenseEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/personalIncenseEng-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalIncenseEng-thumb.png"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'Who am I to others?!',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'A person who is accessible with ease'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'A person who is accessible with caution'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What is my position in the meeting?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Understand the situation of the meeting very well"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Usually be informed by others"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "How do I look when calling?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Speak out to the call promptly."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Prepare what to say and make a call."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "How do I choose incense?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Closely approach and smell the incense."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Listen to other's recommendation"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What is your favorite book genre?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Mystery novels"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Romance novels or an infinite imaginable books"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What if you are going for a trip?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Make an impromptu trip."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Make a plan and go."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What if I choose to live in one of the two?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "A world without prejudice"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "A world with a lot of compassion"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What is your reason for spraying perfume?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "To smell a good smell"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "To be favorable around me"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "The project I worked hard on failed.\nWhat is my reaction?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I couldn't win the top...\nWorked very hard but couldn't win.\nThat's it."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Good job~ Anyway, you did your best!!\nThat's it."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "I am this kind of person.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Someone like a fair judge"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "A generous person"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When do I ask for something from others?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "The introduction lengthens before going into the main subject."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Directly go into the main point"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When I make an appointment?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Okay! right away without worrying!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Stop worrying... Wait... Um..."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What is today's schedule?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Let's do some... Later, but I didn't do it ^^"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Schedule?... just breathing?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When do I do my homework?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Start from the sweet one as planned"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Start first to catch the plan"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When I smell the incense",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Is it vanilla that smells sweet?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Oh~ Good! It's my style~"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ISTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Ssoapy",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/Ssoapy.png'
+            },
+            {
+                type: "ESFP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "BabyS",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/BabyS.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "PBreeze",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/PBreeze.png'
+            },
+            {
+                type: "INTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "CMusk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/CMusk.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ACotton",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/ACotton.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "SDilicious",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/SDilicious.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "SDelight",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/SDelight.png'
+            },
+            {
+                type: "INFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "Intensive",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/Intensive.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "LBlanc",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/LBlanc.png'
+            },
+            {
+                type: "ESTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "CF",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/CF.png'
+            },
+            {
+                type: "INFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "SFlower",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/SFlower.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "LBloom",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/LBloom.png'
+            },
+            {
+                type: "ESTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "HGreen",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/HGreen.png'
+            },
+            {
+                type: "ISFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "BFleur",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/BFleur.png'
+            },
+            {
+                type: "INTP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "SRose",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/SRose.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "PViolet",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalIncenseEng/PViolet.png'
+            },
+        ]
+    },
+    // personalIncense
     {
         info : {
             mainTitle:"퍼스널 향 테스트",

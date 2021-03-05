@@ -247,7 +247,8 @@ class Result extends Component {
         }
     }
     pplBannerRenderer(){
-        if(this.state.current_test === "personalIncense"){
+        let personalIncenseList = ["personalIncense", "personalIncenseEng", "personalIncenseJP"]
+        if(personalIncenseList.includes(this.state.current_test)){
             const incense_list = ["ACotton", "BabyS", "BFleur", "CF", "CMusk","HGreen", "Intensive", "LBlanc","LBloom", "PBreeze", "PViolet", "SDelight", "SDilicious", "SFlower", "SRose", "Ssoapy"]
             const body_spray_list = ["LBlanc", "LBloom", "BFleur", "CMusk", "PViolet", "HGreen"]
             for (let incense of incense_list) {
