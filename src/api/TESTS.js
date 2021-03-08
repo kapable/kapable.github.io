@@ -1133,7 +1133,7 @@ var TESTS = [
             },
         ]
     },
-    // persoanlColor in English
+    // persoanlColor in Spanish
     {
         info : {
             mainTitle:"Testeo de colores personales",
@@ -1781,7 +1781,7 @@ var TESTS = [
     {
         info : {
             mainTitle:"Personal color test",
-            subTitle:"What is my perosnal color test?",
+            subTitle:"What is my perosnal color?",
             mainUrl:"personalColorEng",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalColorEng-intro.png",
@@ -1790,23 +1790,23 @@ var TESTS = [
         questions:[
             {
                 which:"EI",
-                question: 'How do you behave in front of your friends?',
+                question: 'What am I to my first-time friends?',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: 'I talk to them first.'
+                        content: 'I speak to others first.'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: 'Most of the time, other friends talk to me first.'
+                        content: 'Most of the time, the other friend speaks to you first.'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "What do you enjoy doing on the weekend?",
+                question: "What do I do during the weekend?",
                 answers:[
                     {
                         type: "E",
@@ -1816,167 +1816,167 @@ var TESTS = [
                     {
                         type: "I",
                         score: 5,
-                        content: "I'd rather stay home."
+                        content: "I don't hate being alone."
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "What kind of atmosphere do you like when you play with your friends?",
+                question: "What do I do when playing with my friends?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "I like a noisy and exciting atmosphere."
+                        content: "I like the chatty and exciting atmosphere."
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "I like to have conversations with a few friends in a calm atmosphere."
+                        content: "I like to have small conversations with a small number of friends."
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "What is more important to you?",
+                question: "What do I think more important?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "Without the present,\nthere is no future."
+                        content: "No present, no future."
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "If I don't think about the future, there will be no progress."
+                        content: "No preparation for the future, no progress."
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "What situations are comfortable for you when you work?",
+                question: "What do I do when working?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "It's better to follow what others do."
+                        content: "It is good to follow what others do."
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "It's better to make my own way."
+                        content: "It's good to go on your own way."
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "What do people around you say about you?",
+                question: "What are the others say to me?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "I often hear that I am consistent and patient."
+                        content: "They often say that I am persistent and patient."
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "I often hear that I'm creative."
+                        content: "They often say that I am creative and unique."
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "How do you tell someone no?",
+                question: "What if I have to refuse?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "I firmly tell them no."
+                        content: "I strongly say I can't do it."
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "I gently decline after thinking about it."
+                        content: "I tend to accept most of what they ask after a little hesitation."
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "How do you behave when you're angry?",
+                question: "What if I am angry?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "I argue while talking logically."
+                        content: "I speak logically and argue."
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "I have a lot to say,\nbut I'm so angry that I'm tearing up."
+                        content: "I have a lot to say,\nbut I am so angry that I start to tear up."
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "Your friend is complaining about their problems,\nyou think it's their fault.\nHow do you tell them?",
+                question: "My friend talks about his worries.\nSeems to me, it's fault.\nThen, what is my response?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "I tell my friend it's their fault."
+                        content: "Tell the friend it is his fault."
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "I worry my friend will get mad if I speak bluntly."
+                        content: "Saying it directly may hurt his mind.\nI will tell him beating around the bush. "
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "How do you prepare for a project?",
+                question: "When do I do when preparing the supplies?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "I prepare a day in advance."
+                        content: "Prepare in advance a day before."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "I prepare last minute, but I wanted to do it yesturday."
+                        content: "'I will prepare them tomorrow'\nbut I frequent forget and leave behind."
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "You were going to go home and study,\nbut your friend wants to study together.\nHow do you react?",
+                question: "After school, I want go home and study,\nbut my friends catch me up to play. Then?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "It will ruin my plans...I'm can't."
+                        content: "It wasn't in the plan...\nVery embarrassing."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "Ok! Life doesn't go as planned! Let's go!!!"
+                        content: "Okay! After all, life doesn't go as planned!\nLet's play!!!"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "You're on vacation, how do you start the day?",
+                question: "In general, who am I?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "I make a list of all the things I want to do then do them!"
+                        content: "As I planned! I like to go through the order of things I made!"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "I do what comes to mind when I think of it!\nI like to be flexible!"
+                        content: "I take care of things as I think of!\nI love to be flexible!"
                     },
                 ]
             },
@@ -1988,35 +1988,35 @@ var TESTS = [
                 `,
                 query: "ESTJ",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ESTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ESTJ_.png'
             },
             {
                 type: "ESTP",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "ESTP",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ESTP.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ESTP_.png'
             },
             {
                 type: "ESFJ",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "ESFJ",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ESFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ESFJ_.png'
             },
             {
                 type: "ESFP",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "ESFP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ESFP.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ESFP_.png'
             },
             {
                 type: "ENTJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ENTJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ENTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ENTJ_.png'
             },
             {
                 type: "ENTP",
@@ -2024,42 +2024,42 @@ var TESTS = [
                 `,
                 query: "ENTP",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ENTP.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ENTP_.png'
             },
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "ENFJ",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ENFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ENFJ_.png'
             },
             {
                 type: "ENFP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "ENFP",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ENFP.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ENFP_.png'
             },
             {
                 type: "ISTJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "ISTJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ISTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ISTJ_.png'
             },
             {
                 type: "ISTP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ISTP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ISTP.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ISTP_.png'
             },
             {
                 type: "ISFJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ISFJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ISFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ISFJ_.png'
             },
             {
                 type: "ISFP",
@@ -2067,43 +2067,43 @@ var TESTS = [
                 `,
                 query: "ISFP",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ISFP.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/ISFP_.png'
             },
             {
                 type: "INTJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "INTJ",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/INTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/INTJ_.png'
             },
             {
                 type: "INTP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "INTP",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/INTP.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/INTP_.png'
             },
             {
                 type: "INFJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "INFJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/INFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/INFJ_.png'
             },
             {
                 type: "INFP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "INFP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColorEng/INFP.png'
+                img_src:'https://images.ktestone.com/resultImages/personalColorEng/INFP_.png'
             },
         ]
     },
     // persoanlColor for Japan
     {
         info : {
-            mainTitle:"パーソナルカラーテスト - ケイテスト",
-            subTitle:"私に似合うカラーは何だろう？ パーソナルカラーテスト - ケイテスト",
+            mainTitle:"パーソナルカラー診断_性格編",
+            subTitle:"自分に似合う色は何だろう？ パーソナルカラーテスト - ケイテスト",
             mainUrl:"personalColorJP",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalColorJP-intro.png",
@@ -2112,193 +2112,193 @@ var TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '初めて会う友達に、僕は？',
+                question: '初対面の人とあったときの自分は？',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: '私から先に話しかける。'
+                        content: '自分から声をかける。'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '大半は、\n他の友人が先に声をかける。'
+                        content: 'ほとんどの場合、\nその人から声をかけてくれる。'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "週末の私は？",
+                question: " 週末の過ごし方は？",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "人と会うことを楽しむ。"
+                        content: "よく人と会って過ごす。"
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "一人でいるのは嫌いではない方だ"
+                        content: "一人で過ごすのも嫌いじゃない。"
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "友達と遊ぶ時、僕は？",
+                question: "友達と遊ぶときの自分は？",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "賑やかな雰囲気が好きだ。"
+                        content: "ワイワイと賑やかな雰囲気が好き。"
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "少数の友人とひそひそ話をするのが好きだ."
+                        content: "少人数でのんびりおしゃべりすることが好き。"
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "私がより重要と考えていることは？",
+                question: "自分がより重要だと思う価値観は？",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "現在がなければ未来もない。"
+                        content: "今を生きないと将来もない。"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "未来を考えなければ発展がない。"
+                        content: "将来のことを考えないと成長もない。"
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "仕事をする時、僕は？",
+                question: "仕事するときの自分は？",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "他人のするとおりについて行くのがいい."
+                        content: "人が作ったレールに沿って行きたい。"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "自ら自分だけの方法を作るのがいい。"
+                        content: "自分だけのやり方を作りたい。"
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "周りの人たちが私に言うことは？",
+                question: "周りの人によく言われる言葉は？",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "根気強く、\n我慢強いという言葉をよく口にする。"
+                        content: "着実で忍耐強いとよく言われる。"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "創造的で独創的だとよく言う。"
+                        content: "ユニークで創造的だとよく言われる。"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "断らなければならない状況が来たら、\n僕は？",
+                question: "断らなきゃいけないときはどうする？",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "「協力はできない」と話す。"
+                        content: "できないものはできないと強く言う。"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "悩んだ末\n大半は聞いてあげる。"
+                        content: "悩んだあげく、\nだいたいは聞いてあげる。"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "怒った時、僕は？",
+                question: "怒ったときの自分は？",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "論理的にうまく話しながら問い詰める."
+                        content: "論理的に話しつつ問い詰める。"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "言いたいことはたくさんあるが、\n悔しくて涙が出る。"
+                        content: "言いたいことはたくさんあるけど、\n悔しすぎて涙が出てしまう。"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "悩みを話す友達、\n聞いていると友達の過ちのようだ。\nそういう時、僕は？",
+                question: "友達にお悩み相談をされたけど、\nよくよく聞いたらその友達のせいっぽい。\nそういうときの自分は？",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "友人の過ちを指摘する"
+                        content: "友達の悪いところを指摘Ｓる。"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "直接的に言えば\n友達がそう言うかと思って遠回しに言う."
+                        content: "友達を配慮してオブラートに包んで言ってあげる。"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "準備物を準備する時、僕は？",
+                question: "明日の持ち物を用意するときの自分は？",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "前日に前もって準備する."
+                        content: "前日から前もっと用意しておいく。"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "「明日気を付けよう」と思って、\n忘れて来ることが多い。"
+                        content: "「明日用意しよう」と思って、\nいざ当日になると忘れてしまうことが多い。"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "家に帰って勉強しようと思ったが、\n友達が遊ぼうと引き止めた。 私は？",
+                question: "終わったらお家に帰って勉強しよう、\nと思っていたら友達に遊びに誘われた。\nどうする？",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "計画になかったことなのに…。\n当惑を禁じ得ない。"
+                        content: "計画になかったし、\n非常に困るなぁ。"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "OK！やっぱり計画通りにいかないのが人生！\n遊ぼう！！！！"
+                        content: "オッケー！計画通りにならないのが人生だし！\n遊んじゃおう！"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "私が行きたい旅行地のスタイルは？",
+                question: "おおむね自分はこんな感じです！",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "私が計画した通り！\n計画的に物事を順番通りに進めるのが好きだよ！"
+                        content: "全ては計画したとおり！\n計画通りに物事を進めることが好き。"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "その時その時の思いつく通りに用事をこなす！\n柔軟にするのが好きだ！"
+                        content: "その場の思いつきによって物事を進める。\n柔軟に対応することが好き。"
                     },
                 ]
             },
