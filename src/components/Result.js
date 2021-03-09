@@ -307,7 +307,7 @@ class Result extends Component {
             const body_spray_list = ["LBlanc", "LBloom", "BFleur", "CMusk", "PViolet", "HGreen"]
             for (let incense of incense_list) {
                 if(this.state.current_result === incense) {
-                    let banner_img_src = 'https://images.ktestone.com/resultImages/duftDoft/' + incense + '-back-.png'
+                    let banner_img_src = 'https://images.ktestone.com/resultImages/personalIncense/' + incense + '.jpg'
                     if(body_spray_list.includes(this.state.current_result)){
                         let duft_outlink = "https://bit.ly/386CyuP"
                         return(

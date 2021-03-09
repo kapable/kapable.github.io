@@ -1072,7 +1072,7 @@ var TESTS = [
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "Intensive",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/duftDoft/Intensive.png'
+                img_src:'https://images.ktestone.com/resultImages/duftDoft/intensive.png'
             },
             {
                 type: "ISFJ",
