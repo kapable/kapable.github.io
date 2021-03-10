@@ -65,7 +65,9 @@ class Result extends Component {
     cpcBannerResultFooterScriptor(){
         // Delete Adfit for PPL contents
         let ppl_list = ['personalIncense', 'personalTaro']
-        if( this.state.sharable_url.includes("ktestone.com") && !ppl_list.includes(this.state.current_test)) {
+        console.log(this.state.current_test);
+        console.log(!ppl_list.includes(this.state.current_test));
+        if( this.state.sharable_url.includes("ktestone.com") && (!this.state.sharable_url.includes('personalIncense') && !this.state.sharable_url.includes('personalTaro'))) {
           return(
             <Fragment>
               <ins className="kakao_ad_area" style={{display:"none"}}

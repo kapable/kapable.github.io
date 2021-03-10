@@ -108,7 +108,10 @@ class Intro extends Component {
         alert("링크가 복사됐어요!");
     }
     cpcBannerIntroFooterScriptor(){
-        if( this.state.quiz_url.includes("ktestone.com")) {
+        let ppl_list = ['personalIncense', 'personalTaro']
+        console.log(this.state.quiz_url);
+        console.log(!ppl_list.includes(this.state.quiz_url));
+        if( this.state.quiz_url.includes("ktestone.com") && (!this.state.quiz_url.includes('personalIncense') && !this.state.quiz_url.includes('personalTaro'))) {
           return(
             <Fragment>
               <ins className="kakao_ad_area" style={{display:"none"}}
