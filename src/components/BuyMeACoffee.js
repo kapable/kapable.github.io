@@ -9,7 +9,7 @@ class BuyMeACoffee extends Component{
 
     render(){
         return(
-              <div style={window.location.href.includes('personalIncense') ? {display: "none"} : {}}>
+              <div style={(window.location.href.includes('personalIncense') || window.location.href.includes('personalTaro')) ? {display: "none"} : {}}>
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
