@@ -109,9 +109,7 @@ class Intro extends Component {
     }
     cpcBannerIntroFooterScriptor(){
         let ppl_list = ['personalIncense', 'personalTaro']
-        console.log(this.state.quiz_url);
-        console.log(!ppl_list.includes(this.state.quiz_url));
-        if( this.state.quiz_url.includes("ktestone.com") && (!this.state.quiz_url.includes('personalIncense') && !this.state.quiz_url.includes('personalTaro'))) {
+        if((this.state.quiz_url.includes("localhost") ||  this.state.quiz_url.includes("ktestone.com")) && (!ppl_list.includes(this.state.current_test.info.mainUrl))) {
           return(
             <Fragment>
               <ins className="kakao_ad_area" style={{display:"none"}}
@@ -131,7 +129,7 @@ class Intro extends Component {
                 <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
           )
-        } else if(this.state.quiz_url.includes("localhost") || this.state.quiz_url.includes("niair.xyz")) {
+        } else if(this.state.quiz_url.includes("niair.xyz")) {
             return(
               <Fragment>
                 {/* 인트로 공유 위 수평 */}

@@ -65,9 +65,7 @@ class Result extends Component {
     cpcBannerResultFooterScriptor(){
         // Delete Adfit for PPL contents
         let ppl_list = ['personalIncense', 'personalTaro']
-        console.log(this.state.current_test);
-        console.log(!ppl_list.includes(this.state.current_test));
-        if( this.state.sharable_url.includes("ktestone.com") && (!this.state.sharable_url.includes('personalIncense') && !this.state.sharable_url.includes('personalTaro'))) {
+        if((this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) && !ppl_list.includes(this.state.current_test)) {
           return(
             <Fragment>
               <ins className="kakao_ad_area" style={{display:"none"}}
@@ -87,7 +85,7 @@ class Result extends Component {
               <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
           )
-        } else if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("niair.xyz")) {
+        } else if(this.state.sharable_url.includes("niair.xyz")) {
             return(
               <Fragment>
                 {/* 결과 푸터 */}
