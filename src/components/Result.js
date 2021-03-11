@@ -302,7 +302,9 @@ class Result extends Component {
         } 
     }
     pplBannerRenderer(){
-        let personalIncenseList = ["personalIncense", "personalIncenseEng", "personalIncenseJP"]
+        let personalIncenseList = ["personalIncense", "personalIncenseEng", "personalIncenseJP"];
+        let personalTaroList = ["personalTaro"];
+        // duft & doft
         if(personalIncenseList.includes(this.state.current_test)){
             const incense_list = ["ACotton", "BabyS", "BFleur", "CF", "CMusk","HGreen", "Intensive", "LBlanc","LBloom", "PBreeze", "PViolet", "SDelight", "SDilicious", "SFlower", "SRose", "Ssoapy"]
             const body_spray_list = ["LBlanc", "LBloom", "BFleur", "CMusk", "PViolet", "HGreen"]
@@ -336,6 +338,26 @@ class Result extends Component {
                     }
                 }
                 
+            }
+
+        // Class 101
+        } else if (personalTaroList.includes(this.state.current_test)){
+            const taro_list = ["00TheFool","01TMagician","02THP","03TEmpress","04TEmperor","05THH","06TLovers","07TChariot","08Strength","09THermit","10Wof","11Justice","14Temperance","17Tstar","19Tsun","20Judgement"]
+            for (let taro of taro_list) {
+                if(this.state.current_result === taro) {
+                    let banner_img_src = 'https://images.ktestone.com/resultImages/personalTaro/' + taro + '_.png'
+                    let taro_outlink = "https://bit.ly/" + taro
+                    return(
+                        <Fragment>
+                            <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={taro_outlink}
+                            className="to-ppl-banner-text"
+                            > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                        </Fragment>
+                    )
+                }
             }
         }
     }
