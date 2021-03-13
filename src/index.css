@@ -77,33 +77,13 @@ body {
   cursor: pointer;
 }
 
-.start-btn {
-  height: 3.5em;
-  width: 20rem;
-}
-
 .test-intro-with-friend {
   margin: 1.5rem auto 1rem;
   font-family: var(--title-font);
 }
 
-.test-intro-with-friend-btn {
-  height: 6rem;
-  width: auto;
-  background-color: var(--bg-color);
-  border-color: var(--bg-color);
-}
-
-.test-intro-with-friend-btn:focus,
-.test-intro-with-friend-btn:active,
-.test-intro-with-friend-btn:visited,
-.test-intro-with-friend-btn:hover {
-  outline: none;
-  outline-offset: none;
-  box-shadow: none;
-  background-color: var(--bg-color);
-  border-color: var(--bg-color);
-  color: var(--font-color);
+.test-intro-with-friend-img {
+  cursor: pointer;
 }
 
 .test-intro-to-main-img {
@@ -145,7 +125,8 @@ body {
 
 .option-btn:focus,
 .option-btn:active,
-.option-btn:visited {
+.option-btn:visited,
+.option-btn:hover {
   outline: none;
   outline-offset: none;
   box-shadow: none;
@@ -160,6 +141,7 @@ body {
 }
 
 .option-btn {
+  background-color: var(--bg-color);
   font-family: var(--content-font);
   font-weight: bolder;
   font-size: 0.8rem;
@@ -168,6 +150,7 @@ body {
   margin: 0.5em;
   word-break: keep-all;
   white-space: pre-line;
+  cursor: pointer;
 }
 
 .question-progress {
@@ -347,23 +330,8 @@ body {
   margin: 1rem 0rem 0rem;
 }
 
-.share-btn {
-  height: 6rem;
-  width: auto;
-  background-color: var(--bg-color);
-  border-color: var(--bg-color);
-}
-
-.share-btn:focus,
-.share-btn:active,
-.share-btn:visited,
-.share-btn:hover {
-  outline: none;
-  outline-offset: none;
-  box-shadow: none;
-  background-color: var(--bg-color);
-  border-color: var(--bg-color);
-  color: var(--font-color);
+.share-btn-img {
+  cursor: pointer;
 }
 
 .re-test-btn {

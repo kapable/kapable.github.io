@@ -4,7 +4,7 @@ import TESTS from '../api/TESTS'
 import BuyMeACoffee from './BuyMeACoffee'
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import App from '../App'
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import COPYBTN from '../api/DefaultImg/result-copy-link-btn.png';
 import AGAINBTN from '../api/DefaultImg/result-to-again-btn.png';
@@ -505,14 +505,12 @@ class Result extends Component {
                         <h5 className="share-title">친구에게 공유하기</h5>
                         <div className="share">
                             <CopyToClipboard text={this.state.sharable_url+'/'}>
-                                <Button className="share-btn">
-                                    <img
-                                        src={COPYBTN}
-                                        onClick={this._onShareButtonClick}
-                                        className="share-btn-img"
-                                        alt="링크 복사"
-                                        />
-                                </Button>
+                                <img
+                                    src={COPYBTN}
+                                    onClick={this._onShareButtonClick}
+                                    className="share-btn-img"
+                                    alt="링크 복사"
+                                    />
                             </CopyToClipboard>
                         </div>
                         <div className="re-test-btn">

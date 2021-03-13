@@ -8,7 +8,6 @@ import StoryTelling from './StoryTelling'
 import BuyMeACoffee from './BuyMeACoffee'
 import TESTS from '../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
 import Typist from 'react-typist';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Helmet } from 'react-helmet';
@@ -398,13 +397,11 @@ class Intro extends Component {
 
                 <div className="test-intro-with-friend">
                     <CopyToClipboard text={this.state.quiz_url+'/'}>
-                        <Button className="test-intro-with-friend-btn">
-                            <img
-                                src={COPYBTN}
-                                className="test-intro-with-friend-img"
-                                onClick={this._onShareButtonClick}
-                                alt="테스트 링크 복사"/>
-                        </Button>
+                        <img
+                            src={COPYBTN}
+                            className="test-intro-with-friend-img"
+                            onClick={this._onShareButtonClick}
+                            alt="테스트 링크 복사"/>
                     </CopyToClipboard>
                 </div>
                 <div className="test-intro-to-main">
