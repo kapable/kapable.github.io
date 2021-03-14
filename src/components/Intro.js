@@ -599,7 +599,7 @@ class Intro extends Component {
     lodingPageRender(){
         return(
             <div className="loading-upper">
-                <Loading />
+                <Loading test={this.state.current_test.info.mainUrl}/>
                 {setTimeout(function(){
                     this.setState({mode:"result"})
                 }.bind(this), 4700)}
