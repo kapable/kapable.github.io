@@ -76,7 +76,7 @@ class Intro extends Component {
         if(ppl_list.includes(this.props.test)){
             var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
             var now = Date.now();
-            var tenSec = 10 * 200; // added time is critical
+            var tenSec = 10 * 90; // added time is critical
             var plusTenSec = currentDocumentTimestamp + tenSec;
             if (now > plusTenSec) { window.location.reload(); } else {}
         }
