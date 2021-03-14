@@ -44,6 +44,7 @@ class App extends Component {
       all_tests_result_url:_all_tests_result_url,
       final_render_routes:_final_render_routes,
       sharable_url:_sharable_url,
+      ppl_list:['personalTaro']
     }
   }
   componentDidMount(){
@@ -70,7 +71,7 @@ class App extends Component {
   }
 
   cpcBannerUpperScriptor(){
-    if( this.state.sharable_url.includes("ktestone.com") || this.state.sharable_url.includes("localhost") ) {
+    if((this.state.sharable_url.includes("ktestone.com") || this.state.sharable_url.includes("localhost")) && !window.location.href.split('/').some(que => this.state.ppl_list.includes(que))) { // for blocking Adfit banner with page refreshing for PPL
       return(
         <Fragment>
           <ins className="kakao_ad_area" style={{display:"none"}}
@@ -102,7 +103,7 @@ class App extends Component {
   }
 
   cpcBannerFooterScriptor(){
-    if(this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) {
+    if((this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) && !window.location.href.split('/').some(que => this.state.ppl_list.includes(que))) { // for blocking Adfit banner with page refreshing for PPL
       return(
         <Fragment>
           <ins className="kakao_ad_area" style={{display:"none"}}
@@ -134,33 +135,6 @@ class App extends Component {
              data-full-width-responsive="true"></ins>
         </Fragment>
       )
-    }
-  }
-
-  buyMeACoffeeBtn(){
-    if (window.location.href.includes("personalIncense")){
-      return(null);
-    } else {
-      return(
-        <div>
-          <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.buymeacoffee.com/ktestone"
-              className="to-buymeacoffee-link"
-          ><button
-              className="to-buymeacoffee-btn">
-                Buy Me A Coffee, Click!
-            </button>
-          </a>
-        </div>
-      )
-    }
-  }
-
-  privateRoute(){
-    if (window.location.href.includes("index.html")){
-
     }
   }
 
@@ -232,12 +206,8 @@ class App extends Component {
       {/* CPC Banner footer */}
       {this.cpcBannerFooterScriptor()}
 
-      {/* BMAF Button */}
-      {/* {this.buyMeACoffeeBtn()} */}
-
       {/* footer */}
       <div className="intro-footer">
-          {/* <p>MAKER - 케이테스트</p> */}
           <h5>광고 및 후원 문의<br></br>Advertising and Sponsorship Contact</h5>
           <p>soumy21@naver.com</p>
           <p>Disclaimer:<br></br>All content is provided for fun and entertainment purposes only</p>

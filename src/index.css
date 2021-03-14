@@ -113,6 +113,7 @@ body {
 .question-p {
   /* white space for line break */
   white-space: pre-line;
+  font-size: 1.2rem;
 }
 
 .option-btn-div {
@@ -266,6 +267,7 @@ body {
 
 .result-title {
   font-family: var(--title-font);
+  font-size: 1.2rem;
 }
 
 .result-p {
@@ -320,6 +322,7 @@ body {
 
 .share-title {
   font-family: var(--title-font);
+  font-size: 1.2rem;
   margin: 0rem 1rem 1.5rem;
   color: var(--font-color);
 }

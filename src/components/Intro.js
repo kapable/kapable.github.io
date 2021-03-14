@@ -70,14 +70,24 @@ class Intro extends Component {
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
         this._eventSenderGA = this._eventSenderGA.bind(this);
     }
-
+    reloadPage() {
+        // for blocking Adfit banner with page refreshing for PPL
+        let ppl_list = ['personalTaro']
+        if(ppl_list.includes(this.props.test)){
+            var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
+            var now = Date.now();
+            var tenSec = 10 * 200; // added time is critical
+            var plusTenSec = currentDocumentTimestamp + tenSec;
+            if (now > plusTenSec) { window.location.reload(); } else {}
+        }
+    }
     componentDidMount(){
         // if condition for Adsense domain
         if(this.state.quiz_url.includes("niair.xyz")){
             if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
         }
     }
-
+    
     _eventSenderGA(category, action, label){
         ReactGA.event({
             category: category,
@@ -354,64 +364,69 @@ class Intro extends Component {
         let _thumbImage = this.state.current_test.info.mainImage;
 
         return (
-            <div className="intro container">
-                <Helmet>
-                    {/* <!-- Primary Meta Tags --> */}
-                    <title>{this.state.current_test.info.mainTitle}-케이테스트</title>
-                    <meta name="title" content={this.state.current_test.info.mainTitle+'-케이테스트'}/>
-                    <meta name="description" content={this.state.current_test.info.subTitle} data-react-helmet="true"/>
-                    <link rel="main-url" href={this.state.quiz_url}/>
+            <Fragment>
+                {/* for blocking Adfit banner with page refreshing for PPL */}
+                {this.reloadPage()}
 
-                    {/* <!-- Open Graph / Facebook --> */}
-                    <meta property="og:type" content="website"/>
-                    <meta property="og:url" content={this.state.quiz_url}/>
-                    <meta property="og:title" content={this.state.current_test.info.mainTitle}/>
-                    <meta property="og:description" content={this.state.current_test.info.subTitle}/>
-                    <meta property="og:image" content={this.state.current_test.info.mainImage}/>
-                    <meta property="og:image:alt" content={this.state.current_test.info.mainTitle} />
+                <div className="intro container">
+                    <Helmet>
+                        {/* <!-- Primary Meta Tags --> */}
+                        <title>{this.state.current_test.info.mainTitle}-케이테스트</title>
+                        <meta name="title" content={this.state.current_test.info.mainTitle+'-케이테스트'}/>
+                        <meta name="description" content={this.state.current_test.info.subTitle} data-react-helmet="true"/>
+                        <link rel="main-url" href={this.state.quiz_url}/>
 
-                    {/* <!-- Twitter --> */}
-                    <meta property="twitter:card" content="summary_large_image"/>
-                    <meta property="twitter:url" content={this.state.quiz_url}/>
-                    <meta property="twitter:title" content={this.state.current_test.info.mainTitle}/>
-                    <meta property="twitter:description" content={this.state.current_test.info.subTitle}/>
-                    <meta property="twitter:image" content={this.state.current_test.info.mainImage}/>
-                    <meta property="twitter:image:alt" content={this.state.current_test.info.mainTitle} />
-                </Helmet>
-                <img
-                    className="intro-main-img"
-                    onClick={this._onStartButtonClick}
-                    src={_thumbImage}
-                    alt={_mainTitle + '|' + _subTitle}/>
-                {this.personalColorLinkRenderer()}
-                {this.personalIncenseLinkRenderer()}
-                <Typist className="start-btn-participants">
-                    현재까지 총 {this.state.participants}명이 참여했어요.
-                </Typist>
+                        {/* <!-- Open Graph / Facebook --> */}
+                        <meta property="og:type" content="website"/>
+                        <meta property="og:url" content={this.state.quiz_url}/>
+                        <meta property="og:title" content={this.state.current_test.info.mainTitle}/>
+                        <meta property="og:description" content={this.state.current_test.info.subTitle}/>
+                        <meta property="og:image" content={this.state.current_test.info.mainImage}/>
+                        <meta property="og:image:alt" content={this.state.current_test.info.mainTitle} />
 
-                {/* CPC Banner Intro footer */}
-                {this.cpcBannerIntroFooterScriptor()}
-
-                {/* BMAF Button */}
-                <BuyMeACoffee/>
-
-                <div className="test-intro-with-friend">
-                    <CopyToClipboard text={this.state.quiz_url+'/'}>
-                        <img
-                            src={COPYBTN}
-                            className="test-intro-with-friend-img"
-                            onClick={this._onShareButtonClick}
-                            alt="테스트 링크 복사"/>
-                    </CopyToClipboard>
-                </div>
-                <div className="test-intro-to-main">
+                        {/* <!-- Twitter --> */}
+                        <meta property="twitter:card" content="summary_large_image"/>
+                        <meta property="twitter:url" content={this.state.quiz_url}/>
+                        <meta property="twitter:title" content={this.state.current_test.info.mainTitle}/>
+                        <meta property="twitter:description" content={this.state.current_test.info.subTitle}/>
+                        <meta property="twitter:image" content={this.state.current_test.info.mainImage}/>
+                        <meta property="twitter:image:alt" content={this.state.current_test.info.mainTitle} />
+                    </Helmet>
                     <img
-                        className="test-intro-to-main-img"
-                        src={BACKBTN}
-                        onClick={this._onMainButtonClick}
-                        alt="다른 테스트 하러 뒤로가기"/>
+                        className="intro-main-img"
+                        onClick={this._onStartButtonClick}
+                        src={_thumbImage}
+                        alt={_mainTitle + '|' + _subTitle}/>
+                    {this.personalColorLinkRenderer()}
+                    {this.personalIncenseLinkRenderer()}
+                    <Typist className="start-btn-participants">
+                        현재까지 총 {this.state.participants}명이 참여했어요.
+                    </Typist>
+
+                    {/* CPC Banner Intro footer */}
+                    {this.cpcBannerIntroFooterScriptor()}
+
+                    {/* BMAF Button */}
+                    <BuyMeACoffee/>
+
+                    <div className="test-intro-with-friend">
+                        <CopyToClipboard text={this.state.quiz_url+'/'}>
+                            <img
+                                src={COPYBTN}
+                                className="test-intro-with-friend-img"
+                                onClick={this._onShareButtonClick}
+                                alt="테스트 링크 복사"/>
+                        </CopyToClipboard>
+                    </div>
+                    <div className="test-intro-to-main">
+                        <img
+                            className="test-intro-to-main-img"
+                            src={BACKBTN}
+                            onClick={this._onMainButtonClick}
+                            alt="다른 테스트 하러 뒤로가기"/>
+                    </div>
                 </div>
-            </div>
+            </Fragment>
         );
     }
 
