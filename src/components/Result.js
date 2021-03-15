@@ -345,7 +345,7 @@ class Result extends Component {
             const taro_list = ["00TheFool","01TMagician","02THP","03TEmpress","04TEmperor","05THH","06TLovers","07TChariot","08Strength","09THermit","10Wof","11Justice","14Temperance","17Tstar","19Tsun","20Judgement"]
             for (let taro of taro_list) {
                 if(this.state.current_result === taro) {
-                    let banner_img_src = 'https://images.ktestone.com/resultImages/personalTaro/' + taro + '_.png'
+                    let banner_img_src = 'https://images.ktestone.com/resultImages/personalTaro/' + taro + 'B.png'
                     let taro_outlink = "https://bit.ly/" + taro
                     return(
                         <Fragment>
