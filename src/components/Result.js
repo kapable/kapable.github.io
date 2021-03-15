@@ -412,6 +412,7 @@ class Result extends Component {
             // meta tag for PPL test contents
             let ppl_list = ['personalTaro']
             if(ppl_list.includes(this.state.current_test)) {
+                let og_img_url = "https://images.ktestone.com/meta/" + this.state.current_test + "/" + this.state.current_result + ".png"
                 return (
                     <Fragment>
                         <Helmet>
@@ -426,7 +427,9 @@ class Result extends Component {
                             <meta property="og:url" content={this.state.sharable_url}/>
                             <meta property="og:title" content={test_current+'-케이테스트'}/>
                             <meta property="og:description" content={final_desc + ':' + desc_test_current}/>
-                            <meta property="og:image" content={img_src}/>
+                            <meta property="og:image" content={og_img_url}/>
+                            <meta property="og:image:width" content="800"/>
+                            <meta property="og:image:height" content="400"/>
                             <meta property="og:image:alt" content={this.state.current_result} />
     
                             {/* <!-- Twitter --> */}
@@ -434,7 +437,9 @@ class Result extends Component {
                             <meta property="twitter:url" content={this.state.sharable_url}/>
                             <meta property="twitter:title" content={test_current+'-케이테스트'}/>
                             <meta property="twitter:description" content={final_desc + ':' + desc_test_current}/>
-                            <meta property="twitter:image" content={img_src}/>
+                            <meta property="twitter:image" content={og_img_url}/>
+                            <meta property="og:image:width" content="800"/>
+                            <meta property="og:image:height" content="400"/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
                         <img src={img_src} className='result-img' alt={final_type} />
