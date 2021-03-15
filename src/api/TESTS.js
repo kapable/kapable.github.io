@@ -6647,7 +6647,7 @@ var TESTS = [
     {
         info : {
             mainTitle:"퍼스널 타로 테스트",
-            subTitle:"타로로 보는 요즘 나의 스트레스는?",
+            subTitle:"타로보고 스트레스 해소법 찾자!",
             mainUrl:"personalTaro",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalTaro-intro.png",
@@ -6850,43 +6850,42 @@ var TESTS = [
         results:[
             {
                 type: "ISTJ",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
-                `,
+                desc: `은둔자`,
                 query: "09THermit",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/09THermit.png'
             },
             {
                 type: "ESFP",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `별`,
                 query: "17Tstar",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/17TStar.png'
             },
             {
                 type: "ENFP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `마법사`,
                 query: "01TMagician",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/01TMagician.png'
             },
             {
                 type: "INTJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `황제`,
                 query: "04TEmperor",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/04TEmperor.png'
             },
             {
                 type: "ISTP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `운명의 수레바퀴`,
                 query: "10Wof",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/10WOF.png'
             },
             {
                 type: "ESFJ",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `절제’ \n
                 `,
                 query: "14Temperance",
                 score_range:range(26),
@@ -6894,28 +6893,28 @@ var TESTS = [
             },
             {
                 type: "ENFJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `힘`,
                 query: "08Strength",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/08Strength.png'
             },
             {
                 type: "INFP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `태양`,
                 query: "19Tsun",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/19TSun.png'
             },
             {
                 type: "ISFJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `여황제`,
                 query: "03TEmpress",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/03TEmpress.png'
             },
             {
                 type: "ESTP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `어릿광대`,
                 query: "00TheFool",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/00TheFool.png'
@@ -6923,7 +6922,7 @@ var TESTS = [
             {
                 type: "INFJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "02THP",
+                query: "여사제",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/02THP.png'
             },
@@ -6931,34 +6930,34 @@ var TESTS = [
                 type: "ENTP",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "06TLovers",
+                query: "연인",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/06TLovers.png'
             },
             {
                 type: "ESTJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "05THH",
+                query: "교황",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/05THH.png'
             },
             {
                 type: "ISFP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "11Justice",
+                query: "정의",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/11Justice.png'
             },
             {
                 type: "INTP",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `심판`,
                 query: "20Judgement",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/20Judgement.png'
             },
             {
                 type: "ENTJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `전차`,
                 query: "07TChariot",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/07TChariot.png'
