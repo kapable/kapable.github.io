@@ -6885,8 +6885,7 @@ var TESTS = [
             },
             {
                 type: "ESFJ",
-                desc: `절제’ \n
-                `,
+                desc: `절제`,
                 query: "14Temperance",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/14Temperance.png'
@@ -6921,30 +6920,29 @@ var TESTS = [
             },
             {
                 type: "INFJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "여사제",
+                desc: `여사제`,
+                query: "02THP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/02THP.png'
             },
             {
                 type: "ENTP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
-                `,
-                query: "연인",
+                desc: `연인`,
+                query: "06TLovers",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/06TLovers.png'
             },
             {
                 type: "ESTJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "교황",
+                desc: `교황`,
+                query: "05THH",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/05THH.png'
             },
             {
                 type: "ISFP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "정의",
+                desc: `정의`,
+                query: "11Justice",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/personalTaro/11Justice.png'
             },
