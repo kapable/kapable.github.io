@@ -1452,6 +1452,328 @@ var TESTS = [
             },
         ]
     },
+    // persoanlColor in Arabian
+    {
+        info : {
+            mainTitle:"اختبار الألوان الرئيسي - لوحة الشخصيات",
+            subTitle:"ما هو اللون المناسب لي؟",
+            mainUrl:"personalColorArb",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/personalColorArb-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorArb-thumb.png"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'كيف أكون بالنسبة لشخص أقابله للمرة الأولى؟',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'عادة ما ابدأ أنا الحديث أولا'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'عادة ما يبدأ الشخص الآخر الحديث أولا'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "كيف أكون في عطلات نهاية الأسبوع؟",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "أستمتع بمقابلة الآخرين"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "لا أكره البقاء وحدي"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "كيف أكون وأنا ألعب مع أصدقائي؟",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "أحب الأجواء الصاخبة الحماسية"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "أحب المحادثات الصغيرة مع عدد قليل من الأصدقاء"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "ما هو الشيء الأكثر أهمية بالنسبة لي؟",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "بدون حاضر، لا مستقبل"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "إذا لم أفكر في المستقبل لن أتطور"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "كيف أكون أثناء العمل؟",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "أحب وضع طريقة خاصة بي بنفسي"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "أفضل اتباع ما يفعله الآخرون"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "ماذا يقول الآخرون لي؟",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "أنني مثابر وصبور"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "أنني مبدع وفريد"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "عندما يتعين علي رفض شيء ما؟",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "أرفض بقوة"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "عادة ما أقبل بعد تفكير"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "ماذا أفعل عندما أغضب؟",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "أفند الموقف مع الحديث على نحو منطقي"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "عادة ما أبدأ في البكاء لشدة غضبي، مع أنني أرغب في قول الكثير"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "صديقي يحدثني عن شيء يقلقه،وعلى ما يبدو  هو من أخطأ، ماذا أفعل؟",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "أخبره بالنقطة التي أخطأ بها"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "إذا أخبرته بشكل مباشر قد أجرحه، لذا أخبره بشكل غير مباشر"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "عند تحضير بعض الاحتياجات ماذا أفعل؟",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "أحضر ما أحتاجه قبل يوم"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "أقول 'سأحضرها غدا'، ولكن عادة ما أنسى"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "بعد المدرسة كنت أنوي الذهاب إلى البيت للدراسة، ولكن أصدقائي يلحون علي لألعب معهم، أنا؟",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "هذا أمر لم أكن أخطط له... هذا الموقف يثير ارتباكي."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "حسنا، كما هو متوقع الحياة لا تسير وفقا لما هو مخطط لها! فلنلعب!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "بشكل عام، أنا؟",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "أحب ممارسة الأمور وفقا لما هو مخطط له، وبالترتيب المخطط له"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "أتمم الأمور عندما أتذكرها! أحب العمل بمرونة"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorArb/INFP.png'
+            },
+        ]
+    },
     // persoanlColor in Spanish
     {
         info : {
