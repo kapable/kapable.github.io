@@ -614,8 +614,8 @@ class Intro extends Component {
 
         return(
             <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
-                <Route path={this.state.result_url+final_score_query} component={Result}/>
-                <Redirect to={this.state.result_url+final_score_query} />
+                <Route path={this.state.result_url+final_score_query + '/'} component={Result}/>
+                <Redirect to={this.state.result_url+final_score_query + '/'} />
             </Router>
         )
     }
