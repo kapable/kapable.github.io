@@ -23,6 +23,325 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // personalTaro
+    {
+        info : {
+            mainTitle:"퍼스널 타로 테스트",
+            subTitle:"타로보고 스트레스 해소법 찾자!",
+            mainUrl:"personalTaro",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/personalTaro-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalTaro-thumb.png"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '사람들과 있을 때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '스트레스 풀리는 느낌!\n완전 재밌고 에너지 충전 완료!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '노는 건 좋지만 너무 많은 사람들이 있으면 기 빨린다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "회의를 할 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "‘일단 계속 말해봐 그 중에 하나는 건지겠지’\n생각 나는 대로 말한다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "‘ 마냥 말하기만 하는 건 의미 없어‘\n한참 고민 후 그 중 제일 나은 아이디어로 말한다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "더 스트레스 받는 상황은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "내내 집에만 있어야 할 때"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "사람들이 많은 곳에 있어야 할 때"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "둘 중 한 과목만 들을 수 있다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "정확한 답이 정해져 있는 수학과목"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "감정에 초점을 맞춘 국어과목"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "사생대회에 참가했다 나는?",
+                answers:[
+                    {
+                        type: "N",
+                        score: 2,
+                        content: "상상력을 발휘한 그림"
+                    },
+                    {
+                        type: "S",
+                        score: 5,
+                        content: "눈에 보이는 장면이나 사물 그림"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "무언갈 배우고 싶은 욕구가 뿜뿌~ 어떤 배움일까?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "현재 내가 부족한 부분을 채울 수 있는 배움"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "훗날 나에게 도움이 될 것 같은 배움"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "회사에서는",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "일만 잘 하면 되는 것이다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "일도 일이지만 팀내 의사소통도 잘 해야 하는 것이다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "‘나 그림 그리려고 아이패드 샀어’\n라는 말에 제일 먼저 나오는 말은?",
+                answers:[
+                    {
+                        type: "F",
+                        score: 2,
+                        content: "올~~~ 플렉스 해버렸네~"
+                    },
+                    {
+                        type: "T",
+                        score: 5,
+                        content: "프로? 에어?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "나 요즘 스트레스 받아서 취미생활을 시작해보려고",
+                answers:[
+                    {
+                        type: "F",
+                        score: 2,
+                        content: "잉...? 뭐 때문에 스트레스 받는데...?"
+                    },
+                    {
+                        type: "T",
+                        score: 5,
+                        content: "에? 취미생활이랑 스트레스랑 뭔 상관이야...?\n그거 하면 나아지나...?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "평소 나의 일 스타일은?",
+                answers:[
+                    {
+                        type: "F",
+                        score: 2,
+                        content: "전체적인 틀을 세우고 신속하게 바로 시작"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "뭘 해야 하는 건지 조사하고 계획 잡고 시작"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "오늘 안에 다하기로 마음먹은 과제를 못했다.\n(과제 마감일은 아직 많이 남은 상태)",
+                answers:[
+                    {
+                        type: "P",
+                        score: 2,
+                        content: "뭐, 내일 하면 되겠지"
+                    },
+                    {
+                        type: "J",
+                        score: 5,
+                        content: "아..망했다... 불안하다... 오늘 안에 했어야 하는데..휴"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "일이 너무 많을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "고민 없이 바로 시작을 한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "뭐 부터 할지 계획부터 짠다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ISTJ",
+                desc: `은둔자`,
+                query: "09THermit",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/09THermit.png'
+            },
+            {
+                type: "ESFP",
+                desc: `별`,
+                query: "17Tstar",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/17TStar.png'
+            },
+            {
+                type: "ENFP",
+                desc: `마법사`,
+                query: "01TMagician",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/01TMagician.png'
+            },
+            {
+                type: "INTJ",
+                desc: `황제`,
+                query: "04TEmperor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/04TEmperor.png'
+            },
+            {
+                type: "ISTP",
+                desc: `운명의 수레바퀴`,
+                query: "10Wof",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/10WOF.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `절제`,
+                query: "14Temperance",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/14Temperance.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `힘`,
+                query: "08Strength",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/08Strength.png'
+            },
+            {
+                type: "INFP",
+                desc: `태양`,
+                query: "19Tsun",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/19TSun.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `여황제`,
+                query: "03TEmpress",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/03TEmpress.png'
+            },
+            {
+                type: "ESTP",
+                desc: `어릿광대`,
+                query: "00TheFool",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/00TheFool.png'
+            },
+            {
+                type: "INFJ",
+                desc: `여사제`,
+                query: "02THP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/02THP.png'
+            },
+            {
+                type: "ENTP",
+                desc: `연인`,
+                query: "06TLovers",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/06TLovers.png'
+            },
+            {
+                type: "ESTJ",
+                desc: `교황`,
+                query: "05THH",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/05THH.png'
+            },
+            {
+                type: "ISFP",
+                desc: `정의`,
+                query: "11Justice",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/11Justice.png'
+            },
+            {
+                type: "INTP",
+                desc: `심판`,
+                query: "20Judgement",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/20Judgement.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `전차`,
+                query: "07TChariot",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalTaro/07TChariot.png'
+            },
+        ]
+    },
     // personalIncenseJP
     {
         info : {
@@ -6640,325 +6959,6 @@ var TESTS = [
                 query: "vmfhwlqzhrfj",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/zipkok/zipkok_vmfhwlqzhrfj.png'
-            },
-        ]
-    },
-    // personalTaro
-    {
-        info : {
-            mainTitle:"퍼스널 타로 테스트",
-            subTitle:"타로보고 스트레스 해소법 찾자!",
-            mainUrl:"personalTaro",
-            scoreType:"typeCountingMBTI",
-            mainImage:"https://images.ktestone.com/introImages/personalTaro-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png"
-        },
-        questions:[
-            {
-                which:"EI",
-                question: '사람들과 있을 때 나는?',
-                answers:[
-                    {
-                        type: "E",
-                        score: 2,
-                        content: '스트레스 풀리는 느낌!\n완전 재밌고 에너지 충전 완료!'
-                    },
-                    {
-                        type: "I",
-                        score: 5,
-                        content: '노는 건 좋지만 너무 많은 사람들이 있으면 기 빨린다.'
-                    },
-                ],
-            },
-            {
-                which:"EI",
-                question: "회의를 할 때 나는?",
-                answers:[
-                    {
-                        type: "E",
-                        score: 2,
-                        content: "‘일단 계속 말해봐 그 중에 하나는 건지겠지’\n생각 나는 대로 말한다."
-                    },
-                    {
-                        type: "I",
-                        score: 5,
-                        content: "‘ 마냥 말하기만 하는 건 의미 없어‘\n한참 고민 후 그 중 제일 나은 아이디어로 말한다."
-                    },
-                ]
-            },
-            {
-                which:"EI",
-                question: "더 스트레스 받는 상황은?",
-                answers:[
-                    {
-                        type: "E",
-                        score: 2,
-                        content: "내내 집에만 있어야 할 때"
-                    },
-                    {
-                        type: "I",
-                        score: 5,
-                        content: "사람들이 많은 곳에 있어야 할 때"
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "둘 중 한 과목만 들을 수 있다면?",
-                answers:[
-                    {
-                        type: "S",
-                        score: 2,
-                        content: "정확한 답이 정해져 있는 수학과목"
-                    },
-                    {
-                        type: "N",
-                        score: 5,
-                        content: "감정에 초점을 맞춘 국어과목"
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "사생대회에 참가했다 나는?",
-                answers:[
-                    {
-                        type: "N",
-                        score: 2,
-                        content: "상상력을 발휘한 그림"
-                    },
-                    {
-                        type: "S",
-                        score: 5,
-                        content: "눈에 보이는 장면이나 사물 그림"
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "무언갈 배우고 싶은 욕구가 뿜뿌~ 어떤 배움일까?",
-                answers:[
-                    {
-                        type: "S",
-                        score: 2,
-                        content: "현재 내가 부족한 부분을 채울 수 있는 배움"
-                    },
-                    {
-                        type: "N",
-                        score: 5,
-                        content: "훗날 나에게 도움이 될 것 같은 배움"
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: "회사에서는",
-                answers:[
-                    {
-                        type: "T",
-                        score: 2,
-                        content: "일만 잘 하면 되는 것이다."
-                    },
-                    {
-                        type: "F",
-                        score: 5,
-                        content: "일도 일이지만 팀내 의사소통도 잘 해야 하는 것이다."
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: "‘나 그림 그리려고 아이패드 샀어’\n라는 말에 제일 먼저 나오는 말은?",
-                answers:[
-                    {
-                        type: "F",
-                        score: 2,
-                        content: "올~~~ 플렉스 해버렸네~"
-                    },
-                    {
-                        type: "T",
-                        score: 5,
-                        content: "프로? 에어?"
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: "나 요즘 스트레스 받아서 취미생활을 시작해보려고",
-                answers:[
-                    {
-                        type: "F",
-                        score: 2,
-                        content: "잉...? 뭐 때문에 스트레스 받는데...?"
-                    },
-                    {
-                        type: "T",
-                        score: 5,
-                        content: "에? 취미생활이랑 스트레스랑 뭔 상관이야...?\n그거 하면 나아지나...?"
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: "평소 나의 일 스타일은?",
-                answers:[
-                    {
-                        type: "F",
-                        score: 2,
-                        content: "전체적인 틀을 세우고 신속하게 바로 시작"
-                    },
-                    {
-                        type: "P",
-                        score: 5,
-                        content: "뭘 해야 하는 건지 조사하고 계획 잡고 시작"
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: "오늘 안에 다하기로 마음먹은 과제를 못했다.\n(과제 마감일은 아직 많이 남은 상태)",
-                answers:[
-                    {
-                        type: "P",
-                        score: 2,
-                        content: "뭐, 내일 하면 되겠지"
-                    },
-                    {
-                        type: "J",
-                        score: 5,
-                        content: "아..망했다... 불안하다... 오늘 안에 했어야 하는데..휴"
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: "일이 너무 많을 때 나는?",
-                answers:[
-                    {
-                        type: "J",
-                        score: 2,
-                        content: "고민 없이 바로 시작을 한다."
-                    },
-                    {
-                        type: "P",
-                        score: 5,
-                        content: "뭐 부터 할지 계획부터 짠다."
-                    },
-                ]
-            },
-        ],
-        results:[
-            {
-                type: "ISTJ",
-                desc: `은둔자`,
-                query: "09THermit",
-                score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/09THermit.png'
-            },
-            {
-                type: "ESFP",
-                desc: `별`,
-                query: "17Tstar",
-                score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/17TStar.png'
-            },
-            {
-                type: "ENFP",
-                desc: `마법사`,
-                query: "01TMagician",
-                score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/01TMagician.png'
-            },
-            {
-                type: "INTJ",
-                desc: `황제`,
-                query: "04TEmperor",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/04TEmperor.png'
-            },
-            {
-                type: "ISTP",
-                desc: `운명의 수레바퀴`,
-                query: "10Wof",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/10WOF.png'
-            },
-            {
-                type: "ESFJ",
-                desc: `절제`,
-                query: "14Temperance",
-                score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/14Temperance.png'
-            },
-            {
-                type: "ENFJ",
-                desc: `힘`,
-                query: "08Strength",
-                score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/08Strength.png'
-            },
-            {
-                type: "INFP",
-                desc: `태양`,
-                query: "19Tsun",
-                score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/19TSun.png'
-            },
-            {
-                type: "ISFJ",
-                desc: `여황제`,
-                query: "03TEmpress",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/03TEmpress.png'
-            },
-            {
-                type: "ESTP",
-                desc: `어릿광대`,
-                query: "00TheFool",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/00TheFool.png'
-            },
-            {
-                type: "INFJ",
-                desc: `여사제`,
-                query: "02THP",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/02THP.png'
-            },
-            {
-                type: "ENTP",
-                desc: `연인`,
-                query: "06TLovers",
-                score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/06TLovers.png'
-            },
-            {
-                type: "ESTJ",
-                desc: `교황`,
-                query: "05THH",
-                score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/05THH.png'
-            },
-            {
-                type: "ISFP",
-                desc: `정의`,
-                query: "11Justice",
-                score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/11Justice.png'
-            },
-            {
-                type: "INTP",
-                desc: `심판`,
-                query: "20Judgement",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/20Judgement.png'
-            },
-            {
-                type: "ENTJ",
-                desc: `전차`,
-                query: "07TChariot",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalTaro/07TChariot.png'
             },
         ]
     },
