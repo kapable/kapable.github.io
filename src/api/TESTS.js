@@ -719,7 +719,7 @@ var TESTS = [
             subTitle:"Incense BTI_My Personality reflected by Incense",
             mainUrl:"personalIncenseEng",
             scoreType:"typeCountingMBTI",
-            mainImage:"https://images.ktestone.com/introImages/personalIncenseEng-intro.png",
+            mainImage:"https://images.ktestone.com/introImages/personalFragranceEng-intro.png",
             thumbImage:"https://images.ktestone.com/main-thumbnail/personalIncenseEng-thumb.png"
         },
         questions:[
