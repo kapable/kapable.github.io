@@ -183,7 +183,7 @@ var TESTS = [
                 question: "평소 나의 일 스타일은?",
                 answers:[
                     {
-                        type: "F",
+                        type: "J",
                         score: 2,
                         content: "전체적인 틀을 세우고 신속하게 바로 시작"
                     },
