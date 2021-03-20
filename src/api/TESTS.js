@@ -7284,6 +7284,373 @@ var TESTS = [
             },
         ]
     },
+    // kakaoMobility
+    {
+        info : {
+            mainTitle:"카카오 모빌리티 운전 MBTI",
+            subTitle:"카카오 모빌리티 운전 MBTI",
+            mainUrl:"kakaoMobility",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/test-thumb.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: "차가 있는 데 급 만나자는 친구!",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "오케이 마시다가 대리하는 거지~"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "앗! 오늘은 무리야 차가 있어서~"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "길안내가 의심스러울 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "에이… 별일 있겠어? 믿고 내비대로 간다!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "머야? 오류인가봐!! 내비를 무시하고 내 뜻대로 간다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '나는 어떤 사람?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: '내 차 안의 모든 기능을 다룰 수 있다.'
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: '쓰는 것만 사용한다.'
+                    },
+                ],
+            },
+            {
+                which:"JP",
+                question: "드라이브 가자!",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "드라이브하기 좋은 명소 찾은 후 내비 찍고 이동하기"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "안전운전 키고 일단 운전하며 목적지 정하기"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "차 안에서 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "조용한 건 싫다! 통화하거나,\n신나게 노래 부르면서 탄다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "할 말 미리 준비해두고 전화한다.\n엔진소리를 느끼며 홀로 드라이브를 즐긴다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "운전할 때 끼어드는 차량을 보면",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "아놔..진짜 저@#$%$#!\n누군 안 급한가? 왜 끼어들어?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "오…화장실 마려운 감?\n허허허 많이 급한 가 보군"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "사고가 난 장면을 보고 제일 첫번째로 드는 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "누구의 과실일까 먼저 생각한다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "안 다쳤나?를 먼저 생각한다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내비를 쓰는 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "즐겨찾기에 온갖 맛집,\n여행지 다 저장하는 스타일"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "집, 회사 끝! 정리는 귀찮아~ㅎㅎ"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "차를 고를 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "옵션, 연비, 성능까지 꼼꼼하게 체크해 봐야 지!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "일단 내 마음에 쏙 든다! 이거 지~ 너로 정했다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "앞에 차들이 느릿느릿 갈 때 드는 생각은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "사고 났나? 도로가 공사 중인가?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "아니 앞 차는 뭐하나~~~ 왜 이리 안가는 겨!"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "카풀 할 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "사람만나는 거 완전 짜릿하고 재밌어!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "어우 어색하고 기 빨리는 기분"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나의 차상태는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "깔끔하게 관리한다. 언제나 세차도 정성스럽게…"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "차는 차일 뿐! 청소도 내가 하고싶을 때 한다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "운전 하다가 경미한 사고가 났다는 친구!",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "괜찮아? 보험은 잘 들어 놨지?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "괜찮아? 아고 조심하지ㅜㅜ 다친 곳은?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "운전 알려주라! 라는 친구의 부탁",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "운전 하는 법을 세세하게 옆에서 알려준다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 하면 느는거야~"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나의 여행 스타일은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "계획한 여행이 고생도 안하고 편하고 좋지~"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "가끔은 그냥 훌훌 떠나보자~ 차박도 추억이지~"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ISTJ",
+                desc: `생충이 아빠 기택\n\n“이게 코너링이 아주 기본적이면서도~” 기본적인거 잘하고 운전자 준수 잘 지키는`,
+                query: "todcnddl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "ESFP",
+                desc: `안상구\n\n"아아가서 드라이브 한잔하지" 흥 넘치고 드라이브 좋아하는`,
+                query: "dkstkdrn",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "ENFP",
+                desc: `고반장\n\n“지금까지 이런 초보는 없었다. 이것은 엑셀인가 브레이크인가…?” 몰라도 일단 운전하는 게 즐거운 `,
+                query: "rhqkswkd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "INTJ",
+                desc: `동수\n\n“니가해라. 운전” 고집이 강력한 츤데레`,
+                query: "ehdtn",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "ISTP",
+                desc: `오태시기\n\n꼭 그렇게 운전해야만 속이 후련했냐!?” 끼어드는 차들 때문에 화가나는`,
+                query: "dhxotlrl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "ESFJ",
+                desc: `엽기적인 그녀\n\n“ 여러분~ 미안해요..이렇게 밖에 할 수 없는 나~ 용서해줘~” 운전만 하면 미안한 일 많아지는`,
+                query: "duqrlwjrdls",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "ENFJ",
+                desc: `납득이\n\n“자...운전이라는 건 말이야~..” 입으로는 운전 박사 급`,
+                query: "skqemrdl",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "INFP",
+                desc: `금자씨\n\n“…너나 잘하세요…” 들릴 듯 말듯 소심한 의견 한 스푼,`,
+                query: "rmqwkTl",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "ISFJ",
+                desc: `생충이 아빠 기우\n\n“ 너는 다 계획이 있구나?” 언제 어디로 어떻게 갈지 큰그림 그리는`,
+                query: "rldn",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "ESTP",
+                desc: `곽철용이\n\n“마포대교는 무너졌냐” 내비는 저리가라, 내가 바로 인간 내비`,
+                query: "rhkrcnfdyddl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "INFJ",
+                desc: `차태시기\n\n"아직 1KM 더 남았다" 겉으로는 냉정해보이지만 속으론 따뜻한 놤좌`,
+                query: "ckxotlrl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "ENTP",
+                desc: `정청이\n\n“드루와~ 드루와~들어올 수 있으면 드러와이~!” 끼어들기 절대 안 봐주는`,
+                query: "wjdcjddl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "ESTJ",
+                desc: `형배\n\n“운전대를 잡을 명분이 없다 아임니까 명분이” – 사전 계획 철저하고 냉정한`,
+                query: "gudqo",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "ISFP",
+                desc: `최재현 중위\n\n“ 날 지나가랏..” 여유 넘치는 운전자`,
+                query: "chleogus",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "INTP",
+                desc: `중구\n\n"아~ 운전하기 딱 좋은 날씨다"운전에도 다 논리적인 이유가 있는`,
+                query: "wndrn",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+            {
+                type: "ENTJ",
+                desc: `최익혀니\n\n- “내가 마! 고속타로도 타고! 흐잉?! 다했어 마!” 운전에 대한 자신감이 넘치는`,
+                query: "chldlrgusl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+        ]
+    },
 ]
 
 export default TESTS;
