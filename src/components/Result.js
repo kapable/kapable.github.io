@@ -511,7 +511,7 @@ class Result extends Component {
                     </Fragment>
                 )
             // meta tag for native test contents
-            } else if(this.state.current_test === "kakaoMobility") {
+            } else if(this.state.current_test === "driveTest") {
                 return(
                     <Fragment>
                         <Helmet>
