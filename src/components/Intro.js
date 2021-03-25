@@ -72,7 +72,7 @@ class Intro extends Component {
     }
     reloadPage() {
         // for blocking Adfit banner with page refreshing for PPL
-        let ppl_list = ['personalTaro']
+        let ppl_list = ['personalTaro', 'personalIncense']
         if(ppl_list.includes(this.props.test)){
             var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
             var now = Date.now();
