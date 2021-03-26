@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Intro from './Intro'
 import TESTS from '../api/TESTS'
-import BuyMeACoffee from './BuyMeACoffee'
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import App from '../App'
 import { Card } from 'react-bootstrap';
@@ -635,9 +634,6 @@ class Result extends Component {
 
                     {/* if personalIncense test's Result page for Link Banner */}
                     {this.personalIncenseLinkRenderer()}
-
-                    {/* BMAF Button */}
-                    <BuyMeACoffee/>
 
                     <div className="share">
                         <h5 className="share-title">친구에게 공유하기</h5>

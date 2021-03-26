@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom'
 import MAINHEADER from '../api/DefaultImg/main-header.png'
 import TESTS from '../api/TESTS'
-import BuyMeACoffee from './BuyMeACoffee'
 
 class MainPage extends Component{
     constructor(props){
@@ -31,10 +30,6 @@ class MainPage extends Component{
                         </Link>
                     ))}
                 </div>
-                
-                {/* BMAF Button */}
-                <BuyMeACoffee/>
-
             </Fragment>
             
         )       

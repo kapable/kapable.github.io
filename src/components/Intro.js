@@ -5,7 +5,6 @@ import Loading from './Loading'
 import BirthdayCalc from './BirthdayCalc'
 import DualMbti from './DualMbti'
 import StoryTelling from './StoryTelling'
-import BuyMeACoffee from './BuyMeACoffee'
 import TESTS from '../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
 import Typist from 'react-typist';
@@ -470,9 +469,6 @@ class Intro extends Component {
 
                     {/* CPC Banner Intro footer */}
                     {this.cpcBannerIntroFooterScriptor()}
-
-                    {/* BMAF Button */}
-                    <BuyMeACoffee/>
 
                     <div className="test-intro-with-friend">
                         <CopyToClipboard text={this.state.quiz_url+'/'}>
