@@ -366,44 +366,37 @@ class Result extends Component {
         } 
     }
     pplBannerRenderer(){
-        let personalIncenseList = ["personalIncense", "personalIncenseEng", "personalIncenseJP"];
+        let personalIncenseListGB = ["personalIncenseEng", "personalIncenseJP"];
         let personalTaroList = ["personalTaro"];
-        // duft & doft
-        if(personalIncenseList.includes(this.state.current_test)){
-            const incense_list = ["ACotton", "BabyS", "BFleur", "CF", "CMusk","HGreen", "Intensive", "LBlanc","LBloom", "PBreeze", "PViolet", "SDelight", "SDilicious", "SFlower", "SRose", "Ssoapy"]
-            const body_spray_list = ["LBlanc", "LBloom", "BFleur", "CMusk", "PViolet", "HGreen"]
-            for (let incense of incense_list) {
-                if(this.state.current_result === incense) {
-                    let banner_img_src = 'https://images.ktestone.com/resultImages/personalIncense/' + incense + '.jpg'
-                    if(body_spray_list.includes(this.state.current_result)){
-                        let duft_outlink = "https://bit.ly/386CyuP"
-                        return(
-                            <Fragment>
-                                <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={duft_outlink}
-                                className="to-ppl-banner-text"
-                                > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
-                            </Fragment>
-                        )
-                    } else {
-                        let duft_outlink = "https://bit.ly/2NOBEMQ"
-                        return(
-                            <Fragment>
-                                <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={duft_outlink}
-                                className="to-ppl-banner-text"
-                                > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
-                            </Fragment>
-                        )
-                    }
-                }
-                
-            }
-
+        // duft & doft Eng & JP
+        if(personalIncenseListGB.includes(this.state.current_test)){
+            const duft_outlink = "https://www.amazon.com/DUFT-DOFT-Refreshing-hydration-Feel-good/dp/B07MB55WVK"
+            let oneOrZero = (Math.random()>=0.5)? 1 : 0;
+            const banner_img_src = 'https://images.ktestone.com/resultImages/personalIncense/duftdoft_amz_banner' + oneOrZero + '.jpeg'
+            return(
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={duft_outlink}
+                    className="to-ppl-banner-text"
+                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                </Fragment>
+            )
+        // duft & doft Kor
+        } else if (this.state.current_test === "personalIncense") {
+            const duft_outlink = "http://duftndoft.com/product/project.html?cate_no=697"
+            const banner_img_src = 'https://images.ktestone.com/resultImages/personalIncense/duftdoft_korea_banner.jpeg'
+            return(
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={duft_outlink}
+                    className="to-ppl-banner-text"
+                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                </Fragment>
+            )
         // Class 101
         } else if (personalTaroList.includes(this.state.current_test)){
             const taro_list = ["00TheFool","01TMagician","02THP","03TEmpress","04TEmperor","05THH","06TLovers","07TChariot","08Strength","09THermit","10Wof","11Justice","14Temperance","17Tstar","19Tsun","20Judgement"]
