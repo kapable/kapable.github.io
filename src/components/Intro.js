@@ -151,6 +151,32 @@ class Intro extends Component {
             )
           }
     }
+
+    dringkingHabitLinkRenderer(){
+        if(this.state.current_test.info.mainUrl === "dringkingHabit") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/dringkingHabitEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to English version ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test.info.mainUrl === "dringkingHabitEng") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/dringkingHabit/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                </Fragment>
+            )
+        }
+    }
     
     personalColorLinkRenderer(){
         if(this.state.current_test.info.mainUrl === "personalColor") {
@@ -463,6 +489,7 @@ class Intro extends Component {
                         alt={_mainTitle + '|' + _subTitle}/>
                     {this.personalColorLinkRenderer()}
                     {this.personalIncenseLinkRenderer()}
+                    {this.dringkingHabitLinkRenderer()}
                     <Typist className="start-btn-participants">
                         현재까지 총 {this.state.participants}명이 참여했어요.
                     </Typist>
