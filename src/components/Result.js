@@ -98,6 +98,31 @@ class Result extends Component {
             )
           }
     }
+    dringkingHabitLinkRenderer(){
+        if(this.state.current_test === "dringkingHabit") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/dringkingHabitEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to English version ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test === "dringkingHabitEng") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/dringkingHabit/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                </Fragment>
+            )
+        }
+    }
     personalColorLinkRenderer(){
         if(this.state.current_test === "personalColor") {
             return(
@@ -627,6 +652,9 @@ class Result extends Component {
 
                     {/* if personalIncense test's Result page for Link Banner */}
                     {this.personalIncenseLinkRenderer()}
+
+                    {/* if dringkingHabit test's Result page for Link Banner */}
+                    {this.dringkingHabitLinkRenderer()}
 
                     <div className="share">
                         <h5 className="share-title">친구에게 공유하기</h5>
