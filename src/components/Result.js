@@ -98,6 +98,34 @@ class Result extends Component {
             )
           }
     }
+    newTestLinkRenderer(){
+        let personalColorListGB = ["personalColorEng", "personalColorJP", "personalColorCN", "personalColorES", "personalColorArb"]
+        if(this.state.current_test === "personalColor") {
+            return(
+                <Fragment>
+                    <h3 className="to-peopleColor-test-banner-text">따끈한 신상 테스트</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/dringkingHabit/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 알콜BTI : 술버릇 테스트 ]</a>
+                </Fragment>
+            )
+        } else if(personalColorListGB.includes(this.state.current_test)) {
+            return(
+                <Fragment>
+                    <h3 className="to-peopleColor-test-banner-text">New Test</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/dringkingHabitEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Drinking habits test : Alcohol MBTI ]</a>
+                </Fragment>
+            )
+        }
+    }
     dringkingHabitLinkRenderer(){
         if(this.state.current_test === "dringkingHabit") {
             return(
@@ -650,6 +678,10 @@ class Result extends Component {
 
                     {/* if dringkingHabit test's Result page for Link Banner */}
                     {this.dringkingHabitLinkRenderer()}
+
+                    <div className="new-test" style={{'margin': '2rem'}}>
+                        {this.newTestLinkRenderer()}
+                    </div>
 
                     <div className="share">
                         <h5 className="share-title">친구에게 공유하기</h5>
