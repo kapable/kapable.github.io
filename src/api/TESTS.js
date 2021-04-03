@@ -31,7 +31,7 @@ var TESTS = [
             mainUrl:"dringkingHabitEng",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/dringkingHabitEng-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabitEng-thumg.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabitEng-thumb.png"
         },
         questions:[
             {
