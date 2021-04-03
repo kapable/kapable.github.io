@@ -31,7 +31,7 @@ var TESTS = [
             mainUrl:"dringkingHabitEng",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/dringkingHabitEng-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabitEng-thumg.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabitEng-thumg_.png"
         },
         questions:[
             {
@@ -233,112 +233,112 @@ var TESTS = [
                 desc: `EB`,
                 query: "EB",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/EB.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/EB_.png'
             },
             {
                 type: "ESFP",
                 desc: `BI`,
                 query: "BI",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/BI.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/BI_.png'
             },
             {
                 type: "ENFP",
                 desc: `DES`,
                 query: "DES",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/DES.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/DES_.png'
             },
             {
                 type: "INTJ",
                 desc: `PR`,
                 query: "PR",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/PR.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/PR_.png'
             },
             {
                 type: "ISTP",
                 desc: `CN`,
                 query: "CN",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/CN.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/CN_.png'
             },
             {
                 type: "ESFJ",
                 desc: `HN`,
                 query: "HN",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/HN.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/HN_.png'
             },
             {
                 type: "ENFJ",
                 desc: `BW`,
                 query: "BW",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/BW.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/BW_.png'
             },
             {
                 type: "INFP",
                 desc: `CJ`,
                 query: "CJ",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/CJ.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/CJ_.png'
             },
             {
                 type: "ISFJ",
                 desc: `SG`,
                 query: "SG",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/SG.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/SG_.png'
             },
             {
                 type: "ESTP",
                 desc: `BUW`,
                 query: "BUW",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/BUW.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/BUW_.png'
             },
             {
                 type: "INFJ",
                 desc: `BL`,
                 query: "BL",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/BL.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/BL_.png'
             },
             {
                 type: "ENTP",
                 desc: `ST`,
                 query: "ST",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/ST.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/ST_.png'
             },
             {
                 type: "ESTJ",
                 desc: `PN`,
                 query: "PN",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/PN.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/PN_.png'
             },
             {
                 type: "ISFP",
                 desc: `SS`,
                 query: "SS",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/SS.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/SS_.png'
             },
             {
                 type: "INTP",
                 desc: `GN`,
                 query: "GN",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/GN.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/GN_.png'
             },
             {
                 type: "ENTJ",
                 desc: `BM`,
                 query: "BM",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/BM.png'
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitEng/BM_.png'
             },
         ]
     },
@@ -350,7 +350,7 @@ var TESTS = [
             mainUrl:"dringkingHabit",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/dringkingHabit-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabit-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabit-thumb_.png"
         },
         questions:[
             {
