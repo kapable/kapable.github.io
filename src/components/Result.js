@@ -101,27 +101,29 @@ class Result extends Component {
     newTestLinkRenderer(){
         let personalColorListGB = ["personalColorEng", "personalColorJP", "personalColorCN", "personalColorES", "personalColorArb"]
         if(this.state.current_test === "personalColor") {
+            let banner_img_src = "https://images.ktestone.com/main-thumbnail/dringkingHabit-thumb_.png"
+            let new_test_link = "https://ktestone.com/kapable.github.io/dringkingHabit/"
             return(
                 <Fragment>
-                    <h3 className="to-peopleColor-test-banner-text">따끈한 신상 테스트</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://ktestone.com/kapable.github.io/dringkingHabit/"
+                        href={new_test_link}
                         className="to-personalColorOut-test-banner-text"
-                    >[ 알콜BTI : 술버릇 테스트 ]</a>
+                    ><img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
                 </Fragment>
             )
         } else if(personalColorListGB.includes(this.state.current_test)) {
+            let banner_img_src = "https://images.ktestone.com/main-thumbnail/dringkingHabitEng-thumg_.png"
+            let new_test_link = "https://ktestone.com/kapable.github.io/dringkingHabitEng/"
             return(
                 <Fragment>
-                    <h3 className="to-peopleColor-test-banner-text">New Test</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://ktestone.com/kapable.github.io/dringkingHabitEng/"
+                        href={new_test_link}
                         className="to-personalColorOut-test-banner-text"
-                    >[ Drinking habits test : Alcohol MBTI ]</a>
+                    ><img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
                 </Fragment>
             )
         }
@@ -670,6 +672,10 @@ class Result extends Component {
                         {this.pplBannerRenderer()}
                     </div>
 
+                    <div className="new-test" style={{'margin': '2rem'}}>
+                        {this.newTestLinkRenderer()}
+                    </div>
+
                     {/* if personalColor test's Result page for Link Banner */}
                     {this.personalColorLinkRenderer()}
 
@@ -678,10 +684,6 @@ class Result extends Component {
 
                     {/* if dringkingHabit test's Result page for Link Banner */}
                     {this.dringkingHabitLinkRenderer()}
-
-                    <div className="new-test" style={{'margin': '2rem'}}>
-                        {this.newTestLinkRenderer()}
-                    </div>
 
                     <div className="share">
                         <h5 className="share-title">친구에게 공유하기</h5>

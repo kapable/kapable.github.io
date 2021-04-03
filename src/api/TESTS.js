@@ -31,7 +31,7 @@ var TESTS = [
             mainUrl:"dringkingHabitEng",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/dringkingHabitEng-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabitEng-thumg_.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabitEng-thumg.png"
         },
         questions:[
             {
@@ -350,7 +350,7 @@ var TESTS = [
             mainUrl:"dringkingHabit",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/dringkingHabit-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabit-thumb_.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabit-thumb.png"
         },
         questions:[
             {
