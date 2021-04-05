@@ -23,6 +23,325 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // dringkingHabitJP
+    {
+        info : {
+            mainTitle:"アルコールBTI:酒癖テスト",
+            subTitle:"性格で分かる「酔っ払った私はどんな人なんだろう？'",
+            mainUrl:"dringkingHabitJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/dringkingHabitJP-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabitJP-thumb.png"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'お酒の席で他の友達も呼びたいと友人に聞かれた。\nどうする？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "「全然いいよ、飲みながら仲良くなろうよ！」\nと快諾する。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "「えっ、ちょっと気まずくなりそう…」\nとは思いつつも断れず、渋々了承する。"
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "居酒屋で呼び出しベルを押しても店員さんが来ない。\nどうする？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "すみません！！焼酎一本ください！！！"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "取り敢えずもう一度押して待ってみる。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: " 「今日は絶対飲むぞ！」と思ったときの自分は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "電話で友人を誘う。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "一人で宅飲みを楽しむ。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "お酒の席で友人が「辛いよ」と泣き出したら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "現実的なアドバイスをしてあげる。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "その感情に共感してあげる。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "お家に帰りたいのに「2軒目行こう」と言われたら？",
+                answers:[
+                    {
+                        type: "N",
+                        score: 2,
+                        content: "もーしょうがないな！分かったよ！"
+                    },
+                    {
+                        type: "S",
+                        score: 5,
+                        content: "ごめん、疲れたから帰るわ"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "おつまみを頼むときの自分は？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "新しいおつまみよりは、定番ものを頼む。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "おお！これは何？新しいおつまみ頼んでみようよ!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: " 自分の向かい側の席の友人が、\nお酒に寄って泣き出した。どうする？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "泣いている理由を教えて。言わないと分からないから。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "何かあったのかな？慰めてあげた方がいいのかな…。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "自分の友達が隣のテーブルの人と喧嘩になってしまったが、\n非があるのは友達の方だと思う。",
+                answers:[
+                    {
+                        type: "F",
+                        score: 2,
+                        content: "友達は今怒っているから、落ち着いたら言葉を選んで言う。"
+                    },
+                    {
+                        type: "T",
+                        score: 5,
+                        content: "怒っている友達に、「それでもあなたが悪い」と言い聞かせる。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "他の人にお酒を注ぐときの自分は？",
+                answers:[
+                    {
+                        type: "F",
+                        score: 2,
+                        content: "あなたお酒弱いから、これ一杯だけにしておきな。"
+                    },
+                    {
+                        type: "T",
+                        score: 5,
+                        content: "もー、お酒の前ではみな平等だから。今日は飲もうよ！"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "ずっと行きたかったお店！\nでもすごい行列ができている。",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "とりあえず待とう。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "他の店にする。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "みんなで集まって飲み会！\n自分が幹事になった！",
+                answers:[
+                    {
+                        type: "P",
+                        score: 2,
+                        content: "とりあえず自分が立て替えてから、\n事後集金する。"
+                    },
+                    {
+                        type: "J",
+                        score: 5,
+                        content: "一人2千円の会費を事前徴収しておく。\n残りは後で会計報告する。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "友達からの安否確認メールにどう返信している？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "そうそう〜コロナ終わったら会おうか？"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "いいよ！コロナ終わったら一度会おうよ〜"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ISTJ",
+                desc: `EB`,
+                query: "EB",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/EB.png'
+            },
+            {
+                type: "ESFP",
+                desc: `BI`,
+                query: "BI",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/BI.png'
+            },
+            {
+                type: "ENFP",
+                desc: `DES`,
+                query: "DES",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/DES.png'
+            },
+            {
+                type: "INTJ",
+                desc: `PR`,
+                query: "PR",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/PR.png'
+            },
+            {
+                type: "ISTP",
+                desc: `CN`,
+                query: "CN",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/CN.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `HN`,
+                query: "HN",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/HN.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `BW`,
+                query: "BW",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/BW.png'
+            },
+            {
+                type: "INFP",
+                desc: `CJ`,
+                query: "CJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/CJ.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `SG`,
+                query: "SG",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/SG.png'
+            },
+            {
+                type: "ESTP",
+                desc: `BUW`,
+                query: "BUW",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/BUW.png'
+            },
+            {
+                type: "INFJ",
+                desc: `BL`,
+                query: "BL",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/BL.png'
+            },
+            {
+                type: "ENTP",
+                desc: `ST`,
+                query: "ST",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/ST.png'
+            },
+            {
+                type: "ESTJ",
+                desc: `PN`,
+                query: "PN",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/PN.png'
+            },
+            {
+                type: "ISFP",
+                desc: `SS`,
+                query: "SS",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/SS.png'
+            },
+            {
+                type: "INTP",
+                desc: `GN`,
+                query: "GN",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/GN.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `BM`,
+                query: "BM",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dringkingHabitJP/BM.png'
+            },
+        ]
+    },
     // dringkingHabitEng
     {
         info : {

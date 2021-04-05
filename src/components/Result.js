@@ -138,6 +138,12 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/dringkingHabitEng/"
                         className="to-personalColorOut-test-banner-text"
                     >[ Go to English version ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/dringkingHabitJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 日本語バージョンをやりに行く。 ]</a>
                 </Fragment>
             )
         } else if(this.state.current_test === "dringkingHabitEng") {
@@ -149,6 +155,29 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/dringkingHabit/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 한국어 버전으로 하러가기 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/dringkingHabitJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 日本語バージョンをやりに行く。 ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test === "dringkingHabitJP") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/dringkingHabit/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/dringkingHabitEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to English version ]</a>
                 </Fragment>
             )
         }
