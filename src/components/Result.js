@@ -99,10 +99,23 @@ class Result extends Component {
           }
     }
     newTestLinkRenderer(){
-        let personalColorListGB = ["personalColorEng", "personalColorJP", "personalColorCN", "personalColorES", "personalColorArb"]
+        let personalColorListGB = ["personalColorEng", "personalColorCN", "personalColorES", "personalColorArb"]
         if(this.state.current_test === "personalColor") {
             let banner_img_src = "https://images.ktestone.com/main-thumbnail/dringkingHabit-thumb_.png"
             let new_test_link = "https://ktestone.com/kapable.github.io/dringkingHabit/"
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={new_test_link}
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
+                </Fragment>
+            )
+        } else if(this.state.current_test === "personalColorJP") {
+            let banner_img_src = "https://images.ktestone.com/main-thumbnail/dringkingHabitJP-thumg.png"
+            let new_test_link = "https://ktestone.com/kapable.github.io/dringkingHabitJP/"
             return(
                 <Fragment>
                     <a
