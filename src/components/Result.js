@@ -505,12 +505,12 @@ class Result extends Component {
                     let taro_outlink = "https://bit.ly/" + taro
                     return(
                         <Fragment>
-                            <a
+                            {/* <a
                             target="_blank"
                             rel="noopener noreferrer"
                             href={taro_outlink}
                             className="to-ppl-banner-text"
-                            > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                            > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a> */}
                             <a
                             target="_blank"
                             rel="noopener noreferrer"
