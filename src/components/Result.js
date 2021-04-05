@@ -114,7 +114,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if(this.state.current_test === "personalColorJP") {
-            let banner_img_src = "https://images.ktestone.com/main-thumbnail/dringkingHabitJP-thumg.png"
+            let banner_img_src = "https://images.ktestone.com/main-thumbnail/dringkingHabitJP-thumg_.png"
             let new_test_link = "https://ktestone.com/kapable.github.io/dringkingHabitJP/"
             return(
                 <Fragment>
