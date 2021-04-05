@@ -1411,12 +1411,12 @@ var TESTS = [
             },
             {
                 which:"EI",
-                question: "How do I choose incense?",
+                question: "How do I choose fragrance?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "Closely approach and smell the incense."
+                        content: "Closely approach and smell the fragrance."
                     },
                     {
                         type: "I",
