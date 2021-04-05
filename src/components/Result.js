@@ -496,18 +496,31 @@ class Result extends Component {
             )
         // Class 101
         } else if (personalTaroList.includes(this.state.current_test)){
-            let banner_img_src = 'https://images.ktestone.com/resultImages/personalTaro/personnalTaro_ppl_banner.png'
-            let taro_outlink = "https://class101.net/events/6045da094bf0d2001557507a?utm_source=simritest&utm_medium=paid&utm_campaign=%ED%81%B4%EC%9B%90_%EB%B8%8C%EB%9E%9C%EB%93%9C%ED%8D%BC%ED%8F%AC%EB%A8%BC%EC%8A%A4_%EB%B0%94%EC%9D%B4%EB%9F%B4-%EB%B0%94%EC%88%98%EA%B0%80-ktest&utm_content=%EB%B8%8C%EB%A1%9C%EB%93%9C_MBTI_%28%EC%B0%B8%EC%97%AC%29%ED%83%80%EB%A1%9C%ED%85%8C%EC%8A%A4%ED%8A%B8-MBTI&utm_term=%EB%B0%94%EC%9D%B4%EB%9F%B4%EC%BD%98%ED%85%90%EC%B8%A0_%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85_%EB%A9%94%EC%9D%B4_210402"
-            return(
-                <Fragment>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={taro_outlink}
-                    className="to-ppl-banner-text"
-                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
-                </Fragment>
-            )
+            let banner_img_src_2 = 'https://images.ktestone.com/resultImages/personalTaro/personnalTaro_ppl_banner.png'
+            let taro_outlink_2 = "https://class101.net/events/6045da094bf0d2001557507a?utm_source=simritest&utm_medium=paid&utm_campaign=%ED%81%B4%EC%9B%90_%EB%B8%8C%EB%9E%9C%EB%93%9C%ED%8D%BC%ED%8F%AC%EB%A8%BC%EC%8A%A4_%EB%B0%94%EC%9D%B4%EB%9F%B4-%EB%B0%94%EC%88%98%EA%B0%80-ktest&utm_content=%EB%B8%8C%EB%A1%9C%EB%93%9C_MBTI_%28%EC%B0%B8%EC%97%AC%29%ED%83%80%EB%A1%9C%ED%85%8C%EC%8A%A4%ED%8A%B8-MBTI&utm_term=%EB%B0%94%EC%9D%B4%EB%9F%B4%EC%BD%98%ED%85%90%EC%B8%A0_%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85_%EB%A9%94%EC%9D%B4_210402"
+            const taro_list = ["00TheFool","01TMagician","02THP","03TEmpress","04TEmperor","05THH","06TLovers","07TChariot","08Strength","09THermit","10Wof","11Justice","14Temperance","17Tstar","19Tsun","20Judgement"]
+            for (let taro of taro_list) {
+                if(this.state.current_result === taro) {
+                    let banner_img_src = 'https://images.ktestone.com/resultImages/personalTaro/' + taro + '_U.png'
+                    let taro_outlink = "https://bit.ly/" + taro
+                    return(
+                        <Fragment>
+                            <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={taro_outlink}
+                            className="to-ppl-banner-text"
+                            > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                            <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={taro_outlink_2}
+                            className="to-ppl-banner-text"
+                            > <img src={banner_img_src_2} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                        </Fragment>
+                    )
+                }
+            }
         }
     }
 

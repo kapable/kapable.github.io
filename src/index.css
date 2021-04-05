@@ -298,6 +298,7 @@ body {
 .ppl-banner-img {
   width: 23rem;
   margin: 0rem auto;
+  display: block;
 }
 
 /* in Result Page for Personal Color Test */
