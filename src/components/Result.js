@@ -482,8 +482,8 @@ class Result extends Component {
             )
         // duft & doft Kor
         } else if (this.state.current_test === "personalIncense") {
-            const duft_outlink = "http://duftndoft.com/product/project.html?cate_no=697"
-            const banner_img_src = 'https://images.ktestone.com/resultImages/personalIncense/duftdoft_korea_banner.jpeg'
+            const duft_outlink = "https://bit.ly/39OsQOu"
+            const banner_img_src = 'https://images.ktestone.com/resultImages/personalIncense/duftdoft_korea_banner_2.jpeg'
             return(
                 <Fragment>
                     <a
