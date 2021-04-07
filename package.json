@@ -4,6 +4,7 @@
   "homepage": "http://kapable.github.io/",
   "private": true,
   "dependencies": {
+    "@ramonak/react-progress-bar": "^3.1.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -37,14 +38,18 @@
     "postbuild": "react-snap"
   },
   "reactSnap": {
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-gpu"
+    ],
     "skipThirdPartyRequests": true,
     "minifyHtml": {
       "collapseWhitespace": true,
       "removeComments": true
     },
     "cacheAjaxRequests": false,
-    "include":[
+    "include": [
       "/",
       "/kapable.github.io/zipkok",
       "/kapable.github.io/daengdaeng",
