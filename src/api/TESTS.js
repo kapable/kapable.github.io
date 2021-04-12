@@ -23,6 +23,328 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // persoanlColorFact
+    {
+        info : {
+            mainTitle:"팩트BTI FactBTI",
+            subTitle:"퍼스널컬러테스트 팩폭편",
+            mainUrl:"personalColorFact",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/persoanlColorFact-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/persoanlColorFact-thumb.png"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '새로운 짝꿍이 생겼다. 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '먼저 안녕하며 인사를 하고 말을 건다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '짝꿍이 먼저 나에게 인사하면 말을 한다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "길을 지나가다가 너무 이쁜 강아지가 산책을 한다.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "'어머~ 너무 이쁘다' 크게 말하고 다가간다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "그냥 귀엽다 하고 속으로 생각한다. "
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "지나가다가 마음에 드는 장소를 발견! 사진을 찍고 싶다!",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "어? 여기서 사진 찍고 갈까요?! 너무 이쁜데!!! 한번 서보세요!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "그냥 폰으로 풍경만 찍고 일행을 따라간다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "영화를 보는데 열린 결말로 끝났다.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "그 감독의 의도를 생각하고 찾아보다가 만다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "그들이 어떻게 되었을지 내맘대로 상상하고 만족해한다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "사고 싶은 물건이 있다.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "그래도 현재 돈이 없으니까 다음 달에 사자!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "일단 사자! 어차피 다음 달에 돈 들어와서 사는 거나 지금 사는 거나~"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내 모습과 가까운 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "현재 어떤 일이 있는지 자료 조사 후 정확한 일처리"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "내 판단하에 너무 깊지 않은 많은 일들을 신속하게 처리"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "나 살쪘지? 라고 물어보는 친구에게",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "응. 아무래도 조금 그래보인다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "아니!?!? 뭔솔?! 짜증나게!!!너무 괜찮은데?!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "나 오늘 너무 짜증나서 매운거 먹어야겠어",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "아ㅋㅋㅋ 뭐 먹으려고?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "잉? 왜 짜증나는데?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "무거운 걸 들고 있는 친구",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "이잉??? 그거 뭐여? 쇠야?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "어? 무겁지? 내가 도와줄까?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "조별과제 할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "철저한 계획으로 시작해서 체계적으로 하는 사람"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "매우 협조적으로 참가하는 사람"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나에게 계획이란?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "목적을 이루기 위해 촘촘하게 계획을 세운다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "무계획도 계획인 것을…"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나는",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "철저하게 집중해서 추진력있지만 좀 고집스러움."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "즉흥적이지만 행동력이 낮고 계획이 없음."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlColorFact/INFP.png'
+            },
+        ]
+    },
     // dringkingHabitJP
     {
         info : {

@@ -101,8 +101,8 @@ class Result extends Component {
     newTestLinkRenderer(){
         let personalColorListGB = ["personalColorEng", "personalColorCN", "personalColorES", "personalColorArb"]
         if(this.state.current_test === "personalColor") {
-            let banner_img_src = "https://images.ktestone.com/main-thumbnail/dringkingHabit-thumb_.png"
-            let new_test_link = "https://ktestone.com/kapable.github.io/dringkingHabit/"
+            let banner_img_src = "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png"
+            let new_test_link = "https://ktestone.com/kapable.github.io/personalColorFact/"
             return(
                 <Fragment>
                     <a
