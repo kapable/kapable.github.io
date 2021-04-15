@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Do+Hyeon&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
 :root {
-  --bg-color: #fbf7f2;
+  --bg-color: #ededed;
   --font-color: black;
-  --title-font: "Do Hyeon", sans-serif;
-  --content-font: "Nanum Gothic", sans-serif;
+  --title-font: "NanumSquare", "Noto Sans";
+  --content-font: "NanumSquare", "Noto Sans";
 }
 body {
   height: auto;
@@ -20,8 +23,10 @@ body {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  width: 400px;
+  width: 100%;
+  max-width: 450px;
   height: auto;
+  margin-bottom: 1rem;
 }
 
 .main-link-div {
@@ -94,11 +99,13 @@ body {
   margin: 0.5rem;
   font-size: 1rem;
   font-family: var(--title-font);
+  font-weight: 800;
 }
 
 .intro-footer {
   margin: 3rem auto;
   font-family: var(--title-font);
+  font-weight: 800;
   color: #cecfd0;
 }
 
@@ -114,6 +121,7 @@ body {
   /* white space for line break */
   white-space: pre-line;
   font-size: 1.2rem;
+  font-weight: 800;
 }
 
 .option-btn-div {
@@ -146,6 +154,7 @@ body {
   font-family: var(--content-font);
   font-weight: bolder;
   font-size: 0.8rem;
+  font-weight: 800;
   height: 9em;
   width: 20rem;
   margin: 0.5em;
@@ -169,6 +178,7 @@ body {
   color: var(--font-color);
   font-size: 1.3rem;
   font-family: var(--title-font);
+  font-weight: 800;
 }
 
 .answer-option-img {
@@ -304,6 +314,7 @@ body {
 /* in Result Page for Personal Color Test */
 .to-peopleColor-test-banner-text {
   font-family: var(--title-font);
+  font-weight: 800;
 }
 .to-peopleColor-test-banner-img {
   max-width: 414px;
@@ -311,6 +322,7 @@ body {
 
 .to-personalColorOut-test-banner-text {
   font-size: 1rem;
+  font-weight: 800;
   font-family: var(--title-font);
   margin: 0.1rem auto;
   text-align: center;
