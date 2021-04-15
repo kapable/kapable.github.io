@@ -23,6 +23,328 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // persoanlColorFactEng
+    {
+        info : {
+            mainTitle:"FactBTI",
+            subTitle:"Personal Color Test Way Harsh",
+            mainUrl:"personalColorFactEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/personalColorFactEng-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorFactEng-thumb.png"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'You have a new peer. Do I?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Saying hello, talk to first'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'He/She says hello and talk to me.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Walking street, you see a pretty dog walking.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "‘Saying, How pretty!’ loud, walking to her"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Just thinking ‘cute’ in mind"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Walking in the street, you spot the beautiful place! Wanna take picture!",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Oh? How about taking a picture here? So beautiful!! Please make posture!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Just taking picture by mobile and follow the party."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "The movie has an open ending.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Think the director’s intention and then stop doing."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Imagine what character is going on and satisfied with it."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "I have something to buy.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Buy it next, I don’t have money now."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Get it! I can get money in my bank account. It is almost same to buy now or later."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Who am I?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Doing exactly after researching what is going on."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Doing quickly and not deeply a lot of things under my estimation."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "A friend of mine say “Am I fatty?”",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Yes…look a little chubby."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "What! No way! You are still in good shape!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "I want to have hot foods because I am too annoyed.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Oh! LoL! What are you gonna eat?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Woops! What make you so annoyed?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Friend carrying heavy stuff.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Woops?? What is it? Is it steel?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Oh? What a heavy!! Can I help?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What am I gonna do when the group activity starts?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Make a plan thoroughly and do it systematically."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Take part in that activity cooperatively."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What is the plan for me?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Make a plan elaborately to accomplish the goal."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Nothing is another plan…"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "I am..",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Focus on thoroughly and drive myself but a little stubborn."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Spontaneous but not acting and no plan."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactEng/INFP.png'
+            },
+        ]
+    },
     // persoanlColorFact
     {
         info : {

@@ -114,8 +114,8 @@ class Result extends Component {
                 </Fragment>
             )
         } else if(this.state.current_test === "personalColorJP") {
-            let banner_img_src = "https://images.ktestone.com/main-thumbnail/dringkingHabitJP-thumg_.png"
-            let new_test_link = "https://ktestone.com/kapable.github.io/dringkingHabitJP/"
+            let banner_img_src = "https://images.ktestone.com/main-thumbnail/personalColorFactEngNew-thumb.png"
+            let new_test_link = "https://ktestone.com/kapable.github.io/personalColorFactEng/"
             return(
                 <Fragment>
                     <a
@@ -127,8 +127,8 @@ class Result extends Component {
                 </Fragment>
             )
         } else if(personalColorListGB.includes(this.state.current_test)) {
-            let banner_img_src = "https://images.ktestone.com/main-thumbnail/dringkingHabitEng-thumg_.png"
-            let new_test_link = "https://ktestone.com/kapable.github.io/dringkingHabitEng/"
+            let banner_img_src = "https://images.ktestone.com/main-thumbnail/personalColorFactEngNew-thumb.png"
+            let new_test_link = "https://ktestone.com/kapable.github.io/personalColorFactEng/"
             return(
                 <Fragment>
                     <a
@@ -137,6 +137,31 @@ class Result extends Component {
                         href={new_test_link}
                         className="to-personalColorOut-test-banner-text"
                     ><img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
+                </Fragment>
+            )
+        }
+    }
+    factBTILinkRenderer(){
+        if(this.state.current_test === "personalColorFact") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorFactEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to English version ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test === "personalColorFactEng") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorFact/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
                 </Fragment>
             )
         }
@@ -739,6 +764,9 @@ class Result extends Component {
 
                     {/* if dringkingHabit test's Result page for Link Banner */}
                     {this.dringkingHabitLinkRenderer()}
+
+                    {/* if personalColorFact test's Result page for Link Banner */}
+                    {this.factBTILinkRenderer()}
 
                     <div className="share">
                         <h5 className="share-title">친구에게 공유하기</h5>
