@@ -176,6 +176,23 @@ class Result extends Component {
                     >[ हिंदी में भी देखें ]</a>
                 </Fragment>
             )
+        } else if(this.state.current_test === "personalColorFactInd") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorFactEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to English version ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorFact/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                </Fragment>
+            )
         }
     }
     dringkingHabitLinkRenderer(){
