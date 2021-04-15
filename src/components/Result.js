@@ -151,6 +151,12 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorFactEng/"
                         className="to-personalColorOut-test-banner-text"
                     >[ Go to English version ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorFactInd/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ हिंदी में भी देखें ]</a>
                 </Fragment>
             )
         } else if(this.state.current_test === "personalColorFactEng") {
@@ -162,6 +168,12 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorFact/"
                         className="to-personalColorOut-test-banner-text"
                     >[ 한국어 버전으로 하러가기 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorFactInd/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ हिंदी में भी देखें ]</a>
                 </Fragment>
             )
         }

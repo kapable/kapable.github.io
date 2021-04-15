@@ -23,6 +23,328 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // persoanlColorFactInd
+    {
+        info : {
+            mainTitle:"FactBTI",
+            subTitle:"Personal Color Test Way Harsh",
+            mainUrl:"personalColorFactInd",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/personalColorFactInd-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorFactInd-thumb.png"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'क्लास में, मेरे बगल में बैठने वाले दोस्त से…',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'मैं आगे होकर बात करना शुरू करता हूँ '
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'पहले वह बात शुरू करे, तभी मैं भी बात करता हूँ'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "रास्ते पर बहुत प्यारा सा कुत्ता दिखने पर",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "'अरे कितना प्यारा है' बोलते हुए कुत्ते के पास जाता हूँ"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "मन में ही कितना प्यारा है सोचता हूँ"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "रास्ते पर चलते- चलते बहुत सुन्दर जगह मिली ! फोटो खींचते समय…",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "अरे आप यहाँ फोटो खिंचवाना चाहेंगे? घणी सुथरी जगह है ! खड़े हो जाइये !"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "अपने मोबाइल से नज़ारे का फोटो खींचकर दोस्त के पीछे जाता हूँ"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "फिल्म का अंत ठीक से समझ नहीं आया",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "फिल्म निर्देशक के सन्देश को समझने की कोशिश करता हूँ"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "अपनी कल्पनाओं में नायक- नायिका की कहानी बनाकर खुश हो जाता हूँ"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "कोई चीज़ खरीदने का मन हो रहा है",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "अभी मेरे पास पैसे नहीं है, अगले महीने खरीदता हूँ"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "अभी खरीदता हूँ ! अगले महीने लेने से अभी लेना ज़्यादा बेहतर है ~"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "मैं कैसा इंसान हूँ ?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "पहले काम की फ़ाइल बनाऊँगा, फिर प्लान के हिसाब से काम करूँगा"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "हल्के कामों को ज़्यादा से ज़्यादा, झट से ख़त्म करूँगा"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "अगर कोई दोस्त 'क्या मैं मोती लग रही हूँ ?' पूछे, तो मेरा जवाब",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "हां, थोड़ी मोती लग रही हो"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "नहीं ! तुम्हारा दिमाग ठीक है क्या ?! क्या बकवास कर रही हो !! एकदम फिट लग रही हो ?!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "आज मेरा मूड ख़राब है, कुछ तीखा खाना पड़ेगा",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "अच्छा ~ क्या खाएगा ?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "काहे? तेरा मूड क्यों ख़राब है ?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "आपका दोस्त भारी सामान लिए जा रहा है",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "अरे बाप रे ? क्या लिए जा रहे हो ? लोहे का टुकड़ा ?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "भारी है न ? मैं मदद करूँ ?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "टीम प्रोजेक्ट में मैं कैसा हूँ ?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "परफेक्ट प्लान बनाकर प्लान के हिसाब से ही करता हूँ"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "दूसरों के काम में योगदान देता हूँ"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "मेरे लिए 'प्लान ' की परिभाषा क्या है ?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "मकसद को पूरा करने के लिए अच्छे से प्लान बनाता हूँ"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "प्लान ? वह क्या चीज़ है? खाने का नाम है क्या ?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "मैं",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "ध्यान केंद्रित करता हूँ, काम को आगे ले जाता हूँ, मगर थोड़ा कड़ा हूँ"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "बिना प्लान के कुछ भी करता हूँ, लेकिन काम शुरू करने से पहले सौ बार सोचता हूँ"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorFactInd/INFP.png'
+            },
+        ]
+    },
     // persoanlColorFactEng
     {
         info : {
