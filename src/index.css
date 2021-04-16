@@ -5,8 +5,8 @@
 :root {
   --bg-color: #ededed;
   --font-color: black;
-  --title-font: "NanumSquare", "Noto Sans", sans-serif;
-  --content-font: "NanumSquare", "Noto Sans", sans-serif;
+  --title-font: "NanumSquare", sans-serif, "Noto Sans";
+  --content-font: "NanumSquare", sans-serif, "Noto Sans";
 }
 body {
   height: auto;
