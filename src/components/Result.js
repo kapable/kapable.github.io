@@ -883,10 +883,6 @@ class Result extends Component {
                     {/* if personalColorFact test's Result page for Link Banner */}
                     {this.factBTILinkRenderer()}
 
-                    <div className="new-test" style={{'margin': '2rem'}}>
-                        {this.newTestLinkRenderer()}
-                    </div>
-
                     <div className="share">
                         <h5 className="share-title">친구에게 공유하기</h5>
                         <div className="share">
@@ -920,6 +916,10 @@ class Result extends Component {
                             className="back-to-main-btn-img"
                             alt="다른 테스트 하러가기"
                             />
+                    </div>
+
+                    <div className="new-test" style={{'margin': '2rem'}}>
+                        {this.newTestLinkRenderer()}
                     </div>
 
                     {/* CPC Banner Result footer */}
