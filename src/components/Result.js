@@ -871,10 +871,6 @@ class Result extends Component {
                         {this.pplBannerRenderer()}
                     </div>
 
-                    <div className="new-test" style={{'margin': '2rem'}}>
-                        {this.newTestLinkRenderer()}
-                    </div>
-
                     {/* if personalColor test's Result page for Link Banner */}
                     {this.personalColorLinkRenderer()}
 
@@ -886,6 +882,10 @@ class Result extends Component {
 
                     {/* if personalColorFact test's Result page for Link Banner */}
                     {this.factBTILinkRenderer()}
+
+                    <div className="new-test" style={{'margin': '2rem'}}>
+                        {this.newTestLinkRenderer()}
+                    </div>
 
                     <div className="share">
                         <h5 className="share-title">친구에게 공유하기</h5>
