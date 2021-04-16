@@ -507,6 +507,47 @@ class Intro extends Component {
                     >[ हिंदी में भी देखें ]</a>
                 </Fragment>
             )
+        } else if(this.state.current_test.info.mainUrl === "personalColorInd") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColor/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 日本語バージョンをやりに行く。 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to the English version ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://niair.xyz/kapable.github.io/personalColorCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 汉语版本试 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ paso a la versión española ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorArb/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ اذهب إلى النسخة العربية ]</a>
+                </Fragment>
+            )
         }
     }
 

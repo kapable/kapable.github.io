@@ -126,6 +126,19 @@ class Result extends Component {
                     ><img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
                 </Fragment>
             )
+        } else if(this.state.current_test === "personalColorInd") {
+            let banner_img_src = "https://images.ktestone.com/main-thumbnail/personalColorFactIndNew-thumb.png"
+            let new_test_link = "https://ktestone.com/kapable.github.io/personalColorFactInd/"
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={new_test_link}
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
+                </Fragment>
+            )
         } else if(personalColorListGB.includes(this.state.current_test)) {
             let banner_img_src = "https://images.ktestone.com/main-thumbnail/personalColorFactEngNew-thumb.png"
             let new_test_link = "https://ktestone.com/kapable.github.io/personalColorFactEng/"
@@ -494,6 +507,47 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorInd/"
                         className="to-personalColorOut-test-banner-text"
                     >[ हिंदी में भी देखें ]</a>
+                </Fragment>
+            )
+        } else if(this.state.current_test === "personalColorInd") {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColor/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 한국어 버전으로 하러가기 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 日本語バージョンをやりに行く。 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ Go to the English version ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://niair.xyz/kapable.github.io/personalColorCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ 汉语版本试 ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ paso a la versión española ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorArb/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ اذهب إلى النسخة العربية ]</a>
                 </Fragment>
             )
         }
