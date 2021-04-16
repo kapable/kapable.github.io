@@ -294,6 +294,12 @@ class Intro extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorArb/"
                         className="to-personalColorOut-test-banner-text"
                     >[ اذهب إلى النسخة العربية ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorInd/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ हिंदी में भी देखें ]</a>
                 </Fragment>
             )
         } else if(this.state.current_test.info.mainUrl === "personalColorJP") {
@@ -329,6 +335,12 @@ class Intro extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorArb/"
                         className="to-personalColorOut-test-banner-text"
                     >[ اذهب إلى النسخة العربية ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorInd/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ हिंदी में भी देखें ]</a>
                 </Fragment>
             )
         } else if(this.state.current_test.info.mainUrl === "personalColorEng") {
@@ -364,6 +376,12 @@ class Intro extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorArb/"
                         className="to-personalColorOut-test-banner-text"
                     >[ اذهب إلى النسخة العربية ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorInd/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ हिंदी में भी देखें ]</a>
                 </Fragment>
             )
         } else if(this.state.current_test.info.mainUrl === "personalColorCN") {
@@ -399,6 +417,12 @@ class Intro extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorArb/"
                         className="to-personalColorOut-test-banner-text"
                     >[ اذهب إلى النسخة العربية ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorInd/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ हिंदी में भी देखें ]</a>
                 </Fragment>
             )
         } else if(this.state.current_test.info.mainUrl === "personalColorES") {
@@ -434,6 +458,12 @@ class Intro extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorArb/"
                         className="to-personalColorOut-test-banner-text"
                     >[ اذهب إلى النسخة العربية ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorInd/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ हिंदी में भी देखें ]</a>
                 </Fragment>
             )
         } else if(this.state.current_test.info.mainUrl === "personalColorArb") {
@@ -469,6 +499,12 @@ class Intro extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorES/"
                         className="to-personalColorOut-test-banner-text"
                     >[ paso a la versión española ]</a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorInd/"
+                        className="to-personalColorOut-test-banner-text"
+                    >[ हिंदी में भी देखें ]</a>
                 </Fragment>
             )
         }

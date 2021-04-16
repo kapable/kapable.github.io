@@ -3375,6 +3375,328 @@ var TESTS = [
             },
         ]
     },
+    // persoanlColor in Indian
+    {
+        info : {
+            mainTitle:"Personal color test",
+            subTitle:"What is my perosnal color?",
+            mainUrl:"personalColorInd",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/personalColorInd-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorInd-thumb.png"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'पहली मुलाक़ात में',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'पहले मैं बात शुरू करता हूँ'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'सामने वाले के बात शुरू करने का इंतज़ार करता हूँ '
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "वीकेंड को मैं",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "लोगों से मिलना पसंद करता हूँ"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "अकेले रहना भी ठीक है"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "दोस्तों के साथ ",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "शोर मचाते हुए ज़ोर से बात करना पसंद है"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "कम दोस्तों के साथ छोटी सी बातें करना पसंद है"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "मेरे लिए ज़्यादा ज़रूरी क्या है ?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "इस पल की ख़ुशी के बिना भविष्य भी बेकार है"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "भविष्य की योजना के बिना विकास नहीं होगा"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "मेरा काम करने का तरीका",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "दूसरे लोगों के तरीके से काम करना पसंद है"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "अपना तरीका खुद बनाना पसंद है"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "दूसरे लोग मेरे बारे में क्या बोलते हैं ?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "तुम हमेशा काम को सम्पूर्ण करते हो, और तुम्हारी सहनशक्ति बहुत मज़बूत है"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "तुम बहुत अलग और अनोखे इंसान हो"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "अगर किसी को मना करना पड़े तो",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "सख्ती से मना करता हूँ"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "बहुत सोचने के बाद मना नहीं कर पाता"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "अगर मुझे गुस्सा आए तो",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "बातों से सामने वाले को समझाता हूँ"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "बोलने के लिए बहुत कुछ है लेकिन आँसू ही पहले निकलते हैं"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "दोस्त अपनी दुःख की बात शेयर कर रहा है,\nमगर उसकी ही गलती लगती है। तो मैं क्या करता हूँ ?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "सीधे उसकी गलती को समझाता हूँ"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "बात को घुमा-फिराकर दोस्त को समझाता हूँ ताकि उसे चोट न लगे"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "स्कूल में कोई चीज़ ले जाना है तो",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "एक दिन पहले से तैयार करके रखता हूँ"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "कल तैयार करूँगा' बोलकर भूल जाता हूँ"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "घर जाकर पढ़ाई करने की सोची थी,\nअचानक दोस्त खेल पर बुला रहे हैं",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "यह तो प्लान के बाहर है। सोचना पड़ेगा"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "कोई बात नहीं! ज़िंदगी कहाँ प्लान से चलती है? जमकर मज़ा करता हूँ !"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "आम तौर पर मैं",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "अपने प्लान के हिसाब से, बारी के अनुसार काम करना पसंद करता हूँ"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "जब मूड हो तब कर लूँगा ~ हालत के हिसाब से काम करना पसंद करता हूँ"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorInd/INFP.png'
+            },
+        ]
+    },
     // persoanlColor in Arabian
     {
         info : {
