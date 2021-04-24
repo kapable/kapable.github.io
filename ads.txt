@@ -294,5 +294,16 @@ sovrn.com,267974,RESELLER,fafdf38b16bf6b2b
 lijit.com,267974,RESELLER,fafdf38b16bf6b2b
 rubiconproject.com,20690,RESELLER,0bfd66d529a55807
 openx.com,540447820,RESELLER,6a698e2ec38604c6
+adingo.jp,24544,DIRECT
+pubmatic.com,156313,RESELLER,5d62403b186f2ace
+appnexus.com,7044,RESELLER,f5ab79cb980f11d1
+openx.com,540679900,RESELLER,6a698e2ec38604c6
+webeyemob.com,70080,RESELLER
+admixer.net,3bc509b2-6568-4bd8-a997-9859ba0c9118,RESELLER
+pubmatic.com,158060,RESELLER,5d62403b186f2ace
+adcolony.com,801e49d1be83b5f9,RESELLER,1ad675c9de6b5176
+pubmatic.com,157962,RESELLER,5d62403b186f2ace
+pubmatic.com,158853,RESELLER,5d62403b186f2ace
+improvedigital.com,1901,RESELLER
 
 #contact:programmatic@optad360.com
