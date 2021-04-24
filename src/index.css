@@ -331,16 +331,6 @@ body {
 }
 
 .to-personalColorOut-test-banner-text {
-  /* font-size: 1rem;
-  font-weight: 800;
-  font-family: var(--title-font);
-  margin: 0.1rem auto;
-  text-align: center;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   display: inline;
   margin: 0 0.3rem;
 }
@@ -387,4 +377,41 @@ body {
 .guide-desc {
   color: var(--font-color);
   margin: 10rem 5rem 5rem 5rem;
+}
+
+/* horizontalScrolling */
+.horizontal-scrolling {
+  margin: 3rem 1rem;
+}
+
+.menu-item {
+  margin: 1rem 2rem;
+  user-select: none;
+  cursor: pointer;
+  border: 1px transparent solid;
+}
+
+.scroll-menu-arrow {
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.scroll-menu-arrow--disabled {
+  visibility: hidden;
+}
+
+.menu-item-wrapper {
+  width: 15rem;
+}
+
+.menu-item-wrapper:focus,
+.menu-item-wrapper:active,
+.menu-item-wrapper:visited,
+.menu-item-wrapper:hover {
+  outline: none;
+  outline-offset: none;
+  box-shadow: none;
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }
