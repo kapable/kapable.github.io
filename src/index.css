@@ -82,6 +82,16 @@ body {
   cursor: pointer;
 }
 
+.go-to-each-language {
+  display: block;
+  font-family: var(--title-font);
+}
+
+.language-icon {
+  display: inline;
+  width: 2rem;
+}
+
 .test-intro-with-friend {
   margin: 1.5rem auto 1rem;
   font-family: var(--title-font);
@@ -321,7 +331,7 @@ body {
 }
 
 .to-personalColorOut-test-banner-text {
-  font-size: 1rem;
+  /* font-size: 1rem;
   font-weight: 800;
   font-family: var(--title-font);
   margin: 0.1rem auto;
@@ -330,7 +340,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  display: inline;
+  margin: 0 0.3rem;
 }
 
 .share-title {

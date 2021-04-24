@@ -157,452 +157,468 @@ class Result extends Component {
     factBTILinkRenderer(){
         if(this.state.current_test === "personalColorFact") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorFactEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to English version ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorFactInd/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ हिंदी में भी देखें ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                </div>
             )
         } else if(this.state.current_test === "personalColorFactEng") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorFact/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 한국어 버전으로 하러가기 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorFactInd/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ हिंदी में भी देखें ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                </div>
             )
         } else if(this.state.current_test === "personalColorFactInd") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorFactEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to English version ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorFact/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 한국어 버전으로 하러가기 ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                </div>
             )
         }
     }
     dringkingHabitLinkRenderer(){
         if(this.state.current_test === "dringkingHabit") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/dringkingHabitEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to English version ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/dringkingHabitJP/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 日本語バージョンをやりに行く。 ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
+                </div>
             )
         } else if(this.state.current_test === "dringkingHabitEng") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/dringkingHabit/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 한국어 버전으로 하러가기 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/dringkingHabitJP/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 日本語バージョンをやりに行く。 ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
+                </div>
             )
         } else if(this.state.current_test === "dringkingHabitJP") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/dringkingHabit/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 한국어 버전으로 하러가기 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/dringkingHabitEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to English version ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
+                </div>
             )
         }
     }
     personalColorLinkRenderer(){
         if(this.state.current_test === "personalColor") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to English ver. ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 日本語バージョンをやりに行く。 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorCN/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 汉语版本试 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorES/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ paso a la versión española ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/spain-icon.png' className='language-icon' alt="[ paso a la versión española ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorArb/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ اذهب إلى النسخة العربية ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/arab-icon.png' className='language-icon' alt="[ اذهب إلى النسخة العربية ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorInd/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ हिंदी में भी देखें ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                </div>
             )
         } else if(this.state.current_test === "personalColorJP") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColor/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 한국어 버전으로 하러가기 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to English ver. ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorCN/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 汉语版本试 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorES/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ paso a la versión española ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/spain-icon.png' className='language-icon' alt="[ paso a la versión española ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorArb/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ اذهب إلى النسخة العربية ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/arab-icon.png' className='language-icon' alt="[ اذهب إلى النسخة العربية ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorInd/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ हिंदी में भी देखें ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                </div>
             )
         } else if(this.state.current_test === "personalColorEng") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColor/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 한국어 버전으로 하러가기 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 日本語バージョンをやりに行く。 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorCN/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 汉语版本试 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorES/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ paso a la versión española ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/spain-icon.png' className='language-icon' alt="[ paso a la versión española ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorArb/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ اذهب إلى النسخة العربية ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/arab-icon.png' className='language-icon' alt="[ اذهب إلى النسخة العربية ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorInd/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ हिंदी में भी देखें ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                </div>
             )
         } else if(this.state.current_test === "personalColorCN") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColor/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 한국어 버전으로 하러가기 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 日本語バージョンをやりに行く。 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to the English version ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorES/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ paso a la versión española ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/spain-icon.png' className='language-icon' alt="[ paso a la versión española ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorArb/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ اذهب إلى النسخة العربية ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/arab-icon.png' className='language-icon' alt="[ اذهب إلى النسخة العربية ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorInd/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ हिंदी में भी देखें ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                </div>
             )
         } else if(this.state.current_test === "personalColorES") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColor/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 한국어 버전으로 하러가기 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 日本語バージョンをやりに行く。 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to the English version ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorCN/"
+                        href="https://ktestone.com/kapable.github.io/personalColorCN/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 汉语版本试 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorArb/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ اذهب إلى النسخة العربية ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/arab-icon.png' className='language-icon' alt="[ اذهب إلى النسخة العربية ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorInd/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ हिंदी में भी देखें ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                </div>
             )
         } else if(this.state.current_test === "personalColorArb") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColor/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 한국어 버전으로 하러가기 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 日本語バージョンをやりに行く。 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to the English version ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorCN/"
+                        href="https://ktestone.com/kapable.github.io/personalColorCN/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 汉语版本试 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorES/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ paso a la versión española ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/spain-icon.png' className='language-icon' alt="[ paso a la versión española ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorInd/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ हिंदी में भी देखें ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                </div>
             )
         } else if(this.state.current_test === "personalColorInd") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColor/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 한국어 버전으로 하러가기 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorJP/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 日本語バージョンをやりに行く。 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to the English version ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://niair.xyz/kapable.github.io/personalColorCN/"
+                        href="https://ktestone.com/kapable.github.io/personalColorCN/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 汉语版本试 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorES/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ paso a la versión española ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/spain-icon.png' className='language-icon' alt="[ paso a la versión española ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorArb/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ اذهب إلى النسخة العربية ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/arab-icon.png' className='language-icon' alt="[ اذهب إلى النسخة العربية ]" /></a>
+                </div>
             )
         }
     }
     personalIncenseLinkRenderer(){
-        if(this.state.current_test=== "personalIncense") {
+        if(this.state.current_test === "personalIncense") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalIncenseEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to English version ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalIncenseJP/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 日本語バージョンをやりに行く。 ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
+                </div>
             )
         } else if(this.state.current_test === "personalIncenseJP") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalIncense/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 한국어 버전으로 하러가기 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalIncenseEng/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ Go to English version ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
+                </div>
             )
         } else if(this.state.current_test === "personalIncenseEng") {
             return(
-                <Fragment>
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalIncense/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 한국어 버전으로 하러가기 ]</a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalIncenseJP/"
                         className="to-personalColorOut-test-banner-text"
-                    >[ 日本語バージョンをやりに行く。 ]</a>
-                </Fragment>
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
+                </div>
             )
         } 
     }
