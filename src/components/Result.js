@@ -278,7 +278,7 @@ class Result extends Component {
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -309,6 +309,12 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorInd/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorRus/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/russia-icon.png' className='language-icon' alt="[ Перейти на российскую версию ]" /></a>
                 </div>
             )
         } else if(this.state.current_test === "personalColorJP") {
@@ -326,7 +332,7 @@ class Result extends Component {
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -351,6 +357,12 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorInd/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorRus/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/russia-icon.png' className='language-icon' alt="[ Перейти на российскую версию ]" /></a>
                 </div>
             )
         } else if(this.state.current_test === "personalColorEng") {
@@ -393,6 +405,12 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorInd/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorRus/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/russia-icon.png' className='language-icon' alt="[ Перейти на российскую версию ]" /></a>
                 </div>
             )
         } else if(this.state.current_test === "personalColorCN") {
@@ -416,7 +434,7 @@ class Result extends Component {
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -435,6 +453,12 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorInd/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorRus/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/russia-icon.png' className='language-icon' alt="[ Перейти на российскую версию ]" /></a>
                 </div>
             )
         } else if(this.state.current_test === "personalColorES") {
@@ -458,7 +482,7 @@ class Result extends Component {
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -477,6 +501,12 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorInd/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorRus/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/russia-icon.png' className='language-icon' alt="[ Перейти на российскую версию ]" /></a>
                 </div>
             )
         } else if(this.state.current_test === "personalColorArb") {
@@ -500,7 +530,7 @@ class Result extends Component {
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -519,6 +549,12 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorInd/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorRus/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/russia-icon.png' className='language-icon' alt="[ Перейти на российскую версию ]" /></a>
                 </div>
             )
         } else if(this.state.current_test === "personalColorInd") {
@@ -542,7 +578,7 @@ class Result extends Component {
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/personalColorEng/"
                         className="to-personalColorOut-test-banner-text"
-                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -561,6 +597,66 @@ class Result extends Component {
                         href="https://ktestone.com/kapable.github.io/personalColorArb/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/arab-icon.png' className='language-icon' alt="[ اذهب إلى النسخة العربية ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorInd/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorRus/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/russia-icon.png' className='language-icon' alt="[ Перейти на российскую версию ]" /></a>
+                </div>
+            )
+        } else if(this.state.current_test === "personalColorRus") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColor/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/spain-icon.png' className='language-icon' alt="[ paso a la versión española ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorArb/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/arab-icon.png' className='language-icon' alt="[ اذهب إلى النسخة العربية ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorInd/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/india-icon.png' className='language-icon' alt="[ हिंदी में भी देखें ]" /></a>
                 </div>
             )
         }

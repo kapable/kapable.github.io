@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
+import sample_01 from '../api/DefaultImg/sample_01.png';
+import sample_02 from '../api/DefaultImg/sample_02.png';
+import sample_03 from '../api/DefaultImg/sample_03.png';
 
 // list of items
 let list = [
-  { name: 'item1' , banner: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" , link: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" },
-  { name: 'item2' , banner: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" , link: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" },
-  { name: 'item3' , banner: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" , link: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" },
-  { name: 'item4' , banner: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" , link: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" },
-  { name: 'item5' , banner: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" , link: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" },
+  { name: 'item1' , banner: sample_01 , link: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" },
+  { name: 'item2' , banner: sample_02 , link: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" },
+  { name: 'item3' , banner: sample_03 , link: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" },
 ];
 
 // One item component
