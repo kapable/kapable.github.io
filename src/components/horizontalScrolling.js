@@ -7,6 +7,10 @@ let list = [
   { name: 'item2' , banner: "https://images.ktestone.com/horizontalNewTest/USA/dringkingHabitEng.png" , link: "https://ktestone.com/kapable.github.io/dringkingHabitEng/" },
   { name: 'item3' , banner: "https://images.ktestone.com/horizontalNewTest/USA/personalIncenseEng.png" , link: "https://ktestone.com/kapable.github.io/personalIncenseEng/" },
   { name: 'item4' , banner: "https://images.ktestone.com/horizontalNewTest/USA/personalColorFactEng.png" , link: "https://ktestone.com/kapable.github.io/personalColorFactEng/" },
+  { name: 'item5' , banner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png" , link: "https://ktestone.com/kapable.github.io/personalColor/" },
+  { name: 'item6' , banner: "https://images.ktestone.com/horizontalNewTest/Korea/dringkingHabit.png" , link: "https://ktestone.com/kapable.github.io/dringkingHabit/" },
+  { name: 'item7' , banner: "https://images.ktestone.com/horizontalNewTest/Korea/personalIncense.png" , link: "https://ktestone.com/kapable.github.io/personalIncense/" },
+  { name: 'item8' , banner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColorFact.png" , link: "https://ktestone.com/kapable.github.io/personalColorFact/" },
 ];
 
 // One item component
@@ -47,8 +51,8 @@ class horizontalScrolling extends Component {
         alignCenter: true,
         clickWhenDrag: false,
         dragging: true,
-        hideArrows: true,
-        hideSingleArrow: true,
+        hideArrows: false,
+        hideSingleArrow: false,
         itemsCount: list.length,
         scrollToSelected: false,
         selected: "item1",

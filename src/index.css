@@ -386,7 +386,7 @@ body {
 
 .menu-item {
   margin: 1rem 2rem;
-  /* user-select: none; */
+  user-select: none;
   cursor: pointer;
   border: 1px transparent solid;
 }
