@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
-import sample_01 from '../api/DefaultImg/sample_01.png';
-import sample_02 from '../api/DefaultImg/sample_02.png';
-import sample_03 from '../api/DefaultImg/sample_03.png';
 
 // list of items
 let list = [
-  { name: 'item1' , banner: sample_01 , link: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" },
-  { name: 'item2' , banner: sample_02 , link: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" },
-  { name: 'item3' , banner: sample_03 , link: "https://images.ktestone.com/main-thumbnail/persoanlColorFactNew-thumb.png" },
+  { name: 'item1' , banner: "https://images.ktestone.com/horizontalNewTest/USA/personalColorEng.png" , link: "https://ktestone.com/kapable.github.io/personalColorEng/" },
+  { name: 'item2' , banner: "https://images.ktestone.com/horizontalNewTest/USA/dringkingHabitEng.png" , link: "https://ktestone.com/kapable.github.io/dringkingHabitEng/" },
+  { name: 'item3' , banner: "https://images.ktestone.com/horizontalNewTest/USA/personalIncenseEng.png" , link: "https://ktestone.com/kapable.github.io/personalIncenseEng/" },
+  { name: 'item4' , banner: "https://images.ktestone.com/horizontalNewTest/USA/personalColorFactEng.png" , link: "https://ktestone.com/kapable.github.io/personalColorFactEng/" },
 ];
 
 // One item component
@@ -66,10 +64,6 @@ class horizontalScrolling extends Component {
     this.menuItems = Menu(list.slice(0, list.length), this.state.selected);
   }
 
-  onFirstItemVisible = () => {
-    console.log("first item is visible");
-  };
-
   onLastItemVisible = () => {
     console.log("last item is visible");
 
@@ -85,12 +79,12 @@ class horizontalScrolling extends Component {
   };
 
   onUpdate = ({ translate }) => {
-    console.log(`onUpdate: translate: ${translate}`);
+    // console.log(`onUpdate: translate: ${translate}`);
     this.setState({ translate });
   };
 
   onSelect = key => {
-    console.log(`onSelect: ${key}`);
+    // console.log(`onSelect: ${key}`);
     this.setState({ selected: key });
   };
 
@@ -147,6 +141,7 @@ class horizontalScrolling extends Component {
 
     return (
       <div className="horizontal-scrolling">
+        <h3>▼ Go to New Test ▼</h3>
         <ScrollMenu
           alignCenter={alignCenter}
           arrowLeft={ArrowLeft}
@@ -156,8 +151,6 @@ class horizontalScrolling extends Component {
           dragging={dragging}
           hideArrows={hideArrows}
           hideSingleArrow={hideSingleArrow}
-          onFirstItemVisible={this.onFirstItemVisible}
-        //   onLastItemVisible={this.onLastItemVisible}
           onSelect={this.onSelect}
           onUpdate={this.onUpdate}
           ref={el => (this.menu = el)}

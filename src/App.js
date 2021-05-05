@@ -3,6 +3,7 @@ import MainPage from './components/MainPage';
 import Intro from './components/Intro'
 import ResultToIntro from './components/ResultToIntro'
 import ScrollToTop from './components/ScrollToTop'
+import HorizontalScrolling from './components/horizontalScrolling'
 import TESTS from './api/TESTS'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Result from './components/Result';
@@ -148,7 +149,7 @@ class App extends Component {
       {/* CPC Banner Upper */}
       {this.cpcBannerUpperScriptor()}
 
-      <div id="optadATF" style={{"min-height": "110px"}}></div>
+      <div id="optadATF" style={{"minHeight": "110px"}}></div>
 
       <Router basename='/kapable.github.io/'>
         <ScrollToTop>
@@ -204,6 +205,9 @@ class App extends Component {
           </Switch>
         </ScrollToTop>
       </Router>
+
+      {/* New Test banners in Anywhere in the App */}
+      <HorizontalScrolling/>
 
       {/* CPC Banner footer */}
       {this.cpcBannerFooterScriptor()}

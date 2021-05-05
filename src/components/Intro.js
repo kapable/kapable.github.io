@@ -5,7 +5,6 @@ import Loading from './Loading'
 import BirthdayCalc from './BirthdayCalc'
 import DualMbti from './DualMbti'
 import StoryTelling from './StoryTelling'
-import HorizontalScrolling from './horizontalScrolling'
 import TESTS from '../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
 import Typist from 'react-typist';
@@ -786,7 +785,6 @@ class Intro extends Component {
                             onClick={this._onMainButtonClick}
                             alt="다른 테스트 하러 뒤로가기"/>
                     </div>
-                    {/* <HorizontalScrolling/> */}
                 </div>
             </Fragment>
         );
