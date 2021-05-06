@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-d
 import App from '../App'
 import { Card } from 'react-bootstrap';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import HorizontalScrolling from './horizontalScrolling'
 import COPYBTN from '../api/DefaultImg/result-copy-link-btn.png';
 import AGAINBTN from '../api/DefaultImg/result-to-again-btn.png';
 import TOHOMEBTN from '../api/DefaultImg/result-to-home-btn.png';
@@ -39,6 +40,7 @@ class Result extends Component {
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this)
         this._eventSenderGA = this._eventSenderGA.bind(this);
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
+        this.horizontalNewTestRenderer = this.horizontalNewTestRenderer.bind(this)
     }
     
     _eventSenderGA(category, action, label){
@@ -98,6 +100,16 @@ class Result extends Component {
             )
           }
     }
+    horizontalNewTestRenderer(){
+        // Delete NewTestMenu for PPL contents
+        let ppl_list = ['personalTaro']
+        if(!ppl_list.includes(this.state.current_test)) {
+            return(
+                <HorizontalScrolling/>
+            )   
+        }
+    }
+
     newTestLinkRenderer(){
         let personalColorListGB = ["personalColorEng", "personalColorCN", "personalColorES", "personalColorArb"]
         if(this.state.current_test === "personalColor") {
@@ -1029,15 +1041,12 @@ class Result extends Component {
                             alt="다른 테스트 하러가기"
                             />
                     </div>
-
-                    <div className="new-test" style={{'margin': '2rem'}}>
-                        {this.newTestLinkRenderer()}
-                    </div>
-
-                    {/* CPC Banner Result footer */}
-                    {this.cpcBannerResultFooterScriptor()}
-
                 </div>
+                {/* New Test banners */}
+                {this.horizontalNewTestRenderer()}
+
+                {/* CPC Banner Result footer */}
+                {this.cpcBannerResultFooterScriptor()}
             </Fragment>
         );
     }
