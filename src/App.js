@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import MainPage from './components/MainPage';
+import MainPage from './components/BasicComponents/MainPage';
 import Intro from './components/BasicComponents/Intro'
 import ResultToIntro from './components/SubComponents/ResultToIntro'
 import ScrollToTop from './components/SubComponents/ScrollToTop'
