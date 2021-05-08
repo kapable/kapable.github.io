@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Fragment } from 'react';
+import React, { Component } from '../../../client/node_modules/@types/react';
+import { Fragment } from '../../../client/node_modules/@types/react';
 import Lottie from 'react-lottie';
 import * as loading from '../../loading-animation.json'
 import ScriptTag from 'react-script-tag'
