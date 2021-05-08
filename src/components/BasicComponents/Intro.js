@@ -10,8 +10,8 @@ import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-rout
 import Typist from 'react-typist';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Helmet } from 'react-helmet';
-import COPYBTN from '../api/DefaultImg/test-intro-copy-link-btn.png';
-import BACKBTN from '../api/DefaultImg/test-intro-other-tests-btn.png';
+import COPYBTN from '../../api/DefaultImg/test-intro-copy-link-btn.png';
+import BACKBTN from '../../api/DefaultImg/test-intro-other-tests-btn.png';
 import ScriptTag from 'react-script-tag'
 import ReactGA from 'react-ga';
 
