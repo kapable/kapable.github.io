@@ -6,9 +6,9 @@ import App from '../../App'
 import { Card } from 'react-bootstrap';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import HorizontalScrolling from '../SubComponents/horizontalScrolling'
-import COPYBTN from '../api/DefaultImg/result-copy-link-btn.png';
-import AGAINBTN from '../api/DefaultImg/result-to-again-btn.png';
-import TOHOMEBTN from '../api/DefaultImg/result-to-home-btn.png';
+import COPYBTN from '../../api/DefaultImg/result-copy-link-btn.png';
+import AGAINBTN from '../../api/DefaultImg/result-to-again-btn.png';
+import TOHOMEBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
 import ScriptTag from 'react-script-tag'
