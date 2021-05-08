@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom'
-import MAINHEADER from '../api/DefaultImg/main-header.png'
-import TESTS from '../api/TESTS'
+import MAINHEADER from '../../api/DefaultImg/main-header.png'
+import TESTS from '../../api/TESTS'
 
 class MainPage extends Component{
     constructor(props){
