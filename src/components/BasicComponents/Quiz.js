@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from '../../../client/node_modules/@types/react';
+import React, { Component, Fragment } from 'react';
 import QuestionCount from './QuestionCount'
 import Question from './Question'
 

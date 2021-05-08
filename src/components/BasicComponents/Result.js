@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from '../../../client/node_modules/@types/react';
+import React, { Component, Fragment } from 'react';
 import Intro from './Intro'
 import TESTS from '../../api/TESTS'
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
@@ -9,7 +9,7 @@ import HorizontalScrolling from '../SubComponents/horizontalScrolling'
 import COPYBTN from '../../api/DefaultImg/result-copy-link-btn.png';
 import AGAINBTN from '../../api/DefaultImg/result-to-again-btn.png';
 import TOHOMEBTN from '../../api/DefaultImg/result-to-home-btn.png';
-import ReactGA from '../../../client/node_modules/react-ga/types';
+import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
 import ScriptTag from 'react-script-tag'
 

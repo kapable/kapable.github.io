@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from '../client/node_modules/@types/react';
+import React, { Component, Fragment } from 'react';
 import MainPage from './components/BasicComponents/MainPage';
 import Intro from './components/BasicComponents/Intro'
 import ResultToIntro from './components/SubComponents/ResultToIntro'
@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Result from './components/BasicComponents/Result';
 import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
-import ReactGA from '../client/node_modules/react-ga/types';
+import ReactGA from 'react-ga';
 
 
 class App extends Component {

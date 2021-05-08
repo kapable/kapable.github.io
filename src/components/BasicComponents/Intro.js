@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from '../../../client/node_modules/@types/react';
+import React, { Component, Fragment } from 'react';
 import Quiz from './Quiz'
 import Result from './Result'
 import Loading from './Loading'
@@ -13,7 +13,7 @@ import { Helmet } from 'react-helmet';
 import COPYBTN from '../../api/DefaultImg/test-intro-copy-link-btn.png';
 import BACKBTN from '../../api/DefaultImg/test-intro-other-tests-btn.png';
 import ScriptTag from 'react-script-tag'
-import ReactGA from '../../../client/node_modules/react-ga/types';
+import ReactGA from 'react-ga';
 
 class Intro extends Component {
     constructor(props){
