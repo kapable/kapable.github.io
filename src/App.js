@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import MainPage from './components/MainPage';
-import Intro from './components/Intro'
-import ResultToIntro from './components/ResultToIntro'
-import ScrollToTop from './components/ScrollToTop'
+import Intro from './components/BasicComponents/Intro'
+import ResultToIntro from './components/SubComponents/ResultToIntro'
+import ScrollToTop from './components/SubComponents/ScrollToTop'
 import TESTS from './api/TESTS'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Result from './components/Result';
+import Result from './components/BasicComponents/Result';
 import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Intro from './Intro'
+import Intro from '../BasicComponents/Intro'
 import { BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
