@@ -11,14 +11,7 @@ class BirthdayCalc extends Component {
             day:"일(ex. 31)",
         }
     }
-    handleChange(field, e){         
-        let fields = this.state.fields;
-        fields[field] = e.target.value;        
-        this.setState({fields});
-    }
-    submitBtnHandler(){
-        
-    }
+    
     render (){
         return (
             <Fragment>

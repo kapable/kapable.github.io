@@ -3,6 +3,7 @@ import Quiz from './Quiz'
 import Result from './Result'
 import Loading from './Loading'
 import BirthdayCalc from '../TestTypes/BirthdayCalc'
+import Constellation from '../TestTypes/Constellation'
 import DualMbti from '../TestTypes/DualMbti'
 import StoryTelling from '../TestTypes/StoryTelling'
 import TESTS from '../../api/TESTS'
@@ -791,7 +792,8 @@ class Intro extends Component {
     }
 
     resultCaculator(){
-        if (this.state.scoreType === "numberScoring" || this.state.scoreType === "birthdayCalc" || this.state.scoreType === "storyTelling" || this.state.scoreType === "numberScoringImg" ){
+        if (this.state.scoreType === "numberScoring" || this.state.scoreType === "birthdayCalc" || this.state.scoreType === "storyTelling"
+        || this.state.scoreType === "numberScoringImg" || this.state.scoreType === "Constellation"){
             let final_score = this.state.counted_score;
             for (let k = 0; k < this.state.current_test.results.length; k++){
                 if(this.state.current_test.results[k].score_range.includes(final_score)){
@@ -950,6 +952,16 @@ class Intro extends Component {
                         mode:_mode
                     })
                 }.bind(this)}></Quiz>
+                return _page
+            } else if (this.state.scoreType === "Constellation"){
+                let _page = <Constellation
+                onChangeMode={
+                    function(_final_result, _mode) {
+                    this.setState({
+                        counted_score:_final_result,
+                        mode:_mode
+                    })
+                }.bind(this)}></Constellation>
                 return _page
             }
             return this._page

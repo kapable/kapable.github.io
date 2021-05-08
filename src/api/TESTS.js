@@ -23,6 +23,307 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // constellation
+    {
+        info : {
+            mainTitle:"별자리 테스트",
+            subTitle:"별자리로 알아보는 내 성격",
+            mainUrl:"constellation",
+            scoreType:"Constellation",
+            mainImage:"https://images.ktestone.com/introImages/constellation-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/constellation-thumb.png"
+        },
+        questions:[
+            {
+                question: '데이트 전 날 나의 모습은?',
+                answers:[
+                    {
+                        type: "포메라니안",
+                        score: 2,
+                        content: '나가기 직전 마음에 드는 옷을 입는다.'
+                    },
+                    {
+                        type: "치와와",
+                        score: 5,
+                        content: '자기 전 머릿속으로 나의 스타일링을 생각하고 잔다.'
+                    },
+                    {
+                        type: "비글",
+                        score: 10,
+                        content: '전 날 머리부터 발끝까지 스타일링과 옷을 미리 준비한다.'
+                    },
+                ],
+            },
+            {
+                question: "갑자기 자취방에 놀러 온다는 애인!\n그때의 나는?",
+                answers:[
+                    {
+                        type: "포메라니안",
+                        score: 2,
+                        content: "아아... 왜 갑자기 오는 거야?! 보이는 곳만 치워 둔다."
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 5,
+                        content: "모아둔 쓰레기를 버리고 바로 청소를 시작한다."
+                    },
+                    {
+                        type: "리트리버",
+                        score: 10,
+                        content: "평소 미리미리 해 두었기 때문에 바로 주소를 보낸다."
+                    },
+                ]
+            },
+            {
+                question: "좋아하는 이성이 생겼을 때 나는?",
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 2,
+                        content: "상대의 SNS을 탐방하며, 미래의 우리 모습을 상상해본다."
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 5,
+                        content: "좋아하는 이성의 친구에게 도움을 요청한다."
+                    },
+                    {
+                        type: "리트리버",
+                        score: 10,
+                        content: "먼저 연락할 거리를 만들며 적극적으로 대시한다."
+                    },
+                ]
+            },
+            {
+                question: "카페 안에 이상형인 사람과 계속 눈이 마주친다.\n 눈웃음까지 보내는데...?",
+                answers:[
+                    {
+                        type: "비글",
+                        score: 2,
+                        content: "지금 말하면 좋은 말이 안 나올 것 같아. 좀 이따 연락할게."
+                    },
+                    {
+                        type: "리트리버",
+                        score: 5,
+                        content: "아!!!!!!!짜증나!!!!!진짜!!!!!! 도대체 왜 그러는 거야?!?!"
+                    },
+                    {
+                        type: "포메라니안",
+                        score: 10,
+                        content: "이런 점에서 나는 화가 난 거야. 그런 부분은 고쳐줬으면 좋겠어."
+                    },
+                ]
+            },
+            {
+                question: "쉬고 있는데 갑자기 걸려온 남사친/여사친의 전화, \n친구들이 같이 놀고 싶다며 나올 수 있냐고 물어보는데...?",
+                answers:[
+                    {
+                        type: "리트리버",
+                        score: 2,
+                        content: '귀찮은데… 아쉽긴 하지만 “시간이 너무 늦었어… 나 집에서 쉴래!”'
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 5,
+                        content: "일단 끊고 수십 번 고민 끝에 나가기로 한다."
+                    },
+                    {
+                        type: "비글",
+                        score: 10,
+                        content: '오케이~ 인연 한 번 만들어보자~ “갈게~~~~”'
+                    },
+                ]
+            },
+            {
+                question: "다가온 기념일! 나는 어떤 선물을 준비할까?",
+                answers:[
+                    {
+                        type: "포메라니안",
+                        score: 2,
+                        content: "정성 어린 편지와 기억에 남을 만한 선물을 준비한다."
+                    },
+                    {
+                        type: "비글",
+                        score: 5,
+                        content: "커플로 착용할 수 있는 아이템을 선물한다."
+                    },
+                    {
+                        type: "리트리버",
+                        score: 10,
+                        content: "평소 사고 싶다거나 필요한 물건을 기억해 두었다가 서프라이즈로 선물한다."
+                    },
+                ]
+            },
+            {
+                question: "내가 하고 싶은 연애 스타일은?",
+                answers:[
+                    {
+                        type: "비글",
+                        score: 2,
+                        content: "다이나믹한 화려한 연애 (단, 너무 화려해서 바람 피울 가능성 50%)"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 5,
+                        content: "나만 바라보는 연애 (단, 너무 좋아해서 집착 대마왕)"
+                    },
+                    {
+                        type: "포메라니안",
+                        score: 10,
+                        content: "친구같이 편안한 연애 (단, 가끔 친구인지 애인인지 헷갈림)"
+                    },
+                ]
+            },
+            {
+                question: "애인과 대화할 때 나는?",
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 5,
+                        content: "장난치고 티키타카가 잘 되는 대화가 좋다."
+                    },
+                    {
+                        type: "리트리버",
+                        score: 10,
+                        content: "서로의 생각을 공유하는 대화가 너무 좋다."
+                    },
+                ]
+            },
+            {
+                question: "친구가 나에게 고민상당을 한다. 나의 반응은?",
+                answers:[
+                    {
+                        type: "포메라니안",
+                        score: 5,
+                        content: "고민에 대한 구체적인 해결책을 제시한다."
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 10,
+                        content: "고민에 대해 빠져들어 감정적으로 같이 공감해준다."
+                    },
+                ]
+            },
+            {
+                question: "기다려왔던 짝사랑하던 그/그녀와의 데이트 날..\n갑자기 급한 일이 생겼다며 다음에 만나자고 한다.\n과연 나의 대답은?",
+                answers:[
+                    {
+                        type: "비글",
+                        score: 2,
+                        content: "어쩔 수 없지… 알겠어 다음에 보자!"
+                    },
+                    {
+                        type: "치와와",
+                        score: 5,
+                        content: "알겠어…근데 심각한 일이야?"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 10,
+                        content: "아 진짜? 그럼 날짜 다시 조정하자! 언제가 괜찮아?"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "양자리",
+                desc: `
+                `,
+                query: "didwkfl",
+                score_range:range(2),
+                img_src:'https://images.ktestone.com/resultImages/constellation/didwkfl.png'
+            },
+            {
+                type: "황소자리",
+                desc: `
+                `,
+                query: "ghkdthwkfl",
+                score_range:range(2, 3),
+                img_src:'https://images.ktestone.com/resultImages/constellation/ghkdthwkfl.png'
+            },
+            {
+                type: "쌍둥이자리",
+                desc: `
+                `,
+                query: "Tkdenddlwkfl",
+                score_range:range(3, 4),
+                img_src:'https://images.ktestone.com/resultImages/constellation/Tkdenddlwkfl.png'
+            },
+            {
+                type: "게자리",
+                desc: `
+                `,
+                query: "rpwkfl",
+                score_range:range(4, 5),
+                img_src:'https://images.ktestone.com/resultImages/constellation/rpwkfl.png'
+            },
+            {
+                type: "사자자리",
+                desc: `
+                `,
+                query: "tkwkwkfl",
+                score_range:range(5, 6),
+                img_src:'https://images.ktestone.com/resultImages/constellation/tkwkwkfl.png'
+            },
+            {
+                type: "처녀자리",
+                desc: `
+                `,
+                query: "cjsuwkfl",
+                score_range:range(6, 7),
+                img_src:'https://images.ktestone.com/resultImages/constellation/cjsuwkfl.png'
+            },
+            {
+                type: "천칭자리",
+                desc: `
+                `,
+                query: "cjscldwkfl",
+                score_range:range(7, 8),
+                img_src:'https://images.ktestone.com/resultImages/constellation/cjscldwkfl.png'
+            },
+            {
+                type: "전갈자리",
+                desc: `
+                `,
+                query: "wjsrkfwkfl",
+                score_range:range(8, 9),
+                img_src:'https://images.ktestone.com/resultImages/constellation/wjsrkfwkfl.png'
+            },
+            {
+                type: "사수자리",
+                desc: `
+                `,
+                query: "tktnwkfl",
+                score_range:range(9, 10),
+                img_src:'https://images.ktestone.com/resultImages/constellation/tktnwkfl.png'
+            },
+            {
+                type: "염소자리",
+                desc: `
+                `,
+                query: "duathwkfl",
+                score_range:range(10, 11),
+                img_src:'https://images.ktestone.com/resultImages/constellation/duathwkfl.png'
+            },
+            {
+                type: "물병자리",
+                desc: `
+                `,
+                query: "anfqudwkfl",
+                score_range:range(11, 12),
+                img_src:'https://images.ktestone.com/resultImages/constellation/anfqudwkfl.png'
+            },
+            {
+                type: "물고기자리",
+                desc: `
+                `,
+                query: "anfrhrlwkfl",
+                score_range:range(12, 13),
+                img_src:'https://images.ktestone.com/resultImages/constellation/anfrhrlwkfl.png'
+            },
+        ]
+    },
     // persoanlColorFactInd
     {
         info : {
