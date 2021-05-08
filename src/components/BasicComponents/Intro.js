@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Quiz from './Quiz'
 import Result from './Result'
-import Loading from '../Loading'
+import Loading from './Loading'
 import BirthdayCalc from '../TestTypes/BirthdayCalc'
 import DualMbti from '../TestTypes/DualMbti'
 import StoryTelling from '../TestTypes/StoryTelling'
