@@ -1,17 +1,39 @@
 import React, { Component } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
+import TEST from '../../api/TESTS';
 
 // list of items
-let list = [
-  { name: 'item1' , banner: "https://images.ktestone.com/horizontalNewTest/USA/personalColorEng.png" , link: "https://ktestone.com/kapable.github.io/personalColorEng/" },
-  { name: 'item2' , banner: "https://images.ktestone.com/horizontalNewTest/USA/dringkingHabitEng.png" , link: "https://ktestone.com/kapable.github.io/dringkingHabitEng/" },
-  { name: 'item3' , banner: "https://images.ktestone.com/horizontalNewTest/USA/personalIncenseEng.png" , link: "https://ktestone.com/kapable.github.io/personalIncenseEng/" },
-  { name: 'item4' , banner: "https://images.ktestone.com/horizontalNewTest/USA/personalColorFactEng.png" , link: "https://ktestone.com/kapable.github.io/personalColorFactEng/" },
-  { name: 'item5' , banner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png" , link: "https://ktestone.com/kapable.github.io/personalColor/" },
-  { name: 'item6' , banner: "https://images.ktestone.com/horizontalNewTest/Korea/dringkingHabit.png" , link: "https://ktestone.com/kapable.github.io/dringkingHabit/" },
-  { name: 'item7' , banner: "https://images.ktestone.com/horizontalNewTest/Korea/personalIncense.png" , link: "https://ktestone.com/kapable.github.io/personalIncense/" },
-  { name: 'item8' , banner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColorFact.png" , link: "https://ktestone.com/kapable.github.io/personalColorFact/" },
-];
+let current_url = window.location.href;
+let list = [];
+if(current_url.includes("JP")) {
+  TEST.forEach((el,index) => {
+    if(el.info.lang === "JP") {
+      if(el.info.horizontalBanner) {
+        let item = {name: 'item'+index, banner: el.info.horizontalBanner, link: "https://ktestone.com/kapable.github.io/" + el.info.mainUrl + "/"}
+        list.push(item)
+      }
+    }
+  })
+} else if (current_url.includes("Eng") || current_url.includes("Ind") || current_url.includes("Rus") || current_url.includes("Arb") || current_url.includes("ES") || current_url.includes("CN")) {
+  TEST.forEach((el, index) => {
+    if(el.info.lang === "Eng"){
+      if(el.info.horizontalBanner){
+        let item = {name: 'item'+index, banner: el.info.horizontalBanner, link: "https://ktestone.com/kapable.github.io/" + el.info.mainUrl + "/"}
+        list.push(item)
+      }
+    }
+  })
+} else {
+  TEST.forEach((el, index) => {
+    if(el.info.lang === "Kor"){
+      if(el.info.horizontalBanner){
+        let item = {name: 'item'+index, banner: el.info.horizontalBanner, link: "https://ktestone.com/kapable.github.io/" + el.info.mainUrl + "/"}
+        list.push(item)
+      }
+    }
+  })
+}
+list[0].name = "item1";
 
 // One item component
 // selected prop will be passed
@@ -33,6 +55,36 @@ export const Menu = (list, selected) =>
     return <MenuItem text={name} banner={banner} link={link} key={name} selected={selected} />;
   });
 
+export const MenuT = (TEST, selected) => {
+  TEST.forEach(el => {
+    if(el.info.mainUrl === this.state.current_test) {
+      console.log(el.info.lang);
+      const _current_lang = el.info.lang;
+      this.setState({
+        current_lang: _current_lang
+      })
+    }
+  })
+  TEST.map(el => {
+    if((this.state.current_lang === "Kor")&&(el.info.lang === this.state.current_lang)) {
+      const {name, banner, link} = el;
+  
+      return <MenuItem text={name} banner={banner} link={link} key={name} selected={selected} />;
+    }
+    if ((this.state.current_lang === "JP")&&(el.info.lang === this.state.current_lang)) {
+      const {name, banner, link} = el;
+  
+      return <MenuItem text={name} banner={banner} link={link} key={name} selected={selected} />;
+    }
+    if((this.state.current_lang !== "Kor") && (this.state.current_lang !== "JP") && (el.info.lang !== "Kor") && (el.info.lang !== "JP")) {
+      const {name, banner, link} = el;
+  
+      return <MenuItem text={name} banner={banner} link={link} key={name} selected={selected} />;
+    }
+  });
+  
+}
+
 
 const Arrow = ({ text, className }) => {
   return (
@@ -47,23 +99,27 @@ const ArrowLeft = Arrow({ text: '<', className: 'arrow-prev' });
 const ArrowRight = Arrow({ text: '>', className: 'arrow-next' });
 
 class horizontalScrolling extends Component {
-    state = {
-        alignCenter: true,
-        clickWhenDrag: false,
-        dragging: true,
-        hideArrows: true,
-        hideSingleArrow: true,
-        itemsCount: list.length,
-        scrollToSelected: false,
-        selected: "item1",
-        translate: 0,
-        transition: 0.5,
-        wheel: false
-      };
+  state = {
+    alignCenter: true,
+    clickWhenDrag: false,
+    dragging: true,
+    hideArrows: true,
+    hideSingleArrow: true,
+    itemsCount: list.length,
+    scrollToSelected: false,
+    selected: "item1",
+    translate: 0,
+    transition: 0.3,
+    wheel: false,
+  };
   constructor(props) {
     super(props);
     // call it again if items count changes
     // this.menuItems = Menu(list, selected);
+    this.state = {
+      current_test: this.props.test,
+      current_lang: ''
+    }
     this.menu = null;
     this.menuItems = Menu(list.slice(0, list.length), this.state.selected);
   }
@@ -98,6 +154,8 @@ class horizontalScrolling extends Component {
     if (alignCenter !== alignCenterNew) {
       this.menu.setInitial();
     }
+    
+    
   }
 
   setItemsCount = ev => {
@@ -148,8 +206,8 @@ class horizontalScrolling extends Component {
         <h3>▼ Go to New Test ▼</h3>
         <ScrollMenu
           alignCenter={alignCenter}
-          arrowLeft={ArrowLeft}
-          arrowRight={ArrowRight}
+          // arrowLeft={ArrowLeft}
+          // arrowRight={ArrowRight}
           clickWhenDrag={clickWhenDrag}
           data={menu}
           dragging={dragging}
@@ -163,6 +221,8 @@ class horizontalScrolling extends Component {
           transition={+transition}
           translate={translate}
           wheel={wheel}
+          // inertiaScrolling={true}
+          // inertiaScrollingSlowdown={0.25}
         />
       </div>
     );

@@ -105,7 +105,7 @@ class Result extends Component {
         let ppl_list = ['personalTaro']
         if(!ppl_list.includes(this.state.current_test)) {
             return(
-                <HorizontalScrolling/>
+                <HorizontalScrolling test={this.state.current_test}/>
             )   
         }
     }

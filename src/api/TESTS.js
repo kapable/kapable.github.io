@@ -31,7 +31,8 @@ var TESTS = [
             mainUrl:"constellation",
             scoreType:"Constellation",
             mainImage:"https://images.ktestone.com/introImages/constellation-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/constellation-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/constellation-thumb.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -332,7 +333,8 @@ var TESTS = [
             mainUrl:"personalColorFactInd",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalColorFactInd-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorFactInd-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorFactInd-thumb.png",
+            lang:"Hin"
         },
         questions:[
             {
@@ -654,7 +656,9 @@ var TESTS = [
             mainUrl:"personalColorFactEng",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalColorFactEng-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorFactEng-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorFactEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/USA/personalColorFactEng.png",
+            lang:"Eng"
         },
         questions:[
             {
@@ -976,7 +980,9 @@ var TESTS = [
             mainUrl:"personalColorFact",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/persoanlColorFact-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/persoanlColorFact-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/persoanlColorFact-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColorFact.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -1298,7 +1304,9 @@ var TESTS = [
             mainUrl:"dringkingHabitJP",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/dringkingHabitJP-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabitJP-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabitJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Japan/dringkingHabit.png",
+            lang:"JP"
         },
         questions:[
             {
@@ -1617,7 +1625,9 @@ var TESTS = [
             mainUrl:"dringkingHabitEng",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/dringkingHabitEng-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabitEng-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabitEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/USA/dringkingHabitEng.png",
+            lang:"Eng"
         },
         questions:[
             {
@@ -1936,7 +1946,9 @@ var TESTS = [
             mainUrl:"dringkingHabit",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/dringkingHabit-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabit-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/dringkingHabit-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dringkingHabit.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -2255,7 +2267,8 @@ var TESTS = [
             mainUrl:"personalTaro",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalTaro-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalTaro-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalTaro-thumb.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -2574,7 +2587,9 @@ var TESTS = [
             mainUrl:"personalIncenseJP",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalIncenseJP-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalIncenseJP-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalIncenseJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Japan/personalIncenseJP.png",
+            lang:"JP"
         },
         questions:[
             {
@@ -2944,7 +2959,9 @@ var TESTS = [
             mainUrl:"personalIncenseEng",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalFragranceEng-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalIncenseEng-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalIncenseEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/USA/personalIncenseEng.png",
+            lang:"Eng"
         },
         questions:[
             {
@@ -3314,7 +3331,9 @@ var TESTS = [
             mainUrl:"personalIncense",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/duftDoft-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/duftDoft-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/duftDoft-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalIncense.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -3684,7 +3703,9 @@ var TESTS = [
             mainUrl:"personalColorRus",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalColorRus-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorRus-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorRus-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/ETC/personalColorRus.png",
+            lang:"Rus"
         },
         questions:[
             {
@@ -4006,7 +4027,9 @@ var TESTS = [
             mainUrl:"personalColorInd",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalColorInd-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorInd-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorInd-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/ETC/personalColorInd.png",
+            lang:"Hin"
         },
         questions:[
             {
@@ -4328,7 +4351,9 @@ var TESTS = [
             mainUrl:"personalColorArb",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalColorArb-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorArb-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorArb-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/ETC/personalColorArab.png",
+            lang:"Arb"
         },
         questions:[
             {
@@ -4650,7 +4675,9 @@ var TESTS = [
             mainUrl:"personalColorES",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalColorES-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorES-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorES-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/ETC/personalColorES.png",
+            lang:"ES"
         },
         questions:[
             {
@@ -4972,7 +4999,8 @@ var TESTS = [
             mainUrl:"personalColorCN",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalColorCN-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorCN-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorCN-thumb.png",
+            lang:"CN"
         },
         questions:[
             {
@@ -5294,7 +5322,9 @@ var TESTS = [
             mainUrl:"personalColorEng",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalColorEng-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorEng-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/USA/personalColorEng.png",
+            lang:"Eng"
         },
         questions:[
             {
@@ -5616,7 +5646,9 @@ var TESTS = [
             mainUrl:"personalColorJP",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalColorJP-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorJP-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Japan/personalColorJP.png",
+            lang:"JP"
         },
         questions:[
             {
@@ -5938,7 +5970,9 @@ var TESTS = [
             mainUrl:"dotori",
             scoreType:"numberScoringImg",
             mainImage:"https://images.ktestone.com/introImages/cyworld-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/cyworld-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/cyworld-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -6228,7 +6262,9 @@ var TESTS = [
             mainUrl:"peopleColor",
             scoreType:"dualMBTI",
             mainImage:"https://images.ktestone.com/introImages/peopleColor-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/peopleColor-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/peopleColor-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/peopleColor.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -7539,7 +7575,9 @@ var TESTS = [
             mainUrl:"personalColor",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/personalColor-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColor-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColor-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -7861,7 +7899,9 @@ var TESTS = [
             mainUrl:"otherlookme",
             scoreType:"numberScoring",
             mainImage:"https://images.ktestone.com/introImages/otherlookme-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/otherlookme-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/otherlookme-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/otherlookme.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -8231,7 +8271,9 @@ var TESTS = [
             mainUrl:"latte",
             scoreType:"numberScoring",
             mainImage:"https://images.ktestone.com/introImages/latte-main.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/latte-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/latte-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/latte.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -8387,7 +8429,9 @@ var TESTS = [
             mainUrl:"whosFault",
             scoreType:"storyTelling",
             mainImage:"https://images.ktestone.com/introImages/whosFault-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/whosFault-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/whosFault-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/whosFault.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -8489,7 +8533,9 @@ var TESTS = [
             mainUrl:"birthNum",
             scoreType:"birthdayCalc",
             mainImage:"https://images.ktestone.com/introImages/birthNum-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/birthNum-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/birthNum-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/birthNum.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -8831,7 +8877,9 @@ var TESTS = [
             mainUrl:"lovelevel",
             scoreType:"numberScoring",
             mainImage:"https://images.ktestone.com/introImages/lovelevel-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/lovelevel-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/lovelevel-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/lovelevel.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -9106,7 +9154,9 @@ var TESTS = [
             mainUrl:"humanwall",
             scoreType:"typeCounting",
             mainImage:"https://images.ktestone.com/introImages/humanWall-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/humanWall-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/humanWall-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/humanwall.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -9307,7 +9357,8 @@ var TESTS = [
             mainUrl:"wind",
             scoreType:"numberScoring",
             mainImage:"https://images.ktestone.com/introImages/wind-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/wind-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/wind-thumb.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -9574,7 +9625,9 @@ var TESTS = [
             mainUrl:"daengdaeng",
             scoreType:"typeCounting",
             mainImage:"https://images.ktestone.com/introImages/daengdaeng-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/daenngdaeng-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/daenngdaeng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/daengdaeng.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -9917,7 +9970,8 @@ var TESTS = [
             mainUrl:"zipkok",
             scoreType:"numberScoring",
             mainImage:"https://images.ktestone.com/introImages/zipkok-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/zipkok-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/zipkok-thumb.png",
+            lang:"Kor"
         },
         questions:[
             {
@@ -10160,7 +10214,8 @@ var TESTS = [
             mainUrl:"driveTest",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/test-thumb.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png"
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            lang:"Kor"
         },
         questions:[
             {
