@@ -219,6 +219,7 @@ body {
   width: 10rem;
   height: 3rem;
   margin: 3rem 1rem;
+  border-radius: 5%;
 }
 
 .private-info-desc {

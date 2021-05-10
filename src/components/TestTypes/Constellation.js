@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from 'react'
-import { Button } from 'react-bootstrap';
 
 function Constellation(props) {
     const [month, setmonth] = useState("월(ex. 12)")
@@ -61,7 +60,7 @@ function Constellation(props) {
                         setday(_day)
                     }} value={day} pattern="[0-9]*" type="number" placeholder="일(ex. 31)" min={0} max={31} maxLength="2" className="birthCalcDay" key="birthCalcDay"/>
                 <div>
-                    <Button onClick={constellationCalc} key="birthCalcBtn" className="birthday-submit-btn" variant="secondary">➥ 내 별자리 알아보기 🌟</Button>
+                    <button onClick={constellationCalc} key="birthCalcBtn" className="birthday-submit-btn" type="primary">➥ 내 별자리 알아보기</button>
                 </div>
             <p className="private-info-desc" >개인정보는 테스트를 위한 용도로만 사용되며, <br></br> 사용 후 바로 폐기됩니다.</p>
             </div>
