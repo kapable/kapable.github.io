@@ -68,7 +68,7 @@ class horizontalScrolling extends Component {
       transition: 0.3,
       wheel: false,
       inertiaScrolling: true,
-      inertiaScrollingSlowdown: 0.75
+      inertiaScrollingSlowdown: 1
     }
     this.menu = null;
     this.Menu = this.Menu.bind(this)
