@@ -40,6 +40,7 @@ class Result extends Component {
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this)
         this._eventSenderGA = this._eventSenderGA.bind(this);
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
+        this._onPPLBannerClick = this._onPPLBannerClick.bind(this);
         this.horizontalNewTestRenderer = this.horizontalNewTestRenderer.bind(this)
     }
     
@@ -60,9 +61,14 @@ class Result extends Component {
         this.setState({
             num_shares_count:this.state.num_shares_count+1
         })
-        this._eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
+        this._eventSenderGA("Sharing", "Click Copy-link Button", "result page");
         alert("링크가 복사됐어요!");
     }
+
+    _onPPLBannerClick(){
+        this._eventSenderGA("Outlinking", "Click PPL-Banner Button", "result page");
+    }
+
     cpcBannerResultFooterScriptor(){
         // Delete Adfit for PPL contents
         let ppl_list = ['personalIncense', 'personalTaro']
@@ -745,7 +751,7 @@ class Result extends Component {
                     rel="noopener noreferrer"
                     href={duft_outlink}
                     className="to-ppl-banner-text"
-                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                 </Fragment>
             )
         // duft & doft Kor
@@ -759,7 +765,7 @@ class Result extends Component {
                     rel="noopener noreferrer"
                     href={duft_outlink}
                     className="to-ppl-banner-text"
-                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                 </Fragment>
             )
         // Class 101
@@ -778,17 +784,19 @@ class Result extends Component {
                             rel="noopener noreferrer"
                             href={taro_outlink}
                             className="to-ppl-banner-text"
-                            > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                            > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                             <a
                             target="_blank"
                             rel="noopener noreferrer"
                             href={taro_outlink_2}
                             className="to-ppl-banner-text"
-                            > <img src={banner_img_src_2} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                            > <img src={banner_img_src_2} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                         </Fragment>
                     )
                 }
             }
+        
+        // hanbokBTI
         } else if (this.state.current_test === "hanbokBTI") {
             const hanbokBTI_outlink = "https://bit.ly/3nADdv4"
             const banner_img_src = 'https://images.ktestone.com/resultImages/hanbokBTI/hanbokBTI-bottom-banner.png'
@@ -799,7 +807,7 @@ class Result extends Component {
                     rel="noopener noreferrer"
                     href={hanbokBTI_outlink}
                     className="to-ppl-banner-text"
-                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                 </Fragment>
             )
         }
