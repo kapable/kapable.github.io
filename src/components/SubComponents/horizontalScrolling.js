@@ -51,7 +51,19 @@ class horizontalScrolling extends Component {
       })
     }
     _list[0].name = "item1";
+    _list = _list.slice(undefined, 5);
 
+    // change display style in condition of screen width size
+    let _menuStyle = {}
+    let _wrapperStyle = {}
+    if(window.window.screen.width >= 1800) {
+      _menuStyle = {display: 'inline-block', alignItems: 'center', userSelect: 'none'};
+      _wrapperStyle={overflow: 'none', userSelect: 'none'}
+    } else {
+      _menuStyle = {display: 'flex', alignItems: 'center', userSelect: 'none'};
+      _wrapperStyle={overflow: 'hidden', userSelect: 'none'}
+    };
+    
     this.state = {
       current_test: this.props.test,
       current_lang: '',
@@ -68,7 +80,9 @@ class horizontalScrolling extends Component {
       transition: 0.3,
       wheel: false,
       inertiaScrolling: true,
-      inertiaScrollingSlowdown: 1
+      inertiaScrollingSlowdown: 1,
+      menuStyle:_menuStyle,
+      wrapperStyle:_wrapperStyle
     }
     this.menu = null;
     this.Menu = this.Menu.bind(this)
@@ -163,7 +177,9 @@ class horizontalScrolling extends Component {
         transition,
         wheel,
         inertiaScrolling,
-        inertiaScrollingSlowdown
+        inertiaScrollingSlowdown,
+        menuStyle,
+        wrapperStyle
       } = this.state;
   
     const menu = this.menuItems;
@@ -190,6 +206,8 @@ class horizontalScrolling extends Component {
           wheel={wheel}
           inertiaScrolling={inertiaScrolling}
           inertiaScrollingSlowdown={inertiaScrollingSlowdown}
+          menuStyle={menuStyle}
+          wrapperStyle={wrapperStyle}
         />
       </div>
     );

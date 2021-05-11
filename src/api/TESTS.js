@@ -198,7 +198,7 @@ var TESTS = [
             },
             {
                 which:"EI",
-                question: "한복도 있어봤으니 친구랑 둘이 사진을 찍고 싶다.",
+                question: "한복도 입어봤으니 친구랑 둘이 사진을 찍고 싶다.",
                 answers:[
                     {
                         type: "E",
