@@ -67,7 +67,8 @@ class horizontalScrolling extends Component {
       translate: 0,
       transition: 0.3,
       wheel: false,
-
+      inertiaScrolling: true,
+      inertiaScrollingSlowdown: 0.75
     }
     this.menu = null;
     this.Menu = this.Menu.bind(this)
@@ -160,7 +161,9 @@ class horizontalScrolling extends Component {
         selected,
         translate,
         transition,
-        wheel
+        wheel,
+        inertiaScrolling,
+        inertiaScrollingSlowdown
       } = this.state;
   
     const menu = this.menuItems;
@@ -185,8 +188,8 @@ class horizontalScrolling extends Component {
           transition={+transition}
           translate={translate}
           wheel={wheel}
-          inertiaScrolling={true}
-          inertiaScrollingSlowdown={0.25}
+          inertiaScrolling={inertiaScrolling}
+          inertiaScrollingSlowdown={inertiaScrollingSlowdown}
         />
       </div>
     );
