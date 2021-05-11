@@ -789,6 +789,19 @@ class Result extends Component {
                     )
                 }
             }
+        } else if (this.state.current_test === "hanbokBTI") {
+            const hanbokBTI_outlink = "https://bit.ly/3nADdv4"
+            const banner_img_src = 'https://images.ktestone.com/resultImages/hanbokBTI/hanbokBTI-bottom-banner.png'
+            return(
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={hanbokBTI_outlink}
+                    className="to-ppl-banner-text"
+                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /> </a>
+                </Fragment>
+            )
         }
     }
 

@@ -23,6 +23,346 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // hanbokBTI
+    {
+        info : {
+            mainTitle:"한복BTI hanbokBTI",
+            subTitle:"나에게 어울리는 한복스타일은?",
+            mainUrl:"hanbokBTI",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/hanbokBTI-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/hanbokBTI-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/hanbokBTI.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '우리 사극드라마 주인공 한복을 따라 입어보자! 라는 친구!',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '그래그래! 나 그럼 황진이할래! 너 뭐할랭?'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '아…조금 부끄럽네…ㅎ'
+                    },
+                ],
+            },
+            {
+                which:"SN",
+                question: "한복 체험을 하기로 한 나, 한복을 입은 나를 상상해보았다.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "뭐 직접 입어봐야 알지 상상해봐야 뭐하겠니"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "음? 이렇게 입어볼까? 뭐가 어울릴까? 혼자 상상의 나래를 펼친다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "점심을 먹자고 하는 친구들!",
+                answers:[
+                    {
+                        type: "F",
+                        score: 2,
+                        content: "친구들이 먹자고 하는 거에 따른다!"
+                    },
+                    {
+                        type: "T",
+                        score: 5,
+                        content: "내가 먹고 싶은 걸 적극적으로 추천한다!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "민속촌에 가서 전통체험을 하기로 했다. 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "민속촌에 무슨 체험이 있는지 인터넷 써치해보고 간다!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 가서 먼저 마음에 드는 거 먼저 한다!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "한복을 입을 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "전통 방식 그대로 따라 입는다 "
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "나만의 방법으로 색다르게 입어본다! "
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "고민 상담을 들어줄 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "공감보다는 현실적인 조언을 해준다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "감정적으로 공감해준다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "술이 마시고 싶은 나는 친구에게 카톡을 했다!",
+                answers:[
+                    {
+                        type: "P",
+                        score: 2,
+                        content: "오늘 저녁에 소주 긔?"
+                    },
+                    {
+                        type: "J",
+                        score: 5,
+                        content: "주말에 머해? 소주 기기할랭?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "민속촌을 가기로 해서 하루의 계획을 짜보기로 했다!",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "필수코스는 반드시 가자! 계획대로 움직이기!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "계획은 계획일 뿐~ 돌아다니다가 다른 곳으로 가버리기!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "한복 체험 어땠어? 라고 물어보는 지인의 말에 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "오랜만에 한복도 입어보고 좋은 경험했어!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "와 진짜 우리나라 한복 너무 이뻐! 나 무슨 사극 드라마 주인공 된줄 알았잖아"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "고민을 얘기 하는 친구, 들어보니 친구의 잘못이 크다",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "친구의 잘못된 부분을 잘 설명해준다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "직접적이기보다 돌려서 잘 설명해준다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "한복도 있어봤으니 친구랑 둘이 사진을 찍고 싶다.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "지나가는 사람에게 다가가서 먼저 찍어주고 우리도 찍어달라고 한다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "누군가 우리에게 찍어 달라고 하면 말한다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "화려한 불금 그리고 황금 같은 주말에 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "여러명과 함께 신나게 놀면서 에너지를 채운다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "집에서 휴식을 취하며 에너지를 채운다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "내가 생각 하는 한복은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "우리의 전통미를 상징하는 한복이다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "한민족의 고유한 의복으로 예부터 전해 내려오는 전통의상이다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTI/INFP.png'
+            },
+        ]
+    },
     // constellation
     {
         info : {

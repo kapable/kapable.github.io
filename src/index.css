@@ -220,6 +220,7 @@ body {
   height: 3rem;
   margin: 3rem 1rem;
   border-radius: 5%;
+  font-family: var(--title-font);
 }
 
 .private-info-desc {
