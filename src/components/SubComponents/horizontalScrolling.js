@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 import TEST from '../../api/TESTS';
+import ReactGA from 'react-ga';
 
 // const Arrow = ({ text, className }) => {
 //   return (
@@ -63,7 +64,7 @@ class horizontalScrolling extends Component {
       _menuStyle = {display: 'flex', alignItems: 'center', userSelect: 'none'};
       _wrapperStyle={overflow: 'hidden', userSelect: 'none'}
     };
-    
+
     this.state = {
       current_test: this.props.test,
       current_lang: '',
@@ -89,6 +90,16 @@ class horizontalScrolling extends Component {
     this.menuItems = this.Menu(this.state.list.slice(0, this.state.list.length), this.state.selected);
     
   }
+  _eventSenderGA(category, action, label){
+    ReactGA.event({
+        category: category,
+        action: action,
+        label: label
+      });
+  }
+  _onPPLBannerClick(){
+    this._eventSenderGA("Outlinking", "Click NewTest-Banner Button", "result page");
+  }
   // // All items component
   // // Important! add unique key
   Menu = (list, selected) => 
@@ -102,7 +113,7 @@ class horizontalScrolling extends Component {
       ><a target="_blank"
       rel="noopener noreferrer"
       href={link}
-      ><img src={banner} alt={name} style={{width:'13rem'}}/></a></div>
+      ><img src={banner} alt={name} style={{width:'13rem'}} onClick={this._onPPLBannerClick} /></a></div>
     });
 
   onLastItemVisible = () => {
