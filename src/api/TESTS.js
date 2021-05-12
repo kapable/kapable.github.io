@@ -248,7 +248,7 @@ var TESTS = [
         results:[
             {
                 type: "ESTJ",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `도도하고 시크한 카리스마가 느껴지는 깔끔한 전통 한복’ \n
                 `,
                 query: "ESTJ",
                 score_range:range(26),
@@ -256,35 +256,35 @@ var TESTS = [
             },
             {
                 type: "ESTP",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `개방적이고 활발한 생활 한복\n`,
                 query: "ESTP",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ESTP.png'
             },
             {
                 type: "ESFJ",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `따뜻하면서 밝은 분위기를 돋보이게 하는 전통 한복\n`,
                 query: "ESFJ",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ESFJ.png'
             },
             {
                 type: "ESFP",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `트렌드를 넘어선, 화려하고 고혹적인 한복\n`,
                 query: "ESFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ESFP.png'
             },
             {
                 type: "ENTJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `늘 자신감이 넘치고 당당한 나에게 어울리는 세련된 한복\n`,
                 query: "ENTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ENTJ.png'
             },
             {
                 type: "ENTP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `늘 자신감 넘치는 나만의 개성이 드러난, 화려한 그라데이션 한복 \n
                 `,
                 query: "ENTP",
                 score_range:range(26),
@@ -292,42 +292,42 @@ var TESTS = [
             },
             {
                 type: "ENFJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `나만의 포인트 아이템을 더한, 단정하면서 부드러운 느낌의 한복\n`,
                 query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ENFJ.png'
             },
             {
                 type: "ENFP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `기존의 웨딩 한복을 벗어난 매력적인 한복 드레스\n`,
                 query: "ENFP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ENFP.png'
             },
             {
                 type: "ISTJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `깔끔하면서 고급스러운 느낌을 주는 생활 한복\n`,
                 query: "ISTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ISTJ.png'
             },
             {
                 type: "ISTP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `활동적이고 편안한, 담백한 감성의 생활 한복\n`,
                 query: "ISTP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ISTP.png'
             },
             {
                 type: "ISFJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `차분하고 온화한 분위기의 전통 한복\n`,
                 query: "ISFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/hanbokBTI/ISFJ.png'
             },
             {
                 type: "ISFP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `단정하면서 무난한데 나만의 포인트를 더한 한복\n
                 `,
                 query: "ISFP",
                 score_range:range(26),
@@ -335,28 +335,28 @@ var TESTS = [
             },
             {
                 type: "INTJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `부족한 나의 감성을 다시 살려줄 낭만적인 한복\n`,
                 query: "INTJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/hanbokBTI/INTJ.png'
             },
             {
                 type: "INTP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `느긋하고 편안하게 움직일 수 있는, 개성 있는 생활한복\n`,
                 query: "INTP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/hanbokBTI/INTP.png'
             },
             {
                 type: "INFJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `차분하면서 고급스럽고, 단정하며 캐주얼한 느낌의 한복\n`,
                 query: "INFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/hanbokBTI/INFJ.png'
             },
             {
                 type: "INFP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `섬세하고 비밀스러운 개성이 드러나는 한복\n`,
                 query: "INFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/hanbokBTI/INFP.png'
