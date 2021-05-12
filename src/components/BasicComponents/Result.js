@@ -861,7 +861,7 @@ class Result extends Component {
         // in case of storyTelling Type Quiz
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ['personalTaro']
+            let ppl_list = ['personalTaro', 'hanbokBTI']
             if(ppl_list.includes(this.state.current_test)) {
                 let og_img_url = "https://images.ktestone.com/meta/" + this.state.current_test + "/" + this.state.current_result + ".png"
                 return (
