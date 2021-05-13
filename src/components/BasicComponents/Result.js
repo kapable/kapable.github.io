@@ -736,6 +736,63 @@ class Result extends Component {
             )
         } 
     }
+    hanbokBTILinkgRenderer(){
+        if(this.state.current_test === "hanbokBTI") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/hanbokBTIEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/hanbokBTIJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
+                </div>
+            )
+        } else if(this.state.current_test === "hanbokBTIJP") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/hanbokBTI/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/hanbokBTIEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
+                </div>
+            )
+        } else if(this.state.current_test === "hanbokBTIEng") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/hanbokBTI/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/hanbokBTIJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
+                </div>
+            )
+        } 
+    }
     pplBannerRenderer(){
         let personalIncenseListGB = ["personalIncenseEng", "personalIncenseJP"];
         let personalTaroList = ["personalTaro"];
@@ -800,6 +857,32 @@ class Result extends Component {
         } else if (this.state.current_test === "hanbokBTI") {
             const hanbokBTI_outlink = "https://bit.ly/3nADdv4"
             const banner_img_src = 'https://images.ktestone.com/resultImages/hanbokBTI/hanbokBTI-bottom-banner.png'
+            return(
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={hanbokBTI_outlink}
+                    className="to-ppl-banner-text"
+                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
+                </Fragment>
+            )
+        } else if (this.state.current_test === "hanbokBTIEng") {
+            const hanbokBTI_outlink = "https://bit.ly/3nADdv4"
+            const banner_img_src = 'https://images.ktestone.com/resultImages/hanbokBTIEng/hanbokBTIEng-bottom-banner.png'
+            return(
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={hanbokBTI_outlink}
+                    className="to-ppl-banner-text"
+                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
+                </Fragment>
+            )
+        } else if (this.state.current_test === "hanbokBTIJP") {
+            const hanbokBTI_outlink = "https://bit.ly/3nADdv4"
+            const banner_img_src = 'https://images.ktestone.com/resultImages/hanbokBTIJP/hanbokBTIJP-bottom-banner.png'
             return(
                 <Fragment>
                     <a
@@ -1027,6 +1110,9 @@ class Result extends Component {
 
                     {/* if personalColorFact test's Result page for Link Banner */}
                     {this.factBTILinkRenderer()}
+
+                    {/* if hanbokBTI test's Result page for Link Banner */}
+                    {this.hanbokBTILinkgRenderer()}
 
                     <div className="share">
                         <h5 className="share-title">친구에게 공유하기</h5>

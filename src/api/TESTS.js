@@ -23,11 +23,659 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // hanbokBTIJP
+    {
+        info : {
+            mainTitle:"韓服BTI",
+            subTitle:"韓服BTI 韓服テスト",
+            mainUrl:"hanbokBTIJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/hanbokBTIJP-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/hanbokBTIJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/hanbokBTIJP.png",
+            lang:"JP"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: "時代劇ドラマの主人公の韓服、真似してみようよ。\nと友達に誘われたら？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "いいね！じゃあ、私はファン・ジニの衣装が着てみたい！\nあなたは誰がいい？"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "えっ、ちょっと、恥ずかしいよ…"
+                    },
+                ],
+            },
+            {
+                which:"SN",
+                question: "韓服体験をすることになった。\n韓服を着た自分を想像してみるなら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "実際着てみないと、\n想像したって意味ないよ"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "うーん。こんな感じはどうかな。\nどれが似合うんだろう？と、イメージを膨らます。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "友達とランチをするときの自分は？",
+                answers:[
+                    {
+                        type: "F",
+                        score: 2,
+                        content: "友達が食べたいものに合わせる。"
+                    },
+                    {
+                        type: "T",
+                        score: 5,
+                        content: "自分が食べたいものを積極的にアピール！"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "民俗村に遊びに行って、\n伝統体験をするならどうする？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "どんな体験ができるのか、\nあらかじめネットで調べておく！"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "とりあえず行って、\n気になることから体験する！"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "韓服を着るときの自分は？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "伝統の着付けを守って着る"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "自分流で好きなように着る！"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "お悩みの相談に乗るときの自分は？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "共感より現実的なアドバイスをする。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "その人の感情に共感してあげる。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "今日はお酒が飲みたいな、\nと思って友達にLINEをした。",
+                answers:[
+                    {
+                        type: "P",
+                        score: 2,
+                        content: "今夜焼酎飲もうよ。"
+                    },
+                    {
+                        type: "J",
+                        score: 5,
+                        content: "週末空いてる？\n焼酎でも飲まない？"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "民俗村に行くことになった。\nその日の予定を立てるなら？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "必須コースは必ず行かなきゃ！\n予定通りに動く！"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "計画はあくまでも計画に過ぎない。\n歩き回って予定になかった場所にも立ち寄る。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "韓服体験どうだった？と友達に聞かれたら、\nどう答える？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "久しぶりに韓服が着れて、\n良い経験だったよ。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "韓服って本当にきれいだね！\n時代劇ドラマの主人公になったような気分だった。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "友達に悩みを相談されたけど、\nよくよく聞いたら友達の方が悪い。",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "友人の悪いところをちゃんと説明してあげる。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "直接非難するよりは、\n遠回しに言う。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "韓服を着て、\nせっかくだから友達と二人で写真を撮りたい。",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "周りの人にお願いして、\nその人達の写真を撮ってあげた後、\nこちらの写真も撮ってもらう。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "誰かに「写真撮ってください」とお願いされたら、\nついでに「こちらも」言う。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "花の金曜日、そして週末。\n何をする？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "友達数人で遊びまくってリフレッシュする。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "自宅で休んでリフレッシュする。"
+                    },
+                ]
+            }
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `ESTJ
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `ESTP`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `ESFJ`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `ESFP`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `ENTJ`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `ENTP
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `ENFJ`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `ENFP`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `ISTJ`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `ISTP`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `ISFJ`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `ISFP
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `INTJ`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `INTP`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `INFJ`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `INFP`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIJP/INFP.png'
+            },
+        ]
+    },
+    // hanbokBTIEng
+    {
+        info : {
+            mainTitle:"HanbokBTI",
+            subTitle:"Which Hanbok style suits me? Korean traditional clothes test",
+            mainUrl:"hanbokBTIEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/hanbokBTIEng-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/hanbokBTIEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/hanbokBTIEng.png",
+            lang:"Eng"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: "Let's try on a Hanbok,\nfollowing the heroine of our historical drama!\nMy friend!",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Yes, yes!\nThen I'll play the role of Hwang Jin-i!\nWhich character you will choose?"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Ah… I'm a little shy.... Hehehe"
+                    },
+                ],
+            },
+            {
+                which:"SN",
+                question: "I, who decide to make experience for a Hanbok,\nimagine myself wearing a Hanbok.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "What can I only if I imagine wearing it on myself?\nI think I should wear it myself."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Well? Shall we wear it like this?\nWhat would suit me?\nI imagine alone."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Friends who want to have lunch with me!",
+                answers:[
+                    {
+                        type: "F",
+                        score: 2,
+                        content: "Follow what your friends ask to eat!"
+                    },
+                    {
+                        type: "T",
+                        score: 5,
+                        content: "I actively recommend what I want to eat!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "I decided to go to the folk village\nand experience the tradition. I do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Searching the internet,\nI go there for the experiences you can have in the folk village! "
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Go there first and do what you like!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What if I wore a Hanbok?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Wear it in the traditional way"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Wear it uniquely in my way!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When consulting for others,\nshall I?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Gives them realistic advices rather than empathy."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "I empathizes with them emotionally."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "As I want to drink liquor,\nI did a Kakaako to my friend!",
+                answers:[
+                    {
+                        type: "P",
+                        score: 2,
+                        content: "Soju tonight?"
+                    },
+                    {
+                        type: "J",
+                        score: 5,
+                        content: "What are you going to do this weekend?\nHow about drinking Soju with me?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "I decided to go to the folk village\nand made a plan for the day!",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Make sure to go to the “must” course!\nFollow the plan!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "The plan is just a plan only~\nGo around as planned but go somewhere else!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "For my acquaintance’s question of\n“How was your Hanbok experience?” Shall I?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I had a good experience wearing a Hanbok after a while."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Wow, Korean Hanbok is so pretty!\nI looked like I was the main character of a historical drama"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "A friend who talks about his worries to me,\nwhich I think it may be from his fault most.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Explain him about the wrong part carefully."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Explain him, beating around bush instead of telling him directly."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "As I am wearing a Hanbok,\nI want to take a picture with my friend.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Ask a person passing to take a picture for us."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Speak to someone to asks for taking a picture."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "During a gorgeous and hot Friday and golden weekend,\nshall I?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Recharge myself while playing actively with several people."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Recharge myself staying at home."
+                    },
+                ]
+            }
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `ESTJ
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `ESTP`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `ESFJ`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `ESFP`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `ENTJ`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `ENTP
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `ENFJ`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `ENFP`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `ISTJ`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `ISTP`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `ISFJ`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `ISFP
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `INTJ`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `INTP`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `INFJ`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `INFP`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hanbokBTIEng/INFP.jpg'
+            },
+        ]
+    },
     // hanbokBTI
     {
         info : {
             mainTitle:"한복BTI hanbokBTI",
-            subTitle:"나에게 어울리는 한복스타일은?",
+            subTitle:"나에게 어울리는 한복스타일은? 한복BTI 한복테스트",
             mainUrl:"hanbokBTI",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/hanbokBTI-intro.png",
