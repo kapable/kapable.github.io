@@ -32,7 +32,7 @@ var TESTS = [
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/hanbokBTIJP-intro.png",
             thumbImage:"https://images.ktestone.com/main-thumbnail/hanbokBTIJP-thumb.png",
-            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Japan/hanbokBTIJP.png",
+            // horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Japan/hanbokBTIJP.png",
             lang:"JP"
         },
         questions:[
@@ -356,7 +356,7 @@ var TESTS = [
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/hanbokBTIEng-intro.png",
             thumbImage:"https://images.ktestone.com/main-thumbnail/hanbokBTIEng-thumb.png",
-            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/USA/hanbokBTIEng.png",
+            // horizontalBanner: "https://images.ktestone.com/horizontalNewTest/USA/hanbokBTIEng.png",
             lang:"Eng"
         },
         questions:[
