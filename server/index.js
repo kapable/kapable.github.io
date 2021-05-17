@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const config = require('./config/key');
+const config = require('./config/dev');
 const { User } = require('./models/User');
 const app = express();
 const port = 5000;
