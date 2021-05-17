@@ -4683,7 +4683,7 @@ var TESTS = [
             },
         ]
     },
-    // persoanlColor in Bahasa
+    // persoanlColor in Malay
     {
         info : {
             mainTitle:"Ujian Personaliti Warna_Personaliti",
