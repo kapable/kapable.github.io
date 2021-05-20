@@ -53,7 +53,6 @@ class App extends Component {
     }
   }
   componentDidMount(){
-    console.log(window);
     axios.get('/api/hello')
     .then(response => console.log(response.data))
 
