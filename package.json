@@ -13,7 +13,6 @@
     "bootstrap": "^4.5.3",
     "concurrently": "^6.1.0",
     "core-js": "^3.8.2",
-    "http-proxy-middleware": "^2.0.0",
     "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-app-polyfill": "^2.0.0",

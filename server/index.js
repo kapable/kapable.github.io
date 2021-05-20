@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+let cors = require("cors");
 const config = require('./config/dev');
 const { auth } = require('./middleware/auth');
 const { User } = require('./models/User');
@@ -14,14 +15,23 @@ app.use(bodyParser.urlencoded({extended: true}));
 // application.json
 app.use(bodyParser.json());
 app.use(cookieParser());
-
+var whitelist = ['http://localhost:3000', 'https://ktestone.com/', 'https://kapable.github.io/', 'https://niair.xyz/']
+var corsOptions = {
+    origin: function (origin, callback) {
+      if (whitelist.indexOf(origin) !== -1) {
+        callback(null, true)
+      } else {
+        callback(new Error('Not allowed by CORS'))
+      }
+    }
+  }
 
 mongoose.connect(config.mongoURI, {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(console.log("MongoDB Connected..."))
   .catch(err => console.log(err))
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', cors(corsOptions), (req, res) => res.send('Hello World!'))
  
 app.get('/api/hello', (req, res) => {
     res.send("hello everyone!")
