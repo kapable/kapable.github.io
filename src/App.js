@@ -3,12 +3,17 @@ import MainPage from './components/BasicComponents/MainPage';
 import Intro from './components/BasicComponents/Intro'
 import ResultToIntro from './components/SubComponents/ResultToIntro'
 import ScrollToTop from './components/SubComponents/ScrollToTop'
+import LoginPage from './components/BasicComponents/Users/LoginPage';
+import RegisterPage from './components/BasicComponents/Users/RegisterPage';
+import MyPage from './components/BasicComponents/Users/MyPage';
+import Auth from './hoc/auth';
 import TESTS from './api/TESTS'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Result from './components/BasicComponents/Result';
 import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
+import axios from 'axios';
 
 
 class App extends Component {
@@ -48,6 +53,10 @@ class App extends Component {
     }
   }
   componentDidMount(){
+    console.log(window);
+    axios.get('/api/hello')
+    .then(response => console.log(response.data))
+
     ReactGA.initialize('UA-186793588-1', {
       debug: false,
       gaOptions:{
@@ -201,6 +210,11 @@ class App extends Component {
                 component={Result}
                 key={item[1]+'_'+item[0]} exact/>
             ))}
+
+            {/* go to User related pages */}
+            <Route exact path="/Login" component={Auth(LoginPage, false)} />
+            <Route exact path="/Register" component={Auth(RegisterPage, false)} />
+            <Route exact path="/MyPage/:userId" component={Auth(MyPage, true)} />
           </Switch>
         </ScrollToTop>
       </Router>
