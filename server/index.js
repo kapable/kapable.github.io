@@ -24,7 +24,8 @@ var corsOptions = {
       } else {
         callback(new Error('Not allowed by CORS'))
       }
-    }
+    },
+    credential: true
   }
 
 mongoose.connect(config.mongoURI, {
