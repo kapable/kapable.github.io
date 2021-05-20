@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // application.json
 app.use(bodyParser.json());
 app.use(cookieParser());
-var whitelist = ['http://localhost:3000', 'https://ktestone.com/', 'https://kapable.github.io/', 'https://niair.xyz/', 'http://3.34.98.176:5000/']
+var whitelist = ['http://localhost:3000', 'https://ktestone.com', 'https://kapable.github.io', 'https://niair.xyz', 'http://3.34.98.176:5000']
 var corsOptions = {
     origin: function (origin, callback) {
       if (whitelist.indexOf(origin) !== -1) {
