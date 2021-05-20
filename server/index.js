@@ -18,8 +18,8 @@ app.use(cookieParser());
 var whitelist = ['http://localhost:3000', 'https://ktestone.com', 'https://kapable.github.io', 'https://niair.xyz', 'http://3.34.98.176:5000']
 var corsOptions = {
     origin: function (origin, callback) {
-        console.log(origin);
       if (whitelist.indexOf(origin) !== -1) {
+        console.log(origin);
         callback(null, true)
       } else {
         callback(new Error('Not allowed by CORS'))
