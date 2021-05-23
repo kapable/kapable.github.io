@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // application.json
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use(cors());
 
 // var whitelist = ['http://localhost:3000', 'https://ktestone.com', 'https://kapable.github.io', 'https://niair.xyz']
 // var corsOptions = {
