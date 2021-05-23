@@ -35,8 +35,8 @@ mongoose.connect(config.mongoURI, {
 }).then(console.log("MongoDB Connected..."))
   .catch(err => console.log(err))
 
-// app.get('/', (req, res) => res.send('Hello World!'))
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../build/index.html')))
+app.get('/', (req, res) => res.send('Hello World!'))
+// app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../build/index.html')))
  
 app.get('/api/hello', (req, res) => {
     res.send("hello everyone!")
