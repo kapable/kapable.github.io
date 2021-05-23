@@ -3,10 +3,12 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 let cors = require("cors");
+const path = require('path');
 const config = require('./config/dev');
 const { auth } = require('./middleware/auth');
 const { User } = require('./models/User');
 const app = express();
+app.use(express.static(path.join(__dirname, '../build')));
 const port = 5000;
 
 // application/x-www-form-urlencoded
@@ -33,7 +35,8 @@ mongoose.connect(config.mongoURI, {
 }).then(console.log("MongoDB Connected..."))
   .catch(err => console.log(err))
 
-app.get('/', (req, res) => res.send('Hello World!'))
+// app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../build/index.html')))
  
 app.get('/api/hello', (req, res) => {
     res.send("hello everyone!")
