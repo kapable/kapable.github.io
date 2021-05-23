@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // application.json
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(cors());
+// app.use(cors());
 
 // var whitelist = ['http://localhost:3000', 'https://ktestone.com', 'https://kapable.github.io', 'https://niair.xyz']
 // var corsOptions = {
@@ -36,6 +36,7 @@ mongoose.connect(config.mongoURI, {
 app.get('/', (req, res) => res.send('Hello World!'))
  
 app.get('/api/hello', (req, res) => {
+    res.writeHead(200, { 'Access-Control-Allow-Origin': '*' });
     res.send("hello everyone!")
 })
 
