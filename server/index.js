@@ -8,7 +8,7 @@ const config = require('./config/dev');
 const { auth } = require('./middleware/auth');
 const { User } = require('./models/User');
 const app = express();
-app.use(express.static(path.join(__dirname, '../build')));
+// app.use(express.static(path.join(__dirname, '../build')));
 const port = 5000;
 
 // application/x-www-form-urlencoded
