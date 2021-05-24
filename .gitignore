@@ -10,7 +10,7 @@
 /coverage
 
 # production
-/build
+/build/kapable.github.io
 
 # misc
 .DS_Store
