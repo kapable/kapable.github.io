@@ -53,7 +53,7 @@ class App extends Component {
     }
   }
   componentDidMount(){
-    axios.get('/api')
+    axios.get('http://3.34.98.176:5000/api')
     .then(response => console.log(response.data))
 
     ReactGA.initialize('UA-186793588-1', {
