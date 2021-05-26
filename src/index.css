@@ -66,6 +66,18 @@ body {
   display: block;
 }
 
+/* Each Lang Icons */
+.to-other-lang-test-banner-text {
+  display: inline;
+  margin: 0 0.3rem;
+}
+
+.go-to-each-language-main {
+  margin: 2rem auto;
+  display: block;
+  font-family: var(--title-font);
+}
+
 /* intro start */
 
 .intro {

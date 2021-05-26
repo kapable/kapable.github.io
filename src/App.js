@@ -23,7 +23,7 @@ class App extends Component {
     let i = 0;
     let _all_tests_url = [];
     while (i<TESTS.length) {
-      _all_tests_url.push('/'+TESTS[i].info.mainUrl+'/')
+      _all_tests_url.push('/'+TESTS[i].info.mainUrl+'/');
       i = i + 1;
     }
     let j = 0;
@@ -49,11 +49,14 @@ class App extends Component {
       all_tests_result_url:_all_tests_result_url,
       final_render_routes:_final_render_routes,
       sharable_url:_sharable_url,
-      ppl_list:['personalTaro']
+      ppl_list:['personalTaro'],
+      lang_list:['Kor', 'JP', 'Eng', 'CN', 'Others']
     }
+    this.each_lang_renderer = this.each_lang_renderer.bind(this);
+    this.all_lang_renderer = this.all_lang_renderer.bind(this);
   }
   componentDidMount(){
-    axios.get('http://3.34.98.176:5000/api')
+    axios.get('/api') // http://3.34.98.176:5000
     .then(response => console.log(response.data))
 
     ReactGA.initialize('UA-186793588-1', {
@@ -70,6 +73,36 @@ class App extends Component {
       if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
     }
   }
+  all_lang_renderer(){
+    let i = 0;
+    let _all_tests_url = [];
+    while (i<TESTS.length) {
+        _all_tests_url.push(['/'+TESTS[i].info.mainUrl+'/', TESTS[i].info.thumbImage, TESTS[i].info.mainTitle])
+        i = i + 1;
+    }
+    return _all_tests_url;
+  }
+  each_lang_renderer(lang){
+    let m = 0;
+    let lang_route_list = [];
+    if(lang === "Others") {
+      while(m<TESTS.length){
+        if((TESTS[m].info.lang !== "Kor") && (TESTS[m].info.lang !== "Eng") && (TESTS[m].info.lang !== "CN") && (TESTS[m].info.lang !== "JP")) {
+          lang_route_list.push(['/'+TESTS[m].info.mainUrl+'/', TESTS[m].info.thumbImage, TESTS[m].info.mainTitle]);
+        }
+        m = m + 1;
+      }
+    } else {
+      while(m<TESTS.length){
+        if(TESTS[m].info.lang === lang) {
+          lang_route_list.push(['/'+TESTS[m].info.mainUrl+'/', TESTS[m].info.thumbImage, TESTS[m].info.mainTitle]);
+        }
+        m = m + 1;
+      }
+    }
+    return lang_route_list;
+  }
+
   reloadPage() {
     var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
     var now = Date.now();
@@ -186,8 +219,27 @@ class App extends Component {
                   <meta property="twitter:image" content="https://images.ktestone.com/default/main-header.png"/>
                   <meta property="twitter:image:alt" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트" />
                 </Helmet>
-                <MainPage/>
+                <MainPage all_tests_url={this.all_lang_renderer()}/>
             </Route>
+
+            {/* go to "Each langs Main" page */}
+            {this.state.lang_list.map((lang)=>(
+              <Route
+                path={'/' + lang + '/'}
+                component={() => <MainPage all_tests_url={this.each_lang_renderer(lang)}/>}
+                key={lang}
+                exact
+              />
+            ))}
+
+            {this.state.lang_list.map((lang)=>(
+              <Route
+                path={'/kapable.github.io/' + lang + '/'}
+                component={() => <MainPage all_tests_url={this.each_lang_renderer(lang)}/>}
+                key={lang}
+                exact
+              />
+            ))}
 
             {/* go to "Intro" page */}
             {this.state.all_tests_url.map((item)=>(
