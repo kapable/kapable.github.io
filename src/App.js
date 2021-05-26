@@ -3,10 +3,6 @@ import MainPage from './components/BasicComponents/MainPage';
 import Intro from './components/BasicComponents/Intro'
 import ResultToIntro from './components/SubComponents/ResultToIntro'
 import ScrollToTop from './components/SubComponents/ScrollToTop'
-import LoginPage from './components/BasicComponents/Users/LoginPage';
-import RegisterPage from './components/BasicComponents/Users/RegisterPage';
-import MyPage from './components/BasicComponents/Users/MyPage';
-import Auth from './hoc/auth';
 import TESTS from './api/TESTS'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Result from './components/BasicComponents/Result';
