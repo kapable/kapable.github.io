@@ -40,7 +40,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    
+    "postbuild": "react-snap",
     "dev": "concurrently \"npm run backend --prefix server\" \"npm run start\""
   },
   "reactSnap": {
