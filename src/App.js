@@ -259,9 +259,9 @@ class App extends Component {
             ))}
 
             {/* go to User related pages */}
-            <Route exact path="/Login" component={Auth(LoginPage, false)} />
+            {/* <Route exact path="/Login" component={Auth(LoginPage, false)} />
             <Route exact path="/Register" component={Auth(RegisterPage, false)} />
-            <Route exact path="/MyPage/:userId" component={Auth(MyPage, true)} />
+            <Route exact path="/MyPage/:userId" component={Auth(MyPage, true)} /> */}
           </Switch>
         </ScrollToTop>
       </Router>
