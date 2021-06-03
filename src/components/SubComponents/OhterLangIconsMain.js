@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function OhterLangIconsMain() {
     return(
         <div className="go-to-each-language-main">
-            <h3>▼GO TO MY COUNTRY▼</h3>
+            <h3>Other Languages</h3>
             <Link
                 to={"/Kor/"}
                 key={"Kor"}

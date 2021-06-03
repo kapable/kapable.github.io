@@ -1,0 +1,76 @@
+::placeholder {
+  opacity: 0.4;
+}
+
+/* LoginPage */
+.login-submit-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto 0;
+}
+
+.login-submit-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-email-form {
+  width: 15rem;
+  margin: 1rem auto;
+}
+
+.login-password-form {
+  width: 15rem;
+  margin: 1rem auto;
+}
+
+.login-to-register-div {
+  text-align: center;
+  margin: 2.5rem auto;
+}
+
+.login-to-register-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+/* RegisterPage */
+.register-submit-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto 0;
+}
+
+.register-submit-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-email-form {
+  width: 15rem;
+  margin: 1rem auto;
+}
+
+.register-nickname-form {
+  width: 15rem;
+  margin: 1rem auto;
+}
+
+.register-password-form {
+  width: 15rem;
+  margin: 1rem auto;
+}
+
+.register-passwordConfirm-form {
+  width: 15rem;
+  margin: 1rem auto;
+}
+
+.register-submit-btn {
+  width: 15rem;
+  margin: 2rem auto;
+}
