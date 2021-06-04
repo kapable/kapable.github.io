@@ -4697,7 +4697,7 @@ var TESTS = [
         questions:[
             {
                 which:"EI",
-                question: 'Fremden, die ich zum ersten Mal treffe...',
+                question: 'Fremden,\ndie ich zum ersten Mal treffe...',
                 answers:[
                     {
                         type: "E",
@@ -4739,7 +4739,7 @@ var TESTS = [
                     {
                         type: "I",
                         score: 5,
-                        content: "habe ich lieber ein kleines Gespräch mit wenigen Freunden."
+                        content: "habe ich lieber ein kleines\nGespräch mit wenigen Freunden."
                     },
                 ]
             },
@@ -4777,7 +4777,7 @@ var TESTS = [
             },
             {
                 which:"SN",
-                question: "Leute, die mich kennen, sagen mir oft...",
+                question: "Leute, die mich kennen,\nsagen mir oft...",
                 answers:[
                     {
                         type: "S",
