@@ -4683,6 +4683,329 @@ var TESTS = [
             },
         ]
     },
+    // persoanlColor in Germany
+    {
+        info : {
+            mainTitle:"Persönliche Farbprüfung",
+            subTitle:"Was ist meine persische Farbe?",
+            mainUrl:"personalColorGer",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/personalColorGer-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColorGer-thumb.png",
+            lang:"Ger"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'Fremden, die ich zum ersten Mal treffe...',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'spreche ich erst an.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'spricht anderer Freund erst an.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Am Wochenende...",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "treffe ich gern mit Leuten."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "genieße ich, allein Zeit zu verbringen."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Wenn ich mit Freunden etwas unternehme...",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "mag ich eine laute und aktive Stimmung."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "habe ich lieber ein kleines Gespräch mit wenigen Freunden."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Was finde ich wichtiger?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Ohne Gegenwart gibt es keine Zukunft."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Ohne Zukunft gibt es keine Entwicklung."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Bei der Arbeit...",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "mache ich selber meinen eigenen Weg."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "folge ich, wie die anderen Leute machen."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Leute, die mich kennen, sagen mir oft...",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "dass ich ständig und geduldig bin."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "dass ich kreativ und unkonventionell bin."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Wenn ich versagen soll...",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "sage ich stark, dass ich nicht kann."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "denke ich nach und sage meistens zu."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Wenn ich ärgerlich bin...",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "sage ich logisch und stelle klar."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "habe ich viel zu sagen,\naber ich kann meinen Ärger nicht überwinden,\ndeshalb weine ich einfach."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Ein Freund/Eine Freundin sagt mir seine/ihre Sorge.\nEs klingt so, dass es seine/ihre Schuld ist.\nIn diesem Fall...",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "sage ich ihm/ihr,\nwas genau das Problem ist."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "sage ich indirekt,\nansonsten fühlt sich er/sie nicht gut."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Beim Einpacken meiner Sachen...",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "bereite ich vor einem Tag schon vor."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "denke ich nur im Kopf\n“Ich muss morgen einpacken.”\nund dann oft vergesse."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Ich wollte nach der Schule zu Hause lernen,\naber Freunde schalgen vor,\netwas zu unternehmen.\nDann mache ich so",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Das steht nicht auf dem Plan...\nSehr ratlos."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "OK! Das ist ja das Leben!\nGehen wir rausss!!!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Meistens bin ich so",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Nach meinem Plan!\nIch arbeite gern der Ordnung nach ordentlich."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Von Fall zu Fall arbeite ich frei!\nIch arbeite gern flexibel."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColorGer/INFP.png'
+            },
+        ]
+    },
     // persoanlColor in Malay
     {
         info : {
