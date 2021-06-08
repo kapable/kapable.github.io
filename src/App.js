@@ -47,7 +47,7 @@ class App extends Component {
       final_render_routes:_final_render_routes,
       sharable_url:_sharable_url,
       ppl_list:['personalTaro'],
-      lang_list:['Kor', 'JP', 'Eng', 'CN', 'Others']
+      lang_list:['Kor', 'JP', 'Eng', 'CN', 'Rus' ,'Others']
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);
     this.all_lang_renderer = this.all_lang_renderer.bind(this);
@@ -82,7 +82,7 @@ class App extends Component {
     let lang_route_list = [];
     if(lang === "Others") {
       while(m<TESTS.length){
-        if((TESTS[m].info.lang !== "Kor") && (TESTS[m].info.lang !== "Eng") && (TESTS[m].info.lang !== "CN") && (TESTS[m].info.lang !== "JP")) {
+        if((TESTS[m].info.lang !== "Kor") && (TESTS[m].info.lang !== "Eng") && (TESTS[m].info.lang !== "CN") && (TESTS[m].info.lang !== "JP") && (TESTS[m].info.lang !== "Rus")) {
           lang_route_list.push(['/'+TESTS[m].info.mainUrl+'/', TESTS[m].info.thumbImage, TESTS[m].info.mainTitle]);
         }
         m = m + 1;

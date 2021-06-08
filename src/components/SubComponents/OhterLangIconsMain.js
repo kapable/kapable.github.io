@@ -26,10 +26,15 @@ export default function OhterLangIconsMain() {
                 className="to-other-lang-test-banner-text"
             ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></Link>
             <Link
+                to={"/Rus/"}
+                key={"Rus"}
+                className="to-other-lang-test-banner-text"
+            ><img src='https://images.ktestone.com/default/languageIcon/russia-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></Link>
+            <Link
                 to={"/Others/"}
                 key={"Others"}
                 className="to-other-lang-test-banner-text"
-            ><img src='https://images.ktestone.com/default/languageIcon/etc-icon.png' className='language-icon' alt="[ Go to the Others version ]" /></Link>
+            ><img src='https://images.ktestone.com/default/languageIcon/etc-icon.png' className='language-icon' alt="[ Перейти на российскую версию ]" /></Link>
             
         </div>
     )
