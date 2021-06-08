@@ -23,6 +23,329 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // oneSidedLove in Chinese
+    {
+        info : {
+            mainTitle:"单恋糖果测试",
+            subTitle:"我的单恋糖果类型是什么呢？",
+            mainUrl:"oneSidedLoveCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/oneSidedLoveCN-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/oneSidedLoveCN-thumb.png",
+            lang:"CN"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '蜜糖般甜蜜的周末我会？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '在家太无聊啦！\n我要出门逛逛！'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '周末当然要在家休息，\n看看电视呀之类的~'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "开学啦！\n我喜欢的异性出现时。",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "主动上前打招呼。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "背后偷偷关注他。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "被拉去朋友喜欢的异性面前交谈。",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "一起愉快地聊天。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "很害羞的你保持安静，\n尴尬地微笑。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "想喜欢的人时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "思考这段恋情是否现实？"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "哇…和他在一起的话一定要做这个做那个~啊~好心动！"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "陷入爱河的我，\n看待世界时？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "‘山是山，水是水’\n看起来都一样。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "比起现实更专注自己的世界，\n会展开想象幻想未来。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "约会时肚子饿了，\n这时发现了一家饭馆。",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "评论看起来还不错！\n那就这里了！"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "哇塞，这里一看就不错，\n味道好棒呀。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "生气时我的第一个反应是？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "理性地说自己为什么生气。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "愤怒逼心，\n眼泪先出来。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "喜欢的人陷入困境时。",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "提出比较现实的解决方案并给对方加油打气。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "理解对方并给予精神上的支持。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "和喜欢的人聊天时我会？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "通过提问了解对方，\n越来越好奇。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "和对方对话的时候给与相应的反应并产生共鸣。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "突然氛围聊起济州岛！\n济州岛走起吧！",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "详细地计划每天的日程"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "机票订好啦~！\n认为计划几乎完成了。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "更接近我的类型是？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "擅长于整理整顿，\n知道自己的东西在哪里，很快能找出来。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "虽然自己认为知道自己的东西在哪儿，\n但突然找起来的时候却找不到…"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "准备向喜欢的人表白时。",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "做好一切准备，\n抓住表白的最佳时机。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "看情况行事，\n直接表白。"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveCN/INFP.png'
+            },
+        ]
+    },
     // oneSidedLove for Russia
     {
         info : {
