@@ -23,6 +23,975 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // oneSidedLove for Russia
+    {
+        info : {
+            mainTitle:"Тест честной любовной конфеты",
+            subTitle:"Что такое мой тип взаимной любви к конфету?",
+            mainUrl:"oneSidedLoveRus",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/oneSidedLoveRus-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/oneSidedLoveRus-thumb.png",
+            lang:"Rus"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'что делать на выходных?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'как скучно дома! Мне нужно куда-то пойти!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Вы должны отдохнуть дома, смотря телевизор в выходные дни.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Начало нового семестра! увидел парня, который мне понравился.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Подойди первым и поздоровайся."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "просто смотреть на тебя."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Когда друг позвал любимого человека просто поболтать",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Вместе весело общаемся."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Стиснительно тихо улыбаюсь не чего не говоря"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Как я себя виду, Когда думаю о любимому человека?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Реально мы можем встречаться?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Ам... Если будем встречаться то куда пойдем что будем делать и.т.д"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Когда я в любляюсь как смотрю на мир",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "'Гора это гора, Вода это вода' смотрю как есть"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Вместо реальности я распространяю свой мир, свое воображение."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "На свидании я проголодался и нашел ресторан.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Обзор выглядит неплохо! Пойдем сюда!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Ох, этот ресторан выглядит идеально для Смельнанды."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Моя первая реакция, когда я злюсь?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Объясняйте, почему вы злитесь, рационально."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Меня переполняет гнев, и я плачу."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Любимый человек находится в сложной ситуации.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Предлагайте реалистичные решения и поддерживайте их."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Он сопереживает эмоциям и оказывает психологическую поддержку."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Когда общаюсь с любимым человеком?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Спрашиваю постоянно интересуюсь о любимому человеку."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Слушаю что говорит, хорошо соглашиваюсь и делаю хороший реакцию."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Внезапно захотелось путешествовать! Надо поехать!",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Составьте подробный график."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Бронирование авиабилетов завершено! планы закончилось."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Какой мне ближе?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Я хорошо организован и нахожу, где мои вещи."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Я думаю, что знаю, где мои вещи, но не могу их найти ..."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Попробуем признаться любимому человеку.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Составьте тщательный план и постарайтесь найти подходящее время для признания."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Глядя на атмосферу, признаюсь на месте."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveRus/INFP.png'
+            },
+        ]
+    },
+    // oneSidedLove for Japan
+    {
+        info : {
+            mainTitle:"片思いキャンディテストです。",
+            subTitle:"私の片思いキャンディタイプは何でしょうか。",
+            mainUrl:"oneSidedLoveJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/oneSidedLoveJP-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/oneSidedLoveJP-thumb.png",
+            lang:"JP"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'あなたの週末の過ごし方は？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '家の中は退屈すぎる！どこか出かけよう！'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'やっぱり週末には自宅でテレビ見て休むに限る。'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "新学期の始まり！好みの異性を見つけたら？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "自分から近付いて挨拶する。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "遠くでチラ見するだけ。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "好きな異性の前に連れて行かれて、話しかけてみようよ、と友達に促された。",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "一緒に笑いながら楽しく会話する。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "ぎこちなくて照れくさくて静かに笑うだけ。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "好きな人のことを思うときの自分は？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "現実的にこの恋は叶うだろうか？"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "もしあの人と付き合ったら…あれもこれもしたい～もう、ときめきが止まらない！"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋に落ちたあなたの目に、世界はどんな風に映っていますか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "「山は山　 水は水」ありのままに見えている。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "現実よりは自分だけの世界、妄想が広がる。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "デート中、お腹が減ってきたところ丁度いい店を見つけた。",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "レビューを見たけど、良い店らしい！この店に入ろう！"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "なんとなくだけど、この店絶対に美味しいと思うよ。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "あなたの「怒りタイプ」は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "怒った理由について理性的に話す。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "怒りがこみ上げてきて涙が出る。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "好きな人が大変な状況に置かれたら？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "現実的な解決策を提示して応援する。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "その人の気持ちに共感してあげて、精神的に支えてあげる。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "好きな人と話すときの自分は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "相手のことについて知りたいので色々質問する。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "相手の話にリアクションを打ちつつ、話に共感してあげる。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "突然沖縄に行きたくなった。旅行に行く時はどうする？ ",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "曜日ごとに詳細な日程を計画する。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "飛行機のチケットは予約した。これで計画することはもう終わった。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "自分により近いタイプは？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "整理整頓上手で、物の置き場所を把握している。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "物の置き場所をちゃんと把握しているつもりだったのに、いざ探すとその場には無い…"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "好きな人に告白するなら？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "徹底的にシミュレーションして告白するタイミングを計らう。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "雰囲気をみて、直感的に告白する。"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveJP/INFP.png'
+            },
+        ]
+    },
+    // oneSidedLove
+    {
+        info : {
+            mainTitle:"짝사랑 캔디 테스트",
+            subTitle:"나의 짝사랑 캔디 타입은 무엇일까?",
+            mainUrl:"oneSidedLove",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/oneSidedLove-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/oneSidedLove-thumb.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '꿀 같은 주말에 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '집은 너무 심심해! 어디라도 가야겠다!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '역시 주말엔 집에서 티비보면 쉬어야지~'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "새 학기의 시작! 마음에 드는 이성을 봤다.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "먼저 다가가서 인사한다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "힐끔힐끔 바라만 본다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "친구가 좋아하는 이성 앞에 끌고 가 같이 대화를 나누자고 한다.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "같이 웃으며 즐겁게 대화한다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "쑥스러워서 조용히 미소만 짓고 어색하게 있는다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "좋아하는 사람을 생각할 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "현실적으로 이루어질 수 있을까?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "하...그 사람이랑 사귀면 이것도 저것도 하고~ 아 설레네!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "사랑에 빠진 나, 내가 세상을 바라볼 때?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "‘산은 산이요. 물은 물이로다.’ 있는 그대로 본다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "현실보다는 나만의 세계, 상상의 나래를 펼친다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "데이트 중 슬슬 배가 고픈데 음식점을 발견했다.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "리뷰 보니 괜찮다! 여기로 가자!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "오오 보기에 딱 여긴 맛집 스멜난다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "화가 났을 때 나의 첫 반응은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "화난 이유에 대해 이성적으로 말한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "분노에 차올라 눈물부터 난다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "좋아하는 사람이 힘든 상황에 처했다.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "현실적인 해결책을 제시하고 응원한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "감정을 공감하고 정신적인 지지를 해준다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "좋아하는 사람과 대화할 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "질문으로 상대방에 대해 물어보고 궁금해한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "그 사람이 대화할 때 리액션하며 공감한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "갑자기 분위기 제주도! 제주도에 가야겠다!",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "요일별로 세부일정을 계획한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "비행기 표 예매 완료~! 계획은 거의 끝났다고 본다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나랑 더 가까운 것은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "정리정돈을 잘하고 내 물건이 어딨는지 잘 찾는다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "내 물건들은 어디 있는지 잘 안다고 생각하지만, 막상 찾아보면 없다…"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "좋아하는 사람에게 고백하려고 한다.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "철저한 계획을 잡고 고백할 타이밍을 노린다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "분위기 봐서 즉흥적으로 고백한다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLove/INFP.png'
+            },
+        ]
+    },
     // hanbokBTIJP
     {
         info : {
