@@ -23,6 +23,329 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // oneSidedLove in English
+    {
+        info : {
+            mainTitle:"Unrequited love candy test",
+            subTitle:"What is my unrequited love cnady type?",
+            mainUrl:"oneSidedLoveEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/oneSidedLoveEng-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/oneSidedLoveEng-thumb.png",
+            lang:"Eng"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'On a honey-like weekend?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'The house is so boring!\nI will go anywhere! '
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'After all,\nI should take a rest while watching TV at home on weekends.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "The start of a new semester!\nI saw a guy I liked.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Approach him first to say hello."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I'm just staring at you."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Your friend asks you to drag you\nin front of the opposite gender\nand have a conversation.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Laugh and have fun talking together."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I'm shy,\nso I just smile quietly and be awkward."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When I think of the person I like,\nwhat do I do?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Can it be done realistically?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Ha... If I date that person,\nI will do this and that too~\nOh, it makes my heart flutter!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Me in love,\nwhen I look at the world?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "'A mountain is a mountain.\nWater is water.’\nSee it as it is."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Rather than reality,\nI spread my own world,\nmy imagination."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "During a date,\nI was hungry and found a restaurant.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "The review looks good!\nLet's go here!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Oh, It smells a restaurant that looks perfect."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What is my first reaction when I am angry?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Speak rationally about the reason for my anger."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I'm filled with anger and I'm crying."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "The person I like is in a difficult situation.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Propose and support realistic solutions."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Empathize with emotions and\nprovides psychological support."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When I talk to someone I like,\nwhat do I do?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Ask questions and ask questions about him."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "React and empathize when he is talking to me."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Suddenly the mood Jeju Island!\nI want to go to Jeju Island!",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Plan a detailed schedule for each day of the week."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Flight ticket reservation complete!\nI think the plan is almost over."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Which one is closer to me?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I am well organized and\nfind where my things are."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I think I know where my things are,\nbut when I look for them,\nI can't find them..."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "I try to confess to the person you like.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Make a thorough plan and\naim for the right time to confess."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Confess promptly based on the atmosphere."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/oneSidedLoveEng/INFP.png'
+            },
+        ]
+    },
     // oneSidedLove in Chinese
     {
         info : {
