@@ -6,6 +6,7 @@ import BirthdayCalc from '../TestTypes/BirthdayCalc'
 import Constellation from '../TestTypes/Constellation'
 import DualMbti from '../TestTypes/DualMbti'
 import StoryTelling from '../TestTypes/StoryTelling'
+import DogSounds from '../TestTypes/DogSounds'
 import OtherLangIcons from '../SubComponents/OtherLangIcons';
 import TESTS from '../../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
@@ -396,6 +397,10 @@ class Intro extends Component {
                         mode:_mode
                     })
                 }.bind(this)}></Constellation>
+                return _page
+            } else if (this.state.scoreType === "DogSounds") {
+                let _page = <DogSounds
+                ></DogSounds>
                 return _page
             }
             return this._page
