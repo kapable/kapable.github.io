@@ -37,33 +37,33 @@ var TESTS = [
         questions:[
             {
                 which:"EI",
-                question: 'On a honey-like weekend?',
+                question: 'Who am I my friends talk about?',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: 'The house is so boring!\nI will go anywhere! '
+                        content: 'Energetic and confident when I speak of my opinion'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: 'After all,\nI should take a rest while watching TV at home on weekends.'
+                        content: 'passive and a bit quite.'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "The start of a new semester!\nI saw a guy I liked.",
+                question: "Start up of new semester!\nHow to approach to a friend of the next seat?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "Approach him first to say hello."
+                        content: "Say hello to him first."
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "I'm just staring at you."
+                        content: "Wait until he speaks to me."
                     },
                 ]
             },
@@ -360,33 +360,33 @@ var TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '蜜糖般甜蜜的周末我会？',
+                question: '朋友们口中的我是？',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: '在家太无聊啦！\n我要出门逛逛！'
+                        content: '活泼开朗，\n表达自己的想法时很有信心！'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '周末当然要在家休息，\n看看电视呀之类的~'
+                        content: '比较被动，很安静'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "开学啦！\n我喜欢的异性出现时。",
+                question: "新学期开学啦！一个朋友坐在你身旁，你会？",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "主动上前打招呼。"
+                        content: "会主动先跟朋友打招呼。"
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "背后偷偷关注他。"
+                        content: "朋友先打招呼之前不会主动问候。"
                     },
                 ]
             },
@@ -683,33 +683,33 @@ var TESTS = [
         questions:[
             {
                 which:"EI",
-                question: 'что делать на выходных?',
+                question: 'Как друзья о мне думают?',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: 'как скучно дома! Мне нужно куда-то пойти!'
+                        content: 'Уверенно говорю о свой мысли, и активный!'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: 'Вы должны отдохнуть дома, смотря телевизор в выходные дни.'
+                        content: 'Несмелый, тихи характер.'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "Начало нового семестра! увидел парня, который мне понравился.",
+                question: "Началось новый семестр! Одно курсник сел на соседний стол как я буду себя вести?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "Подойди первым и поздоровайся."
+                        content: "Первый будет здороваться."
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "просто смотреть на тебя."
+                        content: "Жду, что бы друг первым здоровалось."
                     },
                 ]
             },
@@ -1006,33 +1006,33 @@ var TESTS = [
         questions:[
             {
                 which:"EI",
-                question: 'あなたの週末の過ごし方は？',
+                question: '友達から見た自分の印象は？',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: '家の中は退屈すぎる！どこか出かけよう！'
+                        content: '明るくて自分の意見を堂々とした態度で言える人。'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: 'やっぱり週末には自宅でテレビ見て休むに限る。'
+                        content: '大人しくて内向的な人。'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "新学期の始まり！好みの異性を見つけたら？",
+                question: "新学期の始まり！隣の席にクラスメイトに挨拶するときは？",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "自分から近付いて挨拶する。"
+                        content: "自分から挨拶をする。"
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "遠くでチラ見するだけ。"
+                        content: "相手から挨拶されるのを待つ。"
                     },
                 ]
             },
@@ -1329,33 +1329,33 @@ var TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '꿀 같은 주말에 나는?',
+                question: '친구들이 말하는 나는?',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: '집은 너무 심심해! 어디라도 가야겠다!'
+                        content: '활발하고 내 의견을 얘기할 때 당당한 편!'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '역시 주말엔 집에서 티비보면 쉬어야지~'
+                        content: '소극적이면서 조금 조용한 편'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "새 학기의 시작! 마음에 드는 이성을 봤다.",
+                question: "새 학기의 시작! 옆자리 앉은 친구에게 나는?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "먼저 다가가서 인사한다."
+                        content: "친구에게 먼저 인사한다."
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "힐끔힐끔 바라만 본다."
+                        content: "친구가 먼저 인사할 때 까지 기다린다."
                     },
                 ]
             },
