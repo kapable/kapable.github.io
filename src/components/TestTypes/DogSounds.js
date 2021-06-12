@@ -47,7 +47,7 @@ class DogSounds extends React.Component {
                                     this.setState({
                                         dogName: e.target.value
                                     })
-                                }.bind(this)} className='dog-sounds-input' type="text"/>
+                                }.bind(this)} className='dog-sounds-input' type="text" placeholder="이름 넣는 곳"/>
                             </div>
                             <div>
                             <img
