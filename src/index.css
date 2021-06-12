@@ -243,7 +243,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -80%);
   font-size: 20px;
   border: none;
   height: 2rem;
@@ -257,7 +257,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -80%);
     font-size: 20px;
     border: none;
     height: 2rem;
