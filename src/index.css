@@ -208,6 +208,92 @@ body {
   max-width: 414px;
 }
 
+/* for DogSounds Test */
+.dog-sounds-input-div {
+  position: relative;
+}
+
+.dog-sounds-input-img {
+  width: 20rem;
+}
+
+.go-to-record-img {
+  cursor: pointer;
+}
+
+.go-to-analysis-img {
+  cursor: pointer;
+}
+
+.dog-sound-record-start-btn {
+  background-color: #f7392e;
+  width: 7rem;
+  height: 7rem;
+  border: none;
+  border-radius: 100%;
+  margin: 1rem auto;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.dog-sounds-input {
+  /* for mobile */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 20px;
+  border: none;
+  height: 2rem;
+  width: 7rem;
+  background-color: #eeeeed;
+}
+
+@media screen and (min-width: 769px) {
+  .dog-sounds-input {
+    /* for desktop */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 20px;
+    border: none;
+    height: 2rem;
+    width: 7rem;
+    background-color: #eeeeed;
+  }
+}
+
+.dog-sounds-input:focus,
+.dog-sounds-input:active,
+.dog-sounds-input:visited,
+.dog-sounds-input:hover {
+  outline: none;
+  outline-offset: none;
+  box-shadow: none;
+}
+
+.dog-sound-record-title-img {
+  width: 20rem;
+  margin: 3rem auto;
+}
+
+.audio-react-recorder {
+  width: 70%;
+  margin: 2rem auto;
+}
+
+.audio-react-recorder__canvas {
+  width: 70%;
+  margin: 2rem auto;
+}
+
+.dog-sounds-guidance {
+  color: #cecfd0;
+}
+
 /* for birthday Calculating */
 .birth-title {
   margin: 2rem auto;

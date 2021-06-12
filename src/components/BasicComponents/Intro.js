@@ -66,6 +66,7 @@ class Intro extends Component {
             quiz_url:_sharable_url,
             participants:(Number(month+date+hour+minute)*10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             num_shares_count:0,
+            custom_name:""
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
         this._onMainButtonClick = this._onMainButtonClick.bind(this);
@@ -260,7 +261,7 @@ class Intro extends Component {
             // for creating an array which contains VS between types ex.["EI", "SN", "TF", "JP"]
             function onlyUnique(value, index, self) {
                 return self.indexOf(value) === index;
-              }
+            }
             let _which_type_arr = [];
             for(let k=0; k<this.state.current_test.questions.length; k++) {
                 _which_type_arr.push(this.state.current_test.questions[k].which);
@@ -298,6 +299,8 @@ class Intro extends Component {
                     return this.state.current_test.results[k];
                 }
             }
+        } else if (this.state.scoreType === "DogSounds") {
+            return this.state.current_test.results[this.state.counted_score]
         }
 
     }
@@ -392,15 +395,22 @@ class Intro extends Component {
                 let _page = <Constellation
                 onChangeMode={
                     function(_final_result, _mode) {
-                    this.setState({
-                        counted_score:_final_result,
-                        mode:_mode
-                    })
-                }.bind(this)}></Constellation>
+                        this.setState({
+                            counted_score:_final_result,
+                            mode:_mode
+                        })
+                    }.bind(this)}></Constellation>
                 return _page
             } else if (this.state.scoreType === "DogSounds") {
                 let _page = <DogSounds
-                ></DogSounds>
+                onChangeMode={
+                    function(_dogName, _final_result, _mode) {
+                        this.setState({
+                            custom_name:_dogName,
+                            counted_score:_final_result,
+                            mode:_mode
+                        })
+                    }.bind(this)}></DogSounds>
                 return _page
             }
             return this._page
@@ -422,13 +432,22 @@ class Intro extends Component {
         // go to result page
         let result_contents = this.resultCaculator();
         let final_score_query = result_contents.query // <----------------query export
-
-        return(
-            <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
-                <Route path={this.state.result_url+final_score_query + '/'} component={Result}/>
-                <Redirect to={this.state.result_url+final_score_query + '/'} />
-            </Router>
-        )
+        if (this.state.current_test.info.mainUrl === "dogSounds") {
+            return(
+                <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
+                    <Route path={this.state.result_url+final_score_query + '/'} component={() => <Result dog_name={this.state.custom_name}/>}/>
+                    <Redirect to={this.state.result_url+final_score_query + '/'} />
+                </Router>
+            )
+        } else {
+            return(
+                <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
+                    <Route path={this.state.result_url+final_score_query + '/'} component={Result}/>
+                    <Redirect to={this.state.result_url+final_score_query + '/'} />
+                </Router>
+            )
+        }
+        
     }
 
     pageRenderer(){
