@@ -243,11 +243,11 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -80%);
+  transform: translate(-50%, 0%);
   font-size: 20px;
   border: none;
-  height: 2rem;
-  width: 7rem;
+  height: 1rem;
+  width: 5rem;
   background-color: #eeeeed;
 }
 
@@ -257,7 +257,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -80%);
+    transform: translate(-50%, 0%);
     font-size: 20px;
     border: none;
     height: 2rem;
