@@ -85,7 +85,8 @@ class DogSounds extends React.Component {
                             })
                             if(this.state.onRecord) {
                                 this.setState({
-                                    recordState: RecordState.STOP
+                                    recordState: RecordState.STOP,
+                                    onRecord: !this.state.onRecord
                                 })
                                 alert("녹음이 완료되었습니다! 분석하기 버튼을 눌러서 음성을 분석해보세요!")
                             } else {
@@ -95,7 +96,7 @@ class DogSounds extends React.Component {
                                 setTimeout(function(){
                                     this.setState({
                                         recordState: RecordState.STOP,
-                                        // onRecord: !this.state.onRecord
+                                        onRecord: !this.state.onRecord
                                     })
                                     alert("녹음이 완료되었습니다! 분석하기 버튼을 눌러서 음성을 분석해보세요!")
                                 }.bind(this), 5000)

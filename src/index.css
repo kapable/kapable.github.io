@@ -239,33 +239,12 @@ body {
 }
 
 .dog-sounds-input {
-  /* for mobile */
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0%); */
   border: 0.5px solid lightgray;
   font-size: 20px;
   height: 3rem;
   width: 15rem;
   margin: 2rem auto;
-  /* background-color: #eeeeed; */
 }
-
-/* @media screen and (min-width: 769px) {
-  .dog-sounds-input {
-    for desktop
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    font-size: 20px;
-    border: none;
-    height: 2rem;
-    width: 7rem;
-    background-color: #eeeeed;
-  }
-} */
 
 .dog-sounds-input:focus,
 .dog-sounds-input:active,
