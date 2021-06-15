@@ -7,6 +7,7 @@ import Constellation from '../TestTypes/Constellation'
 import DualMbti from '../TestTypes/DualMbti'
 import StoryTelling from '../TestTypes/StoryTelling'
 import DogSounds from '../TestTypes/DogSounds'
+import DogSoundsEng from '../TestTypes/DogSoundsEng'
 import OtherLangIcons from '../SubComponents/OtherLangIcons';
 import TESTS from '../../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
@@ -299,7 +300,7 @@ class Intro extends Component {
                     return this.state.current_test.results[k];
                 }
             }
-        } else if (this.state.scoreType === "DogSounds") {
+        } else if (this.state.scoreType === "DogSounds" || this.state.scoreType === "DogSoundsEng") {
             return this.state.current_test.results[this.state.counted_score]
         }
 
@@ -402,20 +403,35 @@ class Intro extends Component {
                     }.bind(this)}></Constellation>
                 return _page
             } else if (this.state.scoreType === "DogSounds") {
-                let _page = <DogSounds
-                onChangeMode={
-                    function(_dogName, _final_result, _mode) {
-                        this.setState({
-                            custom_name:_dogName,
-                            counted_score:_final_result,
-                            mode:_mode
-                        })
-                    }.bind(this)}></DogSounds>
-                return _page
+                if(this.state.current_test.info.mainUrl === "dogSounds") {
+                    let _page = <DogSounds
+                        onChangeMode={
+                            function(_dogName, _final_result, _mode) {
+                                this.setState({
+                                    custom_name:_dogName,
+                                    counted_score:_final_result,
+                                    mode:_mode
+                                })
+                            }.bind(this)}></DogSounds>
+                        return _page
+                } else if (this.state.current_test.info.mainUrl === "dogSoundsEng") {
+                    let _page = <DogSoundsEng
+                        onChangeMode={
+                            function(_dogName, _final_result, _mode) {
+                                this.setState({
+                                    custom_name:_dogName,
+                                    counted_score:_final_result,
+                                    mode:_mode
+                                })
+                            }.bind(this)}></DogSoundsEng>
+                        return _page
+                }
+            } 
             }
+                
             return this._page
         }
-    }
+    
 
     lodingPageRender(){
         return(
@@ -432,7 +448,7 @@ class Intro extends Component {
         // go to result page
         let result_contents = this.resultCaculator();
         let final_score_query = result_contents.query // <----------------query export
-        if (this.state.current_test.info.mainUrl === "dogSounds") {
+        if (this.state.current_test.info.mainUrl === "dogSounds" || this.state.current_test.info.mainUrl === "dogSoundsEng") {
             return(
                 <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
                     <Route path={this.state.result_url+final_score_query + '/'} component={() => <Result dog_name={this.state.custom_name}/>}/>

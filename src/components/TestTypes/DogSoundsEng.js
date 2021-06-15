@@ -39,7 +39,7 @@ class DogSounds extends React.Component {
     pageRenderer = () => {
         if(this.state.stage === 1) { // The first stage : input dog's name
             let _page = <div className="dog-sounds-input-div">
-                            <h3>강아지 이름을 입력해주세요!</h3>
+                            <h3>Please enter your dog's name!</h3>
                             <div>
                                 <input onChange={function(e){
                                     e.preventDefault()
@@ -50,8 +50,8 @@ class DogSounds extends React.Component {
                             </div>
                             <div>
                             <img
-                            src="https://images.ktestone.com/bigDataTestImages/dogSounds/goToRecord.png"
-                            alt="녹음 하러가기"
+                            src="https://images.ktestone.com/bigDataTestImages/dogSoundsEng/goToRecord.png"
+                            alt="Going to Record"
                             className="go-to-record-img"
                             onClick={function(e){
                                 e.preventDefault()
@@ -60,7 +60,7 @@ class DogSounds extends React.Component {
                                         stage: 2
                                     })
                                 } else {
-                                    alert("강아지 이름을 입력해주세요!")
+                                    alert("Please enter your dog's name!")
                                 }
                             }.bind(this)}/>
                             </div>
@@ -71,8 +71,8 @@ class DogSounds extends React.Component {
             let _page = <Fragment>
                     <div className='dog-sound-record-title-div'>
                         <img
-                            src="https://images.ktestone.com/bigDataTestImages/dogSounds/dogSounds-record-title.png"
-                            alt="내 강아지의 숨소리, 짖는소리 등을 들려주세요."
+                            src="https://images.ktestone.com/bigDataTestImages/dogSoundsEng/dogSounds-record-title.png"
+                            alt="Please let me hear your dog's breathing, barking, etc."
                             className='dog-sound-record-title-img'
                             />
                     </div>
@@ -87,7 +87,7 @@ class DogSounds extends React.Component {
                                     recordState: RecordState.STOP,
                                     onRecord: !this.state.onRecord
                                 })
-                                alert("녹음이 완료되었습니다! 분석하기 버튼을 눌러서 음성을 분석해보세요!")
+                                alert("The recording is complete! Try analyzing your voice by pressing the Analyze button!")
                             } else {
                                 this.setState({
                                     recordState: RecordState.START
@@ -97,29 +97,29 @@ class DogSounds extends React.Component {
                                         recordState: RecordState.STOP,
                                         onRecord: !this.state.onRecord
                                     })
-                                    alert("녹음이 완료되었습니다! 분석하기 버튼을 눌러서 음성을 분석해보세요!")
+                                    alert("The recording is complete! Try analyzing your voice by pressing the Analyze button!")
                                 }.bind(this), 5000)
                             }
                         }.bind(this)}>
-                        {this.state.onRecord ? "녹음 중지" : "녹음 시작"}
+                        {this.state.onRecord ? "STOP" : "START"}
                         </button>
                     </div>
-                    <p className="dog-sounds-guidance">* 녹음 시간은 최대 5초예요! *</p>
+                    <p className="dog-sounds-guidance">* The maximum recording time is 5 sec! *</p>
                     <div className="dog-sound-record-to-anlaysis">
                         <img
-                        src="https://images.ktestone.com/bigDataTestImages/dogSounds/goToAnalysis.png"
-                        alt="분석 하러가기"
+                        src="https://images.ktestone.com/bigDataTestImages/dogSoundsEng/goToAnalysis.png"
+                        alt="Going to Analysis"
                         className="go-to-analysis-img"
                         onClick={function(e){
                             e.preventDefault()
                             if(this.state.audioData) {
                                 this.props.onChangeMode(this.state.dogName, this.state.resultNum, "loading") // go to loading page
                             } else {
-                                alert("강아지의 음성을 들려주세요~")
+                                alert("Please let me hear your dog's breathing, barking, etc.")
                             }
                         }.bind(this)}/>
                     </div>
-                    <p className="dog-sounds-guidance">[ 녹음 시작 ] 버튼을 눌러 다시 녹음할 수 있어요.</p>
+                    <p className="dog-sounds-guidance">You can restart the recording by pressing [ START ] button.</p>
                     <div className="dog-sound-record-display-div">
                         <AudioReactRecorder
                             state={this.state.recordState}

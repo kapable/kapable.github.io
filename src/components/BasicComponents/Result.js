@@ -426,7 +426,7 @@ class Result extends Component {
             }
             
         //  and other case of Type Quizes
-        } else if(this.state.current_test === "dogSounds") {
+        } else if(this.state.current_test === "dogSounds" || this.state.current_test === "dogSoundsEng") {
             return(
                 <Fragment>
                     <Helmet>
