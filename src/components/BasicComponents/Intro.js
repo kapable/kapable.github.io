@@ -8,6 +8,7 @@ import DualMbti from '../TestTypes/DualMbti'
 import StoryTelling from '../TestTypes/StoryTelling'
 import DogSounds from '../TestTypes/DogSounds'
 import DogSoundsEng from '../TestTypes/DogSoundsEng'
+import FacialExpressionAnalyzer from '../TestTypes/FacialExpressionAnalyzer'
 import OtherLangIcons from '../SubComponents/OtherLangIcons';
 import TESTS from '../../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
@@ -67,7 +68,8 @@ class Intro extends Component {
             quiz_url:_sharable_url,
             participants:(Number(month+date+hour+minute)*10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             num_shares_count:0,
-            custom_name:""
+            custom_name:"",
+            custom_option:""
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
         this._onMainButtonClick = this._onMainButtonClick.bind(this);
@@ -97,7 +99,7 @@ class Intro extends Component {
             category: category,
             action: action,
             label: label
-          });
+        });
     }
     _onStartButtonClick(){
         this._eventSenderGA("Paging", "Click Start-test Button", "intro page");
@@ -123,28 +125,28 @@ class Intro extends Component {
     cpcBannerIntroFooterScriptor(){
         let ppl_list = ['personalIncense', 'personalTaro']
         if((this.state.quiz_url.includes("localhost") ||  this.state.quiz_url.includes("ktestone.com")) && (!ppl_list.includes(this.state.current_test.info.mainUrl))) {
-          return(
+        return(
             <Fragment>
-              <ins className="kakao_ad_area" style={{display:"none"}}
+            <ins className="kakao_ad_area" style={{display:"none"}}
                 data-ad-unit    = "DAN-zutyUS1LJQDp2SK0"
                 data-ad-width   = "320"
                 data-ad-height  = "100"></ins>
                 <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
-          )
+        )
         } else if(this.state.quiz_url.includes("https://kapable.github.io/")) {
-          return(
+        return(
             <Fragment>
-              <ins className="kakao_ad_area" style={{display:"none"}}
+            <ins className="kakao_ad_area" style={{display:"none"}}
                 data-ad-unit    = "DAN-zIzDEpvl7LL78fMU"
                 data-ad-width   = "320"
                 data-ad-height  = "100"></ins>
                 <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
-          )
+        )
         } else if(this.state.quiz_url.includes("niair.xyz")) {
             return(
-              <Fragment>
+            <Fragment>
                 {/* 인트로 공유 위 수평 */}
                 <ins className="adsbygoogle"
                     style={{display:"block"}}
@@ -152,9 +154,9 @@ class Intro extends Component {
                     data-ad-slot="3153221262"
                     data-ad-format="auto"
                     data-full-width-responsive="true"></ins>
-              </Fragment>
+            </Fragment>
             )
-          }
+        }
     }
 
     introPageRender(){
@@ -300,7 +302,7 @@ class Intro extends Component {
                     return this.state.current_test.results[k];
                 }
             }
-        } else if (this.state.scoreType === "DogSounds" || this.state.scoreType === "DogSoundsEng") {
+        } else if (this.state.scoreType === "DogSounds" || this.state.scoreType === "facialExpression") {
             return this.state.current_test.results[this.state.counted_score]
         }
 
@@ -426,7 +428,21 @@ class Intro extends Component {
                             }.bind(this)}></DogSoundsEng>
                         return _page
                 }
-            } 
+            } else if (this.state.scoreType === "facialExpression") {
+                if(this.state.current_test.info.mainUrl === "facialExpressionAnalyzer") {
+                    let _page = <FacialExpressionAnalyzer
+                        onChangeMode={
+                            function(_img, _option, _final_result, _mode) {
+                                this.setState({
+                                    custom_name:_img,
+                                    custom_option:_option,
+                                    counted_score:_final_result,
+                                    mode:_mode
+                                })
+                            }.bind(this)}></FacialExpressionAnalyzer>
+                    return _page
+                }
+            }
             }
                 
             return this._page
@@ -452,6 +468,13 @@ class Intro extends Component {
             return(
                 <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
                     <Route path={this.state.result_url+final_score_query + '/'} component={() => <Result dog_name={this.state.custom_name}/>}/>
+                    <Redirect to={this.state.result_url+final_score_query + '/'} />
+                </Router>
+            )
+        } else if(this.state.current_test.info.mainUrl === "facialExpressionAnalyzer") {
+            return(
+                <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
+                    <Route path={this.state.result_url+final_score_query + '/'} component={() => <Result pics={this.state.custom_name} option={this.state.custom_option}/>}/>
                     <Redirect to={this.state.result_url+final_score_query + '/'} />
                 </Router>
             )

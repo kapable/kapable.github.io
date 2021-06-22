@@ -274,6 +274,27 @@ body {
   color: #cecfd0;
 }
 
+/* for FacialExpressionAnalyzer */
+.face-image-uploader {
+  margin: 1rem auto;
+  max-width: 15rem;
+}
+
+.fileContainer {
+  height: 20rem;
+  background-color: grey;
+}
+
+.face-image-option-div {
+  color: grey;
+  margin: 3rem auto 0rem;
+  font-size: 1.3rem;
+}
+
+.face-image-option {
+  margin: 0rem 0.4rem;
+}
+
 /* for birthday Calculating */
 .birth-title {
   margin: 2rem auto;
