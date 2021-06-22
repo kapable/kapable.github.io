@@ -457,5 +457,11 @@ axonix.com,57264,RESELLER
 admanmedia.com,43,RESELLER
 lijit.com,259602-eb,RESELLER,fafdf38b16bf6b2b
 adform.com,2742,RESELLER
+criteo.com,B-060161,DIRECT,9fac4a4a87c2a44f
+smartadserver.com,4012,RESELLER
+smartadserver.com,4016,RESELLER
+smartadserver.com,4071,RESELLER
+smartadserver.com,4073,RESELLER
+smartadserver.com,4074,RESELLER
 
 #contact:programmatic@optad360.com
