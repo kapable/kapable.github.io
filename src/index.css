@@ -432,6 +432,11 @@ body {
   margin: 1rem auto;
 }
 
+.facialExpressionAnalyzer-title-img {
+  width: 27rem;
+  margin: 1rem auto 0rem;
+}
+
 .result-ment {
   position: relative;
   margin: 1rem auto;

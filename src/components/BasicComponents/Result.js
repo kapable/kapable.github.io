@@ -319,7 +319,6 @@ class Result extends Component {
             }
             i = i + 1;
         }
-        
 
         // return final result option
         // in case of storyTelling Type Quiz
@@ -457,6 +456,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if(this.state.current_test === "facialExpressionAnalyzer" || this.state.current_test === "facialExpressionAnalyzerEng" || this.state.current_test === "facialExpressionAnalyzerCN") {
+            let test_title_img_url = "https://images.ktestone.com/bigDataTestImages/" + this.state.current_test +  "/" + this.state.current_test + "-title.png"
             return(
                 <Fragment>
                     <Helmet>
@@ -482,6 +482,7 @@ class Result extends Component {
                         <meta property="twitter:image" content={img_src}/>
                         <meta property="twitter:image:alt" content={this.state.current_result} />
                     </Helmet>
+                    <img src={test_title_img_url} alt="Facial Expression Analyzer" className="facialExpressionAnalyzer-title-img"/>
                     <img src={this.props.pics} alt="Face!" className="result-user-pic"/>
                     <div className='result-ment'>{this.props.ment}</div>
                 </Fragment>
@@ -541,11 +542,12 @@ class Result extends Component {
                     </div>
 
                     <OtherLangIcons currentTest={this.state.current_test}/>
-
+                    
                     <div className="share">
                         <h5 className="share-title">친구에게 공유하기</h5>
                         <div className="share">
-                            <CopyToClipboard text={this.state.sharable_url+'/'}>
+                            {/* if facialExpAnalyzer, copy url is test home, other tests' urls are result urls */}
+                            <CopyToClipboard text={this.state.current_test.includes("facialExpressionAnalyzer") ? "https://ktestone.com/kapable.github.io/" + this.state.current_test+'/' : this.state.sharable_url+'/'}>
                                 <img
                                     src={COPYBTN}
                                     onClick={this._onShareButtonClick}
