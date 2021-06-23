@@ -282,6 +282,7 @@ body {
 
 .fileContainer {
   height: 20rem;
+  background-color: white;
 }
 
 .face-image-option-div {
