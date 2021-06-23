@@ -482,8 +482,8 @@ class Result extends Component {
                         <meta property="twitter:image" content={img_src}/>
                         <meta property="twitter:image:alt" content={this.state.current_result} />
                     </Helmet>
-                    <h1>{this.props.pics}</h1>
-                    <img src={img_src} className='result-img' alt={final_type} />
+                    <img src={this.props.pics} alt="Face!" className="result-user-pic"/>
+                    <div className='result-ment'>{this.props.ment}</div>
                 </Fragment>
             )
         } else {

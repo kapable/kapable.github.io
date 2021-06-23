@@ -302,8 +302,17 @@ class Intro extends Component {
                     return this.state.current_test.results[k];
                 }
             }
-        } else if (this.state.scoreType === "DogSounds" || this.state.scoreType === "facialExpression") {
+        } else if (this.state.scoreType === "DogSounds") {
             return this.state.current_test.results[this.state.counted_score]
+        } else if (this.state.scoreType === "facialExpression") {
+            let i = 0;
+            while(i < this.state.current_test.results.length) {
+                if (this.state.current_test.results[i].type === this.state.custom_option && this.state.current_test.results[i].score_range.includes(this.state.counted_score)) {
+                    let _final = this.state.current_test.results[i]
+                    return _final
+                }
+                i = i + 1;
+            }
         }
 
     }
@@ -474,7 +483,7 @@ class Intro extends Component {
         } else if(this.state.current_test.info.mainUrl === "facialExpressionAnalyzer") {
             return(
                 <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
-                    <Route path={this.state.result_url+final_score_query + '/'} component={() => <Result pics={this.state.custom_name} option={this.state.custom_option}/>}/>
+                    <Route path={this.state.result_url+final_score_query + '/'} component={() => <Result pics={this.state.custom_name} ment={result_contents.comment}/>}/>
                     <Redirect to={this.state.result_url+final_score_query + '/'} />
                 </Router>
             )

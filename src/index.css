@@ -427,6 +427,34 @@ body {
   color: var(--font-color);
 }
 
+.result-user-pic {
+  width: 20rem;
+  margin: 1rem auto;
+}
+
+.result-ment {
+  position: relative;
+  margin: 1rem auto;
+  width: 20rem;
+  height: 4rem;
+  color: #7a7a7a;
+  font-weight: bold;
+  text-align: center;
+  line-height: 4rem;
+  background: #b3b4b3;
+}
+
+.result-ment:after {
+  border-top: 0px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #b3b4b3;
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 200px;
+}
+
 /* in Result Page for PPL banner */
 .ppl-banner-img {
   width: 23rem;
