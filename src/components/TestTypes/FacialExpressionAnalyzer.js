@@ -26,7 +26,7 @@ class FacialExpressionAnalyzer extends React.Component {
                     withIcon={false}
                     withPreview={true}
                     onChange={this.onDrop}
-                    imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                    imgExtension={[".jpg", ".gif", ".png", ".gif", ".jpeg"]}
                     maxFileSize={5242880}
                     buttonText="+"
                     withLabel={true}

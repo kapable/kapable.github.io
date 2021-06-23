@@ -260,7 +260,8 @@
       "/kapable.github.io/oneSidedLoveCN",
       "/kapable.github.io/oneSidedLoveEng",
       "/kapable.github.io/dogSounds",
-      "/kapable.github.io/dogSoundsEng"
+      "/kapable.github.io/dogSoundsEng",
+      "/kapable.github.io/facialExpressionAnalyzer"
     ]
   },
   "eslintConfig": {
