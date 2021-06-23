@@ -9,6 +9,8 @@ import StoryTelling from '../TestTypes/StoryTelling'
 import DogSounds from '../TestTypes/DogSounds'
 import DogSoundsEng from '../TestTypes/DogSoundsEng'
 import FacialExpressionAnalyzer from '../TestTypes/FacialExpressionAnalyzer'
+import FacialExpressionAnalyzerEng from '../TestTypes/FacialExpressionAnalyzerEng'
+import FacialExpressionAnalyzerCN from '../TestTypes/FacialExpressionAnalyzerCN'
 import OtherLangIcons from '../SubComponents/OtherLangIcons';
 import TESTS from '../../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
@@ -450,6 +452,30 @@ class Intro extends Component {
                                 })
                             }.bind(this)}></FacialExpressionAnalyzer>
                     return _page
+                } else if(this.state.current_test.info.mainUrl === "facialExpressionAnalyzerEng") {
+                    let _page = <FacialExpressionAnalyzerEng
+                        onChangeMode={
+                            function(_img, _option, _final_result, _mode) {
+                                this.setState({
+                                    custom_name:_img,
+                                    custom_option:_option,
+                                    counted_score:_final_result,
+                                    mode:_mode
+                                })
+                            }.bind(this)}></FacialExpressionAnalyzerEng>
+                    return _page
+                } else if(this.state.current_test.info.mainUrl === "facialExpressionAnalyzerCN") {
+                    let _page = <FacialExpressionAnalyzerCN
+                        onChangeMode={
+                            function(_img, _option, _final_result, _mode) {
+                                this.setState({
+                                    custom_name:_img,
+                                    custom_option:_option,
+                                    counted_score:_final_result,
+                                    mode:_mode
+                                })
+                            }.bind(this)}></FacialExpressionAnalyzerCN>
+                    return _page
                 }
             }
             }
@@ -480,7 +506,7 @@ class Intro extends Component {
                     <Redirect to={this.state.result_url+final_score_query + '/'} />
                 </Router>
             )
-        } else if(this.state.current_test.info.mainUrl === "facialExpressionAnalyzer") {
+        } else if(this.state.current_test.info.mainUrl === "facialExpressionAnalyzer" || this.state.current_test.info.mainUrl === "facialExpressionAnalyzerEng" || this.state.current_test.info.mainUrl === "facialExpressionAnalyzerCN") {
             return(
                 <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
                     <Route path={this.state.result_url+final_score_query + '/'} component={() => <Result pics={this.state.custom_name} ment={result_contents.comment}/>}/>

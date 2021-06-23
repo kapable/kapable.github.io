@@ -456,7 +456,7 @@ class Result extends Component {
                     <img src={img_src} className='result-img' alt={final_type} />
                 </Fragment>
             )
-        } else if(this.state.current_test === "facialExpressionAnalyzer") {
+        } else if(this.state.current_test === "facialExpressionAnalyzer" || this.state.current_test === "facialExpressionAnalyzerEng" || this.state.current_test === "facialExpressionAnalyzerCN") {
             return(
                 <Fragment>
                     <Helmet>
