@@ -2,6 +2,7 @@ import React from 'react'
 import AudioReactRecorder, { RecordState } from 'audio-react-recorder'
 import 'audio-react-recorder/dist/index.css'
 import { Fragment } from 'react'
+import ReactGA from 'react-ga';
 
 class DogSounds extends React.Component {
     constructor(props) {
@@ -15,7 +16,8 @@ class DogSounds extends React.Component {
             onRecord:false,
             resultNum:Math.floor(Math.random() * 183) + 1
         }
-    this.pageRenderer = this.pageRenderer.bind(this)
+    this.pageRenderer = this.pageRenderer.bind(this);
+    this._eventSenderGA = this._eventSenderGA.bind(this);
     }
 
     start = () => {
@@ -34,6 +36,14 @@ class DogSounds extends React.Component {
     this.setState({
         audioData: data
         })
+    }
+
+    _eventSenderGA(category, action, label){
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
     }
 
     pageRenderer = () => {
@@ -113,6 +123,7 @@ class DogSounds extends React.Component {
                         onClick={function(e){
                             e.preventDefault()
                             if(this.state.audioData) {
+                                this._eventSenderGA("Paging", "Click Go-to-Analyze Button", "upload page");
                                 this.props.onChangeMode(this.state.dogName, this.state.resultNum, "loading") // go to loading page
                             } else {
                                 alert("강아지의 음성을 들려주세요~")

@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import ImageUploader from "react-images-upload";
+import ReactGA from 'react-ga';
 
 class FacialExpressionAnalyzerCN extends React.Component {
     constructor(props) {
@@ -10,11 +11,20 @@ class FacialExpressionAnalyzerCN extends React.Component {
             resultNum:Math.floor(Math.random() * 183) + 1,
         }
         this.onDrop = this.onDrop.bind(this);
+        this._eventSenderGA = this._eventSenderGA.bind(this);
     }
 
     onDrop(pictureFiles) {
         this.setState({
             pictures: pictureFiles[0]
+        });
+    }
+
+    _eventSenderGA(category, action, label){
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
         });
     }
 
@@ -67,7 +77,8 @@ class FacialExpressionAnalyzerCN extends React.Component {
                     className="go-to-analysis-img"
                     style={{"margin":"3rem auto 0rem"}}
                     onClick={function(){
-                        if(this.state.pictures && this.state.option) { 
+                        if(this.state.pictures && this.state.option) {
+                            this._eventSenderGA("Paging", "Click Go-to-Analyze Button", "upload page");
                             this.props.onChangeMode(URL.createObjectURL(this.state.pictures), this.state.option, this.state.resultNum, "loading")
                         } else if(this.state.pictures === null || this.state.pictures === undefined) {
                             alert("请上传照片")
