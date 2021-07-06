@@ -51,9 +51,9 @@ class App extends Component {
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);
     this.all_lang_renderer = this.all_lang_renderer.bind(this);
+    this.mainMetaTagRenderer = this.mainMetaTagRenderer.bind(this);
   }
   componentDidMount(){
-
     ReactGA.initialize('UA-186793588-1', {
       debug: false,
       gaOptions:{
@@ -174,6 +174,35 @@ class App extends Component {
     }
   }
 
+  mainMetaTagRenderer(){
+    let _kapable_meta = <meta name = "purpleads-verification" content = "67e5e9a6f3495f65f6b05cee"/>
+    let _metaTag = <Helmet>
+                    {/* <!-- Primary Meta Tags --> */}
+                    <title>취향 분석 테스트 - 케이테스트</title>
+                    <meta name="title" content="케이테스트 - 퍼스널 컬러 테스트"/>
+                    <meta name="description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트,퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러" data-react-helmet="true"/>
+                    {this.state.sharable_url.includes("ktestone.com") ? null : _kapable_meta}
+                    <link rel="main-url" href={window.location.href}/>
+
+                    {/* <!-- Open Graph / Facebook --> */}
+                    <meta property="og:type" content="website"/>
+                    <meta property="og:url" content="https://ktestone.com/"/>
+                    <meta property="og:title" content="케이테스트 - 퍼스널 컬러 테스트"/>
+                    <meta property="og:description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트,퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러"/>
+                    <meta property="og:image" content="https://images.ktestone.com/default/main-header.png"/>
+                    <meta property="og:image:alt" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트" />
+
+                    {/* <!-- Twitter --> */}
+                    <meta property="twitter:card" content="summary_large_image"/>
+                    <meta property="twitter:url" content="https://ktestone.com/"/>
+                    <meta property="twitter:title" content="케이테스트 - 퍼스널 컬러 테스트"/>
+                    <meta property="twitter:description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트,퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러"/>
+                    <meta property="twitter:image" content="https://images.ktestone.com/default/main-header.png"/>
+                    <meta property="twitter:image:alt" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트" />
+                  </Helmet>
+    return _metaTag
+  }
+
   render() {
     return(
     <Router>
@@ -191,29 +220,8 @@ class App extends Component {
           <Switch>
             {/* "Main" page */}
             <Route path='/' exact>
-                <Helmet>
-                  {/* <!-- Primary Meta Tags --> */}
-                  <title>취향 분석 테스트 - 케이테스트</title>
-                  <meta name="title" content="케이테스트 - 퍼스널 컬러 테스트"/>
-                  <meta name="description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트,퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러" data-react-helmet="true"/>
-                  <link rel="main-url" href={window.location.href}/>
-
-                  {/* <!-- Open Graph / Facebook --> */}
-                  <meta property="og:type" content="website"/>
-                  <meta property="og:url" content="https://ktestone.com/"/>
-                  <meta property="og:title" content="케이테스트 - 퍼스널 컬러 테스트"/>
-                  <meta property="og:description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트,퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러"/>
-                  <meta property="og:image" content="https://images.ktestone.com/default/main-header.png"/>
-                  <meta property="og:image:alt" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트" />
-
-                  {/* <!-- Twitter --> */}
-                  <meta property="twitter:card" content="summary_large_image"/>
-                  <meta property="twitter:url" content="https://ktestone.com/"/>
-                  <meta property="twitter:title" content="케이테스트 - 퍼스널 컬러 테스트"/>
-                  <meta property="twitter:description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트,퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러"/>
-                  <meta property="twitter:image" content="https://images.ktestone.com/default/main-header.png"/>
-                  <meta property="twitter:image:alt" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트" />
-                </Helmet>
+                {/* meta tag form for all main page */}
+                {this.mainMetaTagRenderer()}
                 <MainPage all_tests_url={this.all_lang_renderer()}/>
             </Route>
 
