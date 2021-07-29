@@ -463,5 +463,20 @@ smartadserver.com,4016,RESELLER
 smartadserver.com,4071,RESELLER
 smartadserver.com,4073,RESELLER
 smartadserver.com,4074,RESELLER
+rubiconproject.com,23644,RESELLER,0bfd66d529a55807
+sharethrough.com,64d8e9a2,DIRECT,d53b998a7bd4ecd2
+indexexchange.com,186046,RESELLER
+spotxchange.com,212457,RESELLER
+spotx.tv,212457,RESELLER
+pubmatic.com,156557,RESELLER
+pubmatic.com,158723,RESELLER,5d62403b186f2ace
+rubiconproject.com,18694,RESELLER,0bfd66d529a55807
+openx.com,540274407,RESELLER,6a698e2ec38604c6
+33across.com,0013300001kQj2HAAS,RESELLER,bbea06d9c4d2853c
+smaato.com,1100047713,RESELLER,07bcf65f187117b4
+freewheel.tv,20393,RESELLER
+freewheel.tv,24377,RESELLER
+yahoo.com,58905,RESELLER,e1a5b5b6e3255540
+aol.com,58905,RESELLER,e1a5b5b6e3255540
 
 #contact:programmatic@optad360.com
