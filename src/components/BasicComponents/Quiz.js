@@ -12,7 +12,7 @@ class Quiz extends Component {
     // the function below is for option randomize
     arrayShuffler(array){
         var currentIndex = array.length, temporaryValue, randomIndex;
-          
+        
         // While there remain elements to shuffle...
         while (0 !== currentIndex) {
         

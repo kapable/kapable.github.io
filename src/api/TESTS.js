@@ -27695,7 +27695,56 @@ var TESTS = [
                 img_src:'https://images.ktestone.com/resultImages/'
             },
         ]
-    }
+    },
+    // boxBuilding
+    {
+        info : {
+            mainTitle:"boxBuilding",
+            subTitle:"boxBuilding",
+            mainUrl:"boxBuilding",
+            scoreType:"game",
+            mainImage:"https://images.ktestone.com/introImages/test-thumb.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            gameUrl:"https://joungbins.github.io/boxbuliding/",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: "차가 있는 데 급 만나자는 친구!",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "오케이 마시다가 대리하는 거지~"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "앗! 오늘은 무리야 차가 있어서~"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ISTJ",
+                desc: `“이게 코너링이 아주 기본적이면서도~” 기본적인거 잘하고 운전자 준수 잘 지키는 생충이 아빠 기택\n\n
+
+                나의 운전 스타일은?\n
+                늘 차분하고 착실한 모범생 같은 당신은! 운전 또한 차분하고 규칙에 대해 매우 엄격하게 생각하기 때문에 굉장히 규칙적으로 운전합니다! 차분하지만 운전을 잘해서 반전 매력이!? 하지만 사람이 많은 곳을 가면 금방 지치기 때문에 되도록이면 혼자 운전 하는 것을 좋아해요! 카플도 나와 비슷한 사람! 약속시간 잘 지키고 예의가 바른 사람이랑은 할 것 같아요!\n\n
+                
+                이런 건 어때요?\n
+                침착하고 차분하게 운전하는 당신! 워낙 안전 운전과 동시에 신호 하나라도 철저하게 지키고 있군요! 하지만 당신과 함께 가는 친구나 지인 동료는 조금 당신을 재미없다고 생각 할 수도 있어요! 정말 너무 잔잔하고 조용한 당신과 당신의 차…상대방은 조수석에 졸면 안 된다는 생각을 하고 있는데 말이죠…! 말도 없고 잠이 쏟아지는 상대방을 위해 가끔은 신나는 분위기의 음악이나 대화를 나누는 건 어떨까요?\n\n
+                
+                같이 드라이브하면 좋은 친구\n“마포대교는 무너졌냐” 내비는 저리가라, 내가 바로 인간 내비 곽철용이\n\n
+                드라이브하다가 뛰어내릴 친구\n“자…운전이라는 건 말이야~...” 입으로는 운전 박사 급 납득이`,
+                query: "todcnddl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/'
+            },
+        ]
+    },
 ]
 
 export default TESTS;

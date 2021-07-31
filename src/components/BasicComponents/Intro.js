@@ -11,6 +11,7 @@ import DogSoundsEng from '../TestTypes/DogSoundsEng'
 import FacialExpressionAnalyzer from '../TestTypes/FacialExpressionAnalyzer'
 import FacialExpressionAnalyzerEng from '../TestTypes/FacialExpressionAnalyzerEng'
 import FacialExpressionAnalyzerCN from '../TestTypes/FacialExpressionAnalyzerCN'
+import Game from '../TestTypes/Game'
 import OtherLangIcons from '../SubComponents/OtherLangIcons';
 import TESTS from '../../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
@@ -477,6 +478,12 @@ class Intro extends Component {
                             }.bind(this)}></FacialExpressionAnalyzerCN>
                     return _page
                 }
+            } else if (this.state.scoreType === "game") {
+                let _page =<Game
+                    gameUrl={this.state.current_test.info.gameUrl}
+                    gameTitle={this.state.current_test.info.mainTitle}
+                ></Game>
+                return _page
             }
             }
                 
