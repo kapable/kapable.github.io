@@ -13,6 +13,8 @@ export default function Game(props) {
                 src={props.gameUrl}
                 style={{
                     "position":"absolute",
+                    "display":"block",
+                    "zIndex":"1",
                     "padding":"0",
                     "margin":"0",
 
@@ -32,7 +34,8 @@ export default function Game(props) {
                 }}
                 style={{
                     "position":'relative',
-                    "top":"100"
+                    "zIndex":"1",
+                    "top":"-210px"
                 }}
                 >메인으로</button>
             </div>
