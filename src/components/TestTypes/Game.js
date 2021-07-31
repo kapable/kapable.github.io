@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Fragment } from 'react'
 import { useHistory } from "react-router-dom";
 
 export default function Game(props) {
     // eslint-disable-next-line
-    const [mode, setMode] = useState('game')
     let history = useHistory();
     return (
         <Fragment>
@@ -29,12 +28,10 @@ export default function Game(props) {
             <button
                 onClick={function(e) {
                     e.preventDefault();
-                    setMode('main')
                     history.goBack()
                 }}
                 style={{
                     "position":'relative',
-                    "zIndex":"1",
                     "top":"-210px"
                 }}
                 >메인으로</button>
