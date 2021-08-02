@@ -480,3 +480,16 @@ yahoo.com,58905,RESELLER,e1a5b5b6e3255540
 aol.com,58905,RESELLER,e1a5b5b6e3255540
 
 #contact:programmatic@optad360.com
+
+#Ad.Plus
+ad.plus, 352349, DIRECT #Video #Display
+google.com, pub-2610964203515025, DIRECT, f08c47fec0942fa0
+google.com, pub-2393320645055022, RESELLER, f08c47fec0942fa0
+teads.tv, 21034, DIRECT, 15a9c44f6d26cbe1
+indexexchange.com, 183592, RESELLER, 50b1c356f2c5c8fc
+indexexchange.com, 195049, RESELLER, 50b1c356f2c5c8fc
+Appnexus.com, 1371, RESELLER, f5ab79cb980f11d1
+stroeer.com, 17580, DIRECT
+adform.com, 2148, RESELLER, 9f5210a2f0999e32
+rubiconproject.com, 22884, DIRECT, 0bfd66d529a55807
+Media.net, 8CUGIC7K8, DIRECT
