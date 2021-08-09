@@ -263,7 +263,24 @@
       "/kapable.github.io/dogSoundsEng",
       "/kapable.github.io/facialExpressionAnalyzer",
       "/kapable.github.io/facialExpressionAnalyzerEng",
-      "/kapable.github.io/facialExpressionAnalyzerCN"
+      "/kapable.github.io/facialExpressionAnalyzerCN",
+      "/kapable.github.io/union",
+      "/kapable.github.io/union/result/ESTJ",
+      "/kapable.github.io/union/result/ESTP",
+      "/kapable.github.io/union/result/ESFJ",
+      "/kapable.github.io/union/result/ESFP",
+      "/kapable.github.io/union/result/ENTJ",
+      "/kapable.github.io/union/result/ENTP",
+      "/kapable.github.io/union/result/ENFJ",
+      "/kapable.github.io/union/result/ENFP",
+      "/kapable.github.io/union/result/ISTJ",
+      "/kapable.github.io/union/result/ISTP",
+      "/kapable.github.io/union/result/ISFJ",
+      "/kapable.github.io/union/result/ISFP",
+      "/kapable.github.io/union/result/INTJ",
+      "/kapable.github.io/union/result/INTP",
+      "/kapable.github.io/union/result/INFJ",
+      "/kapable.github.io/union/result/INFP"
     ]
   },
   "eslintConfig": {

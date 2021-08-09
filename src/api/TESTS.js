@@ -23,6 +23,326 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // union
+    {
+        info : {
+            mainTitle:"통일 후, 나에게 맞는 여행지는?",
+            subTitle:"여행 스타일로 알아보는 맞춤 여행지 추천",
+            mainUrl:"union",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/union-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/union-thumb.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '여행은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '친구들이나 가족 등 누군가와 함께 떠나는 게 좋아!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '혼자 가는 여행도 나는 좋더라~'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "숙소를 예약할 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "뭔가 게스트 하우스 같은 곳에서\n새로운 사람들과 재밌게 놀고 싶지 않아?"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "우리끼리 그냥 편하고 프라이빗하게 쉴래!"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "여행 시 길을 잃었을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "지나가는 사람이나 가게에 들어가 물어본다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "물어보는 친구 옆에 있는 사람이 나다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "여행 갈 때 장소를 선택하는 기준은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "리뷰가 검증되고 유명한 곳!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "아무도 가보지 못한 새로운 장소를 찾아보자!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나와 가까운 여행 스타일은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "여행가서 보고! 먹고! 놀자!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "이번 여행 컨셉 뭐야?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "여행 시 맛집을 고르는 나의 기준은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "확실한 리뷰와 맛 보장이 가능한 맛집 써치 후 방문한다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "지나가다 보이는 현지 맛집 스러운 분위기로 가자!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "여행을 다녀온 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "사진 공유와 정산 후 일상으로 바로 복귀."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "여행 사진을 보며 다음 여행을 기다리는 후유증."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "맛집을 찾았는데 대기 시간이 너무 길다.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "효율적이게 다른 곳으로 가자!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "시간이 걸려도 일단은 기다려본다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "여행지에서 멋진 건축물을 봤을 때 먼저 드는 생각은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "이걸 어떻게 지었을까 하고 생각한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "와…대박이라고 하며 감탄한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나의 여행 계획 스타일은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "나는 무조건 계획이 필요해!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 떠나자!!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "여행 가기 전 나의 캐리어는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "가기 일주일 전부터 캐리어를 열어두고 하나둘 씩 챙긴다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "떠나기 하루 전 캐리어를 꺼내 짐을 챙긴다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "여행을 다녀온 후 나의 모습은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "나중되면 더 하기 싫으니까 미리 정리하자!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "휴 일단 나중에 정리하고 쉬는 것까지가 여행이다!"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: '',
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/union/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: '',
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/union/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: '',
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/union/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: '',
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/union/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: '',
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/union/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: '',
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/union/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: '',
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/union/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: '',
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/union/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: '',
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/union/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: '',
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/union/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: '',
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/union/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: '',
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/union/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: '',
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/union/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: '',
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/union/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: '',
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/union/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: '',
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/union/INFP.png'
+            },
+        ]
+    },
     // facialExpressionAnalyzerCN
     {
         info : {
