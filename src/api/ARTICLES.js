@@ -42,7 +42,7 @@ var ARTICLES = [
         mainTitle: `삐진이유를 모르는 남자친구`,
         desc: `삐진이유를 모르는 남자친구 `,
         date:`2021-08-24`,
-        mainUrl:`2021082414`,
+        mainUrl:`202108244`,
         mainImg:`https://cdn.clien.net/web/api/file/F01/10241721/3c78ff0c10cafa.jpg`,
         metaTag:`메타 태그 넣는 곳`,
         contents:`<img alt="" src="https://cdn.clien.net/web/api/file/F01/10241721/3c78ff0c10cafa.jpg?w=780&amp;h=30000" />
@@ -52,7 +52,7 @@ var ARTICLES = [
         mainTitle: `회사 여사원의 비밀.jpg`,
         desc: `회사여사원의 비밀 `,
         date:`2021-08-24`,
-        mainUrl:`2021082415`,
+        mainUrl:`202108245`,
         mainImg:`https://img.jjang0u.com/data4/docs/160/202108/24/da/c5c44f06e4531caef3d10961d87b4b54_481809.jpg`,
         metaTag:`회사 여사원의 비밀`,
         contents:`<img alt="c5c44f06e4531caef3d10961d87b4b54_481809.jpg" src="https://img.jjang0u.com/data4/docs/160/202108/24/da/c5c44f06e4531caef3d10961d87b4b54_481809.jpg" />`
@@ -61,7 +61,7 @@ var ARTICLES = [
         mainTitle: `커플 복근사진 레전드`,
         desc: `커플복근 사진 레전`,
         date:`2021-08-24`,
-        mainUrl:`2021082416`,
+        mainUrl:`202108246`,
         mainImg:`https://gifsf.com/humor_new1/files/attach/images/136387/955/708/004/541f085f687d6d9bf890b581736f79f2.jpg`,
         metaTag:`커플 복근사진 레전드`,
         contents:`<img alt="" class="lazy" data-autoattach="success" data-original="https://gifsf.com/humor_new1/files/attach/images/136387/955/708/004/541f085f687d6d9bf890b581736f79f2.jpg" src="https://gifsf.com/humor_new1/files/attach/images/136387/955/708/004/541f085f687d6d9bf890b581736f79f2.jpg" style="caret-color:#000000; color:#000000; display:inline" />
@@ -72,7 +72,7 @@ var ARTICLES = [
         mainTitle: `개웃기 사이비 아줌마 꼬신 디시인썰.txt`,
         desc: `개웃기 사이비 아줌마 꼬신 디시인썰.txt `,
         date:`2021-08-24`,
-        mainUrl:`2021082417`,
+        mainUrl:`202108247`,
         mainImg:`https://damdaworld.com/humor/files/attach/images/w/137/906/697/ca77c9be34b90b0c00179232b81cae22da17d9e2.jpg`,
         metaTag:`개웃기 사이비 아줌마 꼬신 디시인썰.txt`,
         contents:`<img alt="" class="lazy" data-original="https://damdaworld.com/humor/files/attach/images/w/137/906/697/ca77c9be34b90b0c00179232b81cae22da17d9e2.jpg" src="https://damdaworld.com/humor/files/attach/images/w/137/906/697/ca77c9be34b90b0c00179232b81cae22da17d9e2.jpg" style="caret-color:#000000; color:#000000; display:inline" />
@@ -88,7 +88,7 @@ var ARTICLES = [
         mainTitle: `오늘 직장 여선배와의 썰`,
         desc: `오늘 직장 여선배와의 썰 `,
         date:`2021-08-24`,
-        mainUrl:`오늘 직장 여선배와의 썰`,
+        mainUrl:`202108248`,
         mainImg:`https://img.jjang0u.com/data4/docs/160/202108/22/d0/72eb0ff008642dbec4ac1bc7166fb235_684927.jpg`,
         metaTag:`메타 태그 넣는 곳`,
         contents:`<img src="https://img.jjang0u.com/data4/docs/160/202108/22/d0/72eb0ff008642dbec4ac1bc7166fb235_684927.jpg" width="536" height="3400"/>`
@@ -97,7 +97,7 @@ var ARTICLES = [
         mainTitle: `친구 3일만에 이혼한썰`,
         desc: `친구 3일만에 이혼한썰 `,
         date:`2021-08-24`,
-        mainUrl:`2021082419`,
+        mainUrl:`202108249`,
         mainImg:`https://damdaworld.com/humor/files/attach/images/w/137/907/670/9ca24452a82de5a367e4d7c53c2591a449aaf340.jpg`,
         metaTag:`친구 3일만에 이혼한썰`,
         contents:`<img alt="" src="https://damdaworld.com/humor/files/attach/images/w/137/907/670/9ca24452a82de5a367e4d7c53c2591a449aaf340.jpg" />`
@@ -106,7 +106,7 @@ var ARTICLES = [
         mainTitle: `김혜수가 청룡영화제 뒷풀이 안가는이유`,
         desc: `김혜수가 청룡영화제 뒷풀이 안가는이유 `,
         date:`2021-08-24`,
-        mainUrl:`20210824110`,
+        mainUrl:`2021082410`,
         mainImg:`https://damdaworld.com/humor/files/attach/images/w/137/089/696/2995a9ec66967f04bb154079b415ce21d0a2d905.jpg`,
         metaTag:`김혜수가 청룡영화제 뒷풀이 안가는이유`,
         contents:`<img alt="" src="https://damdaworld.com/humor/files/attach/images/w/137/089/696/2995a9ec66967f04bb154079b415ce21d0a2d905.jpg" />
