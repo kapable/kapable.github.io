@@ -7,6 +7,9 @@ import LoginPage from './components/BasicComponents/Users/LoginPage';
 import RegisterPage from './components/BasicComponents/Users/RegisterPage';
 import Auth from './hoc/auth';
 import TESTS from './api/TESTS'
+import ARTICLES from './api/ARTICLES'
+import ArticleList from './components/BasicComponents/Article/ArticleList';
+import Article from './components/BasicComponents/Article/Article';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Result from './components/BasicComponents/Result';
 import ScriptTag from 'react-script-tag'
@@ -40,9 +43,16 @@ class App extends Component {
       }
       k = k + 1;
     }
+    let m = 0;
+    let _all_articles_url = [];
+    while (m < ARTICLES.length) {
+      _all_articles_url.push('/'+ARTICLES[m].mainUrl+'/');
+      m = m + 1;
+    }
     this.state = {
       result_route:'result/',
       all_tests_url:_all_tests_url,
+      all_articles_url:_all_articles_url,
       all_tests_result_url:_all_tests_result_url,
       final_render_routes:_final_render_routes,
       sharable_url:_sharable_url,
@@ -263,6 +273,19 @@ class App extends Component {
                 path={'/'+item[1]+'/'+this.state.result_route+item[0]}
                 component={Result}
                 key={item[1]+'_'+item[0]} exact/>
+            ))}
+
+            {/* go to "Article list" page */}
+            <Route path='/kfunny/' component={ArticleList} exact/>
+
+            {/* go to "Article" page */}
+            {ARTICLES.map((item)=>(
+              <Route
+                path={"/kfunny/" + item.mainUrl + '/'}
+                component={() => <Article source={item}/>}
+                key={item.mainUrl}
+                exact
+              />
             ))}
 
             {/* go to User related pages */}
