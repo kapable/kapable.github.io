@@ -73,7 +73,7 @@ var ARTICLES = [
         desc: `개웃기 사이비 아줌마 꼬신 디시인썰.txt `,
         date:`2021-08-24`,
         mainUrl:`2021082417`,
-        mainImg:`ttps://damdaworld.com/humor/files/attach/images/w/137/906/697/ca77c9be34b90b0c00179232b81cae22da17d9e2.jpg`,
+        mainImg:`https://damdaworld.com/humor/files/attach/images/w/137/906/697/ca77c9be34b90b0c00179232b81cae22da17d9e2.jpg`,
         metaTag:`개웃기 사이비 아줌마 꼬신 디시인썰.txt`,
         contents:`<img alt="" class="lazy" data-original="https://damdaworld.com/humor/files/attach/images/w/137/906/697/ca77c9be34b90b0c00179232b81cae22da17d9e2.jpg" src="https://damdaworld.com/humor/files/attach/images/w/137/906/697/ca77c9be34b90b0c00179232b81cae22da17d9e2.jpg" style="caret-color:#000000; color:#000000; display:inline" />
         <img alt="" class="lazy" data-original="https://damdaworld.com/humor/files/attach/images/w/137/906/697/e0278506ec129bef8284ef6c6821028d02378eba.jpg" src="https://damdaworld.com/humor/files/attach/images/w/137/906/697/e0278506ec129bef8284ef6c6821028d02378eba.jpg" style="caret-color:#000000; color:#000000; display:inline" />
