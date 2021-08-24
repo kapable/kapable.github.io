@@ -4,7 +4,8 @@ var ARTICLES = [
         desc: `여적여와 남적남의 차이`,
         date:`2021-08-24`,
         mainUrl:`202108241`,
-        mainImg:`https://damdaworld.com/humor/files/attach/images/w/137/123/698/8e0aece81061bf510125a42262581a93b236d4d0.jpg`,
+        // mainImg:`https://damdaworld.com/humor/files/attach/images/w/137/123/698/8e0aece81061bf510125a42262581a93b236d4d0.jpg`,
+        mainImg:`https://images.ktestone.com/main-thumbnail/union-thumb.png`,
         metaTag:`남적남 여적여`,
         contents:`<img src="https://damdaworld.com/humor/files/attach/images/w/137/123/698/e93eccfcd85a3d6ce06175fb014b1b6e4e68dccb.jpg" width="350" />
         <p><br></p>
@@ -44,7 +45,7 @@ var ARTICLES = [
         date:`2021-08-24`,
         mainUrl:`202108244`,
         mainImg:`https://cdn.clien.net/web/api/file/F01/10241721/3c78ff0c10cafa.jpg`,
-        metaTag:`메타 태그 넣는 곳`,
+        metaTag:`삐진이유를 모르는 남자친구 `,
         contents:`<img alt="" src="https://cdn.clien.net/web/api/file/F01/10241721/3c78ff0c10cafa.jpg?w=780&amp;h=30000" />
         <p><img alt="" src="https://cdn.clien.net/web/api/file/F01/10241723/3c78ffbe3bcdc3.jpg?w=780&amp;h=30000" />`
     },
@@ -90,7 +91,7 @@ var ARTICLES = [
         date:`2021-08-24`,
         mainUrl:`202108248`,
         mainImg:`https://img.jjang0u.com/data4/docs/160/202108/22/d0/72eb0ff008642dbec4ac1bc7166fb235_684927.jpg`,
-        metaTag:`메타 태그 넣는 곳`,
+        metaTag:`오늘 직장 여선배와의 썰`,
         contents:`<img src="https://img.jjang0u.com/data4/docs/160/202108/22/d0/72eb0ff008642dbec4ac1bc7166fb235_684927.jpg" width="536" height="3400"/>`
     },
     {
