@@ -493,3 +493,15 @@ stroeer.com, 17580, DIRECT
 adform.com, 2148, RESELLER, 9f5210a2f0999e32
 rubiconproject.com, 22884, DIRECT, 0bfd66d529a55807
 Media.net, 8CUGIC7K8, DIRECT
+
+stitchvideo.tv,446439,DIRECT#stitchvideo
+pubmatic.com,160058,RESELLER,5d62403b186f2ace#stitchvideo
+appnexus.com,12840,RESELLER#stitchvideo
+indexexchange.com,194886,RESELLER#stitchvideo
+rubiconproject.com,17382,RESELLER,0bfd66d529a55807#stitchvideo
+indexexchange.com,185192,DIRECT
+rubiconproject.com,17346,DIRECT,0bfd66d529a55807
+rubiconproject.com,22860,RESELLER,0bfd66d529a55807
+spotxchange.com,273596,RESELLER,7842df1d2fe2db34
+spotx.tv,273596,RESELLER,7842df1d2fe2db34
+pubmatic.com,160098,RESELLER,5d62403b186f2ace
