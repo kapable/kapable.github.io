@@ -62,6 +62,8 @@ function Article(props) {
                 <meta property="og:title" content={props.source.mainTitle+'-케이퍼니'}/>
                 <meta property="og:description" content={props.source.metaTag}/>
                 <meta property="og:image" content={props.source.mainImg}/>
+                <meta property="og:image:width" content="800"/>
+                <meta property="og:image:height" content="400"/>
                 <meta property="og:image:alt" content={props.source.mainTitle} />
 
                 {/* <!-- Twitter --> */}
@@ -70,6 +72,8 @@ function Article(props) {
                 <meta property="twitter:title" content={props.source.mainTitle+'-케이퍼니'}/>
                 <meta property="twitter:description" content={props.source.metaTag}/>
                 <meta property="twitter:image" content={props.source.mainImg}/>
+                <meta property="og:image:width" content="800"/>
+                <meta property="og:image:height" content="400"/>
                 <meta property="twitter:image:alt" content={props.source.mainTitle} />
             </Helmet>
         )
