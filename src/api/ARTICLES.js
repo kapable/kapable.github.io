@@ -4,16 +4,16 @@ var ARTICLES = [
         desc: `공익 레전드썰`,
         date:`2021-08-25`,
         mainUrl:`202108252`,
-        mainImg:`<img src="https://wepplication.github.io/47c1dfb6-9db2-497b-8ef3-54f4bec66b3e" />`,
+        mainImg:`https://postfiles.pstatic.net/MjAyMTA4MjVfMjc0/MDAxNjI5ODcyNDM5NDgw.AxiFZN2gcI_bEo3hA-exvXuw-UZ5iHDTBqXGlv785gAg.ZYxLygW-HUJaoCkHMgNKYdrDHodwIpTBlQe-B06uRHkg.PNG.soumy21/image.png?type=w773`,
         metaTag:`공익 레전드 썰`,
-        contents:`<img src="https://wepplication.github.io/47c1dfb6-9db2-497b-8ef3-54f4bec66b3e" />`
+        contents:`<img alt="" src="https://postfiles.pstatic.net/MjAyMTA4MjVfMjc0/MDAxNjI5ODcyNDM5NDgw.AxiFZN2gcI_bEo3hA-exvXuw-UZ5iHDTBqXGlv785gAg.ZYxLygW-HUJaoCkHMgNKYdrDHodwIpTBlQe-B06uRHkg.PNG.soumy21/image.png?type=w773" />`
     },
     {
         mainTitle: `'남녀사이 갈등에 대한 생각`,
         desc: `남녀사이 갈등에 대한 생각`,
         date:`2021-08-25`,
         mainUrl:`202108251`,
-        mainImg:`<img alt="" src="https://damdaworld.com/files/attach/images/w/137/328/698/b39a58bde74e278a7dc6c77ab5aa004f6b9ffc9f.jpg" />`,
+        mainImg:`https://damdaworld.com/files/attach/images/w/137/328/698/b39a58bde74e278a7dc6c77ab5aa004f6b9ffc9f.jpg`,
         metaTag:`남녀사이 갈등에 대한 생각`,
         contents:`<img alt="" src="https://damdaworld.com/files/attach/images/w/137/328/698/b39a58bde74e278a7dc6c77ab5aa004f6b9ffc9f.jpg" />`
     },
