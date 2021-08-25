@@ -4,8 +4,7 @@ var ARTICLES = [
         desc: `여적여와 남적남의 차이`,
         date:`2021-08-24`,
         mainUrl:`202108241`,
-        // mainImg:`https://damdaworld.com/humor/files/attach/images/w/137/123/698/8e0aece81061bf510125a42262581a93b236d4d0.jpg`,
-        metaImg:`https://images.ktestone.com/meta/kfunny/202108241.jpeg`,
+        mainImg:`https://damdaworld.com/humor/files/attach/images/w/137/123/698/8e0aece81061bf510125a42262581a93b236d4d0.jpg`,
         metaTag:`남적남 여적여`,
         contents:`<img src="https://damdaworld.com/humor/files/attach/images/w/137/123/698/e93eccfcd85a3d6ce06175fb014b1b6e4e68dccb.jpg" width="350" />
         <p><br></p>
