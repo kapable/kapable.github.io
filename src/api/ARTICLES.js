@@ -106,10 +106,10 @@ var ARTICLES = [
          desc: ``,
          date:`2021-08-25`,
          mainUrl:`2021082506`,
-         mainImg:`https://images.ktestone.com/meta/kfunny/2021082506/1.jpg`,
+         mainImg:`https://images.ktestone.com/meta/kfunny/2021082506/1.jpeg`,
          metaTag:`요즘 여자 공무원 학벌 남편직업`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082506/1.jpg"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082506/2.jpg"  />`
+         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082506/1.jpeg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082506/2.jpeg"  />`
      },
      {
          mainTitle: `소개팅갈 때 페라리 끌고 간 썰`,
