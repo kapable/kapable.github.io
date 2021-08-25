@@ -6,7 +6,7 @@ var ARTICLES = [
         mainUrl:`202108252`,
         mainImg:`https://postfiles.pstatic.net/MjAyMTA4MjVfMjc0/MDAxNjI5ODcyNDM5NDgw.AxiFZN2gcI_bEo3hA-exvXuw-UZ5iHDTBqXGlv785gAg.ZYxLygW-HUJaoCkHMgNKYdrDHodwIpTBlQe-B06uRHkg.PNG.soumy21/image.png?type=w773`,
         metaTag:`공익 레전드 썰`,
-        contents:`<img alt="" src="https://postfiles.pstatic.net/MjAyMTA4MjVfMjc0/MDAxNjI5ODcyNDM5NDgw.AxiFZN2gcI_bEo3hA-exvXuw-UZ5iHDTBqXGlv785gAg.ZYxLygW-HUJaoCkHMgNKYdrDHodwIpTBlQe-B06uRHkg.PNG.soumy21/image.png?type=w773" />`
+        contents:`<img alt="" src="https://postfiles.pstatic.net/MjAyMTA4MjVfMjc0/MDAxNjI5ODcyNDM5NDgw.AxiFZN2gcI_bEo3hA-exvXuw-UZ5iHDTBqXGlv785gAg.ZYxLygW-HUJaoCkHMgNKYdrDHodwIpTBlQe-B06uRHkg.PNG.soumy21/image.png" />`
     },
     {
         mainTitle: `'남녀사이 갈등에 대한 생각`,
