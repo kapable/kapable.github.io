@@ -1,14 +1,12 @@
-import React from 'react'
-import { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser'; 
-import { useHistory } from 'react-router';
 import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
 import './Article.css'
 
 function Article(props) {
-    let history = useHistory();
     let _sharable_url = window.location.href
 
     useEffect(() => {
@@ -84,13 +82,10 @@ function Article(props) {
                 <div className="article-contents">
                     {ReactHtmlParser(props.source.contents)}
                 </div>
-                <button
-            className="go-to-back-btn-article"
-            onClick={function(e) {
-                e.preventDefault();
-                _onBackToListButtonClick();
-                history.goBack();
-            }}>← 다른 기사 보러가기</button>
+                <Link to='/kfunny' className="article-go-back-link" onClick={_onBackToListButtonClick}>
+                <div
+                    className="go-to-back-btn-article"
+                    >← 다른 기사 보러가기</div></Link>
             </div>
         </Fragment>
     )

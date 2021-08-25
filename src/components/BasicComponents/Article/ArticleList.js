@@ -1,13 +1,11 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router';
 import ARTICLES from '../../../api/ARTICLES';
 import ARTICLEBANNER from '../../../api/DefaultImg/Ktest-funny.png';
 import ReactGA from 'react-ga';
 import './Article.css'
 
 function ArticleList() {
-    let history = useHistory();
 
     function _eventSenderGA(category, action, label){
         ReactGA.event({
@@ -36,13 +34,10 @@ function ArticleList() {
                     </div>
                 </Link>
             ))}
-            <button
+            <Link to='/' className="article-list-go-back-link" onClick={_onBackToMainButtonClick}>
+            <div
                 className="go-to-back-btn"
-                onClick={function(e) {
-                    e.preventDefault();
-                    _onBackToMainButtonClick();
-                    history.goBack();
-                }}>← 메인으로 돌아가기</button>
+                >← 메인으로 돌아가기</div></Link>
         </Fragment>
     )
 }

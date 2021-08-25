@@ -16,15 +16,21 @@
   color: gray;
 }
 
+.article-list-go-back-link {
+  text-decoration: none;
+  color: black;
+}
+
 .go-to-back-btn {
   margin: 1rem auto;
-  height: 3.5rem;
+  height: 3rem;
   width: 15rem;
   font-weight: bold;
   background-color: white;
   border-radius: 3%;
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 1.8rem 0 0 0;
 }
 
 .article-div {
@@ -57,11 +63,17 @@
 
 .go-to-back-btn-article {
   margin: 1rem auto;
-  height: 3.5rem;
+  height: 3rem;
   width: 15rem;
   font-weight: bold;
   background-color: white;
   border-radius: 3%;
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 1.8rem 0 0 0;
+}
+
+.article-go-back-link {
+  text-decoration: none;
+  color: black;
 }
