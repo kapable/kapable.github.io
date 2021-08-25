@@ -4,10 +4,10 @@ var ARTICLES = [
          desc: ``,
          date:`2021-08-25`,
          mainUrl:`2021082506`,
-         mainImg:`https://images.ktestone.com/meta/kfunny/2021082506/1.png`,
+         mainImg:`https://images.ktestone.com/meta/kfunny/2021082506/1.jpg`,
          metaTag:`요즘 여자 공무원 학벌 남편직업`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082506/1.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082506/2.png"  />`
+         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082506/1.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082506/2.jpg"  />`
      },
      {
          mainTitle: `소개팅갈 때 페라리 끌고 간 썰`,
@@ -80,22 +80,22 @@ var ARTICLES = [
          mainUrl:`2021082509`,
          mainImg:`https://images.ktestone.com/meta/kfunny/2021082509/1.png`,
          metaTag:`사촌동생한테 플스 주라는 큰어머니 대참사`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/1.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/2.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/3.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/4.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/5.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/6.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/7.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/8.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/9.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/10.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/11.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/12.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/13.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/14.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/15.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/16.png"  />`
+         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/1.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/2.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/3.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/4.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/5.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/6.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/7.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/8.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/9.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/10.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/11.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/12.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/13.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/14.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/15.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/16.jpg"  />`
      },
      {
          mainTitle: `13년 연애를 끝낸 후기 + 네이트판 댓글`,
@@ -106,7 +106,7 @@ var ARTICLES = [
          metaTag:`13년 연애를 끝낸 후기 + 네이트판 댓글`,
          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082510/1.png"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082510/2.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082510/3.png"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082510/3.jpg"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082510/4.png"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082510/5.png"  />`
      },
@@ -148,204 +148,29 @@ var ARTICLES = [
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082512/13.png"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082512/14.png"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082512/15.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082512/16.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082512/17.png"  />`
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082512/16.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082512/17.jpg"  />`
      },
          {
          mainTitle: `27살에 모쏠 탈출한 썰.txt(긴글주의)`,
          desc: ``,
          date:`2021-08-25`,
          mainUrl:`2021082513`,
-         mainImg:`https://images.ktestone.com/meta/kfunny/2021082513/1.png`,
+         mainImg:`https://images.ktestone.com/meta/kfunny/2021082513/1.jpeg`,
          metaTag:`27살에 모쏠 탈출한 썰.txt(긴글주의)`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082513/1.png"  />`
+         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082513/1.jpeg"  />`
      },
      {
          mainTitle: `와이프 결국에 떠나버렸네요`,
          desc: ``,
          date:`2021-08-25`,
          mainUrl:`2021082514`,
-         mainImg:`https://images.ktestone.com/meta/kfunny/2021082514/1.png`,
+         mainImg:`https://images.ktestone.com/meta/kfunny/2021082514/1.jpg`,
          metaTag:`와이프 결국에 떠나버렸네요`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082514/1.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082514/2.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082514/3.png"  />`
+         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082514/1.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082514/2.jpg"  />
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082514/3.jpg"  />`
      },
-
-     {
-         mainTitle: `양궁 김제덕이랑 친해졌다는 신유빈 + TMI의 대표 그 분`,
-         desc: ``,
-         date:`2021-08-25`,
-         mainUrl:`2021082515`,
-         mainImg:`https://images.ktestone.com/meta/kfunny/2021082515/1.png`,
-         metaTag:`양궁 김제덕이랑 친해졌다는 신유빈 + TMI의 대표 그 분`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082515/1.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082515/2.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082515/3.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082515/4.png"  />`
-         },
-         {
-         mainTitle: `주갤러의 바람난 여친썰(슬픔주의)`,
-         desc: ``,
-         date:`2021-08-25`,
-         mainUrl:`2021082519`,
-         mainImg:`https://images.ktestone.com/meta/kfunny/2021082519/1.png`,
-         metaTag:`주갤러의 바람난 여친썰(슬픔주의)`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082519/1.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082519/2.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082519/3.png"  />`
-     },
-
-
-         {
-         mainTitle: `전 남자친구랑 바람난 여친 썰(분노주의)`,
-         desc: ``,
-         date:`2021-08-25`,
-         mainUrl:`2021082520`,
-         mainImg:`https://images.ktestone.com/meta/kfunny/2021082520/1.png`,
-         metaTag:`전 남자친구랑 바람난 여친 썰(분노주의)`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082520/1.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082520/2.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082520/3.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082520/4.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082520/5.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082520/6.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082520/7.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082520/8.png"  />`
-     },
-
-         {
-         mainTitle: `용팔이 참교육 레전드(사이다주의)`,
-         desc: ``,
-         date:`2021-08-25`,
-         mainUrl:`2021082521`,
-         mainImg:`https://images.ktestone.com/meta/kfunny/2021082521/1.png`,
-         metaTag:`용팔이 참교육 레전드(사이다주의)`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082521/1.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082521/2.png"  />`
-     },
-
-      {
-         mainTitle: `아빠가 일진 참교육한 썰 + 아빠사진 첨부`,
-         desc: ``,
-         date:`2021-08-25`,
-         mainUrl:`2021082522`,
-         mainImg:`https://images.ktestone.com/meta/kfunny/2021082522/1.png`,
-         metaTag:`아빠가 일진 참교육한 썰 + 아빠사진 첨부`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082522/1.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082522/2.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082522/3.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082522/4.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082522/5.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082522/6.png"  />`
-     },
-
-
-      {
-         mainTitle: `썸녀와 달달한 카톡.jpg`,
-         desc: ``,
-         date:`2021-08-25`,
-         mainUrl:`2021082523`,
-         mainImg:`https://images.ktestone.com/meta/kfunny/2021082523/1.png`,
-         metaTag:`썸녀와 달달한 카톡.jpg`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082523/1.png"  />
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082523/2.png"  />`
-     },
-    {
-        mainTitle: `싱글벙글 연애하기 힘든 여자유형`,
-        desc: ``,
-        date:`2021-08-25`,
-        mainUrl:`2021082505`,
-        mainImg:`https://images.ktestone.com/meta/kfunny/2021082505/1.png`,
-        metaTag:`싱글벙글 연애하기 힘든 여자유형`,
-        contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082505/1.png"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082505/2.png"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082505/3.png"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082505/4.png"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082505/5.png"  />`
-    },
-    {
-        mainTitle: `부모님이 결혼 반대한 누나 남친`,
-        desc: ``,
-        date:`2021-08-25`,
-        mainUrl:`2021082504`,
-        mainImg:`https://images.ktestone.com/meta/kfunny/2021082504/1.png`,
-        metaTag:`레전드썰 부모님이 결혼 반대한 누나 남친`,
-        contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/1.png"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/2.png"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/3.png"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/4.png"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/5.png"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/6.png"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/7.png"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/8.png"  />`
-    },
-    {
-        mainTitle: `지하철에서 장애인 도와준 후기`,
-        desc: `지하철에서 장애인 도와준 후기`,
-        date:`2021-08-25`,
-        mainUrl:`202108253`,
-        mainImg:`https://i.ibb.co/5R7DLSw/Kakao-Talk-Photo-2021-08-25-16-03-51.png`,
-        metaTag:`지하철에서 장애인 도와준 후기`,
-        contents:`<img alt="" src="https://i.ibb.co/5R7DLSw/Kakao-Talk-Photo-2021-08-25-16-03-51.png"  />`
-    },
-    {
-        mainTitle: `익스트림 공익 레전드썰`,
-        desc: `공익 레전드썰`,
-        date:`2021-08-25`,
-        mainUrl:`202108252`,
-        mainImg:`https://i.ibb.co/0jkjsvX/Kakao-Talk-Photo-2021-08-25-15-41-29.png`,
-        metaTag:`공익 레전드 썰`,
-        contents:`<img alt="" src="https://i.ibb.co/0jkjsvX/Kakao-Talk-Photo-2021-08-25-15-41-29.png" />`
-    },
-    {
-        mainTitle: `'남녀사이 갈등에 대한 생각`,
-        desc: `남녀사이 갈등에 대한 생각`,
-        date:`2021-08-25`,
-        mainUrl:`202108251`,
-        mainImg:`https://damdaworld.com/files/attach/images/w/137/328/698/b39a58bde74e278a7dc6c77ab5aa004f6b9ffc9f.jpg`,
-        metaTag:`남녀사이 갈등에 대한 생각`,
-        contents:`<img alt="" src="https://damdaworld.com/files/attach/images/w/137/328/698/b39a58bde74e278a7dc6c77ab5aa004f6b9ffc9f.jpg" />`
-    },
-    {
-        mainTitle: `'여적여와 남적남의 차이.jpg`,
-        desc: `여적여와 남적남의 차이`,
-        date:`2021-08-24`,
-        mainUrl:`202108241`,
-        mainImg:`https://damdaworld.com/humor/files/attach/images/w/137/123/698/8e0aece81061bf510125a42262581a93b236d4d0.jpg`,
-        metaTag:`남적남 여적여`,
-        contents:`<img src="https://damdaworld.com/humor/files/attach/images/w/137/123/698/e93eccfcd85a3d6ce06175fb014b1b6e4e68dccb.jpg" width="350" />
-        <p><br></p>
-        <img src="https://damdaworld.com/humor/files/attach/images/w/137/123/698/8e0aece81061bf510125a42262581a93b236d4d0.jpg" width="350" />
-        <p><br></p>
-        <img src="https://damdaworld.com/humor/files/attach/images/w/137/123/698/4d054b20e193d6296d2845942ac2e3831493e498.jpg" width="350"/>
-        <p><br></p>
-        <img src="https://damdaworld.com/humor/files/attach/images/w/137/123/698/5d6a1c0d0f8090dcb7d5c69a8c981754b3ec8356.jpg" width="350"/>
-        <p><br></p>
-        <img src="https://damdaworld.com/humor/files/attach/images/w/137/123/698/3880e6506fd48758c4a0a4d04c729a7801aa82e3.jpg" width="350"/>
-        <p><br></p>
-        <img src="https://damdaworld.com/humor/files/attach/images/w/137/123/698/0277db0a4d6bde2772aac8dd5e4f5c6433a7e03e.jpg" width="350"/>`
-    },
-    {
-        mainTitle: `사랑받는사람이 티가나는 이유.jpg`,
-        desc: `사랑받는애가 티가나는 이유`,
-        date:`2021-08-24`,
-        mainUrl:`202108242`,
-        mainImg:`https://damdaworld.com/humor/files/attach/images/w/137/915/697/b929d5dfe329485b58add5056f277695732a6412.jpg`,
-        metaTag:`사랑받는애가 티가는 이유`,
-        contents:`<img alt="" src="https://damdaworld.com/humor/files/attach/images/w/137/915/697/aec01a85b6380ead59f3bab9c3387420b7e4d6ba.jpg" />
-        <p><br></p>
-        <img alt="" src="https://damdaworld.com/humor/files/attach/images/w/137/915/697/b929d5dfe329485b58add5056f277695732a6412.jpg" />`
-    },
-    {
-        mainTitle: `스팸선물 받고 삐진 남친`,
-        desc: `스팸선물 받고 삐진 남자친구 `,
-        date:`2021-08-24`,
-        mainUrl:`202108243`,
-        mainImg:`https://damdaworld.com/humor/files/attach/images/w/137/055/689/a4ee627972bdc2b70fac65c9f3bba2142683ffe0.jpg`,
-        metaTag:`메타 태그 넣는 곳`,
-        contents:`<img alt="" src="https://damdaworld.com/humor/files/attach/images/w/137/055/689/a4ee627972bdc2b70fac65c9f3bba2142683ffe0.jpg" />`
-    },
     {
         mainTitle: `삐진이유를 모르는 남자친구`,
         desc: `삐진이유를 모르는 남자친구 `,
