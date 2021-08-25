@@ -1,11 +1,20 @@
 var ARTICLES = [
     {
-        mainTitle: `'익스트림 공익 레전드썰`,
+        mainTitle: `익스트림 공익 레전드썰`,
         desc: `공익 레전드썰`,
         date:`2021-08-25`,
         mainUrl:`202108252`,
-        mainImg:`<img alt="" src="https://damdaworld.com/files/attach/images/w/137/328/698/b39a58bde74e278a7dc6c77ab5aa004f6b9ffc9f.jpg" />`,
+        mainImg:`<img src="blob:https://wepplication.github.io/47c1dfb6-9db2-497b-8ef3-54f4bec66b3e" />`,
         metaTag:`공익 레전드 썰`,
+        contents:`<img src="blob:https://wepplication.github.io/47c1dfb6-9db2-497b-8ef3-54f4bec66b3e" />`
+    },
+    {
+        mainTitle: `'남녀사이 갈등에 대한 생각`,
+        desc: `남녀사이 갈등에 대한 생각`,
+        date:`2021-08-25`,
+        mainUrl:`202108251`,
+        mainImg:`<img alt="" src="https://damdaworld.com/files/attach/images/w/137/328/698/b39a58bde74e278a7dc6c77ab5aa004f6b9ffc9f.jpg" />`,
+        metaTag:`남녀사이 갈등에 대한 생각`,
         contents:`<img alt="" src="https://damdaworld.com/files/attach/images/w/137/328/698/b39a58bde74e278a7dc6c77ab5aa004f6b9ffc9f.jpg" />`
     },
     {
