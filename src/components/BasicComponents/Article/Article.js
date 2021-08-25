@@ -5,32 +5,20 @@ import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
 import './Article.css'
+import ARTICLES from '../../../api/ARTICLES';
 
 function Article(props) {
 
     let _sharable_url = window.location.href
 
-    var screen_width = window.innerWidth
-            || document.documentElement.clientWidth
-            || document.body.clientWidth;
-
     useEffect(() => {
-        if (screen_width < 330) {
-            var img_size = '250px'
-        } else if (screen_width < 450) {
-            img_size = '350px'
-        } else if (screen_width < 1050) {
-            img_size = '700px'
-        } else {
-            img_size = '1000px'
-        }
         Array.from(document.querySelectorAll('div.article-contents > img')).map((im) => (
             im.style.width = '95%'
         ))
         Array.from(document.querySelectorAll('div.article-contents > p > img')).map((im) => (
             im.style.width = '95%'
         ))
-    }, [screen_width])
+    }, [])
 
     function _eventSenderGA(category, action, label){
         ReactGA.event({
@@ -41,7 +29,11 @@ function Article(props) {
     }
 
     const _onBackToListButtonClick = () => {
-        _eventSenderGA("Paging", "Click Re-test Button", "result page");
+        _eventSenderGA("Paging", "Click Re-test Button", "article page");
+    }
+
+    const _onArticleButtonClick = () => {
+        _eventSenderGA("Paging", "Click Related Article Title Button", "article page");
     }
 
     const adTagRenderer = () => {
@@ -86,6 +78,26 @@ function Article(props) {
             </Helmet>
         )
     }
+
+    const relatedArticleRenderer = (li) => {
+        let rel_list = [];
+        for (var code of li) {
+            for (var article of ARTICLES) {
+                if(article.mainUrl === code) {
+                    rel_list.push(<Fragment>
+                        <Link to={"/kfunny/" + article.mainUrl + '/'} onClick={_onArticleButtonClick} className="related-article-link" key={article.mainUrl}>
+                            <div className="related-article-div">
+                                {article.mainTitle}
+                                <p className="related-article-date">{article.date}</p>
+                            </div>
+                        </Link>
+                    </Fragment>)
+                }
+            }
+        }
+        return rel_list;
+    }
+
     return (
         <Fragment >
             {metaTagRenderer()}
@@ -96,6 +108,7 @@ function Article(props) {
                 <div className="article-contents">
                     {ReactHtmlParser(props.source.contents)}
                 </div>
+                {relatedArticleRenderer(props.source.relatedArticles)}
                 <Link to='/kfunny' className="article-go-back-link" onClick={_onBackToListButtonClick}>
                 <div
                     className="go-to-back-btn-article"

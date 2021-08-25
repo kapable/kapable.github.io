@@ -1,3 +1,4 @@
+/* Artivle List page */
 .article-list-link {
   text-decoration: none;
   color: inherit;
@@ -33,6 +34,7 @@
   padding: 1.8rem 0 0 0;
 }
 
+/* Article page */
 .article-div {
   display: grid;
   justify-content: center;
@@ -76,4 +78,26 @@
 .article-go-back-link {
   text-decoration: none;
   color: black;
+}
+
+/* Related Article list in article page */
+.related-article-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.related-article-div {
+  /* display: grid; */
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin: 1rem 7% 0.5rem;
+  padding: 1.2rem 1.2rem 0.5rem 1.2rem;
+  background-color: white;
+  border-radius: 1.5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.related-article-date {
+  color: gray;
 }

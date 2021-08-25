@@ -9,7 +9,8 @@ var ARTICLES = [
         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082515/1.jpg"  />
         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082515/2.jpg"  />
         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082515/3.jpg"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082515/4.jpg"  />`
+        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082515/4.jpg"  />`,
+        relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `비행기 경험이 별로 없는 처자의 기내식 썰`,
@@ -18,7 +19,8 @@ var ARTICLES = [
         mainUrl:`2021082516`,
         mainImg:`https://images.ktestone.com/meta/kfunny/2021082516/1.jpg`,
         metaTag:`비행기 경험이 별로 없는 처자의 기내식 썰`,
-        contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082516/1.jpg"  />`
+        contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082516/1.jpg"  />`,
+        relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `비행기에서 만난 도풀갱어(신기함주의)`,
@@ -27,7 +29,8 @@ var ARTICLES = [
         mainUrl:`2021082517`,
         mainImg:`https://images.ktestone.com/meta/kfunny/2021082517/1.jpg`,
         metaTag:`비행기에서 만난 도풀갱어(신기함주의)`,
-        contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082517/1.jpg"  />`
+        contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082517/1.jpg"  />`,
+        relatedArticles:['2021082516', '2021082517']
     },
 
         {
@@ -38,7 +41,8 @@ var ARTICLES = [
         mainImg:`https://images.ktestone.com/meta/kfunny/2021082518/1.jpg`,
         metaTag:`서울대학교 대나무숲 체대생의 놀라운 착각`,
         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082518/1.jpg"  />
-                  <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082518/2.jpg"  />`
+                  <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082518/2.jpg"  />`,
+                  relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `주갤러의 바람난 여친썰(슬픔주의)`,
@@ -49,7 +53,8 @@ var ARTICLES = [
         metaTag:`주갤러의 바람난 여친썰(슬픔주의)`,
         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082519/1.jpg"  />
                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082519/2.jpg"  />
-                  <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082519/3.jpg"  />`
+                  <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082519/3.jpg"  />`,
+                  relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `전 남자친구랑 바람난 여친 썰(분노주의)`,
@@ -65,7 +70,8 @@ var ARTICLES = [
                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082520/5.jpg" />
                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082520/6.jpg" />
                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082520/7.png" />
-                  <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082520/8.jpg" />`
+                  <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082520/8.jpg" />`,
+                  relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `용팔이 참교육 레전드(사이다주의)`,
@@ -75,7 +81,8 @@ var ARTICLES = [
         mainImg:`https://images.ktestone.com/meta/kfunny/2021082521/1.jpg`,
         metaTag:`용팔이 참교육 레전드(사이다주의)`,
         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082521/1.jpg"  />
-                  <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082521/2.jpg"  />`
+                  <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082521/2.jpg"  />`,
+                  relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `아빠가 일진 참교육한 썰 + 아빠사진 첨부`,
@@ -89,7 +96,8 @@ var ARTICLES = [
                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082522/3.png"  />
                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082522/4.png"  />
                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082522/5.png"  />
-                  <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082522/6.png"  />`
+                  <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082522/6.png"  />`,
+                  relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `썸녀와 달달한 카톡.jpg`,
@@ -99,7 +107,8 @@ var ARTICLES = [
         mainImg:`https://images.ktestone.com/meta/kfunny/2021082523/1.jpg`,
         metaTag:`썸녀와 달달한 카톡.jpg`,
         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082523/1.jpg"  />
-                  <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082523/2.png"  />`
+                  <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082523/2.png"  />`,
+                  relatedArticles:['2021082516', '2021082517']
     },
     {
          mainTitle: `요즘 여자 공무원 학벌 남편직업`,
@@ -109,7 +118,8 @@ var ARTICLES = [
          mainImg:`https://images.ktestone.com/meta/kfunny/2021082506/1.jpeg`,
          metaTag:`요즘 여자 공무원 학벌 남편직업`,
          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082506/1.jpeg"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082506/2.jpeg"  />`
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082506/2.jpeg"  />`,
+         relatedArticles:['2021082516', '2021082517']
      },
      {
          mainTitle: `소개팅갈 때 페라리 끌고 간 썰`,
@@ -138,7 +148,8 @@ var ARTICLES = [
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082507/18.png"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082507/19.png"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082507/20.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082507/21.png"  />`
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082507/21.png"  />`,
+         relatedArticles:['2021082516', '2021082517']
      },
          {
          mainTitle: `남자친구의 여친들 단톡방 초대함`,
@@ -173,7 +184,8 @@ var ARTICLES = [
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082508/24.png"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082508/25.png"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082508/26.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082508/27.png"  />`
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082508/27.png"  />`,
+         relatedArticles:['2021082516', '2021082517']
      },
         {
          mainTitle: `사촌동생한테 플스 주라는 큰어머니 대참사`,
@@ -197,7 +209,8 @@ var ARTICLES = [
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/13.jpg"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/14.jpg"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/15.jpg"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/16.jpg"  />`
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082509/16.jpg"  />`,
+         relatedArticles:['2021082516', '2021082517']
      },
      {
          mainTitle: `13년 연애를 끝낸 후기 + 네이트판 댓글`,
@@ -210,7 +223,8 @@ var ARTICLES = [
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082510/2.png"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082510/3.jpg"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082510/4.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082510/5.png"  />`
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082510/5.png"  />`,
+         relatedArticles:['2021082516', '2021082517']
      },
      {
          mainTitle: `헤어진 후 남녀 심리 변화(극공감주의)`,
@@ -226,7 +240,8 @@ var ARTICLES = [
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082511/5.png"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082511/6.png"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082511/7.png"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082511/8.png"  />`
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082511/8.png"  />`,
+         relatedArticles:['2021082516', '2021082517']
      },
      {
          mainTitle: `눈물없이 볼수 없는 흑수저 탈출기`,
@@ -251,7 +266,8 @@ var ARTICLES = [
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082512/14.png"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082512/15.png"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082512/16.jpg"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082512/17.jpg"  />`
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082512/17.jpg"  />`,
+         relatedArticles:['2021082516', '2021082517']
      },
          {
          mainTitle: `27살에 모쏠 탈출한 썰.txt(긴글주의)`,
@@ -260,7 +276,8 @@ var ARTICLES = [
          mainUrl:`2021082513`,
          mainImg:`https://images.ktestone.com/meta/kfunny/2021082513/1.jpg`,
          metaTag:`27살에 모쏠 탈출한 썰.txt(긴글주의)`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082513/1.jpg"  />`
+         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082513/1.jpg"  />`,
+         relatedArticles:['2021082516', '2021082517']
      },
      {
         mainTitle: `싱글벙글 오래 연애하기 힘든 여자유형`,
@@ -276,7 +293,8 @@ var ARTICLES = [
         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/5.jpg"  />
         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/6.jpg"  />
         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/7.jpg"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/8.jpg"  />`
+        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/8.jpg"  />`,
+        relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `부모님이 결혼 반대한 누나남친`,
@@ -289,7 +307,8 @@ var ARTICLES = [
         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082505/2.jpg"  />
         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082505/3.jpg"  />
         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082505/4.jpg"  />
-        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082505/5.jpg"  />`
+        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082505/5.jpg"  />`,
+        relatedArticles:['2021082516', '2021082517']
     },
      {
          mainTitle: `와이프 결국에 떠나버렸네요`,
@@ -300,7 +319,8 @@ var ARTICLES = [
          metaTag:`와이프 결국에 떠나버렸네요`,
          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082514/1.jpg"  />
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082514/2.jpg"  />
-         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082514/3.jpg"  />`
+         <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082514/3.jpg"  />`,
+         relatedArticles:['2021082516', '2021082517']
      },
     {
         mainTitle: `삐진이유를 모르는 남자친구`,
@@ -310,7 +330,8 @@ var ARTICLES = [
         mainImg:`https://cdn.clien.net/web/api/file/F01/10241721/3c78ff0c10cafa.jpg`,
         metaTag:`삐진이유를 모르는 남자친구 `,
         contents:`<img alt="" src="https://cdn.clien.net/web/api/file/F01/10241721/3c78ff0c10cafa.jpg?w=780&amp;h=30000" />
-        <p><img alt="" src="https://cdn.clien.net/web/api/file/F01/10241723/3c78ffbe3bcdc3.jpg?w=780&amp;h=30000" />`
+        <p><img alt="" src="https://cdn.clien.net/web/api/file/F01/10241723/3c78ffbe3bcdc3.jpg?w=780&amp;h=30000" />`,
+        relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `회사 여사원의 비밀.jpg`,
@@ -319,7 +340,8 @@ var ARTICLES = [
         mainUrl:`202108245`,
         mainImg:`https://img.jjang0u.com/data4/docs/160/202108/24/da/c5c44f06e4531caef3d10961d87b4b54_481809.jpg`,
         metaTag:`회사 여사원의 비밀`,
-        contents:`<img alt="c5c44f06e4531caef3d10961d87b4b54_481809.jpg" src="https://img.jjang0u.com/data4/docs/160/202108/24/da/c5c44f06e4531caef3d10961d87b4b54_481809.jpg" />`
+        contents:`<img alt="c5c44f06e4531caef3d10961d87b4b54_481809.jpg" src="https://img.jjang0u.com/data4/docs/160/202108/24/da/c5c44f06e4531caef3d10961d87b4b54_481809.jpg" />`,
+        relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `커플 복근사진 레전드`,
@@ -330,7 +352,8 @@ var ARTICLES = [
         metaTag:`커플 복근사진 레전드`,
         contents:`<img alt="" class="lazy" data-autoattach="success" data-original="https://gifsf.com/humor_new1/files/attach/images/136387/955/708/004/541f085f687d6d9bf890b581736f79f2.jpg" src="https://gifsf.com/humor_new1/files/attach/images/136387/955/708/004/541f085f687d6d9bf890b581736f79f2.jpg" style="caret-color:#000000; color:#000000; display:inline" />
 
-        <img alt="" class="lazy" data-autoattach="success" data-original="https://gifsf.com/humor_new1/files/attach/images/136387/955/708/004/54f0566ed2a77256e010e5b6c83cb4aa.jpg" src="https://gifsf.com/humor_new1/files/attach/images/136387/955/708/004/54f0566ed2a77256e010e5b6c83cb4aa.jpg" style="caret-color:#000000; color:#000000; display:inline" />`
+        <img alt="" class="lazy" data-autoattach="success" data-original="https://gifsf.com/humor_new1/files/attach/images/136387/955/708/004/54f0566ed2a77256e010e5b6c83cb4aa.jpg" src="https://gifsf.com/humor_new1/files/attach/images/136387/955/708/004/54f0566ed2a77256e010e5b6c83cb4aa.jpg" style="caret-color:#000000; color:#000000; display:inline" />`,
+        relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `개웃기 사이비 아줌마 꼬신 디시인썰.txt`,
@@ -346,7 +369,8 @@ var ARTICLES = [
         <img alt="" class="lazy" data-original="https://damdaworld.com/humor/files/attach/images/w/137/906/697/85d81ea4e4ce43d3a62d2a8446a32ef110c0dadf.jpg" src="https://damdaworld.com/humor/files/attach/images/w/137/906/697/85d81ea4e4ce43d3a62d2a8446a32ef110c0dadf.jpg" style="caret-color:#000000; color:#000000; display:inline" />
         <img alt="" class="lazy" data-original="https://damdaworld.com/humor/files/attach/images/w/137/906/697/b60043902c8597707edefc3f6e897c85640a3d46.jpg" src="https://damdaworld.com/humor/files/attach/images/w/137/906/697/b60043902c8597707edefc3f6e897c85640a3d46.jpg" style="caret-color:#000000; color:#000000; display:inline" />
         <img alt="" class="lazy" data-original="https://damdaworld.com/humor/files/attach/images/w/137/906/697/3b16c6a2bd6604a17611ee637e1055bd210ab2ef.jpg" src="https://damdaworld.com/humor/files/attach/images/w/137/906/697/3b16c6a2bd6604a17611ee637e1055bd210ab2ef.jpg" style="caret-color:#000000; color:#000000; display:inline" />
-        <img alt="" class="lazy" data-original="https://damdaworld.com/humor/files/attach/images/w/137/906/697/4b4d5c12ee39463f1e8184681a719751cc5d0de0.jpg" src="https://damdaworld.com/humor/files/attach/images/w/137/906/697/4b4d5c12ee39463f1e8184681a719751cc5d0de0.jpg" style="caret-color:#000000; color:#000000; display:inline" />`
+        <img alt="" class="lazy" data-original="https://damdaworld.com/humor/files/attach/images/w/137/906/697/4b4d5c12ee39463f1e8184681a719751cc5d0de0.jpg" src="https://damdaworld.com/humor/files/attach/images/w/137/906/697/4b4d5c12ee39463f1e8184681a719751cc5d0de0.jpg" style="caret-color:#000000; color:#000000; display:inline" />`,
+        relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `오늘 직장 여선배와의 썰`,
@@ -355,7 +379,8 @@ var ARTICLES = [
         mainUrl:`202108248`,
         mainImg:`https://img.jjang0u.com/data4/docs/160/202108/22/d0/72eb0ff008642dbec4ac1bc7166fb235_684927.jpg`,
         metaTag:`오늘 직장 여선배와의 썰`,
-        contents:`<img src="https://img.jjang0u.com/data4/docs/160/202108/22/d0/72eb0ff008642dbec4ac1bc7166fb235_684927.jpg" width="536" height="3400"/>`
+        contents:`<img src="https://img.jjang0u.com/data4/docs/160/202108/22/d0/72eb0ff008642dbec4ac1bc7166fb235_684927.jpg" width="536" height="3400"/>`,
+        relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `친구 3일만에 이혼한썰`,
@@ -364,7 +389,8 @@ var ARTICLES = [
         mainUrl:`202108249`,
         mainImg:`https://damdaworld.com/humor/files/attach/images/w/137/907/670/9ca24452a82de5a367e4d7c53c2591a449aaf340.jpg`,
         metaTag:`친구 3일만에 이혼한썰`,
-        contents:`<img alt="" src="https://damdaworld.com/humor/files/attach/images/w/137/907/670/9ca24452a82de5a367e4d7c53c2591a449aaf340.jpg" />`
+        contents:`<img alt="" src="https://damdaworld.com/humor/files/attach/images/w/137/907/670/9ca24452a82de5a367e4d7c53c2591a449aaf340.jpg" />`,
+        relatedArticles:['2021082516', '2021082517']
     },
     {
         mainTitle: `김혜수가 청룡영화제 뒷풀이 안가는이유`,
@@ -378,7 +404,8 @@ var ARTICLES = [
         <img alt="" src="https://damdaworld.com/humor/files/attach/images/w/137/089/696/3a22cab25fddd330071319f970765f6073f46328.jpg" />
         <img alt="" src="https://damdaworld.com/humor/files/attach/images/w/137/089/696/64488f4ebdde0bbf8075c0c26e3b9614d6b11a18.jpg" />
         <img src="blob:https://wepplication.github.io/9a059b76-8737-478a-a0ee-ebf942052b5a" />
-        <img alt="" src="https://damdaworld.com/humor/files/attach/images/w/137/089/696/a8028ba55f749c421313385437fdfac76d04684e.jpg" />`
+        <img alt="" src="https://damdaworld.com/humor/files/attach/images/w/137/089/696/a8028ba55f749c421313385437fdfac76d04684e.jpg" />`,
+        relatedArticles:['2021082516', '2021082517']
     }
 
 ]

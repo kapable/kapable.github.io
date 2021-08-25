@@ -20,14 +20,14 @@ function ArticleList() {
     }
 
     const _onBackToMainButtonClick = () => {
-        _eventSenderGA("Paging", "Click Back-to-main Button", "result page");
+        _eventSenderGA("Paging", "Click Back-to-main Button", "article list page");
     }
 
     return (
         <Fragment>
             <img className="test-main-img" src={ARTICLEBANNER} alt="KTEST-Funny" />
             {ARTICLES.map((article) => (
-                <Link to={"/kfunny/" + article.mainUrl + '/'} className="article-list-link" onClick={_onArticleButtonClick}>
+                <Link to={"/kfunny/" + article.mainUrl + '/'} className="article-list-link" onClick={_onArticleButtonClick} key={article.mainUrl}>
                     <div className="article-list-div">
                         {article.mainTitle}
                         <p className="article-list-date">{article.date}</p>
