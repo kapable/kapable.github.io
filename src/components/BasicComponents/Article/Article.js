@@ -25,10 +25,10 @@ function Article(props) {
             img_size = '1000px'
         }
         Array.from(document.querySelectorAll('div.article-contents > img')).map((im) => (
-            im.style.width = img_size
+            im.style.width = '95%'
         ))
         Array.from(document.querySelectorAll('div.article-contents > p > img')).map((im) => (
-            im.style.width = img_size
+            im.style.width = '95%'
         ))
     }, [screen_width])
 
