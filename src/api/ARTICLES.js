@@ -1,11 +1,11 @@
 var ARTICLES = [
     {
-        mainTitle: `'남녀갈등에 대한 생각.jpg`,
-        desc: `남녀갈등에 대한 생각`,
+        mainTitle: `'익스트림 공익 레전드썰`,
+        desc: `공익 레전드썰`,
         date:`2021-08-25`,
-        mainUrl:`202108251`,
+        mainUrl:`202108252`,
         mainImg:`<img alt="" src="https://damdaworld.com/files/attach/images/w/137/328/698/b39a58bde74e278a7dc6c77ab5aa004f6b9ffc9f.jpg" />`,
-        metaTag:`남녀갈등에 대한 생각`,
+        metaTag:`공익 레전드 썰`,
         contents:`<img alt="" src="https://damdaworld.com/files/attach/images/w/137/328/698/b39a58bde74e278a7dc6c77ab5aa004f6b9ffc9f.jpg" />`
     },
     {
