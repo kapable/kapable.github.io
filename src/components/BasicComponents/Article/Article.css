@@ -41,7 +41,7 @@
 
 .article-title {
   text-align: left;
-  margin: 1rem 0.5rem;
+  margin: 1rem 7%;
   line-height: 150%;
   font-size: 1.5rem;
   align-items: center;
@@ -51,14 +51,14 @@
 .article-date {
   color: gray;
   text-align: left;
-  margin: 1rem 0.5rem;
+  margin: 1rem 7%;
   line-height: 150%;
 }
 
 .article-contents {
-  text-align: left;
-  margin: 1rem 0.5rem;
+  text-align: center;
   line-height: 150%;
+  font-size: 0;
 }
 
 .go-to-back-btn-article {
