@@ -183,39 +183,7 @@ var ARTICLES = [
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082515/2.png"  />,
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082515/3.png"  />,
          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082515/4.png"  />`
-     },
-
-      {
-         mainTitle: `비행기 경험이 별로 없는 처자의 기내식 썰`,
-         desc: ``,
-         date:`2021-08-25`,
-         mainUrl:`2021082516,
-         mainImg:`https://images.ktestone.com/meta/kfunny/2021082516/1.png`,
-         metaTag:`비행기 경험이 별로 없는 처자의 기내식 썰`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082516/1.png"  />`
-     },
-
-        {
-         mainTitle: `비행기에서 만난 도풀갱어(신기함주의)`,
-         desc: ``,
-         date:`2021-08-25`,
-         mainUrl:`2021082517`,
-         mainImg:`https://images.ktestone.com/meta/kfunny/2021082517/1.png`,
-         metaTag:`비행기에서 만난 도풀갱어(신기함주의)`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082517/1.png"  />`
-     },
-
-         {
-         mainTitle: `서울대학교 대나무숲 체대생의 놀라운 착각`,
-         desc: ``,
-         date:`2021-08-25`,
-         mainUrl:`2021082518`,
-         mainImg:`https://images.ktestone.com/meta/kfunny/2021082518/1.png`,
-         metaTag:`서울대학교 대나무숲 체대생의 놀라운 착각`,
-         contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082518/1.png"  />,
-                   <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082518/2.png"  />`
-     },
-
+         },
          {
          mainTitle: `주갤러의 바람난 여친썰(슬픔주의)`,
          desc: ``,
@@ -455,7 +423,7 @@ var ARTICLES = [
         <img alt="" src="https://damdaworld.com/humor/files/attach/images/w/137/089/696/64488f4ebdde0bbf8075c0c26e3b9614d6b11a18.jpg" />
         <img src="blob:https://wepplication.github.io/9a059b76-8737-478a-a0ee-ebf942052b5a" />
         <img alt="" src="https://damdaworld.com/humor/files/attach/images/w/137/089/696/a8028ba55f749c421313385437fdfac76d04684e.jpg" />`
-    },
+    }
 
 ]
 
