@@ -4,17 +4,16 @@ var ARTICLES = [
         desc: ``,
         date:`2021-08-25`,
         mainUrl:`2021082504`,
-        mainImg:`https://ktestimages.s3.ap-northeast-2.amazonaws.com/meta/kfunny/2021082504/1.png`,
+        mainImg:`https://images.ktestone.com/meta/kfunny/2021082504/1.png`,
         metaTag:`레전드썰 부모님이 결혼 반대한 누나 남친`,
-        contents:`<img alt="" src="https://ktestimages.s3.ap-northeast-2.amazonaws.com/meta/kfunny/2021082504/1.png"  />`,
-        `<img alt="" src="https://ktestimages.s3.ap-northeast-2.amazonaws.com/meta/kfunny/2021082504/2.png"  />`,
-        `<img alt="" src="https://ktestimages.s3.ap-northeast-2.amazonaws.com/meta/kfunny/2021082504/3.png"  />`,
-        `<img alt="" src="https://ktestimages.s3.ap-northeast-2.amazonaws.com/meta/kfunny/2021082504/4.png"  />`,
-        `<img alt="" src="https://ktestimages.s3.ap-northeast-2.amazonaws.com/meta/kfunny/2021082504/5.png"  />`,
-        `<img alt="" src="https://ktestimages.s3.ap-northeast-2.amazonaws.com/meta/kfunny/2021082504/6.png"  />`,
-        `<img alt="" src="https://ktestimages.s3.ap-northeast-2.amazonaws.com/meta/kfunny/2021082504/7.png"  />`,
-        `<img alt="" src="https://ktestimages.s3.ap-northeast-2.amazonaws.com/meta/kfunny/2021082504/8.png"  />`
-
+        contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/1.png"  />,
+        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/2.png"  />,
+        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/3.png"  />,
+        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/4.png"  />,
+        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/5.png"  />,
+        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/6.png"  />,
+        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/7.png"  />,
+        <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082504/8.png"  />`
     },
     {
         mainTitle: `지하철에서 장애인 도와준 후기`,
