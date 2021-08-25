@@ -1,5 +1,14 @@
 var ARTICLES = [
     {
+        mainTitle: `'남녀갈등에 대한 생각.jpg`,
+        desc: `남녀갈등에 대한 생각`,
+        date:`2021-08-25`,
+        mainUrl:`202108251`,
+        mainImg:`<img alt="" src="https://damdaworld.com/files/attach/images/w/137/328/698/b39a58bde74e278a7dc6c77ab5aa004f6b9ffc9f.jpg" />`,
+        metaTag:`남녀갈등에 대한 생각`,
+        contents:`<img alt="" src="https://damdaworld.com/files/attach/images/w/137/328/698/b39a58bde74e278a7dc6c77ab5aa004f6b9ffc9f.jpg" />`
+    },
+    {
         mainTitle: `'여적여와 남적남의 차이.jpg`,
         desc: `여적여와 남적남의 차이`,
         date:`2021-08-24`,
