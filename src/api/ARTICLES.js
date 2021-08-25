@@ -4,9 +4,9 @@ var ARTICLES = [
         desc: `공익 레전드썰`,
         date:`2021-08-25`,
         mainUrl:`202108252`,
-        mainImg:`<img src="blob:https://wepplication.github.io/47c1dfb6-9db2-497b-8ef3-54f4bec66b3e" />`,
+        mainImg:`<img src="https://wepplication.github.io/47c1dfb6-9db2-497b-8ef3-54f4bec66b3e" />`,
         metaTag:`공익 레전드 썰`,
-        contents:`<img src="blob:https://wepplication.github.io/47c1dfb6-9db2-497b-8ef3-54f4bec66b3e" />`
+        contents:`<img src="https://wepplication.github.io/47c1dfb6-9db2-497b-8ef3-54f4bec66b3e" />`
     },
     {
         mainTitle: `'남녀사이 갈등에 대한 생각`,
