@@ -4,9 +4,9 @@ var ARTICLES = [
         desc: `공익 레전드썰`,
         date:`2021-08-25`,
         mainUrl:`202108252`,
-        mainImg:`https://postfiles.pstatic.net/MjAyMTA4MjVfMjc0/MDAxNjI5ODcyNDM5NDgw.AxiFZN2gcI_bEo3hA-exvXuw-UZ5iHDTBqXGlv785gAg.ZYxLygW-HUJaoCkHMgNKYdrDHodwIpTBlQe-B06uRHkg.PNG.soumy21/image.png?type=w773`,
+        mainImg:`https://i.ibb.co/0jkjsvX/Kakao-Talk-Photo-2021-08-25-15-41-29.png`,
         metaTag:`공익 레전드 썰`,
-        contents:`<img alt="" src="https://postfiles.pstatic.net/MjAyMTA4MjVfMjc0/MDAxNjI5ODcyNDM5NDgw.AxiFZN2gcI_bEo3hA-exvXuw-UZ5iHDTBqXGlv785gAg.ZYxLygW-HUJaoCkHMgNKYdrDHodwIpTBlQe-B06uRHkg.PNG.soumy21/image.png" />`
+        contents:`<img alt="" src="https://i.ibb.co/0jkjsvX/Kakao-Talk-Photo-2021-08-25-15-41-29.png" />`
     },
     {
         mainTitle: `'남녀사이 갈등에 대한 생각`,
