@@ -1,4 +1,21 @@
 /* Artivle List page */
+.category-btn-div {
+  display: inline-flex;
+  text-align: center;
+  font-weight: bold;
+  justify-content: center;
+  width: 3rem;
+  margin: 1rem 0.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 1.5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.category-btn-div:hover {
+  cursor: pointer;
+}
+
 .article-list-link {
   text-decoration: none;
   color: inherit;
