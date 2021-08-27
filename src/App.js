@@ -278,6 +278,15 @@ class App extends Component {
 
             {/* go to "Article list" page */}
             <Route path='/kfunny/' component={ArticleList} exact/>
+            
+            {this.state.articleCategory.map((item) => (
+              <Route
+                path={"/kfunny/" + item}
+                component={() => <ArticleList category={item}/>}
+                key={item}
+                exact
+              />
+            ))}
 
             {this.state.articleCategory.map((item) => (
               <Route
