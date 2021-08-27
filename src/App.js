@@ -57,7 +57,8 @@ class App extends Component {
       final_render_routes:_final_render_routes,
       sharable_url:_sharable_url,
       ppl_list:['personalTaro'],
-      lang_list:['Kor', 'JP', 'Eng', 'CN', 'Rus' ,'Others']
+      lang_list:['Kor', 'JP', 'Eng', 'CN', 'Rus' ,'Others'],
+      articleCategory:['humor', 'red']
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);
     this.all_lang_renderer = this.all_lang_renderer.bind(this);
@@ -278,10 +279,28 @@ class App extends Component {
             {/* go to "Article list" page */}
             <Route path='/kfunny/' component={ArticleList} exact/>
 
+            {this.state.articleCategory.map((item) => (
+              <Route
+                path={"/kfunny/" + item + '/'}
+                component={() => <ArticleList category={item}/>}
+                key={item}
+                exact
+              />
+            ))}
+
             {/* go to "Article" page */}
             {ARTICLES.map((item)=>(
               <Route
                 path={"/kfunny/" + item.mainUrl + '/'}
+                component={() => <Article source={item}/>}
+                key={item.mainUrl}
+                exact
+              />
+            ))}
+
+            {ARTICLES.map((item)=>(
+              <Route
+                path={"/kfunny/" + item.category + '/' + item.mainUrl + '/'}
                 component={() => <Article source={item}/>}
                 key={item.mainUrl}
                 exact

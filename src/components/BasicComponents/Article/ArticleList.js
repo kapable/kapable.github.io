@@ -7,9 +7,9 @@ import './Article.css'
 
 function ArticleList() {
 
-    const [Category, setCategory] = useState('유머')
+    const [Category, setCategory] = useState('humor')
 
-    var category_object = {"유머":"유머", "레드":"레드"};
+    var category_object = {"humor":"유머", "red":"레드"};
 
     function _eventSenderGA(category, action, label){
         ReactGA.event({
@@ -33,19 +33,18 @@ function ArticleList() {
 
     const categoryButtonRenderer = (obj) => {
         var category_btn = [];
-        var value_list = Object.keys(obj).map(function(key){return obj[key]});
-        value_list.map((value) => (
-            category_btn.push(<Fragment>
+        Object.keys(obj).map((item) => (
+            category_btn.push(
                 <div
                     className="category-btn-div"
                     onClick={function(){
-                        setCategory(value)
+                        setCategory(item)
                         _onCategoryChangeButtonClick()
                     }}
+                    key={item}
                     >
-                    {value}
-                </div>
-            </Fragment>)
+                    {obj[item]}
+                </div>)
         ))
         return category_btn
     }
@@ -55,7 +54,7 @@ function ArticleList() {
         for (var article of li) {
             if (article.category === val) {
                 article_list.push(
-                <Link to={"/kfunny/" + article.mainUrl + '/'} className="article-list-link" onClick={_onArticleButtonClick} key={article.mainUrl}>
+                <Link to={"/kfunny/" + article.category + '/' + article.mainUrl + '/'} className="article-list-link" onClick={_onArticleButtonClick} key={article.mainUrl}>
                     <div className="article-list-div">
                         {article.mainTitle}
                         <p className="article-list-date">{article.date}</p>

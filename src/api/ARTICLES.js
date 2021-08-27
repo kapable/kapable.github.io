@@ -10,7 +10,7 @@ var ARTICLES = [
     <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082626/2.png"  />
     <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082626/3.png"  />`,
     relatedArticles:['2021082519', '2021082664'],
-    category:"레드"
+    category:"red"
 },
 {
     mainTitle: `중국집 배달 첫 경험한 외국인.jpg`,
@@ -30,7 +30,7 @@ var ARTICLES = [
     <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082627/9.png"  />
     <img alt="" src="https://images.ktestone.com/meta/kfunny/2021082627/10.png"  />`,
     relatedArticles:['2021082632', '2021082648'],
-    category:"유머"
+    category:"humor"
 },
 {
     mainTitle: `알바에게 번호 따인다던 남자 (분노주의)`,
