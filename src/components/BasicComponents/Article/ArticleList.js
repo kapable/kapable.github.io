@@ -5,9 +5,9 @@ import ARTICLEBANNER from '../../../api/DefaultImg/Ktest-funny.png';
 import ReactGA from 'react-ga';
 import './Article.css'
 
-function ArticleList() {
+function ArticleList(props) {
 
-    const [Category, setCategory] = useState('humor')
+    const [Category, setCategory] = useState(props.category)
 
     var category_object = {"humor":"유머", "red":"레드"};
 
@@ -35,16 +35,22 @@ function ArticleList() {
         var category_btn = [];
         Object.keys(obj).map((item) => (
             category_btn.push(
-                <div
-                    className="category-btn-div"
-                    onClick={function(){
-                        setCategory(item)
-                        _onCategoryChangeButtonClick()
-                    }}
-                    key={item}
-                    >
-                    {obj[item]}
-                </div>)
+                // <Link to={'/kfunny/'+item + '/'} key={item + '-link'}
+                // style={{"textDecoration":"none", 'color':"black"}}
+                
+                // >
+                    <div
+                        className="category-btn-div"
+                        onClick={function(e){
+                            setCategory(item)
+                            _onCategoryChangeButtonClick()
+                        }}
+                        key={item}
+                        >
+                        {obj[item]}
+                    </div>
+                    // </Link>
+                    )
         ))
         return category_btn
     }
@@ -69,16 +75,7 @@ function ArticleList() {
         <Fragment>
             <img className="test-main-img" src={ARTICLEBANNER} alt="KTEST-Funny" />
             {categoryButtonRenderer(category_object)}
-            
             {articleRenderer(ARTICLES, Category)}
-            {/* {ARTICLES.map((article) => (
-                <Link to={"/kfunny/" + article.mainUrl + '/'} className="article-list-link" onClick={_onArticleButtonClick} key={article.mainUrl}>
-                    <div className="article-list-div">
-                        {article.mainTitle}
-                        <p className="article-list-date">{article.date}</p>
-                    </div>
-                </Link>
-            ))} */}
             <Link to='/' className="article-list-go-back-link" onClick={_onBackToMainButtonClick}>
             <div
                 className="go-to-back-btn"

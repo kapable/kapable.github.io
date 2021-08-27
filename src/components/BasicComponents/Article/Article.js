@@ -84,8 +84,8 @@ function Article(props) {
         for (var code of li) {
             for (var article of ARTICLES) {
                 if(article.mainUrl === code) {
-                    rel_list.push(<Fragment>
-                        <Link to={"/kfunny/" + article.mainUrl + '/'} onClick={_onArticleButtonClick} className="related-article-link" key={article.mainUrl}>
+                    rel_list.push(<Fragment key={article.mainUrl+'-Frag'}>
+                        <Link to={"/kfunny/" + article.category + '/' + article.mainUrl + '/'} onClick={_onArticleButtonClick} className="related-article-link" key={article.mainUrl}>
                             <div className="related-article-div">
                                 {article.mainTitle}
                                 <p className="related-article-date">{article.date}</p>
@@ -109,7 +109,7 @@ function Article(props) {
                     {ReactHtmlParser(props.source.contents)}
                 </div>
                 {relatedArticleRenderer(props.source.relatedArticles)}
-                <Link to='/kfunny' className="article-go-back-link" onClick={_onBackToListButtonClick}>
+                <Link to={'/kfunny/' + props.source.category + '/'} className="article-go-back-link" onClick={_onBackToListButtonClick}>
                 <div
                     className="go-to-back-btn-article"
                     >← 다른 기사 보러가기</div></Link>

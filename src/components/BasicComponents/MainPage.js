@@ -13,7 +13,7 @@ class MainPage extends Component{
                     <img className='main-header' src={MAINHEADER} alt="K-test"/>
                 </div>
                 <OhterLangIconsMain />
-                <Link to='/kfunny/' className="main-link-block" key="article-banner">
+                <Link to='/kfunny/humor/' className="main-link-block" key="article-banner">
                     <img className="test-main-img" src={ARTICLEBANNER} alt="KTEST-Funny" />
                 </Link>
                 <div className="main-link-div">
