@@ -1,5 +1,289 @@
 var ARTICLES = [
   {
+          mainTitle: `인간관계에서 걸러야 할 사람 1순위`,
+          desc: ``,
+          date:`2021-09-09`,
+          mainUrl:`2021090926`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021090926/1.jpg`,
+          metaTag:`인간관계에서 걸러야 할 사람 1순위`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090926/1.jpg"  />`,
+          relatedArticles:['2021090903', '2021090934'],
+          category:"humor"
+      },
+      {
+          mainTitle: `주식 100만원 사놨는데 3억됨 ㄷㄷ`,
+          desc: ``,
+          date:`2021-09-09`,
+          mainUrl:`2021090927`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021090927/1.jpg`,
+          metaTag:`주식 100만원 사놨는데 3억됨 ㄷㄷ`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090927/1.jpg"  />`,
+          relatedArticles:['2021090907', '2021090931'],
+          category:"humor"
+      },
+      {
+          mainTitle: `디시 손인증 레전드.jpg`,
+          desc: ``,
+          date:`2021-09-09`,
+          mainUrl:`2021090928`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021090928/1.jpg`,
+          metaTag:`디시 손인증 레전드.jpg`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090928/1.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090928/2.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090928/3.jpg"  />`,
+          relatedArticles:['2021090902', '2021090901'],
+          category:"humor"
+      },
+      {
+          mainTitle: `포텐셜이 터지지 않던 남자애.manhwa`,
+          desc: ``,
+          date:`2021-09-09`,
+          mainUrl:`2021090929`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021090929/1.jpg`,
+          metaTag:`포텐셜이 터지지 않던 남자애.manhwa`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090929/1.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090929/2.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090929/3.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090929/4.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090929/5.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090929/6.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090929/7.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090929/8.jpg"  />`,
+          relatedArticles:['2021090933', '2021090932'],
+          category:"humor"
+      },
+      {
+          mainTitle: `게임하다 잠든 사람 레전드`,
+          desc: ``,
+          date:`2021-09-09`,
+          mainUrl:`2021090930`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021090930/1.jpg`,
+          metaTag:`게임하다 잠든 사람 레전드`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090930/1.jpg"  />`,
+          relatedArticles:['2021090911', '2021090935'],
+          category:"humor"
+      },
+      {
+          mainTitle: `주갤에 나타난 카카오 예언가`,
+          desc: ``,
+          date:`2021-09-09`,
+          mainUrl:`2021090931`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021090931/1.jpg`,
+          metaTag:`주갤에 나타난 카카오 예언가`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090931/1.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090931/2.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090931/3.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090931/4.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090931/5.jpg"  />`,
+          relatedArticles:['2021090911', '2021090909'],
+          category:"humor"
+      },
+      {
+          mainTitle: `강아지 엉덩이 미용 전후 (귀염주의)`,
+          desc: ``,
+          date:`2021-09-09`,
+          mainUrl:`2021090932`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021090932/1.jpg`,
+          metaTag:`강아지 엉덩이 미용 전후 (귀염주의)`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090932/1.jpg"  />`,
+          relatedArticles:['2021090928', '2021090908'],
+          category:"humor"
+      },
+      {
+          mainTitle: `박태준 작가가 웹툰 제목을 '인생존망'으로 지은 이유.jpg`,
+          desc: ``,
+          date:`2021-09-09`,
+          mainUrl:`2021090933`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021090933/1.jpg`,
+          metaTag:`박태준 작가가 웹툰 제목을 '인생존망'으로 지은 이유.jpg`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090933/1.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090933/2.jpg"  />`,
+          relatedArticles:['2021090926', '2021090902'],
+          category:"humor"
+      },
+      {
+          mainTitle: `10년지기 남사친한테 욕 먹었는데 내 잘못이야?`,
+          desc: ``,
+          date:`2021-09-09`,
+          mainUrl:`2021090934`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021090934/1.jpg`,
+          metaTag:`10년지기 남사친한테 욕 먹었는데 내 잘못이야?`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090934/1.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090934/2.jpg"  />`,
+          relatedArticles:['2021090901', '2021090935'],
+          category:"humor"
+      },
+      {
+          mainTitle: `남자를 의심하는 여자, 그리고 남자의 실체.jpg`,
+          desc: ``,
+          date:`2021-09-09`,
+          mainUrl:`2021090935`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021090935/1.jpg`,
+          metaTag:`남자를 의심하는 여자, 그리고 남자의 실체.jpg`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090935/1.jpg"  />`,
+          relatedArticles:['2021090903', '2021090910'],
+          category:"humor"
+      },
+      {
+          mainTitle: `40대 배달원이 느끼는 것.jpg`,
+          desc: ``,
+          date:`2021-09-09`,
+          mainUrl:`2021090936`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021090936/1.jpg`,
+          metaTag:`40대 배달원이 느끼는 것.jpg`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090936/1.jpg"  />`,
+          relatedArticles:['2021090905', '2021090926'],
+          category:"humor"
+      },
+  {
+    mainTitle: `한국임 ..ㅋㅋㅋ317억 당첨된 로또 당첨자`,
+    desc: ``,
+    date:`2021-09-09`,
+    mainUrl:`2021090911`,
+    mainImg:`https://images.ktestone.com/meta/kfunny/2021090911/1.jpeg`,
+    metaTag:`한국임 ..ㅋㅋㅋ317억 당첨된 로또 당첨자`,
+    contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090911/1.jpeg"  />`,
+    relatedArticles:['2021090602', '2021090641'],
+    category:"humor"
+},
+{
+    mainTitle: `축의금 100만원 요구하는 친구`,
+    desc: ``,
+    date:`2021-09-09`,
+    mainUrl:`2021090910`,
+    mainImg:`https://images.ktestone.com/meta/kfunny/2021090910/1.jpg`,
+    metaTag:`축의금 100만원 요구하는 친구`,
+    contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/1.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/2.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/2-1.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/3.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/4.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/5.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/6.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/7.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/8.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/9.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/10.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/11.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/12.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/13.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/14.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/15.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090910/16.jpg"  />`,
+    relatedArticles:['2021090934', '2021090907'],
+    category:"humor"
+},
+{
+    mainTitle: `벌써 계열사 158개라는 카카오 ㄷㄷ`,
+    desc: ``,
+    date:`2021-09-09`,
+    mainUrl:`2021090909`,
+    mainImg:`https://images.ktestone.com/meta/kfunny/2021090909/1.jpeg`,
+    metaTag:`벌써 계열사 158개라는 카카오 ㄷㄷ`,
+    contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090909/1.jpeg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090909/2.jpeg"  />`,
+    relatedArticles:['2021090931', '2021090622'],
+    category:"humor"
+},
+{
+    mainTitle: `김은희 작가와 딸이 빠지면 누구먼저 구하냐는 질문의 장항준 대답ㅋㅋㅋ`,
+    desc: ``,
+    date:`2021-09-09`,
+    mainUrl:`2021090908`,
+    mainImg:`https://images.ktestone.com/meta/kfunny/2021090908/1.jpg`,
+    metaTag:`김은희 작가와 딸이 빠지면 누구먼저 구하냐는 질문의 장항준 대답ㅋㅋㅋ`,
+    contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090908/1.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090908/2.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090908/3.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090908/4.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090908/5.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090908/6.jpg"  />`,
+    relatedArticles:['2021090929', '2021090936'],
+    category:"humor"
+},
+{
+    mainTitle: `내가 왜 상위 12%인지 모르겠다는 사람이 나오는 이유`,
+    desc: ``,
+    date:`2021-09-09`,
+    mainUrl:`2021090907`,
+    mainImg:`https://images.ktestone.com/meta/kfunny/2021090907/1.jpg`,
+    metaTag:`내가 왜 상위 12%인지 모르겠다는 사람이 나오는 이유`,
+    contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090907/1.jpeg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090907/2.jpeg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090907/3.jpeg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090907/4.jpeg"  />`,
+    relatedArticles:['2021090901', '2021090933'],
+    category:"humor"
+},
+{
+    mainTitle: `극명하게 갈리는 T와 F차이`,
+    desc: ``,
+    date:`2021-09-09`,
+    mainUrl:`2021090906`,
+    mainImg:`https://images.ktestone.com/meta/kfunny/2021090906/1.jpg`,
+    metaTag:`극명하게 갈리는 T와 F차이`,
+    contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090906/1.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090906/2.jpg"  />
+    <img alt="" src="https://images.ktestone.com/meta/kfunny/2021090906/3.jpg"  />`,
+    relatedArticles:['2021090902', '2021090903'],
+    category:"humor"
+},
+{
+    mainTitle: `지방사람들이 느끼는 중산층 기준`,
+    desc: ``,
+    date:`2021-09-09`,
+    mainUrl:`2021090905`,
+    mainImg:`https://images.ktestone.com/meta/kfunny/2021090905/1.jpg`,
+    metaTag:`지방사람들이 느끼는 중산층 기준`,
+    contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090905/1.jpg"  />`,
+    relatedArticles:['2021090904', '2021090936'],
+    category:"humor"
+},
+{
+    mainTitle: `은행 직원들이 요즘 느끼는것`,
+    desc: ``,
+    date:`2021-09-09`,
+    mainUrl:`2021090904`,
+    mainImg:`https://images.ktestone.com/meta/kfunny/2021090904/1.jpg`,
+    metaTag:`은행 직원들이 요즘 느끼는것`,
+    contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090904/1.jpg"  />`,
+    relatedArticles:['2021090934', '2021090935'],
+    category:"humor"
+},
+{
+    mainTitle: `자폭했다는 여자...(불륜..)`,
+    desc: ``,
+    date:`2021-09-09`,
+    mainUrl:`2021090903`,
+    mainImg:`https://images.ktestone.com/meta/kfunny/2021090903/1.jpeg`,
+    metaTag:`자폭했다는 여자...(불륜..)`,
+    contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090903/1.jpeg"  />`,
+    relatedArticles:['2021090930', '2021090927'],
+    category:"humor"
+},
+{
+    mainTitle: `요즘 남자들이 코수술할 때 가져가는 연예인 사진 `,
+    desc: ``,
+    date:`2021-09-09`,
+    mainUrl:`2021090902`,
+    mainImg:`https://images.ktestone.com/meta/kfunny/2021090902/1.jpg`,
+    metaTag:`요즘 남자들이 코수술할 때 가져가는 연예인 사진 `,
+    contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090902/1.jpg"  />`,
+    relatedArticles:['2021090926', '2021090905'],
+    category:"humor"
+},
+{
+    mainTitle: `여자친구를 잊지 못하는 남자 (서장훈 분노)`,
+    desc: ``,
+    date:`2021-09-09`,
+    mainUrl:`2021090901`,
+    mainImg:`https://images.ktestone.com/meta/kfunny/2021090901/1.png`,
+    metaTag:`여자친구를 잊지 못하는 남자 (서장훈 분노)`,
+    contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021090901/1.png"  />`,
+    relatedArticles:['2021090650', '2021090648'],
+    category:"humor"
+},
+  {
         mainTitle: `편의점에서 술래잡기 한 썰.jpg`,
         desc: ``,
         date:`2021-09-06`,
