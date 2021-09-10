@@ -465,8 +465,8 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        <img src={img_src} className='result-img' alt={final_type} />
                         {this.adTagRenderer()}
+                        <img src={img_src} className='result-img' alt={final_type} />
                     </Fragment>
                 )
             }
