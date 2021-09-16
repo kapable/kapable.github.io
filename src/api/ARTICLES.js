@@ -1,5 +1,195 @@
 var ARTICLES = [
   {
+          mainTitle: `프로를 꿈꾸는 고딩에게 일침 날리는 프로게이머.jpg`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091601`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091601/1.jpg`,
+          metaTag:`프로를 꿈꾸는 고딩에게 일침 날리는 프로게이머.jpg`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091601/1.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091603/2.jpg"  />`,
+          relatedArticles:['2021091608', '2021091612'],
+          category:"humor"
+      },
+      {
+          mainTitle: `초등교사 "잘사는 동네 애들이 예의 바르더라" 발언 후폭풍.news`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091602`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091602/1.png`,
+          metaTag:`초등교사 "잘사는 동네 애들이 예의 바르더라" 발언 후폭풍.news`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091602/1.png"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091602/2.png"  />`,
+          relatedArticles:['2021091602', '2021091614'],
+          category:"humor"
+      },
+      {
+          mainTitle: `구직자의 패기 (반전주의)`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091603`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091603/1.jpg`,
+          metaTag:`구직자의 패기 (반전주의)`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091603/1.jpg"  />`,
+          relatedArticles:['2021091602', '2021091614'],
+          category:"humor"
+      },
+      {
+          mainTitle: `감스트가 개그맨 시험에 떨어진 이유`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091604`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091604/1.png`,
+          metaTag:`감스트가 개그맨 시험에 떨어진 이유`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091604/1.png"  />`,
+          relatedArticles:['2021091601', '2021091609'],
+          category:"humor"
+      },
+      {
+          mainTitle: `네이버 지식인 답변 레전드`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091605`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091605/1.png`,
+          metaTag:`네이버 지식인 답변 레전드`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091605/1.png"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091605/2.jpg"  />`,
+          relatedArticles:['2021091613', '2021091604'],
+          category:"humor"
+      },
+      {
+          mainTitle: `연예인 머리가 빨리 자라는 이유`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091606`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091606/1.jpg`,
+          metaTag:`연예인 머리가 빨리 자라는 이유`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091606/1.jpg"  />`,
+          relatedArticles:['2021091616', '2021091613'],
+          category:"humor"
+      },
+      {
+          mainTitle: `전설의 최저시급 6배 알바.jpg`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091607`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091607/1.jpg`,
+          metaTag:`전설의 최저시급 6배 알바.jpg`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091607/1.jpg"  />`,
+          relatedArticles:['2021091602', '2021091610'],
+          category:"humor"
+      },
+      {
+          mainTitle: `배달업계의 명과 암이 공존하는 사진.jpg `,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091608`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091608/1.jpg`,
+          metaTag:`배달업계의 명과 암이 공존하는 사진.jpg `,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091608/1.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091608/2.png"  />`,
+          relatedArticles:['2021091602', '2021091614'],
+          category:"humor"
+      },
+      {
+          mainTitle: `사람을 위로하는데에는 진짜 가지각색의 방법이 있다는걸 느낌`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091609`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091609/1.jpg`,
+          metaTag:`사람을 위로하는데에는 진짜 가지각색의 방법이 있다는걸 느낌`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091609/1.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091609/2.png"  />`,
+          relatedArticles:['2021091605', '2021091608'],
+          category:"humor"
+      },
+      {
+          mainTitle: `할머니 담배셔틀 시키고 때린 고등학생 교장선생님 입장문`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091610`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091610/1.png`,
+          metaTag:`할머니 담배셔틀 시키고 때린 고등학생 교장선생님 입장문`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091610/1.png"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091610/2.png"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091610/3.png"  />`,
+          relatedArticles:['2021091608', '2021091602'],
+          category:"humor"
+      },
+      {
+          mainTitle: `개가 짖어서 쪽지를 남겼어요.jpg`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091611`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091611/1.jpg`,
+          metaTag:`개가 짖어서 쪽지를 남겼어요.jpg`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091611/1.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091611/2.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091611/3.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091611/4.jpg"  />`,
+          relatedArticles:['2021091615', '2021091616'],
+          category:"humor"
+      },
+      {
+          mainTitle: `94년생 vs 93년생 레전드.jpg`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091612`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091612/1.jpg`,
+          metaTag:`94년생 vs 93년생 레전드.jpg`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091612/1.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091612/2.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091612/3.png"  />`,
+          relatedArticles:['2021091601', '2021091603'],
+          category:"humor"
+      },
+      {
+          mainTitle: `2020시즌 추석 디씨레전드 모음.jpg`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091613`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091613/1.jpg`,
+          metaTag:`2020시즌 추석 디씨레전드 모음.jpg`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091613/1.jpg"  />`,
+          relatedArticles:['2021091614', '2021091604'],
+          category:"humor"
+      },
+      {
+          mainTitle: `서울대학교 근황.jpg + 베스트댓글`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091614`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091614/1.jpg`,
+          metaTag:`서울대학교 근황.jpg + 베스트댓글`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091614/1.jpg"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091614/2.png"  />
+          <img alt="" src="https://images.ktestone.com/meta/kfunny/2021091614/3.png"  />`,
+          relatedArticles:['2021091610', '2021091605'],
+          category:"humor"
+      },
+      {
+          mainTitle: `자신이 분노조절장애인지 판단하는 법.jpg`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091615`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091615/1.jpg`,
+          metaTag:`자신이 분노조절장애인지 판단하는 법.jpg`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091615/1.jpg"  />`,
+          relatedArticles:['2021091610', '2021091616'],
+          category:"humor"
+      },
+      {
+          mainTitle: `소리내면 나락가는 연예인`,
+          desc: ``,
+          date:`2021-09-16`,
+          mainUrl:`2021091616`,
+          mainImg:`https://images.ktestone.com/meta/kfunny/2021091616/1.jpg`,
+          metaTag:`소리내면 나락가는 연예인`,
+          contents:`<img alt="" src="https://images.ktestone.com/meta/kfunny/2021091616/1.jpg"  />`,
+          relatedArticles:['2021091606', '2021091604'],
+          category:"humor"
+      },
+  {
           mainTitle: `인간관계에서 걸러야 할 사람 1순위`,
           desc: ``,
           date:`2021-09-09`,
