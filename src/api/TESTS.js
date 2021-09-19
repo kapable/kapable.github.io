@@ -23,6 +23,1298 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // idealType in English
+    {
+        info : {
+            mainTitle:"Ideal Type Fruits Test",
+            subTitle:"What is my ideal fruit character?",
+            mainUrl:"idealTypeEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/idealTypeEng-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/idealTypeEng-thumb.png",
+            lang:"Eng"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What is my ideal type?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'A person who approaches me first and drops hints'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'A person who gives me space and waits for me to approach before showing the feelings'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "How does my ideal type hangs out with friends?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "A person who likes to be surrounded by many people and who is talkative and active"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "A person who enjoys being in a small group"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What is the position of my ideal type at a party?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "A person who creates the vibe and makes everyone laugh"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "A person who smiles well and tends to show just reactions"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What is my ideal type?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "A person who is patient"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "A person who is creative and unique"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "How do you see your girl/boyfriend?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "A person who works hard at the moment, or the present"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "A person who has a promising future"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "How does my ideal type react when she/he sees a great restaurant?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "A person who reads the review and enters the restaurant"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "A person who judges by the look of the restaurant and enters"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "How does my ideal type say “No”?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "A person capable of directly saying what she/he can’t do"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "A person who just does what she/he can do"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "How does my ideal type handle conflicts?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "A person who logically tells what is wrong"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "A person who becomes emotional, and asks to continue the conversation later"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "You are confronting the mistake you made. How does your ideal type react?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "A person who directly explains the mistakes I made"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "A person who indirectly explains thinking that I might get hurt"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "How does my ideal type prepare for a trip?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "A person who prepares and packs with a list of items in advance"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "A person who does not prepare in advance and goes to a store to buy one or two items left unpacked"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What is my ideal type like on a trip?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "A person who goes to places searched for in advance"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Let’s see how it turns out! A person who decides at the site"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Which of the two is similar to my ideal type?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "A person with a drive and has a good concentration but is a little stubborn."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "A free-spirited person who doesn’t make plans and is spontaneous."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/idealTypeEng/INFP.png'
+            },
+        ]
+    },
+    // idealType
+    {
+        info : {
+            mainTitle:"이상형 부캐 테스트",
+            subTitle:"내 이상형의 과일 캐릭터는 무엇일까?",
+            mainUrl:"idealType",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/idealType-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/idealType-thumb.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '내가 원하는 이상형은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '나에게 먼저 다가와서 호감을 표현하는 사람'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '부담스럽게 너무 다가오기보다 내가 다가가면 표현하는 사람'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "내가 원하는 이상형이 친구들과 놀 때 모습은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "많은 친구들과 소통하며 활발하게 노는 사람"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "소수의 친구들과 소소하게 즐기는 사람"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "내 이상형의 술자리 포지션은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "분위기를 주도하며 웃음을 주는 타입"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "잘 웃어주며 리액션을 하는 타입"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 원하는 이상형의 사람은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "참을성이 있고 꾸준한 사람"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "창의적이고 독창성이 있는 사람"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내 애인은 이랬으면 좋겠다.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "지금, 현재를 열심히 잘 사는 사람"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "미래 발전 가능성이 높은 사람"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나의 이상형이 맛집을 발견했을 때의 모습은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "여기가 어떤지 리뷰를 찾아보고 들어간다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "맛집 스러워보이는 외관을 보고 들어간다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "거절해야하는 상황에서 나의 이상형은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "할 수 없는 건 강력하게 할 수 없다고 말했으면 좋겠다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "그냥 할 수 있는건 해줬으면 좋겠다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "다툼이 생긴 상황에서 나의 이상형은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "논리적으로 무엇이 잘못된 건지 말하는 사람"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "일단 감정적으로 벅차 올라 나중에 다시 얘기하자는 사람"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "고민상담을 하는데 나의 잘못이긴하다. 그때 나의 이상형은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "나의 잘못된 점을 직접적으로 설명해주는 사람"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "직접적으로 말하면 그럴까봐 돌려서 말해주는 사람"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "놀러 가기로 했을 때 나의 이상형은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "하루전 날 미리 준비 하고 짐을 싸두며\n필요한 것 리스트 작성하는 사람"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "미리 챙기지 않아 한 두개 놓고 왔지만\n웃으며 사러가자고 하는 사람"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "여행 갔을 때 내 이상형은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "가고 싶은 곳 미리 찾아오고 찾아온 곳 방문하는 사람"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 여행 떠나자! 가서 결정하는 사람"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "둘 중 내 이상형과 가까운 사람은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "철저한 집중력과 추진력있지만 많이 고집스러움."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "즉흥적이고 행동력이 낮으며 계획이 없이 자유로움."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/INFP.png'
+            },
+        ]
+    },
+    // fruitAlt in English
+    {
+        info : {
+            mainTitle:"Fruit Alternative Character Test",
+            subTitle:"If I were a fruit, what character would I be",
+            mainUrl:"fruitAltEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/fruitAltEng-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/fruitAltEng-thumb.png",
+            lang:"Eng"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'On a honey-like weekend?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'The house is so boring! I will go anywhere!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'After all, I should take a rest while watching TV at home on weekends.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "The start of a new semester! I saw a guy I liked.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Approach him/her first to say hello."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I'm just staring at you."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Your friend asks you to drag you\nin front of the opposite gender\nand have a conversation.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Laugh and have fun talking together."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I'm shy,\nso I just smile quietly and be awkward."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When I think of the person I like,\nwhat do I do?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Can it be done realistically?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Ha... If I date that person,\nI will do this and that too~\nOh, it makes my heart flutter!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Me in love,\nwhen I look at the world?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "'A mountain is a mountain.\nWater is water.’\nSee it as it is."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Rather than reality,\nI spread my own world,\nmy imagination."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "During a date,\nI was hungry and found a restaurant.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "The review looks good!\nLet's go here!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Oh, It smells a restaurant that looks perfect."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What is my first reaction when I am angry?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Speak rationally about the reason for my anger."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I'm filled with anger and I'm crying."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "The person I like is in a difficult situation.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Propose and support realistic solutions."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Empathize with emotions and\nprovides psychological support."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When I talk to someone I like,\nwhat do I do?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Ask questions and ask questions about him."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "React and empathize when he is talking to me."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Suddenly the mood Jeju Island!\nI want to go to Jeju Island!",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Plan a detailed schedule for each day of the week."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Flight ticket reservation complete!\nI think the plan is almost over."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Which one is closer to me?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I am well organized and\nfind where my things are."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I think I know where my things are,\nbut when I look for them,\nI can't find them..."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "I try to confess to the person you like.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Make a thorough plan and\naim for the right time to confess."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Confess promptly based on the atmosphere."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAltEng/INFP.png'
+            },
+        ]
+    },
+    // fruitAlt
+    {
+        info : {
+            mainTitle:"과일 부캐 테스트",
+            subTitle:"내가 과일이라면 무슨 캐릭터일까?",
+            mainUrl:"fruitAlt",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/fruitAlt-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/fruitAlt-thumb.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '꿀 같은 주말에 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '집은 너무 심심해! 어디라도 가야겠다!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '역시 주말엔 집에서 티비보면 쉬어야지~'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "새 학기의 시작! 마음에 드는 이성을 봤다.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "먼저 다가가서 인사한다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "힐끔힐끔 바라만 본다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "친구가 좋아하는 이성 앞에 끌고 가 같이 대화를 나누자고 한다.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "같이 웃으며 즐겁게 대화한다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "쑥스러워서 조용히 미소만 짓고 어색하게 있는다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "좋아하는 사람을 생각할 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "현실적으로 이루어질 수 있을까?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "하...그 사람이랑 사귀면 이것도 저것도 하고~ 아 설레네!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "사랑에 빠진 나, 내가 세상을 바라볼 때?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "‘산은 산이요. 물은 물이로다.’ 있는 그대로 본다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "현실보다는 나만의 세계, 상상의 나래를 펼친다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "데이트 중 슬슬 배가 고픈데 음식점을 발견했다.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "리뷰 보니 괜찮다! 여기로 가자!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "오오 보기에 딱 여긴 맛집 스멜난다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "화가 났을 때 나의 첫 반응은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "화난 이유에 대해 이성적으로 말한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "분노에 차올라 눈물부터 난다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "좋아하는 사람이 힘든 상황에 처했다.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "현실적인 해결책을 제시하고 응원한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "감정을 공감하고 정신적인 지지를 해준다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "좋아하는 사람과 대화할 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "질문으로 상대방에 대해 물어보고 궁금해한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "그 사람이 대화할 때 리액션하며 공감한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "갑자기 분위기 제주도! 제주도에 가야겠다!",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "요일별로 세부일정을 계획한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "비행기 표 예매 완료~! 계획은 거의 끝났다고 본다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나랑 더 가까운 것은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "정리정돈을 잘하고 내 물건이 어딨는지 잘 찾는다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "내 물건들은 어디 있는지 잘 안다고 생각하지만, 막상 찾아보면 없다…"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "좋아하는 사람에게 고백하려고 한다.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "철저한 계획을 잡고 고백할 타이밍을 노린다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "분위기 봐서 즉흥적으로 고백한다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fruitAlt/INFP.png'
+            },
+        ]
+    },
     // union
     {
         info : {
