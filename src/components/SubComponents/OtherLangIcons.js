@@ -1123,6 +1123,62 @@ export default function OtherLangIcons(props) {
         }
     }
 
+    function idealTypeLinkRenderer(){
+        if(props.currentTest === "idealType") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/idealTypeEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
+                </div>
+            )
+        } else if(props.currentTest === "idealTypeEng") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/idealType/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                </div>
+            )
+        }
+    }
+
+    function fruitAltLinkRenderer(){
+        if(props.currentTest === "fruitAlt") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/fruitAltEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to English version ]" /></a>
+                </div>
+            )
+        } else if(props.currentTest === "fruitAltEng") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/fruitAlt/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                </div>
+            )
+        }
+    }
+
     return (
         <Fragment>
             {factBTILinkRenderer()}
@@ -1131,6 +1187,8 @@ export default function OtherLangIcons(props) {
             {personalIncenseLinkRenderer()}
             {hanbokBTILinkgRenderer()}
             {oneSidedLoveLinkRenderer()}
+            {idealTypeLinkRenderer()}
+            {fruitAltLinkRenderer()}
         </Fragment>
     )
 }
