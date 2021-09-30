@@ -73,7 +73,7 @@ class Result extends Component {
 
     cpcBannerResultFooterScriptor(){
         // Delete Adfit for PPL contents
-        let ppl_list = ['personalIncense', 'personalTaro']
+        let ppl_list = ['personalIncense', 'personalTaro', 'jaetech', 'wealthluck']
         if((this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) && !ppl_list.includes(this.state.current_test)) {
           return(
             <Fragment>
@@ -106,7 +106,7 @@ class Result extends Component {
                     data-full-width-responsive="true"></ins>
               </Fragment>
             )
-          }
+        }
     }
     horizontalNewTestRenderer(){
         // Delete NewTestMenu for PPL contents

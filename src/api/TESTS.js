@@ -29308,52 +29308,643 @@ var TESTS = [
             },
         ]
     },
-    // boxBuilding
+    // jaetech
     {
         info : {
-            mainTitle:"boxBuilding",
-            subTitle:"boxBuilding",
-            mainUrl:"boxBuilding",
-            scoreType:"game",
-            mainImage:"https://images.ktestone.com/introImages/test-thumb.png",
+            mainTitle:"재테크 MBTI",
+            subTitle:"재테크 MBTI",
+            mainUrl:"jaetech",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/jaetech-intro.png",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
-            gameUrl:"https://joungbins.github.io/boxbuliding/",
             lang:"Kor"
         },
         questions:[
             {
                 which:"EI",
-                question: "차가 있는 데 급 만나자는 친구!",
+                question: "처음 참석한 모임에서의 나는?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "오케이 마시다가 대리하는 거지~"
+                        content: "사람들에게 먼저 말 걸고 친해지려고 한다."
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "앗! 오늘은 무리야 차가 있어서~"
+                        content: "먼저 말 걸까말까 고민하는 중에 누군가 먼저 말 걸어준다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "누군가에게 전화를 해야할 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "전화 목록에서 바로 전화걸기"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "무슨 말을 먼저 꺼내야 할지 고민하고 생각후 전화걸기"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: '처음보는 사람들과 새로운 관계를 만드는 것이',
+                answers:[
+                    {
+                        type: "I",
+                        score: 2,
+                        content: '가끔은 부담스럽다고 생각한다.'
+                    },
+                    {
+                        type: "E",
+                        score: 5,
+                        content: '즐겁고 늘 새롭다고 생각한다.'
+                    },
+                ],
+            },
+            {
+                which:"SN",
+                question: "내가 세우고자 하는 목표에 가까운 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "당장 일단 500만원 부터 모아볼까?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "향후 5-10년 후의 나를 위한 재테크를 해보자!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "일할 때 나의 모습과 가까운 것은?",
+                answers:[
+                    {
+                        type: "N",
+                        score: 2,
+                        content: "스스로 나만의 방법을 만드는 게 좋다."
+                    },
+                    {
+                        type: "S",
+                        score: 5,
+                        content: "남들이 하는대로 따라가는 게 좋다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "업무 (과제)를 할때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "꾸준하고 참을성 있게 일하는 스타일"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "창의적이고 독창적인 아이디어를 제시하며 일하는 스타일"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "보험 상담 받을 때 나는?",
+                answers:[
+                    {
+                        type: "F",
+                        score: 2,
+                        content: "미래 보장에 대해 내가 아팠을 때를 상상하며 들어야하나 고민함."
+                    },
+                    {
+                        type: "T",
+                        score: 5,
+                        content: "어느 보장이 되는 건지 확실히 물어보고 고민함."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "약속 장소에 가는 중 사고가 나 지인에게 말할 때 나는?",
+                answers:[
+                    {
+                        type: "F",
+                        score: 2,
+                        content: "사고가 났다는 사실을 알리며 걱정을 바란다."
+                    },
+                    {
+                        type: "T",
+                        score: 5,
+                        content: "사고가 나 약속에 가지 못할 상황만 알린다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "드디어 적금 만기가 되었다는 친구의 말에",
+                answers:[
+                    {
+                        type: "F",
+                        score: 2,
+                        content: "와~ 2년을~? 대단하다!"
+                    },
+                    {
+                        type: "T",
+                        score: 5,
+                        content: "오! 2년동안 얼마씩 모았는데?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "오랜만에 만나자고 연락온 친구의 말에 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "그래! 진짜 오랜만이다! 언제 볼래?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "그래그래ㅜㅜ 우리 진짜 안본지 오래됐다 ㅜ 한번 만나야하는데!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "미리미리 준비 해서 여유롭게 끝낸다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "여유롭다가 마지막 순간에 집중해서 한번에 끝낸다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "재테크를 시작할 때 나는 ?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "재테크에 대한 계획을 세우고 빠르게 실행!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "재테크는 어떤 것들이 있을까? 알아보고 느긋하게 실행!"
                     },
                 ]
             },
         ],
         results:[
             {
-                type: "ISTJ",
-                desc: `“이게 코너링이 아주 기본적이면서도~” 기본적인거 잘하고 운전자 준수 잘 지키는 생충이 아빠 기택\n\n
-
-                나의 운전 스타일은?\n
-                늘 차분하고 착실한 모범생 같은 당신은! 운전 또한 차분하고 규칙에 대해 매우 엄격하게 생각하기 때문에 굉장히 규칙적으로 운전합니다! 차분하지만 운전을 잘해서 반전 매력이!? 하지만 사람이 많은 곳을 가면 금방 지치기 때문에 되도록이면 혼자 운전 하는 것을 좋아해요! 카플도 나와 비슷한 사람! 약속시간 잘 지키고 예의가 바른 사람이랑은 할 것 같아요!\n\n
-                
-                이런 건 어때요?\n
-                침착하고 차분하게 운전하는 당신! 워낙 안전 운전과 동시에 신호 하나라도 철저하게 지키고 있군요! 하지만 당신과 함께 가는 친구나 지인 동료는 조금 당신을 재미없다고 생각 할 수도 있어요! 정말 너무 잔잔하고 조용한 당신과 당신의 차…상대방은 조수석에 졸면 안 된다는 생각을 하고 있는데 말이죠…! 말도 없고 잠이 쏟아지는 상대방을 위해 가끔은 신나는 분위기의 음악이나 대화를 나누는 건 어떨까요?\n\n
-                
-                같이 드라이브하면 좋은 친구\n“마포대교는 무너졌냐” 내비는 저리가라, 내가 바로 인간 내비 곽철용이\n\n
-                드라이브하다가 뛰어내릴 친구\n“자…운전이라는 건 말이야~...” 입으로는 운전 박사 급 납득이`,
-                query: "todcnddl",
+                type: "ESTJ",
+                desc: ``,
+                query: "ESTJ",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/'
+                img_src:'https://images.ktestone.com/resultImages/jaetech/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: ``,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: ``,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: ``,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: ``,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: ``,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: ``,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: ``,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: ``,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: ``,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: ``,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: ``,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: ``,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: ``,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: ``,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: ``,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/jaetech/INFP.png'
+            },
+        ]
+    },
+    // wealthluck
+    {
+        info : {
+            mainTitle:"재물운 MBTI",
+            subTitle:"재물운 MBTI",
+            mainUrl:"wealthluck",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/wealthluck-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: "친구들과 있을 때 나의 역할은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "분위기를 주도하고 먼저 대화를 이끌며 화려한 리액션"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "대화를 잘 들어주며 그에 대한 적절한 리액션"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "처음보는 사람들과?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "금방 친해지고 원래 친했던 것처럼 재밌게 논다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "친해지는 데 시간이 걸리지만 친해지면 잘 논다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: '나는?',
+                answers:[
+                    {
+                        type: "I",
+                        score: 2,
+                        content: '내가 얘기하기보다 들어주길 원하며 배려심이 깊다.'
+                    },
+                    {
+                        type: "E",
+                        score: 5,
+                        content: '말하기를 좋아하고 솔직하며 다른 사람들을 잘 챙긴다.'
+                    },
+                ],
+            },
+            {
+                which:"SN",
+                question: "실패할 것 같지만 아직은 잘 모르겠다! 그럴 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "실패할 걸 아는데 굳이? 귀찮을 것 같은데"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "실패해도 일단 시도해보자!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "더 이해하기 힘든 사람은?",
+                answers:[
+                    {
+                        type: "N",
+                        score: 2,
+                        content: "현실에만 만족하고 다른 도전하지 못하는 사람"
+                    },
+                    {
+                        type: "S",
+                        score: 5,
+                        content: "현실을 직시하지 못하고 비현실적인 얘기만 하는 사람"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 더 잘 할 수 있는 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "디테일이 필요한 세심한 일"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "신속하고 미래 계획이나 아이디어가 필요한 일"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "누군가의 고민을 들어줄 때 나는?",
+                answers:[
+                    {
+                        type: "F",
+                        score: 2,
+                        content: "공감을 해준다."
+                    },
+                    {
+                        type: "T",
+                        score: 5,
+                        content: "해결방안을 제시해준다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "누군가 잘못된 행동을 하고 있을 때 나는?",
+                answers:[
+                    {
+                        type: "F",
+                        score: 2,
+                        content: "상대방의 기분이 상하지 않도록 최대한 돌려서 말해본다."
+                    },
+                    {
+                        type: "T",
+                        score: 5,
+                        content: "객관적이고 논리적이게 잘못되었다고 말한다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "해야 할 일이 있는데 아는 지인이 급하게 나에게 부탁을 한다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "미안..일단 내가 하고 있는 일이 있어서 마무리하고 도와줄게"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "아..그래? 급한거야? ...어케 하면 되는건데?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "여행을 갈 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "세부적인 여행 계획이 없으면 불안해 일단 가고 싶은 곳을 다 찾아본다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "예상치 못한 순간도 여행의 묘미지~ "
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "처음 가는 장소를 갈 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "전 날 미리 지도 앱을 열어 확인하고 준비 시간을 정해둔다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "준비하면서 대략 출발 시간을 정한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "약속을 잡을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "미리 며칠 전 언제 만날지 정해본다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "즉흥적으로 할 거 없는데 만날래? 하면 만난다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: ``,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: ``,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: ``,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: ``,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: ``,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: ``,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: ``,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: ``,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: ``,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: ``,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: ``,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: ``,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: ``,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: ``,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: ``,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: ``,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/wealthluck/INFP.png'
             },
         ]
     },

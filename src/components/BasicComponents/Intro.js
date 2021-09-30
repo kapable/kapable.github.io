@@ -126,7 +126,7 @@ class Intro extends Component {
         alert("링크가 복사됐어요!");
     }
     cpcBannerIntroFooterScriptor(){
-        let ppl_list = ['personalIncense', 'personalTaro']
+        let ppl_list = ['personalIncense', 'personalTaro', 'jaetech', 'wealthluck']
         if((this.state.quiz_url.includes("localhost") ||  this.state.quiz_url.includes("ktestone.com")) && (!ppl_list.includes(this.state.current_test.info.mainUrl))) {
         return(
             <Fragment>

@@ -56,7 +56,7 @@ class App extends Component {
       all_tests_result_url:_all_tests_result_url,
       final_render_routes:_final_render_routes,
       sharable_url:_sharable_url,
-      ppl_list:['personalTaro'],
+      ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
       lang_list:['Kor', 'JP', 'Eng', 'CN', 'Rus' ,'Others'],
       articleCategory:['humor', 'red']
     }
