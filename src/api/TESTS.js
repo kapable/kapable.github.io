@@ -29482,7 +29482,7 @@ var TESTS = [
             },
             {
                 which:"JP",
-                question: "나는?",
+                question: "평소 나의 모습과 가까운 것은?",
                 answers:[
                     {
                         type: "J",
@@ -29642,65 +29642,65 @@ var TESTS = [
         questions:[
             {
                 which:"EI",
-                question: "친구들과 있을 때 나의 역할은?",
+                question: "다가오는 주말! 나는?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "분위기를 주도하고 먼저 대화를 이끌며 화려한 리액션"
+                        content: "주말이니까 밖에서 지인, 친구, 가족 등 과 함께 시간을 보내고 싶다."
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "대화를 잘 들어주며 그에 대한 적절한 리액션"
+                        content: "그냥 집에서 유튜브, 넷플릭스등을 보며 쉬고 싶다."
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "처음보는 사람들과?",
+                question: "대화할 때의 나는?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "금방 친해지고 원래 친했던 것처럼 재밌게 논다."
+                        content: "나는 주로 말소리가 크고 말이 빠르다."
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "친해지는 데 시간이 걸리지만 친해지면 잘 논다."
+                        content: "나는 목소리가 작고 조용하며 천천히 말한다."
                     },
                 ]
             },
             {
                 which:"EI",
-                question: '나는?',
+                question: '친구들과 있을 때 나의 역할은?',
                 answers:[
                     {
                         type: "I",
                         score: 2,
-                        content: '내가 얘기하기보다 들어주길 원하며 배려심이 깊다.'
+                        content: '대화를 잘 들어주며 그에 대한 적절한 리액션.'
                     },
                     {
                         type: "E",
                         score: 5,
-                        content: '말하기를 좋아하고 솔직하며 다른 사람들을 잘 챙긴다.'
+                        content: '분위기를 주도하고 먼저 대화를 이끌며 화려한 리액션.'
                     },
                 ],
             },
             {
                 which:"SN",
-                question: "실패할 것 같지만 아직은 잘 모르겠다! 그럴 때 나는?",
+                question: "나의 표현방식과 유사한 것은?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "실패할 걸 아는데 굳이? 귀찮을 것 같은데"
+                        content: "현실적이면서 구체적이고 사실적인 표현을 잘한다."
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "실패해도 일단 시도해보자!"
+                        content: "미래지향적이며 창의적이고 은유,추상적인 표현을 잘한다."
                     },
                 ]
             },
@@ -29722,113 +29722,113 @@ var TESTS = [
             },
             {
                 which:"SN",
-                question: "내가 더 잘 할 수 있는 것은?",
+                question: "둘 중 더 하고 싶은 일은?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "디테일이 필요한 세심한 일"
+                        content: "늘 해왔던 일이나 실제 경험이나 사실이 필요한 일"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "신속하고 미래 계획이나 아이디어가 필요한 일"
+                        content: "새로운 일이나 상상력이 필요한 일"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "누군가의 고민을 들어줄 때 나는?",
+                question: "감정적으로 너무 힘든 상황이 생기면 나는?",
                 answers:[
                     {
                         type: "F",
                         score: 2,
-                        content: "공감을 해준다."
+                        content: "참으려고 했지만 참았던 눈물이 나오려고 한다."
                     },
                     {
                         type: "T",
                         score: 5,
-                        content: "해결방안을 제시해준다."
+                        content: "힘들어도 왠만하면 울지 않는다."
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "누군가 잘못된 행동을 하고 있을 때 나는?",
+                question: "무언가를 선택 해야할 때 나는?",
                 answers:[
                     {
                         type: "F",
                         score: 2,
-                        content: "상대방의 기분이 상하지 않도록 최대한 돌려서 말해본다."
+                        content: "선택장애가 있는 것 처럼 쉽게 결정하기 어렵다."
                     },
                     {
                         type: "T",
                         score: 5,
-                        content: "객관적이고 논리적이게 잘못되었다고 말한다."
+                        content: "쉽고 빠르게 결정하는 편이다."
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "해야 할 일이 있는데 아는 지인이 급하게 나에게 부탁을 한다면?",
+                question: "영화 속 악당은 어쩔수 없이 나쁜 짓을 해야하는 상황이었다. 그럴 때 나는?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "미안..일단 내가 하고 있는 일이 있어서 마무리하고 도와줄게"
+                        content: "그래도 악당은 악당이지. 왜 그걸 굳이 그렇게 해? 당하는 장면이 통쾌하다."
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "아..그래? 급한거야? ...어케 하면 되는건데?"
+                        content: "어쩔 수 없는 환경이 그렇게 만들었네.. 안타깝고 불쌍하다."
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "여행을 갈 때 나는?",
+                question: "쇼핑하러 갈 때 나는?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "세부적인 여행 계획이 없으면 불안해 일단 가고 싶은 곳을 다 찾아본다."
+                        content: "뭘 사야할지 머릿 속이나 메모를 한뒤 쇼핑을 하러간다."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "예상치 못한 순간도 여행의 묘미지~ "
+                        content: "적지 않고 둘러보다 사거나 즉흥적으로 가는 편이다."
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "처음 가는 장소를 갈 때 나는?",
+                question: "일처리를 할 때 나의 스타일에 가까운 것은?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "전 날 미리 지도 앱을 열어 확인하고 준비 시간을 정해둔다."
+                        content: "계획적으로 마감일 전까지 일의 순서에 맞게 진행한다."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "준비하면서 대략 출발 시간을 정한다."
+                        content: "여유롭게 하다가 마감일에 임박했을 때 신속하게 진행한다."
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "약속을 잡을 때 나는?",
+                question: "내가 결정한 것에 있어서 나는?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "미리 며칠 전 언제 만날지 정해본다."
+                        content: "한 번 결정하면 잘 변경하지 않는다."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "즉흥적으로 할 거 없는데 만날래? 하면 만난다."
+                        content: "상황에 따라 융통성이 있게 변경한다."
                     },
                 ]
             },
