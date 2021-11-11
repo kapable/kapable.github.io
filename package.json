@@ -218,7 +218,24 @@
       "/kapable.github.io/fruitAlt/",
       "/kapable.github.io/fruitAltEng/",
       "/kapable.github.io/idealType/",
-      "/kapable.github.io/idealTypeEng/"
+      "/kapable.github.io/idealTypeEng/",
+      "/kapable.github.io/gyeonggiCulture/",
+      "/kapable.github.io/gyeonggiCulture/result/ESTJ",
+      "/kapable.github.io/gyeonggiCulture/result/ESTP",
+      "/kapable.github.io/gyeonggiCulture/result/ESFJ",
+      "/kapable.github.io/gyeonggiCulture/result/ESFP",
+      "/kapable.github.io/gyeonggiCulture/result/ENTJ",
+      "/kapable.github.io/gyeonggiCulture/result/ENTP",
+      "/kapable.github.io/gyeonggiCulture/result/ENFJ",
+      "/kapable.github.io/gyeonggiCulture/result/ENFP",
+      "/kapable.github.io/gyeonggiCulture/result/ISTJ",
+      "/kapable.github.io/gyeonggiCulture/result/ISTP",
+      "/kapable.github.io/gyeonggiCulture/result/ISFJ",
+      "/kapable.github.io/gyeonggiCulture/result/ISFP",
+      "/kapable.github.io/gyeonggiCulture/result/INTJ",
+      "/kapable.github.io/gyeonggiCulture/result/INTP",
+      "/kapable.github.io/gyeonggiCulture/result/INFJ",
+      "/kapable.github.io/gyeonggiCulture/result/INFP"
     ]
   },
   "eslintConfig": {
