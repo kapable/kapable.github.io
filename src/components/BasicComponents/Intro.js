@@ -210,7 +210,7 @@ class Intro extends Component {
                     </Typist>
 
                     {/* CPC Banner Intro footer */}
-                    {this.cpcBannerIntroFooterScriptor()}
+                    {/* {this.cpcBannerIntroFooterScriptor()} */}
 
                     <div className="test-intro-with-friend">
                         <CopyToClipboard text={this.state.quiz_url+'/'}>

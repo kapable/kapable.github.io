@@ -27,11 +27,11 @@ class Loading extends Component {
       if((window.location.href.includes("localhost") || window.location.href.includes("ktestone.com")) && (!ppl_list.includes(this.props.test))) {
           return(
             <Fragment>
-              <ins className="kakao_ad_area" style={{display:"none"}}
+              {/* <ins className="kakao_ad_area" style={{display:"none"}}
               data-ad-unit    = "DAN-M3XcjSrV4BrUGCJG"
               data-ad-width   = "300"
               data-ad-height  = "250"></ins>
-              <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+              <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag> */}
               <div className="loading" >
                   <Lottie options={defaultOptions} height={120} width={120}/>
               </div>
