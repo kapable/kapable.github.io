@@ -676,7 +676,7 @@ class Result extends Component {
                 {this.horizontalNewTestRenderer()}
 
                 {/* CPC Banner Result footer */}
-                {this.cpcBannerResultFooterScriptor()}
+                {/* {this.cpcBannerResultFooterScriptor()} */}
             </Fragment>
         );
     }

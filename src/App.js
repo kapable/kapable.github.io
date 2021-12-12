@@ -222,9 +222,9 @@ class App extends Component {
       {this.reloadPage()}
 
       {/* CPC Banner Upper */}
-      {this.cpcBannerUpperScriptor()}
+      {/* {this.cpcBannerUpperScriptor()} */}
 
-      <div id="optadATF" style={{"minHeight": "110px"}}></div>
+      {/* <div id="optadATF" style={{"minHeight": "110px"}}></div> */}
 
       <Router basename='/kapable.github.io/'>
         <ScrollToTop>
@@ -326,7 +326,7 @@ class App extends Component {
       </Router>
 
       {/* CPC Banner footer */}
-      {this.cpcBannerFooterScriptor()}
+      {/* {this.cpcBannerFooterScriptor()} */}
 
       {/* footer */}
       <div className="intro-footer">
