@@ -853,6 +853,64 @@ export default function OtherLangIcons(props) {
         }
     }
 
+    function personalColor2022LinkRenderer(){
+        if(props.currentTest === "personalColor2022") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColor2022Eng/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColor2022CN/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
+                </div>
+            )
+        } else if(props.currentTest === "personalColor2022Eng") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColor2022/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColor2022CN/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
+                </div>
+            )
+        } else if(props.currentTest === "personalColor2022CN") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColor2022/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColor2022Eng/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
+                </div>
+            )
+        } 
+    }
+
     function personalIncenseLinkRenderer(){
         if(props.currentTest === "personalIncense") {
             return(
@@ -1184,6 +1242,7 @@ export default function OtherLangIcons(props) {
             {factBTILinkRenderer()}
             {dringkingHabitLinkRenderer()}
             {personalColorLinkRenderer()}
+            {personalColor2022LinkRenderer()}
             {personalIncenseLinkRenderer()}
             {hanbokBTILinkgRenderer()}
             {oneSidedLoveLinkRenderer()}
