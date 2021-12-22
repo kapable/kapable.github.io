@@ -13,6 +13,8 @@ import TOHOMEBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
 import ScriptTag from 'react-script-tag'
+import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
+import JELLINGBANNERENG from '../../api/DefaultImg/go-to-jelling-eng.png';
 
 class Result extends Component {
     constructor(props){
@@ -44,6 +46,7 @@ class Result extends Component {
         this._onPPLBannerClick = this._onPPLBannerClick.bind(this);
         this.horizontalNewTestRenderer = this.horizontalNewTestRenderer.bind(this)
         this.adTagRenderer = this.adTagRenderer.bind(this)
+        this.jellingBannerRenderer = this.jellingBannerRenderer.bind(this)
     }
     
     _eventSenderGA(category, action, label){
@@ -273,6 +276,36 @@ class Result extends Component {
                     href={hanbokBTI_outlink}
                     className="to-ppl-banner-text"
                     > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
+                </Fragment>
+            )
+        } 
+    }
+
+    jellingBannerRenderer() {
+        let personalColor2022ListKor = ["personalColor2022",];
+        let personalColor2022List = ["personalColor2022Eng", "personalColor2022CN"];
+        if(personalColor2022ListKor.includes(this.state.current_test)){
+            const jelling_outlink = "https://bit.ly/3FlwKMJ";
+            return(
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={jelling_outlink}
+                    className="to-ppl-banner-text"
+                    > <img src={JELLINGBANNERKOR} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                </Fragment>
+            )
+        } else if (personalColor2022List.includes(this.state.current_test)) {
+            const jelling_outlink = "https://bit.ly/30QKtw1";
+            return(
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={jelling_outlink}
+                    className="to-ppl-banner-text"
+                    > <img src={JELLINGBANNERENG} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                 </Fragment>
             )
         }
@@ -670,6 +703,7 @@ class Result extends Component {
                             className="back-to-main-btn-img"
                             alt="다른 테스트 하러가기"
                             />
+                        {this.jellingBannerRenderer()}
                     </div>
                 </div>
                 {/* New Test banners */}
