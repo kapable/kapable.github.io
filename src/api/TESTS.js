@@ -234,35 +234,35 @@ var TESTS = [
                 type: "ESTJ",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "ESTJ",
+                query: "gladeGreen",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/ESTJ.png'
             },
             {
                 type: "ESTP",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "ESTP",
+                query: "tangerine",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/ESTP.png'
             },
             {
                 type: "ESFJ",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "ESFJ",
+                query: "cosmos",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/ESFJ.png'
             },
             {
                 type: "ESFP",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "ESFP",
+                query: "froly",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/ESFP.png'
             },
             {
                 type: "ENTJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "ENTJ",
+                query: "mariner",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/ENTJ.png'
             },
@@ -270,42 +270,42 @@ var TESTS = [
                 type: "ENTP",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "ENTP",
+                query: "valencia",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/ENTP.png'
             },
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "ENFJ",
+                query: "aquamarine",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/ENFJ.png'
             },
             {
                 type: "ENFP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "ENFP",
+                query: "sunshade",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/ENFP.png'
             },
             {
                 type: "ISTJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "ISTJ",
+                query: "gainsboro",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/ISTJ.png'
             },
             {
                 type: "ISTP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "ISTP",
+                query: "bostonBlue",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/ISTP.png'
             },
             {
                 type: "ISFJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "ISFJ",
+                query: "grandis",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/ISFJ.png'
             },
@@ -313,35 +313,35 @@ var TESTS = [
                 type: "ISFP",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "ISFP",
+                query: "olivine",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/ISFP.png'
             },
             {
                 type: "INTJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "INTJ",
+                query: "bilobaFlower",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/INTJ.png'
             },
             {
                 type: "INTP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "INTP",
+                query: "mayaBlue",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/INTP.png'
             },
             {
                 type: "INFJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "INFJ",
+                query: "hawkesBlue",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/INFJ.png'
             },
             {
                 type: "INFP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "INFP",
+                query: "genoa",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022CN/INFP.png'
             },
@@ -558,35 +558,35 @@ var TESTS = [
                 type: "ESTJ",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "ESTJ",
+                query: "gladeGreen",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/ESTJ.png'
             },
             {
                 type: "ESTP",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "ESTP",
+                query: "tangerine",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/ESTP.png'
             },
             {
                 type: "ESFJ",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "ESFJ",
+                query: "cosmos",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/ESFJ.png'
             },
             {
                 type: "ESFP",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "ESFP",
+                query: "froly",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/ESFP.png'
             },
             {
                 type: "ENTJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "ENTJ",
+                query: "mariner",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/ENTJ.png'
             },
@@ -594,42 +594,42 @@ var TESTS = [
                 type: "ENTP",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "ENTP",
+                query: "valencia",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/ENTP.png'
             },
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "ENFJ",
+                query: "aquamarine",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/ENFJ.png'
             },
             {
                 type: "ENFP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "ENFP",
+                query: "sunshade",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/ENFP.png'
             },
             {
                 type: "ISTJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "ISTJ",
+                query: "gainsboro",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/ISTJ.png'
             },
             {
                 type: "ISTP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "ISTP",
+                query: "bostonBlue",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/ISTP.png'
             },
             {
                 type: "ISFJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "ISFJ",
+                query: "grandis",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/ISFJ.png'
             },
@@ -637,35 +637,35 @@ var TESTS = [
                 type: "ISFP",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "ISFP",
+                query: "olivine",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/ISFP.png'
             },
             {
                 type: "INTJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "INTJ",
+                query: "bilobaFlower",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/INTJ.png'
             },
             {
                 type: "INTP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "INTP",
+                query: "mayaBlue",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/INTP.png'
             },
             {
                 type: "INFJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "INFJ",
+                query: "hawkesBlue",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/INFJ.png'
             },
             {
                 type: "INFP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "INFP",
+                query: "genoa",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022Eng/INFP.png'
             },
@@ -882,35 +882,35 @@ var TESTS = [
                 type: "ESTJ",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "ESTJ",
+                query: "gladeGreen",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESTJ.png'
             },
             {
                 type: "ESTP",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "ESTP",
+                query: "tangerine",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESTP.png'
             },
             {
                 type: "ESFJ",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "ESFJ",
+                query: "cosmos",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESFJ.png'
             },
             {
                 type: "ESFP",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "ESFP",
+                query: "froly",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESFP.png'
             },
             {
                 type: "ENTJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "ENTJ",
+                query: "mariner",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENTJ.png'
             },
@@ -918,42 +918,42 @@ var TESTS = [
                 type: "ENTP",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "ENTP",
+                query: "valencia",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENTP.png'
             },
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "ENFJ",
+                query: "aquamarine",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENFJ.png'
             },
             {
                 type: "ENFP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "ENFP",
+                query: "sunshade",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENFP.png'
             },
             {
                 type: "ISTJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "ISTJ",
+                query: "gainsboro",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISTJ.png'
             },
             {
                 type: "ISTP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "ISTP",
+                query: "bostonBlue",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISTP.png'
             },
             {
                 type: "ISFJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "ISFJ",
+                query: "grandis",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISFJ.png'
             },
@@ -961,35 +961,35 @@ var TESTS = [
                 type: "ISFP",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "ISFP",
+                query: "olivine",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISFP.png'
             },
             {
                 type: "INTJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "INTJ",
+                query: "bilobaFlower",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/INTJ.png'
             },
             {
                 type: "INTP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "INTP",
+                query: "mayaBlue",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/INTP.png'
             },
             {
                 type: "INFJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "INFJ",
+                query: "hawkesBlue",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/INFJ.png'
             },
             {
                 type: "INFP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "INFP",
+                query: "genoa",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/personalColor2022/INFP.png'
             },
