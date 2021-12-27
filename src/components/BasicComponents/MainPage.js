@@ -30,9 +30,9 @@ class MainPage extends Component{
                 > <img src={JELLINGBANNERENG} className='test-main-img' alt="go to Jelling games" /> </a>
 
                 {/* Go to K-funny articles */}
-                <Link to='/kfunny/humor/' className="main-link-block" key="article-banner">
+                {/* <Link to='/kfunny/humor/' className="main-link-block" key="article-banner">
                     <img className="test-main-img" src={ARTICLEBANNER} alt="KTEST-Funny" />
-                </Link>
+                </Link> */}
 
                 {/* Main Test Banners */}
                 <div className="main-link-div">
