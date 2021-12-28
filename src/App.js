@@ -3,10 +3,10 @@ import MainPage from './components/BasicComponents/MainPage';
 import Intro from './components/BasicComponents/Intro'
 import ResultToIntro from './components/SubComponents/ResultToIntro'
 import ScrollToTop from './components/SubComponents/ScrollToTop'
-import LoginPage from './components/BasicComponents/Users/LoginPage';
-import RegisterPage from './components/BasicComponents/Users/RegisterPage';
-import Auth from './hoc/auth';
 import TESTS from './api/TESTS'
+import POSTSTART from './components/TestTypes/Post2021/StartPage';
+import POSTPOST from './components/TestTypes/Post2021/PostPage';
+import POSTWRITE from './components/TestTypes/Post2021/PostWrite';
 import ARTICLES from './api/ARTICLES'
 import ArticleList from './components/BasicComponents/Article/ArticleList';
 import Article from './components/BasicComponents/Article/Article';
@@ -15,6 +15,10 @@ import Result from './components/BasicComponents/Result';
 import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
+import AuthPage from './components/TestTypes/Post2021/Users/AuthPage';
+// import LoginPage from './components/BasicComponents/Users/LoginPage';
+// import RegisterPage from './components/BasicComponents/Users/RegisterPage';
+// import Auth from './hoc/auth';
 
 class App extends Component {
   constructor(props){
@@ -276,6 +280,13 @@ class App extends Component {
                 key={item[1]+'_'+item[0]} exact/>
             ))}
 
+            {/* go to "POST 2021" page */}
+            <Route path ='/post2021/' component={() => <POSTSTART />} exact/>
+
+            <Route path='/post2post/' component={() => <POSTPOST />} exact/>
+
+            <Route path='/postwrite/' component={() => <POSTWRITE />} exact/>
+
             {/* go to "Article list" page */}
             <Route path='/kfunny/' component={() => <ArticleList category={'humor'}/>} exact/>
             <Route path='/kfunny' component={() => <ArticleList category={'humor'}/>} exact/>
@@ -318,9 +329,10 @@ class App extends Component {
             ))}
 
             {/* go to User related pages */}
-            <Route exact path="/login" component={Auth(LoginPage, false)} />
-            <Route exact path="/register" component={Auth(RegisterPage, false)} />
+            {/* <Route exact path="/login" component={Auth(LoginPage, false)} />
+            <Route exact path="/register" component={Auth(RegisterPage, false)} /> */}
             {/* <Route exact path="/MyPage/:userId" component={Auth(MyPage, true)} /> */}
+            <Route exact path="/auth" component={AuthPage} />
           </Switch>
         </ScrollToTop>
       </Router>
@@ -333,7 +345,7 @@ class App extends Component {
           <h5>광고 및 후원 문의<br></br>Advertising and Sponsorship Contact</h5>
           <p>soumy21@naver.com</p>
           <p>Disclaimer:<br></br>All content is provided for fun and entertainment purposes only</p>
-          <p>©주식회사 위드썸컴퍼니 All Rights Reserved. 2021.</p>
+          <p>©주식회사 쿠키로켓 All Rights Reserved. 2022.</p>
       </div>
     </Fragment>
     </Router>

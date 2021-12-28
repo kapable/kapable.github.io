@@ -2,9 +2,9 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import MAINHEADER from '../../api/DefaultImg/main-header.png';
 import OhterLangIconsMain from '../SubComponents/OhterLangIconsMain';
-import ARTICLEBANNER from '../../api/DefaultImg/Ktest-funny.png';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 import JELLINGBANNERENG from '../../api/DefaultImg/go-to-jelling-eng.png';
+import ARTICLEBANNER from '../../api/DefaultImg/Ktest-funny.png';
 
 class MainPage extends Component{
 
@@ -33,6 +33,11 @@ class MainPage extends Component{
                 {/* <Link to='/kfunny/humor/' className="main-link-block" key="article-banner">
                     <img className="test-main-img" src={ARTICLEBANNER} alt="KTEST-Funny" />
                 </Link> */}
+
+                {/* Go to POST 2021 */}
+                <Link to='/post2021/' className="main-link-block" key="article-banner">
+                    <img className="test-main-img" src={ARTICLEBANNER} alt="POST-2021" />
+                </Link>
 
                 {/* Main Test Banners */}
                 <div className="main-link-div">
