@@ -16,9 +16,9 @@ import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
 import AuthPage from './components/TestTypes/Post2021/Users/AuthPage';
-// import LoginPage from './components/BasicComponents/Users/LoginPage';
-// import RegisterPage from './components/BasicComponents/Users/RegisterPage';
-// import Auth from './hoc/auth';
+import LoginPage from './components/BasicComponents/Users/LoginPage';
+import RegisterPage from './components/BasicComponents/Users/RegisterPage';
+import Auth from './hoc/auth';
 
 class App extends Component {
   constructor(props){
@@ -329,8 +329,8 @@ class App extends Component {
             ))}
 
             {/* go to User related pages */}
-            {/* <Route exact path="/login" component={Auth(LoginPage, false)} />
-            <Route exact path="/register" component={Auth(RegisterPage, false)} /> */}
+            <Route exact path="/login" component={Auth(LoginPage, false)} />
+            <Route exact path="/register" component={Auth(RegisterPage, false)} />
             {/* <Route exact path="/MyPage/:userId" component={Auth(MyPage, true)} /> */}
             <Route exact path="/auth" component={AuthPage} />
           </Switch>

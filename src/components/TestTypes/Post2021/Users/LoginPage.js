@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function LoginPage(props) {
     const [id, setID] = useState("");
     const [password, setPassword] = useState("");
     const api_url = 'https://api.ktestone.com';
+    
+    
+
+    useEffect(() => {
+        axios.post(api_url + '/auth/token',
+            'grant_type=client_credentials&scope=all&client_id=ktest&client_secret=ktest')
+            .then(function(res){
+                axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.accessToken}`;
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }, [api_url])
 
     function onIDHandler(e) {
         e.preventDefault();
@@ -16,22 +29,23 @@ function LoginPage(props) {
         setPassword(e.target.value);
     }
 
+
     async function onSubmitHandler(e) {
         e.preventDefault();
 
         let body = {
-            id:id,
+            username: id,
             password: password
         }
-
-        // let header = {headers: {
-        //     client_id: 'ktest',
-        //     client_secret: 'ktest'
-        // }}
-
-        const response = await axios.get(api_url+'/auth/me?client_id=ktest', body)
-        console.log(response);
-
+        await axios.get(api_url+'/auth/me', body)
+        .then(response => {
+            axios.defaults.withCredentials = true;
+            console.log(response);
+        }).catch(err => {
+            console.log(err);
+        })
+        
+        
     }
     
     return (
