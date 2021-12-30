@@ -283,9 +283,10 @@ class App extends Component {
             {/* go to "POST 2021" page */}
             <Route path ='/post2021/' component={() => <POSTSTART />} exact/>
 
-            <Route path='/post2post/' component={() => <POSTPOST />} exact/>
+            <Route path='/post2post/:username' component={() => <POSTPOST />} exact/>
 
-            <Route path='/postwrite/' component={() => <POSTWRITE />} exact/>
+            {/* <Route path='/postwrite/' component={() => <POSTWRITE />} exact/> */}
+            <Route path='/post2post/:username/postwrite' component={() => <POSTWRITE />} exact/>
 
             {/* go to "Article list" page */}
             <Route path='/kfunny/' component={() => <ArticleList category={'humor'}/>} exact/>

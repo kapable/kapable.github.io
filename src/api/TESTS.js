@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // lovejewerly
+    {
+        info : {
+            mainTitle:"러브 주얼리BTI",
+            subTitle:"나에게 어울리는 러브 주얼리는 무엇일까?",
+            mainUrl:"lovejewerly",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/lovejewerly-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/lovejewerly-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '내가 원하는 이상형은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '나에게 먼저 다가와서 호감을 표현하는 사람'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '부담스럽게 너무 다가오기보다\n내가 다가가면 표현하는 사람'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "내가 원하는 이상형이 친구들과 놀 때 모습은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "많은 친구들과 소통하며 활발하게 노는 사람"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "소수의 친구들과 소소하게 즐기는 사람"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "내 이상형의 술자리 포지션은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "분위기를 주도하며 웃음을 주는 타입"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "잘 웃어주며 리액션을 하는 타입"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 원하는 이상형의 사람은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "참을성이 있고 꾸준한 사람"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "창의적이고 독창성이 있는 사람"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내 애인은 이랬으면 좋겠다",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "지금, 현재를 열심히 잘 사는 사람"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "미래 발전 가능성이 높은 사람"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나의 이상형이 맛집을 발견했을 때의 모습은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "여기가 어떤지 리뷰를 찾아보고 들어간다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "맛집 스러워보이는 외관을 보고 들어간다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "거절해야하는 상황에서 나의 이상형은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "할 수 없는 건 강력하게 할 수 없다고 말했으면 좋겠다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "그냥 할 수 있는건 해줬으면 좋겠다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "다툼이 생긴 상황에서 나의 이상형은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "논리적으로 무엇이 잘못된 건지 말하는 사람"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "일단 감정적으로 벅차 올라 나중에 다시 얘기하자는 사람"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "고민상담을 하는데 나의 잘못이긴하다. 그때 나의 이상형은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "나의 잘못된 점을 직접적으로 설명해주는 사람"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "직접적으로 말하면 그럴까봐 돌려서 말해주는 사람"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "놀러 가기로 했을 때 나의 이상형은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "하루전 날 미리 준비 하고 짐을 싸두며\n필요한 것 리스트 작성하는 사람"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "미리 챙기지 않아 한 두개 놓고 왔지만\n웃으며 사러가자고 하는 사람"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "여행 갔을 때 내 이상형은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "가고 싶은 곳 미리 찾아오고 찾아온 곳 방문하는 사람"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 여행 떠나자! 가서 결정하는 사람"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "둘 중 내 이상형과 가까운 사람은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "철저한 집중력과 추진력있지만 많이 고집스러움"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "즉흥적이고 행동력이 낮으며 계획이 없이 자유로움"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "zjspffldjs",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "fhwlznjcm",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "tmxmfhqpflznjcm",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "rkspt",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkvkdldj",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "fnql",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dpapfkfem",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "tlxmfls",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ekdldkahsem",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "xhvkwm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dhvkf",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "vpflehxm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dkaptltmxm",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dkdldhffkdlxm",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dkzndkakfls",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dkakwhskdlxm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/lovejewerly/INFP.png'
+            },
+        ]
+    },
     // personalColor2022CN
     {
         info : {

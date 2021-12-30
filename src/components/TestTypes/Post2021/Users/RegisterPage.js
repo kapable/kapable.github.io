@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 function RegisterPage(props) {
-    const [name, setName] = useState("");
+    const [nickname, setNickname] = useState("");
     const [id, setID] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const api_url = 'https://api.ktestone.com';
 
-    function onNameHandler(e) {
+    function onNicknameHandler(e) {
         e.preventDefault();
-        setName(e.target.value);
+        setNickname(e.target.value);
     }
 
     function onIDHandler(e) {
@@ -26,10 +29,10 @@ function RegisterPage(props) {
         setConfirmPassword(e.target.value);
     }
 
-    function onSubmitHandler(e) {
+    async function onSubmitHandler(e) {
         e.preventDefault();
 
-        if(name.length > 8) {
+        if(nickname.length > 8) {
             return alert("닉네임의 길이는 8자 이하여야 합니다.")
         }
 
@@ -42,9 +45,18 @@ function RegisterPage(props) {
         }
 
         let body = {
-            username: name,
-            password: password
+            "id": id,
+            "password": password,
+            "nickname": nickname
         }
+
+        await axios.post(api_url+`/auth/join`, body)
+        .then(res => {
+            console.log(res);
+        })
+        .catch(err => {
+            console.log(err);
+        })
 
     }
     return (
@@ -58,8 +70,8 @@ function RegisterPage(props) {
                     <label>닉네임</label>
                     <input
                         type="text"
-                        value={name}
-                        onChange={onNameHandler}
+                        value={nickname}
+                        onChange={onNicknameHandler}
                         className='register-nickname-form'
                         placeholder='8자 이하'
                         required
@@ -100,4 +112,4 @@ function RegisterPage(props) {
     )
 }
 
-export default RegisterPage
+export default withRouter(RegisterPage);

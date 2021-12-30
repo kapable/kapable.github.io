@@ -1,15 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
+import axios from 'axios';
 
-function PostWrite() {
+function PostWrite(props) {
+    const api_url = 'https://api.ktestone.com';
+    const [nickname, setNickname] = useState("")
     const [message, setMessage] = useState("");
+    const key = window.location.pathname.split('/')[3];
+
+    useEffect(() => {
+    }, [])
 
     function onMessageHandler(e) {
         e.preventDefault();
         setMessage(e.target.value);
     }
 
+    function onNicknameHandler(e) {
+        e.preventDefault();
+        setNickname(e.target.value);
+    }
+
+    let body = {
+        "userkey": key,
+        "nickname": nickname,
+        "text": message,
+    }
+
     const onSubmitHandler = (e) => {
         e.preventDefault();
+        axios.post(api_url+'/post', body)
+        .then(res => {
+            console.log(res);
+        })
+        .catch(err => {
+            console.log(err);
+        })
+
         alert('제출 되었습니다!')
     }
 
@@ -20,12 +47,19 @@ function PostWrite() {
                 onSubmit={onSubmitHandler}
             >
                 <textarea
-                    placeholder='마음을 전달하세요(100자 이하)'
+                    placeholder='마음을 전달하세요(150자 이하)'
                     autoFocus
                     cols={40}
                     rows={10}
                     onChange={onMessageHandler}
-                    maxLength={100}
+                    maxLength={150}
+                />
+                <input
+                    placeholder='닉네임을 입력하세요(10자 이하)'
+                    cols={40}
+                    rows={10}
+                    onChange={onNicknameHandler}
+                    maxLength={10}
                 />
                 <button type="submit" className='write-submit-btn'>
                     편지 보내기
@@ -34,6 +68,7 @@ function PostWrite() {
             
         </div>
     )
+    
 }
 
-export default PostWrite
+export default withRouter(PostWrite);

@@ -1,23 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 function LoginPage(props) {
     const [id, setID] = useState("");
     const [password, setPassword] = useState("");
     const api_url = 'https://api.ktestone.com';
-    
-    
+
 
     useEffect(() => {
-        axios.post(api_url + '/auth/token',
-            'grant_type=client_credentials&scope=all&client_id=ktest&client_secret=ktest')
-            .then(function(res){
-                axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.accessToken}`;
-            })
-            .catch(err => {
-                console.log(err);
-            })
-    }, [api_url])
+        console.log(props);
+    }, [props])
 
     function onIDHandler(e) {
         e.preventDefault();
@@ -32,18 +25,35 @@ function LoginPage(props) {
 
     async function onSubmitHandler(e) {
         e.preventDefault();
+        
+        await axios.post(api_url + '/auth/token',
+            `grant_type=password&username=${id}&password=${password}&client_id=ktest&client_secret=ktest`)
+            .then(function(res){
 
-        let body = {
-            username: id,
-            password: password
-        }
-        await axios.get(api_url+'/auth/me', body)
-        .then(response => {
-            axios.defaults.withCredentials = true;
-            console.log(response);
-        }).catch(err => {
-            console.log(err);
-        })
+                axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.accessToken}`;
+                console.log('token', res);
+                axios.get(api_url+'/auth/me')
+                    .then(function(response){
+                        axios.defaults.withCredentials = true;
+                        console.log(`ME`, response);
+                        if(response) {
+                            localStorage.setItem("access_token", encodeURIComponent(response.data.key))
+                            props.history.push({
+                                pathname:`/post2post/${encodeURIComponent(response.data.key)}`,
+                                state: encodeURIComponent(response.data.key)
+                            });
+                        }
+                    })
+                    .catch(err => {
+                        console.log(err);
+                        alert('로그인에 실패했습니다!');
+                    })
+            })
+            .catch(err => {
+                console.log(err);
+                alert('로그인에 실패했습니다!');
+            })
+        
         
         
     }
@@ -84,4 +94,4 @@ function LoginPage(props) {
         
 }
 
-export default LoginPage
+export default withRouter(LoginPage)
