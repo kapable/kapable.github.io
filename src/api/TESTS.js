@@ -38,193 +38,193 @@ var TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '내가 원하는 이상형은?',
+                question: '꿀 같은 주말에 나는?',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: '나에게 먼저 다가와서 호감을 표현하는 사람'
+                        content: '집은 너무 심심해! 어디라도 가야겠다!'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '부담스럽게 너무 다가오기보다\n내가 다가가면 표현하는 사람'
+                        content: '역시 주말엔 집에서 티비보면 쉬어야지~'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "내가 원하는 이상형이 친구들과 놀 때 모습은?",
+                question: "새 학기의 시작! 마음에 드는 이성을 봤다.",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "많은 친구들과 소통하며 활발하게 노는 사람"
+                        content: "먼저 다가가서 인사한다."
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "소수의 친구들과 소소하게 즐기는 사람"
+                        content: "힐끔힐끔 바라만 본다."
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "내 이상형의 술자리 포지션은?",
+                question: "친구가 좋아하는 이성 앞에 끌고 가 같이 대화를 나누자고 한다.",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "분위기를 주도하며 웃음을 주는 타입"
+                        content: "같이 웃으며 즐겁게 대화한다."
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "잘 웃어주며 리액션을 하는 타입"
+                        content: "쑥스러워서 조용히 미소만 짓고 어색하게 있는다."
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "내가 원하는 이상형의 사람은?",
+                question: "좋아하는 사람을 생각할 때 나는?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "참을성이 있고 꾸준한 사람"
+                        content: "현실적으로 이루어질 수 있을까?"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "창의적이고 독창성이 있는 사람"
+                        content: "하...그 사람이랑 사귀면 이것도 저것도 하고~ 아 설레네!"
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "내 애인은 이랬으면 좋겠다",
+                question: "사랑에 빠진 나, 내가 세상을 바라볼 때?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "지금, 현재를 열심히 잘 사는 사람"
+                        content: "‘산은 산이요. 물은 물이로다.’ 있는 그대로 본다."
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "미래 발전 가능성이 높은 사람"
+                        content: "현실보다는 나만의 세계, 상상의 나래를 펼친다."
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "나의 이상형이 맛집을 발견했을 때의 모습은?",
+                question: "데이트 중 슬슬 배가 고픈데 음식점을 발견했다.",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "여기가 어떤지 리뷰를 찾아보고 들어간다"
+                        content: "리뷰 보니 괜찮다! 여기로 가자!"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "맛집 스러워보이는 외관을 보고 들어간다"
+                        content: "오오 보기에 딱 여긴 맛집 스멜난다."
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "거절해야하는 상황에서 나의 이상형은?",
+                question: "화가 났을 때 나의 첫 반응은?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "할 수 없는 건 강력하게 할 수 없다고 말했으면 좋겠다"
+                        content: "화난 이유에 대해 이성적으로 말한다."
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "그냥 할 수 있는건 해줬으면 좋겠다"
+                        content: "분노에 차올라 눈물부터 난다."
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "다툼이 생긴 상황에서 나의 이상형은?",
+                question: "좋아하는 사람이 힘든 상황에 처했다.",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "논리적으로 무엇이 잘못된 건지 말하는 사람"
+                        content: "현실적인 해결책을 제시하고 응원한다."
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "일단 감정적으로 벅차 올라 나중에 다시 얘기하자는 사람"
+                        content: "감정을 공감하고 정신적인 지지를 해준다."
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "고민상담을 하는데 나의 잘못이긴하다. 그때 나의 이상형은?",
+                question: "좋아하는 사람과 대화할 때 나는?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "나의 잘못된 점을 직접적으로 설명해주는 사람"
+                        content: "질문으로 상대방에 대해 물어보고 궁금해한다."
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "직접적으로 말하면 그럴까봐 돌려서 말해주는 사람"
+                        content: "그 사람이 대화할 때 리액션하며 공감한다."
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "놀러 가기로 했을 때 나의 이상형은?",
+                question: "갑자기 분위기 제주도! 제주도에 가야겠다!",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "하루전 날 미리 준비 하고 짐을 싸두며\n필요한 것 리스트 작성하는 사람"
+                        content: "요일별로 세부일정을 계획한다."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "미리 챙기지 않아 한 두개 놓고 왔지만\n웃으며 사러가자고 하는 사람"
+                        content: "비행기 표 예매 완료~! 계획은 거의 끝났다고 본다."
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "여행 갔을 때 내 이상형은?",
+                question: "나랑 더 가까운 것은?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "가고 싶은 곳 미리 찾아오고 찾아온 곳 방문하는 사람"
+                        content: "정리정돈을 잘하고 내 물건이 어딨는지 잘 찾는다."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "일단 여행 떠나자! 가서 결정하는 사람"
+                        content: "내 물건들은 어디 있는지 잘 안다고 생각하지만, 막상 찾아보면 없다…"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "둘 중 내 이상형과 가까운 사람은?",
+                question: "좋아하는 사람에게 고백하려고 한다.",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "철저한 집중력과 추진력있지만 많이 고집스러움"
+                        content: "철저한 계획을 잡고 고백할 타이밍을 노린다."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "즉흥적이고 행동력이 낮으며 계획이 없이 자유로움"
+                        content: "분위기 봐서 즉흥적으로 고백한다."
                     },
                 ]
             },
