@@ -291,7 +291,7 @@ class Result extends Component {
                     <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://ktestone.com/kapable.github.io/lovejewerly"
+                    href="https://ktestone.com/kapable.github.io/lovejewerly/"
                     className="to-ppl-banner-text"
                     > <img src="https://images.ktestone.com/main-thumbnail/lovejewerly-thumb.png" className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                     <a
