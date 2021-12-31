@@ -9,6 +9,10 @@ function RegisterPage(props) {
     const [confirmPassword, setConfirmPassword] = useState("");
     const api_url = 'https://api.ktestone.com';
 
+    const instance = axios.create({headers: {
+        'Content-Type': 'application/json',
+    },})
+
     function onNicknameHandler(e) {
         e.preventDefault();
         setNickname(e.target.value);
@@ -50,7 +54,7 @@ function RegisterPage(props) {
             "nickname": nickname
         }
 
-        await axios.post(api_url+`/auth/join`, body)
+        await instance.post(api_url+`/auth/join`, body)
         .then(res => {
             console.log(res);
         })

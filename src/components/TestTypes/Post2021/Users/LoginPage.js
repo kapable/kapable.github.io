@@ -7,7 +7,6 @@ function LoginPage(props) {
     const [password, setPassword] = useState("");
     const api_url = 'https://api.ktestone.com';
 
-
     useEffect(() => {
         console.log(props);
     }, [props])
@@ -32,15 +31,34 @@ function LoginPage(props) {
 
                 axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.accessToken}`;
                 console.log('token', res);
+                // axios.get(api_url+'/auth/me')
+                //     .then(function(response){
+                //         axios.defaults.withCredentials = true;
+                //         console.log(`ME`, response);
+                //         if(response) {
+                //             localStorage.setItem("access_token", response.data.accessToken);
+                //             props.history.push({
+                //                 pathname:`/post2post/${encodeURIComponent(response.data.key)}`,
+                //                 state: response.data.accessToken
+                //             });
+                //         }
+                //     })
+                //     .catch(err => {
+                //         console.log(err);
+                //         alert('로그인에 실패했습니다!');
+                //     })
+            })
+            .then(function(){
                 axios.get(api_url+'/auth/me')
                     .then(function(response){
                         axios.defaults.withCredentials = true;
                         console.log(`ME`, response);
                         if(response) {
-                            localStorage.setItem("access_token", encodeURIComponent(response.data.key))
+                            localStorage.setItem("access_token", response.data.accessToken);
+                            localStorage.setItem("user_key", encodeURIComponent(response.data.key));
                             props.history.push({
                                 pathname:`/post2post/${encodeURIComponent(response.data.key)}`,
-                                state: encodeURIComponent(response.data.key)
+                                state: response.data.accessToken
                             });
                         }
                     })

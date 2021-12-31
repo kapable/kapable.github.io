@@ -6,7 +6,12 @@ function PostWrite(props) {
     const api_url = 'https://api.ktestone.com';
     const [nickname, setNickname] = useState("")
     const [message, setMessage] = useState("");
-    const key = window.location.pathname.split('/')[3];
+    const key = decodeURIComponent(window.location.pathname.split('/')[3]);
+    const instance = axios.create({headers: {
+        'Content-Type': 'application/json',
+        'access-control-allow-origin': '*',
+        'x-powered-by': 'Express' 
+    },})
 
     useEffect(() => {
     }, [])
@@ -28,8 +33,9 @@ function PostWrite(props) {
     }
 
     const onSubmitHandler = (e) => {
+        console.log(body);
         e.preventDefault();
-        axios.post(api_url+'/post', body)
+        instance.post(api_url+'/post', body)
         .then(res => {
             console.log(res);
         })

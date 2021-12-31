@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { withRouter, Link } from 'react-router-dom';
 
 function Post2021() {
     return (
         <div>
             Heelo
             <button>
-                <a href="/auth">시작하기</a>
+                <Link to="/auth" >시작하기</Link>
             </button>
         </div>
     )
 }
 
-export default Post2021
+export default withRouter(Post2021);
