@@ -1,6 +1,10 @@
 /* Start Page */
 .start-page-bg-div {
   background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .start-page-upbar {
@@ -42,6 +46,10 @@
   background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
   justify-content: center;
   align-items: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .register-submit-form {
   margin: 0rem auto 30rem;
@@ -108,6 +116,10 @@
   background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
   justify-content: center;
   align-items: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .login-page-rgbtn {
@@ -145,6 +157,10 @@
   background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
   justify-content: center;
   align-items: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .post-pate-maintitle {
@@ -215,6 +231,10 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 30rem;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   /* justify-content: center;
   align-items: center; */
 }
