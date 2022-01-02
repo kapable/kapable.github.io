@@ -16,8 +16,8 @@ import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
 import AuthPage from './components/TestTypes/Post2021/Users/AuthPage';
-import LoginPage from './components/BasicComponents/Users/LoginPage';
-import RegisterPage from './components/BasicComponents/Users/RegisterPage';
+import LoginPage from './components/TestTypes/Post2021/Users/LoginPage';
+import RegisterPage from './components/TestTypes/Post2021/Users/RegisterPage';
 import Auth from './hoc/auth';
 
 class App extends Component {

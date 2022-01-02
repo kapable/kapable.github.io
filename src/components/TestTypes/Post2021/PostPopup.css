@@ -1,0 +1,109 @@
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.popup-letter-form {
+  width: 80%;
+}
+
+.popup-inner {
+  position: relative;
+  left: 0%;
+  right: 15%;
+  top: 15%;
+  bottom: 15%;
+  margin: auto;
+  width: 90%;
+}
+
+.popup-letter-form {
+  position: absolute;
+  top: 15rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .popup-letter-form {
+    position: absolute;
+    top: 25rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .popup-letter-form {
+    position: absolute;
+    top: 25rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+  }
+}
+
+.popup-message {
+  z-index: 1;
+  position: absolute;
+  top: -550%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 15rem auto 1rem;
+  width: 13rem;
+  background: white;
+}
+
+.popup-fromNickname {
+  z-index: 1;
+  position: absolute;
+  top: 1660%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 13rem;
+}
+
+.popup-nickname-input {
+  width: 13rem;
+  position: absolute;
+  top: 1750%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.popup-head {
+  position: absolute;
+  top: -740%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  margin: 15rem auto 1rem;
+}
+
+.popup-close-btn {
+  position: relative;
+  top: 2.8rem;
+  left: 40%;
+  font-size: 1rem;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+}
+
+/* Write Complete Popup */
+.postwrite-send-complete-postbox {
+  position: absolute;
+  width: 20rem;
+  top: 15rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

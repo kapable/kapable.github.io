@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import '../Post2021.css';
 
 function RegisterPage(props) {
     const [nickname, setNickname] = useState("");
@@ -55,18 +56,22 @@ function RegisterPage(props) {
         }
 
         await instance.post(api_url+`/auth/join`, body)
-        .then(res => {
-            console.log(res);
+        .then(() => {
+            console.log('Register Success!');
         })
-        .catch(err => {
-            console.log(err);
+        .catch(() => {
+            alert("회원가입에 실패했습니다 ㅠㅠ")
         })
 
     }
     return (
-        <div>
-                <h1>나에게 편지를 보내줘!</h1>
-                <button onClick={() => {props.setMode("login")}}>로그인</button>
+        <div className="register-page-bg-div">
+            <br></br>
+            <h2 className='send-to-me-title'>나에게 편지를 보내줘!</h2>
+                <div className='register-page-btn-div'>
+                    <button className="register-page-rgbtn">회원가입</button>
+                    <button onClick={() => {props.setMode("login")}} className="register-page-loginbtn">로그인</button>
+                </div>
                 <form
                     className='register-submit-form'
                     onSubmit={onSubmitHandler}
@@ -112,6 +117,7 @@ function RegisterPage(props) {
                         회원가입
                     </button>
                 </form>
+                <p className='name-footer'>©Coocie Rocket</p>
             </div>
     )
 }

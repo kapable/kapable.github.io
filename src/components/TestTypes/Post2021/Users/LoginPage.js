@@ -1,15 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import '../Post2021.css';
 
 function LoginPage(props) {
     const [id, setID] = useState("");
     const [password, setPassword] = useState("");
     const api_url = 'https://api.ktestone.com';
-
-    useEffect(() => {
-        console.log(props);
-    }, [props])
 
     function onIDHandler(e) {
         e.preventDefault();
@@ -24,62 +21,36 @@ function LoginPage(props) {
 
     async function onSubmitHandler(e) {
         e.preventDefault();
-        
         await axios.post(api_url + '/auth/token',
-            `grant_type=password&username=${id}&password=${password}&client_id=ktest&client_secret=ktest`)
-            .then(function(res){
-
-                axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.accessToken}`;
-                console.log('token', res);
-                // axios.get(api_url+'/auth/me')
-                //     .then(function(response){
-                //         axios.defaults.withCredentials = true;
-                //         console.log(`ME`, response);
-                //         if(response) {
-                //             localStorage.setItem("access_token", response.data.accessToken);
-                //             props.history.push({
-                //                 pathname:`/post2post/${encodeURIComponent(response.data.key)}`,
-                //                 state: response.data.accessToken
-                //             });
-                //         }
-                //     })
-                //     .catch(err => {
-                //         console.log(err);
-                //         alert('로그인에 실패했습니다!');
-                //     })
+        `grant_type=password&username=${id}&password=${password}&client_id=ktest&client_secret=ktest`,
+        )
+        .then(res => {
+            axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.accessToken}`;
+            localStorage.setItem("access_token", res.data.accessToken);
+        })
+        .then(() => {
+            axios.get(api_url + '/auth/me')
+            .then(response => {
+                props.history.push({
+                    pathname:`/post2post/${encodeURIComponent(response.data.key)}`,
+                    state: response.data.accessToken
+                });
             })
-            .then(function(){
-                axios.get(api_url+'/auth/me')
-                    .then(function(response){
-                        axios.defaults.withCredentials = true;
-                        console.log(`ME`, response);
-                        if(response) {
-                            localStorage.setItem("access_token", response.data.accessToken);
-                            localStorage.setItem("user_key", encodeURIComponent(response.data.key));
-                            props.history.push({
-                                pathname:`/post2post/${encodeURIComponent(response.data.key)}`,
-                                state: response.data.accessToken
-                            });
-                        }
-                    })
-                    .catch(err => {
-                        console.log(err);
-                        alert('로그인에 실패했습니다!');
-                    })
-            })
-            .catch(err => {
-                console.log(err);
-                alert('로그인에 실패했습니다!');
-            })
-        
-        
-        
-    }
+        })
+        .catch(() => {
+            alert('로그인에 실패했습니다!');
+        });
+    };
     
     return (
-        <div>
-                <h1>나에게 편지를 보내줘!</h1>
-                <button onClick={() => {props.setMode("register")}}>회원가입</button>
+        <div className="login-page-bg-div">
+            <br></br>
+                <h2 className='send-to-me-title'>나에게 편지를 보내줘!</h2>
+                <div className='register-page-btn-div'>
+                    <button onClick={() => {props.setMode("register")}} className="login-page-rgbtn">회원가입</button>
+                    <button onClick={() => {props.setMode("login")}} className="login-page-loginbtn">로그인</button>
+                </div>
+                
                 <form
                     className='register-submit-form'
                     onSubmit={onSubmitHandler}
@@ -103,10 +74,11 @@ function LoginPage(props) {
                         placeholder='8자 이상 입력해주세요'
                         required
                     />
-                    <button type="submit" className="register-submit-btn">
+                    <button type="submit" className="login-submit-btn">
                         로그인
                     </button>
                 </form>
+                <p className='name-footer'>©Coocie Rocket</p>
             </div>
     )
         

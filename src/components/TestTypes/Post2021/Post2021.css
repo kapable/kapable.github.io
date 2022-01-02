@@ -1,0 +1,383 @@
+/* Start Page */
+.start-page-bg-div {
+  background-image: url("../../../api/PostImg/Background/background.png");
+}
+
+.start-page-upbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+  /* right: 0; */
+}
+
+.start-page-downbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+.start-page-postbox {
+  margin-top: 4rem;
+  width: 85%;
+}
+
+.start-page-startbtn {
+  margin: 1rem auto 50rem;
+  width: 70%;
+}
+
+/* Register Page */
+::placeholder {
+  opacity: 0.4;
+}
+
+.send-to-me-title {
+  margin: 3rem auto 1rem;
+}
+
+.register-page-bg-div {
+  background-image: url("../../../api/PostImg/Background/background.png");
+  justify-content: center;
+  align-items: center;
+}
+.register-submit-form {
+  margin: 0rem auto 30rem;
+  width: 14rem;
+  padding: 3rem;
+  background-color: #cbd6ef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-submit-form > input {
+  width: 100%;
+  margin: 1rem;
+  height: 1.5rem;
+  border-width: 0.13rem;
+  border-style: solid;
+}
+
+.register-submit-form > label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  align-self: baseline;
+}
+
+.register-page-btn-div {
+  margin: 0 auto;
+  align-items: center;
+}
+
+.register-page-rgbtn {
+  background-color: #cbd6ef;
+  border: 0;
+  outline: 0;
+  width: 10rem;
+  height: 3rem;
+  font-weight: bold;
+}
+.register-page-loginbtn {
+  background-color: #6286d5;
+  border: 0;
+  outline: 0;
+  width: 10rem;
+  height: 3rem;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.register-submit-btn {
+  background-color: #6286d5;
+  border: 0;
+  outline: 0;
+  width: 10rem;
+  height: 3rem;
+  color: white;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+/* Login Page */
+.login-page-bg-div {
+  background-image: url("../../../api/PostImg/Background/background.png");
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page-rgbtn {
+  background-color: #6286d5;
+  border: 0;
+  outline: 0;
+  width: 10rem;
+  height: 3rem;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+.login-page-loginbtn {
+  background-color: #cbd6ef;
+  border: 0;
+  outline: 0;
+  width: 10rem;
+  height: 3rem;
+  font-weight: bold;
+}
+
+.login-submit-btn {
+  background-color: #6286d5;
+  border: 0;
+  outline: 0;
+  width: 10rem;
+  height: 3rem;
+  color: white;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+/* Post Page (Log In) */
+.post-page-bg-div {
+  background-image: url("../../../api/PostImg/Background/background.png");
+  justify-content: center;
+  align-items: center;
+}
+
+.post-pate-maintitle {
+  margin: 4rem auto 1rem;
+  width: 80%;
+}
+
+.post-page-postbox-div {
+  position: relative;
+}
+
+.post-page-postbox {
+  width: 18rem;
+}
+
+.post-page-whosname {
+  text-align: center;
+  position: absolute;
+  top: 24.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.post-page-send-mail-btn {
+  cursor: pointer;
+  width: 9rem;
+  margin: 0 0.5rem;
+}
+
+.post-page-share-mypost-btn {
+  cursor: pointer;
+  width: 10.7rem;
+  margin: 0 0.5rem;
+}
+
+.post-page-goto-mypost-btn {
+  cursor: pointer;
+  width: 9.3rem;
+  margin: 0 0.5rem;
+}
+
+.post-page-envelop-div {
+  position: relative;
+  display: inline;
+}
+
+.post-page-envelop {
+  width: 40%;
+  margin: 0.3rem;
+}
+
+.post-page-nickname-onletter {
+  position: absolute;
+  top: -500%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.post-page-logout-btn {
+  background-color: none;
+  border-width: 0;
+  outline: none;
+}
+
+/* Write Page */
+.write-page-div {
+  background-image: url("../../../api/PostImg/Background/background.png");
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30rem;
+  /* justify-content: center;
+  align-items: center; */
+}
+.write-page-title-div {
+  align-self: baseline;
+  margin-left: 10%;
+}
+.write-page-title {
+  margin: 5rem 0 1rem;
+  font-weight: bolder;
+}
+
+.write-page-postbox-div {
+  position: relative;
+}
+
+.write-page-letter-form-img {
+  width: 20rem;
+}
+
+.write-page-whosname {
+  position: absolute;
+  top: -2.2%;
+  left: 47.5%;
+  transform: translate(-50%, -50%);
+}
+
+.write-page-submit-form {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.write-page-textarea {
+  border-width: 0;
+  display: block;
+  resize: none;
+}
+
+.write-page-nickname-input {
+  border-width: 0;
+  display: block;
+  width: 11rem;
+  background-color: #f6afb7;
+  position: absolute;
+  top: 127%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.write-page-nickname-input-img {
+  width: 13rem;
+  position: absolute;
+  top: 127%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.write-page-submit-btn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.write-page-submit-btn-img {
+  width: 13rem;
+  position: absolute;
+  top: 200%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.postwrite-complete-to-postbox {
+  cursor: pointer;
+  position: absolute;
+  width: 7rem;
+  top: 22.5rem;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.postwrite-complete-close {
+  cursor: pointer;
+  position: absolute;
+  width: 7rem;
+  top: 22.5rem;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 768px) {
+  .postwrite-complete-to-postbox {
+    cursor: pointer;
+    position: absolute;
+    width: 7rem;
+    top: 22.5rem;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+
+  .postwrite-complete-close {
+    cursor: pointer;
+    position: absolute;
+    width: 7rem;
+    top: 22.5rem;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul.pagination li {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #e2e2e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+ul.pagination li:first-child {
+  border-radius: 5px 0 0 5px;
+}
+ul.pagination li:last-child {
+  border-radius: 0 5px 5px 0;
+}
+ul.pagination li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+ul.pagination li.active a {
+  color: white;
+}
+ul.pagination li.active {
+  background-color: #ffca01;
+}
+ul.pagination li a:hover,
+ul.pagination li a.active {
+  color: #ffca01;
+}
+.page-selection {
+  width: 48px;
+  height: 30px;
+  color: #ffca01;
+}
+
+/* Footer */
+.name-footer {
+  color: white;
+  font-weight: bold;
+}
