@@ -1,6 +1,6 @@
 /* Start Page */
 .start-page-bg-div {
-  background-image: url("../../../api/PostImg/Background/background.png");
+  background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
 }
 
 .start-page-upbar {
@@ -39,7 +39,7 @@
 }
 
 .register-page-bg-div {
-  background-image: url("../../../api/PostImg/Background/background.png");
+  background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
   justify-content: center;
   align-items: center;
 }
@@ -105,7 +105,7 @@
 
 /* Login Page */
 .login-page-bg-div {
-  background-image: url("../../../api/PostImg/Background/background.png");
+  background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
   justify-content: center;
   align-items: center;
 }
@@ -142,7 +142,7 @@
 
 /* Post Page (Log In) */
 .post-page-bg-div {
-  background-image: url("../../../api/PostImg/Background/background.png");
+  background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
   justify-content: center;
   align-items: center;
 }
@@ -211,7 +211,7 @@
 
 /* Write Page */
 .write-page-div {
-  background-image: url("../../../api/PostImg/Background/background.png");
+  background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
   display: flex;
   flex-direction: column;
   padding-bottom: 30rem;
