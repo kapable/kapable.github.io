@@ -57,7 +57,8 @@ function RegisterPage(props) {
 
         await instance.post(api_url+`/auth/join`, body)
         .then(() => {
-            console.log('Register Success!');
+            alert("회원가입에 성공했습니다!!!");
+            props.setMode("login");
         })
         .catch(() => {
             alert("회원가입에 실패했습니다 ㅠㅠ")

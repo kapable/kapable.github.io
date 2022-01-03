@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import axios from 'axios';
 import UPBAR from '../../../api/PostImg/Background/up_bg_bar.png';
@@ -17,6 +17,7 @@ function PostWrite(props) {
     const [message, setMessage] = useState("");
     const key = decodeURIComponent(window.location.pathname.split('/')[3]);
     const [ShowPopup, setShowPopup] = useState(false);
+    const [userNickname, setUserNickname] = useState('');
     const instance = axios.create({headers: {
         'Content-Type': 'application/json',
         'access-control-allow-origin': '*',
@@ -32,6 +33,20 @@ function PostWrite(props) {
         e.preventDefault();
         setNickname(e.target.value);
     }
+
+    const getUserNickname = useCallback(
+        async () => {
+            await axios.get(api_url + `/post?userKey=${encodeURIComponent(key)}&page=1&amount=10`)
+            .then(res => {
+                setUserNickname(res.data.user.nickname);
+            })
+        },
+        [key],
+    )
+
+    useEffect(() => {
+        getUserNickname();
+    }, [getUserNickname])
 
     let body = {
         "userkey": key,
@@ -84,7 +99,7 @@ function PostWrite(props) {
             </div>
             <div className='write-page-postbox-div'>
                 <img src={LETTER1} alt="Writing a letter" className='write-page-letter-form-img' />
-                <h4 className='write-page-whosname'>{`Be_Seeyong`} 님에게</h4>
+                <h4 className='write-page-whosname'>{`${userNickname}`} 님에게</h4>
                 <form
                     className='write-page-submit-form'
                     onSubmit={onSubmitHandler}
