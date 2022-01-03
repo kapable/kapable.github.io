@@ -82,6 +82,14 @@ function PostWrite(props) {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
+        if(message === null || message === "" || message === false) {
+            return alert("메시지를 입력해주세요!!")
+        }
+
+        if(nickname === null || nickname === "" || nickname === false) {
+            return alert("닉네임을 입력해주세요!!")
+        }
+
         instance.post(api_url+'/post', body)
         .then(() => {
             setShowPopup(true);

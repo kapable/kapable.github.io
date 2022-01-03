@@ -20,6 +20,7 @@ import LoginPage from './components/TestTypes/Post2021/Users/LoginPage';
 import RegisterPage from './components/TestTypes/Post2021/Users/RegisterPage';
 import Auth from './hoc/auth';
 
+
 class App extends Component {
   constructor(props){
     super(props)
