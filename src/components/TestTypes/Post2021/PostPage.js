@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import MAINTITLE from '../../../api/PostImg/Background/main_title.png';
@@ -119,11 +119,11 @@ function PostPage(props) {
     if (isLogin) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${props.location.state}`;
         return (
-            <>
+            <Fragment>
             {/* <img src={} alt="bg" className='post-page-bg-img' /> */}
             <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
             <div className='post-page-bg-div' style={{'backgroundImage':`url('https://images.ktestone.com/PostImg/Background/background.png')`}} >
-                <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-pate-maintitle' />
+                <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
                 <div className="post-page-postbox-div">
                     <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>
                     <h4 className='post-page-whosname'>{`${userNickname}`} 님의<br></br>POST</h4>
@@ -151,15 +151,15 @@ function PostPage(props) {
                     : null}
             </div>
             <img src={DOWNBAR} alt="DOWNBAR" className="start-page-downbar"/>
-            </>
+            </Fragment>
         )
         //  when user is logout
     } else {
         return (
-            <>
+            <Fragment>
                 <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
-                <div className='post-page-bg-div'>
-                    <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-pate-maintitle' />
+                <div className='post-page-bg-div' style={{'backgroundImage':`url('https://images.ktestone.com/PostImg/Background/background.png')`}}>
+                    <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
                     <div className="post-page-postbox-div">
                         <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>
                         <h4 className='post-page-whosname'>{`${userNickname}`} 님의<br></br>POST</h4>
@@ -183,7 +183,7 @@ function PostPage(props) {
                 <br></br>
             </div>
             <img src={DOWNBAR} alt="DOWNBAR" className="start-page-downbar"/>
-            </>
+            </Fragment>
         )
     }
 }

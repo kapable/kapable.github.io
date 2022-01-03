@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, Fragment } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import axios from 'axios';
 import UPBAR from '../../../api/PostImg/Background/up_bg_bar.png';
@@ -100,48 +100,50 @@ function PostWrite(props) {
     }
 
     return (
-        <div className='write-page-div'>
-            <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
-            <div className='write-page-title-div'>
-                <h3 className='write-page-title'>편지를 보내주세요!</ h3>
+        <Fragment>
+            <div className='write-page-div'>
+                <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
+                <div className='write-page-title-div'>
+                    <h3 className='write-page-title'>편지를 보내주세요!</ h3>
+                </div>
+                <div className='write-page-postbox-div' style={{'backgroundImage':`url('https://images.ktestone.com/PostImg/Background/background.png')`}} >
+                    <img src={LETTER1} alt="Writing a letter" className='write-page-letter-form-img' />
+                    <h4 className='write-page-whosname'>{`${userNickname}`} 님에게</h4>
+                    <form
+                        className='write-page-submit-form'
+                        onSubmit={onSubmitHandler}
+                    >
+                        <textarea
+                            placeholder='마음을 전달하세요(150자 이하)'
+                            autoFocus
+                            cols={29.5}
+                            rows={11}
+                            onChange={onMessageHandler}
+                            maxLength={150}
+                            className='write-page-textarea'
+                        />
+                        <img src={NICKNAMEINPUT} alt="Nickname input" className='write-page-nickname-input-img'/>
+                        <input
+                            placeholder='닉네임을 입력하세요(10자 이하)'
+                            cols={20}
+                            rows={10}
+                            onChange={onNicknameHandler}
+                            maxLength={10}
+                            className='write-page-nickname-input'
+                        />
+                        <button type="submit" className='write-page-submit-btn'>
+                            <img src={SENDMAIL} alt="submit letter" className='write-page-submit-btn-img' />
+                        </button>
+                    </form>
+                </div>
+                <div className="popup-div">
+                    {ShowPopup ? 
+                        completePopup
+                        : null}
+                </div>
+                <img src={DOWNBAR} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
-            <div className='write-page-postbox-div' style={{'backgroundImage':`url('https://images.ktestone.com/PostImg/Background/background.png')`}} >
-                <img src={LETTER1} alt="Writing a letter" className='write-page-letter-form-img' />
-                <h4 className='write-page-whosname'>{`${userNickname}`} 님에게</h4>
-                <form
-                    className='write-page-submit-form'
-                    onSubmit={onSubmitHandler}
-                >
-                    <textarea
-                        placeholder='마음을 전달하세요(150자 이하)'
-                        autoFocus
-                        cols={29.5}
-                        rows={11}
-                        onChange={onMessageHandler}
-                        maxLength={150}
-                        className='write-page-textarea'
-                    />
-                    <img src={NICKNAMEINPUT} alt="Nickname input" className='write-page-nickname-input-img'/>
-                    <input
-                        placeholder='닉네임을 입력하세요(10자 이하)'
-                        cols={20}
-                        rows={10}
-                        onChange={onNicknameHandler}
-                        maxLength={10}
-                        className='write-page-nickname-input'
-                    />
-                    <button type="submit" className='write-page-submit-btn'>
-                        <img src={SENDMAIL} alt="submit letter" className='write-page-submit-btn-img' />
-                    </button>
-                </form>
-            </div>
-            <div className="popup-div">
-                {ShowPopup ? 
-                    completePopup
-                    : null}
-            </div>
-            <img src={DOWNBAR} alt="DOWNBAR" className="start-page-downbar"/>
-        </div>
+        </Fragment>
     )
     
 }
