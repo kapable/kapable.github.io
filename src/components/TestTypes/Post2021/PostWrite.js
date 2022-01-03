@@ -9,7 +9,6 @@ import COMPLETECLOSE from '../../../api/PostImg/Button/complete-close-btn.png';
 import COMPLETE from '../../../api/PostImg/Object/complete_send_mail.png';
 import NICKNAMEINPUT from '../../../api/PostImg/MailForm/nickname-input.png';
 import SENDMAIL from '../../../api/PostImg/Button/direct-send-mail-btn.png';
-import './PostPopup.css';
 
 function PostWrite(props) {
     const api_url = 'https://api.ktestone.com';
@@ -101,12 +100,12 @@ function PostWrite(props) {
 
     return (
         <Fragment>
-            <div className='write-page-div'>
+            <div className='write-page-div' style={{'backgroundImage':`url('https://images.ktestone.com/PostImg/Background/background.png')`}}>
                 <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
                 <div className='write-page-title-div'>
                     <h3 className='write-page-title'>편지를 보내주세요!</ h3>
                 </div>
-                <div className='write-page-postbox-div' style={{'backgroundImage':`url('https://images.ktestone.com/PostImg/Background/background.png')`}} >
+                <div className='write-page-postbox-div' >
                     <img src={LETTER1} alt="Writing a letter" className='write-page-letter-form-img' />
                     <h4 className='write-page-whosname'>{`${userNickname}`} 님에게</h4>
                     <form

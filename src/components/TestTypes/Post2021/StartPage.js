@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import './Post2021.css';
 import POSTBOX from '../../../api/PostImg/Object/Postbox_startpg.png';
 import UPBAR from '../../../api/PostImg/Background/up_bg_bar.png';
 import DOWNBAR from '../../../api/PostImg/Background/down_bg_bar.png';

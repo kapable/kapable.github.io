@@ -4,7 +4,6 @@ import RegisterPage from './RegisterPage';
 import LoginPage from './LoginPage';
 import UPBAR from '../../../../api/PostImg/Background/up_bg_bar.png';
 import DOWNBAR from '../../../../api/PostImg/Background/down_bg_bar.png';
-import '../Post2021.css';
 
 function AuthPage(props) {
     const [mode, setMode] = useState('register');

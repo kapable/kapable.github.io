@@ -18,7 +18,6 @@ import ENVELOP6 from '../../../api/PostImg/Envelop/envelop-6.png';
 import LETTER1 from '../../../api/PostImg/MailForm/letter-1.png';
 import NICKNAMEINPUT from '../../../api/PostImg/MailForm/nickname-input.png';
 import Pagination from "react-js-pagination";
-import './PostPopup.css';
 
 function PostPage(props) {
     

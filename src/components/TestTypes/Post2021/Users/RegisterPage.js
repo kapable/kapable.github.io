@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
-import '../Post2021.css';
 
 function RegisterPage(props) {
     const [nickname, setNickname] = useState("");
