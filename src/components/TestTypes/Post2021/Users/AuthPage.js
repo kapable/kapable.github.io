@@ -1,16 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import RegisterPage from './RegisterPage';
 import LoginPage from './LoginPage';
 import UPBAR from '../../../../api/PostImg/Background/up_bg_bar.png';
 import DOWNBAR from '../../../../api/PostImg/Background/down_bg_bar.png';
 
-function AuthPage(props) {
+function AuthPage() {
     const [mode, setMode] = useState('register');
-
-    useEffect(() => {
-
-    }, [props])
     
 
     if (mode === 'register') {

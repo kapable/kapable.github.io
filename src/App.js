@@ -284,9 +284,9 @@ class App extends Component {
             {/* go to "POST 2021" page */}
             <Route path ='/post2021/' component={() => <POSTSTART />} exact/>
 
-            <Route path='/post2021/:username' component={() => <POSTPOST />} exact/>
+            <Route path='/post2021/:username/' component={() => <POSTPOST />} exact/>
 
-            <Route path='/post2021/:username/postwrite' component={() => <POSTWRITE />} exact/>
+            <Route path='/post2021/:username/postwrite/' component={() => <POSTWRITE />} exact/>
 
             {/* go to "Article list" page */}
             <Route path={`${'/kfunny' || '/kfunny/'}`} component={() => <ArticleList category={'humor'}/>} exact/>
@@ -332,7 +332,7 @@ class App extends Component {
             <Route exact path="/login" component={Auth(LoginPage, false)} />
             <Route exact path="/register" component={Auth(RegisterPage, false)} />
             {/* <Route exact path="/MyPage/:userId" component={Auth(MyPage, true)} /> */}
-            <Route exact path="/auth" component={AuthPage} />
+            <Route exact path={`${"/auth/" || "/auth"}`} component={AuthPage} />
           </Switch>
         </ScrollToTop>
       </Router>
