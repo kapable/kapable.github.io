@@ -425,3 +425,8 @@ ul.pagination li a.active {
   color: white;
   font-weight: bold;
 }
+
+/* etc. */
+.main-header {
+  display: none;
+}

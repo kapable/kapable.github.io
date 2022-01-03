@@ -67,7 +67,7 @@ function PostWrite(props) {
                                         })
                                     }}
                                 />
-                                <Link to={`/post2post/${encodeURIComponent(key)}`} state={localStorage.getItem("access_token")}>
+                                <Link to={`/post2021/${encodeURIComponent(key)}`} state={localStorage.getItem("access_token")}>
                                 <img
                                     src={COMPLETECLOSE}
                                     alt="팝업 닫기"

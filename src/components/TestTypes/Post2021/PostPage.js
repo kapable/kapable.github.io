@@ -131,10 +131,10 @@ function PostPage(props) {
                 <div className='post-page-btn-div'>
                     <img src={SENDMAIL} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
                         props.history.push({
-                            pathname:`/post2post/${props.match.params.username}/postwrite`,
+                            pathname:`/post2021/${props.match.params.username}/postwrite`,
                         })
                     }} />
-                    <CopyToClipboard text={`https://ktestone.com/kapable.github.io/post2post/${props.match.params.username}`}>
+                    <CopyToClipboard text={`https://ktestone.com/kapable.github.io/post2021/${props.match.params.username}`}>
                         <img src={SHAREMYPOST} alt="Share My Post" onClick={onShareBtnClick} className='post-page-share-mypost-btn' />
                     </CopyToClipboard>
                 </div>             
@@ -167,7 +167,7 @@ function PostPage(props) {
                 <div className='post-page-btn-div'>
                     <img src={SENDMAIL} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
                         props.history.push({
-                            pathname:`/post2post/${props.match.params.username}/postwrite`,
+                            pathname:`/post2021/${props.match.params.username}/postwrite`,
                         })
                     }} />
                     <img src={GOTOMYPOST} alt="Go to My Post" onClick={() => {
