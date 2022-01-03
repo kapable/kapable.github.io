@@ -19,6 +19,8 @@ import AuthPage from './components/TestTypes/Post2021/Users/AuthPage';
 import LoginPage from './components/TestTypes/Post2021/Users/LoginPage';
 import RegisterPage from './components/TestTypes/Post2021/Users/RegisterPage';
 import Auth from './hoc/auth';
+import './components/TestTypes/Post2021/Post2021.css';
+import './components/TestTypes/Post2021/PostPopup.css';
 
 
 class App extends Component {
