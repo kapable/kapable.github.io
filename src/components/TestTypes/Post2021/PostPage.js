@@ -120,9 +120,9 @@ function PostPage(props) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${props.location.state}`;
         return (
             <>
-            {/* <img src={'https://images.ktestone.com/PostImg/Background/background.png'} alt="bg" className='post-page-bg-img' /> */}
+            {/* <img src={} alt="bg" className='post-page-bg-img' /> */}
             <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
-            <div className='post-page-bg-div'>
+            <div className='post-page-bg-div' style={{'backgroundImage':`url('https://images.ktestone.com/PostImg/Background/background.png')`}} >
                 <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-pate-maintitle' />
                 <div className="post-page-postbox-div">
                     <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>

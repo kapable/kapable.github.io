@@ -105,7 +105,7 @@ function PostWrite(props) {
             <div className='write-page-title-div'>
                 <h3 className='write-page-title'>편지를 보내주세요!</ h3>
             </div>
-            <div className='write-page-postbox-div'>
+            <div className='write-page-postbox-div' style={{'backgroundImage':`url('https://images.ktestone.com/PostImg/Background/background.png')`}} >
                 <img src={LETTER1} alt="Writing a letter" className='write-page-letter-form-img' />
                 <h4 className='write-page-whosname'>{`${userNickname}`} 님에게</h4>
                 <form

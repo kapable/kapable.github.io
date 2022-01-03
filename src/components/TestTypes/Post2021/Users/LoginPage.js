@@ -43,7 +43,7 @@ function LoginPage(props) {
     };
     
     return (
-        <div className="login-page-bg-div">
+        <div className="login-page-bg-div" style={{'backgroundImage':`url('https://images.ktestone.com/PostImg/Background/background.png')`}}>
             <br></br>
                 <h2 className='send-to-me-title'>나에게 편지를 보내줘!</h2>
                 <div className='register-page-btn-div'>
