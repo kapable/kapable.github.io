@@ -115,7 +115,6 @@ function PostPage(props) {
         // props.history.push({
         //     pathname:`/post2021/${props.match.params.username}/postwrite/`,
         // })
-        props.history.goBack()
     }, [props, getList, ])
     
     // when user is login
