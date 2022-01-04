@@ -284,9 +284,9 @@ class App extends Component {
             {/* go to "POST 2021" page */}
             <Route exact path ='/post2021/' component={() => <POSTSTART />}/>
 
-            <Route path='/post2021/:username/' component={() => <POSTPOST />} />
+            <Route path='/post2021/:username' component={() => <POSTPOST />} />
 
-            <Route path='/post2021/:username/postwrite/' component={() => <POSTWRITE />} />
+            <Route path='/post2021/:username/postwrite' component={() => <POSTWRITE />} />
 
             {/* go to "Article list" page */}
             <Route path={`${'/kfunny' || '/kfunny/'}`} component={() => <ArticleList category={'humor'}/>} exact/>

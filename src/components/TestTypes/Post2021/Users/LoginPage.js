@@ -31,7 +31,7 @@ function LoginPage(props) {
             axios.get(api_url + '/auth/me')
             .then(response => {
                 props.history.push({
-                    pathname:`/post2021/${encodeURIComponent(response.data.key)}/`,
+                    pathname:`/post2021/${encodeURIComponent(response.data.key)}`,
                     state: response.data.accessToken
                 });
             })
