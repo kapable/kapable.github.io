@@ -111,7 +111,11 @@ function PostPage(props) {
 
     useEffect(() => {
         getList(props);
-    
+        console.log(props.history);
+        // props.history.push({
+        //     pathname:`/post2021/${props.match.params.username}/postwrite/`,
+        // })
+        props.history.goBack()
     }, [props, getList, ])
     
     // when user is login
@@ -121,7 +125,7 @@ function PostPage(props) {
             <Fragment>
             {/* <img src={} alt="bg" className='post-page-bg-img' /> */}
             <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
-            <div className='post-page-bg-div' style={{'backgroundImage':`url('https://images.ktestone.com/PostImg/Background/background.png')`}} >
+            <div className='post-page-bg-div' >
                 <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
                 <div className="post-page-postbox-div">
                     <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>
@@ -157,7 +161,7 @@ function PostPage(props) {
         return (
             <Fragment>
                 <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
-                <div className='post-page-bg-div' style={{'backgroundImage':`url('https://images.ktestone.com/PostImg/Background/background.png')`}}>
+                <div className='post-page-bg-div'>
                     <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
                     <div className="post-page-postbox-div">
                         <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>

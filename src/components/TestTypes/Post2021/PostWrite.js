@@ -100,7 +100,7 @@ function PostWrite(props) {
 
     return (
         <Fragment>
-            <div className='write-page-div' style={{'backgroundImage':`url('https://images.ktestone.com/PostImg/Background/background.png')`}}>
+            <div className='write-page-div'>
                 <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
                 <div className='write-page-title-div'>
                     <h3 className='write-page-title'>편지를 보내주세요!</ h3>
