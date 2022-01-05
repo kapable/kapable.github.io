@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import MAINHEADER from '../../api/DefaultImg/main-header.png';
 import OhterLangIconsMain from '../SubComponents/OhterLangIconsMain';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
@@ -55,4 +55,4 @@ class MainPage extends Component{
     }
 }
 
-export default MainPage;
+export default withRouter(MainPage);
