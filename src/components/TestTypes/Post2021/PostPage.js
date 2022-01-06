@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect, useCallback, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import styled from 'styled-components';
 import MAINTITLE from '../../../api/PostImg/Background/main_title.png';
 import UPBAR from '../../../api/PostImg/Background/up_bg_bar.png';
 import DOWNBAR from '../../../api/PostImg/Background/down_bg_bar.png';
@@ -31,6 +32,17 @@ function PostPage(props) {
     const mailOrder = [ENVELOP1, ENVELOP2, ENVELOP3, ENVELOP4, ENVELOP5, ENVELOP6, ENVELOP1, ENVELOP2, ENVELOP3, ENVELOP4];
     const api_url = 'https://api.ktestone.com';
     const [ShowPopup, setShowPopup] = useState(false);
+
+    const PageBackground = styled.div` 
+        background-image: url("../../../api/PostImg/Background/background.png"),
+        url("https://images.ktestone.com/PostImg/Background/background.png");
+        justify-content: center;
+        align-items: center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    `
 
     const onShareBtnClick = () => {
         alert("링크가 복사됐어요!");
@@ -124,7 +136,7 @@ function PostPage(props) {
             <Fragment>
             {/* <img src={} alt="bg" className='post-page-bg-img' /> */}
             <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
-            <div className='post-page-bg-div' >
+            <PageBackground className='post-page-bg-div' >
                 <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
                 <div className="post-page-postbox-div">
                     <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>
@@ -146,7 +158,7 @@ function PostPage(props) {
                 </div>
                 {pageRenderer(page, mailCount)}
                 <br></br>
-            </div>
+            </PageBackground>
             <div className="popup-div">
                 {ShowPopup ? 
                     eachMail
