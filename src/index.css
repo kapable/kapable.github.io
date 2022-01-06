@@ -19,7 +19,7 @@ body {
 
 /* main start */
 
-/* .main-header {
+.main-header {
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -27,7 +27,7 @@ body {
   max-width: 450px;
   height: auto;
   margin-bottom: 1rem;
-} */
+}
 
 .main-link-div {
   margin: 0 auto;

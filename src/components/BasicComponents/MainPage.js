@@ -7,27 +7,13 @@ import JELLINGBANNERENG from '../../api/DefaultImg/go-to-jelling-eng.png';
 import ARTICLEBANNER from '../../api/DefaultImg/Ktest-funny.png';
 import '../TestTypes/Post2021/Post2021.css';
 import '../TestTypes/Post2021/PostPopup.css';
-import styled from 'styled-components';
 
 function MainPage(props) {
-    const MainHeader = styled.img`
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 450px;
-        height: auto;
-        margin-bottom: 1rem;
-        ${() => {
-            console.log(window.location.pathname);
-            return window.location.pathname.split('/').includes('post2021') ? `display:none` : null;
-        }}
-    `
 
     return (
         <Fragment>
             <div>
-                <MainHeader className='main-header' src={MAINHEADER} alt="K-test"/>
+                <img className='main-header' src={MAINHEADER} alt="K-test"/>
             </div>
             <OhterLangIconsMain />
             {/* Go to Jelling Games Banner */}

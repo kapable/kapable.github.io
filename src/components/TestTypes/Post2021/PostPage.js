@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect, useCallback } from 'react';
 import { withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import MAINTITLE from '../../../api/PostImg/Background/main_title.png';
 import UPBAR from '../../../api/PostImg/Background/up_bg_bar.png';
 import DOWNBAR from '../../../api/PostImg/Background/down_bg_bar.png';
@@ -41,6 +41,12 @@ function PostPage(props) {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+    `
+
+    const GlobalStyle = createGlobalStyle`
+        .main-header {
+            display: none;
+        }
     `
 
     const onShareBtnClick = () => {
@@ -132,43 +138,45 @@ function PostPage(props) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${props.location.state}`;
         return (
             <div className='post-page'>
-            {/* <img src={} alt="bg" className='post-page-bg-img' /> */}
-            <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
-            <PageBackground className='post-page-bg-div' >
-                <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
-                <div className="post-page-postbox-div">
-                    <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>
-                    <h4 className='post-page-whosname'>{`${userNickname}`} 님의<br></br>POST</h4>
+                <GlobalStyle />
+                {/* <img src={} alt="bg" className='post-page-bg-img' /> */}
+                <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
+                <PageBackground className='post-page-bg-div' >
+                    <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
+                    <div className="post-page-postbox-div">
+                        <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>
+                        <h4 className='post-page-whosname'>{`${userNickname}`} 님의<br></br>POST</h4>
+                    </div>
+                    <div className='post-page-btn-div'>
+                        <img src={SENDMAIL} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
+                            props.history.push({
+                                pathname:`/post2021/${props.match.params.username}/postwrite/`,
+                            })
+                        }} />
+                        <CopyToClipboard text={`https://ktestone.com/kapable.github.io/post2021/${props.match.params.username}/`}>
+                            <img src={SHAREMYPOST} alt="Share My Post" onClick={onShareBtnClick} className='post-page-share-mypost-btn' />
+                        </CopyToClipboard>
+                    </div>             
+                    {/* <button className='post-page-logout-btn' onClick={logoutHandler}></button> */}
+                    <div className='post-page-mails-div'>
+                        {mailRenderer(mailList, page, isLogin)}
+                    </div>
+                    {pageRenderer(page, mailCount)}
+                    <br></br>
+                </PageBackground>
+                <div className="popup-div">
+                    {ShowPopup ? 
+                        eachMail
+                        : null}
                 </div>
-                <div className='post-page-btn-div'>
-                    <img src={SENDMAIL} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
-                        props.history.push({
-                            pathname:`/post2021/${props.match.params.username}/postwrite/`,
-                        })
-                    }} />
-                    <CopyToClipboard text={`https://ktestone.com/kapable.github.io/post2021/${props.match.params.username}/`}>
-                        <img src={SHAREMYPOST} alt="Share My Post" onClick={onShareBtnClick} className='post-page-share-mypost-btn' />
-                    </CopyToClipboard>
-                </div>             
-                {/* <button className='post-page-logout-btn' onClick={logoutHandler}></button> */}
-                <div className='post-page-mails-div'>
-                    {mailRenderer(mailList, page, isLogin)}
-                </div>
-                {pageRenderer(page, mailCount)}
-                <br></br>
-            </PageBackground>
-            <div className="popup-div">
-                {ShowPopup ? 
-                    eachMail
-                    : null}
-            </div>
-            <img src={DOWNBAR} alt="DOWNBAR" className="start-page-downbar"/>
+                <img src={DOWNBAR} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
         )
         //  when user is logout
     } else {
         return (
             <div className='post-page'>
+                <GlobalStyle />
                 <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
                 <div className='post-page-bg-div'>
                     <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
