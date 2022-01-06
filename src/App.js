@@ -235,9 +235,9 @@ class App extends Component {
         <ScrollToTop>
           <Switch>
             {/* go to "POST 2021" page */}
-            <Route path='/post2021/:username/postwrite/' component={() => <POSTWRITE />} />
-            <Route path='/post2021/:username/' component={() => <POSTPOST />} />
-            <Route path ='/post2021/' component={() => <POSTSTART />}/>
+            <Route path='/post2021/:username/postwrite/' component={POSTWRITE} />
+            <Route path='/post2021/:username/' component={POSTPOST} />
+            <Route path ='/post2021/' component={POSTSTART}/>
 
             {/* "Main" page */}
             <Route path='/' exact>

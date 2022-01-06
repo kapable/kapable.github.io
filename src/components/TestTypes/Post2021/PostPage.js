@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState, useEffect, useCallback, Fragment } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import styled from 'styled-components';
@@ -122,7 +122,6 @@ function PostPage(props) {
 
     useEffect(() => {
         getList(props);
-        console.log(props.history);
         // props.history.push({
         //     pathname:`/post2021/${props.match.params.username}/postwrite/`,
         // })
@@ -132,12 +131,9 @@ function PostPage(props) {
     if (isLogin) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${props.location.state}`;
         return (
-            <div>
+            <div className='post-page'>
             {/* <img src={} alt="bg" className='post-page-bg-img' /> */}
             <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
-            <div className='divdiv'>
-            <img src="https://images.ktestone.com/PostImg/Background/background.png" alt="back" />
-            </div>
             <PageBackground className='post-page-bg-div' >
                 <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
                 <div className="post-page-postbox-div">
@@ -172,7 +168,7 @@ function PostPage(props) {
         //  when user is logout
     } else {
         return (
-            <Fragment>
+            <div className='post-page'>
                 <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
                 <div className='post-page-bg-div'>
                     <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
@@ -199,7 +195,7 @@ function PostPage(props) {
                 <br></br>
             </div>
             <img src={DOWNBAR} alt="DOWNBAR" className="start-page-downbar"/>
-            </Fragment>
+            </div>
         )
     }
 }
