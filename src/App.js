@@ -234,6 +234,11 @@ class App extends Component {
       <Router basename='/kapable.github.io/'>
         <ScrollToTop>
           <Switch>
+            {/* go to "POST 2021" page */}
+            <Route path='/post2021/:username/postwrite/' component={() => <POSTWRITE />} />
+            <Route path='/post2021/:username/' component={() => <POSTPOST />} />
+            <Route path ='/post2021/' component={() => <POSTSTART />}/>
+
             {/* "Main" page */}
             <Route path='/' exact>
                 {/* meta tag form for all main page */}
@@ -280,11 +285,6 @@ class App extends Component {
                 component={Result}
                 key={item[1]+'_'+item[0]} exact/>
             ))}
-
-            {/* go to "POST 2021" page */}
-            <Route path='/post2021/:username/postwrite/' component={() => <POSTWRITE />} />
-            <Route path='/post2021/:username/' component={() => <POSTPOST />} />
-            <Route path ='/post2021/' component={() => <POSTSTART />}/>
 
             {/* go to "Article list" page */}
             <Route path={`${'/kfunny' || '/kfunny/'}`} component={() => <ArticleList category={'humor'}/>} exact/>

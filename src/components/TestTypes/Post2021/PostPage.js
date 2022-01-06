@@ -34,8 +34,7 @@ function PostPage(props) {
     const [ShowPopup, setShowPopup] = useState(false);
 
     const PageBackground = styled.div` 
-        background-image: url("../../../api/PostImg/Background/background.png"),
-        url("https://images.ktestone.com/PostImg/Background/background.png");
+        background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
         justify-content: center;
         align-items: center;
         -webkit-background-size: cover;
@@ -133,9 +132,12 @@ function PostPage(props) {
     if (isLogin) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${props.location.state}`;
         return (
-            <Fragment>
+            <div>
             {/* <img src={} alt="bg" className='post-page-bg-img' /> */}
             <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
+            <div className='divdiv'>
+            <img src="https://images.ktestone.com/PostImg/Background/background.png" alt="back" />
+            </div>
             <PageBackground className='post-page-bg-div' >
                 <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
                 <div className="post-page-postbox-div">
@@ -165,7 +167,7 @@ function PostPage(props) {
                     : null}
             </div>
             <img src={DOWNBAR} alt="DOWNBAR" className="start-page-downbar"/>
-            </Fragment>
+            </div>
         )
         //  when user is logout
     } else {
