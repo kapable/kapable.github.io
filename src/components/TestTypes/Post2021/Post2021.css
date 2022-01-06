@@ -156,7 +156,7 @@
 }
 
 /* Post Page (Log In) */
-/* .post-page-bg-div {
+.post-page-bg-div {
   background-image: url("../../../api/PostImg/Background/background.png"),
     url("https://images.ktestone.com/PostImg/Background/background.png");
   justify-content: center;
@@ -165,7 +165,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-} */
+}
 /* @media (max-width: 450px) {
   .post-page-bg-img {
     position: absolute;
