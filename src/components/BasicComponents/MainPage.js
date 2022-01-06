@@ -10,7 +10,6 @@ import '../TestTypes/Post2021/PostPopup.css';
 import styled from 'styled-components';
 
 function MainPage(props) {
-    
     const MainHeader = styled.img`
         display: flex;
         justify-content: center;
@@ -20,6 +19,7 @@ function MainPage(props) {
         height: auto;
         margin-bottom: 1rem;
         ${() => {
+            console.log(window.location.pathname);
             return window.location.pathname.split('/').includes('post2021') ? `display:none` : null;
         }}
     `
