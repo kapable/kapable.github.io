@@ -124,15 +124,13 @@ function PostPage(props) {
     }
 
     useEffect(() => {
-        getList(props);
-        // props.history.push({
-        //     pathname:`/post2021/${props.match.params.username}/postwrite/`,
-        // })
-    }, [props, getList, ])
+        setIsLogin(props.location.state === localStorage.getItem("access_token"));
+        getList();
+    }, [getList,])
     
     // when user is login
     if (isLogin) {
-        axios.defaults.headers.common['Authorization'] = `Bearer ${props.location.state}`;
+        axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("access_token")}`;
         return (
             <div className='post-page'>
                 <GlobalStyle />
@@ -188,9 +186,20 @@ function PostPage(props) {
                         })
                     }} />
                     <img src={GOTOMYPOST} alt="Go to My Post" onClick={() => {
-                        props.history.push({
-                            pathname:`/auth/`,
-                        })
+                        if(localStorage.getItem("access_token")) {
+                            axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("access_token")}`;
+                            axios.get(api_url + `/auth/me`)
+                            .then(res => {
+                                props.history.push({
+                                    pathname:`/post2021/${encodeURIComponent(res.data.key)}`,
+                                    state: localStorage.getItem("access_token")
+                                });
+                            })
+                        } else {
+                            props.history.push({
+                                pathname:`/auth/`,
+                            })
+                        }
                     }} className='post-page-goto-mypost-btn' />
                 </div>
                 <div className='post-page-mails-div'>
