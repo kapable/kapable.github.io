@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Dongle:wght@300&family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@300&display=swap");
+
+:root {
+  --font-color: black;
+  --post-font: "Dongle", sans-serif;
+}
+
 /* Start Page */
 .start-page-bg-div {
   background-image: url("../../../api/PostImg/Background/background.png"),
@@ -275,33 +282,51 @@
   width: 20rem;
 }
 
+@media (max-width: 330px) {
+  .write-page-letter-form-img {
+    width: 15rem;
+  }
+  .write-page-nickname-input-img {
+    width: 50%;
+  }
+}
+
 .write-page-whosname {
+  font-family: var(--post-font);
+  font-size: 1.5rem;
   position: absolute;
-  top: -2.2%;
+  top: -5.2%;
   left: 47.5%;
   transform: translate(-50%, -50%);
 }
 
 .write-page-submit-form {
   position: absolute;
-  top: 40%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .write-page-textarea {
+  font-family: var(--post-font);
+  font-size: 1rem;
+  background-color: #f4f4f4;
   border-width: 0;
+  height: 10.5rem;
+  width: 16rem;
   display: block;
   resize: none;
 }
 
 .write-page-nickname-input {
+  font-family: var(--post-font);
+  font-size: 1rem;
   border-width: 0;
   display: block;
   width: 11rem;
   background-color: #f6afb7;
   position: absolute;
-  top: 127%;
+  top: 120%;
   left: 60%;
   transform: translate(-50%, -50%);
 }
@@ -313,7 +338,7 @@
 .write-page-nickname-input-img {
   width: 13rem;
   position: absolute;
-  top: 127%;
+  top: 120%;
   left: 60%;
   transform: translate(-50%, -50%);
 }

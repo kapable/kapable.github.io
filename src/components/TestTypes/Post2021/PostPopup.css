@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Dongle:wght@300&family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@300&display=swap");
+
+:root {
+  --font-color: black;
+  --post-font: "Dongle", sans-serif;
+}
+
 .popup {
   position: fixed;
   width: 100%;
@@ -11,17 +18,17 @@
 }
 
 .popup-letter-form {
-  width: 80%;
+  width: 20rem;
 }
 
 .popup-inner {
   position: relative;
   left: 0%;
-  right: 15%;
-  top: 15%;
-  bottom: 15%;
+  /* right: 3rem; */
+  top: 7rem;
+  bottom: 3rem;
   margin: auto;
-  width: 90%;
+  width: 23rem;
 }
 
 .popup-letter-form {
@@ -29,63 +36,70 @@
   top: 15rem;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
+  width: 20rem;
 }
 
 @media (min-width: 768px) {
   .popup-letter-form {
     position: absolute;
-    top: 25rem;
+    top: 15rem;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 20rem;
   }
 }
 
 @media (min-width: 1024px) {
   .popup-letter-form {
     position: absolute;
-    top: 25rem;
+    top: 15rem;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
+    width: 20rem;
   }
 }
 
 .popup-message {
   z-index: 1;
   position: absolute;
-  top: -550%;
+  top: -2rem;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 15rem auto 1rem;
-  width: 13rem;
-  background: white;
+  width: 14.7rem;
+  height: 12rem;
+  background-color: #f4f4f4;
+  text-align: left;
+  font-family: var(--post-font);
+  font-size: 1.5rem;
 }
 
 .popup-fromNickname {
   z-index: 1;
   position: absolute;
-  top: 1660%;
+  top: 20.5rem;
   left: 60%;
   transform: translate(-50%, -50%);
   width: 13rem;
+  font-family: var(--post-font);
+  font-size: 1.5rem;
 }
 
 .popup-nickname-input {
   width: 13rem;
   position: absolute;
-  top: 1750%;
+  top: 22rem;
   left: 60%;
   transform: translate(-50%, -50%);
 }
 
 .popup-head {
+  font-family: var(--post-font);
+  font-size: 1.5rem;
   position: absolute;
-  top: -740%;
+  top: 3.4rem;
   left: 30%;
   transform: translate(-50%, -50%);
-  margin: 15rem auto 1rem;
 }
 
 .popup-close-btn {

@@ -3,9 +3,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import styled, { createGlobalStyle } from 'styled-components';
-import MAINTITLE from '../../../api/PostImg/Background/main_title.png';
-import UPBAR from '../../../api/PostImg/Background/up_bg_bar.png';
-import DOWNBAR from '../../../api/PostImg/Background/down_bg_bar.png';
 import POSTBOX from '../../../api/PostImg/Object/Postbox.png';
 import GOTOMYPOST from '../../../api/PostImg/Button/go-to-mypost-btn.png';
 import SENDMAIL from '../../../api/PostImg/Button/send-mail-btn.png';
@@ -140,9 +137,9 @@ function PostPage(props) {
             <div className='post-page'>
                 <GlobalStyle />
                 {/* <img src={} alt="bg" className='post-page-bg-img' /> */}
-                <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
+                <img src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
                 <PageBackground className='post-page-bg-div' >
-                    <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
+                    <img src={"https://images.ktestone.com/PostImg/Background/main_title.png"} alt="당신에게 나는 어떤 사람인가요?" className='post-page-maintitle' />
                     <div className="post-page-postbox-div">
                         <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>
                         <h4 className='post-page-whosname'>{`${userNickname}`} 님의<br></br>POST</h4>
@@ -169,7 +166,7 @@ function PostPage(props) {
                         eachMail
                         : null}
                 </div>
-                <img src={DOWNBAR} alt="DOWNBAR" className="start-page-downbar"/>
+                <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
         )
         //  when user is logout
@@ -177,9 +174,9 @@ function PostPage(props) {
         return (
             <div className='post-page'>
                 <GlobalStyle />
-                <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
+                <img src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
                 <div className='post-page-bg-div'>
-                    <img src={MAINTITLE} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
+                    <img src={"https://images.ktestone.com/PostImg/Background/main_title.png"} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
                     <div className="post-page-postbox-div">
                         <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>
                         <h4 className='post-page-whosname'>{`${userNickname}`} 님의<br></br>POST</h4>
@@ -202,7 +199,7 @@ function PostPage(props) {
                 {pageRenderer(page, mailCount)}
                 <br></br>
             </div>
-            <img src={DOWNBAR} alt="DOWNBAR" className="start-page-downbar"/>
+            <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
         )
     }

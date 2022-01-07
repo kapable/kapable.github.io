@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useCallback, Fragment } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import axios from 'axios';
-import UPBAR from '../../../api/PostImg/Background/up_bg_bar.png';
-import DOWNBAR from '../../../api/PostImg/Background/down_bg_bar.png';
 import LETTER1 from '../../../api/PostImg/MailForm/letter-1.png';
 import COMPLETETOPOST from '../../../api/PostImg/Button/complete-to-postbox-btn.png';
 import COMPLETECLOSE from '../../../api/PostImg/Button/complete-close-btn.png';
@@ -101,7 +99,7 @@ function PostWrite(props) {
     return (
         <Fragment>
             <div className='write-page-div'>
-                <img src={UPBAR} alt="UPBAR" className="start-page-upbar"/>
+                <img src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
                 <div className='write-page-title-div'>
                     <h3 className='write-page-title'>편지를 보내주세요!</ h3>
                 </div>
@@ -115,7 +113,7 @@ function PostWrite(props) {
                         <textarea
                             placeholder='마음을 전달하세요(150자 이하)'
                             autoFocus
-                            cols={29.5}
+                            cols={30.5}
                             rows={11}
                             onChange={onMessageHandler}
                             maxLength={150}
@@ -140,7 +138,7 @@ function PostWrite(props) {
                         completePopup
                         : null}
                 </div>
-                <img src={DOWNBAR} alt="DOWNBAR" className="start-page-downbar"/>
+                <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
         </Fragment>
     )
