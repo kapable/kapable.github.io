@@ -51,12 +51,12 @@ var TESTS = [
                     },
                     {
                         type: "포메라니안",
-                        score: 0,
+                        score: 1,
                         content: '당연히 모든 치킨은 옳다'
                     },
                     {
                         type: "치와와",
-                        score: 1,
+                        score: 0,
                         content: '당근은 모두 치워버려'
                     },
                 ],
@@ -72,12 +72,12 @@ var TESTS = [
                     },
                     {
                         type: "웰시코기",
-                        score: 0,
+                        score: 1,
                         content: "찐텐"
                     },
                     {
                         type: "포메라니안",
-                        score: 1,
+                        score: 0,
                         content: "썬텐"
                     },
                     {
@@ -150,12 +150,12 @@ var TESTS = [
                     },
                     {
                         type: "웰시코기",
-                        score: 0,
+                        score: 1,
                         content: "닝바닝"
                     },
                     {
                         type: "리트리버",
-                        score: 1,
+                        score: 0,
                         content: '케바케'
                     },
                     {
@@ -176,7 +176,7 @@ var TESTS = [
                     },
                     {
                         type: "비글",
-                        score: 1,
+                        score: 0,
                         content: "실어증"
                     },
                     {
@@ -186,7 +186,7 @@ var TESTS = [
                     },
                     {
                         type: "비글",
-                        score: 0,
+                        score: 1,
                         content: "스라벨"
                     },
                 ],
@@ -207,7 +207,7 @@ var TESTS = [
                     },
                     {
                         type: "비글",
-                        score: 1,
+                        score: 0,
                         content: "희미해진 연기 사이로"
                     },
                     {
@@ -228,7 +228,7 @@ var TESTS = [
                     },
                     {
                         type: "리트리버",
-                        score: 1,
+                        score: 0,
                         content: "니곧내"
                     },
                     {
@@ -249,7 +249,7 @@ var TESTS = [
                 answers:[
                     {
                         type: "치와와",
-                        score: 0,
+                        score: 1,
                         content: "동생이 화나게 했을 때"
                     },
                     {
@@ -264,7 +264,7 @@ var TESTS = [
                     },
                     {
                         type: "리트리버",
-                        score: 1,
+                        score: 0,
                         content: "친구가 취뽀했을때"
                     },
                 ],
@@ -275,7 +275,7 @@ var TESTS = [
                 answers:[
                     {
                         type: "치와와",
-                        score: 0,
+                        score: 1,
                         content: "제가 당신을 꼭 슈퍼스타로 만들어 드릴게요."
                     },
                     {
@@ -285,7 +285,7 @@ var TESTS = [
                     },
                     {
                         type: "치와와",
-                        score: 1,
+                        score: 0,
                         content: "제가 당신과 슈퍼에서 만나도 될까요?"
                     },
                     {
@@ -332,12 +332,12 @@ var TESTS = [
                     },
                     {
                         type: "리트리버",
-                        score: 0,
+                        score: 1,
                         content: "안물안궁~ 안물티비~안궁티비~뇌절티비~"
                     },
                     {
                         type: "치와와",
-                        score: 1,
+                        score: 0,
                         content: "한심하게 쳐다본뒤 한숨을 쉬며 고개를 절레 흔든다."
                     },
                     {

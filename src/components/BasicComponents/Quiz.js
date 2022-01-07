@@ -65,6 +65,7 @@ class Quiz extends Component {
                         variant="outline-dark" 
                         size="lg"
                         className="option-btn"
+                        style={{'color':'black'}}
                     >{qAndA.answers[i].content}</button>)
             // when the type is each type counting
             } else if (this.props.scoreType === "typeCounting"){
@@ -86,6 +87,7 @@ class Quiz extends Component {
                         variant="outline-dark" 
                         size="lg"
                         className="option-btn"
+                        style={{'color':'black'}}
                     >{qAndA.answers[i].content}</button>)
             } else if (this.props.scoreType === "typeCountingMBTI"){
                 _questions.push(
@@ -106,6 +108,7 @@ class Quiz extends Component {
                         // variant="outline-dark" 
                         size="lg"
                         className="option-btn"
+                        style={{'color':'black'}}
                     >{qAndA.answers[i].content}</button>)
             } 
             i = i + 1;
