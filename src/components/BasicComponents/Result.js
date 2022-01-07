@@ -374,7 +374,6 @@ class Result extends Component {
         }
 
         // return final result option
-        // in case of storyTelling Type Quiz
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
             let ppl_list = ['personalTaro', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP']
@@ -622,12 +621,23 @@ class Result extends Component {
         } else {
             // if there are not description text === only result img
             if(final_desc === ``){
-                return (
-                    <Fragment>
-                        <img src={img_src} className='result-img' alt={final_type} />
-                    </Fragment>
-
-                )
+                // include sinjoer2022 test only image
+                if(window.location.href.includes('sinjoer2022')){
+                    return (
+                        <Fragment>
+                            <img src={img_src} className='result-img' alt={final_type} />
+                            <img src={'https://images.ktestone.com/resultImages/sinjoer2022/sinjoer2022-wrong.png'} className='result-img' alt={final_type} />
+                        </Fragment>
+    
+                    )
+                } else {
+                    return (
+                        <Fragment>
+                            <img src={img_src} className='result-img' alt={final_type} />
+                        </Fragment>
+    
+                    )
+                }
             } else {
                 return (
                     <Fragment>

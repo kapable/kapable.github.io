@@ -23,6 +23,363 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // sinjoer2022
+    {
+        info : {
+            mainTitle:"2022 신조어 테스트",
+            subTitle:"과연 나는 얼마나 많이 알고 있을까? 2022 신조어 테스트",
+            mainUrl:"sinjoer2022",
+            scoreType:"numberScoringImg",
+            mainImage:"https://images.ktestone.com/introImages/sinjoer2022-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/sinjoer2022-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                question: `다음 중 '당모치'의 뜻으로 옳은 것은?`,
+                answers:[
+                    {
+                        type: "포메라니안",
+                        score: 0,
+                        content: '당당한 모습의 치와와'
+                    },
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: '당연히 모이면 치킨이지'
+                    },
+                    {
+                        type: "포메라니안",
+                        score: 0,
+                        content: '당연히 모든 치킨은 옳다'
+                    },
+                    {
+                        type: "치와와",
+                        score: 1,
+                        content: '당근은 모두 치워버려'
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: `다음 중 '억텐'의 반댓말은?`,
+                answers:[
+                    {
+                        type: "포메라니안",
+                        score: 0,
+                        content: "텐텐"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 0,
+                        content: "찐텐"
+                    },
+                    {
+                        type: "포메라니안",
+                        score: 1,
+                        content: "썬텐"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 0,
+                        content: "빡텐"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: `다음 중 갑통알의 뜻으로 옳은 것은?`,
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: "갑자기 통증이 알통에"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 1,
+                        content: "갑자기 통장을 보니 알바를 해야 할 것 같다"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 0,
+                        content: "갑오징어 통째로 먹으면 알라뷰"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 0,
+                        content: "갑자기 통통한 알이 가득한 알탕을 먹고싶다"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: `‘너또다’의 의미로 옳은 것은?`,
+                answers:[
+                    {
+                        type: "비글",
+                        score: 0,
+                        content: "너 또라이다."
+                    },
+                    {
+                        type: "리트리버",
+                        score: 1,
+                        content: "너 또라이라 다행이다."
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "너 또라이인건 다 알고 있지."
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "너 또라이 맞는데..다른 의견 있니?"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: `다음 중 들어갈 2022신조어로 알맞은 것은?\n"야 그건 000(이)야 아무도 모르는 거야"`,
+                answers:[
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: '사바사'
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 0,
+                        content: "닝바닝"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 1,
+                        content: '케바케'
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 0,
+                        content: "너또다"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: "다음 중 의미가 다른 하나를 고르시오.",
+                answers:[
+                    {
+                        type: "포메라니안",
+                        score: 0,
+                        content: "상사병"
+                    },
+                    {
+                        type: "비글",
+                        score: 1,
+                        content: "실어증"
+                    },
+                    {
+                        type: "포메라니안",
+                        score: 0,
+                        content: "알잘딱깔센"
+                    },
+                    {
+                        type: "비글",
+                        score: 0,
+                        content: "스라벨"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: "다음 중 '희연사'의 해석으로 맞는 것은?",
+                answers:[
+                    {
+                        type: "비글",
+                        score: 0,
+                        content: "희연아 사랑해"
+                    },
+                    {
+                        type: "웰시코기",
+                        score: 0,
+                        content: "희망가득한 연말보내! 사랑해!"
+                    },
+                    {
+                        type: "비글",
+                        score: 1,
+                        content: "희미해진 연기 사이로"
+                    },
+                    {
+                        type: "비글",
+                        score: 1,
+                        content: "희귀 연예인 사진"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: `'제곧네'와 같은 뜻을 가진 신조어는?`,
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: "냉무"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 1,
+                        content: "니곧내"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "완내스"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "쟤같네"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: `다음중 '법블레스'의 상황으로 맞는 것은?`,
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: "동생이 화나게 했을 때"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "누군가 재채기를 했을 때"
+                    },
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: "노블리스 오블리제를 실천할 때"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 1,
+                        content: "친구가 취뽀했을때"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: "다음 중 '제당슈만'의 의미로 옳은 것은?",
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: "제가 당신을 꼭 슈퍼스타로 만들어 드릴게요."
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "제일 제당 슈가 만세"
+                    },
+                    {
+                        type: "치와와",
+                        score: 1,
+                        content: "제가 당신과 슈퍼에서 만나도 될까요?"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "제빵은 당연히 슈크림빵! 만들어볼까?"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: `다음 중 '스불재'의 뜻으로 옳은 것은?`,
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: "스스로 불고기 재료를 준비한다"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "스르륵 불러보는 재밌는 노래"
+                    },
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: "스님 불교 재밌나요?"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 1,
+                        content: "스스로 불러온 재앙"
+                    },
+                ],
+                questionImage:'',
+            },
+            {
+                question: "어쩔티비를 이기는 방법 중 알맞은 것은?",
+                answers:[
+                    {
+                        type: "치와와",
+                        score: 0,
+                        content: "듣기 싫다며 소리를 지른다"
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "안물안궁~ 안물티비~안궁티비~뇌절티비~"
+                    },
+                    {
+                        type: "치와와",
+                        score: 1,
+                        content: "한심하게 쳐다본뒤 한숨을 쉬며 고개를 절레 흔든다."
+                    },
+                    {
+                        type: "리트리버",
+                        score: 0,
+                        content: "킹정하는 부분이다."
+                    },
+                ],
+                questionImage:'',
+            },
+        ],
+        results:[
+            {
+                type: "15%",
+                desc: ``,
+                query: "dPttkfka",
+                score_range:range(3),
+                img_src:'https://images.ktestone.com/resultImages/sinjoer2022/sinjoer2022-15.png'
+            },
+            {
+                type: "55%",
+                desc: ``,
+                query: "snsxldfj",
+                score_range:range(3, 7),
+                img_src:'https://images.ktestone.com/resultImages/sinjoer2022/sinjoer2022-55.png'
+            },
+            {
+                type: "85%",
+                desc: ``,
+                query: "tpalxmfpsej",
+                score_range:range(7, 11),
+                img_src:'https://images.ktestone.com/resultImages/sinjoer2022/sinjoer2022-85.png'
+            },
+            {
+                type: "98%",
+                desc: ``,
+                query: "dlsrksxmfpsej",
+                score_range:range(11, 13),
+                img_src:'https://images.ktestone.com/resultImages/sinjoer2022/sinjoer2022-98.png'
+            },
+        ]
+    },
     // lovejewerlyEng
     {
         info : {
