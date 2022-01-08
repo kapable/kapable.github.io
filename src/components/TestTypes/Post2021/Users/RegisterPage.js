@@ -9,10 +9,6 @@ function RegisterPage(props) {
     const [confirmPassword, setConfirmPassword] = useState("");
     const api_url = 'https://api.ktestone.com';
 
-    const instance = axios.create({headers: {
-        'Content-Type': 'application/json',
-    },})
-
     function onNicknameHandler(e) {
         e.preventDefault();
         setNickname(e.target.value);
@@ -54,13 +50,17 @@ function RegisterPage(props) {
             "nickname": nickname
         }
 
-        await instance.post(api_url+`/auth/join`, body)
+        await axios.post(api_url+`/auth/join`, body)
         .then(() => {
             alert("회원가입에 성공했습니다!!!");
             props.setMode("login");
         })
-        .catch(() => {
-            alert("회원가입에 실패했습니다 ㅠㅠ")
+        .catch((err) => {
+            if(err.response.data.errors[0].type === `unique violation`) {
+                alert('이미 존재하는 아이디예요 ㅠㅠ');
+            } else {
+                alert("회원가입에 실패했습니다 ㅠㅠ");;
+            }
         })
 
     }
