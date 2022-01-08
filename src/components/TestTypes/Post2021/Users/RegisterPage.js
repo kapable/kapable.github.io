@@ -69,8 +69,8 @@ function RegisterPage(props) {
             <br></br>
             <h2 className='send-to-me-title'>나에게 편지를 보내줘!</h2>
                 <div className='register-page-btn-div'>
-                    <button className="register-page-rgbtn">회원가입</button>
-                    <button onClick={() => {props.setMode("login")}} className="register-page-loginbtn">로그인</button>
+                    <button className="register-page-rgbtn" style={{'color':'black'}}>회원가입</button>
+                    <button onClick={() => {props.setMode("login")}} className="register-page-loginbtn" style={{'color':'black'}}>로그인</button>
                 </div>
                 <form
                     className='register-submit-form'

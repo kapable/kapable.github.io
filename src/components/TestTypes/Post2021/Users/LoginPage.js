@@ -47,8 +47,8 @@ function LoginPage(props) {
                 <br></br>
                     <h2 className='send-to-me-title'>나에게 편지를 보내줘!</h2>
                     <div className='register-page-btn-div'>
-                        <button onClick={() => {props.setMode("register")}} className="login-page-rgbtn">회원가입</button>
-                        <button onClick={() => {props.setMode("login")}} className="login-page-loginbtn">로그인</button>
+                        <button onClick={() => {props.setMode("register")}} className="login-page-rgbtn" style={{'color':'black'}}>회원가입</button>
+                        <button onClick={() => {props.setMode("login")}} className="login-page-loginbtn" style={{'color':'black'}}>로그인</button>
                     </div>
                     
                     <form
