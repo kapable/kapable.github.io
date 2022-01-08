@@ -204,6 +204,12 @@ function PostPage(props) {
                                     state: localStorage.getItem("access_token")
                                 });
                             })
+                            .catch(() => {
+                                alert('로그인이 만료 되었습니다!!')
+                                props.history.push({
+                                    pathname:`/auth/`,
+                                })
+                            })
                         } else {
                             props.history.push({
                                 pathname:`/auth/`,
