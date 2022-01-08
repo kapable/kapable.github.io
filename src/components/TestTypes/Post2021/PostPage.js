@@ -135,7 +135,7 @@ function PostPage(props) {
     useEffect(() => {
         setIsLogin(props.location.state === localStorage.getItem("access_token"));
         getList();
-    }, [getList,])
+    }, [props, getList,])
     
     // when user is login
     if (isLogin) {
