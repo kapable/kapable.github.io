@@ -50,14 +50,14 @@ function PostPage(props) {
         alert("링크가 복사됐어요!");
     }
 
-    const logoutHandler = () => {
-        localStorage.removeItem("access_token");
-        setIsLogin(false);
-    }
+    // const logoutHandler = () => {
+    //     localStorage.removeItem("access_token");
+    //     setIsLogin(false);
+    // }
 
-    const mailRenderer = (list, pg, login) => {
+    const mailRenderer = (list, login) => {
         let mails = [];
-        list.map((mail, ix) => {
+        list.map((mail, ix) => (
             mails.push(<div
                             className='post-page-envelop-div'
                             key={`envelop-div-${mail.id}`}
@@ -79,7 +79,7 @@ function PostPage(props) {
                             >{isLogin ? `${mail.nickname}` : null}</p>
                         </div>
             )
-        })
+            ))
         return mails
     }
 
@@ -198,18 +198,21 @@ function PostPage(props) {
                         if(localStorage.getItem("access_token")) {
                             axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("access_token")}`;
                             axios.get(api_url + `/auth/me`)
+                            // go to my page when the token is valid
                             .then(res => {
                                 props.history.push({
                                     pathname:`/post2021/${encodeURIComponent(res.data.key)}`,
                                     state: localStorage.getItem("access_token")
                                 });
                             })
+                            // if token error, go to auth page
                             .catch(() => {
                                 alert('로그인이 만료 되었습니다!!')
                                 props.history.push({
                                     pathname:`/auth/`,
                                 })
                             })
+                        // go to auth page unless token exist
                         } else {
                             props.history.push({
                                 pathname:`/auth/`,
