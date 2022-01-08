@@ -61,26 +61,21 @@ function PostPage(props) {
             mails.push(<div
                             className='post-page-envelop-div'
                             key={`envelop-div-${mail.id}`}
+                            onClick={() => {
+                                if(login === true) {
+                                    getMail(mail.id)
+                                }
+                            }}
                             >
                             <img
                                 src={mailOrder[ix]}
                                 alt={`Envelop${ix}`}
                                 key={`envelop-img-div-${mail.id}`}
                                 className="post-page-envelop"
-                                onClick={() => {
-                                    if(login === true) {
-                                        getMail(mail.id)
-                                    }
-                                }}
                             />
                             <p
                                 className='post-page-nickname-onletter'
                                 key={`envelop-nickname-div-${mail.id}`}
-                                onClick={() => {
-                                    if(login === true) {
-                                        getMail(mail.id)
-                                    }
-                                }}
                             >{isLogin ? `${mail.nickname}` : null}</p>
                         </div>
             )
@@ -168,7 +163,7 @@ function PostPage(props) {
                     </div>             
                     {/* <button className='post-page-logout-btn' onClick={logoutHandler}></button> */}
                     <div className='post-page-mails-div'>
-                        {mailRenderer(mailList, page, isLogin)}
+                        {mailRenderer(mailList, isLogin)}
                     </div>
                     {pageRenderer(page, mailCount)}
                     <br></br>
@@ -226,7 +221,7 @@ function PostPage(props) {
                     }} className='post-page-goto-mypost-btn' />
                 </div>
                 <div className='post-page-mails-div'>
-                    {mailRenderer(mailList, page, isLogin)}
+                    {mailRenderer(mailList, isLogin)}
                 </div>
                 {pageRenderer(page, mailCount)}
                 <br></br>
