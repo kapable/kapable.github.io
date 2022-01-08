@@ -83,6 +83,12 @@ function PostPage(props) {
         return mails
     }
 
+    const nullMailRenderer = () => {
+        return(
+            <div className='post-page-null-maillist'>텅! 비었어요...</div>
+        )
+    }
+
     const eachMail = <div className="popup">
                         <div className="popup-inner">
                             <button onClick={() => setShowPopup(false)} className='popup-close-btn'>X</button>
@@ -163,7 +169,7 @@ function PostPage(props) {
                     </div>             
                     {/* <button className='post-page-logout-btn' onClick={logoutHandler}></button> */}
                     <div className='post-page-mails-div'>
-                        {mailRenderer(mailList, isLogin)}
+                        {mailList.length === 0 ? nullMailRenderer() : mailRenderer(mailList, isLogin)}
                     </div>
                     {pageRenderer(page, mailCount)}
                     <br></br>

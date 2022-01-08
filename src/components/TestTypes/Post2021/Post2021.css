@@ -251,6 +251,12 @@
   outline: none;
 }
 
+.post-page-null-maillist {
+  font-family: var(--post-font);
+  font-size: 5rem;
+  color: #f4f4f4;
+}
+
 /* Write Page */
 .write-page-div {
   background-image: url("../../../api/PostImg/Background/background.png"),

@@ -216,7 +216,31 @@ class App extends Component {
                     <meta property="twitter:image" content="https://images.ktestone.com/default/main-header.png"/>
                     <meta property="twitter:image:alt" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트" />
                   </Helmet>
-    return _metaTag
+    let _PostMetaTag = <Helmet>
+                          {/* <!-- Primary Meta Tags --> */}
+                          <title>퍼스널 우체통</title>
+                          <meta name="title" content="퍼스널 우체통 - 케이테스트"/>
+                          <meta name="description" content="나만의 퍼스널 우체통" data-react-helmet="true"/>
+                          {this.state.sharable_url.includes("ktestone.com") ? null : _kapable_meta}
+                          <link rel="main-url" href={window.location.href}/>
+
+                          {/* <!-- Open Graph / Facebook --> */}
+                          <meta property="og:type" content="website"/>
+                          <meta property="og:url" content={window.location.href}/>
+                          <meta property="og:title" content="퍼스널 우체통 - 케이테스트"/>
+                          <meta property="og:description" content="나만의 퍼스널 우체통"/>
+                          <meta property="og:image" content="https://images.ktestone.com/PostImg/Object/Postbox_startpg.png"/>
+                          <meta property="og:image:alt" content="퍼스널 우체통 - 케이테스트" />
+
+                          {/* <!-- Twitter --> */}
+                          <meta property="twitter:card" content="summary_large_image"/>
+                          <meta property="twitter:url" content={window.location.href}/>
+                          <meta property="twitter:title" content="퍼스널 우체통 - 케이테스트"/>
+                          <meta property="twitter:description" content="나만의 퍼스널 우체통"/>
+                          <meta property="twitter:image" content="https://images.ktestone.com/PostImg/Object/Postbox_startpg.png"/>
+                          <meta property="twitter:image:alt" content="퍼스널 우체통 - 케이테스트" />
+                        </Helmet>
+    return this.state.sharable_url.includes("post2021") ? _PostMetaTag : _metaTag
   }
 
   render() {
