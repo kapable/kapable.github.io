@@ -61,21 +61,26 @@ function PostPage(props) {
             mails.push(<div
                             className='post-page-envelop-div'
                             key={`envelop-div-${mail.id}`}
-                            onClick={() => {
-                                if(login === true) {
-                                    getMail(mail.id)
-                                }
-                            }}
                             >
                             <img
                                 src={mailOrder[ix]}
                                 alt={`Envelop${ix}`}
                                 key={`envelop-img-div-${mail.id}`}
                                 className="post-page-envelop"
+                                onClick={() => {
+                                    if(login === true) {
+                                        getMail(mail.id)
+                                    }
+                                }}
                             />
                             <p
                                 className='post-page-nickname-onletter'
                                 key={`envelop-nickname-div-${mail.id}`}
+                                onClick={() => {
+                                    if(login === true) {
+                                        getMail(mail.id)
+                                    }
+                                }}
                             >{isLogin ? `${mail.nickname}` : null}</p>
                         </div>
             )
