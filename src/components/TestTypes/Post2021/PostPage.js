@@ -58,23 +58,29 @@ function PostPage(props) {
     const mailRenderer = (list, pg, login) => {
         let mails = [];
         list.map((mail, ix) => {
-            mails.push(<div className='post-page-envelop-div' key={`envelop-div-${mail.id}`}>
-                            <img
-                            src={mailOrder[ix]}
-                            alt={`Envelop${ix}`}
-                            key={`envelop-img-div-${mail.id}`}
+            mails.push(<div
+                            className='post-page-envelop-div'
+                            key={`envelop-div-${mail.id}`}
                             onClick={() => {
                                 if(login === true) {
                                     getMail(mail.id)
                                 }
                             }}
-                            className="post-page-envelop"
-                        />
-                        <p className='post-page-nickname-onletter' key={`envelop-nickname-div-${mail.id}`}>{isLogin ? `${mail.nickname}` : null}</p>
-                    </div>
+                            >
+                            <img
+                                src={mailOrder[ix]}
+                                alt={`Envelop${ix}`}
+                                key={`envelop-img-div-${mail.id}`}
+                                className="post-page-envelop"
+                            />
+                            <p
+                                className='post-page-nickname-onletter'
+                                key={`envelop-nickname-div-${mail.id}`}
+                            >{isLogin ? `${mail.nickname}` : null}</p>
+                        </div>
             )
         })
-        return(mails.slice(pg*10-10, pg*10+1))
+        return mails
     }
 
     const eachMail = <div className="popup">
@@ -98,7 +104,10 @@ function PostPage(props) {
                 pageRangeDisplayed={5}
                 prevPageText={"‹"}
                 nextPageText={"›"}
-                onChange={(page) => {setPage(page)}} />
+                onChange={(page) => {
+                    setPage(page);
+                    getList();
+                }} />
         )        
     }
 
@@ -107,7 +116,7 @@ function PostPage(props) {
             await axios.get(api_url + `/post?userKey=${props.match.params.username}&page=${page}&amount=10`)
             .then(res => {
                 setMailList(res.data.rows);
-                setMailCount(res.data.rows.length);
+                setMailCount(res.data.count);
                 setUserNickname(res.data.user.nickname);
             })
         },
