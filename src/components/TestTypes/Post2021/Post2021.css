@@ -85,6 +85,12 @@
   align-self: baseline;
 }
 
+.register-page-memo-comment {
+  font-size: 0.7rem;
+  margin-bottom: 1.5rem;
+  line-height: 1rem;
+}
+
 .register-page-btn-div {
   margin: 0 auto;
   align-items: center;
@@ -210,6 +216,15 @@
   transform: translate(-50%, -50%);
 }
 
+.post-page-mailcount {
+  text-align: center;
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
 .post-page-send-mail-btn {
   cursor: pointer;
   width: 9rem;
@@ -324,6 +339,10 @@
   resize: none;
 }
 
+.write-page-textarea:focus {
+  outline: none;
+}
+
 .write-page-nickname-input {
   font-family: var(--post-font);
   font-size: 1rem;
@@ -332,9 +351,13 @@
   width: 11rem;
   background-color: #f6afb7;
   position: absolute;
-  top: 120%;
+  top: 118%;
   left: 60%;
   transform: translate(-50%, -50%);
+}
+
+.write-page-nickname-input:focus {
+  outline: none;
 }
 
 .write-page-nickname-input::placeholder {

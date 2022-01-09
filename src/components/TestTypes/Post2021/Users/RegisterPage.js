@@ -76,6 +76,7 @@ function RegisterPage(props) {
                     className='register-submit-form'
                     onSubmit={onSubmitHandler}
                 >
+                    <p className='register-page-memo-comment'>* 한번 가입한 아이디와 비밀번호는 다시 찾기가<br></br>불가능하니 꼭 메모해주세요!</p>
                     <label>닉네임</label>
                     <input
                         type="text"
