@@ -218,29 +218,33 @@ function PostPage(props) {
                         })
                     }} />
                     <img src={GOTOMYPOST} alt="Go to My Post" onClick={() => {
-                        if(localStorage.getItem("access_token")) {
-                            axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("access_token")}`;
-                            axios.get(api_url + `/auth/me`)
-                            // go to my page when the token is valid
-                            .then(res => {
-                                props.history.push({
-                                    pathname:`/post2021/${encodeURIComponent(res.data.key)}`,
-                                    state: localStorage.getItem("access_token")
-                                });
-                            })
-                            // if token error, go to auth page
-                            .catch(() => {
-                                alert('로그인이 만료 되었습니다!!')
-                                props.history.push({
-                                    pathname:`/auth/`,
-                                })
-                            })
-                        // go to auth page unless token exist
-                        } else {
-                            props.history.push({
-                                pathname:`/auth/`,
-                            })
-                        }
+                        props.history.push({
+                            pathname:`/auth/`,
+                        })
+                        // if(localStorage.getItem("access_token")) {
+                        //     axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("access_token")}`;
+                        //     axios.get(api_url + `/auth/me`)
+                        //     // go to my page when the token is valid
+                        //     .then(res => {
+                        //         console.log(res);
+                        //         props.history.push({
+                        //             pathname:`/post2021/${encodeURIComponent(res.data.key)}/`,
+                        //             state: localStorage.getItem("access_token")
+                        //         });
+                        //     })
+                        //     // if token error, go to auth page
+                        //     .catch(() => {
+                        //         alert('로그인이 만료 되었습니다!!')
+                        //         props.history.push({
+                        //             pathname:`/auth/`,
+                        //         })
+                        //     })
+                        // // go to auth page unless token exist
+                        // } else {
+                        //     props.history.push({
+                        //         pathname:`/auth/`,
+                        //     })
+                        // }
                     }} className='post-page-goto-mypost-btn' />
                 </div>
                 <div className='post-page-mails-div'>
