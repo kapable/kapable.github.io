@@ -71,7 +71,8 @@
   transform: translate(-50%, -50%);
   margin: 15rem auto 1rem;
   width: 14.7rem;
-  height: 12rem;
+  height: 11rem;
+  overflow-y: scroll;
   background-color: #f4f4f4;
   text-align: left;
   font-family: var(--post-font);
