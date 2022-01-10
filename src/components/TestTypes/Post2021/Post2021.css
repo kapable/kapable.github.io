@@ -330,7 +330,7 @@
 
 .write-page-textarea {
   font-family: var(--post-font);
-  font-size: 1rem;
+  font-size: 1.4rem;
   background-color: #f4f4f4;
   border-width: 0;
   height: 10.5rem;
@@ -345,7 +345,7 @@
 
 .write-page-nickname-input {
   font-family: var(--post-font);
-  font-size: 1rem;
+  font-size: 1.4rem;
   border-width: 0;
   display: block;
   width: 11rem;
