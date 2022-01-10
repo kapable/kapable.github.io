@@ -8,13 +8,6 @@ import POSTBOX from '../../../api/PostImg/Object/Postbox.png';
 import GOTOMYPOST from '../../../api/PostImg/Button/go-to-mypost-btn.png';
 import SENDMAIL from '../../../api/PostImg/Button/send-mail-btn.png';
 import SHAREMYPOST from '../../../api/PostImg/Button/share-mypost-btn.png';
-import ENVELOP1 from '../../../api/PostImg/Envelop/envelop-1.png';
-import ENVELOP2 from '../../../api/PostImg/Envelop/envelop-2.png';
-import ENVELOP3 from '../../../api/PostImg/Envelop/envelop-3.png';
-import ENVELOP4 from '../../../api/PostImg/Envelop/envelop-4.png';
-import ENVELOP5 from '../../../api/PostImg/Envelop/envelop-5.png';
-import ENVELOP6 from '../../../api/PostImg/Envelop/envelop-6.png';
-import LETTER1 from '../../../api/PostImg/MailForm/letter-1.png';
 import NICKNAMEINPUT from '../../../api/PostImg/MailForm/nickname-input.png';
 import Pagination from "react-js-pagination";
 
@@ -24,10 +17,11 @@ function PostPage(props) {
     const [isLogin, setIsLogin] = useState(props.location.state === localStorage.getItem("access_token"));
     const [mailList, setMailList] = useState([]);
     const [mailCount, setMailCount] = useState(0);
+    const [mailNum, setMailNum] = useState(0);
     const [userNickname, setUserNickname] = useState('');
     const [fromNickname, setFromNickname] = useState('');
     const [message, setMessage] = useState('');
-    const mailOrder = [ENVELOP1, ENVELOP2, ENVELOP3, ENVELOP4, ENVELOP5, ENVELOP6, ENVELOP1, ENVELOP2, ENVELOP3, ENVELOP4];
+    const letterOrder = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4]
     const api_url = 'https://api.ktestone.com';
     const [ShowPopup, setShowPopup] = useState(false);
 
@@ -79,12 +73,13 @@ function PostPage(props) {
                             key={`envelop-div-${mail.id}`}
                             onClick={() => {
                                 if(login === true) {
-                                    getMail(mail.id)
+                                    getMail(mail.id);
+                                    setMailNum(ix);
                                 }
                             }}
                             >
                             <img
-                                src={mailOrder[ix]}
+                                src={`https://images.ktestone.com/PostImg/Envelop/envelop-${letterOrder[ix]}.png`}
                                 alt={`Envelop${ix}`}
                                 key={`envelop-img-div-${mail.id}`}
                                 className="post-page-envelop"
@@ -108,7 +103,10 @@ function PostPage(props) {
     const eachMail = <div className="popup">
                         <div className="popup-inner">
                             <button onClick={() => setShowPopup(false)} className='popup-close-btn'>X</button>
-                            <img src={LETTER1} alt="letter" className='popup-letter-form' />
+                            <img
+                                src={`https://images.ktestone.com/PostImg/MailForm/letter-${letterOrder[mailNum]}.png`}
+                                alt="letter"
+                                className='popup-letter-form' />
                             <h4 className="popup-head">{`${userNickname}에게`}</h4>
                             <p className="popup-message">{message}</p>
                             <img src={NICKNAMEINPUT} className='popup-nickname-input' alt="popup-nickname-input"/>
@@ -172,7 +170,7 @@ function PostPage(props) {
                     <div className="post-page-postbox-div">
                         <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>
                         <h4 className='post-page-whosname'>{`${userNickname}`} 님의<br></br>POST</h4>
-                        {/* <h4 className='post-page-mailcount'>총 {mailCount}통</h4> */}
+                        <h4 className='post-page-mailcount'>{mailCount}개의 편지</h4>
                     </div>
                     <div className='post-page-btn-div'>
                         <img src={SENDMAIL} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
@@ -211,6 +209,7 @@ function PostPage(props) {
                     <div className="post-page-postbox-div">
                         <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>
                         <h4 className='post-page-whosname'>{`${userNickname}`} 님의<br></br>POST</h4>
+                        <h4 className='post-page-mailcount'>{mailCount}개의 편지</h4>
                     </div>
                 <div className='post-page-btn-div'>
                     <img src={SENDMAIL} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {

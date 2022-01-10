@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Allura&family=Dongle:wght@300&family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@300&display=swap");
+@font-face {
+  font-family: "kyobo";
+  src: url("../../../api/font/Kyobo.ttf");
+}
 
 :root {
   --font-color: black;
-  --post-font: "Dongle", sans-serif;
+  --post-font: "kyobo", "Dongle", sans-serif;
 }
 
 /* Start Page */
@@ -214,6 +218,7 @@
   top: 24.5%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: var(--post-font);
 }
 
 .post-page-mailcount {
@@ -223,6 +228,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2rem;
+  font-family: var(--post-font);
+  color: white;
 }
 
 .post-page-send-mail-btn {
@@ -258,6 +265,7 @@
   top: -500%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: var(--post-font);
 }
 
 .post-page-logout-btn {
@@ -268,8 +276,9 @@
 
 .post-page-null-maillist {
   font-family: var(--post-font);
-  font-size: 5rem;
+  font-size: 3rem;
   color: #f4f4f4;
+  margin-top: 2rem;
 }
 
 /* Write Page */
@@ -330,7 +339,7 @@
 
 .write-page-textarea {
   font-family: var(--post-font);
-  font-size: 1.4rem;
+  font-size: 1rem;
   background-color: #f4f4f4;
   border-width: 0;
   height: 10.5rem;
@@ -345,7 +354,7 @@
 
 .write-page-nickname-input {
   font-family: var(--post-font);
-  font-size: 1.4rem;
+  font-size: 0.9rem;
   border-width: 0;
   display: block;
   width: 11rem;
