@@ -4,7 +4,6 @@ import MAINHEADER from '../../api/DefaultImg/main-header.png';
 import OhterLangIconsMain from '../SubComponents/OhterLangIconsMain';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 import JELLINGBANNERENG from '../../api/DefaultImg/go-to-jelling-eng.png';
-import ARTICLEBANNER from '../../api/DefaultImg/Ktest-funny.png';
 import '../TestTypes/Post2021/Post2021.css';
 import '../TestTypes/Post2021/PostPopup.css';
 

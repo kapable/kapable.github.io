@@ -16,7 +16,6 @@ import ENVELOP6 from '../../../api/PostImg/Envelop/envelop-6.png';
 import LETTER1 from '../../../api/PostImg/MailForm/letter-1.png';
 import NICKNAMEINPUT from '../../../api/PostImg/MailForm/nickname-input.png';
 import Pagination from "react-js-pagination";
-import { Helmet } from 'react-helmet';
 
 function PostPage(props) {
     
@@ -46,32 +45,6 @@ function PostPage(props) {
             display: none;
         }
     `
-    const metaTagRenderer = () => {
-        let _PostMetaTag = <Helmet>
-                            {/* <!-- Primary Meta Tags --> */}
-                            <title>퍼스널 우체통</title>
-                            <meta name="title" content="퍼스널 우체통 - 케이테스트"/>
-                            <meta name="description" content="나만의 퍼스널 우체통" data-react-helmet="true"/>
-                            <link rel="main-url" href={window.location.href}/>
-
-                            {/* <!-- Open Graph / Facebook --> */}
-                            <meta property="og:type" content="website"/>
-                            <meta property="og:url" content={window.location.href}/>
-                            <meta property="og:title" content="퍼스널 우체통 - 케이테스트"/>
-                            <meta property="og:description" content="나만의 퍼스널 우체통"/>
-                            <meta property="og:image" content="https://images.ktestone.com/PostImg/Object/Postbox_startpg.png"/>
-                            <meta property="og:image:alt" content="퍼스널 우체통 - 케이테스트" />
-
-                            {/* <!-- Twitter --> */}
-                            <meta property="twitter:card" content="summary_large_image"/>
-                            <meta property="twitter:url" content={window.location.href}/>
-                            <meta property="twitter:title" content="퍼스널 우체통 - 케이테스트"/>
-                            <meta property="twitter:description" content="나만의 퍼스널 우체통"/>
-                            <meta property="twitter:image" content="https://images.ktestone.com/PostImg/Object/Postbox_startpg.png"/>
-                            <meta property="twitter:image:alt" content="퍼스널 우체통 - 케이테스트" />
-                        </Helmet>
-        return _PostMetaTag
-    }
 
     const onShareBtnClick = () => {
         alert("링크가 복사됐어요!");
@@ -175,7 +148,6 @@ function PostPage(props) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("access_token")}`;
         return (
             <div className='post-page'>
-                {metaTagRenderer()}
                 <GlobalStyle />
                 {/* <img src={} alt="bg" className='post-page-bg-img' /> */}
                 <img src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
@@ -215,7 +187,6 @@ function PostPage(props) {
     } else {
         return (
             <div className='post-page'>
-                {metaTagRenderer()}
                 <GlobalStyle />
                 <img src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
                 <div className='post-page-bg-div'>
