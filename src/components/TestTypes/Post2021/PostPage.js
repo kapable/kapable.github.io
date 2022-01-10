@@ -1,8 +1,9 @@
 import axios from 'axios';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import styled, { createGlobalStyle } from 'styled-components';
+import ScriptTag from 'react-script-tag'
 import POSTBOX from '../../../api/PostImg/Object/Postbox.png';
 import GOTOMYPOST from '../../../api/PostImg/Button/go-to-mypost-btn.png';
 import SENDMAIL from '../../../api/PostImg/Button/send-mail-btn.png';
@@ -45,6 +46,21 @@ function PostPage(props) {
             display: none;
         }
     `
+
+    function adTagRenderer(){
+        return(
+            <Fragment>
+                <div id="protag-in_article_video"></div>
+                    <ScriptTag type="text/javascript">
+                        {`window.googletag = window.googletag || { cmd: [] };
+                        window.protag = window.protag || { cmd: [] };
+                        window.protag.cmd.push(function () {
+                            window.protag.display("protag-in_article_video");
+                        });`}
+                    </ScriptTag>
+            </Fragment>
+        )
+    }
 
     const onShareBtnClick = () => {
         alert("링크가 복사됐어요!");
@@ -180,6 +196,7 @@ function PostPage(props) {
                         eachMail
                         : null}
                 </div>
+                {adTagRenderer()}
                 <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
         )
@@ -233,8 +250,9 @@ function PostPage(props) {
                 {pageRenderer(page, mailCount)}
                 <br></br>
             </div>
+            {adTagRenderer()}
             <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
-            </div>
+        </div>
         )
     }
 }
