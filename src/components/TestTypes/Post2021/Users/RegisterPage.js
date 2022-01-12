@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 function RegisterPage(props) {
     const [nickname, setNickname] = useState("");
@@ -8,6 +9,14 @@ function RegisterPage(props) {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const api_url = 'https://api.ktestone.com';
+
+    function _eventSenderGA(category, action, label){
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+    }
 
     function onNicknameHandler(e) {
         e.preventDefault();
@@ -53,6 +62,7 @@ function RegisterPage(props) {
         await axios.post(api_url+`/auth/join`, body)
         .then(() => {
             alert("회원가입에 성공했습니다!!!");
+            _eventSenderGA("Submitting", "Click User-Register Button", "register page");
             props.setMode("login");
         })
         .catch((err) => {

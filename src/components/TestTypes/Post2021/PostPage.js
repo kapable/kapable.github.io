@@ -10,6 +10,7 @@ import SENDMAIL from '../../../api/PostImg/Button/send-mail-btn.png';
 import SHAREMYPOST from '../../../api/PostImg/Button/share-mypost-btn.png';
 import NICKNAMEINPUT from '../../../api/PostImg/MailForm/nickname-input.png';
 import Pagination from "react-js-pagination";
+import ReactGA from 'react-ga';
 
 function PostPage(props) {
     
@@ -41,6 +42,14 @@ function PostPage(props) {
         }
     `
 
+    function _eventSenderGA(category, action, label){
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+    }
+
     function adTagRenderer(){
         return(
             <Fragment>
@@ -57,6 +66,7 @@ function PostPage(props) {
     }
 
     const onShareBtnClick = () => {
+        _eventSenderGA("Sharing", "Click Copy-link Button", "post page");
         alert("링크가 복사됐어요!");
     }
 
@@ -146,6 +156,7 @@ function PostPage(props) {
     async function getMail(postid) {
         await axios.get(api_url + `/post/${postid}`)
         .then(res => {
+            _eventSenderGA("Viewing", "Click Each-mail Button", "post page");
             setFromNickname(res.data.nickname);
             setMessage(res.data.text);
             setShowPopup(true);
@@ -174,6 +185,7 @@ function PostPage(props) {
                     </div>
                     <div className='post-page-btn-div'>
                         <img src={SENDMAIL} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
+                            _eventSenderGA("Paging", "Click Post-to-write Button", "post page");
                             props.history.push({
                                 pathname:`/post2021/${props.match.params.username}/postwrite/`,
                             })
@@ -213,11 +225,13 @@ function PostPage(props) {
                     </div>
                 <div className='post-page-btn-div'>
                     <img src={SENDMAIL} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
+                        _eventSenderGA("Paging", "Click Post-to-write Button", "post page");
                         props.history.push({
                             pathname:`/post2021/${props.match.params.username}/postwrite/`,
                         })
                     }} />
                     <img src={GOTOMYPOST} alt="Go to My Post" onClick={() => {
+                        _eventSenderGA("Paging", "Click Post-to-auth Button", "post page");
                         props.history.push({
                             pathname:`/auth/`,
                         })

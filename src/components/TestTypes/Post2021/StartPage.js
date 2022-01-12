@@ -2,8 +2,17 @@ import React, { Fragment } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import STARTBTN from '../../../api/PostImg/Background/Start_btn.png';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 
 function Post2021() {
+
+    function _eventSenderGA(category, action, label){
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+    }
 
     const metaTagRenderer = () => {
         let _PostMetaTag = <Helmet>
@@ -37,7 +46,12 @@ function Post2021() {
             <div className="start-page-bg-div">
                 <img src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
                 <img src={"https://images.ktestone.com/PostImg/Object/Postbox_startpg.png"} alt='MAINTITLE' className="start-page-postbox"/>
-                <Link to="/auth/" ><img src={STARTBTN} alt="Start-btn" className="start-page-startbtn" /></Link>
+                <Link
+                    to="/auth/"
+                    onClick={() => {
+                        _eventSenderGA("Paging", "Click Start-to-auth Button", "post start page");
+                    }}
+                ><img src={STARTBTN} alt="Start-btn" className="start-page-startbtn" /></Link>
                 <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
         </Fragment>

@@ -1,11 +1,20 @@
 import React, { useState, Fragment } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 function LoginPage(props) {
     const [id, setID] = useState("");
     const [password, setPassword] = useState("");
     const api_url = 'https://api.ktestone.com';
+
+    function _eventSenderGA(category, action, label){
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+    }
 
     function onIDHandler(e) {
         e.preventDefault();
@@ -28,6 +37,7 @@ function LoginPage(props) {
             localStorage.setItem("access_token", res.data.accessToken);
         })
         .then(() => {
+            _eventSenderGA("Submitting", "Click Log-in Button", "login page");
             axios.get(api_url + '/auth/me')
             .then(response => {
                 props.history.push({

@@ -7,6 +7,7 @@ import COMPLETECLOSE from '../../../api/PostImg/Button/complete-close-btn.png';
 import COMPLETE from '../../../api/PostImg/Object/complete_send_mail.png';
 import NICKNAMEINPUT from '../../../api/PostImg/MailForm/nickname-input.png';
 import SENDMAIL from '../../../api/PostImg/Button/direct-send-mail-btn.png';
+import ReactGA from 'react-ga';
 
 function PostWrite(props) {
     const api_url = 'https://api.ktestone.com';
@@ -20,6 +21,14 @@ function PostWrite(props) {
         'access-control-allow-origin': '*',
         'x-powered-by': 'Express' 
     },})
+
+    function _eventSenderGA(category, action, label){
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+    }
 
     function onMessageHandler(e) {
         e.preventDefault();
@@ -59,6 +68,7 @@ function PostWrite(props) {
                                     alt="내 우편함 만들기"
                                     className='postwrite-complete-to-postbox'
                                     onClick={() => {
+                                        _eventSenderGA("Paging", "Click write-to-auth Button", "post write page");
                                         props.history.push({
                                             pathname:`/auth/`,
                                         })
@@ -70,6 +80,7 @@ function PostWrite(props) {
                                     alt="팝업 닫기"
                                     className='postwrite-complete-close'
                                     onClick={() => {
+                                        _eventSenderGA("Submitting", "Click write-popup-close Button", "post write page");
                                         setShowPopup(false);
                                     }}
                                 />
@@ -89,6 +100,7 @@ function PostWrite(props) {
 
         instance.post(api_url+'/post', body)
         .then(() => {
+            _eventSenderGA("Submitting", "Click Post-send Button", "post write page");
             setShowPopup(true);
         })
         .catch(() => {
