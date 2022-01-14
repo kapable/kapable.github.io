@@ -39,6 +39,11 @@ function MainPage(props) {
                 <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2021-thumb.png`} alt="POST-2021" />
             </Link>
 
+            {/* Go to POST 2021 */}
+            <Link to='/post2022Eng/' className="main-link-block" key="article-banner">
+                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022Eng-thumb.png`} alt="POST-2021" />
+            </Link>
+
             {/* Main Test Banners */}
             <div className="main-link-div">
                 {props.all_tests_url.map((item)=>(

@@ -4,16 +4,11 @@ import { withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import styled, { createGlobalStyle } from 'styled-components';
 import ScriptTag from 'react-script-tag'
-import POSTBOX from '../../../api/PostImg/Object/Postbox.png';
-import GOTOMYPOST from '../../../api/PostImg/Button/go-to-mypost-btn.png';
-import SENDMAIL from '../../../api/PostImg/Button/send-mail-btn.png';
-import SHAREMYPOST from '../../../api/PostImg/Button/share-mypost-btn.png';
-import NICKNAMEINPUT from '../../../api/PostImg/MailForm/nickname-input.png';
 import Pagination from "react-js-pagination";
 import ReactGA from 'react-ga';
 
 function PostPage(props) {
-    
+    const lang = props.language;
     const [page, setPage] = useState(1);
     const [isLogin, setIsLogin] = useState(props.location.state === localStorage.getItem("access_token"));
     const [mailList, setMailList] = useState([]);
@@ -25,6 +20,14 @@ function PostPage(props) {
     const letterOrder = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4]
     const api_url = 'https://api.ktestone.com';
     const [ShowPopup, setShowPopup] = useState(false);
+
+    const [upbarBtnImg, setUpbarBtnImg] = useState(``);
+    const [mainTitleImg, setMainTitleImg] = useState(``);
+    const postBoxImg = "https://images.ktestone.com/PostImg/Object/Postbox.png"
+    const [sendMailImg, setSendMailImg] = useState(``);
+    const [shareMyPostImg, setShareMyPostImg] = useState(``);
+    const [goToMyPostImg, setGoToMyPostImg] = useState(``);
+    const nickNameInput = "https://images.ktestone.com/PostImg/MailForm/nickname-input.png"
 
     const PageBackground = styled.div` 
         background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
@@ -67,7 +70,7 @@ function PostPage(props) {
 
     const onShareBtnClick = () => {
         _eventSenderGA("Sharing", "Click Copy-link Button", "post page");
-        alert("링크가 복사됐어요!");
+        lang === `Eng` ? alert("link copied to clipboard!") : alert("링크가 복사됐어요!")
     }
 
     // const logoutHandler = () => {
@@ -117,9 +120,9 @@ function PostPage(props) {
                                 src={`https://images.ktestone.com/PostImg/MailForm/letter-${letterOrder[mailNum]}.png`}
                                 alt="letter"
                                 className='popup-letter-form' />
-                            <h4 className="popup-head">{`${userNickname}에게`}</h4>
+                            <h4 className="popup-head">{`${userNickname}`}{lang === `Eng` ? '' : '에게'}</h4>
                             <p className="popup-message">{message}</p>
-                            <img src={NICKNAMEINPUT} className='popup-nickname-input' alt="popup-nickname-input"/>
+                            <img src={nickNameInput} className='popup-nickname-input' alt="popup-nickname-input"/>
                             <p className="popup-fromNickname">{`from ${fromNickname}`}</p>
                         </div>
                     </div>
@@ -166,35 +169,52 @@ function PostPage(props) {
     useEffect(() => {
         setIsLogin(props.location.state === localStorage.getItem("access_token"));
         getList();
+        if(props.language === `Kor`) {
+            setUpbarBtnImg("https://images.ktestone.com/PostImg/Background/up_bg_bar.png");
+            setMainTitleImg("https://images.ktestone.com/PostImg/Background/main_title.png");
+            setSendMailImg("https://images.ktestone.com/PostImg/Button/send-mail-btn.png");
+            setShareMyPostImg("https://images.ktestone.com/PostImg/Button/share-mypost-btn.png");
+            setGoToMyPostImg("https://images.ktestone.com/PostImg/Button/go-to-mypost-btn.png");
+        } else if(props.language === `Eng`) {
+            setUpbarBtnImg("https://images.ktestone.com/PostImg/English/Button/up_bg_bar.png");
+            setMainTitleImg("https://images.ktestone.com/PostImg/English/Background/main_title.png");
+            setSendMailImg("https://images.ktestone.com/PostImg/English/Button/send-mail-btn.png");
+            setShareMyPostImg("https://images.ktestone.com/PostImg/English/Button/share-mypost-btn.png");
+            setGoToMyPostImg("https://images.ktestone.com/PostImg/English/Button/go-to-mypost-btn.png");
+        }
     }, [props, getList,])
     
     // when user is login
     if (isLogin) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("access_token")}`;
-        return (
+        return(
             <div className='post-page'>
                 <GlobalStyle />
-                {/* <img src={} alt="bg" className='post-page-bg-img' /> */}
-                <img src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
+                <img src={upbarBtnImg} alt="UPBAR" className="start-page-upbar"/>
                 <PageBackground className='post-page-bg-div' >
-                    <img src={"https://images.ktestone.com/PostImg/Background/main_title.png"} alt="당신에게 나는 어떤 사람인가요?" className='post-page-maintitle' />
+                    <img src={mainTitleImg} alt="당신에게 나는 어떤 사람인가요?" className='post-page-maintitle' />
                     <div className="post-page-postbox-div">
-                        <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>
-                        <h4 className='post-page-whosname'>{`${userNickname}`} 님의<br></br>POST</h4>
-                        <h4 className='post-page-mailcount'>{mailCount}개의 편지</h4>
+                        <img src={postBoxImg} alt="POSTBOX" className="post-page-postbox"/>
+                        <h4 className='post-page-whosname'>{`${userNickname}`} {lang === `Eng` ? `'s` : `님의`}<br></br>POST</h4>
+                        <h4 className='post-page-mailcount'>{mailCount}{lang === `Eng` ? ` letters` : `개의 편지`}</h4>
                     </div>
                     <div className='post-page-btn-div'>
-                        <img src={SENDMAIL} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
+                        <img src={sendMailImg} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
                             _eventSenderGA("Paging", "Click Post-to-write Button", "post page");
-                            props.history.push({
-                                pathname:`/post2021/${props.match.params.username}/postwrite/`,
-                            })
+                            if(lang === `Eng`) {
+                                props.history.push({
+                                    pathname:`/post2022Eng/${props.match.params.username}/postwrite/`,
+                                })
+                            } else {
+                                props.history.push({
+                                    pathname:`/post2021/${props.match.params.username}/postwrite/`,
+                                })
+                            }
                         }} />
                         <CopyToClipboard text={`https://ktestone.com/kapable.github.io/post2021/${props.match.params.username}/`}>
-                            <img src={SHAREMYPOST} alt="Share My Post" onClick={onShareBtnClick} className='post-page-share-mypost-btn' />
+                            <img src={shareMyPostImg} alt="Share My Post" onClick={onShareBtnClick} className='post-page-share-mypost-btn' />
                         </CopyToClipboard>
                     </div>             
-                    {/* <button className='post-page-logout-btn' onClick={logoutHandler}></button> */}
                     <div className='post-page-mails-div'>
                         {mailList.length === 0 ? nullMailRenderer() : mailRenderer(mailList, isLogin)}
                     </div>
@@ -212,64 +232,58 @@ function PostPage(props) {
         )
         //  when user is logout
     } else {
-        return (
+        return(
             <div className='post-page'>
                 <GlobalStyle />
                 <img src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
                 <div className='post-page-bg-div'>
                     <img src={"https://images.ktestone.com/PostImg/Background/main_title.png"} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
                     <div className="post-page-postbox-div">
-                        <img src={POSTBOX} alt="POSTBOX" className="post-page-postbox"/>
-                        <h4 className='post-page-whosname'>{`${userNickname}`} 님의<br></br>POST</h4>
-                        <h4 className='post-page-mailcount'>{mailCount}개의 편지</h4>
+                        <img src={postBoxImg} alt="POSTBOX" className="post-page-postbox"/>
+                        <h4 className='post-page-whosname'>{`${userNickname}`} {lang === `Eng` ? `'s` : `님의`}<br></br>POST</h4>
+                        <h4 className='post-page-mailcount'>{mailCount}{lang === `Eng` ? ` letters` : `개의 편지`}</h4>
                     </div>
                 <div className='post-page-btn-div'>
-                    <img src={SENDMAIL} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
+                    <img src={sendMailImg} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
                         _eventSenderGA("Paging", "Click Post-to-write Button", "post page");
-                        props.history.push({
-                            pathname:`/post2021/${props.match.params.username}/postwrite/`,
-                        })
+                        if(lang === `Eng`) {
+                            props.history.push({
+                                pathname:`/post2022Eng/${props.match.params.username}/postwrite/`,
+                            })
+                        } else {
+                            props.history.push({
+                                pathname:`/post2021/${props.match.params.username}/postwrite/`,
+                            })
+                        }
                     }} />
-                    <img src={GOTOMYPOST} alt="Go to My Post" onClick={() => {
+                    <img src={goToMyPostImg} alt="Go to My Post" onClick={() => {
                         _eventSenderGA("Paging", "Click Post-to-auth Button", "post page");
-                        props.history.push({
-                            pathname:`/auth/`,
-                        })
-                        // if(localStorage.getItem("access_token")) {
-                        //     axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("access_token")}`;
-                        //     axios.get(api_url + `/auth/me`)
-                        //     // go to my page when the token is valid
-                        //     .then(res => {
-                        //         console.log(res);
-                        //         props.history.push({
-                        //             pathname:`/post2021/${encodeURIComponent(res.data.key)}/`,
-                        //             state: localStorage.getItem("access_token")
-                        //         });
-                        //     })
-                        //     // if token error, go to auth page
-                        //     .catch(() => {
-                        //         alert('로그인이 만료 되었습니다!!')
-                        //         props.history.push({
-                        //             pathname:`/auth/`,
-                        //         })
-                        //     })
-                        // // go to auth page unless token exist
-                        // } else {
-                        //     props.history.push({
-                        //         pathname:`/auth/`,
-                        //     })
-                        // }
+                        if(lang === `Eng`) {
+                            props.history.push({
+                                pathname:`/auth/`,
+                                state: {
+                                    language: lang
+                                },
+                            })
+                        } else {
+                            props.history.push({
+                                pathname:`/auth/`,
+                                state: {
+                                    language: lang
+                                },
+                            })
+                        }
                     }} className='post-page-goto-mypost-btn' />
                 </div>
                 <div className='post-page-mails-div'>
                     {mailList.length === 0 ? nullMailRenderer() : mailRenderer(mailList, isLogin)}
                 </div>
-                {pageRenderer(page, mailCount)}
-                <br></br>
+                    {pageRenderer(page, mailCount)}
+                    <br></br>
+                </div>
+                {adTagRenderer()}
+                <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
-            {adTagRenderer()}
-            <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
-        </div>
         )
     }
 }

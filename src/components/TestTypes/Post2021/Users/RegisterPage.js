@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 function RegisterPage(props) {
+    const lang = props.language;
     const [nickname, setNickname] = useState("");
     const [id, setID] = useState("");
     const [password, setPassword] = useState("");
@@ -42,15 +43,15 @@ function RegisterPage(props) {
         e.preventDefault();
 
         if(nickname.length > 8) {
-            return alert("닉네임의 길이는 8자 이하여야 합니다.")
+            return alert("닉네임의 길이는 8자 이하여야 합니다.\nThe length of Nickname must be under 8 characters.")
         }
 
         if(password.length < 8) {
-            return alert("비밀번호의 길이는 여덟 글자 이상이어야 합니다.")
+            return alert("비밀번호의 길이는 여덟 글자 이상이어야 합니다.\nThe length of password must be over 8 digits.")
         }
 
         if(password !== confirmPassword) {
-            return alert("비밀번호와 일치하지 않습니다.")
+            return alert("비밀번호와 일치하지 않습니다.\nFail to confirm password.")
         }
 
         let body = {
@@ -74,63 +75,124 @@ function RegisterPage(props) {
         })
 
     }
-    return (
-        <div className="register-page-bg-div">
-            <br></br>
-            <h2 className='send-to-me-title'>나에게 편지를 보내줘!</h2>
-                <div className='register-page-btn-div'>
-                    <button className="register-page-rgbtn" style={{'color':'black'}}>회원가입</button>
-                    <button onClick={() => {props.setMode("login")}} className="register-page-loginbtn" style={{'color':'black'}}>로그인</button>
+    if (lang === `Eng`) {
+        return (
+            <div className="register-page-bg-div">
+                <br></br>
+                <h2 className='send-to-me-title'>Send me Your letter!</h2>
+                    <div className='register-page-btn-div'>
+                        <button className="register-page-rgbtn" style={{'color':'black'}}>Register</button>
+                        <button onClick={() => {props.setMode("login")}} className="register-page-loginbtn" style={{'color':'black'}}>Login</button>
+                    </div>
+                    <form
+                        className='register-submit-form'
+                        onSubmit={onSubmitHandler}
+                    >
+                        <p className='register-page-memo-comment'>*You can't find the ID and password that you signed up for once, so please write it down!</p>
+                        <label>Nickname</label>
+                        <input
+                            type="text"
+                            value={nickname}
+                            onChange={onNicknameHandler}
+                            className='register-nickname-form'
+                            placeholder='Under 8 characters'
+                            required
+                        />
+                        <label>ID</label>
+                        <input
+                            type="text"
+                            value={id}
+                            onChange={onIDHandler}
+                            className='register-nickname-form'
+                            placeholder='Eng lower/upper, Num 4~20 digits'
+                            pattern='[A-Za-z0-9+]{4,12}'
+                            required
+                        />
+                        <label>Password</label>
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={onPasswordHandler}
+                            className='register-password-form'
+                            placeholder='Over 8 digits'
+                            required
+                        />
+                        <label>Password confirm</label>
+                        <input
+                            type="password"
+                            value={confirmPassword}
+                            onChange={onConfirmPasswordHandler}
+                            className='register-passwordConfirm-form'
+                            placeholder='Insert once more'
+                            required
+                        />
+                        <button type="submit" className="register-submit-btn">
+                            Register
+                        </button>
+                    </form>
+                    <p className='name-footer'>©Cookie Rocket</p>
                 </div>
-                <form
-                    className='register-submit-form'
-                    onSubmit={onSubmitHandler}
-                >
-                    <p className='register-page-memo-comment'>* 한번 가입한 아이디와 비밀번호는 다시 찾기가<br></br>불가능하니 꼭 메모해주세요!</p>
-                    <label>닉네임</label>
-                    <input
-                        type="text"
-                        value={nickname}
-                        onChange={onNicknameHandler}
-                        className='register-nickname-form'
-                        placeholder='8자 이하'
-                        required
-                    />
-                    <label>아이디</label>
-                    <input
-                        type="text"
-                        value={id}
-                        onChange={onIDHandler}
-                        className='register-nickname-form'
-                        placeholder='영문 소문자, 숫자4~20자'
-                        pattern='[A-Za-z0-9+]{4,12}'
-                        required
-                    />
-                    <label>비밀번호</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={onPasswordHandler}
-                        className='register-password-form'
-                        placeholder='8자 이상 입력해주세요'
-                        required
-                    />
-                    <label>비밀번호 확인</label>
-                    <input
-                        type="password"
-                        value={confirmPassword}
-                        onChange={onConfirmPasswordHandler}
-                        className='register-passwordConfirm-form'
-                        placeholder='한번 더 입력해주세요'
-                        required
-                    />
-                    <button type="submit" className="register-submit-btn">
-                        회원가입
-                    </button>
-                </form>
-                <p className='name-footer'>©Coocie Rocket</p>
-            </div>
-    )
+        )
+    } else {
+        return (
+            <div className="register-page-bg-div">
+                <br></br>
+                <h2 className='send-to-me-title'>나에게 편지를 보내줘!</h2>
+                    <div className='register-page-btn-div'>
+                        <button className="register-page-rgbtn" style={{'color':'black'}}>회원가입</button>
+                        <button onClick={() => {props.setMode("login")}} className="register-page-loginbtn" style={{'color':'black'}}>로그인</button>
+                    </div>
+                    <form
+                        className='register-submit-form'
+                        onSubmit={onSubmitHandler}
+                    >
+                        <p className='register-page-memo-comment'>* 한번 가입한 아이디와 비밀번호는 다시 찾기가<br></br>불가능하니 꼭 메모해주세요!</p>
+                        <label>닉네임</label>
+                        <input
+                            type="text"
+                            value={nickname}
+                            onChange={onNicknameHandler}
+                            className='register-nickname-form'
+                            placeholder='8자 이하'
+                            required
+                        />
+                        <label>아이디</label>
+                        <input
+                            type="text"
+                            value={id}
+                            onChange={onIDHandler}
+                            className='register-nickname-form'
+                            placeholder='영문 소문자, 숫자4~20자'
+                            pattern='[A-Za-z0-9+]{4,12}'
+                            required
+                        />
+                        <label>비밀번호</label>
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={onPasswordHandler}
+                            className='register-password-form'
+                            placeholder='8자 이상 입력해주세요'
+                            required
+                        />
+                        <label>비밀번호 확인</label>
+                        <input
+                            type="password"
+                            value={confirmPassword}
+                            onChange={onConfirmPasswordHandler}
+                            className='register-passwordConfirm-form'
+                            placeholder='한번 더 입력해주세요'
+                            required
+                        />
+                        <button type="submit" className="register-submit-btn">
+                            회원가입
+                        </button>
+                    </form>
+                    <p className='name-footer'>©Cookie Rocket</p>
+                </div>
+        )
+    }
+    
 }
 
 export default withRouter(RegisterPage);

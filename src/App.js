@@ -236,9 +236,14 @@ class App extends Component {
         <ScrollToTop>
           <Switch>
             {/* go to "POST 2021" page */}
-            <Route path='/post2021/:username/postwrite/' component={POSTWRITE} />
-            <Route path='/post2021/:username/' component={POSTPOST} />
-            <Route path ='/post2021/' component={POSTSTART}/>
+            <Route path='/post2021/:username/postwrite/' component={() => <POSTWRITE language={`Kor`}/>} />
+            <Route path='/post2021/:username/' component={() => <POSTPOST language={`Kor`}/>} />
+            <Route path ='/post2021/' component={() => <POSTSTART language={`Kor`}/>}/>
+
+            {/* go to `post2022Eng` page */}
+            <Route path='/post2022Eng/:username/postwrite/' component={() => <POSTWRITE language={`Eng`}/>} />
+            <Route path='/post2022Eng/:username/' component={() => <POSTPOST language={`Eng`}/>} />
+            <Route path ='/post2022Eng/' component={() => <POSTSTART language={`Eng`}/>}/>
 
             {/* "Main" page */}
             <Route path='/' exact>
@@ -331,7 +336,8 @@ class App extends Component {
             <Route exact path="/login" component={Auth(LoginPage, false)} />
             <Route exact path="/register" component={Auth(RegisterPage, false)} />
             {/* <Route exact path="/MyPage/:userId" component={Auth(MyPage, true)} /> */}
-            <Route exact path={`${"/auth/" || "/auth"}`} component={AuthPage} />
+            <Route exact path={`${"/auth/" || "/auth"}`} component={() => <AuthPage language={`Kor`}/>} />
+            {/* <Route exact path={`${"/authEng/" || "/authEng"}`} component={() => <AuthPage language={`Eng`} />} /> */}
           </Switch>
         </ScrollToTop>
       </Router>
