@@ -35,7 +35,7 @@ body {
 }
 
 .main-link-block {
-  display: inline-block;
+  display: block;
   margin: auto 0rem;
 }
 

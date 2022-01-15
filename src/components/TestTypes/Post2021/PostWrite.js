@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback, Fragment } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import axios from 'axios';
-import COMPLETE from '../../../api/PostImg/Object/complete_send_mail.png';
 import ReactGA from 'react-ga';
 
 function PostWrite(props) {
@@ -14,6 +13,7 @@ function PostWrite(props) {
     const [userNickname, setUserNickname] = useState('');
     const [upbarBtnImg, setUpbarBtnImg] = useState(``);
     const [sendMailBtnImg, setSendMailBtnImg] = useState(``);
+    const [completePopupBg, setCompletePopupBg] = useState(``)
     const [completeToPostbox, setCompleteToPostbox] = useState(``)
     const [completeToClose, setCompleteToClose] = useState(``)
     const nickNameInput = "https://images.ktestone.com/PostImg/MailForm/nickname-input.png"
@@ -59,11 +59,13 @@ function PostWrite(props) {
             setSendMailBtnImg("https://images.ktestone.com/PostImg/Button/direct-send-mail-btn.png");
             setCompleteToPostbox("https://images.ktestone.com/PostImg/Button/complete-to-postbox-btn.png");
             setCompleteToClose("https://images.ktestone.com/PostImg/Button/complete-close-btn.png");
+            setCompletePopupBg("https://images.ktestone.com/PostImg/Object/complete_send_mail.png");
         } else if(props.language === `Eng`) {
             setUpbarBtnImg("https://images.ktestone.com/PostImg/English/Button/up_bg_bar.png");
             setSendMailBtnImg("https://images.ktestone.com/PostImg/English/Button/send-mail-btn.png");
             setCompleteToPostbox("https://images.ktestone.com/PostImg/English/Button/complete-to-postbox-btn.png");
             setCompleteToClose("https://images.ktestone.com/PostImg/English/Button/complete-close-btn.png");
+            setCompletePopupBg("https://images.ktestone.com/PostImg/English/Object/complete_send_mail.png");
         }
     }, [getUserNickname, props])
 
@@ -75,7 +77,7 @@ function PostWrite(props) {
 
     const completePopup = <div className="popup">
                             <div className="popup-inner">
-                                <img src={COMPLETE} alt="메시지 보내기 완료!" className='postwrite-send-complete-postbox'/>
+                                <img src={completePopupBg} alt="메시지 보내기 완료!" className='postwrite-send-complete-postbox'/>
                                 <img
                                     src={completeToPostbox}
                                     alt="내 우편함 만들기"

@@ -67,7 +67,7 @@ function Post2021(props) {
                             <meta property="og:url" content="https://ktestone.com/kapable.github.io/post2022Eng/"/>
                             <meta property="og:title" content="Persoanl Mailbox - K-test"/>
                             <meta property="og:description" content="My Persoanl Mailbox"/>
-                            <meta property="og:image" content="https://images.ktestone.com/meta/post2021/post2021-meta.png"/>
+                            <meta property="og:image" content="https://images.ktestone.com/meta/post2021/post2022Eng-meta.png"/>
                             <meta property="og:image:alt" content="Persoanl Mailbox - K-test" />
 
                             {/* <!-- Twitter --> */}
@@ -75,7 +75,7 @@ function Post2021(props) {
                             <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/post2022Eng/"/>
                             <meta property="twitter:title" content="Persoanl Mailbox - K-test"/>
                             <meta property="twitter:description" content="My Persoanl Mailbox"/>
-                            <meta property="twitter:image" content="https://images.ktestone.com/meta/post2021/post2021-meta.png"/>
+                            <meta property="twitter:image" content="https://images.ktestone.com/meta/post2021/post2022Eng-meta.png"/>
                             <meta property="twitter:image:alt" content="Persoanl Mailbox - K-test" />
                         </Helmet>
             return _PostMetaTag
