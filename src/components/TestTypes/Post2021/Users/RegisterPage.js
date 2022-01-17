@@ -42,8 +42,8 @@ function RegisterPage(props) {
     async function onSubmitHandler(e) {
         e.preventDefault();
 
-        if(nickname.length > 8) {
-            return alert("닉네임의 길이는 8자 이하여야 합니다.\nThe length of Nickname must be under 8 characters.")
+        if(nickname.length > 20) {
+            return alert("닉네임의 길이는 20자 이하여야 합니다.\nThe length of Nickname must be under 20 characters.")
         }
 
         if(password.length < 8) {
@@ -95,7 +95,7 @@ function RegisterPage(props) {
                             value={nickname}
                             onChange={onNicknameHandler}
                             className='register-nickname-form'
-                            placeholder='Under 8 characters'
+                            placeholder='Under 20 characters'
                             required
                         />
                         <label>ID</label>
@@ -153,7 +153,7 @@ function RegisterPage(props) {
                             value={nickname}
                             onChange={onNicknameHandler}
                             className='register-nickname-form'
-                            placeholder='8자 이하'
+                            placeholder='20자 이하'
                             required
                         />
                         <label>아이디</label>

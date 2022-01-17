@@ -109,7 +109,7 @@ function PostPage(props) {
 
     const nullMailRenderer = () => {
         return(
-            <div className='post-page-null-maillist'>텅! 비었어요...</div>
+            <div className='post-page-null-maillist'>{lang === `Eng` ? `Nothing...` : `텅! 비었어요...`}</div>
         )
     }
 
