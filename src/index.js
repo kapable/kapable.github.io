@@ -7,6 +7,7 @@ import React from 'react';
 import {hydrate, render} from 'react-dom';
 import './components/TestTypes/Post2021/Post2021.css';
 import './components/TestTypes/Post2021/PostPopup.css';
+import './components/TestTypes/MetaPangApply/MetaPangApply.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

@@ -1,0 +1,112 @@
+:root {
+  --weak-color: #bcdc5e;
+  --strong-color: #80c458;
+  --main-font: "kyobo", "Dongle", sans-serif;
+}
+
+/* Register */
+.metapang-register-page-bg-div {
+  background-color: white;
+  padding: 2rem 0;
+}
+
+.metapang-register-page-btn-div {
+  margin: 0 auto;
+  align-items: center;
+}
+
+.metapang-register-page-rgbtn {
+  background-color: var(--weak-color);
+  border: 0;
+  outline: 0;
+  width: 10rem;
+  height: 3rem;
+  font-weight: bold;
+}
+
+.metapang-register-page-loginbtn {
+  background-color: var(--strong-color);
+  border: 0;
+  outline: 0;
+  width: 10rem;
+  height: 3rem;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.metapang-register-submit-form {
+  margin: 0rem auto;
+  width: 14rem;
+  padding: 3rem;
+  background-color: var(--weak-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.metapang-register-submit-form > input {
+  width: 100%;
+  margin: 1rem;
+  height: 1.5rem;
+  border-width: 0.13rem;
+  border-style: solid;
+}
+
+.metapang-register-submit-form > label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  align-self: baseline;
+}
+
+.metapang-register-page-memo-comment {
+  font-size: 0.7rem;
+  margin-bottom: 1.5rem;
+  line-height: 1rem;
+}
+
+.metapang-register-submit-btn {
+  background-color: var(--strong-color);
+  border: 0;
+  outline: 0;
+  width: 10rem;
+  height: 3rem;
+  color: white;
+  font-weight: bold;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+/* login */
+
+.metapang-login-page-rgbtn {
+  background-color: var(--strong-color);
+  border: 0;
+  outline: 0;
+  width: 10rem;
+  height: 3rem;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+.metapang-login-page-loginbtn {
+  background-color: var(--weak-color);
+  border: 0;
+  outline: 0;
+  width: 10rem;
+  height: 3rem;
+  font-weight: bold;
+}
+
+.metapang-login-submit-btn {
+  background-color: var(--strong-color);
+  border: 0;
+  outline: 0;
+  width: 10rem;
+  height: 3rem;
+  color: white;
+  font-weight: bold;
+  margin-top: 2rem;
+  cursor: pointer;
+}

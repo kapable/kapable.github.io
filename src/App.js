@@ -4,6 +4,8 @@ import Intro from './components/BasicComponents/Intro'
 import ResultToIntro from './components/SubComponents/ResultToIntro'
 import ScrollToTop from './components/SubComponents/ScrollToTop'
 import TESTS from './api/TESTS'
+import METAPANGAPPLY from './components/TestTypes/MetaPangApply/LandingPage';
+import METAPANGAPPLYCOMPLETE from './components/TestTypes/MetaPangApply/CompletedPage';
 import POSTSTART from './components/TestTypes/Post2021/StartPage';
 import POSTPOST from './components/TestTypes/Post2021/PostPage';
 import POSTWRITE from './components/TestTypes/Post2021/PostWrite';
@@ -312,6 +314,10 @@ class App extends Component {
                 exact
               />
             ))}
+
+            {/* go to "MetaPang Apply" page */}
+            <Route exact path="/metapangapply/completed" component={() => <METAPANGAPPLYCOMPLETE />} />
+            <Route exact path="/metapangapply" component={() => <METAPANGAPPLY />} />
 
             {/* go to "Article" page */}
             {ARTICLES.map((item)=>(

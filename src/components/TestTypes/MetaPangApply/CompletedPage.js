@@ -1,0 +1,71 @@
+import React, { useState, useEffect, Fragment } from 'react';
+import { withRouter } from 'react-router-dom';
+import ReactGA from 'react-ga';
+import ScriptTag from 'react-script-tag'
+import styled from 'styled-components';
+import BG1 from '../../../api/MetaPang/Apply/MetaPangApplyCompleted_01.png';
+import BG2 from '../../../api/MetaPang/Apply/MetaPangApplyCompleted_02.png';
+import BG3 from '../../../api/MetaPang/Apply/MetaPangApplyCompleted_03.png';
+
+function CompletedPage(props) {
+    const plusFriendLick = 'http://pf.kakao.com/_IxnRfb';
+    // eslint-disable-next-line
+    const [isLogin, setIsLogin] = useState(props.location.state === localStorage.getItem("access_token"));
+
+    useEffect(() => {
+        console.log(props.location.state);
+        if(isLogin === false) {
+            alert("로그인 후 응모할 수 있습니다!")
+            props.history.push({
+                pathname:`/metapangapply/`,
+            })
+        }
+    }, [isLogin, props])
+
+    function adTagRenderer(){
+        return(
+            <Fragment>
+                <div id="protag-in_article_video"></div>
+                    <ScriptTag type="text/javascript">
+                        {`window.googletag = window.googletag || { cmd: [] };
+                        window.protag = window.protag || { cmd: [] };
+                        window.protag.cmd.push(function () {
+                            window.protag.display("protag-in_article_video");
+                        });`}
+                    </ScriptTag>
+            </Fragment>
+        )
+    }
+
+    const ContentImg = styled.img`
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    `
+
+    function _eventSenderGA(category, action, label){
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+    }
+
+    return (
+        <div>
+            <ContentImg src={BG1} alt="BG1" />
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={plusFriendLick}
+                onClick={() => {_eventSenderGA("Submitting", "Click KakaoPlusFriend Button", "apply completed page")}}
+            >
+                <ContentImg src={BG2} alt="BG2" className="metapang-apply-complete-kakao-plusfriend-banner"/>
+            </a>
+            <ContentImg src={BG3} alt="BG3" />
+            {adTagRenderer()}
+        </div>
+    );
+}
+
+export default withRouter(CompletedPage);
