@@ -11,8 +11,7 @@
 
 /* Start Page */
 .start-page-bg-div {
-  background-image: url("../../../api/PostImg/Background/background.png"),
-    url("https://images.ktestone.com/PostImg/Background/background.png");
+  background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -55,8 +54,7 @@
 }
 
 .register-page-bg-div {
-  background-image: url("../../../api/PostImg/Background/background.png"),
-    url("https://images.ktestone.com/PostImg/Background/background.png");
+  background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
   justify-content: center;
   align-items: center;
   -webkit-background-size: cover;
@@ -132,8 +130,7 @@
 
 /* Login Page */
 .login-page-bg-div {
-  background-image: url("../../../api/PostImg/Background/background.png"),
-    url("https://images.ktestone.com/PostImg/Background/background.png");
+  background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
   justify-content: center;
   align-items: center;
   -webkit-background-size: cover;
@@ -283,8 +280,7 @@
 
 /* Write Page */
 .write-page-div {
-  background-image: url("../../../api/PostImg/Background/background.png"),
-    url("https://images.ktestone.com/PostImg/Background/background.png");
+  background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
   display: flex;
   flex-direction: column;
   padding-bottom: 30rem;
