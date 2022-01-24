@@ -15,6 +15,10 @@ function MainPage(props) {
                 <img className='main-header' src={MAINHEADER} alt="K-test"/>
             </div>
             <OhterLangIconsMain />
+            {/* Go to POST 2021 */}
+            <Link to='/metapangapply/' className="main-link-block" key="metapangapply-banner">
+                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/metaPangApply-thumb.png`} alt="POST-2021" />
+            </Link>
             {/* Go to Jelling Games Banner */}
             <a
                 target='_blank'
@@ -35,12 +39,12 @@ function MainPage(props) {
             </Link> */}
 
             {/* Go to POST 2021 */}
-            <Link to='/post2021/' className="main-link-block" key="article-banner">
+            <Link to='/post2021/' className="main-link-block" key="post2021-banner">
                 <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2021-thumb.png`} alt="POST-2021" />
             </Link>
 
             {/* Go to POST 2021 */}
-            <Link to='/post2022Eng/' className="main-link-block" key="article-banner">
+            <Link to='/post2022Eng/' className="main-link-block" key="post2022Eng-banner">
                 <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022Eng-thumb.png`} alt="POST-2021" />
             </Link>
 
