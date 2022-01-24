@@ -6,12 +6,6 @@ import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import RegisterPage from './RegisterPage';
 import LoginPage from './LoginPage';
-import BG1 from '../../../api/MetaPang/Apply/MetaPangApply_01.png';
-import BG2 from '../../../api/MetaPang/Apply/MetaPangApply_02.png';
-import BG3 from '../../../api/MetaPang/Apply/MetaPangApply_03.png';
-import BG4 from '../../../api/MetaPang/Apply/MetaPangApply_04.png';
-import APPLYBTN from '../../../api/MetaPang/Apply/MetaPangApply_Btn.png';
-import METATAGIMG from '../../../api/MetaPang/Apply/MetaPangMetatagImg.png';
 
 function LandingPage(props) {
     const [mode, setMode] = useState('register');
@@ -77,7 +71,7 @@ function LandingPage(props) {
                         <meta property="og:url" content="https://ktestone.com/kapable.github.io/metapangapply/"/>
                         <meta property="og:title" content="메타팡 응모하기 - 케이테스트"/>
                         <meta property="og:description" content="메타버스 놀이터 메타팡"/>
-                        <meta property="og:image" content={METATAGIMG}/>
+                        <meta property="og:image" content={`https://images.ktestone.com/MetaPang/Apply/MetaPangMetatagImg.png`}/>
                         <meta property="og:image:alt" content="메타팡 응모하기 - 케이테스트" />
 
                         {/* <!-- Twitter --> */}
@@ -85,7 +79,7 @@ function LandingPage(props) {
                         <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/metapangapply/"/>
                         <meta property="twitter:title" content="메타팡 응모하기 - 케이테스트"/>
                         <meta property="twitter:description" content="메타버스 놀이터 메타팡"/>
-                        <meta property="twitter:image" content={METATAGIMG}/>
+                        <meta property="twitter:image" content={`https://images.ktestone.com/MetaPang/Apply/MetaPangMetatagImg.png`}/>
                         <meta property="twitter:image:alt" content="메타팡 응모하기 - 케이테스트" />
                     </Helmet>
         return _PostMetaTag
@@ -97,17 +91,17 @@ function LandingPage(props) {
         } else if (mode === 'login') {
             return <LoginPage setMode={setMode} setTok={setTok}/>
         } else if (mode === 'logined') {
-            return <ContentImg src={APPLYBTN} alt="APPLYBTN" onClick={applyBtnHandler} style={{cursor: 'pointer'}}/>
+            return <ContentImg src={`https://images.ktestone.com/MetaPang/Apply/MetaPangApply_Btn.png`} alt="APPLYBTN" onClick={applyBtnHandler} style={{cursor: 'pointer'}}/>
         }
     }
 
     return (
         <BackgroundDiv>
             {metaTagRenderer()}
-            <ContentImg src={BG1} alt="BG1" />
-            <ContentImg src={BG2} alt="BG1" />
-            <ContentImg src={BG3} alt="BG1" />
-            <ContentImg src={BG4} alt="BG1" />
+            <ContentImg src={`https://images.ktestone.com/MetaPang/Apply/MetaPangApply_01.png`} alt="BG1" />
+            <ContentImg src={`https://images.ktestone.com/MetaPang/Apply/MetaPangApply_02.png`} alt="BG1" />
+            <ContentImg src={`https://images.ktestone.com/MetaPang/Apply/MetaPangApply_03.png`} alt="BG1" />
+            <ContentImg src={`https://images.ktestone.com/MetaPang/Apply/MetaPangApply_04.png`} alt="BG1" />
             <div>
                 {formRenderer(mode)}
                 {adTagRenderer()}

@@ -3,9 +3,6 @@ import { withRouter } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import ScriptTag from 'react-script-tag'
 import styled from 'styled-components';
-import BG1 from '../../../api/MetaPang/Apply/MetaPangApplyCompleted_01.png';
-import BG2 from '../../../api/MetaPang/Apply/MetaPangApplyCompleted_02.png';
-import BG3 from '../../../api/MetaPang/Apply/MetaPangApplyCompleted_03.png';
 
 function CompletedPage(props) {
     const plusFriendLick = 'http://pf.kakao.com/_IxnRfb';
@@ -53,16 +50,16 @@ function CompletedPage(props) {
 
     return (
         <div>
-            <ContentImg src={BG1} alt="BG1" />
+            <ContentImg src={`https://images.ktestone.com/MetaPang/Apply/MetaPangApplyCompleted_01.png`} alt="BG1" />
             <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href={plusFriendLick}
                 onClick={() => {_eventSenderGA("Submitting", "Click KakaoPlusFriend Button", "apply completed page")}}
             >
-                <ContentImg src={BG2} alt="BG2" className="metapang-apply-complete-kakao-plusfriend-banner"/>
+                <ContentImg src={`https://images.ktestone.com/MetaPang/Apply/MetaPangApplyCompleted_02.png`} alt="BG2" className="metapang-apply-complete-kakao-plusfriend-banner"/>
             </a>
-            <ContentImg src={BG3} alt="BG3" />
+            <ContentImg src={`https://images.ktestone.com/MetaPang/Apply/MetaPangApplyCompleted_03.png`} alt="BG3" />
             {adTagRenderer()}
         </div>
     );

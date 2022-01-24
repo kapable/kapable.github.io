@@ -15,6 +15,7 @@ import { Helmet } from 'react-helmet';
 import ScriptTag from 'react-script-tag'
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 import JELLINGBANNERENG from '../../api/DefaultImg/go-to-jelling-eng.png';
+import KAKAOPLUSFRIEND from '../../api/DefaultImg/go-to-kakao-plusfriend.png';
 
 class Result extends Component {
     constructor(props){
@@ -54,7 +55,7 @@ class Result extends Component {
             category: category,
             action: action,
             label: label
-          });
+        });
     }
     _onBackToStartButtonClick(){
         this._eventSenderGA("Paging", "Click Re-test Button", "result page");
@@ -78,36 +79,36 @@ class Result extends Component {
         // Delete Adfit for PPL contents
         let ppl_list = ['personalIncense', 'personalTaro', 'jaetech', 'wealthluck']
         if((this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) && !ppl_list.includes(this.state.current_test)) {
-          return(
+        return(
             <Fragment>
-              <ins className="kakao_ad_area" style={{display:"none"}}
-                data-ad-unit    = "DAN-9iBiNdMXgMni4I3u"
-                data-ad-width   = "320"
-                data-ad-height  = "100"></ins>
-              <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+                <ins className="kakao_ad_area" style={{display:"none"}}
+                    data-ad-unit    = "DAN-9iBiNdMXgMni4I3u"
+                    data-ad-width   = "320"
+                    data-ad-height  = "100"></ins>
+                <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
-          )
+        )
         } else if(this.state.sharable_url.includes("https://kapable.github.io/")) {
-          return(
+        return(
             <Fragment>
-              <ins className="kakao_ad_area" style={{display:"none"}}
-                data-ad-unit    = "DAN-oXGz3zjd52vzl7Qh"
-                data-ad-width   = "320"
-                data-ad-height  = "100"></ins>
-              <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
+                <ins className="kakao_ad_area" style={{display:"none"}}
+                    data-ad-unit    = "DAN-oXGz3zjd52vzl7Qh"
+                    data-ad-width   = "320"
+                    data-ad-height  = "100"></ins>
+                <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
-          )
+        )
         } else if(this.state.sharable_url.includes("niair.xyz")) {
             return(
-              <Fragment>
-                {/* 결과 푸터 */}
-                <ins className="adsbygoogle"
-                    style={{display:"block"}}
-                    data-ad-client="ca-pub-2382342018701919"
-                    data-ad-slot="3364974256"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-              </Fragment>
+                <Fragment>
+                    {/* 결과 푸터 */}
+                    <ins className="adsbygoogle"
+                        style={{display:"block"}}
+                        data-ad-client="ca-pub-2382342018701919"
+                        data-ad-slot="3364974256"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                </Fragment>
             )
         }
     }
@@ -291,9 +292,9 @@ class Result extends Component {
                     <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://ktestone.com/kapable.github.io/lovejewerly/"
+                    href='http://pf.kakao.com/_IxnRfb'
                     className="to-ppl-banner-text"
-                    > <img src="https://images.ktestone.com/main-thumbnail/lovejewerly-thumb.png" className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    > <img src={KAKAOPLUSFRIEND} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                     <a
                     target="_blank"
                     rel="noopener noreferrer"
