@@ -96,10 +96,15 @@
 
       </script-->
   <script type="text/javascript">
+    const invalidAdsRoutes = ['zipkok'];
     window.googletag = window.googletag || { cmd: [] };
     window.protag = window.protag || { cmd: [] };
     window.protag.cmd.push(function () {
+      if(invalidAdsRoutes.some(routes => window.location.href.includes(routes))) {
+        null;
+      } else {
         window.protag.display("protag-sticky-bottom");
+      }
     });
   </script>
   </body>
