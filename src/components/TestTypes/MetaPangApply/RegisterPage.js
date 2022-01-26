@@ -10,8 +10,39 @@ function RegisterPage(props) {
     const [phoneNumber, setPhoneNumber] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [agreeInfoState, setAgreeInfoState] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
     const api_url = 'https://api.ktestone.com';
     
+    const infoState = <div className="metapang-popup">
+                        <div className="metapang-popup-inner">
+                            <button onClick={() => setShowPopup(false)} className='metapang-popup-close-btn'>X</button>
+                            <p className="metapang-popup-title">개인정보 처리 방침</p>
+                            <div className="metapang-popup-article-div">
+                                <article>
+                                    <h3>1. 개인정보 수집 이용 보유 파기</h3>
+                                    <p>쿠키로켓은 다음과 같이 개인정보를 수집∙이용하고 있습니다. 개인정보가 필요한 시점에 최소한의 정보만을 수집하며, 고지한 범위 내에서만 사용합니다. 또한 사전 동의 없이 고지한 범위를 초과하여 이용하거나 외부에 공개하지 않습니다.</p>
+                                    <h5>필수 항목</h5>
+                                    <p>회원가입 시: 닉네임, 아이디, 이메일 주소, 비밀번호, 연락처</p>
+                                    <h5>1.1. 개인정보 수집 방법</h5>
+                                    <p>회원 가입 및 사이트 일부 서비스 이용을 위해 필수적인 정보를 직접 입력</p>
+                                    <h5>1.2 법령에 의하여 수집∙이용되는 회원 정보</h5>
+                                    <p>통신비밀보호법에 근거한 3개월 내 서비스 방문 기록</p>
+                                    <h3>2. 개인정보 제3자 제공</h3>
+                                    <p>응모 등과 같은 일부 서비스 이용시 원활한 시행을 위하여 관련된 정보를 필요한 범위 내에서 제3자에게 전달합니다.</p>
+                                    <h3>3. 수집한 개인정보 취급 위탁</h3>
+                                    <p>쿠키로켓은 개인정보를 안전하게 처리하고 있는지 지속적으로 관리 감독하고 있으며, 필요사항이 종료된 때에 보유하고 있는 개인정보는 즉시 파기하게 하고 있습니다.</p>
+                                    <h3>4. 개인정보 파기</h3>
+                                    <p>수집∙이용목적이 달성된 개인정보의 경우 별도의 DB에 옮겨져 내부 규정 및 관련 법령을 준수하여 안전하게 보관되며, 정해진 기간이 종료되었을 때 지체 없이 파기됩니다. 이때 별도의 DB로 옮겨진 개인정보는 이용자가 동의한 목적 또는 법률에 정해진 경우 외 다른 목적으로 이용되지 않습니다. 단, 개인정보 도용 등 원치 않는 탈퇴에 대비하기 위하여 회원탈퇴 요청 후 7일 간 개인정보를 별도의 DB에서 보존 후 완전 파기합니다.</p>
+                                    <h3>5. 이용자의 권리</h3>
+                                    <p>쿠키로켓 이용자 본인 및 법정대리인은 언제든지 수집 정보에 대해 수정, 동의, 철회, 삭제, 열람 등을 요청할 수 있습니다. 다만 동의 철회, 삭제 시 서비스의 일부 또는 전부 이용이 제한될 수 있습니다.</p>
+                                    <h3>6. 이용자의 의무</h3>
+                                    <p>이용자 본인은 자신의 개인정보를 보호할 의무가 있습니다. 쿠키로켓의 귀책사유 없이 ID(이메일), 비밀번호, 접근매체 등의 양도∙대여∙분실이나 로그인 상태에서 이석 등 본인의 부주의, 또는 관계법령에 의한 보안조치로 차단할 수 없는 방법이나 기술을 사용한 해킹 등 쿠키로켓가 통제할 수 없는 인터넷상의 문제 등으로 개인정보가 유출되어 발생한 문제에 대해서 쿠키로켓는 책임을 지지 않습니다.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
     function _eventSenderGA(category, action, label){
         ReactGA.event({
             category: category,
@@ -67,6 +98,10 @@ function RegisterPage(props) {
 
         if(password !== confirmPassword) {
             return alert("비밀번호와 일치하지 않습니다.")
+        }
+
+        if(agreeInfoState !== true) {
+            return alert("개인정보 처리방침에 동의해주세요.")
         }
 
         let body = {
@@ -154,10 +189,26 @@ function RegisterPage(props) {
                             placeholder='한번 더 입력해주세요'
                             required
                         />
+                        <div class="metapang-register-agree-info-div" >
+                            <input
+                                type='checkbox'
+                                value={agreeInfoState}
+                                onChange={() => {
+                                    setAgreeInfoState(!agreeInfoState);
+                                }}
+                                required
+                            />
+                            <label>개인정보 처리방침 동의* <p style={{ cursor: 'pointer' }} onClick={() => {setShowPopup(!showPopup)}}>보기</p></label>
+                        </div>
                         <button type="submit" className="metapang-register-submit-btn">
                             회원가입
                         </button>
                     </form>
+                    <div className="metapang-info-state-div">
+                        {showPopup ? 
+                            infoState
+                            : null}
+                    </div>
                 </div>
     );
 }

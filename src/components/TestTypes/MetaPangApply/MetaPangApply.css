@@ -54,10 +54,23 @@
   border-style: solid;
 }
 
-.metapang-register-submit-form > label {
+.metapang-register-submit-form > label,
+.metapang-register-submit-form > div > label {
   font-size: 0.9rem;
   font-weight: bold;
   align-self: baseline;
+}
+
+.metapang-register-agree-info-div {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.metapang-register-agree-info-div > label > p {
+  color: grey;
+  text-decoration: underline;
+  display: inline;
 }
 
 .metapang-register-page-memo-comment {
@@ -108,5 +121,63 @@
   color: white;
   font-weight: bold;
   margin-top: 2rem;
+  cursor: pointer;
+}
+
+.metapang-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.metapang-popup-inner {
+  position: relative;
+  background-color: white;
+  left: 0%;
+  /* right: 3rem; */
+  top: 7rem;
+  bottom: 3rem;
+  margin: auto;
+  width: 23rem;
+  height: 40rem;
+}
+
+.metapang-popup-article-div {
+  margin: 5rem 2rem;
+}
+
+.metapang-popup-article-div > article {
+  height: 30rem;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.metapang-popup-title {
+  z-index: 1;
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13rem;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.metapang-popup-close-btn {
+  position: relative;
+  top: -2.5rem;
+  left: 45%;
+  font-size: 2rem;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
   cursor: pointer;
 }
