@@ -89,7 +89,7 @@ class Quiz extends Component {
                         className="option-btn"
                         style={{'color':'black'}}
                     >{qAndA.answers[i].content}</button>)
-            } else if (this.props.scoreType === "typeCountingMBTI"){
+            } else if (this.props.scoreType === "typeCountingMBTI" || this.props.scoreType === "percentageMBTI"){
                 _questions.push(
                     <button
                         key={this.props.quizNum-i}

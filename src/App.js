@@ -50,12 +50,16 @@ class App extends Component {
       }
       k = k + 1;
     }
+
     let m = 0;
     let _all_articles_url = [];
     while (m < ARTICLES.length) {
       _all_articles_url.push('/'+ARTICLES[m].mainUrl+'/');
       m = m + 1;
     }
+
+    let _pct_test = TESTS.filter((test) => test.info.scoreType === 'percentageMBTI');
+
     this.state = {
       result_route:'result/',
       all_tests_url:_all_tests_url,
@@ -63,6 +67,7 @@ class App extends Component {
       all_tests_result_url:_all_tests_result_url,
       final_render_routes:_final_render_routes,
       sharable_url:_sharable_url,
+      pct_test: _pct_test,
       ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
       lang_list:['Kor', 'JP', 'Eng', 'CN', 'Rus' ,'Others'],
       articleCategory:['humor', 'red']

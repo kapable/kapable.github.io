@@ -16,6 +16,7 @@ import ScriptTag from 'react-script-tag'
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 import JELLINGBANNERENG from '../../api/DefaultImg/go-to-jelling-eng.png';
 import KAKAOPLUSFRIEND from '../../api/DefaultImg/go-to-kakao-plusfriend.png';
+import PCTMBTIBAR from '../SubComponents/PctMBTIBar';
 
 class Result extends Component {
     constructor(props){
@@ -29,9 +30,9 @@ class Result extends Component {
             _sharable_url = window.location.href
         }
 
-        const _current_url = _sharable_url.split('/').filter(function(t) {return t !== ""})
-        const _current_test = _current_url.reverse()[2]
-        const _current_result = _current_url[0]
+        const _current_url = _sharable_url.split(/[?/]/).filter(function(t) {return t !== ""})
+        const _current_test = _current_url[3]
+        const _current_result = _current_url[5]
 
         this.state = {
             mode:"result",
@@ -39,6 +40,7 @@ class Result extends Component {
             current_url:_current_url,
             current_test:_current_test,
             current_result:_current_result,
+            current_test_contents: null,
             num_shares_count:0,
         }
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this)
@@ -344,35 +346,17 @@ class Result extends Component {
             </Fragment>
         )
     }
+
     resultRender(){
         // searching the result content by current url path
 
-        let final_type = ''
-        let final_desc = ''
-        let img_src = ''
-        let test_current = ''
-        let desc_test_current = ''
-        let i = 0;
-        let _current_test_contents ;
-        while(i<TESTS.length){
-            if(TESTS[i].info.mainUrl === this.state.current_test){
-                _current_test_contents = TESTS[i] // for storytelling
-                let j = 0;
-                while(j<TESTS[i].results.length){
-                    if(TESTS[i].results[j].query === this.state.current_result){
-                        final_type = TESTS[i].results[j].type
-                        final_desc = TESTS[i].results[j].desc
-                        img_src = TESTS[i].results[j].img_src
-                        test_current = TESTS[i].info.mainTitle
-                        desc_test_current = TESTS[i].info.subTitle
-                        break
-                    }
-                    j = j + 1;
-                }
-                // break
-            }
-            i = i + 1;
-        }
+        const _current_test_contents = TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0];
+        let _current_test_result = _current_test_contents.results.filter((res) => res.query === this.state.current_result)[0];
+        let final_type = _current_test_result.type
+        let final_desc = _current_test_result.desc
+        let img_src = _current_test_result.img_src
+        let test_current = _current_test_contents.info.mainTitle
+        let desc_test_current = _current_test_contents.info.subTitle
 
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
@@ -557,6 +541,42 @@ class Result extends Component {
             }
             
         //  and other case of Type Quizes
+        } else if (_current_test_contents.info.scoreType === 'percentageMBTI') {
+            let result_score = this.state.current_url[6].match(/\d+/g)[0];
+            return (
+                <Fragment>
+                    <Helmet>
+                        {/* <!-- Primary Meta Tags --> */}
+                        <title>{test_current}-케이테스트</title>
+                        <meta name="title" content={test_current+'-케이테스트'}/>
+                        <meta name="description" content={final_desc + ':' + desc_test_current} data-react-helmet="true"/>
+                        <link rel="main-url" href={this.state.sharable_url}/>
+
+                        {/* <!-- Open Graph / Facebook --> */}
+                        <meta property="og:type" content="website"/>
+                        <meta property="og:url" content={this.state.sharable_url}/>
+                        <meta property="og:title" content={test_current+'-케이테스트'}/>
+                        <meta property="og:description" content={final_desc + ':' + desc_test_current}/>
+                        {/* <meta property="og:image" content={og_img_url}/>
+                        <meta property="og:image:width" content="800"/>
+                        <meta property="og:image:height" content="400"/> */}
+                        <meta property="og:image:alt" content={this.state.current_result} />
+
+                        {/* <!-- Twitter --> */}
+                        <meta property="twitter:card" content="summary_large_image"/>
+                        <meta property="twitter:url" content={this.state.sharable_url}/>
+                        <meta property="twitter:title" content={test_current+'-케이테스트'}/>
+                        <meta property="twitter:description" content={final_desc + ':' + desc_test_current}/>
+                        {/* <meta property="twitter:image" content={og_img_url}/>
+                        <meta property="og:image:width" content="800"/>
+                        <meta property="og:image:height" content="400"/> */}
+                        <meta property="twitter:image:alt" content={this.state.current_result} />
+                    </Helmet>
+                    <PCTMBTIBAR result_score={result_score} />
+                    {/* <img src={PCTMBTIBG} className='result-pct-mbti-bg-img' alt={'MBTI'} /> */}
+                    {/* <img src={img_src} className='result-img' alt={final_type} /> */}
+                </Fragment>
+            )
         } else if(this.state.current_test === "dogSounds" || this.state.current_test === "dogSoundsEng") {
             return(
                 <Fragment>
@@ -724,7 +744,7 @@ class Result extends Component {
                     </div>
                 </div>
                 {/* New Test banners */}
-                {this.horizontalNewTestRenderer()}
+                {/* {this.horizontalNewTestRenderer()} */}
 
                 {/* CPC Banner Result footer */}
                 {/* {this.cpcBannerResultFooterScriptor()} */}

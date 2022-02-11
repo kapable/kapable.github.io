@@ -298,6 +298,46 @@ class Intro extends Component {
                     return this.state.current_test.results[z]
                 }
             }
+        } else if (this.state.scoreType === "percentageMBTI") {
+            let final_result_obj = this.state.answer_type_obj;
+
+            // for creating an array which contains VS between types ex.["EI", "SN", "TF", "JP"]
+            function onlyUnique(value, index, self) {
+                return self.indexOf(value) === index;
+            }
+            let _which_type_arr = [];
+            for(let k=0; k<this.state.current_test.questions.length; k++) {
+                _which_type_arr.push(this.state.current_test.questions[k].which);
+            }
+            _which_type_arr = _which_type_arr.filter(onlyUnique);
+
+            // get max value & type from Each VS
+            let final_type = '';
+            for(let i=0; i<_which_type_arr.length; i++){
+                let first_type = _which_type_arr[i][0]
+                let second_type = _which_type_arr[i][1]
+                let type_arr = [first_type, second_type]
+                let max_val = 0
+                // for split in case of odd | even questions in the same which(ex. EI/SN..)
+                if(final_result_obj[first_type] !== final_result_obj[second_type]) {
+                    max_val = Math.max(final_result_obj[first_type], final_result_obj[second_type])
+                    // eslint-disable-next-line
+                    type_arr.filter(item => final_result_obj[item] === max_val).forEach(item => final_type += item)
+                } else {
+                    final_type += type_arr[0]
+                }
+
+            }
+
+            // return 'THE' result TYPE from TESTS.js
+            for (let z=0;z<this.state.current_test.results.length;z++){
+                if(final_type === this.state.current_test.results[z].type){
+                    return ({
+                        result_type: this.state.current_test.results[z],
+                        type_count: this.state.answer_type_obj,
+                    })
+                }
+            }
         } else if (this.state.scoreType === "dualMBTI") {
             let final_type = this.state.counted_score;
             for (let k = 0; k < this.state.current_test.results.length; k++){
@@ -390,7 +430,7 @@ class Intro extends Component {
                     }.bind(this)}
                 ></StoryTelling>
                 return _page
-            } else if (this.state.scoreType === "typeCountingMBTI") {
+            } else if (this.state.scoreType === "typeCountingMBTI" || this.state.scoreType === "percentageMBTI") {
                 let _page = <Quiz
                 qAndA={this.state.qAndA}
                 quizNum={this.state.quizNumber}
@@ -505,8 +545,8 @@ class Intro extends Component {
     resultPageRender(){
         // go to result page
         let result_contents = this.resultCaculator();
-        let final_score_query = result_contents.query // <----------------query export
         if (this.state.current_test.info.mainUrl === "dogSounds" || this.state.current_test.info.mainUrl === "dogSoundsEng") {
+            let final_score_query = result_contents.query // <----------------query export
             return(
                 <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
                     <Route path={this.state.result_url+final_score_query + '/'} component={() => <Result dog_name={this.state.custom_name}/>}/>
@@ -514,13 +554,33 @@ class Intro extends Component {
                 </Router>
             )
         } else if(this.state.current_test.info.mainUrl === "facialExpressionAnalyzer" || this.state.current_test.info.mainUrl === "facialExpressionAnalyzerEng" || this.state.current_test.info.mainUrl === "facialExpressionAnalyzerCN") {
+            let final_score_query = result_contents.query // <----------------query export
             return(
                 <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
                     <Route path={this.state.result_url+final_score_query + '/'} component={() => <Result pics={this.state.custom_name} ment={result_contents.comment}/>}/>
                     <Redirect to={this.state.result_url+final_score_query + '/'} />
                 </Router>
             )
+        } else if(this.state.current_test.info.mainUrl === 'percentageMBTI2022') {
+            let final_score_query = result_contents.result_type.query
+            let type_order = ['E','I','S','N','T','F','P','J'];
+            let searchQuery = ''
+            type_order.forEach((t) => {
+                searchQuery = searchQuery.concat(result_contents.type_count[t])
+            });
+            return(
+                <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
+                    <Route
+                        path={this.state.result_url+final_score_query}
+                        component={() => <Result />}/>
+                    <Redirect to={{
+                        pathname: this.state.result_url+final_score_query,
+                        search: `?pct=${searchQuery}`
+                        }} />
+                </Router>
+            );
         } else {
+            let final_score_query = result_contents.query // <----------------query export
             return(
                 <Router basename={'/kapable.github.io/'+ this.state.current_test.info.mainUrl}>
                     <Route path={this.state.result_url+final_score_query + '/'} component={Result}/>
