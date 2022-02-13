@@ -23,6 +23,450 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // %MBTI
+    {
+        info : {
+            mainTitle:"percentageMBTI",
+            subTitle:"percentageMBTI",
+            mainUrl:"percentageMBTI2022",
+            scoreType:"percentageMBTI",
+            mainImage:"https://images.ktestone.com/introImages/personalColor2022-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColor2022-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '다른 사람들이 나를 볼 때\n나와 가까운 것은?',
+                answers:[
+                    {
+                        type: "E",
+                        content: '나와 함께 있을 때 마음이 열리는 것 같다.'
+                    },
+                    {
+                        type: "I",
+                        content: '내성적이며 내 생각이나 마음을 알기 어렵다고 한다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "다른 사람들과 함께 있을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        content: "혼자 있는 것도 나쁘지는 않지만\n다른 사람과 함께할 때."
+                    },
+                    {
+                        type: "I",
+                        content: "같이 있는 것도 좋지만\n혼자 있어야 에너지를 얻을 수 있다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "다른 사람들과 모임(미팅) 후 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        content: "오늘 하루 너무 피곤했지만 다같이 함께하니\n행복하고 즐거우며 에너지를 얻는다."
+                    },
+                    {
+                        type: "I",
+                        content: "다 같이 있는 것도 즐겁고 행복했지만\n매우 피곤하고 에너지가 다 떨어졌다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: '내가 더 스트레스받는 상황은?',
+                answers:[
+                    {
+                        type: "E",
+                        content: '질문을 했는데 답변이 빨리\n돌아오지 않으면 스트레스받는다.'
+                    },
+                    {
+                        type: "I",
+                        content: '누군가 질문을 했을 때,\n대답할 생각이 필요하지만 생각할 시간조차\n주지 않을 때 스트레스 받는다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "새로운 것을 시작할 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        content: "일단 시작하면 더 좋은 생각이 떠오르기\n때문에 먼저 행동으로 움직인다."
+                    },
+                    {
+                        type: "I",
+                        content: "모든 시작을 하기 전 충분한 준비 시간이\n필요하고 심사숙고하게 생각한다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 더 원하는 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        content: "확실하고 믿을만한 사실이다."
+                    },
+                    {
+                        type: "N",
+                        content: "사실이 아니더라도 실험적이며 미래적인 생각이다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나와 가까운 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        content: "사실주의적이며 몸이 먼저 나서는 스타일이다."
+                    },
+                    {
+                        type: "N",
+                        content: "비현실적인 생각을 많이 하고 생각이 꼬리를 문다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "일(과제) 할 때 나와 비슷한 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        content: "한 번에 하나의 작업을 끝낸 후\n다른 업무를 하는 것이 좋다."
+                    },
+                    {
+                        type: "N",
+                        content: "한 가지 일에만 몰두하면 지루하기 때문에\n여러 업무를 다양하게 하는 걸 선호한다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "다른 사람들과 같이 회의하며\n새로운 아이디어를 생각할 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        content: "누군가 제시한 아이디어가 현실 가능한지 생각해본다."
+                    },
+                    {
+                        type: "N",
+                        content: "누군가 독창적인 아이디어를 제시하면\n상상함과 동시에 새로운 아이디어들이 떠오른다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "둘 중 나와 더 가까운 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        content: "난 나에게 주어진 기존의 것들을 잘 해낸다."
+                    },
+                    {
+                        type: "N",
+                        content: "난 새로운 도전을 잘하며 두려움이 없다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "다른 사람과 대화할 때,\n거슬린다고 생각되는 것은?",
+                answers:[
+                    {
+                        type: "T",
+                        content: "대화의 주제에 벗어나거나 잘못된 사실을 말할 때."
+                    },
+                    {
+                        type: "F",
+                        content: "다른 사람의 감정을 무시하는 표현을 할 때."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "결정할 때 내가 더\n중요시 생각하는 부분은?",
+                answers:[
+                    {
+                        type: "T",
+                        content: "다른 사람이 싫어하더라도\n옳은 것으로 생각하면 결정한다."
+                    },
+                    {
+                        type: "F",
+                        content: "내 가치관과 감정이 좋은 것이라고 생각되면 결정한다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "‘선의의 거짓말’에 대한\n내 생각과 비슷한 것은?",
+                answers:[
+                    {
+                        type: "T",
+                        content: "그래도 거짓말은 나쁜 것이니\n선의의 거짓말이라는 것은 말의 모순이다."
+                    },
+                    {
+                        type: "F",
+                        content: "선의의 거짓말이 거듭되면 나쁘긴 하지만\n왜 그랬는지 이유를 알면 이해가 간다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "나와 더 가까운 것은?",
+                answers:[
+                    {
+                        type: "T",
+                        content: "나는 노력하는 과정보다 결과가 중요하다."
+                    },
+                    {
+                        type: "F",
+                        content: "난 결과보다 노력해서 해내는 과정이 중요하다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "누군가를 설득할 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        content: "상대방의 의견보다 더 합리적이고\n논리적인 방안을 제시한다."
+                    },
+                    {
+                        type: "F",
+                        content: "상대방의 감정을 공감하면서\n대화하며 설득하려고 노력한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "‘계획’에 대한 내 생각과 비슷한 것은?",
+                answers:[
+                    {
+                        type: "J",
+                        content: "준비되어 있다는 편안함을 위해\n미리미리 계획해야 마음의 안정감을 느낀다."
+                    },
+                    {
+                        type: "P",
+                        content: "내가 하고 싶은 일을 자유롭게\n할 수 있을 때 마음이 편하다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "새로운 상황이 일어났을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        content: "어떤 상황인지 완벽하게 파악하기\n전까지 지켜보며 생각을 정리한다."
+                    },
+                    {
+                        type: "P",
+                        content: "먼저 상황에 뛰어들며 다른 사람들과\n생각을 공유하며 문제를 해결하려고 한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "무언가를 결정할 때, 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        content: "빨리 해결하기 위해 나쁜 결정보다\n결정하지 않는 것이 더 나쁘다고 생각한다."
+                    },
+                    {
+                        type: "P",
+                        content: "더 나은 결정을 하기 위해 잠시 보류하고\n정보를 수집한 뒤 마지막까지 심사숙고한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "업무를 처리하는\n나의 모습과 가까운 것은?",
+                answers:[
+                    {
+                        type: "J",
+                        content: "미리미리 준비하고 계획해서 여유롭게 끝낸다."
+                    },
+                    {
+                        type: "P",
+                        content: "마지막 순간에 집중해서 끝낸다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "여행을 갔을 때\n나의 모습과 비슷한 것은?",
+                answers:[
+                    {
+                        type: "J",
+                        content: "기존에 내가 미리 준비한 계획에 틀어지면\n마음이 불안하지만 플랜B를 꺼낸다."
+                    },
+                    {
+                        type: "P",
+                        content: "그날의 기분, 날씨에 따라 유동적으로 계획을 세운다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "gladeGreen",
+                color:`#587A4B`,
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESTJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESTJ.png',
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tangerine",
+                color:`#FF977B`,
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESTP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESTP.png',
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "cosmos",
+                color:`#FFCFCF`,
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESFJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESFJ.png',
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "froly",
+                color:`#E0707E`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESFP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESFP.png',
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "mariner",
+                color:`#3462A3`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENTJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENTJ.png',
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "valencia",
+                color:`#DD5843`,
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENTP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENTP.png',
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "aquamarine",
+                color:`#52CEB0`,
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENFJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENFJ.png',
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "sunshade",
+                color:`#FFA348`,
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENFP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENFP.png',
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "gainsboro",
+                color:`#DDDDDD`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISTJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISTJ.png',
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "bostonBlue",
+                color:`#4690B4`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISTP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISTP.png',
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "grandis",
+                color:`#FFCC71`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISFJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISFJ.png',
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "olivine",
+                color:`#A6BF6F`,
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISFP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISFP.png',
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "bilobaFlower",
+                color:`#BAB0FF`,
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/INTJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INTJ.png',
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "mayaBlue",
+                color:`#7FC2F4`,
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/INTP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INTP.png',
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "hawkesBlue",
+                color:`#C0D8FF`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/INFJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INFJ.png',
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "genoa",
+                color:`#277A64`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalColor2022/INFP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INFP.png',
+            },
+        ]
+    },
     // sinjoer2022
     {
         info : {
@@ -32245,418 +32689,6 @@ var TESTS = [
                 query: "INFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/wealthluck/INFP.png'
-            },
-        ]
-    },
-    // %MBTI
-    {
-        info : {
-            mainTitle:"percentageMBTI",
-            subTitle:"percentageMBTI",
-            mainUrl:"percentageMBTI2022",
-            scoreType:"percentageMBTI",
-            mainImage:"https://images.ktestone.com/introImages/personalColor2022-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
-            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Kor"
-        },
-        questions:[
-            {
-                which:"EI",
-                question: '친구들이 말하는 나는?',
-                answers:[
-                    {
-                        type: "E",
-                        content: '활발하고 내 의견을 얘기할 때 당당한 편!'
-                    },
-                    {
-                        type: "I",
-                        content: '소극적이면서 조금 조용한 편.'
-                    },
-                ],
-            },
-            {
-                which:"EI",
-                question: "새로운 장소(모임, 수업, 회사)에\n가게 된 나는?",
-                answers:[
-                    {
-                        type: "E",
-                        content: "옆자리 사람에게 먼저 해맑게 인사한다."
-                    },
-                    {
-                        type: "I",
-                        content: "눈이 마주치면 조심스럽게 인사한다."
-                    },
-                ]
-            },
-            {
-                which:"EI",
-                question: "밥을 먹다 직원을 불렀는데\n오지 않을 때 나는?",
-                answers:[
-                    {
-                        type: "E",
-                        content: "저기요~ 하며 큰소리로 직원을 부른다."
-                    },
-                    {
-                        type: "I",
-                        content: "앞에 있는 친구에게 ‘왜 안올까..?’\n하면서 올때까지 기다린다."
-                    },
-                ]
-            },
-            {
-                which:"EI",
-                question: '친구들이 말하는 나는?',
-                answers:[
-                    {
-                        type: "E",
-                        content: '활발하고 내 의견을 얘기할 때 당당한 편!'
-                    },
-                    {
-                        type: "I",
-                        content: '소극적이면서 조금 조용한 편.'
-                    },
-                ],
-            },
-            {
-                which:"EI",
-                question: "새로운 장소(모임, 수업, 회사)에\n가게 된 나는?",
-                answers:[
-                    {
-                        type: "E",
-                        content: "옆자리 사람에게 먼저 해맑게 인사한다."
-                    },
-                    {
-                        type: "I",
-                        content: "눈이 마주치면 조심스럽게 인사한다."
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "나는?",
-                answers:[
-                    {
-                        type: "S",
-                        content: "보이는 그대로 눈앞에 현재에 집중한다."
-                    },
-                    {
-                        type: "N",
-                        content: "일어나지 않은 일에 대한\n걱정이 많고 상상력이 풍부하다."
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "티비를 볼 때 나는?",
-                answers:[
-                    {
-                        type: "S",
-                        content: "ㅋㅋㅋ웃기네 재밌다!"
-                    },
-                    {
-                        type: "N",
-                        content: "만약 내가 티비에 나간다면 나는 뭐라고할까?\n재밌게 말해서 이슈가 되면 재밌겠군."
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "데이트를 한다면?",
-                answers:[
-                    {
-                        type: "S",
-                        content: "유명 맛집이나 평소 가고 싶었던\n카페를 가는 일상 데이트!"
-                    },
-                    {
-                        type: "N",
-                        content: "익숙한 것도 좋지만 색다르고\n특별한 이색체험 데이트!"
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "나는?",
-                answers:[
-                    {
-                        type: "S",
-                        content: "보이는 그대로 눈앞에 현재에 집중한다."
-                    },
-                    {
-                        type: "N",
-                        content: "일어나지 않은 일에 대한\n걱정이 많고 상상력이 풍부하다."
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "티비를 볼 때 나는?",
-                answers:[
-                    {
-                        type: "S",
-                        content: "ㅋㅋㅋ웃기네 재밌다!"
-                    },
-                    {
-                        type: "N",
-                        content: "만약 내가 티비에 나간다면 나는 뭐라고할까?\n재밌게 말해서 이슈가 되면 재밌겠군."
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: "거절해야 하는 상황이 오면 나는?",
-                answers:[
-                    {
-                        type: "T",
-                        content: "단호하게 할 수 없다고 말한다."
-                    },
-                    {
-                        type: "F",
-                        content: "고민하다가 대부분 들어주는 편이다."
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: "고민을 얘기하는 친구, 듣다 보니\n친구의 잘못인 것 같다.\n그럴 때 나는?",
-                answers:[
-                    {
-                        type: "T",
-                        content: "논리적으로 친구의 잘못된 점을 말해준다."
-                    },
-                    {
-                        type: "F",
-                        content: "직접적으로 말하면 친구가 그래 할까봐\n최대한 돌려서 말한다."
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: "누군가 힘들다며 고민상담을 할 때 나는?",
-                answers:[
-                    {
-                        type: "T",
-                        content: "현실적인 해결책을 제시하고 응원한다."
-                    },
-                    {
-                        type: "F",
-                        content: "그 사람의 감정에 공감하고 정신적인 지지를 해준다."
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: "거절해야 하는 상황이 오면 나는?",
-                answers:[
-                    {
-                        type: "T",
-                        content: "단호하게 할 수 없다고 말한다."
-                    },
-                    {
-                        type: "F",
-                        content: "고민하다가 대부분 들어주는 편이다."
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: "고민을 얘기하는 친구, 듣다 보니\n친구의 잘못인 것 같다.\n그럴 때 나는?",
-                answers:[
-                    {
-                        type: "T",
-                        content: "논리적으로 친구의 잘못된 점을 말해준다."
-                    },
-                    {
-                        type: "F",
-                        content: "직접적으로 말하면 친구가 그래 할까봐\n최대한 돌려서 말한다."
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: "나랑 더 가까운 것은?",
-                answers:[
-                    {
-                        type: "J",
-                        content: "정리정돈을 잘하고 내 물건이 어딨는지 잘 찾는다."
-                    },
-                    {
-                        type: "P",
-                        content: "내 물건들은 어디 있는지 잘 안다고 생각하지만,\n막상 찾아보면 없다…"
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: "나는",
-                answers:[
-                    {
-                        type: "J",
-                        content: "내가 계획한대로! 계획적으로 일의\n순서대로 진행하는 것을 좋아한다."
-                    },
-                    {
-                        type: "P",
-                        content: "그때그때 생각나는 대로 일 처리!\n융통성 있게 하는 것을 좋아한다."
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: "계획이란",
-                answers:[
-                    {
-                        type: "J",
-                        content: "세세하게 세우지 않더라도 전체적인 틀과\n그날 하루의 가이드라인 같은 것"
-                    },
-                    {
-                        type: "P",
-                        content: "계획? 무계획도 계획의 일부다."
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: "나랑 더 가까운 것은?",
-                answers:[
-                    {
-                        type: "J",
-                        content: "정리정돈을 잘하고 내 물건이 어딨는지 잘 찾는다."
-                    },
-                    {
-                        type: "P",
-                        content: "내 물건들은 어디 있는지 잘 안다고 생각하지만,\n막상 찾아보면 없다…"
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: "나는",
-                answers:[
-                    {
-                        type: "J",
-                        content: "내가 계획한대로! 계획적으로 일의\n순서대로 진행하는 것을 좋아한다."
-                    },
-                    {
-                        type: "P",
-                        content: "그때그때 생각나는 대로 일 처리!\n융통성 있게 하는 것을 좋아한다."
-                    },
-                ]
-            },
-        ],
-        results:[
-            {
-                type: "ESTJ",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
-                `,
-                query: "gladeGreen",
-                score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESTJ.png'
-            },
-            {
-                type: "ESTP",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "tangerine",
-                score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESTP.png'
-            },
-            {
-                type: "ESFJ",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "cosmos",
-                score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESFJ.png'
-            },
-            {
-                type: "ESFP",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "froly",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESFP.png'
-            },
-            {
-                type: "ENTJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "mariner",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENTJ.png'
-            },
-            {
-                type: "ENTP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
-                `,
-                query: "valencia",
-                score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENTP.png'
-            },
-            {
-                type: "ENFJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "aquamarine",
-                score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENFJ.png'
-            },
-            {
-                type: "ENFP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "sunshade",
-                score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENFP.png'
-            },
-            {
-                type: "ISTJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "gainsboro",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISTJ.png'
-            },
-            {
-                type: "ISTP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "bostonBlue",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISTP.png'
-            },
-            {
-                type: "ISFJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "grandis",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISFJ.png'
-            },
-            {
-                type: "ISFP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
-                `,
-                query: "olivine",
-                score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISFP.png'
-            },
-            {
-                type: "INTJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "bilobaFlower",
-                score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/INTJ.png'
-            },
-            {
-                type: "INTP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "mayaBlue",
-                score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/INTP.png'
-            },
-            {
-                type: "INFJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "hawkesBlue",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/INFJ.png'
-            },
-            {
-                type: "INFP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "genoa",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/INFP.png'
             },
         ]
     },

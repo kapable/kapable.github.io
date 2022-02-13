@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import PCTMBTIBG from '../../api/222.png';
 
 function PctMBTIBar(props) {
-    const pct_units = 22;
+    const pct_units = 21;
     const bar_height = 14;
     const bar_margin = .69;
     const font_size = 1;
@@ -18,11 +17,12 @@ function PctMBTIBar(props) {
     const scoreP = parseInt(props.result_score[6]);
     const scoreJ = parseInt(props.result_score[7]);
 
-    const mainColor = `#52ceb0`;
+    const mainColor = props.result_color;
 
     const BackGroundImg = styled.img`
         width: 23rem;
         position: absolute;
+        top: 0.9rem;
     `
 
     const LeftBars = styled.div`
@@ -125,7 +125,7 @@ function PctMBTIBar(props) {
 
     return (
         <>
-            <BackGroundImg src={PCTMBTIBG} alt="backGround" />
+            <BackGroundImg src={props.bg_img_src} alt="backGround" />
             <BarsDiv>
                 <LeftBars className="pct-mbti-left-bar">
                     <div className='pct-mbti-left-e'><p>{scoreE * 20}%</p></div>

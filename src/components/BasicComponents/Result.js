@@ -542,7 +542,11 @@ class Result extends Component {
             
         //  and other case of Type Quizes
         } else if (_current_test_contents.info.scoreType === 'percentageMBTI') {
-            let result_score = this.state.current_url[6].match(/\d+/g)[0];
+            // let result_score = this.state.current_url[6].match(/\d+/g)[0];
+            const queryParams = new URLSearchParams(this.state.current_url[6]);
+            const result_score = queryParams.get("pct");
+            let result_color = _current_test_result.color;
+            let bg_img_src = _current_test_result.bg_img_src;
             return (
                 <Fragment>
                     <Helmet>
@@ -572,9 +576,8 @@ class Result extends Component {
                         <meta property="og:image:height" content="400"/> */}
                         <meta property="twitter:image:alt" content={this.state.current_result} />
                     </Helmet>
-                    <PCTMBTIBAR result_score={result_score} />
-                    {/* <img src={PCTMBTIBG} className='result-pct-mbti-bg-img' alt={'MBTI'} /> */}
-                    {/* <img src={img_src} className='result-img' alt={final_type} /> */}
+                    <PCTMBTIBAR result_score={result_score} result_color={result_color} bg_img_src={bg_img_src} />
+                    <img src={img_src} className='result-img' alt={final_type} />
                 </Fragment>
             )
         } else if(this.state.current_test === "dogSounds" || this.state.current_test === "dogSoundsEng") {
