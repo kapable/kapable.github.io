@@ -50,7 +50,7 @@ class Result extends Component {
         this._onPPLBannerClick = this._onPPLBannerClick.bind(this);
         this.horizontalNewTestRenderer = this.horizontalNewTestRenderer.bind(this)
         this.adTagRenderer = this.adTagRenderer.bind(this)
-        this.jellingBannerRenderer = this.jellingBannerRenderer.bind(this)
+        this.otherTestBannerRenderer = this.otherTestBannerRenderer.bind(this)
     }
     
     _eventSenderGA(category, action, label){
@@ -298,13 +298,20 @@ class Result extends Component {
         }
     }
 
-    jellingBannerRenderer() {
+    otherTestBannerRenderer() {
         let personalColor2022ListKor = ["personalColor2022",];
         let personalColor2022List = ["personalColor2022Eng", "personalColor2022CN"];
+        let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
                 <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/percentageMBTI2022/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/percentageMBTI2022-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                     <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -329,6 +336,23 @@ class Result extends Component {
                     href={jelling_outlink}
                     className="to-ppl-banner-text"
                     > <img src={JELLINGBANNERENG} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                </Fragment>
+            )
+        } else if (percentageMBTI2022ListKor.includes(this.state.current_test)) {
+            return(
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/personalColor2022/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor2022-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/personalColor/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                 </Fragment>
             )
         }
@@ -759,7 +783,7 @@ class Result extends Component {
                             className="back-to-main-btn-img"
                             alt="다른 테스트 하러가기"
                             />
-                        {this.jellingBannerRenderer()}
+                        {this.otherTestBannerRenderer()}
                     </div>
                 </div>
                 {/* New Test banners */}
