@@ -42,6 +42,7 @@ class Result extends Component {
             current_result:_current_result,
             current_test_contents: null,
             num_shares_count:0,
+            ppl_list:['auditionBTI', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
         }
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this)
         this._eventSenderGA = this._eventSenderGA.bind(this);
@@ -79,8 +80,7 @@ class Result extends Component {
 
     cpcBannerResultFooterScriptor(){
         // Delete Adfit for PPL contents
-        let ppl_list = ['personalIncense', 'personalTaro', 'jaetech', 'wealthluck']
-        if((this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) && !ppl_list.includes(this.state.current_test)) {
+        if((this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) && !this.state.ppl_list.includes(this.state.current_test)) {
         return(
             <Fragment>
                 <ins className="kakao_ad_area" style={{display:"none"}}
@@ -347,18 +347,20 @@ class Result extends Component {
         )
     }
     adTagRenderer(){
-        return(
-            <Fragment>
-                <div id="protag-in_article_video"></div>
-                    <ScriptTag type="text/javascript">
-                        {`window.googletag = window.googletag || { cmd: [] };
-                        window.protag = window.protag || { cmd: [] };
-                        window.protag.cmd.push(function () {
-                            window.protag.display("protag-in_article_video");
-                        });`}
-                    </ScriptTag>
-            </Fragment>
-        )
+        if (!this.state.ppl_list.includes(this.state.current_test)) {
+            return(
+                <Fragment>
+                    <div id="protag-in_article_video"></div>
+                        <ScriptTag type="text/javascript">
+                            {`window.googletag = window.googletag || { cmd: [] };
+                            window.protag = window.protag || { cmd: [] };
+                            window.protag.cmd.push(function () {
+                                window.protag.display("protag-in_article_video");
+                            });`}
+                        </ScriptTag>
+                </Fragment>
+            )
+        }
     }
 
     resultRender(){
