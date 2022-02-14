@@ -30,8 +30,8 @@ var TESTS = [
             subTitle:"percentageMBTI",
             mainUrl:"percentageMBTI2022",
             scoreType:"percentageMBTI",
-            mainImage:"https://images.ktestone.com/introImages/personalColor2022-intro.png",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/personalColor2022-thumb.png",
+            mainImage:"https://images.ktestone.com/introImages/percentageMBTI2022-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/percentageMBTI2022-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
             lang:"Kor"
         },
@@ -325,7 +325,7 @@ var TESTS = [
                 query: "gladeGreen",
                 color:`#587A4B`,
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESTJ.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/ESTJ.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESTJ.png',
             },
             {
@@ -334,7 +334,7 @@ var TESTS = [
                 query: "tangerine",
                 color:`#FF977B`,
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESTP.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/ESTP.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESTP.png',
             },
             {
@@ -343,7 +343,7 @@ var TESTS = [
                 query: "cosmos",
                 color:`#FFCFCF`,
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESFJ.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/ESFJ.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESFJ.png',
             },
             {
@@ -352,7 +352,7 @@ var TESTS = [
                 query: "froly",
                 color:`#E0707E`,
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ESFP.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/ESFP.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESFP.png',
             },
             {
@@ -361,7 +361,7 @@ var TESTS = [
                 query: "mariner",
                 color:`#3462A3`,
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENTJ.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/ENTJ.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENTJ.png',
             },
             {
@@ -371,7 +371,7 @@ var TESTS = [
                 query: "valencia",
                 color:`#DD5843`,
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENTP.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/ENTP.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENTP.png',
             },
             {
@@ -380,7 +380,7 @@ var TESTS = [
                 query: "aquamarine",
                 color:`#52CEB0`,
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENFJ.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/ENFJ.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENFJ.png',
             },
             {
@@ -389,7 +389,7 @@ var TESTS = [
                 query: "sunshade",
                 color:`#FFA348`,
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ENFP.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/ENFP.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENFP.png',
             },
             {
@@ -398,7 +398,7 @@ var TESTS = [
                 query: "gainsboro",
                 color:`#DDDDDD`,
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISTJ.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/ISTJ.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISTJ.png',
             },
             {
@@ -407,7 +407,7 @@ var TESTS = [
                 query: "bostonBlue",
                 color:`#4690B4`,
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISTP.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/ISTP.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISTP.png',
             },
             {
@@ -416,7 +416,7 @@ var TESTS = [
                 query: "grandis",
                 color:`#FFCC71`,
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISFJ.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/ISFJ.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISFJ.png',
             },
             {
@@ -426,7 +426,7 @@ var TESTS = [
                 query: "olivine",
                 color:`#A6BF6F`,
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/ISFP.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/ISFP.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISFP.png',
             },
             {
@@ -435,7 +435,7 @@ var TESTS = [
                 query: "bilobaFlower",
                 color:`#BAB0FF`,
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/INTJ.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/INTJ.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INTJ.png',
             },
             {
@@ -444,7 +444,7 @@ var TESTS = [
                 query: "mayaBlue",
                 color:`#7FC2F4`,
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/INTP.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/INTP.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INTP.png',
             },
             {
@@ -453,7 +453,7 @@ var TESTS = [
                 query: "hawkesBlue",
                 color:`#C0D8FF`,
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/INFJ.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/INFJ.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INFJ.png',
             },
             {
@@ -462,7 +462,7 @@ var TESTS = [
                 query: "genoa",
                 color:`#277A64`,
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/personalColor2022/INFP.png',
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/color/INFP.png',
                 bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INFP.png',
             },
         ]
