@@ -399,7 +399,7 @@ class Result extends Component {
         let desc_test_current = _current_test_contents.info.subTitle
 
         // return final result option
-        if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
+        if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI" || _current_test_contents.info.scoreType === "percentageMBTI"){
             // meta tag for PPL test contents
             let ppl_list = ['personalTaro', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP']
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng']
