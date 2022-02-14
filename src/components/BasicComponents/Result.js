@@ -184,6 +184,7 @@ class Result extends Component {
     pplBannerRenderer(){
         let personalIncenseListGB = ["personalIncenseEng", "personalIncenseJP"];
         let personalTaroList = ["personalTaro"];
+        let auditionBtiList = ['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn'];
         // duft & doft Eng & JP
         if(personalIncenseListGB.includes(this.state.current_test)){
             const duft_outlink = "https://www.amazon.com/DUFT-DOFT-Refreshing-hydration-Feel-good/dp/B07MB55WVK"
@@ -281,7 +282,20 @@ class Result extends Component {
                     > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                 </Fragment>
             )
-        } 
+        } else if (auditionBtiList.includes(this.state.current_test)) {
+            const audition_outlink = ""
+            const banner_img_src = `https://images.ktestone.com/resultImages/auditionBTI/banner/${this.state.current_result}.png`
+            return(
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={audition_outlink}
+                    className="to-ppl-banner-text"
+                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
+                </Fragment>
+            )
+        }
     }
 
     jellingBannerRenderer() {

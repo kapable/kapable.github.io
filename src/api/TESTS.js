@@ -32692,6 +32692,330 @@ var TESTS = [
             },
         ]
     },
+    // auditionBTI
+    {
+        info : {
+            mainTitle:"오디션BTI",
+            subTitle:"내가 서바이벌 오디션에 출연한다면?",
+            mainUrl:"auditionBTI",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/auditionBTI-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '오디션장에 들어가니 앉아있는 다른 참가자들이 보인다. 그때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '먼저 다가가서 인사하고 말을 건다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '내 자리를 찾아가서 앉는다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "대기 중에 인터뷰 요청이 들어왔다! 그때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "드디어 세상에 날 알릴 차례! 즐거운 긴장감과 신난 마음으로 따라간다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "안 그래도 긴장되는데 뭐라고 말하지...? 걱정과 근심을 가지고 따라간다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "다른 참가자들과 함께 대기하면서 대화할 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "화려한 리액션과 적극적인 공감 능력을 선보이며 예능캐에 등극한다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "고개를 끄덕이거나 상대의 얘기에 웃어주며 반응한다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "오디션 대기 중 음악이 나온다. 음악을 들을 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "멜로디가 좋으면 내 플레이리스트에 저장! 가사보단 멜로디지!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "멜로디와 가사가 좋으면 내 플레이리스트에 저장! 가사를 들으며 노래 속 주인공이 되어간다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "오디션에서 미션이 주어졌다! 내가 원하는 미션은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "해야 할 미션이 구체적으로 나와 있는 것!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "큰 틀만 있고 내가 자유롭게 할 수 있는 미션!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "오디션 대기중 ‘나는 어떻게 될까?’라는 생각이 들 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "혹시 1등을 하지 않을까 기대를 해본다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "이미 우주 대스타가 된 나를 상상 중이다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "오디션에서 혼자 있는 참가자를 본 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "혼자 생각 정리 하는 거겠지. 내버려두자!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "혼자 심심하겠다... 내가 가서 말이라도 걸어볼까?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "오디션에 떨어졌다고 생각할 때 더 두려운 것은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "내가 해내지 못했다는 사실."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "내가 떨어졌을 때 다른 사람들이 날 보는 시선."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "너무 긴장된다는 옆 참가자의 말에 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "오디션이니까 떨리는 게 당연해!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "그러게, 나도 너무 긴장된다! 힘내자... 휴... 떨려!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "팀 미션시 아이디어를 낼 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "전체적인 틀에 맞추어 아이디어를 제시한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "그 자리에서 즉흥적으로 떠오른 아이디어를 제시한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나만의 무대를 꾸며야 할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "머릿속에 나만의 무대를 구체적으로 계획하고 이미지를 그려본다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "당장 어떤 것부터 꾸미면 좋을지 영상을 찾아본다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "오디션 연습을 할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "평소 내가 제일 잘하는 것들로 계획을 세운 후 잘하는 것을 더욱 연습한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "연습 시작과 동시에 부족한 것을 수정해 나가며 계속 보완한다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "aquamarine",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/INFP.png'
+            },
+        ]
+    },
 ]
 
 export default TESTS;
