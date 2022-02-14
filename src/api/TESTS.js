@@ -23,7 +23,7 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
-    // %MBTI
+    // percentageMBTI2022
     {
         info : {
             mainTitle:"percentageMBTI",

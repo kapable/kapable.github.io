@@ -399,7 +399,7 @@ class Result extends Component {
         let desc_test_current = _current_test_contents.info.subTitle
 
         // return final result option
-        if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI" || _current_test_contents.info.scoreType === "percentageMBTI"){
+        if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
             let ppl_list = ['personalTaro', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP']
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng']
@@ -582,6 +582,7 @@ class Result extends Component {
             
         //  and other case of Type Quizes
         } else if (_current_test_contents.info.scoreType === 'percentageMBTI') {
+            console.log('Result');
             // let result_score = this.state.current_url[6].match(/\d+/g)[0];
             const queryParams = new URLSearchParams(this.state.current_url[6]);
             const result_score = queryParams.get("pct");
@@ -618,6 +619,7 @@ class Result extends Component {
                     </Helmet>
                     <PCTMBTIBAR result_score={result_score} result_color={result_color} bg_img_src={bg_img_src} />
                     <img src={img_src} className='result-img' alt={final_type} />
+                    {this.adTagRenderer()}
                 </Fragment>
             )
         } else if(this.state.current_test === "dogSounds" || this.state.current_test === "dogSoundsEng") {
