@@ -42,7 +42,7 @@ class Result extends Component {
             current_result:_current_result,
             current_test_contents: null,
             num_shares_count:0,
-            ppl_list:['auditionBTI', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
+            ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
         }
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this)
         this._eventSenderGA = this._eventSenderGA.bind(this);
@@ -284,7 +284,7 @@ class Result extends Component {
             )
         } else if (auditionBtiList.includes(this.state.current_test)) {
             const audition_outlink = ""
-            const banner_img_src = `https://images.ktestone.com/resultImages/auditionBTI/banner/${this.state.current_result}.png`
+            const banner_img_src = `https://images.ktestone.com/resultImages/${this.state.current_test}/banner/${this.state.current_result}.png`
             return(
                 <Fragment>
                     <a
