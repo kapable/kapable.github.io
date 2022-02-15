@@ -561,3 +561,13 @@ body {
   background-color: var(--bg-color);
   color: var(--font-color);
 }
+
+@media (min-width: 768px) {
+  .result-img {
+    width: 40rem;
+  }
+
+  .ppl-banner-img {
+    width: 40rem;
+  }
+}
