@@ -32946,7 +32946,7 @@ var TESTS = [
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "aquamarine",
+                query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENFJ.png'
             },
@@ -33270,7 +33270,7 @@ var TESTS = [
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "aquamarine",
+                query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENFJ.png'
             },
@@ -33594,7 +33594,7 @@ var TESTS = [
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "aquamarine",
+                query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFJ.png'
             },
@@ -33918,7 +33918,7 @@ var TESTS = [
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "aquamarine",
+                query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFJ.png'
             },
