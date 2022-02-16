@@ -32901,7 +32901,7 @@ var TESTS = [
         results:[
             {
                 type: "ESTJ",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `그린애플
                 `,
                 query: "ESTJ",
                 score_range:range(26),
@@ -32909,35 +32909,35 @@ var TESTS = [
             },
             {
                 type: "ESTP",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `골드 샌드`,
                 query: "ESTP",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESTP.png'
             },
             {
                 type: "ESFJ",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `뉴욕핑크`,
                 query: "ESFJ",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESFJ.png'
             },
             {
                 type: "ESFP",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `비터스윗`,
                 query: "ESFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESFP.png'
             },
             {
                 type: "ENTJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `체스넛 로즈`,
                 query: "ENTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENTJ.png'
             },
             {
                 type: "ENTP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `히피핑크
                 `,
                 query: "ENTP",
                 score_range:range(26),
@@ -32945,42 +32945,42 @@ var TESTS = [
             },
             {
                 type: "ENFJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `그린 헤이즈`,
                 query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENFJ.png'
             },
             {
                 type: "ENFP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `선셋 오렌지`,
                 query: "ENFP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENFP.png'
             },
             {
                 type: "ISTJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `서프`,
                 query: "ISTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISTJ.png'
             },
             {
                 type: "ISTP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `콜드 퍼플`,
                 query: "ISTP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISTP.png'
             },
             {
                 type: "ISFJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `스카이 블루`,
                 query: "ISFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISFJ.png'
             },
             {
                 type: "ISFP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `바얼리 화이트
                 `,
                 query: "ISFP",
                 score_range:range(26),
@@ -32988,28 +32988,28 @@ var TESTS = [
             },
             {
                 type: "INTJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `슬레이트 블루`,
                 query: "INTJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/INTJ.png'
             },
             {
                 type: "INTP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `무디블루`,
                 query: "INTP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/INTP.png'
             },
             {
                 type: "INFJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `말리부`,
                 query: "INFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/INFJ.png'
             },
             {
                 type: "INFP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `오션그린`,
                 query: "INFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/INFP.png'
@@ -33225,7 +33225,7 @@ var TESTS = [
         results:[
             {
                 type: "ESTJ",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `Green Apple
                 `,
                 query: "ESTJ",
                 score_range:range(26),
@@ -33233,35 +33233,35 @@ var TESTS = [
             },
             {
                 type: "ESTP",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `Gold Sand`,
                 query: "ESTP",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESTP.png'
             },
             {
                 type: "ESFJ",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `Newyork Pink`,
                 query: "ESFJ",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESFJ.png'
             },
             {
                 type: "ESFP",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `Bitter Sweet`,
                 query: "ESFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESFP.png'
             },
             {
                 type: "ENTJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `Chestnut Rose`,
                 query: "ENTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENTJ.png'
             },
             {
                 type: "ENTP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `Hippie Pink
                 `,
                 query: "ENTP",
                 score_range:range(26),
@@ -33269,42 +33269,42 @@ var TESTS = [
             },
             {
                 type: "ENFJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `Green Haze`,
                 query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENFJ.png'
             },
             {
                 type: "ENFP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `Sunset Orange`,
                 query: "ENFP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENFP.png'
             },
             {
                 type: "ISTJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `Surf`,
                 query: "ISTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISTJ.png'
             },
             {
                 type: "ISTP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `Cold Purple`,
                 query: "ISTP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISTP.png'
             },
             {
                 type: "ISFJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `Sky Blue`,
                 query: "ISFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISFJ.png'
             },
             {
                 type: "ISFP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `Barley White
                 `,
                 query: "ISFP",
                 score_range:range(26),
@@ -33312,28 +33312,28 @@ var TESTS = [
             },
             {
                 type: "INTJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `Slate Blue`,
                 query: "INTJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INTJ.png'
             },
             {
                 type: "INTP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `Moody Blue`,
                 query: "INTP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INTP.png'
             },
             {
                 type: "INFJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `Malibu`,
                 query: "INFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INFJ.png'
             },
             {
                 type: "INFP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `Ocean Green`,
                 query: "INFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INFP.png'
@@ -33549,7 +33549,7 @@ var TESTS = [
         results:[
             {
                 type: "ESTJ",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `Green Apple
                 `,
                 query: "ESTJ",
                 score_range:range(26),
@@ -33557,35 +33557,35 @@ var TESTS = [
             },
             {
                 type: "ESTP",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `Gold Sand`,
                 query: "ESTP",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTP.png'
             },
             {
                 type: "ESFJ",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `Newyork Pink`,
                 query: "ESFJ",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFJ.png'
             },
             {
                 type: "ESFP",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `Bitter Sweet`,
                 query: "ESFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFP.png'
             },
             {
                 type: "ENTJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `Chestnut Rose`,
                 query: "ENTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTJ.png'
             },
             {
                 type: "ENTP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `Hippie Pink
                 `,
                 query: "ENTP",
                 score_range:range(26),
@@ -33593,42 +33593,42 @@ var TESTS = [
             },
             {
                 type: "ENFJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `Green Haze`,
                 query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFJ.png'
             },
             {
                 type: "ENFP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `Sunset Orange`,
                 query: "ENFP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFP.png'
             },
             {
                 type: "ISTJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `Surf`,
                 query: "ISTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTJ.png'
             },
             {
                 type: "ISTP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `Cold Purple`,
                 query: "ISTP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTP.png'
             },
             {
                 type: "ISFJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `Sky Blue`,
                 query: "ISFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFJ.png'
             },
             {
                 type: "ISFP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `Barley White
                 `,
                 query: "ISFP",
                 score_range:range(26),
@@ -33636,28 +33636,28 @@ var TESTS = [
             },
             {
                 type: "INTJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `Slate Blue`,
                 query: "INTJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTJ.png'
             },
             {
                 type: "INTP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `Moody Blue`,
                 query: "INTP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTP.png'
             },
             {
                 type: "INFJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `Malibu`,
                 query: "INFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFJ.png'
             },
             {
                 type: "INFP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `Ocean Green`,
                 query: "INFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFP.png'
@@ -33873,7 +33873,7 @@ var TESTS = [
         results:[
             {
                 type: "ESTJ",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `Green Apple
                 `,
                 query: "ESTJ",
                 score_range:range(26),
@@ -33881,35 +33881,35 @@ var TESTS = [
             },
             {
                 type: "ESTP",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `Gold Sand`,
                 query: "ESTP",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTP.png'
             },
             {
                 type: "ESFJ",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `Newyork Pink`,
                 query: "ESFJ",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFJ.png'
             },
             {
                 type: "ESFP",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `Bitter Sweet`,
                 query: "ESFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFP.png'
             },
             {
                 type: "ENTJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `Chestnut Rose`,
                 query: "ENTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTJ.png'
             },
             {
                 type: "ENTP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `Hippie Pink
                 `,
                 query: "ENTP",
                 score_range:range(26),
@@ -33917,42 +33917,42 @@ var TESTS = [
             },
             {
                 type: "ENFJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `Green Haze`,
                 query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFJ.png'
             },
             {
                 type: "ENFP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `Sunset Orange`,
                 query: "ENFP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFP.png'
             },
             {
                 type: "ISTJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `Surf`,
                 query: "ISTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTJ.png'
             },
             {
                 type: "ISTP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `Cold Purple`,
                 query: "ISTP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTP.png'
             },
             {
                 type: "ISFJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `Sky Blue`,
                 query: "ISFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFJ.png'
             },
             {
                 type: "ISFP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                desc: `Barley White
                 `,
                 query: "ISFP",
                 score_range:range(26),
@@ -33960,28 +33960,28 @@ var TESTS = [
             },
             {
                 type: "INTJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                desc: `Slate Blue`,
                 query: "INTJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTJ.png'
             },
             {
                 type: "INTP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                desc: `Moody Blue`,
                 query: "INTP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTP.png'
             },
             {
                 type: "INFJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
+                desc: `Malibu`,
                 query: "INFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFJ.png'
             },
             {
                 type: "INFP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                desc: `Ocean Green`,
                 query: "INFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFP.png'
