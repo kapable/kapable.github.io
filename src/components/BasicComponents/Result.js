@@ -401,7 +401,7 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ['personalTaro', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP']
+            let ppl_list = ['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalTaro', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP']
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng']
             if(ppl_list.includes(this.state.current_test)) {
                 let og_img_url = "https://images.ktestone.com/meta/" + this.state.current_test + "/" + this.state.current_result + ".png"
@@ -582,7 +582,6 @@ class Result extends Component {
             
         //  and other case of Type Quizes
         } else if (_current_test_contents.info.scoreType === 'percentageMBTI') {
-            console.log('Result');
             // let result_score = this.state.current_url[6].match(/\d+/g)[0];
             const queryParams = new URLSearchParams(this.state.current_url[6]);
             const result_score = queryParams.get("pct");
