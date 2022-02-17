@@ -15,6 +15,16 @@ function MainPage(props) {
                 <img className='main-header' src={MAINHEADER} alt="K-test"/>
             </div>
             <OhterLangIconsMain />
+
+            {/* Main Test Banners */}
+            <div className="main-link-div">
+                {props.all_tests_url.map((item)=>(
+                    <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
+                        <img className="test-main-img" src={item[1]} alt={item[2]}/>                               
+                    </Link>
+                ))}
+            </div>
+            
             {/* Go to POST 2021 */}
             <Link to='/metapangapply/' className="main-link-block" key="metapangapply-banner">
                 <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/metaPangApply-thumb.png`} alt="POST-2021" />
@@ -47,15 +57,6 @@ function MainPage(props) {
             <Link to='/post2022Eng/' className="main-link-block" key="post2022Eng-banner">
                 <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022Eng-thumb.png`} alt="POST-2021" />
             </Link>
-
-            {/* Main Test Banners */}
-            <div className="main-link-div">
-                {props.all_tests_url.map((item)=>(
-                    <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                        <img className="test-main-img" src={item[1]} alt={item[2]}/>                               
-                    </Link>
-                ))}
-            </div>
         </Fragment>
         
     )   

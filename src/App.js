@@ -256,7 +256,8 @@ class App extends Component {
             <Route path='/' exact>
                 {/* meta tag form for all main page */}
                 {this.mainMetaTagRenderer()}
-                <MainPage all_tests_url={this.all_lang_renderer()}/>
+                {/* <MainPage all_tests_url={this.all_lang_renderer()}/> */}
+                <MainPage all_tests_url={this.each_lang_renderer("Kor")}/>
             </Route>
 
             {/* go to "Each langs Main" page */}
