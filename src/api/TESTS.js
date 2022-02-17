@@ -23,6 +23,450 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // percentageMBTI2022Eng
+    {
+        info : {
+            mainTitle:"percentageMBTIEng",
+            subTitle:"percentageMBTIEng",
+            mainUrl:"percentageMBTI2022Eng",
+            scoreType:"percentageMBTI",
+            mainImage:"https://images.ktestone.com/introImages/percentageMBTI2022Eng-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/percentageMBTI2022Eng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Eng"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'When other people look at me,\nwhat do they think?',
+                answers:[
+                    {
+                        type: "E",
+                        content: 'They think they can let their hearts open with me.'
+                    },
+                    {
+                        type: "I",
+                        content: 'They think I’m introverted and hard to read my thoughts.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "When with other people,\nhow am I?",
+                answers:[
+                    {
+                        type: "E",
+                        content: "Being alone isn’t bad,\nbut I gain energy when I’m with others."
+                    },
+                    {
+                        type: "I",
+                        content: "I like being with people,\nbut I gain energy when I’m by myself."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "After meeting with others,\nhow am I?",
+                answers:[
+                    {
+                        type: "E",
+                        content: "It was a tiring day,\nbut it was happy and fun to be together,\nand I gained energy."
+                    },
+                    {
+                        type: "I",
+                        content: "It was happy and fun to be together,\nbut I’m tired and low on energy."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: 'Which situation is more stressful to me?',
+                answers:[
+                    {
+                        type: "E",
+                        content: 'I get stressed when I ask something,\nand the person doesn’t reply back quickly.'
+                    },
+                    {
+                        type: "I",
+                        content: 'I get stressed when somebody asks me a question,\nand I don’t get enough time to think about the answer.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "When I start a new thing,\nwhat do I do?",
+                answers:[
+                    {
+                        type: "E",
+                        content: "I start to act\nbecause better things come to my mind\nonce I get started."
+                    },
+                    {
+                        type: "I",
+                        content: "I think carefully because\neverything needs enough preparation time\nbefore getting started."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do I want more?",
+                answers:[
+                    {
+                        type: "S",
+                        content: "Accurate and trustworthy fact."
+                    },
+                    {
+                        type: "N",
+                        content: "Experimental and futuristic thoughts,\neven if they are not facts."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What’s closer to me?",
+                answers:[
+                    {
+                        type: "S",
+                        content: "Realistic and tries to get things done first."
+                    },
+                    {
+                        type: "N",
+                        content: "I think a lot of unrealistic things and have a long train of thought."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What’s similar to me when I’m working\n(or doing homework)?",
+                answers:[
+                    {
+                        type: "S",
+                        content: "I like finishing one thing and getting onto the next."
+                    },
+                    {
+                        type: "N",
+                        content: "It’s boring to concentrate on one thing,\nso I prefer doing various things."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When in a meeting with others and coming up with new ideas,\nhow am I?",
+                answers:[
+                    {
+                        type: "S",
+                        content: "I start to think if the person’s idea is realistic."
+                    },
+                    {
+                        type: "N",
+                        content: "When someone throws a creative idea,\nI start imagining and come up with new ideas."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Which one is closer to me?",
+                answers:[
+                    {
+                        type: "S",
+                        content: "I’m good at accomplishing existing things."
+                    },
+                    {
+                        type: "N",
+                        content: "I’m good at challenging new things without fear."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When talking with other people,\nwhat annoys me?",
+                answers:[
+                    {
+                        type: "T",
+                        content: "When someone says something that’s out of the topic or saying wrong things."
+                    },
+                    {
+                        type: "F",
+                        content: "When someone says something that disregards other people’s feelings."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When making a decision,\nwhat do I value more?",
+                answers:[
+                    {
+                        type: "T",
+                        content: "Even if the others hate it,\nI make the decision if I think it’s right."
+                    },
+                    {
+                        type: "F",
+                        content: "I make the decision if I think my values and\nemotions are in the right place."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What is closer to my opinion about ‘white lies’?",
+                answers:[
+                    {
+                        type: "T",
+                        content: "Lies are inherently bad,\nso the term ‘white lies’ is a contradiction."
+                    },
+                    {
+                        type: "F",
+                        content: "It’s not great to repeat white lies,\nbut I can understand it if I know the reason."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Which is closer to me?",
+                answers:[
+                    {
+                        type: "T",
+                        content: "To me,\nthe result is more important than the process."
+                    },
+                    {
+                        type: "F",
+                        content: "To me,\nthe process of trying hard is more important than the result."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When trying to persuade someone,\nwhat do I do?",
+                answers:[
+                    {
+                        type: "T",
+                        content: "I suggest a more rational\nand logical solution than\nthe other person’s opinion."
+                    },
+                    {
+                        type: "F",
+                        content: "I sympathize with the other person’s emotion\nand try to persuade through conversation."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What’s closer to my opinion on ‘plans’?",
+                answers:[
+                    {
+                        type: "J",
+                        content: "For the comfort of being prepared,\nI feel comfortable when I plan ahead."
+                    },
+                    {
+                        type: "P",
+                        content: "I feel comfortable when\nI can freely do what I want."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When something new happens,\nwhat do I do?",
+                answers:[
+                    {
+                        type: "J",
+                        content: "I observe until I understand\nthe situation thoroughly and\ngather my thoughts."
+                    },
+                    {
+                        type: "P",
+                        content: "I jump into the situation,\nshare my thoughts with others,\nand try to solve the problem."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When deciding on something,\nwhat do I do?",
+                answers:[
+                    {
+                        type: "J",
+                        content: "I think not making decisions is\nworse than making quick bad decisions."
+                    },
+                    {
+                        type: "P",
+                        content: "To make better decisions,\nI put off deciding and think deeply\nuntil the last moment."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What’s closer to me\nwhen I’m getting work done?",
+                answers:[
+                    {
+                        type: "J",
+                        content: "I plan and prepare in advance\nand finish it with spare time."
+                    },
+                    {
+                        type: "P",
+                        content: "I finish it by concentrating\nat the last moment."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What’s similar to me\nwhen I’m on a trip?",
+                answers:[
+                    {
+                        type: "J",
+                        content: "I feel uncomfortable if\nmy plan gets changed,\nbut I pull out my plan B."
+                    },
+                    {
+                        type: "P",
+                        content: "I plan accordingly to the mood\nand weather of the day."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "gladeGreen",
+                color:`#587A4B`,
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/ESTJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESTJ.png',
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tangerine",
+                color:`#FF977B`,
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/ESTP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESTP.png',
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "cosmos",
+                color:`#FFCFCF`,
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/ESFJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESFJ.png',
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "froly",
+                color:`#E0707E`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/ESFP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESFP.png',
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "mariner",
+                color:`#3462A3`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/ENTJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENTJ.png',
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "valencia",
+                color:`#DD5843`,
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/ENTP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENTP.png',
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "aquamarine",
+                color:`#52CEB0`,
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/ENFJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENFJ.png',
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "sunshade",
+                color:`#FFA348`,
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/ENFP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENFP.png',
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "gainsboro",
+                color:`#DDDDDD`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/ISTJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISTJ.png',
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "bostonBlue",
+                color:`#4690B4`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/ISTP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISTP.png',
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "grandis",
+                color:`#FFCC71`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/ISFJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISFJ.png',
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "olivine",
+                color:`#A6BF6F`,
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/ISFP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISFP.png',
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "bilobaFlower",
+                color:`#BAB0FF`,
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/INTJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INTJ.png',
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "mayaBlue",
+                color:`#7FC2F4`,
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/INTP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INTP.png',
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "hawkesBlue",
+                color:`#C0D8FF`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/INFJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INFJ.png',
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "genoa",
+                color:`#277A64`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Eng/INFP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INFP.png',
+            },
+        ]
+    },
     // percentageMBTI2022
     {
         info : {

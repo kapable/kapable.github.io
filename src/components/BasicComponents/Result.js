@@ -302,6 +302,7 @@ class Result extends Component {
         let personalColor2022ListKor = ["personalColor2022",];
         let personalColor2022List = ["personalColor2022Eng", "personalColor2022CN"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
+        let percentageMBTI2022ListEng = ["percentageMBTI2022Eng",];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -353,6 +354,23 @@ class Result extends Component {
                     href='https://ktestone.com/kapable.github.io/personalColor/'
                     className="to-ppl-banner-text"
                     > <img src={`https://images.ktestone.com/main-thumbnail/personalColor-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                </Fragment>
+            )
+        } else if (percentageMBTI2022ListEng.includes(this.state.current_test)) {
+            return(
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/personalColor2022Eng/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor2022Eng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/personalColorEng/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColorEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                 </Fragment>
             )
         }

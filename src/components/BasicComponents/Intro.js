@@ -561,7 +561,7 @@ class Intro extends Component {
                     <Redirect to={this.state.result_url+final_score_query + '/'} />
                 </Router>
             )
-        } else if(this.state.current_test.info.mainUrl === 'percentageMBTI2022') {
+        } else if(this.state.current_test.info.scoreType === 'percentageMBTI') {
             let final_score_query = result_contents.result_type.query
             let type_order = ['E','I','S','N','T','F','P','J'];
             let searchQuery = ''
