@@ -283,7 +283,9 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (auditionBtiList.includes(this.state.current_test)) {
-            const audition_outlink = ""
+            const _current_test_contents = TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0];
+            let _current_test_result = _current_test_contents.results.filter((res) => res.query === this.state.current_result)[0];
+            const audition_outlink = _current_test_result.youtube_url
             const banner_img_src = `https://images.ktestone.com/resultImages/${this.state.current_test}/banner/${this.state.current_result}.png`
             return(
                 <Fragment>
@@ -302,7 +304,7 @@ class Result extends Component {
         let personalColor2022ListKor = ["personalColor2022",];
         let personalColor2022List = ["personalColor2022Eng", "personalColor2022CN"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
-        let percentageMBTI2022ListEng = ["percentageMBTI2022Eng",];
+        let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -356,7 +358,7 @@ class Result extends Component {
                     > <img src={`https://images.ktestone.com/main-thumbnail/personalColor-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                 </Fragment>
             )
-        } else if (percentageMBTI2022ListEng.includes(this.state.current_test)) {
+        } else if (percentageMBTI2022ListOverseas.includes(this.state.current_test)) {
             return(
                 <Fragment>
                     <a

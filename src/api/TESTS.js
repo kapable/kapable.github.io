@@ -23,6 +23,450 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // percentageMBTI2022Cn
+    {
+        info : {
+            mainTitle:"percentageMBTICn",
+            subTitle:"percentageMBTICn",
+            mainUrl:"percentageMBTI2022Cn",
+            scoreType:"percentageMBTI",
+            mainImage:"https://images.ktestone.com/introImages/percentageMBTI2022Cn-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/percentageMBTI2022Cn-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"CN"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '他人看待我的时候，\n更接近的是？',
+                answers:[
+                    {
+                        type: "E",
+                        content: '和我在一起时心里会很舒服。'
+                    },
+                    {
+                        type: "I",
+                        content: '属于内向型，\n很难了解我的想法和心思。'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "和他人在一起时的我？",
+                answers:[
+                    {
+                        type: "E",
+                        content: "虽然也不是不喜欢独处，\n但和其他人在一起的话反而会获得能量。"
+                    },
+                    {
+                        type: "I",
+                        content: "虽然在一起也很好，\n但一个人的时候才会获得能量。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "和他人聚会(见面)之后的我？",
+                answers:[
+                    {
+                        type: "E",
+                        content: "虽然今天一整天都很累，\n但和大家在一起反而感到很开心幸福，\n获得活力。"
+                    },
+                    {
+                        type: "I",
+                        content: "虽然大家在一起会很开心幸福，\n但后来会感到很疲惫，\n活力都丧失了一样。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: '以下哪种情况会让我感到有压力？',
+                answers:[
+                    {
+                        type: "E",
+                        content: '提问之后不能马上听到对\n方答复的时候会感到有压力。'
+                    },
+                    {
+                        type: "I",
+                        content: '他人提问的时候需要时间来思考却\n不给我时间的时候会感到有压力。'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "刚开始一件对于自己而言新颖的事情时？",
+                answers:[
+                    {
+                        type: "E",
+                        content: "觉得一旦开始了就会有新的想法，\n所以不管三七二十一先行动起来。"
+                    },
+                    {
+                        type: "I",
+                        content: "开始之前需要充分的时间做准备，\n认为需要深思熟虑。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "我更想得到的是？",
+                answers:[
+                    {
+                        type: "S",
+                        content: "准确又值得信任的事实。"
+                    },
+                    {
+                        type: "N",
+                        content: "即使不是事实也会认为具有挑战性，\n值得期待。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "以下更接近我的是？",
+                answers:[
+                    {
+                        type: "S",
+                        content: "先开始行动的现实主义者。"
+                    },
+                    {
+                        type: "N",
+                        content: "会思考很多不现实的事情，\n思绪一个接着一个。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "工作(学业)中的我更倾向于？",
+                answers:[
+                    {
+                        type: "S",
+                        content: "更倾向于完全结束一项\n工作后再开始其它事情。"
+                    },
+                    {
+                        type: "N",
+                        content: "仅专注于单一的事情上会感到很烦闷，\n所以更倾向于同时进行多项工作。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "和其他人一起开会时思考新点子时的我会？",
+                answers:[
+                    {
+                        type: "S",
+                        content: "其中一个人提出想法时会思考是否可行。"
+                    },
+                    {
+                        type: "N",
+                        content: "其中一个人提出一个创新的\n主意时会激发自己的想象力，\n从而思考出新点子。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "以下更接近我的是？",
+                answers:[
+                    {
+                        type: "S",
+                        content: "我只擅长于做自己负责的事情。"
+                    },
+                    {
+                        type: "N",
+                        content: "我喜欢挑战，\n途中毫不惧怕。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "和他人对话时，\n觉得心里不舒服的是？",
+                answers:[
+                    {
+                        type: "T",
+                        content: "对话脱离主题或包含与\n事实不相符的内容时"
+                    },
+                    {
+                        type: "F",
+                        content: "话语中包含无视他人情绪时"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "做决定时我更重视的是？",
+                answers:[
+                    {
+                        type: "T",
+                        content: "即使对方不看好，\n但只要是我认为是正确的就会做决定。"
+                    },
+                    {
+                        type: "F",
+                        content: "我认为符合自己的\n价值观和情绪的话就会做决定。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "我认为更接近’善意的谎言’的情形是？",
+                answers:[
+                    {
+                        type: "T",
+                        content: "无论如何说谎是不对的，\n善意的谎言只是一个借口而已。"
+                    },
+                    {
+                        type: "F",
+                        content: "反复的善意谎言虽然不对，\n但了解其中的缘由就会理解。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "以下更接近我的是？",
+                answers:[
+                    {
+                        type: "T",
+                        content: "我认为结果比努力的过程更重要。"
+                    },
+                    {
+                        type: "F",
+                        content: "我认为努力获得结果的过程更重要。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "在说服他人时的我会？",
+                answers:[
+                    {
+                        type: "T",
+                        content: "提出比对方想法更合理更有道理的方案。"
+                    },
+                    {
+                        type: "F",
+                        content: "先对对方的情绪产生共鸣，\n同时通过对话的方式努力说服对方。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "对于 ‘计划’而言更接近我的想法的是？",
+                answers:[
+                    {
+                        type: "J",
+                        content: "为了自己舒服，\n必须提前做好一切准备工作内心才会安稳。"
+                    },
+                    {
+                        type: "P",
+                        content: "能自由自在地做自己想做的\n事情时内心最舒服。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "新状况发生时的我会？",
+                answers:[
+                    {
+                        type: "J",
+                        content: "在彻底了解到底是什么\n情况之前会小心翼翼地观察并整理思绪。"
+                    },
+                    {
+                        type: "P",
+                        content: "会先闯进现场并和周围的人们一起分享想法，\n尝试解决问题。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "在做决策面前我会？",
+                answers:[
+                    {
+                        type: "J",
+                        content: "为了快速做出决策，\n认为不做决策不如做错决策。"
+                    },
+                    {
+                        type: "P",
+                        content: "为了做出更好的决策会先暂时停下脚步，\n先收集一些有用的信息，经深思熟虑后做最终决策。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "工作中更接近我的作风的是？",
+                answers:[
+                    {
+                        type: "J",
+                        content: "提前做好准备和计划，\n然后轻轻松松地完成。"
+                    },
+                    {
+                        type: "P",
+                        content: "集中注意力坚持到最后。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "旅途中更接近我的是？",
+                answers:[
+                    {
+                        type: "J",
+                        content: "如果情况打乱了我提前做好的准备就会内心不安，\n但会拿出准备好的B方案。"
+                    },
+                    {
+                        type: "P",
+                        content: "根据当天的心情和天气随机树立计划。"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "gladeGreen",
+                color:`#587A4B`,
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/ESTJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESTJ.png',
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tangerine",
+                color:`#FF977B`,
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/ESTP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESTP.png',
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "cosmos",
+                color:`#FFCFCF`,
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/ESFJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESFJ.png',
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "froly",
+                color:`#E0707E`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/ESFP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ESFP.png',
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "mariner",
+                color:`#3462A3`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/ENTJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENTJ.png',
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "valencia",
+                color:`#DD5843`,
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/ENTP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENTP.png',
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "aquamarine",
+                color:`#52CEB0`,
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/ENFJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENFJ.png',
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "sunshade",
+                color:`#FFA348`,
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/ENFP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ENFP.png',
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "gainsboro",
+                color:`#DDDDDD`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/ISTJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISTJ.png',
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "bostonBlue",
+                color:`#4690B4`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/ISTP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISTP.png',
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "grandis",
+                color:`#FFCC71`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/ISFJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISFJ.png',
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "olivine",
+                color:`#A6BF6F`,
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/ISFP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/ISFP.png',
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "bilobaFlower",
+                color:`#BAB0FF`,
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/INTJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INTJ.png',
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "mayaBlue",
+                color:`#7FC2F4`,
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/INTP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INTP.png',
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "hawkesBlue",
+                color:`#C0D8FF`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/INFJ.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INFJ.png',
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "genoa",
+                color:`#277A64`,
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022Cn/INFP.png',
+                bg_img_src:'https://images.ktestone.com/resultImages/percentageMBTI2022/INFP.png',
+            },
+        ]
+    },
     // percentageMBTI2022Eng
     {
         info : {
@@ -33349,35 +33793,40 @@ var TESTS = [
                 `,
                 query: "ESTJ",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESTJ.png',
+                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "ESTP",
                 desc: `골드 샌드`,
                 query: "ESTP",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESTP.png',
+                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ESFJ",
                 desc: `뉴욕핑크`,
                 query: "ESFJ",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESFJ.png',
+                youtube_url: `https://youtu.be/HQ8_DWPgL2U`
             },
             {
                 type: "ESFP",
                 desc: `비터스윗`,
                 query: "ESFP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESFP.png',
+                youtube_url: `https://youtu.be/tDooBz7lSic`
             },
             {
                 type: "ENTJ",
                 desc: `체스넛 로즈`,
                 query: "ENTJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENTJ.png',
+                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "ENTP",
@@ -33385,42 +33834,48 @@ var TESTS = [
                 `,
                 query: "ENTP",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENTP.png',
+                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ENFJ",
                 desc: `그린 헤이즈`,
                 query: "ENFJ",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENFJ.png',
+                youtube_url: `https://youtu.be/RTtAPldbdJE`
             },
             {
                 type: "ENFP",
                 desc: `선셋 오렌지`,
                 query: "ENFP",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENFP.png',
+                youtube_url: `https://youtu.be/fRbPIKGBqcY`
             },
             {
                 type: "ISTJ",
                 desc: `서프`,
                 query: "ISTJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISTJ.png',
+                youtube_url: `https://youtu.be/MHmmD5ywznc`
             },
             {
                 type: "ISTP",
                 desc: `콜드 퍼플`,
                 query: "ISTP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISTP.png',
+                youtube_url: `https://youtu.be/WrDNVL33L5o`
             },
             {
                 type: "ISFJ",
                 desc: `스카이 블루`,
                 query: "ISFJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISFJ.png',
+                youtube_url: `https://youtu.be/WdFZ4C53_Iw`
             },
             {
                 type: "ISFP",
@@ -33428,35 +33883,40 @@ var TESTS = [
                 `,
                 query: "ISFP",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISFP.png',
+                youtube_url: `https://youtu.be/IUtVhTn5g00`
             },
             {
                 type: "INTJ",
                 desc: `슬레이트 블루`,
                 query: "INTJ",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/INTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/INTJ.png',
+                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "INTP",
                 desc: `무디블루`,
                 query: "INTP",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/INTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/INTP.png',
+                youtube_url: `https://youtu.be/oDZF6EJ7W-Y`
             },
             {
                 type: "INFJ",
                 desc: `말리부`,
                 query: "INFJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/INFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/INFJ.png',
+                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "INFP",
                 desc: `오션그린`,
                 query: "INFP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTI/INFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTI/INFP.png',
+                youtube_url: `https://youtu.be/zFtrrokEWXQ`
             },
         ]
     },
@@ -33673,35 +34133,40 @@ var TESTS = [
                 `,
                 query: "ESTJ",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESTJ.png',
+                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "ESTP",
                 desc: `Gold Sand`,
                 query: "ESTP",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESTP.png',
+                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ESFJ",
                 desc: `Newyork Pink`,
                 query: "ESFJ",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESFJ.png',
+                youtube_url: `https://youtu.be/HQ8_DWPgL2U`
             },
             {
                 type: "ESFP",
                 desc: `Bitter Sweet`,
                 query: "ESFP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESFP.png',
+                youtube_url: `https://youtu.be/tDooBz7lSic`
             },
             {
                 type: "ENTJ",
                 desc: `Chestnut Rose`,
                 query: "ENTJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENTJ.png',
+                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "ENTP",
@@ -33709,42 +34174,48 @@ var TESTS = [
                 `,
                 query: "ENTP",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENTP.png',
+                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ENFJ",
                 desc: `Green Haze`,
                 query: "ENFJ",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENFJ.png',
+                youtube_url: `https://youtu.be/RTtAPldbdJE`
             },
             {
                 type: "ENFP",
                 desc: `Sunset Orange`,
                 query: "ENFP",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENFP.png',
+                youtube_url: `https://youtu.be/fRbPIKGBqcY`
             },
             {
                 type: "ISTJ",
                 desc: `Surf`,
                 query: "ISTJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISTJ.png',
+                youtube_url: `https://youtu.be/MHmmD5ywznc`
             },
             {
                 type: "ISTP",
                 desc: `Cold Purple`,
                 query: "ISTP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISTP.png',
+                youtube_url: `https://youtu.be/WrDNVL33L5o`
             },
             {
                 type: "ISFJ",
                 desc: `Sky Blue`,
                 query: "ISFJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISFJ.png',
+                youtube_url: `https://youtu.be/WdFZ4C53_Iw`
             },
             {
                 type: "ISFP",
@@ -33752,35 +34223,40 @@ var TESTS = [
                 `,
                 query: "ISFP",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISFP.png',
+                youtube_url: `https://youtu.be/IUtVhTn5g00`
             },
             {
                 type: "INTJ",
                 desc: `Slate Blue`,
                 query: "INTJ",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INTJ.png',
+                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "INTP",
                 desc: `Moody Blue`,
                 query: "INTP",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INTP.png',
+                youtube_url: `https://youtu.be/oDZF6EJ7W-Y`
             },
             {
                 type: "INFJ",
                 desc: `Malibu`,
                 query: "INFJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INFJ.png',
+                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "INFP",
                 desc: `Ocean Green`,
                 query: "INFP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INFP.png',
+                youtube_url: `https://youtu.be/zFtrrokEWXQ`
             },
         ]
     },
@@ -33997,35 +34473,40 @@ var TESTS = [
                 `,
                 query: "ESTJ",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTJ.png',
+                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "ESTP",
                 desc: `Gold Sand`,
                 query: "ESTP",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTP.png',
+                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ESFJ",
                 desc: `Newyork Pink`,
                 query: "ESFJ",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFJ.png',
+                youtube_url: `https://youtu.be/HQ8_DWPgL2U`
             },
             {
                 type: "ESFP",
                 desc: `Bitter Sweet`,
                 query: "ESFP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFP.png',
+                youtube_url: `https://youtu.be/tDooBz7lSic`
             },
             {
                 type: "ENTJ",
                 desc: `Chestnut Rose`,
                 query: "ENTJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTJ.png',
+                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "ENTP",
@@ -34033,42 +34514,48 @@ var TESTS = [
                 `,
                 query: "ENTP",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTP.png',
+                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ENFJ",
                 desc: `Green Haze`,
                 query: "ENFJ",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFJ.png',
+                youtube_url: `https://youtu.be/RTtAPldbdJE`
             },
             {
                 type: "ENFP",
                 desc: `Sunset Orange`,
                 query: "ENFP",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFP.png',
+                youtube_url: `https://youtu.be/fRbPIKGBqcY`
             },
             {
                 type: "ISTJ",
                 desc: `Surf`,
                 query: "ISTJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTJ.png',
+                youtube_url: `https://youtu.be/MHmmD5ywznc`
             },
             {
                 type: "ISTP",
                 desc: `Cold Purple`,
                 query: "ISTP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTP.png',
+                youtube_url: `https://youtu.be/WrDNVL33L5o`
             },
             {
                 type: "ISFJ",
                 desc: `Sky Blue`,
                 query: "ISFJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFJ.png',
+                youtube_url: `https://youtu.be/WdFZ4C53_Iw`
             },
             {
                 type: "ISFP",
@@ -34076,35 +34563,40 @@ var TESTS = [
                 `,
                 query: "ISFP",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFP.png',
+                youtube_url: `https://youtu.be/IUtVhTn5g00`
             },
             {
                 type: "INTJ",
                 desc: `Slate Blue`,
                 query: "INTJ",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTJ.png',
+                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "INTP",
                 desc: `Moody Blue`,
                 query: "INTP",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTP.png',
+                youtube_url: `https://youtu.be/oDZF6EJ7W-Y`
             },
             {
                 type: "INFJ",
                 desc: `Malibu`,
                 query: "INFJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFJ.png',
+                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "INFP",
                 desc: `Ocean Green`,
                 query: "INFP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFP.png',
+                youtube_url: `https://youtu.be/zFtrrokEWXQ`
             },
         ]
     },
@@ -34321,35 +34813,40 @@ var TESTS = [
                 `,
                 query: "ESTJ",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTJ.png',
+                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "ESTP",
                 desc: `Gold Sand`,
                 query: "ESTP",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTP.png',
+                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ESFJ",
                 desc: `Newyork Pink`,
                 query: "ESFJ",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFJ.png',
+                youtube_url: `https://youtu.be/HQ8_DWPgL2U`
             },
             {
                 type: "ESFP",
                 desc: `Bitter Sweet`,
                 query: "ESFP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFP.png',
+                youtube_url: `https://youtu.be/tDooBz7lSic`
             },
             {
                 type: "ENTJ",
                 desc: `Chestnut Rose`,
                 query: "ENTJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTJ.png',
+                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "ENTP",
@@ -34357,42 +34854,48 @@ var TESTS = [
                 `,
                 query: "ENTP",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTP.png',
+                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ENFJ",
                 desc: `Green Haze`,
                 query: "ENFJ",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFJ.png',
+                youtube_url: `https://youtu.be/RTtAPldbdJE`
             },
             {
                 type: "ENFP",
                 desc: `Sunset Orange`,
                 query: "ENFP",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFP.png',
+                youtube_url: `https://youtu.be/fRbPIKGBqcY`
             },
             {
                 type: "ISTJ",
                 desc: `Surf`,
                 query: "ISTJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTJ.png',
+                youtube_url: `https://youtu.be/MHmmD5ywznc`
             },
             {
                 type: "ISTP",
                 desc: `Cold Purple`,
                 query: "ISTP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTP.png',
+                youtube_url: `https://youtu.be/WrDNVL33L5o`
             },
             {
                 type: "ISFJ",
                 desc: `Sky Blue`,
                 query: "ISFJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFJ.png',
+                youtube_url: `https://youtu.be/WdFZ4C53_Iw`
             },
             {
                 type: "ISFP",
@@ -34400,35 +34903,40 @@ var TESTS = [
                 `,
                 query: "ISFP",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFP.png',
+                youtube_url: `https://youtu.be/IUtVhTn5g00`
             },
             {
                 type: "INTJ",
                 desc: `Slate Blue`,
                 query: "INTJ",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTJ.png',
+                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "INTP",
                 desc: `Moody Blue`,
                 query: "INTP",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTP.png',
+                youtube_url: `https://youtu.be/oDZF6EJ7W-Y`
             },
             {
                 type: "INFJ",
                 desc: `Malibu`,
                 query: "INFJ",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFJ.png',
+                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "INFP",
                 desc: `Ocean Green`,
                 query: "INFP",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFP.png'
+                img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFP.png',
+                youtube_url: `https://youtu.be/zFtrrokEWXQ`
             },
         ]
     },
