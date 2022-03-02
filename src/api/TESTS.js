@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // travelBTI
+    {
+        info : {
+            mainTitle:"여행BTI",
+            subTitle:"내 성격의 여행스타일은 무엇일까?",
+            mainUrl:"travelBTI",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/travelBTI-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/travelBTI-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '여행의 감성을 느끼기 위해 게스트하우스를 예약했다.\n나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '다른 혼자 온 사람에게 말을 먼저 걸어본다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '그냥 먼저 인사할 때까지 가만히 있는다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "게스트하우스 내에서 다들 친해졌다.\n모두가 모여서 대화를 하고 있을 때,\n나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "저 사람 말하는 거 끝나면 나는 이 말 해야지~"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "들어가기는 아쉽고 말하기는 싫으니 듣고만 있는다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "여행을 갈 때 선호하는 것은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "혼자 가는 여행은 외로워!\n가족이나 친구들과 함께 가야지."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "난 혼자 가는 여행도 나름 재밌어!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "여행 가기 전날 나와 비슷한 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "숙소 예약 확인 후 내일 여행에\n지장이 없게 바로 잠든다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "숙소 예약 확인 후 설렘과 걱정에\n이것저것 생각하다 시간을 보고\n서둘러 잠든다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "여행 중 가야 할 곳이 있는데\n길을 잘못 들었다. ",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "다시 내비가 알려주는 정확한 경로에\n들어서야 마음이 편하다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "이 또한 추억이지 허헣\n어? 저기서 사진 찍고 갈까?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "숙소에 도착했을 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "와 여기 숙소 너무 이쁘다.\n깔끔하고 좋네!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "와 여기 숙소 대박이네!\n사장님 부자신가?\n뭐 하시길래 돈을 이렇게 많이 버셨을까?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "여행에 다녀온 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "사진 공유+ 정산 후 일상으로 복귀"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "여행 사진을 보며 엄청난 후유증으로\n다음 여행을 기다린다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "둘 중 더 서운한 것은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "내가 고른 여행지를 만족해하지 않는 것 같을 때."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "기분이 좋아서 같이 간 친구에게\n리액션을 했는데 시큰둥할 때."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "여행지에서 어디갈 지 고르는데\n친구가 답변을 잘 안 한다.\n그때 원하는 사과 답변은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "미안ㅜㅜ 나 오늘 회사에서 중요한 일을 맡아서…\n집중이 안 됐다ㅜ 집에 가서 바로 찾아볼게…\n미안해 정말 !"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "ㅜㅜ 나때문에 마음 많이 상했지?\n나 오늘 회사에서 일이 있어서 집중을 못 했네…\n그래도 넌 열심히 찾아봤는데ㅜ\n미안해 퇴근하면 언넝 찾아볼게여ㅜ"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "여행 계획을 짤 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "분 단위로 찾아 둬야\n나중에 못 가는 곳이 생겨도\n마음이 편하다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "대략 가고 싶은 곳만 정하고\n못 가면 그 때 그 상황에 찾아본다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "여행에 다녀왔을 때 나와 비슷한 것은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "몸이 힘들어도 오자마자 바로 짐 정리를 하고 쉰다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 내 몸이 힘든 게 우선이다.\n좀만 누워있자!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "여행 후 나의 사진 앨범은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "무엇이 베스트 컷인지 마음에 드는 것은\n하트를 누르고 아니면 삭제한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 나중에 시간여유가 생기면 해야지\n하면서 미뤄두다가 까먹는다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `
+                `,
+                query: "USA",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: ``,
+                query: "Thailand",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: ``,
+                query: "Canada",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: ``,
+                query: "Australia",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: ``,
+                query: "Czech",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `
+                `,
+                query: "Jeju",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: ``,
+                query: "Greece",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: ``,
+                query: "Busan",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: ``,
+                query: "London",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: ``,
+                query: "Turkey",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: ``,
+                query: "Italy",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `
+                `,
+                query: "Hawaii",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: ``,
+                query: "Brazil",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: ``,
+                query: "France",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: ``,
+                query: "Japan",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: ``,
+                query: "Bali",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelBTI/INFP.png'
+            },
+        ]
+    },
     // auditionBTI
     {
         info : {
