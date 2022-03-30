@@ -445,7 +445,7 @@ class Result extends Component {
             // meta tag for PPL test contents
             let ppl_list = ['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalTaro', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
-            let coupang_list = ['personalColor2022', 'personalColor'];
+            // let coupang_list = ['personalColor2022', 'personalColor'];
             if(ppl_list.includes(this.state.current_test)) {
                 let og_img_url = "https://images.ktestone.com/meta/" + this.state.current_test + "/" + this.state.current_result + ".png"
                 return (
@@ -539,7 +539,21 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        <img src={img_src} className='result-img' alt={final_type} />
+                        {this.state.isOpened || this.state.coupangCookies
+                        ? (
+                            <img src={img_src} className='result-img' alt={final_type} />
+                        )
+                        : (
+                            <Fragment>
+                                <a href={this.state.coupangLink} target="_blank" rel='noreferrer noopener'>
+                                    <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onCoupangButtonClick}>
+                                        쿠팡 보고 결과 보기
+                                    </button>
+                                </a>
+                                <p className='result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
+                            </Fragment>
+                        )
+                        }
                         <a target="_blank" 
                         rel="noopener noreferrer"
                         href="https://jellinggame.com/"
@@ -591,7 +605,53 @@ class Result extends Component {
                         </Card>
                     </Fragment>
                 )
-            } else if(coupang_list.includes(this.state.current_test)) {
+            } 
+            // else if(coupang_list.includes(this.state.current_test)) {
+            //     return (
+            //         <Fragment>
+            //             <Helmet>
+            //                 {/* <!-- Primary Meta Tags --> */}
+            //                 <title>{test_current}-케이테스트</title>
+            //                 <meta name="title" content={test_current+'-케이테스트'}/>
+            //                 <meta name="description" content={this.state.current_result + ':' + desc_test_current} data-react-helmet="true"/>
+            //                 <link rel="main-url" href={this.state.sharable_url}/>
+    
+            //                 {/* <!-- Open Graph / Facebook --> */}
+            //                 <meta property="og:type" content="website"/>
+            //                 <meta property="og:url" content={this.state.sharable_url}/>
+            //                 <meta property="og:title" content={test_current+'-케이테스트'}/>
+            //                 <meta property="og:description" content={this.state.current_result + ':' + desc_test_current}/>
+            //                 <meta property="og:image" content={img_src}/>
+            //                 <meta property="og:image:alt" content={this.state.current_result} />
+    
+            //                 {/* <!-- Twitter --> */}
+            //                 <meta property="twitter:card" content="summary_large_image"/>
+            //                 <meta property="twitter:url" content={this.state.sharable_url}/>
+            //                 <meta property="twitter:title" content={test_current+'-케이테스트'}/>
+            //                 <meta property="twitter:description" content={this.state.current_result + ':' + desc_test_current}/>
+            //                 <meta property="twitter:image" content={img_src}/>
+            //                 <meta property="twitter:image:alt" content={this.state.current_result} />
+            //             </Helmet>
+            //             {this.adTagRenderer()}
+            //             {this.state.isOpened || this.state.coupangCookies
+            //             ? (
+            //                 <img src={img_src} className='result-img' alt={final_type} />
+            //             )
+            //             : (
+            //                 <Fragment>
+            //                     <a href={this.state.coupangLink} target="_blank" rel='noreferrer noopener'>
+            //                         <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onCoupangButtonClick}>
+            //                             쿠팡 보고 결과 보기
+            //                         </button>
+            //                     </a>
+            //                     <p className='result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
+            //                 </Fragment>
+            //             )
+            //             }
+            //         </Fragment>
+            //     )
+            // } 
+            else {
                 return (
                     <Fragment>
                         <Helmet>
@@ -633,36 +693,6 @@ class Result extends Component {
                             </Fragment>
                         )
                         }
-                    </Fragment>
-                )
-            } else {
-                return (
-                    <Fragment>
-                        <Helmet>
-                            {/* <!-- Primary Meta Tags --> */}
-                            <title>{test_current}-케이테스트</title>
-                            <meta name="title" content={test_current+'-케이테스트'}/>
-                            <meta name="description" content={this.state.current_result + ':' + desc_test_current} data-react-helmet="true"/>
-                            <link rel="main-url" href={this.state.sharable_url}/>
-    
-                            {/* <!-- Open Graph / Facebook --> */}
-                            <meta property="og:type" content="website"/>
-                            <meta property="og:url" content={this.state.sharable_url}/>
-                            <meta property="og:title" content={test_current+'-케이테스트'}/>
-                            <meta property="og:description" content={this.state.current_result + ':' + desc_test_current}/>
-                            <meta property="og:image" content={img_src}/>
-                            <meta property="og:image:alt" content={this.state.current_result} />
-    
-                            {/* <!-- Twitter --> */}
-                            <meta property="twitter:card" content="summary_large_image"/>
-                            <meta property="twitter:url" content={this.state.sharable_url}/>
-                            <meta property="twitter:title" content={test_current+'-케이테스트'}/>
-                            <meta property="twitter:description" content={this.state.current_result + ':' + desc_test_current}/>
-                            <meta property="twitter:image" content={img_src}/>
-                            <meta property="twitter:image:alt" content={this.state.current_result} />
-                        </Helmet>
-                        {this.adTagRenderer()}
-                        <img src={img_src} className='result-img' alt={final_type} />
                     </Fragment>
                 )
             }
