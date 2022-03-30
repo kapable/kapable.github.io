@@ -17,22 +17,29 @@ import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 import JELLINGBANNERENG from '../../api/DefaultImg/go-to-jelling-eng.png';
 import KAKAOPLUSFRIEND from '../../api/DefaultImg/go-to-kakao-plusfriend.png';
 import PCTMBTIBAR from '../SubComponents/PctMBTIBar';
+import { instanceOf } from 'prop-types';
+import { withCookies, Cookies } from 'react-cookie';
 
 class Result extends Component {
+    static propTypes = {
+        cookies: instanceOf(Cookies).isRequired
+    };
+
     constructor(props){
         super(props)
 
         // for applying meta tag url with slash -> prevent doulbe slash at the last chars in the sharable url
-        let _sharable_url = window.location.href
+        let _sharable_url = window.location.href;
         if(window.location.href.slice(-1) === '/'){
-            _sharable_url = window.location.href.slice(0, -1)
+            _sharable_url = window.location.href.slice(0, -1);
         } else {
-            _sharable_url = window.location.href
-        }
+            _sharable_url = window.location.href;
+        };
 
-        const _current_url = _sharable_url.split(/[?/]/).filter(function(t) {return t !== ""})
-        const _current_test = _current_url[3]
-        const _current_result = _current_url[5]
+        const _current_url = _sharable_url.split(/[?/]/).filter(function(t) {return t !== ""});
+        const _current_test = _current_url[3];
+        const _current_result = _current_url[5];
+        const { cookies } = this.props;
 
         this.state = {
             mode:"result",
@@ -43,6 +50,9 @@ class Result extends Component {
             current_test_contents: null,
             num_shares_count:0,
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
+            coupangCookies: cookies.get('coupang') || null,
+            isOpened: false,
+            coupangLink: "https://link.coupang.com/a/k1yii",
         }
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this)
         this._eventSenderGA = this._eventSenderGA.bind(this);
@@ -51,6 +61,18 @@ class Result extends Component {
         this.horizontalNewTestRenderer = this.horizontalNewTestRenderer.bind(this)
         this.adTagRenderer = this.adTagRenderer.bind(this)
         this.otherTestBannerRenderer = this.otherTestBannerRenderer.bind(this)
+        this.onCoupangButtonClick = this.onCoupangButtonClick.bind(this)
+    };
+
+    onCoupangButtonClick(){
+        const { cookies } = this.props;
+        const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
+        cookies.set('coupang', true, { path: '/', maxAge: 30, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        this.setState({
+            coupangCookies: cookies.get('coupang'),
+            isOpened: true,
+        });
+        this._eventSenderGA("Paging", "Click Re-test Button", "result page");
     }
     
     _eventSenderGA(category, action, label){
@@ -421,8 +443,9 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalTaro', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP']
-            let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng']
+            let ppl_list = ['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalTaro', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
+            let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
+            let coupang_list = ['personalColor2022', 'personalColor'];
             if(ppl_list.includes(this.state.current_test)) {
                 let og_img_url = "https://images.ktestone.com/meta/" + this.state.current_test + "/" + this.state.current_result + ".png"
                 return (
@@ -566,6 +589,50 @@ class Result extends Component {
                                 <Card.Text>{final_desc}</Card.Text>
                             </Card.Body>
                         </Card>
+                    </Fragment>
+                )
+            } else if(coupang_list.includes(this.state.current_test)) {
+                return (
+                    <Fragment>
+                        <Helmet>
+                            {/* <!-- Primary Meta Tags --> */}
+                            <title>{test_current}-케이테스트</title>
+                            <meta name="title" content={test_current+'-케이테스트'}/>
+                            <meta name="description" content={this.state.current_result + ':' + desc_test_current} data-react-helmet="true"/>
+                            <link rel="main-url" href={this.state.sharable_url}/>
+    
+                            {/* <!-- Open Graph / Facebook --> */}
+                            <meta property="og:type" content="website"/>
+                            <meta property="og:url" content={this.state.sharable_url}/>
+                            <meta property="og:title" content={test_current+'-케이테스트'}/>
+                            <meta property="og:description" content={this.state.current_result + ':' + desc_test_current}/>
+                            <meta property="og:image" content={img_src}/>
+                            <meta property="og:image:alt" content={this.state.current_result} />
+    
+                            {/* <!-- Twitter --> */}
+                            <meta property="twitter:card" content="summary_large_image"/>
+                            <meta property="twitter:url" content={this.state.sharable_url}/>
+                            <meta property="twitter:title" content={test_current+'-케이테스트'}/>
+                            <meta property="twitter:description" content={this.state.current_result + ':' + desc_test_current}/>
+                            <meta property="twitter:image" content={img_src}/>
+                            <meta property="twitter:image:alt" content={this.state.current_result} />
+                        </Helmet>
+                        {this.adTagRenderer()}
+                        {this.state.isOpened || this.state.coupangCookies
+                        ? (
+                            <img src={img_src} className='result-img' alt={final_type} />
+                        )
+                        : (
+                            <Fragment>
+                                <a href={this.state.coupangLink} target="_blank" rel='noreferrer noopener'>
+                                    <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onCoupangButtonClick}>
+                                        쿠팡 보고 결과 보기
+                                    </button>
+                                </a>
+                                <p className='result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
+                            </Fragment>
+                        )
+                        }
                     </Fragment>
                 )
             } else {
@@ -838,4 +905,4 @@ class Result extends Component {
     }
 }
 
-export default Result;
+export default withCookies(Result);

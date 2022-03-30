@@ -11,12 +11,22 @@ import './components/TestTypes/MetaPangApply/MetaPangApply.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { CookiesProvider } from 'react-cookie';
 
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  hydrate(<App />, rootElement);
+  hydrate(
+  <CookiesProvider>
+    <App />
+  </CookiesProvider>
+  , rootElement
+  );
 } else {
-  render(<App />, rootElement);
+  render(
+  <CookiesProvider>
+    <App />
+  </CookiesProvider>
+  , rootElement);
 }
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
