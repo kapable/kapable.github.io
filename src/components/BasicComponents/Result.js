@@ -72,7 +72,7 @@ class Result extends Component {
             coupangCookies: cookies.get('coupang'),
             isOpened: true,
         });
-        this._eventSenderGA("Paging", "Click Re-test Button", "result page");
+        this._eventSenderGA("Paging", "Click go-to-Coupang Button", "result page");
     }
     
     _eventSenderGA(category, action, label){
