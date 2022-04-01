@@ -16,6 +16,16 @@ function MainPage(props) {
             </div>
             <OhterLangIconsMain />
 
+            {/* Go to POST 2021 */}
+            <Link to='/post2021/' className="main-link-block" key="post2021-banner">
+                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2021-thumb.png`} alt="POST-2021" />
+            </Link>
+
+            {/* Go to POST 2021 ENG */}
+            <Link to='/post2022Eng/' className="main-link-block" key="post2022Eng-banner">
+                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022Eng-thumb.png`} alt="POST-2021" />
+            </Link>
+
             {/* Main Test Banners */}
             <div className="main-link-div">
                 {props.all_tests_url.map((item)=>(
@@ -25,7 +35,7 @@ function MainPage(props) {
                 ))}
             </div>
             
-            {/* Go to POST 2021 */}
+            {/* Go to metapangapply 2021 */}
             <Link to='/metapangapply/' className="main-link-block" key="metapangapply-banner">
                 <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/metaPangApply-thumb.png`} alt="POST-2021" />
             </Link>
@@ -47,16 +57,6 @@ function MainPage(props) {
             {/* <Link to='/kfunny/humor/' className="main-link-block" key="article-banner">
                 <img className="test-main-img" src={ARTICLEBANNER} alt="KTEST-Funny" />
             </Link> */}
-
-            {/* Go to POST 2021 */}
-            <Link to='/post2021/' className="main-link-block" key="post2021-banner">
-                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2021-thumb.png`} alt="POST-2021" />
-            </Link>
-
-            {/* Go to POST 2021 */}
-            <Link to='/post2022Eng/' className="main-link-block" key="post2022Eng-banner">
-                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022Eng-thumb.png`} alt="POST-2021" />
-            </Link>
         </Fragment>
         
     )   
