@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // flowerBTI
+    {
+        info : {
+            mainTitle:"플라워BTI(FlowerBTI)",
+            subTitle:"나의 연애 성격은 무슨 꽃일까?",
+            mainUrl:"flowerBTI",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/flowerBTI-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/flowerBTI-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '새로운 모임에 들어가게 되었는데\n내 이상형을 발견했을 때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '일단 연인이 있는지 물어보고\n없다면 적극적으로 연락을 시도한다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '그 사람 주위에만 맴돌며 기회를 노린다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "이상형의 그분과 단 둘이\n만나게 되었을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "어떤 스타일을 좋아하는지\n그 사람에게 궁금한 것들을 물어본다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "그 사람이 어떤 말을 하는지 경청하고 반응한다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "그 분과 연인이 되었다!\n단 둘이 손을 잡으며 걷다가 연인의 친구를 만났을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "자연스럽게 웃으면서 대화를 같이 이어간다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "간단한 인사를 마지막으로 조용히 옆에 있는다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "자기 전 문득 든 생각…\n이 사람과 평생 함께 할 수 있을까?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "현실적으로 불가능할 것 같다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "그래! 이 사람과 평생 함께 하면\n어떨지 머릿속으로 상상해본다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인이 친구들과 노는데\n연락이 안 됐을 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "재밌게 놀고 있어 연락이 안 되나?\n하고 내 할 일을 한다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "왜 갑자기 연락이 안 되는 거지…?\n하며 불안해진다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인과 판타지 영화를 보고 나서\n대화할 때 내 모습과 가까운 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "재밌긴 했는데 현실적으로 마법사가 있을 수는 없지"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "만약 너가 마법사가 된다면 어떤 마법사야?\n영웅이야? 악당이야?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "연인이 나의 남/여사친을 신경 쓰인다고 했을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "신경 쓰이긴 하겠지만 내 인간관계인 것을…\n그냥 친구인데"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "하긴… 입장 바꿔서 생각해보면 서운할 것 같다…\n좀 적당히 해야겠다ㅜ"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "연인과 다퉜을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "이런 점은 고쳐줬으면 좋겠어!\n하며 차분하게 말하려고 노력한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "나 진짜 이런 거 너무 서운해…\n하면서 눈물이 나올 것 같다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "둘 중 한 명만 만나야 한다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "공감 능력이 없는 연인"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "서운하다고 했는데 고칠 생각이 없이 사과만 하는 연인"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인과 데이트하기 전날 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "자기 전 내일 무엇을 입을지\n머리부터 발끝까지 생각하고 잔다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "나가기 직전 마음에 드는 옷을 입는다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인이 집에 놀러 온다고 했을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "한 김에 쓰레기도 버리고\n화장실 청소까지 말끔하게 다 한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "보이는 곳만 급하게 치우고\n안 보이는 곳에 넣어둔다!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "같이 커플 여행 계획을 짤 때\n원하는 연인의 스타일은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "일정을 세세하게 일별로 같이 정리하는 연인"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "비행기 표만 일단 끊고\n그날의 기분에 따라 자유롭게 여행하는 연인"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `
+                `,
+                query: "mayweed",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: ``,
+                query: "mango",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: ``,
+                query: "grace",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: ``,
+                query: "phlox",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: ``,
+                query: "marigold",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `
+                `,
+                query: "ranunculus",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: ``,
+                query: "janaRose",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: ``,
+                query: "pompon",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: ``,
+                query: "charment",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: ``,
+                query: "lisianthus",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: ``,
+                query: "hyacinth",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `
+                `,
+                query: "sweet",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: ``,
+                query: "statice",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: ``,
+                query: "sunflower",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: ``,
+                query: "mini",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: ``,
+                query: "freesia",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTI/INFP.png'
+            },
+        ]
+    },
     // travelBTI
     {
         info : {
