@@ -49,7 +49,7 @@ class Result extends Component {
             current_result:_current_result,
             current_test_contents: null,
             num_shares_count:0,
-            ppl_list:['flowerBTI', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
+            ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
             isOpened: false,
             coupangLink: "https://link.coupang.com/a/k1yii",
