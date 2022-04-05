@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // flowerBTIEng
+    {
+        info : {
+            mainTitle:"flowerBTIEng",
+            subTitle:"What kind of flower is my love life?",
+            mainUrl:"flowerBTIEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/flowerBTIEng-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/flowerBTIEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Eng"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'On a honey-like weekend?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'The house is so boring!\nI will go anywhere!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'After all,\nI should take a rest while watching TV\nat home on weekends.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "The start of a new semester!\nI saw a guy I liked.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Approach him first to say hello."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I'm just staring at you."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Your friend asks you to drag you\nin front of the opposite sex and\nhave a conversation.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Laugh and have fun talking together."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I'm shy,\nso I just smile quietly and be awkward."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When I think of the person I like,\nwhat do I do?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Can it be done realistically?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Ha... If I date that person,\nI will do this and that too~ Oh,\nit makes my heart flutter!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Me in love,\nwhen I look at the world?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "'A mountain is a mountain.\nWater is water.’\nSee it as it is"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Rather than reality,\nI spread my own world,\nmy imagination."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "During a date,\nI was hungry and found a restaurant.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "The review looks good!\nLet's go here!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Oh, It smells a restaurant that looks perfect."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What is my first reaction when I am angry?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Speak rationally about the reason for my anger."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I'm filled with anger and I'm crying."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "The person I like is in a difficult situation.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Propose and support realistic solutions."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Empathize with emotions and\nprovides psychological support."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When I talk to someone I like,\nwhat do I do?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Ask questions and ask questions about him."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "React and empathize when he is talking to me."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Suddenly the mood Jeju Island!\nI want to go to Jeju Island!",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Plan a detailed schedule for each day of the week"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Flight ticket reservation complete!\nI think the plan is almost over."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Which one is closer to me?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I am well organized and find where my things are."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I think I know where my things are,\nbut when I look for them,\nI can't find them..."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "I try to confess to the person you like.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Make a thorough plan and\naim for the right time to confess."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Confess promptly based on the atmosphere."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `
+                `,
+                query: "mayweed",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: ``,
+                query: "mango",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: ``,
+                query: "grace",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: ``,
+                query: "phlox",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: ``,
+                query: "marigold",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `
+                `,
+                query: "ranunculus",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: ``,
+                query: "janaRose",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: ``,
+                query: "pompon",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: ``,
+                query: "charment",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: ``,
+                query: "lisianthus",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: ``,
+                query: "hyacinth",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `
+                `,
+                query: "sweet",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: ``,
+                query: "statice",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: ``,
+                query: "sunflower",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: ``,
+                query: "mini",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: ``,
+                query: "freesia",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIEng/INFP.png'
+            },
+        ]
+    },
     // flowerBTI
     {
         info : {
