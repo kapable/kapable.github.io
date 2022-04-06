@@ -56,7 +56,6 @@ class Result extends Component {
             isOpened: false,
             coupangLink: "https://link.coupang.com/a/lOSLd",
             amazonLink: "https://www.amazon.com/?&_encoding=UTF8&tag=ktestone-20&linkCode=ur2&linkId=adc3bdba997e0a439e4fa8467501bc3a&camp=1789&creative=9325",
-            rakutenLink: "https://click.linksynergy.com/fs-bin/click?id=Tp*Z7a4nef4&offerid=311675.10000157&type=3&subid=0&LSNSUBSITE=LSNSUBSITE",
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
         this._eventSenderGA = this._eventSenderGA.bind(this);
@@ -67,18 +66,6 @@ class Result extends Component {
         this.otherTestBannerRenderer = this.otherTestBannerRenderer.bind(this);
         this.onCoupangButtonClick = this.onCoupangButtonClick.bind(this);
         this.onAmazonButtonClick = this.onAmazonButtonClick.bind(this);
-        this.onRakutenButtonClick = this.onRakutenButtonClick.bind(this);
-    };
-
-    onRakutenButtonClick(){
-        const { cookies } = this.props;
-        const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
-        cookies.set('rakuten', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
-        this.setState({
-            rakutenCookies: cookies.get('rakuten'),
-            isOpened: true,
-        });
-        this._eventSenderGA("Paging", "Click go-to-Rakuten Button", "result page");
     };
     
     onAmazonButtonClick(){
@@ -475,9 +462,9 @@ class Result extends Component {
         } else if (window.location.href.includes("JP") || window.location.href.includes("Jp")) {
             return (
                 <Fragment>
-                    <a href={this.state.rakutenLink} target="_blank" rel='noreferrer noopener'>
-                        <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onRakutenButtonClick}>
-                            楽天見た後の結果を見る
+                    <a href={this.state.amazonLink} target="_blank" rel='noreferrer noopener'>
+                        <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onAmazonButtonClick}>
+                            アマゾン見た後の結果を見る
                         </button>
                     </a>
                 </Fragment>
