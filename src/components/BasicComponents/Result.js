@@ -457,6 +457,7 @@ class Result extends Component {
                             View results after viewing Amazon
                         </button>
                     </a>
+                    <p className='result-coupang-comment'>* Affiliate disclosure: As an Amazon Associate,<br />we may earn commissions from qualifying purchases from Amazon.com</p>
                 </Fragment>
             )
         } else if (window.location.href.includes("JP") || window.location.href.includes("Jp")) {
@@ -467,6 +468,7 @@ class Result extends Component {
                             アマゾン見た後の結果を見る
                         </button>
                     </a>
+                    <p className='result-coupang-comment'>* 提携企業公示:<br />Amazon Associateで当社はAmazon.comで購入資格を取得し、<br />手数料を受け取ることができます。</p>
                 </Fragment>
             )
         } else {

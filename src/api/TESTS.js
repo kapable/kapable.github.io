@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // flowerBTIJP
+    {
+        info : {
+            mainTitle:"flowerBTIJP",
+            subTitle:"What kind of flower is my love life?",
+            mainUrl:"flowerBTIJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/flowerBTIJP-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/flowerBTIJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"JP"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'あなたの週末の過ごし方は？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '家の中は退屈すぎる！\nどこか出かけよう！'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'やっぱり週末には自宅でテレビ見て休むに限る。'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "新学期の始まり！\n好みの異性を見つけたら？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "自分から近付いて挨拶する。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "遠くでチラ見するだけ。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "好きな異性の前に連れて行かれて、\n話しかけてみようよ、\nと友達に促された。",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "一緒に笑いながら楽しく会話する。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "ぎこちなくて照れくさくて静かに笑うだけ。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "好きな人のことを思うときの自分は？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "現実的にこの恋は叶うだろうか？"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "もしあの人と付き合ったら…あれもこれもしたい～もう、\nときめきが止まらない！"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋に落ちたあなたの目に、\n世界はどんな風に映っていますか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "「山は山\n水は水」ありのままに見えている。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "現実よりは自分だけの世界、\n妄想が広がる。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "デート中、\nお腹が減ってきたところ丁度いい店を見つけた。",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "レビューを見たけど、\n良い店らしい！この店に入ろう！"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "なんとなくだけど、\nこの店絶対に美味しいと思うよ。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "あなたの「怒りタイプ」は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "怒った理由について理性的に話す。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "怒りがこみ上げてきて涙が出る。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "好きな人が大変な状況に置かれたら？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "現実的な解決策を提示して応援する。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "その人の気持ちに共感してあげて、\n精神的に支えてあげる。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "好きな人と話すときの自分は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "相手のことについて知りたいので色々質問する。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "相手の話にリアクションを打ちつつ、\n話に共感してあげる。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "突然済州島に行きたくなった。\n旅行に行く時はどうする？ ",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "曜日ごとに詳細な日程を計画する。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "飛行機のチケットは予約した。\nこれで計画することはもう終わった。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "自分により近いタイプは？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "整理整頓上手で、\n物の置き場所を把握している。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "物の置き場所をちゃんと把握しているつもりだったのに、\nいざ探すとその場には無い…"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "好きな人に告白するなら？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "徹底的にシミュレーションして告白するタイミングを計らう。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "雰囲気をみて、\n直感的に告白する。"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `
+                `,
+                query: "mayweed",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: ``,
+                query: "mango",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: ``,
+                query: "grace",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: ``,
+                query: "phlox",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: ``,
+                query: "marigold",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `
+                `,
+                query: "ranunculus",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: ``,
+                query: "janaRose",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: ``,
+                query: "pompon",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: ``,
+                query: "charment",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: ``,
+                query: "lisianthus",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: ``,
+                query: "hyacinth",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `
+                `,
+                query: "sweet",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: ``,
+                query: "statice",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: ``,
+                query: "sunflower",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: ``,
+                query: "mini",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: ``,
+                query: "freesia",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerBTIJP/INFP.png'
+            },
+        ]
+    },
     // flowerBTIEng
     {
         info : {
