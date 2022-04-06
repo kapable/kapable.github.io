@@ -51,8 +51,12 @@ class Result extends Component {
             num_shares_count:0,
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
+            amazonCookies: cookies.get('amazon') || null,
+            rakutenCookies: cookies.get('rakuten') || null,
             isOpened: false,
             coupangLink: "https://link.coupang.com/a/lOSLd",
+            amazonLink: "https://www.amazon.com/?&_encoding=UTF8&tag=ktestone-20&linkCode=ur2&linkId=adc3bdba997e0a439e4fa8467501bc3a&camp=1789&creative=9325",
+            rakutenLink: "https://www.amazon.com/?&_encoding=UTF8&tag=ktestone-20&linkCode=ur2&linkId=adc3bdba997e0a439e4fa8467501bc3a&camp=1789&creative=9325",
         }
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this)
         this._eventSenderGA = this._eventSenderGA.bind(this);
@@ -62,7 +66,31 @@ class Result extends Component {
         this.adTagRenderer = this.adTagRenderer.bind(this)
         this.otherTestBannerRenderer = this.otherTestBannerRenderer.bind(this)
         this.onCoupangButtonClick = this.onCoupangButtonClick.bind(this)
+        this.onAmazonButtonClick = this.onAmazonButtonClick.bind(this)
+        this.onRakutenButtonClick = this.onRakutenButtonClick.bind(this)
     };
+
+    onRakutenButtonClick(){
+        const { cookies } = this.props;
+        const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
+        cookies.set('rakuten', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        this.setState({
+            rakutenCookies: cookies.get('rakuten'),
+            isOpened: true,
+        });
+        this._eventSenderGA("Paging", "Click go-to-Rakuten Button", "result page");
+    }
+    
+    onAmazonButtonClick(){
+        const { cookies } = this.props;
+        const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
+        cookies.set('amazon', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        this.setState({
+            amazonCookies: cookies.get('amazon'),
+            isOpened: true,
+        });
+        this._eventSenderGA("Paging", "Click go-to-Amazon Button", "result page");
+    }
 
     onCoupangButtonClick(){
         const { cookies } = this.props;
@@ -429,6 +457,41 @@ class Result extends Component {
         }
     }
 
+    affiliateRenderer(){
+        if(window.location.href.includes("Eng")) {
+            return (
+                <Fragment>
+                    <a href={this.state.amazonLink} target="_blank" rel='noreferrer noopener'>
+                        <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onAmazonButtonClick}>
+                            View results after viewing Amazon
+                        </button>
+                    </a>
+                </Fragment>
+            )
+        } else if (window.location.href.includes("JP") || window.location.href.includes("Jp")) {
+            return (
+                <Fragment>
+                    <a href={this.state.amazonLink} target="_blank" rel='noreferrer noopener'>
+                        <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onRakutenButtonClick}>
+                            アマゾン見た後の結果を見る
+                        </button>
+                    </a>
+                </Fragment>
+            )
+        } else {
+            return (
+                <Fragment>
+                    <a href={this.state.coupangLink} target="_blank" rel='noreferrer noopener'>
+                        <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onCoupangButtonClick}>
+                            쿠팡 보고 결과 보기
+                        </button>
+                    </a>
+                    <p className='result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
+                </Fragment>
+            )
+        }
+    }
+
     resultRender(){
         // searching the result content by current url path
 
@@ -539,20 +602,9 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        {this.state.isOpened || this.state.coupangCookies
-                        ? (
-                            <img src={img_src} className='result-img' alt={final_type} />
-                        )
-                        : (
-                            <Fragment>
-                                <a href={this.state.coupangLink} target="_blank" rel='noreferrer noopener'>
-                                    <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onCoupangButtonClick}>
-                                        쿠팡 보고 결과 보기
-                                    </button>
-                                </a>
-                                <p className='result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
-                            </Fragment>
-                        )
+                        {this.state.isOpened || this.state.coupangCookies || this.state.amazonCookies || this.state.rakutenCookies
+                        ? (<img src={img_src} className='result-img' alt={final_type} />)
+                        : (this.affiliateRenderer())
                         }
                         <a target="_blank" 
                         rel="noopener noreferrer"
@@ -632,20 +684,9 @@ class Result extends Component {
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
                         {this.adTagRenderer()}
-                        {this.state.isOpened || this.state.coupangCookies
-                        ? (
-                            <img src={img_src} className='result-img' alt={final_type} />
-                        )
-                        : (
-                            <Fragment>
-                                <a href={this.state.coupangLink} target="_blank" rel='noreferrer noopener'>
-                                    <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onCoupangButtonClick}>
-                                        쿠팡 보고 결과 보기
-                                    </button>
-                                </a>
-                                <p className='result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
-                            </Fragment>
-                        )
+                        {this.state.isOpened || this.state.coupangCookies || this.state.amazonCookies || this.state.rakutenCookies
+                        ? (<img src={img_src} className='result-img' alt={final_type} />)
+                        : (this.affiliateRenderer())
                         }
                     </Fragment>
                 )
