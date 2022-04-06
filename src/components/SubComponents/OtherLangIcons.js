@@ -58,7 +58,8 @@ export default function OtherLangIcons(props) {
                 </div>
             )
         }
-    }
+    };
+
     function dringkingHabitLinkRenderer(){
         if(props.currentTest === "dringkingHabit") {
             return(
@@ -115,7 +116,7 @@ export default function OtherLangIcons(props) {
                 </div>
             )
         }
-    }
+    };
     
     function personalColorLinkRenderer(){
         if(props.currentTest === "personalColor") {
@@ -851,7 +852,7 @@ export default function OtherLangIcons(props) {
                 </div>
             )
         }
-    }
+    };
 
     function personalColor2022LinkRenderer(){
         if(props.currentTest === "personalColor2022") {
@@ -909,7 +910,65 @@ export default function OtherLangIcons(props) {
                 </div>
             )
         } 
-    }
+    };
+
+    function flowerBTILinkRenderer(){
+        if(props.currentTest === "flowerBTI") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/flowerBTIEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/flowerBTIJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
+                </div>
+            )
+        } else if(props.currentTest === "flowerBTIEng") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/flowerBTI/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/flowerBTIJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
+                </div>
+            )
+        } else if(props.currentTest === "flowerBTIJP") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/flowerBTI/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/flowerBTIEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
+                </div>
+            )
+        } 
+    };
 
     function personalIncenseLinkRenderer(){
         if(props.currentTest === "personalIncense") {
@@ -967,7 +1026,7 @@ export default function OtherLangIcons(props) {
                 </div>
             )
         } 
-    }
+    };
 
     function hanbokBTILinkgRenderer(){
         if(props.currentTest === "hanbokBTI") {
@@ -1025,7 +1084,7 @@ export default function OtherLangIcons(props) {
                 </div>
             )
         } 
-    }
+    };
 
     function oneSidedLoveLinkRenderer(){
         if(props.currentTest === "oneSidedLove") {
@@ -1179,7 +1238,7 @@ export default function OtherLangIcons(props) {
                 </div>
             )
         }
-    }
+    };
 
     function idealTypeLinkRenderer(){
         if(props.currentTest === "idealType") {
@@ -1207,7 +1266,7 @@ export default function OtherLangIcons(props) {
                 </div>
             )
         }
-    }
+    };
 
     function fruitAltLinkRenderer(){
         if(props.currentTest === "fruitAlt") {
@@ -1235,7 +1294,7 @@ export default function OtherLangIcons(props) {
                 </div>
             )
         }
-    }
+    };
 
     function lovejewerlyLinkRenderer(){
         if(props.currentTest === "lovejewerly") {
@@ -1263,7 +1322,7 @@ export default function OtherLangIcons(props) {
                 </div>
             )
         } 
-    }
+    };
 
     function auditionBTILinkRenderer(){
         if(props.currentTest === "auditionBTI") {
@@ -1363,7 +1422,7 @@ export default function OtherLangIcons(props) {
                 </div>
             )
         } 
-    }
+    };
 
     return (
         <Fragment>
@@ -1378,6 +1437,7 @@ export default function OtherLangIcons(props) {
             {fruitAltLinkRenderer()}
             {lovejewerlyLinkRenderer()}
             {auditionBTILinkRenderer()}
+            {flowerBTILinkRenderer()}
         </Fragment>
-    )
-}
+    );
+};
