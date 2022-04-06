@@ -56,18 +56,18 @@ class Result extends Component {
             isOpened: false,
             coupangLink: "https://link.coupang.com/a/lOSLd",
             amazonLink: "https://www.amazon.com/?&_encoding=UTF8&tag=ktestone-20&linkCode=ur2&linkId=adc3bdba997e0a439e4fa8467501bc3a&camp=1789&creative=9325",
-            rakutenLink: "https://www.amazon.com/?&_encoding=UTF8&tag=ktestone-20&linkCode=ur2&linkId=adc3bdba997e0a439e4fa8467501bc3a&camp=1789&creative=9325",
-        }
-        this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this)
+            rakutenLink: "https://click.linksynergy.com/fs-bin/click?id=Tp*Z7a4nef4&offerid=311675.10000157&type=3&subid=0&LSNSUBSITE=LSNSUBSITE",
+        };
+        this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
         this._eventSenderGA = this._eventSenderGA.bind(this);
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
         this._onPPLBannerClick = this._onPPLBannerClick.bind(this);
-        this.horizontalNewTestRenderer = this.horizontalNewTestRenderer.bind(this)
-        this.adTagRenderer = this.adTagRenderer.bind(this)
-        this.otherTestBannerRenderer = this.otherTestBannerRenderer.bind(this)
-        this.onCoupangButtonClick = this.onCoupangButtonClick.bind(this)
-        this.onAmazonButtonClick = this.onAmazonButtonClick.bind(this)
-        this.onRakutenButtonClick = this.onRakutenButtonClick.bind(this)
+        this.horizontalNewTestRenderer = this.horizontalNewTestRenderer.bind(this);
+        this.adTagRenderer = this.adTagRenderer.bind(this);
+        this.otherTestBannerRenderer = this.otherTestBannerRenderer.bind(this);
+        this.onCoupangButtonClick = this.onCoupangButtonClick.bind(this);
+        this.onAmazonButtonClick = this.onAmazonButtonClick.bind(this);
+        this.onRakutenButtonClick = this.onRakutenButtonClick.bind(this);
     };
 
     onRakutenButtonClick(){
@@ -79,7 +79,7 @@ class Result extends Component {
             isOpened: true,
         });
         this._eventSenderGA("Paging", "Click go-to-Rakuten Button", "result page");
-    }
+    };
     
     onAmazonButtonClick(){
         const { cookies } = this.props;
@@ -90,7 +90,7 @@ class Result extends Component {
             isOpened: true,
         });
         this._eventSenderGA("Paging", "Click go-to-Amazon Button", "result page");
-    }
+    };
 
     onCoupangButtonClick(){
         const { cookies } = this.props;
@@ -101,7 +101,7 @@ class Result extends Component {
             isOpened: true,
         });
         this._eventSenderGA("Paging", "Click go-to-Coupang Button", "result page");
-    }
+    };
     
     _eventSenderGA(category, action, label){
         ReactGA.event({
@@ -109,24 +109,26 @@ class Result extends Component {
             action: action,
             label: label
         });
-    }
+    };
+
     _onBackToStartButtonClick(){
         this._eventSenderGA("Paging", "Click Re-test Button", "result page");
         this.setState({
             mode:"intro"
         })
-    }
+    };
+
     _onShareButtonClick(){
         this.setState({
             num_shares_count:this.state.num_shares_count+1
         })
         this._eventSenderGA("Sharing", "Click Copy-link Button", "result page");
         alert("링크가 복사됐어요!");
-    }
+    };
 
     _onPPLBannerClick(){
         this._eventSenderGA("Outlinking", "Click PPL-Banner Button", "result page");
-    }
+    };
 
     cpcBannerResultFooterScriptor(){
         // Delete Adfit for PPL contents
@@ -163,7 +165,8 @@ class Result extends Component {
                 </Fragment>
             )
         }
-    }
+    };
+
     horizontalNewTestRenderer(){
         // Delete NewTestMenu for PPL contents
         let ppl_list = ['personalTaro']
@@ -172,7 +175,7 @@ class Result extends Component {
                 <HorizontalScrolling test={this.state.current_test}/>
             )   
         }
-    }
+    };
 
     newTestLinkRenderer(){
         let personalColorListGB = ["personalColorEng", "personalColorCN", "personalColorES", "personalColorArb"]
@@ -229,7 +232,7 @@ class Result extends Component {
                 </Fragment>
             )
         }
-    }
+    };
     
     pplBannerRenderer(){
         let personalIncenseListGB = ["personalIncenseEng", "personalIncenseJP"];
@@ -348,7 +351,7 @@ class Result extends Component {
                 </Fragment>
             )
         }
-    }
+    };
 
     otherTestBannerRenderer() {
         let personalColor2022ListKor = ["personalColor2022",];
@@ -426,7 +429,7 @@ class Result extends Component {
                 </Fragment>
             )
         }
-    }
+    };
 
     introPageRender(){
 
@@ -439,7 +442,8 @@ class Result extends Component {
                 </Switch>
             </Router>
         )
-    }
+    };
+
     adTagRenderer(){
         if (!this.state.ppl_list.includes(this.state.current_test)) {
             return(
@@ -455,7 +459,7 @@ class Result extends Component {
                 </Fragment>
             )
         }
-    }
+    };
 
     affiliateRenderer(){
         if(window.location.href.includes("Eng")) {
@@ -471,9 +475,9 @@ class Result extends Component {
         } else if (window.location.href.includes("JP") || window.location.href.includes("Jp")) {
             return (
                 <Fragment>
-                    <a href={this.state.amazonLink} target="_blank" rel='noreferrer noopener'>
+                    <a href={this.state.rakutenLink} target="_blank" rel='noreferrer noopener'>
                         <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onRakutenButtonClick}>
-                            アマゾン見た後の結果を見る
+                            楽天見た後の結果を見る
                         </button>
                     </a>
                 </Fragment>
@@ -490,7 +494,7 @@ class Result extends Component {
                 </Fragment>
             )
         }
-    }
+    };
 
     resultRender(){
         // searching the result content by current url path
@@ -829,7 +833,7 @@ class Result extends Component {
             }
         }
 
-    }
+    };
 
     mainPageRender(){
         return(
@@ -840,11 +844,11 @@ class Result extends Component {
                 </Switch>
             </Router>
         )
-    }
+    };
 
     goBack(){
         this.props.history.goBack();
-    }
+    };
 
     resultPageRender(){
         return(
@@ -906,7 +910,7 @@ class Result extends Component {
                 {/* {this.cpcBannerResultFooterScriptor()} */}
             </Fragment>
         );
-    }
+    };
     
     pageRenderer(){
         let _page = []
@@ -918,8 +922,7 @@ class Result extends Component {
             _page = this.mainPageRender()
         }
         return _page
-    }
-
+    };
 
     render(){
         return(
@@ -927,7 +930,7 @@ class Result extends Component {
                 {this.pageRenderer()}
             </div>
         );
-    }
-}
+    };
+};
 
 export default withCookies(Result);
