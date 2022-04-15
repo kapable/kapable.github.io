@@ -54,7 +54,7 @@ class Result extends Component {
             amazonCookies: cookies.get('amazon') || null,
             rakutenCookies: cookies.get('rakuten') || null,
             isOpened: false,
-            coupangLink: "https://link.coupang.com/a/lOSLd",
+            coupangLink: "https://link.coupang.com/a/l7x1e",
             amazonLink: "https://www.amazon.com/?&_encoding=UTF8&tag=ktestone-20&linkCode=ur2&linkId=adc3bdba997e0a439e4fa8467501bc3a&camp=1789&creative=9325",
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
