@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // dragonBTI
+    {
+        info : {
+            mainTitle:"드래곤BTI(dragonBTI)",
+            subTitle:"메타버스 세상 속, 나는 과연 어떤 드래곤일까?",
+            mainUrl:"dragonBTI",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/dragonBTI-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/dragonBTI-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '월급이 스쳐간 텅장을 보고 있자니\n투자에 관심이 생겼다.',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '주변 지인에게 증권사에서 일하는 사람을 소개해 달라고 한다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '경제신문이나 주식 컨설턴트의 동영상을 찾아본다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "존버는 승리한다!\n투자에 대박이 나서 퇴직서를 내고 나왔다!\n일단은 간절하게 쉬고 싶다!",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "진짜 오랜만에 여행 좀 갈까?\n여행가서 사람들을 사귀면 좋겠다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "집에서 쉬면서 밀린 드라마나 봐야겠다.\n집에서 뭐 해먹을까?"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "쉬는 동안 사업 구상도 해볼까!\n늘 하고 싶던 사업이 있었지.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "유명한 셀럽, DJ가 찾아오는 시끌벅적한 클럽"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "예약제로 받는 프라이빗한 고품격 레스토랑"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "투자를 계속하다보니 NFT라는,\n새롭게 개척되는 시장을 알게 되었다",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "당장 NFT를 어떻게 살 수 있는지부터 알아보자.\n어떤 게 제일 예쁘지? 지금 사면 왠지 모르게 행복할 것 같아"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "나중에 시장이 확대되면 집입하기 어려울 것 같은데?\n구체적으로 어떤 혜택이 있는지 알아 보고 얼른 투자해 봐야겠다.\n나도 곧 부자가 될 수 있는 건가! "
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "최근 열심히 모은 돈으로 NFT를 구매했다.\n이 NFT는 Metaverse에서 살아갈 나를 대변한다는데...",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "재밌으려나?\n메타버스 로드맵, 사용법, 규칙부터 정확히 파악해 봐야겠다.\n내가 꾸준히 할 수 있으려나?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "메타버스라니!\n엄청 자유로울 것 같아!\n열정이 솟아오른다!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 투자한 상품들의 가치가 하락하고 있는 것을 보며.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "회사의 '자본금, 통계 수치' 등을 따져봤을 때\n현실적으로 나의 선택은 틀리지 않을 거야"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "내가 투자한 회사의 '비전과 브랜드 아이덴티티'가 명확하기에 신경 쓰지 않아."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "비슷한 시기에 투자를 시작한 친구가 빚내서 투자했는데,\n손실이 엄청났다.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "너, 그거 더 떨어지기 전에 손절해야겠다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "엥? 그거 잘 되고 있다고 하지 않았어?\n어떡하냐 정말…"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "나는 첫 투자에 성공했다!\n마침 계좌가 텅 비어가던 친구의 생일이 다가온다.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "백화점가서 선물을 고르고 내 시간을 소비하느니 NFT를 보내는게 더 효율적이잖아?\nNFT를 보내줘야겠다!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "친구가 좋아할만한 NFT를 선물해줘야지!\n이 NFT는 귀여우니까 분명 친구가 좋아할꺼야 후후!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 또 사고를 쳤다.\n이번에는 투자한 P2E게임이 망했단다.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "친구가 투자한 P2E가 왜 망했는지 조목조목 설명해가며\n다시는 같은 실수를 번복하지 말라고 조언한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "자신도 씁쓸했던 일화를 털어놓고 공감해주며 위로한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "월급을 받으면 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "고정비, 유동비, 생활비, 교통비 등\n구체적으로 항목을 세분화하여 사용처를 나눈다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "이번달 빠져나갈 신용카드 값을 제외하고 나머지는 유동적으로 쓰는 편이다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "본격적으로 투자를 시작해볼까!",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "항목별 구매 내역, 판매 내역, 손익계산 등을 기록하여 체계적으로 관리한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일일이 기록하기엔 복잡해서\n입금액, 출금액만 확인해서 손익 파악을 한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "최근 유행하고 있는 P2E게임을 해보려고 한다.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "홈페이지에서 가이드, 캐릭터 설명, 세계관 등을\n꼼꼼히 읽고 시작한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "게임은 하면서 익히는거지!\n일단 이것저것 잡히는 대로 해보면서 그때 그때 적응해 나간다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `
+                `,
+                query: "gydbfm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: ``,
+                query: "dkemqps",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: ``,
+                query: "xhekrxh",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: ``,
+                query: "vmflejam",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: ``,
+                query: "sjfqmsti",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `
+                `,
+                query: "enakcl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: ``,
+                query: "wosmdaksha",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: ``,
+                query: "dprxlqhfxk",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: ``,
+                query: "ejclrclzm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: ``,
+                query: "dlselqlwbdjf",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: ``,
+                query: "tjdtlfntm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `
+                `,
+                query: "ghkgkqm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: ``,
+                query: "dkwm",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: ``,
+                query: "xnwkem",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: ``,
+                query: "ejrhehzm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: ``,
+                query: "tnwnqjr",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/dragonBTI/INFP.png'
+            },
+        ]
+    },
     // flowerBTIJP
     {
         info : {
