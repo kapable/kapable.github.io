@@ -155,12 +155,12 @@ class Intro extends Component {
         let _mainTitle = this.state.current_test.info.mainTitle;
         let _subTitle = this.state.current_test.info.subTitle;
         let _thumbImage = this.state.current_test.info.mainImage;
+        const noCountTests = ['dragonBTI'];
 
         return (
             <Fragment>
                 {/* for blocking Adfit banner with page refreshing for PPL */}
                 {this.reloadPage()}
-
                 <div className="intro container">
                     <Helmet>
                         {/* <!-- Primary Meta Tags --> */}
@@ -192,10 +192,14 @@ class Intro extends Component {
                         alt={_mainTitle + '|' + _subTitle}/>
 
                     <OtherLangIcons currentTest={this.state.current_test.info.mainUrl}/>
-
-                    <Typist className="start-btn-participants">
-                        현재까지 총 {this.state.participants}명이 참여했어요.
-                    </Typist>
+                    
+                    {noCountTests.includes(this.state.current_test.info.mainUrl)
+                    ? (null)
+                    : (
+                        <Typist className="start-btn-participants">
+                            현재까지 총 {this.state.participants}명이 참여했어요.
+                        </Typist>
+                    )}
 
                     {/* CPC Banner Intro footer */}
                     {/* {this.cpcBannerIntroFooterScriptor()} */}
