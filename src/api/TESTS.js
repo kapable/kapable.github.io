@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // drinkBTI
+    {
+        info : {
+            mainTitle:"드링크BTI(drinkBTI)",
+            subTitle:"나의 업무 스타일 드링크 찾으러 가기",
+            mainUrl:"drinkBTI",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/drinkBTI-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/drinkBTI-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '팀원이 생일일 때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '먼저 축하한다며 단톡에 생일 축하톡과 함께\n출근해서 마주치면 생일 축하한다고 말한다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '생일인지 모르다가 뒤늦게 카톡을 보고 알아챈다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "궁금한 질문이 있어 상사에게 카톡을 보냈지만,\n답장이 오지 않는다.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "바쁘신지 물어보고 카톡 확인을 부탁하거나\n직접 물어본다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "일단 답장이 올 때까지 기다려본다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "회의 중 나의 모습과 가까운 것은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "폭풍 아이디어를 내며 주도적으로 참여한다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "다른 사람들의 아이디어를 적고,\n정리하며 듣는 역할을 많이한다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "말도 안 되는 업무를 하라고 하는 상사에게 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "말은 안되지만 일단 하라니까 한다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "그게 말이 안 되는데 어떻게 진행하는지 물어본다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "새로 맡은 프로젝트를 진행할 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "기존 매뉴얼이 있는지 찾아보고\n매뉴얼을 읽는다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "일단 내가 먼저 해보다가\n막히는 부분이 있으면 물어본다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "프로젝트를 보고 하는 날,\n나의 모습과 가까운 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "준비한 대본대로 발표한다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "발표하는 순간만큼은 스티븐 잡스가 되어보려고 한다!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "할 일이 많은데 친한 팀원이\n커피 마시러 가자고 할 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "아...지금 바쁜데…그래도 가자는데…\n리프레시 타임은 필요하니까 다녀와서 하자!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "지금은 너무 할 일이 많아 나중에 가자고 한다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "상사에게 심한 꾸지람을 들었을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "기분이 상하고 힘들긴 하지만 그러려니 한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "참으려고 하지만 계속 기분이 안 좋고\n왜 그랬지 하며 머릿속에 맴돈다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "부하직원이 계속 같은 실수를 했을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "부하직원의 미래를 위해서\n객관적이며 따끔한 조언을 한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "상처받지 않도록 돌려서 잘 말해본다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "평소 나의 업무 스타일과 가까운 것은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "늘 평소에 스케줄을 정리해서\n마감일까지 급하지 않다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "마감일 전까지 여유롭게 하다 마감일이 다가오면\n극도의 집중력을 발휘해 끝낸다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "출근할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "‘몇 시에 나가야 지각하지 않겠구나’\n하며 미리 출근하려고 한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "매일 짜릿한 출근시간!\n아슬아슬하게 출근한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "일을 마무리하지 못하고 퇴근했을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "아 그냥 다 하고 올 걸 그랬나?\n하며 내내 마음이 불편한 채 퇴근한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "내일 와서 마저 하면 되겠지?\n하며 가벼운 마음으로 퇴근한다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `
+                `,
+                query: "pomegranate",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: ``,
+                query: "meron",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: ``,
+                query: "peach",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: ``,
+                query: "lemon",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: ``,
+                query: "grapefruit",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `
+                `,
+                query: "pineapple",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: ``,
+                query: "watermelon",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: ``,
+                query: "orange",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: ``,
+                query: "strawberry",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: ``,
+                query: "grape",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: ``,
+                query: "mango",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `
+                `,
+                query: "apple",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: ``,
+                query: "lime",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: ``,
+                query: "mangosteen",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: ``,
+                query: "greengrape",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: ``,
+                query: "blueberry",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/drinkBTI/INFP.png'
+            },
+        ]
+    },
     // dragonBTI
     {
         info : {
