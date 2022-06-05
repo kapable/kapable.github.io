@@ -811,12 +811,19 @@ class Result extends Component {
             } else {
                 return (
                     <Fragment>
-                        <img src={img_src} className='result-img' alt={final_type} />
-                        <Card className="result-card" bg="light">
-                            <Card.Body className="result-p">
-                                <Card.Text>{final_desc}</Card.Text>
-                            </Card.Body>
-                        </Card>
+                        {this.state.isOpened || this.state.coupangCookies || this.state.amazonCookies || this.state.rakutenCookies
+                        ? (
+                            <>
+                                <img src={img_src} className='result-img' alt={final_type} />
+                                <Card className="result-card" bg="light">
+                                    <Card.Body className="result-p">
+                                        <Card.Text>{final_desc}</Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </>
+                        )
+                        : (this.affiliateRenderer())
+                        }
                     </Fragment>
                 )
             }
