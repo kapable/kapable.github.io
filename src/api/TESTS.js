@@ -23,6 +23,150 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // halfTestEI
+    {
+        info : {
+            mainTitle:"반쪽테스트 E와 I편",
+            subTitle:"나의 성향은 E와 I 중 무엇일까?",
+            mainUrl:"halfTestEI",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/halfTestEI-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/halfTestEI-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '대화할 때 모습과 비슷한 것은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '할 얘기가 넘쳐나 먼저 상대방의 말을 끊을 때도 있다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '일단 먼저 들어보고 할 얘기가 있으면 한다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "내가 더 잘하는 것은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "상대방의 기분을 좋게 하는 방법을 알고 있어 분위기 전환에 능숙하다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "상대방의 기분을 나쁘지 않게 배려하고 만족스러워한다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "몇 개월 동안 집에서 나가지 못한다면? ",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "친구들의 인스타 스토리를 보며, 너무 집에만 있는 건 고통스럽다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "티비, 간식거리, 포근한 이불 등 조건만 충족하면 가능하다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "오늘 하루 기똥차게 놀고 집에 들어갈 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "오늘 너무 잘놀았다! 안갔으면 후회할뻔! 또 놀아야지!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "와~ 잘놀았다! 이제 집가면 충전하면서 푹 쉬어야겠다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "폰을 할 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "카톡으로 답하다가 답답하면 바로 전화를 건다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "전화가 오면 망설이고 카톡도 안읽씹이 많다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "파티에 초대하고 싶은 사람은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "친구+친구의 친구 어느정도 친한 사람들 다 부르고 놀자!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "진짜 친하다고 생각하는 친구들만 부르자!"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "회의에 참여할 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "일단 거침없이 떠오르는 좋은 생각에 대해 자신감 있게 말하는 편이다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "충분한 준비시간이 필요하며, 심사숙고하며 문맥을 정리한 뒤 말한다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "E",
+                desc: `
+                `,
+                query: "E",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/halfTestEI/E-result.png'
+            },
+            {
+                type: "I",
+                desc: ``,
+                query: "I",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/halfTestEI/I-result.png'
+            },
+        ]
+    },
     // drinkBTI
     {
         info : {
