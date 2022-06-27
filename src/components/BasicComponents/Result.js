@@ -139,19 +139,7 @@ class Result extends Component {
                 <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
         )
-        } else if(this.state.sharable_url.includes("niair.xyz")) {
-            return(
-                <Fragment>
-                    {/* 결과 푸터 */}
-                    <ins className="adsbygoogle"
-                        style={{display:"block"}}
-                        data-ad-client="ca-pub-2382342018701919"
-                        data-ad-slot="3364974256"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                </Fragment>
-            )
-        }
+        } 
     };
 
     horizontalNewTestRenderer(){
