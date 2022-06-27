@@ -23,7 +23,6 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
-    // halfTestSN
     {
         info : {
             mainTitle:"반쪽테스트 S와 N편",
