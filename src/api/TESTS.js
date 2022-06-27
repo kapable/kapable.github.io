@@ -23,6 +23,150 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // halfTestSN
+    {
+        info : {
+            mainTitle:"반쪽테스트 S와 N편",
+            subTitle:"나의 성향은 S와 N 중 무엇일까?",
+            mainUrl:"halfTestSN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/halfTestSN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/halfTestSN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"SN",
+                question: '그냥 아무 생각하지마 라고 했을 때 나는?',
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: '말그대로 아무 생각 안할 수 있다.'
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '멍때리는 순간, 아무 생각도 하지 않는 것이 어렵다.'
+                    },
+                ],
+            },
+            {
+                which:"SN",
+                question: "공부를 해야하지만 하기 싫을 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "무슨 이유가 필요해? 그냥 내가 하기 싫다고."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "아니 공부는 왜 해야하는 걸까? 공부를 해서 내가 먼 미래에 돈이라도 많이 버나?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "만약에 너가 500억을 주었어..그럼 어케 할거야? 라는 질문에 나의 대답과 비슷한 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "신고해서 사례금 받겠지? 대답은 하겠지만 솔직히 일어나지도 않는 일 왜 대답해야하나 싶음."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "음…나는 일단 경찰에 신고를 했어…근데 알고보니 그 돈이 횡령이었던거야!! 난 사건을 해결하고 도움을 줘서 사례금도 받고, 뉴스에 나오고 용감한 신인상을 받게 되는거지."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "여행가기 전날 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "빨리 가고 싶다! 짐을 꾸린 후 바로 잠에 든다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "자기 전 여행지에서 일어난 사건들에 대해 온갖 상상을 하다가 잠든다"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "요리할 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "레시피에 나온대로 정량을 딱딱 맞추려고 노력한다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "대충 이정도 넣으면 되겠지~ 하며 감으로 넣는다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나에게 딱 맞는 업무는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "디테일한 세부사항을 다루는 업무"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "상상력과 아이디어가 요구되는 업무"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나의 가치관과 더 맞는 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "현재가 없으면 미래도 없다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "미래를 생각하지 않으면 발전이 없다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "S",
+                desc: `
+                `,
+                query: "S",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/halfTestSN/S-result.jpg'
+            },
+            {
+                type: "N",
+                desc: ``,
+                query: "N",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/halfTestSN/N-result.jpg'
+            },
+        ]
+    },
     // halfTestEI
     {
         info : {
