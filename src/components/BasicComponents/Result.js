@@ -437,7 +437,7 @@ class Result extends Component {
     };
 
     affiliateRenderer(){
-        if(window.location.href.includes("Eng")) {
+        if(window.location.href.includes("Others")) { // basically for Engl
             return (
                 <Fragment>
                     <a href={this.state.amazonLink} target="_blank" rel='noreferrer noopener'>
