@@ -463,8 +463,8 @@ class Result extends Component {
             return (
                 <Fragment>
                     <a href={this.state.coupangLink} target="_blank" rel='noreferrer noopener'>
-                        <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onCoupangButtonClick}>
-                            쿠팡 보고 결과 보기
+                        <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={this.onCoupangButtonClick}>
+                            쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
                         </button>
                     </a>
                     <p className='result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
