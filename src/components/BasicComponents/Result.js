@@ -54,6 +54,7 @@ class Result extends Component {
             amazonCookies: cookies.get('amazon') || null,
             rakutenCookies: cookies.get('rakuten') || null,
             isOpened: false,
+            adProb: (1/3) >= Math.random(),
             coupangLink: "https://link.coupang.com/a/l7x1e",
             amazonLink: "https://www.amazon.com/?&_encoding=UTF8&tag=ktestone-20&linkCode=ur2&linkId=adc3bdba997e0a439e4fa8467501bc3a&camp=1789&creative=9325",
         };
@@ -583,9 +584,9 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        {this.state.isOpened || this.state.coupangCookies || this.state.amazonCookies || this.state.rakutenCookies
-                        ? (<img src={img_src} className='result-img' alt={final_type} />)
-                        : (this.affiliateRenderer())
+                        {this.state.adProb && (!this.state.isOpened || !this.state.coupangCookies)
+                        ? (this.affiliateRenderer())
+                        : (<img src={img_src} className='result-img' alt={final_type} />)
                         }
                         <a target="_blank" 
                         rel="noopener noreferrer"
@@ -665,10 +666,11 @@ class Result extends Component {
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
                         {this.adTagRenderer()}
-                        {this.state.isOpened || this.state.coupangCookies || this.state.amazonCookies || this.state.rakutenCookies
-                        ? (<img src={img_src} className='result-img' alt={final_type} />)
-                        : (this.affiliateRenderer())
+                        {this.state.adProb && (!this.state.isOpened || !this.state.coupangCookies)
+                        ? (this.affiliateRenderer())
+                        : (<img src={img_src} className='result-img' alt={final_type} />)
                         }
+                        {console.log(!this.state.rakutenCookies)}
                     </Fragment>
                 )
             }
@@ -799,8 +801,9 @@ class Result extends Component {
             } else {
                 return (
                     <Fragment>
-                        {this.state.isOpened || this.state.coupangCookies || this.state.amazonCookies || this.state.rakutenCookies
-                        ? (
+                        {this.state.adProb && (!this.state.isOpened || !this.state.coupangCookies)
+                        ? (this.affiliateRenderer())
+                        : (
                             <>
                                 <img src={img_src} className='result-img' alt={final_type} />
                                 <Card className="result-card" bg="light">
@@ -810,7 +813,6 @@ class Result extends Component {
                                 </Card>
                             </>
                         )
-                        : (this.affiliateRenderer())
                         }
                     </Fragment>
                 )
