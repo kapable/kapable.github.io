@@ -373,6 +373,27 @@ body {
 }
 
 /* result start */
+.article-adCover-div {
+  height: 13rem;
+  overflow-y: hidden;
+}
+
+.article-adCover-div-1 {
+  position: relative;
+  background-color: rgba(255,255,255,0.4);
+  height: 4rem;
+  top: -4rem;
+  width: 100%;
+}
+
+.article-adCover-div-2 {
+  position: relative;
+  width: 15rem;
+  height: 4rem;
+  margin: 0 auto;
+  top: 0.5rem;
+}
+
 .result {
   max-width: 100%;
   margin: 0rem 1rem 1rem 1rem;
