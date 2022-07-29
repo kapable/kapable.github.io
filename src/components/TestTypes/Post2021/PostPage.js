@@ -6,6 +6,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import ScriptTag from 'react-script-tag'
 import Pagination from "react-js-pagination";
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 function PostPage(props) {
     const lang = props.language;
@@ -113,6 +114,34 @@ function PostPage(props) {
         )
     }
 
+    const metaTagRenderer = () => {
+            return (
+                <Helmet>
+                    {/* <!-- Primary Meta Tags --> */}
+                    <title>퍼스널 우체통</title>
+                    <meta name="title" content="퍼스널 우체통 - 케이테스트"/>
+                    <meta name="description" content="나만의 퍼스널 우체통" data-react-helmet="true"/>
+                    <link rel="main-url" href="https://ktestone.com/kapable.github.io/post2021/"/>
+
+                    {/* <!-- Open Graph / Facebook --> */}
+                    <meta property="og:type" content="website"/>
+                    <meta property="og:url" content="https://ktestone.com/kapable.github.io/post2021/"/>
+                    <meta property="og:title" content="퍼스널 우체통 - 케이테스트"/>
+                    <meta property="og:description" content="나만의 퍼스널 우체통"/>
+                    <meta property="og:image" content="https://images.ktestone.com/meta/post2021/post2021-meta.png"/>
+                    <meta property="og:image:alt" content="퍼스널 우체통 - 케이테스트" />
+
+                    {/* <!-- Twitter --> */}
+                    <meta property="twitter:card" content="summary_large_image"/>
+                    <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/post2021/"/>
+                    <meta property="twitter:title" content="퍼스널 우체통 - 케이테스트"/>
+                    <meta property="twitter:description" content="나만의 퍼스널 우체통"/>
+                    <meta property="twitter:image" content="https://images.ktestone.com/meta/post2021/post2021-meta.png"/>
+                    <meta property="twitter:image:alt" content="퍼스널 우체통 - 케이테스트" />
+                </Helmet>
+            )
+    }
+
     const eachMail = <div className="popup">
                         <div className="popup-inner">
                             <button onClick={() => setShowPopup(false)} className='popup-close-btn'>X</button>
@@ -189,6 +218,7 @@ function PostPage(props) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("access_token")}`;
         return(
             <div className='post-page'>
+                {metaTagRenderer()}
                 <GlobalStyle />
                 <img src={upbarBtnImg} alt="UPBAR" className="start-page-upbar"/>
                 <PageBackground className='post-page-bg-div' >
@@ -227,6 +257,11 @@ function PostPage(props) {
                         : null}
                 </div>
                 {adTagRenderer()}
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={"https://ktestone.com/kapable.github.io/Kor/"}
+                ><img src={"https://images.ktestone.com/PostImg/Button/post-to-ktest-btn.jpeg"} alt="Go To Ktest >> " className="post-to-ktest-btn" /></a>
                 <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
         )
@@ -234,6 +269,7 @@ function PostPage(props) {
     } else {
         return(
             <div className='post-page'>
+                {metaTagRenderer()}
                 <GlobalStyle />
                 <img src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
                 <div className='post-page-bg-div'>

@@ -278,6 +278,12 @@
   margin-top: 2rem;
 }
 
+.post-to-ktest-btn {
+  width: 99%;
+  margin-top: 1rem;
+  border: black solid 0.15rem;
+}
+
 /* Write Page */
 .write-page-div {
   background-image: url("https://images.ktestone.com/PostImg/Background/background.png");
