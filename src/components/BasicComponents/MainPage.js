@@ -22,9 +22,13 @@ function MainPage(props) {
             </Link>
 
             {/* Go to POST 2021 ENG */}
-            <Link to='/post2022Eng/' className="main-link-block" key="post2022Eng-banner">
-                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022Eng-thumb.png`} alt="POST-2021" />
-            </Link>
+            {props.match.path !== '/Kor/'
+            ? (
+                <Link to='/post2022Eng/' className="main-link-block" key="post2022Eng-banner">
+                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022Eng-thumb.png`} alt="POST-2021" />
+                </Link>
+            )
+            : null}
 
             {/* Main Test Banners */}
             <div className="main-link-div">
