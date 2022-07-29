@@ -74,6 +74,10 @@ function PostPage(props) {
         lang === `Eng` ? alert("link copied to clipboard!") : alert("링크가 복사됐어요!")
     }
 
+    const onPostToKtestBtnClick = () => {
+        _eventSenderGA("Paging", "Click Post-to-Ktest Button", "post page");
+    }
+
     // const logoutHandler = () => {
     //     localStorage.removeItem("access_token");
     //     setIsLogin(false);
@@ -261,6 +265,7 @@ function PostPage(props) {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={"https://ktestone.com/kapable.github.io/Kor/"}
+                    onClick={onPostToKtestBtnClick}
                 ><img src={"https://images.ktestone.com/PostImg/Button/post-to-ktest-btn.jpeg"} alt="Go To Ktest >> " className="post-to-ktest-btn" /></a>
                 <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
@@ -318,6 +323,12 @@ function PostPage(props) {
                     <br></br>
                 </div>
                 {adTagRenderer()}
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={"https://ktestone.com/kapable.github.io/Kor/"}
+                    onClick={onPostToKtestBtnClick}
+                ><img src={"https://images.ktestone.com/PostImg/Button/post-to-ktest-btn.jpeg"} alt="Go To Ktest >> " className="post-to-ktest-btn" /></a>
                 <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
         )
