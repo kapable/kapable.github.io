@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // KMBTI
+    {
+        info : {
+            mainTitle:"K-MBTI 검사",
+            subTitle:"케이테스트 성격 유형 검사",
+            mainUrl:"kbmti",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/kbmti-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '평상시 나의 대화 스타일은',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '활발하게 대화하며 대화 주제가 다양하다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '말수가 적고 조용하며 필요한 때가 아니라면 가만히 있는다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "다른 사람이 보기에 나는",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "개방적이고 활동적인 밝은 에너지가 있는사람이다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "늘 신중하며 조용하고 깊은 사람이다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "새로운 장소나 모임에 갔을 때 나와 비슷한 것은",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "먼저 자기 자신을 소개하고 대화를 시도한다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "가만히 주변의 분위기를 살피며 질문보다는 대답을 하는 편이다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "무언가를 설치하거나 만들 때 나의 모습은",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "설명서에 나온 정석 그대로 설치하거나 만든다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "한번 보고 감으로 설치하거나 만든다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나와 비슷한 유형은",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "현실적이고 세부사항을 잘 다루는 사람이다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "상상력과 아이디어가 풍부한 사람이다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "업무(공부)스타일과 비슷한 것은",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "지금 현재 주어진 일에만 집중한다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "한 가지만 하는 것보단 여러가지 일을 다양하게 하고 싶어한다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "고민 상담을 들어줄 때 나와 비슷한 것은",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "사실을 기반으로 현실적인 조언을 해준다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "그 사람의 입장이 되어 감정적인 공감을 해준다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "상대방과 논쟁 시 나는",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "논쟁에서 이기는 것이 중요하다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "상대방의 기분을 고려하는 게 마음이 편하다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "감정에 대한 나의 생각은",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "사람으로 인해 화가 나는 일이 드물며, 감정에 공감하는 일이 드물다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "사람에 의한 감정 이입이 쉽고 사람으로 인해 화가는 경우가 많다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나에게 계획은",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "계획은 하나부터 열까지 세세하고 철저하게 세우는 편이다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "큰 틀만 잡고 나머지는 유연하게 처리하는 편이다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "일이나 공부하는 스타일로 나와 비슷한 것은",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "시간 단위와 계획을 세워 업무/공부를 끝낸다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "정해진 순서보다 그때그때 몰아서 끝낸다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나의 여행스타일과 비슷한 것은",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "예측 가능하고 계획한 범위 내에서 여행한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "즉흥적으로 그날의 느낌에 따라 여행한다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "gladeGreen",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tangerine",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "cosmos",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "froly",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "mariner",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "valencia",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "aquamarine",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "sunshade",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "gainsboro",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "bostonBlue",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "grandis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "olivine",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "bilobaFlower",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "mayaBlue",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "hawkesBlue",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "genoa",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/kbmti/INFP.jpg'
+            },
+        ]
+    },
+    // halfTestSN
     {
         info : {
             mainTitle:"반쪽테스트 S와 N편",
