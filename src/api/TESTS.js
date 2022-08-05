@@ -30,7 +30,7 @@ var TESTS = [
             subTitle:"케이테스트 성격 유형 검사",
             mainUrl:"kbmti",
             scoreType:"typeCountingMBTI",
-            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.png",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/kbmti-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
             lang:"Kor"
