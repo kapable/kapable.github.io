@@ -28,7 +28,7 @@ var TESTS = [
         info : {
             mainTitle:"K-MBTI 검사",
             subTitle:"케이테스트 성격 유형 검사",
-            mainUrl:"kmbti",
+            mainUrl:"kbmti",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/kbmti-thumb.png",
