@@ -190,7 +190,7 @@ class Intro extends Component {
                         onClick={this._onStartButtonClick}
                         src={_thumbImage}
                         alt={_mainTitle + '|' + _subTitle}/>
-
+                    <p><b>*(추천) 사파리, 크롬 네이버 브라우저에서<br />조금 더 쾌적하게 이용 가능합니다!</b></p>
                     <OtherLangIcons currentTest={this.state.current_test.info.mainUrl}/>
                     
                     {noCountTests.includes(this.state.current_test.info.mainUrl)

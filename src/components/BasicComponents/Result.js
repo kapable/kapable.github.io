@@ -866,6 +866,8 @@ class Result extends Component {
                         {this.pplBannerRenderer()}
                     </div>
 
+                    <p><b>*(추천) 사파리, 크롬 네이버 브라우저에서<br />조금 더 쾌적하게 이용 가능합니다!</b></p>
+
                     <OtherLangIcons currentTest={this.state.current_test}/>
                     
                     <div className="share">
