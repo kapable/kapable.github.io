@@ -490,7 +490,7 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
+            let ppl_list = ['kbmti', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
             // let coupang_list = ['personalColor2022', 'personalColor'];
             if(ppl_list.includes(this.state.current_test)) {
@@ -525,6 +525,7 @@ class Result extends Component {
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
                         <img src={img_src} className='result-img' alt={final_type} />
+                        {this.affiliateRenderer()}
                     </Fragment>
                 )
             // meta tag for native test contents
