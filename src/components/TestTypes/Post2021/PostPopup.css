@@ -1,12 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Allura&family=Dongle:wght@300&family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@300&display=swap");
-@font-face {
-  font-family: "kyobo";
-  src: url("../../../api/font/Kyobo.ttf");
-}
 
 :root {
   --font-color: black;
-  --post-font: "kyobo", "Dongle", sans-serif;
+  --post-font: sans-serif;
 }
 
 .popup {
