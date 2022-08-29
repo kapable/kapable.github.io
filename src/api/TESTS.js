@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // flowerLang
+    {
+        info : {
+            mainTitle:"K-MBTI 검사",
+            subTitle:"케이테스트 성격 유형 검사",
+            mainUrl:"flowerLang",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/flowerLang-intro.jpeg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/flowerLang-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '친구들과 이야기를 할 때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '하고싶은 얘기가 너무 많아서 친구의 말을 끊고 얘기하기도 한다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '끝까지 얘기를 들어보고 천천히 얘기한다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "궁금한게 있어서 카톡을 했는데 답장이 오지않을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "친구야.. 빨리 답장좀 해줄래? 급해."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "바쁜거같은데? 답장 올 때 까지 기다리자."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "밥을 먹다가 직원을 불렀는데 직원이 오지 않을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "사장님!! 여기요!! 하고 큰 소리로 부른다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "왜 오지 않을까..? 하면서 조금 더 기다려본다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "친구들과 1차에 신나게 놀고 2차를 가자고 한다고 할 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "애들아 미안 나 피곤해 집 갈게 안녕."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "아 피곤한데 일단 가자!!!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "평소에 내가 사고싶었던 물건이 있을 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "음.. 이번 달 텅장을 생각하면 다음으로 미뤄야겠어."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "소비는 행복한 것이다. 다음에 사나 지금 사나 똑같지. 사자!!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "친구와 영화를 보는데 열린 결말로 끝났을 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "감독의 의도가 뭘까? 왜 이런 결말일까? 찾아본다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "그 사람들은 행복하게 오래오래 살꺼야.. 만족 만족"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "내 앞자리에서 술마시는 친구가 울고있을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "울어? 왜 울어? 왜? 왜?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "뭐라고 위로를 해줘야할까…?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 오늘 짜증나서 매운거를 먹는다 할 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "오 매운거 뭐먹게? 닭발?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "어? 왜 짜증났어?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "거절을 해야 할 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "미안. 어려울 것 같아."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "음 어려울 것 같은데… 고민한번 하고 해준다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나와 더 맞는 것은 어떤 것일까?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "계획적"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "즉흥적"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구에게 안부 연락이 왔을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "잘지내지~~ 언제 만날래?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "그럼 잘지내지~ 조만간 한번 보자구~"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "약속시간이 다가오고 있을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "슬슬 출발해야 늦지 않겠네.. 지금오는 버스 타야지."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "스펙타클하게 시간에 맞을 듯 안맞을 듯 간다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "gkdlemfpswldk",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tmxpaflffl",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qmffpdzpt",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wlqthvlffk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tlej",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "tlspstltm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "xbfflq",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "vmflwldk",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "tjsvmffkdnj",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dnlffhdn",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gpffldhxmfhvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "fkvldhffpvltm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "flem",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekvhelf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "tpffksekdls",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "vlxhtmvhfna",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerLang/INFP.jpg'
+            },
+        ]
+    },
     // KMBTI
     {
         info : {
