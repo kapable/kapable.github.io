@@ -16,6 +16,20 @@ function MainPage(props) {
             </div>
             <OhterLangIconsMain />
 
+            {/* Main Test Banners(Top) */}
+            <div className="main-link-div">
+                {props.all_tests_url.map((item, idx)=>{
+                    if(idx < 11) {
+                        return(
+                            <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
+                                <img className="test-main-img" src={item[1]} alt={item[2]}/>
+                            </Link>
+                        )
+                    };
+                    return null;
+                })}
+            </div>
+
             {/* Go to POST 2021 */}
             <Link to='/post2021/' className="main-link-block" key="post2021-banner">
                 <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2021-thumb.png`} alt="POST-2021" />
@@ -30,13 +44,18 @@ function MainPage(props) {
             )
             : null}
 
-            {/* Main Test Banners */}
+            {/* Main Test Banners(Bottom) */}
             <div className="main-link-div">
-                {props.all_tests_url.map((item)=>(
-                    <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                        <img className="test-main-img" src={item[1]} alt={item[2]}/>                               
-                    </Link>
-                ))}
+                {props.all_tests_url.map((item, idx)=>{
+                    if(idx >= 11) {
+                        return(
+                            <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
+                                <img className="test-main-img" src={item[1]} alt={item[2]}/>
+                            </Link>
+                        )
+                    };
+                    return null;
+                })}
             </div>
             
             {/* Go to metapangapply 2021 */}
