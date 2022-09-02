@@ -243,22 +243,6 @@ function PostPage(props) {
             setGoToMyPostImg("https://images.ktestone.com/PostImg/English/Button/go-to-mypost-btn.png");
         }
     }, [props, getList,])
-
-    // const getNs = useCallback(
-    //     async () => {
-    //         await axios.post(
-    //             'https://demo.tunib.ai/api/text/nverse',
-    //             {
-    //                 user_input: "이시용"
-    //             },
-    //             {'Content-Type' : 'application/json'}
-    //         )
-    //         .then(res => {
-    //             console.log(res.data.outputs);
-    //         })
-    //     },
-    //     [],
-    // )
     
     // when user is login
     if (isLogin) {

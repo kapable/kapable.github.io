@@ -21,6 +21,7 @@ import AuthPage from './components/TestTypes/Post2021/Users/AuthPage';
 import LoginPage from './components/TestTypes/Post2021/Users/LoginPage';
 import RegisterPage from './components/TestTypes/Post2021/Users/RegisterPage';
 import Auth from './hoc/auth';
+import Acrostic from './components/TestTypes/Acrostic';
 
 
 class App extends Component {
@@ -242,6 +243,9 @@ class App extends Component {
       <Router basename='/kapable.github.io/'>
         <ScrollToTop>
           <Switch>
+            {/* go to "Acroistic" page */}
+            <Route path="/acrostic/" component={() => <Acrostic />} />
+
             {/* go to "POST 2021" page */}
             <Route path='/post2021/:username/postwrite/' component={() => <POSTWRITE language={`Kor`}/>} />
             <Route path='/post2021/:username/' component={() => <POSTPOST language={`Kor`}/>} />
