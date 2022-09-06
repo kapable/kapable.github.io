@@ -586,15 +586,14 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        {this.state.adProb && (!this.state.isOpened || !this.state.coupangCookies)
-                        ? (<>
+                        {this.state.isOpened || this.state.coupangCookies
+                        ? (<img src={img_src} className='result-img' alt={final_type} />)
+                        : (<>
                             <div className='article-adCover-div'>
                                 <img src={img_src} className='result-img' alt={final_type} />
                             </div>
                             {this.affiliateRenderer()}
-                        </>)
-                        : (<img src={img_src} className='result-img' alt={final_type} />)
-                        }
+                        </>)}
                         <a target="_blank" 
                         rel="noopener noreferrer"
                         href="https://jellinggame.com/"
@@ -673,15 +672,14 @@ class Result extends Component {
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
                         {this.adTagRenderer()}
-                        {this.state.adProb && (!this.state.isOpened || !this.state.coupangCookies)
-                        ? (<>
+                        {this.state.isOpened || this.state.coupangCookies
+                        ? (<img src={img_src} className='result-img' alt={final_type} />)
+                        : (<>
                             <div className='article-adCover-div'>
                                 <img src={img_src} className='result-img' alt={final_type} />
                             </div>
                             {this.affiliateRenderer()}
-                        </>)
-                        : (<img src={img_src} className='result-img' alt={final_type} />)
-                        }
+                        </>)}
                     </Fragment>
                 )
             }
