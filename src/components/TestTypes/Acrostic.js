@@ -1,10 +1,13 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import "../css/acrostic.css";
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 const Acrostic = () => {
     const [userInput, setUserInput] = useState(""); // input by the user
     const [isLoading, setIsLoading] = useState(false); // set is loading
     const [acrosticResult, setAcrosticResult] = useState([]); // the outputs
+    const [isWriting, setIsWriting] = useState(true);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -34,6 +37,8 @@ const Acrostic = () => {
 
                 // reset userInput
                 setUserInput("");
+
+                setIsWriting(false);
                 console.log(res.data.outputs);
             });
         } catch (error) {
@@ -42,16 +47,40 @@ const Acrostic = () => {
         };
     };
 
+    const handleReDo = () => {
+        if(window.confirm("결과는 저장되지 않아요!\n이미지를 캡쳐하셨나요?")) {
+            setIsWriting(true);
+            setUserInput("");
+        } else {
+            return null;
+        };
+    };
+
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" minLength={1} maxLength={5} value={userInput} placeholder='최대 다섯 글자까지 넣어주세요!' onChange={(e) => setUserInput(e.target.value)} />
-                <button type="submit" >Submit</button>
+        <div className='acrostic-background-div'>
+            <img alt="acrostic-background-img" src="https://images.ktestone.com/Acrostic/Acrostic-background.png" className='acrostic-background-img'/>
+            <form className='acrostic-form' onSubmit={handleSubmit}>
+                <textarea className='acrostic-form-input'
+                    type="textarea" minLength={1} maxLength={5}
+                    value={isWriting ? userInput : acrosticResult.join(`\n\n`)}
+                    placeholder='최대 다섯 글자까지 넣어주세요!' onChange={(e) => setUserInput(e.target.value)} />
+
+                <input style={!(isWriting || isLoading) ? { display: 'none' } : null} className='acrostic-form-button' type="image" src="https://images.ktestone.com/Acrostic/Acrostic-check-button.png" alt="제출버튼" />
             </form>
-            {isLoading ? ("로딩중..") : (
-                acrosticResult.map((v, i) => (<div key={`acrostic-${i}`}>{v}</div>))
-            )}
-            <p>*출처: tunib</p>
+            <div className='acrostic-button-container' style={isWriting || isLoading ? { display: 'none' } : null }>
+                <CopyToClipboard text={'https://ktestone.com/kapable.github.io/acrostic/'}>
+                    <div style={{ width: '50%', float: 'left', cursor: 'pointer' }} onClick={() => alert("링크가 복사됐어요!\n결과 텍스트는 복사되지 않아요!\n이미지를 캡쳐해서 공유해주세요!")}>
+                        <img alt="acrostic-share-img" src="https://images.ktestone.com/Acrostic/Acrostic-share-button.png" className='acrostic-share-img'/>
+                    </div>
+                </CopyToClipboard>
+                <div style={{ width: '50%', float: 'right', cursor: 'pointer' }} onClick={handleReDo}>
+                    <img alt="acrostic-reDo-img" src="https://images.ktestone.com/Acrostic/Acrostic-reDo-button.png" className='acrostic-reDo-img'/>
+                </div>
+            </div>
+            <p className='acrostic-form-p'>*출처: tunib</p>
+            <div className='acrostic-loading-div'>
+                {isLoading ? ("로딩중..") : (null)}
+            </div>
         </div>
     );
 };

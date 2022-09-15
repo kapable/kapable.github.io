@@ -6,6 +6,7 @@ import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 import JELLINGBANNERENG from '../../api/DefaultImg/go-to-jelling-eng.png';
 import '../TestTypes/Post2021/Post2021.css';
 import '../TestTypes/Post2021/PostPopup.css';
+import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 
 function MainPage(props) {
 
@@ -15,6 +16,11 @@ function MainPage(props) {
                 <img className='main-header' src={MAINHEADER} alt="K-test"/>
             </div>
             <OhterLangIconsMain />
+
+            {/* Go to Acrostic */}
+            <Link to='/acrostic/' className="main-link-block" key="acrostic-banner">
+                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/acrostic-thumb.png`} alt="Acrostic" />
+            </Link>
 
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
@@ -80,6 +86,9 @@ function MainPage(props) {
             {/* <Link to='/kfunny/humor/' className="main-link-block" key="article-banner">
                 <img className="test-main-img" src={ARTICLEBANNER} alt="KTEST-Funny" />
             </Link> */}
+
+            {/** Floating Button for KakaoPlusFriend */}
+            <KakaoPlusFriendBtn />
         </Fragment>
         
     )   

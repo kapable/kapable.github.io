@@ -53,6 +53,17 @@ body {
   cursor: pointer;
 }
 
+.kakao-plusfriend-btn-container {
+  position: fixed;
+  width: 8rem;
+  bottom:20px;
+	right:20px;
+}
+
+.kakao-plusfriend-btn-image {
+  width: 100%;
+}
+
 .to-buymeacoffee-btn {
   background-color: gold;
   font-size: 1rem;
