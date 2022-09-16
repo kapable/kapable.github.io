@@ -68,6 +68,7 @@ body {
 
 .kakao-plusfriend-comment-image {
   animation: blink-effect 1.5s step-end infinite;
+  animation-iteration-count: 5;
   width: 100%;
 }
 
