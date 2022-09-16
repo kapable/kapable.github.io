@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const KakaoPlusFriendBtn = () => {
     return (
-        <div className="kakao-plusfriend-btn-container" >
-            <a href="https://pf.kakao.com/_IxnRfb" target="_blank" rel="noopener noreferrer">
+        <Fragment>
+            <div className="kakao-plusfriend-comment-container">
                 <img
-                    src="https://images.ktestone.com/default/kakao-plus-friends-btn.png"
-                    alt="kakao-plusfriend-btn"
-                    className="kakao-plusfriend-btn-image"/>
-            </a>
-        </div>
+                    src="https://images.ktestone.com/default/kakao-plus-friends-comment.png"
+                    alt="kakao-plusfriend-comment"
+                    className="kakao-plusfriend-comment-image"/>
+            </div>
+            <div className="kakao-plusfriend-btn-container" >
+                <a href="https://pf.kakao.com/_IxnRfb" target="_blank" rel="noopener noreferrer">
+                    <img
+                        src="https://images.ktestone.com/default/kakao-plus-friends-btn.png"
+                        alt="kakao-plusfriend-btn"
+                        className="kakao-plusfriend-btn-image"/>
+                </a>
+            </div>
+        </Fragment>
     );
 };
 

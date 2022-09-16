@@ -53,6 +53,24 @@ body {
   cursor: pointer;
 }
 
+@keyframes blink-effect {
+  50% {
+    opacity: 0;
+  }
+}
+
+.kakao-plusfriend-comment-container {
+  position: fixed;
+  width: 15rem;
+  bottom: 100px;
+	right: 45px;
+}
+
+.kakao-plusfriend-comment-image {
+  animation: blink-effect 1.5s step-end infinite;
+  width: 100%;
+}
+
 .kakao-plusfriend-btn-container {
   position: fixed;
   width: 8rem;
