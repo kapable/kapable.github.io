@@ -38264,6 +38264,654 @@ var TESTS = [
             },
         ]
     },
+    // FriendFactPok
+    {
+        info : {
+            mainTitle:"내 팩폭력 지수 테스트",
+            subTitle:"내 팩폭력 지수 테스트하기",
+            mainUrl:"FriendFactPok",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '커플인 내 친구가 다른 이성의 깻잎을 떼어 줄 때, 내 친구는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '어어.. 그거 요즘 위험한거야, 라고 확실하게 말한다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '음.. 뭐 그럴수도 있지 마음속으로 생각한다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "친구가 과제 프레젠테이션을 한다고 한다, 내 친구는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "앞쪽에 앉아서 질문 100개 준비완료."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "뒤쪽에 앉아서 눈빛보내기 준비완료."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "회사를 쭉 출근하다가 주말이 되었다, 내 친구는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "주중엔 회사(실내)였으니 주말엔 밖으로 레츠고!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "주중엔 회사(집밖)였으니 주말엔 집콕 레츠고!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "아무 생각하지 말라고 할 때, 내 친구는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "(아무 생각 안하는 중)"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "생각 하지말라고? 흠 생각은 띵킹.. 노띵킹.. 어 나 영어 잘하네?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "만약 죽는다면 어떡할까, 내 친구는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "죽으면.. 뭐 죽는거지.."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "죽으면 뭐로 다시 태어날려나? 나태지옥은 가기 싫은데.."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "남자가 여친 앞에서 다른 여자에게 새우를 까주는 영상을 볼 때, 내 친구는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "저 여친애 기분 나쁘겠는데? 근데 새우 저렇게 까면 살 다 날라가는데"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "와 진짜 기분 나쁘겠다. 저러다가 헤어질 각인데?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "여친있는 내 친구가 다른 여자의 롱패딩 지퍼를 올려준 현장을 목격했다, 내 친구는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "너 그거 걸리면 정상전쟁이라고 말한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "와.. 내가 그 여친이었으면 진짜 화나고 서운할 듯"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 기분이 안좋아서 매운걸 먹어야한다고 한다, 내 친구는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "기분이 안좋은데 매운걸 왜 먹어?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "뭐야 왜 짜증났어? 무슨 일 있었어?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "자기야 나 목이 너무 아파.. 할때, 내 친구는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "목? 목감기? 아니면 뼈가 아파?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "헐.. 괜찮아? 약 사다 줄까?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구랑 여행 플랜을 짜기로 했다, 내 친구는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "점심엔 여기! 저녁엔 여기! 시간 별로 짠다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "음 여기가 유명한 것 같군. 여기 위주로 가야겠다. 대략 짠다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "내게 기분 좋은 하루의 내 친구는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "하루에 내가 계획한 루틴을 지킬 때 뿌듯함."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "생각지도 못한 특별한 일이 나를 설레게 한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "여/남자친구와 소주를 먹으려고 할 때, 내 친구는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "음.. 한 11시쯤 집 들어가서 자야겠다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "오케이 마셔! 내일은 없다! 가즈아!"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yourFactPok/INFP.png'
+            },
+        ]
+    },
+    // MyFactPok
+    {
+        info : {
+            mainTitle:"내 팩폭력 지수 테스트",
+            subTitle:"내 팩폭력 지수 테스트하기",
+            mainUrl:"MyFactPok",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '커플인 내 친구가 다른 이성의 깻잎을 떼어 줄 때, 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '어어.. 그거 요즘 위험한거야, 라고 확실하게 말한다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '음.. 뭐 그럴수도 있지 마음속으로 생각한다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "친구가 과제 프레젠테이션을 한다고 한다, 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "앞쪽에 앉아서 질문 100개 준비완료."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "뒤쪽에 앉아서 눈빛보내기 준비완료."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "회사를 쭉 출근하다가 주말이 되었다, 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "주중엔 회사(실내)였으니 주말엔 밖으로 레츠고!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "주중엔 회사(집밖)였으니 주말엔 집콕 레츠고!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "아무 생각하지 말라고 할 때, 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "(아무 생각 안하는 중)"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "생각 하지말라고? 흠 생각은 띵킹.. 노띵킹.. 어 나 영어 잘하네?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "만약 죽는다면 어떡할까, 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "죽으면.. 뭐 죽는거지.."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "죽으면 뭐로 다시 태어날려나? 나태지옥은 가기 싫은데.."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "남자가 여친 앞에서 다른 여자에게 새우를 까주는 영상을 볼 때, 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "저 여친애 기분 나쁘겠는데? 근데 새우 저렇게 까면 살 다 날라가는데"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "와 진짜 기분 나쁘겠다. 저러다가 헤어질 각인데?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "여친있는 내 친구가 다른 여자의 롱패딩 지퍼를 올려준 현장을 목격했다, 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "너 그거 걸리면 정상전쟁이라고 말한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "와.. 내가 그 여친이었으면 진짜 화나고 서운할 듯"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 기분이 안좋아서 매운걸 먹어야한다고 한다, 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "기분이 안좋은데 매운걸 왜 먹어?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "뭐야 왜 짜증났어? 무슨 일 있었어?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "자기야 나 목이 너무 아파.. 할때, 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "목? 목감기? 아니면 뼈가 아파?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "헐.. 괜찮아? 약 사다 줄까?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구랑 여행 플랜을 짜기로 했다, 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "점심엔 여기! 저녁엔 여기! 시간 별로 짠다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "음 여기가 유명한 것 같군. 여기 위주로 가야겠다. 대략 짠다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "내게 기분 좋은 하루의 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "하루에 내가 계획한 루틴을 지킬 때 뿌듯함."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "생각지도 못한 특별한 일이 나를 설레게 한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "여/남자친구와 소주를 먹으려고 할 때, 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "음.. 한 11시쯤 집 들어가서 자야겠다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "오케이 마셔! 내일은 없다! 가즈아!"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/myFactPok/INFP.png'
+            },
+        ]
+    },
 ]
 
 export default TESTS;

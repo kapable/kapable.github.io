@@ -1,0 +1,15 @@
+.factPok-intor-images-container {
+    width: 100%;
+    max-width: 456px;
+    margin: 0 auto;
+}
+
+.factPok-intro-top-img, .factPok-intro-bottom-img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.factPok-intro-middle-left-img, .factPok-intro-middle-right-img {
+    width: 50%;
+    vertical-align: bottom;
+}

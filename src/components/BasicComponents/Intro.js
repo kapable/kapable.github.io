@@ -95,7 +95,15 @@ class Intro extends Component {
         if(this.state.quiz_url.includes("niair.xyz")){
             if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
         }
-    }
+
+        // go to quiz mode when TONYMOLY factPok contents start
+        let factPokQueries = ["factPok", "MyFactPok", "FriendFactPok"];
+        if(factPokQueries.some(el => this.state.quiz_url.includes(el))) {
+            this.setState({
+                mode:"quiz"
+            });
+        };
+    };
     
     _eventSenderGA(category, action, label){
         ReactGA.event({
@@ -152,6 +160,7 @@ class Intro extends Component {
 
     introPageRender(){
 
+        
         let _mainTitle = this.state.current_test.info.mainTitle;
         let _subTitle = this.state.current_test.info.subTitle;
         let _thumbImage = this.state.current_test.info.mainImage;
@@ -520,7 +529,7 @@ class Intro extends Component {
             }
                 
             return this._page
-        }
+    }
     
 
     lodingPageRender(){

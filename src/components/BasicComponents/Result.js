@@ -100,6 +100,10 @@ class Result extends Component {
     };
 
     _onBackToStartButtonClick(){
+        let factPokQueries = ["factPok", "MyFactPok", "FriendFactPok"];
+        if(factPokQueries.some(el => this.state.current_url.includes(el))) {
+            window.location.href = window.location.origin + "/kapable.github.io/factPok/";
+        };
         this._eventSenderGA("Paging", "Click Re-test Button", "result page");
         this.setState({
             mode:"intro"
@@ -490,9 +494,8 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
+            let ppl_list = ["factPok", "MyFactPok", "FriendFactPok", 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
-            // let coupang_list = ['personalColor2022', 'personalColor'];
             if(ppl_list.includes(this.state.current_test)) {
                 let og_img_url = "https://images.ktestone.com/meta/" + this.state.current_test + "/" + this.state.current_result + ".png"
                 return (
