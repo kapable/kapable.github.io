@@ -13,3 +13,19 @@
     width: 50%;
     vertical-align: bottom;
 }
+
+.result-factPok-bottom-banner {
+    width: 23rem;
+    margin: 0rem auto 0rem;
+}
+
+.result-factPok-bottom-banner-left, .result-factPok-bottom-banner-right {
+    width: 50%;
+    vertical-align: bottom;
+}
+
+@media (min-width: 768px) {
+    .result-factPok-bottom-banner {
+        width: 40rem;
+    }
+}

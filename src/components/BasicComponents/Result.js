@@ -12,13 +12,14 @@ import AGAINBTN from '../../api/DefaultImg/result-to-again-btn.png';
 import TOHOMEBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
-import ScriptTag from 'react-script-tag'
+import ScriptTag from 'react-script-tag';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 import JELLINGBANNERENG from '../../api/DefaultImg/go-to-jelling-eng.png';
 import KAKAOPLUSFRIEND from '../../api/DefaultImg/go-to-kakao-plusfriend.png';
 import PCTMBTIBAR from '../SubComponents/PctMBTIBar';
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
+import '../TestTypes/FactPok/factPok.css';
 
 class Result extends Component {
     static propTypes = {
@@ -494,8 +495,9 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ["factPok", "MyFactPok", "FriendFactPok", 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
+            let ppl_list = ['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
+            let tonymoly_list = ["factPok", "MyFactPok", "FriendFactPok",];
             if(ppl_list.includes(this.state.current_test)) {
                 let og_img_url = "https://images.ktestone.com/meta/" + this.state.current_test + "/" + this.state.current_result + ".png"
                 return (
@@ -646,6 +648,56 @@ class Result extends Component {
                                 <Card.Text>{final_desc}</Card.Text>
                             </Card.Body>
                         </Card>
+                    </Fragment>
+                )
+            } else if (tonymoly_list.includes(this.state.current_test)) {
+                return (
+                    <Fragment>
+                        <Helmet>
+                            {/* <!-- Primary Meta Tags --> */}
+                            <title>{test_current}-케이테스트</title>
+                            <meta name="title" content={test_current+'-케이테스트'}/>
+                            <meta name="description" content={this.state.current_result + ':' + desc_test_current} data-react-helmet="true"/>
+                            <link rel="main-url" href={this.state.sharable_url}/>
+    
+                            {/* <!-- Open Graph / Facebook --> */}
+                            <meta property="og:type" content="website"/>
+                            <meta property="og:url" content={this.state.sharable_url}/>
+                            <meta property="og:title" content={test_current+'-케이테스트'}/>
+                            <meta property="og:description" content={this.state.current_result + ':' + desc_test_current}/>
+                            <meta property="og:image" content={img_src}/>
+                            <meta property="og:image:alt" content={this.state.current_result} />
+    
+                            {/* <!-- Twitter --> */}
+                            <meta property="twitter:card" content="summary_large_image"/>
+                            <meta property="twitter:url" content={this.state.sharable_url}/>
+                            <meta property="twitter:title" content={test_current+'-케이테스트'}/>
+                            <meta property="twitter:description" content={this.state.current_result + ':' + desc_test_current}/>
+                            <meta property="twitter:image" content={img_src}/>
+                            <meta property="twitter:image:alt" content={this.state.current_result} />
+                        </Helmet>
+                        {this.adTagRenderer()}
+                        <img src={img_src} className='result-img' alt={final_type} />
+                        <div className='result-factPok-bottom-banner'>
+                            <a
+                                target='_blank'
+                                rel="noopener noreferrer"
+                                href='https://gift.kakao.com/product/5582623'
+                                className='to-tonymoly-kakao-banner'
+                                onClick={() => (this._eventSenderGA("Paging", "Click Go-to-Kakao Button", "tonymoly result page"))}
+                            >
+                                <img src={`https://images.ktestone.com/meta/factPok/factPok-bottom-banner-left.jpg`} className='result-factPok-bottom-banner-left' alt='result-factPok-bottom-banner-left' />
+                            </a>
+                            <a
+                                target='_blank'
+                                rel="noopener noreferrer"
+                                href='https://smartstore.naver.com/tonymolyofficial/products/7216276892'
+                                className='to-tonymoly-store-banner'
+                                onClick={() => (this._eventSenderGA("Paging", "Click Go-to-Store Button", "tonymoly result page"))}
+                            >
+                                <img src={`https://images.ktestone.com/meta/factPok/factPok-bottom-banner-right.jpg`} className='result-factPok-bottom-banner-right' alt='result-factPok-bottom-banner-right' />
+                            </a>
+                        </div>
                     </Fragment>
                 )
             } else {
