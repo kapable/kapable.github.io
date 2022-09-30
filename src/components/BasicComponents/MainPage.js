@@ -17,6 +17,11 @@ function MainPage(props) {
             </div>
             <OhterLangIconsMain />
 
+            {/* Go to FactPok */}
+            <Link to='/factPok/' className="main-link-block" key="factpok-banner">
+                <img className='test-main-img' src={"https://images.ktestone.com/main-thumbnail/factPok-thumb.png"} alt='factPok' />
+            </Link>
+
             {/* Go to Acrostic */}
             <Link to='/acrostic/' className="main-link-block" key="acrostic-banner">
                 <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/acrostic-thumb.png`} alt="Acrostic" />
@@ -81,11 +86,6 @@ function MainPage(props) {
                 href='https://jellinggame.com/'
                 className='to-jelling-banner'
             > <img src={JELLINGBANNERENG} className='test-main-img' alt="go to Jelling games" /> </a>
-
-            {/* Go to FactPok */}
-            <Link to='/factPok/' className="main-link-block" key="factpok-banner">
-                <button>TONYFactPok</button>
-            </Link>
 
             {/* Go to K-funny articles */}
             {/* <Link to='/kfunny/humor/' className="main-link-block" key="article-banner">
