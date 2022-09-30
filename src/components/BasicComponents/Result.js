@@ -906,6 +906,7 @@ class Result extends Component {
     };
 
     resultPageRender(){
+        let ppl_list = ["factPok", "MyFactPok", "FriendFactPok",];
         return(
             <Fragment>
                 
@@ -924,12 +925,12 @@ class Result extends Component {
                     <OtherLangIcons currentTest={this.state.current_test}/>
                     
                     <div className="share">
-                        <h5 className="share-title">친구에게 공유하기</h5>
+                        <h5 className="share-title">{ppl_list.includes(this.state.current_test) ? null : "친구에게 공유하기"}</h5>
                         <div className="share">
                             {/* if facialExpAnalyzer, copy url is test home, other tests' urls are result urls */}
                             <CopyToClipboard text={this.state.current_test.includes("facialExpressionAnalyzer") ? "https://ktestone.com/kapable.github.io/" + this.state.current_test+'/' : this.state.sharable_url+'/'}>
                                 <img
-                                    src={COPYBTN}
+                                    src={ppl_list.includes(this.state.current_test) ? "https://images.ktestone.com/meta/factPok/factPok-link-copy-btn.png" : COPYBTN}
                                     onClick={this._onShareButtonClick}
                                     className="share-btn-img"
                                     alt="링크 복사"
