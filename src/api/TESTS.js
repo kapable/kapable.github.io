@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // depressionBTI
+    {
+        info : {
+            mainTitle:"우울증 BTI",
+            subTitle:"나의 우울증 순위는? - 우울증 BTI",
+            mainUrl:"depressionBTI",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/depressionBTI-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/depressionBTI-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '나의 에너지가 더 높아질 때는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '친구들과 만나서 파티하고 놀 때!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '집에서 조용히 여유를 즐길 때!'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "낯선 장소에 갔을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "낯선 곳도, 사람도 좋아! 일단 다 친해지자!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "주변의 분위기와 무드를 고요히 즐긴다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "내가 생각하는 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "활발하고 적극적이고 사람들을 좋아하는 스타일."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "조용하고 진중하고 나 스스로를 좋아하는 스타일."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 계획한 큰 일이 있을 때 더 걱정 되는 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "지금 당장 내가 무엇을 해결할 지 걱정."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "이게 안됐을 때에 대한 상상과 걱정."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "새로운 전자기기를 선물 받았다 이 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "설명서를 보면서 차근차근 해본다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "설명서가 무엇? 일단 이리저리 만져본다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 배우고 싶은게 생겼다. 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "내가 배우고 싶었던 것 자체에 집중을한다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "이 것도 저 것도 배우고 싶어서 다방면적 집중을 원한다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 고민을 이야기하는데 친구가 잘못한 것 같다. 이 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "너가 잘못한거 맞네."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "내가 생각하기에는 이렇게 저렇게~ 한게 안좋지 않을까..?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "우울증이라는건 뭐라고 생각하는지?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "우울증은 사람을 만나면 해결된다! 으하하!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "우울증은.. 내가 우울할 때 끝없이 우울해지는거..?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "누군가 나에게 우울하다고 할 때, 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "우울한건 취미와 사람을 만나면 해결 될거야!."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "왜 우울해..? 요즘에 어려운 일 있어?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "계획을 세울 때, 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "지금 당장 해야하는 것 부터 계획의 끝까지 철저하게!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "전체적인 아웃라인만 설계하고 융통성있게 처리!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "오랜만인 친구가 연락이 왔다, 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "오 잘지냈어? 한번 볼까? 언제 어디서 만날까?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "잘 지냈지~~ 언제한번 봐야지"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "우울증 해결을 위해 네이버 검색을 했다, 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "아.. 이런게 우울증이구나 이렇게 이렇게 해결하면 되겠군!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "우울증 반대말은 조울증이네..오호?"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "gkdlemfpswldk",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tmxpaflffl",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qmffpdzpt",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wlqthvlffk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tlej",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "tlspstltm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "xbfflq",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "vmflwldk",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "tjsvmffkdnj",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dnlffhdn",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gpffldhxmfhvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "fkvldhffpvltm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "flem",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekvhelf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "tpffksekdls",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "vlxhtmvhfna",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/depressionBTI/INFP.png'
+            },
+        ]
+    },
     // flowerLang
     {
         info : {
