@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // persoanlSixteenSkin
+    {
+        info : {
+            mainTitle:"퍼스널 식스틴 스킨 테스트",
+            subTitle:"나의 스킨 타입은? - 퍼스널 식스틴 스킨 테스트",
+            mainUrl:"persoanlSixteenSkin",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/persoanlSixteenSkin-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/persoanlSixteenSkin-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"DO",
+                question: '세안후 내 피부는?',
+                answers:[
+                    {
+                        type: "D",
+                        score: 2,
+                        content: '피부가 심하게 당긴다'
+                    },
+                    {
+                        type: "O",
+                        score: 5,
+                        content: '당김이나 끈적임이 없다'
+                    },
+                ],
+            },
+            {
+                which:"DO",
+                question: "거울을 봤을 때 내 코는?",
+                answers:[
+                    {
+                        type: "D",
+                        score: 2,
+                        content: "모공이 잘보이지 않는다"
+                    },
+                    {
+                        type: "O",
+                        score: 5,
+                        content: "모공이 잘보인다"
+                    },
+                ]
+            },
+            {
+                which:"DO",
+                question: "화장을 했을 때 나는?",
+                answers:[
+                    {
+                        type: "D",
+                        score: 2,
+                        content: "화장이 잘 먹지 않고 들뜬다"
+                    },
+                    {
+                        type: "O",
+                        score: 5,
+                        content: "화장이 잘 지워진다"
+                    },
+                ]
+            },
+            {
+                which:"RS",
+                question: "모기에 물렸을 때 반응은?",
+                answers:[
+                    {
+                        type: "R",
+                        score: 2,
+                        content: "금방 사라진다"
+                    },
+                    {
+                        type: "S",
+                        score: 5,
+                        content: "오래가고 잘 사라지지 않는다"
+                    },
+                ]
+            },
+            {
+                which:"RS",
+                question: "피부 때문에 병원에 가본 경험은?",
+                answers:[
+                    {
+                        type: "R",
+                        score: 2,
+                        content: "피부 관련 질환 치료를 받은적 없다"
+                    },
+                    {
+                        type: "S",
+                        score: 5,
+                        content: "피부 관련 질환 치료를 받은적 있다"
+                    },
+                ]
+            },
+            {
+                which:"RS",
+                question: "얼굴에 뾰루지 낫을 때 나는?",
+                answers:[
+                    {
+                        type: "R",
+                        score: 2,
+                        content: "짜고나면 금방 사라진다"
+                    },
+                    {
+                        type: "S",
+                        score: 5,
+                        content: "짜면 더 심해져서 가만히 둔다"
+                    },
+                ]
+            },
+            {
+                which:"PN",
+                question: "햇빛을 강하게 내리쬘때 나는?",
+                answers:[
+                    {
+                        type: "P",
+                        score: 2,
+                        content: "쉽게 피부가 붉어지고 잘 탄다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "얼굴이 붉어지다 금방 돌아온다"
+                    },
+                ]
+            },
+            {
+                which:"PN",
+                question: "얼굴에 점이 났을 때 나는?",
+                answers:[
+                    {
+                        type: "P",
+                        score: 2,
+                        content: "평소에 좀 있는편이라 당연하다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "엥?????말도 안돼"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "내 피부의 색은?",
+                answers:[
+                    {
+                        type: "P",
+                        score: 2,
+                        content: "어두편에 속한다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "하얀편에 속한다"
+                    },
+                ]
+            },
+            {
+                which:"TW",
+                question: "나의 나이는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "35세 이하다"
+                    },
+                    {
+                        type: "W",
+                        score: 5,
+                        content: "35세 이상이다"
+                    },
+                ]
+            },
+            {
+                which:"TW",
+                question: "처음 본 사람이 동안이라고 했을 때 내 반응은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "자주 있는 일이라 아무렇지 않다"
+                    },
+                    {
+                        type: "W",
+                        score: 5,
+                        content: "들어본적이 잘 없어 어색하다"
+                    },
+                ]
+            },
+            {
+                which:"TW",
+                question: "얼굴에 배개 자국이 생겼을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "금방 사라진다"
+                    },
+                    {
+                        type: "W",
+                        score: 5,
+                        content: "자국이 오래 남는다"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "DRNT",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "DRNT",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/DRNT.png'
+            },
+            {
+                type: "DRNW",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "DRNW",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/DRNW.png'
+            },
+            {
+                type: "DRPT",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "DRPT",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/DRPT.png'
+            },
+            {
+                type: "DRPW",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "DRPW",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/DRPW.png'
+            },
+            {
+                type: "DSNT",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "DSNT",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/DSNT.png'
+            },
+            {
+                type: "DSNW",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "DSNW",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/DSNW.png'
+            },
+            {
+                type: "DSPT",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "DSPT",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/DSPT.png'
+            },
+            {
+                type: "DSPW",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "DSPW",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/DSPW.png'
+            },
+            {
+                type: "ORNT",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ORNT",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/ORNT.png'
+            },
+            {
+                type: "ORNW",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ORNW",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/ORNW.png'
+            },
+            {
+                type: "ORPT",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ORPT",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/ORPT.png'
+            },
+            {
+                type: "ORPW",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ORPW",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/ORPW.png'
+            },
+            {
+                type: "OSNT",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "OSNT",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/OSNT.png'
+            },
+            {
+                type: "OSNW",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "OSNW",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/OSNW.png'
+            },
+            {
+                type: "OSPT",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "OSPT",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/OSPT.png'
+            },
+            {
+                type: "OSPW",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "OSPW",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/persoanlSixteenSkin/OSPW.png'
+            },
+        ]
+    },
     // depressionBTI
     {
         info : {
