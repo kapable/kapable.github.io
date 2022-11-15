@@ -243,7 +243,7 @@ var TESTS = [
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "gourmand",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ESTP.jpg'
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ESTP.jpeg'
             },
             {
                 type: "ESFJ",
