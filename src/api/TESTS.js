@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // personalScentBTI
+    {
+        info : {
+            mainTitle:"퍼스널 향기 테스트",
+            subTitle:"나의 퍼스널 향기는? - 퍼스널 향기 BTI",
+            mainUrl:"personalScentBTI",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/personalScentBTI-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/personalScentBTI-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '길을 걷다 번호를 따였다. 당신의 행동은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '새 친구를 사귈 수 있을 것 같다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '대출 연락이 올 것 같아서 거절한다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "카페에서 이상형을 발견했을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "용기를 내어 번호를 물어본다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "머뭇머뭇 거리다 집으로 돌아온다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "산책 중 맞은편에서 귀여운 강아지가 걸어오고 있다.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "주인한테 허락을 맡고 만져본다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "속으로 귀여워하고 쳐다만 본다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나는 자기 전에 눈을 감고",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "당장 내일 할 일에 대해 고민한다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "당장 일어나지 않을 일에 대해 생각한다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "길을 잃었을때",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "지도 앱을 켜서 빨리 여기서 빠져나간다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "일단 아는 길이 나올 때 까지 직진한다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나는 맛집을 찾을 때",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "리뷰에 의존하는 편이다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "돌아다니다 삘 꽂히는 집에 가보는 편이다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "고민 상담을 들어줄 때",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "객관적으로 현실적인 조언을 해준다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "감정 어린 공감을 해준다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "문제가 발생했을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "근본적인 문제해결을 위해 집중하는 사람"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "다 잘될거야 라고 생각하는 긍정적인 사람"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "이성과 싸웠을때 ",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "왜 화가 났는지 이유를 설명한다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "현재의 서운한 감정을 토로한다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나의 여행 스타일은",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "완벽한게 짜여진 코스 여행"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "어디로 떠날지 모르는 즉흥적인 여행"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "일을 할 때 더 스트레스 받는 상황은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "한번도 해보지 않은 새로운 일"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "계속 똑같은 반복적인 일"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "향수를 살 때, 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "미리 인터넷에서 알아보고 온 향수만 구매한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "하나하나 맡아보면서 느낌이 오는 향으로 구매한다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "citrus",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gourmand",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "musk",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "aqua",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "herbal",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "green",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "metalic",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fruity",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "floral",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "oriental",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "fresh",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "powdery",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "mossy",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "aldehyde",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "spicy",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "woody",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/personalScentBTI/INFP.jpg'
+            },
+        ]
+    },
     // persoanlSixteenSkin
     {
         info : {

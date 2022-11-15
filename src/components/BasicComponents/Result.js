@@ -57,6 +57,7 @@ class Result extends Component {
             isOpened: false,
             adProb: 1.1 >= Math.random(),
             coupangLink: "https://link.coupang.com/a/l7x1e",
+            coupangLink2: "https://link.coupang.com/a/FFVJ2",
             amazonLink: "https://www.amazon.com/?&_encoding=UTF8&tag=ktestone-20&linkCode=ur2&linkId=adc3bdba997e0a439e4fa8467501bc3a&camp=1789&creative=9325",
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
@@ -467,7 +468,7 @@ class Result extends Component {
             return (
                 <div className='article-adCover-div-1'>
                     <div className='article-adCover-div-2'>
-                        <a href={this.state.coupangLink} target="_blank" rel='noreferrer noopener'>
+                        <a href={window.location.href.includes("personalScentBTI") ? this.state.coupangLink2 : this.state.coupangLink} target="_blank" rel='noreferrer noopener'>
                             <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={this.onCoupangButtonClick}>
                                 쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
                             </button>
