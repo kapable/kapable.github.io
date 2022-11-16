@@ -38,193 +38,193 @@ var TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '길을 걷다 번호를 따였다. 당신의 행동은?',
+                question: '내 마음에 쏙 든 향수를 발견했다!\n계산하려는데 직원이 바쁜것 같다면?',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: '새 친구를 사귈 수 있을 것 같다.'
+                        content: '저기요! 계산 먼저해주세요!'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '대출 연락이 올 것 같아서 거절한다.'
+                        content: '직원이 카운터로 올때까지 딴청피우며 눈치본다.'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "카페에서 이상형을 발견했을 때 나는?",
+                question: "가게 직원이 따라다니면서 이것저것 추천해준다면?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "용기를 내어 번호를 물어본다."
+                        content: "이건 기회야! 궁금했던 향수정보를 물어본다."
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "머뭇머뭇 거리다 집으로 돌아온다."
+                        content: "(제발 말걸지 말아주세요..) 아..감사합니다.."
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "산책 중 맞은편에서 귀여운 강아지가 걸어오고 있다.",
+                question: "이제 향수가게를 나와 밥을 먹으려한다. 어디로 갈까?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "주인한테 허락을 맡고 만져본다"
+                        content: "평소 가고 싶었던 요즘 유행하는 핫플!"
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "속으로 귀여워하고 쳐다만 본다."
+                        content: "사람이 별로 없는 여유롭고 조용한 식사."
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "나는 자기 전에 눈을 감고",
+                question: "식당에 들어온 순간 가장 먼저 보이는 것은?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "당장 내일 할 일에 대해 고민한다."
+                        content: "맛있는 음식들."
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "당장 일어나지 않을 일에 대해 생각한다."
+                        content: "아기자기 예쁘게 꾸며둔 인테리어."
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "길을 잃었을때",
+                question: "딱 하나의 향수면 시향 할 수 있다면?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "지도 앱을 켜서 빨리 여기서 빠져나간다."
+                        content: "평소 좋아하던 향기."
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "일단 아는 길이 나올 때 까지 직진한다."
+                        content: "한번도 시도 안 해본 향기."
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "나는 맛집을 찾을 때",
+                question: "집에 도착해 향수를 뜯어보았는데 패키지가 너무 예쁘다..어쩌지?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "리뷰에 의존하는 편이다."
+                        content: "어차피 쓰레긴데 그냥 버린다."
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "돌아다니다 삘 꽂히는 집에 가보는 편이다."
+                        content: "향수병 옆에 두면 너무 예쁘겠다!"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "고민 상담을 들어줄 때",
+                question: "직원의 추천을 받은 향수! 냄새가 정말 너무 별로라면?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "객관적으로 현실적인 조언을 해준다."
+                        content: "감사한데..\n제 취향은 아닌 것 같아요.."
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "감정 어린 공감을 해준다."
+                        content: "와.. 좋은 것 같아요!\n혹시 다른 향도 추천해주시겠어요?"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "문제가 발생했을 때 나는?",
+                question: "직원이 실수로 진열장의 향수병을 전부 깨버렸다!\n당신의 속마음은?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "근본적인 문제해결을 위해 집중하는 사람"
+                        content: "'와 저게 다 얼마야..'"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "다 잘될거야 라고 생각하는 긍정적인 사람"
+                        content: "'헉..어떻게..안다치셨나?..속상하시겠다..'"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "이성과 싸웠을때 ",
+                question: "친구의 생일에 카톡으로 선물을 보냈는데 답이 없다면?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "왜 화가 났는지 이유를 설명한다"
+                        content: "바쁜가보네"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "현재의 서운한 감정을 토로한다"
+                        content: "혹시 잘못보냈나? 생일이 아닌가?"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "나의 여행 스타일은",
+                question: "내일은 향수를 사러가는 날!\n설레는 마음으로 침대에 누웠을때 드는 생각은?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "완벽한게 짜여진 코스 여행"
+                        content: "오픈시간, 교통편 모두 확인했고.. 가기전에 한 번 더 확인해야겠다"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "어디로 떠날지 모르는 즉흥적인 여행"
+                        content: "어떤 향수가 있을까? 혹시 다 마음에 들면 어쩌지.."
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "일을 할 때 더 스트레스 받는 상황은?",
+                question: "다음날 아침, 향수가게에 도착한 당신! 근데 문이 닫혀있다.",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "한번도 해보지 않은 새로운 일"
+                        content: "이럴리가 없는데.. 가게 오픈시간을 확인해본다."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "계속 똑같은 반복적인 일"
+                        content: "다른곳 구경하고 오면 열려있겠지~"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "향수를 살 때, 나는?",
+                question: "이 향수 너무 맘에 든다! 곧 친구 생일인데..\n선물로 줘야겠다 언제사지?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "미리 인터넷에서 알아보고 온 향수만 구매한다."
+                        content: "일주일전에 미리 미리 준비해준다."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "하나하나 맡아보면서 느낌이 오는 향으로 구매한다."
+                        content: "당일에 사면 되겠지? 무슨 향을 좋아하려나?"
                     },
                 ]
             },
