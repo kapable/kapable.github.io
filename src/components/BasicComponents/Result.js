@@ -468,7 +468,7 @@ class Result extends Component {
             return (
                 <div className='article-adCover-div-1'>
                     <div className='article-adCover-div-2'>
-                        <a href={window.location.href.includes("personalScentBTI") ? this.state.coupangLink2 : this.state.coupangLink} target="_blank" rel='noreferrer noopener'>
+                        <a href={window.location.href.includes("personalScentBTI") || window.location.href.includes("personalIncense") ? this.state.coupangLink2 : this.state.coupangLink} target="_blank" rel='noreferrer noopener'>
                             <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={this.onCoupangButtonClick}>
                                 쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
                             </button>
