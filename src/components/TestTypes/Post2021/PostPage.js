@@ -231,7 +231,7 @@ function PostPage(props) {
         getList();
         if(props.language === `Kor`) {
             setUpbarBtnImg("https://images.ktestone.com/PostImg/Background/up_bg_bar.png");
-            setMainTitleImg("https://images.ktestone.com/PostImg/Background/main_title.png");
+            setMainTitleImg("https://images.ktestone.com/PostImg/Background/main_title_2022.png");
             setSendMailImg("https://images.ktestone.com/PostImg/Button/send-mail-btn.png");
             setShareMyPostImg("https://images.ktestone.com/PostImg/Button/share-mypost-btn.png");
             setGoToMyPostImg("https://images.ktestone.com/PostImg/Button/go-to-mypost-btn.png");
