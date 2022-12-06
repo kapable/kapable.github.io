@@ -244,7 +244,7 @@ class App extends Component {
       <Router basename='/kapable.github.io/'>
         <ScrollToTop>
           <Switch>
-            {/* go to "FactPol" page */}
+            {/* go to "FactPok" page */}
             <Route path="/factPok/" component={() => <FactPok />} />
 
             {/* go to "Acroistic" page */}

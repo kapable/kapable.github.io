@@ -17,16 +17,6 @@ function MainPage(props) {
             </div>
             <OhterLangIconsMain />
 
-            {/* Go to FactPok */}
-            <Link to='/factPok/' className="main-link-block" key="factpok-banner">
-                <img className='test-main-img' src={"https://images.ktestone.com/main-thumbnail/factPok-thumb.png"} alt='factPok' />
-            </Link>
-
-            {/* Go to Acrostic */}
-            <Link to='/acrostic/' className="main-link-block" key="acrostic-banner">
-                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/acrostic-thumb.png`} alt="Acrostic" />
-            </Link>
-
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
                 {props.all_tests_url.map((item, idx)=>{
@@ -40,6 +30,16 @@ function MainPage(props) {
                     return null;
                 })}
             </div>
+
+            {/* Go to FactPok */}
+            <Link to='/factPok/' className="main-link-block" key="factpok-banner">
+                <img className='test-main-img' src={"https://images.ktestone.com/main-thumbnail/factPok-thumb.png"} alt='factPok' />
+            </Link>
+
+            {/* Go to Acrostic */}
+            <Link to='/acrostic/' className="main-link-block" key="acrostic-banner">
+                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/acrostic-thumb.png`} alt="Acrostic" />
+            </Link>
 
             {/* Go to POST 2021 */}
             <Link to='/post2021/' className="main-link-block" key="post2021-banner">
