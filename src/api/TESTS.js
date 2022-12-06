@@ -30,7 +30,7 @@ var TESTS = [
             subTitle:"나에게 어울리는 컬러는 무엇일까?",
             mainUrl:"personalColor2023",
             scoreType:"typeCountingMBTI",
-            mainImage:"https://images.ktestone.com/introImages/personalColor2023-intro.png",
+            mainImage:"https://images.ktestone.com/introImages/personalColor2023-intro_.png",
             thumbImage:"https://images.ktestone.com/main-thumbnail/personalColor2023-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
             lang:"Kor"
