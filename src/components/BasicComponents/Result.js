@@ -494,7 +494,7 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ['personalColor2023', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
+            let ppl_list = ['personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP']; // 'personalColor2023'
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
             let tonymoly_list = ["factPok", "MyFactPok", "FriendFactPok",];
             if(ppl_list.includes(this.state.current_test)) {
