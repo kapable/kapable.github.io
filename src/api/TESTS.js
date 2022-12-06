@@ -23,7 +23,7 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
-    // persoanlColor2022
+    // persoanlColor2023
     {
         info : {
             mainTitle:"퍼스널 컬러 테스트 2023",
@@ -155,7 +155,7 @@ var TESTS = [
                     {
                         type: "T",
                         score: 2,
-                        content: "현실적인 해결책을 제시하고 도움을 주려고 노력한다("
+                        content: "현실적인 해결책을 제시하고 도움을 주려고 노력한다"
                     },
                     {
                         type: "F",
