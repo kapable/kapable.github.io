@@ -260,7 +260,7 @@ function PostPage(props) {
                         <h4 className='post-page-mailcount'>{mailCount}{lang === `Eng` ? ` letters` : `개의 편지`}</h4>
                     </div>
                     {/* Coupang or Mails */}
-                    {adProb && (!isOpened || !coupangCookies)
+                    {adProb && (!isOpened || !coupangCookies) && false
                     ? affiliateRenderer('보기')
                     :<>
                         <div className='post-page-btn-div'>
@@ -317,7 +317,7 @@ function PostPage(props) {
                         <h4 className='post-page-mailcount'>{mailCount}{lang === `Eng` ? ` letters` : `개의 편지`}</h4>
                     </div>
                     {/* Coupang or Mails */}
-                    {adProb && (!isOpened || !coupangCookies)
+                    {adProb && (!isOpened || !coupangCookies) && false
                     ? affiliateRenderer('보내기')
                     :<>
                     <div className='post-page-btn-div'>
