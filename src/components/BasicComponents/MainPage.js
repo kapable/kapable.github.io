@@ -6,6 +6,7 @@ import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 import JELLINGBANNERENG from '../../api/DefaultImg/go-to-jelling-eng.png';
 import '../TestTypes/Post2021/Post2021.css';
 import '../TestTypes/Post2021/PostPopup.css';
+import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 
 function MainPage(props) {

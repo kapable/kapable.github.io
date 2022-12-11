@@ -9,6 +9,7 @@ import METAPANGAPPLYCOMPLETE from './components/TestTypes/MetaPangApply/Complete
 import POSTSTART from './components/TestTypes/Post2021/StartPage';
 import POSTPOST from './components/TestTypes/Post2021/PostPage';
 import POSTWRITE from './components/TestTypes/Post2021/PostWrite';
+import POSTSTART2022 from './components/TestTypes/Post2022/StartPage';
 import ARTICLES from './api/ARTICLES'
 import ArticleList from './components/BasicComponents/Article/ArticleList';
 import Article from './components/BasicComponents/Article/Article';
@@ -20,6 +21,7 @@ import ReactGA from 'react-ga';
 import AuthPage from './components/TestTypes/Post2021/Users/AuthPage';
 import LoginPage from './components/TestTypes/Post2021/Users/LoginPage';
 import RegisterPage from './components/TestTypes/Post2021/Users/RegisterPage';
+import AuthPage2022 from './components/TestTypes/Post2022/Users/AuthPage';
 import Auth from './hoc/auth';
 import Acrostic from './components/TestTypes/Acrostic';
 import FactPok from './components/TestTypes/FactPok/FactPok';
@@ -250,6 +252,11 @@ class App extends Component {
             {/* go to "Acroistic" page */}
             <Route path="/acrostic/" component={() => <Acrostic />} />
 
+            {/* go to "POST 2022" page */}
+            <Route path='/post2022/:username/postwrite/' component={() => <POSTWRITE language={`Kor`}/>} />
+            <Route path='/post2022/:username/' component={() => <POSTPOST language={`Kor`}/>} />
+            <Route path ='/post2022/' component={() => <POSTSTART2022 language={`Kor`}/>}/>
+
             {/* go to "POST 2021" page */}
             <Route path='/post2021/:username/postwrite/' component={() => <POSTWRITE language={`Kor`}/>} />
             <Route path='/post2021/:username/' component={() => <POSTPOST language={`Kor`}/>} />
@@ -357,7 +364,7 @@ class App extends Component {
             <Route exact path="/register" component={Auth(RegisterPage, false)} />
             {/* <Route exact path="/MyPage/:userId" component={Auth(MyPage, true)} /> */}
             <Route exact path={`${"/auth/" || "/auth"}`} component={() => <AuthPage language={`Kor`}/>} />
-            {/* <Route exact path={`${"/authEng/" || "/authEng"}`} component={() => <AuthPage language={`Eng`} />} /> */}
+            <Route exact path={`${"/postAuth2022/" || "/postAuth2022"}`} component={() => <AuthPage2022 />} />
           </Switch>
         </ScrollToTop>
       </Router>
