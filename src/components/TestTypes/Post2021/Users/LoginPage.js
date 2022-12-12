@@ -143,7 +143,7 @@ function LoginPage(props) {
                             </button>
                         </form>
                         <p className='name-footer'>©Coocie Rocket</p>
-                    </div>
+                </div>
                 </Fragment>
         )
     }

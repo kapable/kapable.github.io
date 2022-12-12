@@ -175,22 +175,6 @@
   -o-background-size: cover;
   background-size: cover;
 }
-/* @media (max-width: 450px) {
-  .post-page-bg-img {
-    position: absolute;
-    z-index: -1;
-    height: 250%;
-    top: 0%;
-    left: 0%;
-  }
-}
-.post-page-bg-img {
-  position: absolute;
-  z-index: -1;
-  width: 110%;
-  top: 0%;
-  left: 0%;
-} */
 
 .post-page-maintitle {
   margin: 4rem auto 1rem;

@@ -10,6 +10,7 @@ import POSTSTART from './components/TestTypes/Post2021/StartPage';
 import POSTPOST from './components/TestTypes/Post2021/PostPage';
 import POSTWRITE from './components/TestTypes/Post2021/PostWrite';
 import POSTSTART2022 from './components/TestTypes/Post2022/StartPage';
+import POSTPOST2022 from './components/TestTypes/Post2022/PostPage';
 import ARTICLES from './api/ARTICLES'
 import ArticleList from './components/BasicComponents/Article/ArticleList';
 import Article from './components/BasicComponents/Article/Article';
@@ -254,7 +255,7 @@ class App extends Component {
 
             {/* go to "POST 2022" page */}
             <Route path='/post2022/:username/postwrite/' component={() => <POSTWRITE language={`Kor`}/>} />
-            <Route path='/post2022/:username/' component={() => <POSTPOST language={`Kor`}/>} />
+            <Route path='/post2022/:username/' component={() => <POSTPOST2022 language={`Kor`}/>} />
             <Route path ='/post2022/' component={() => <POSTSTART2022 language={`Kor`}/>}/>
 
             {/* go to "POST 2021" page */}

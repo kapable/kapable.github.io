@@ -4,7 +4,7 @@ import RegisterPage from './RegisterPage';
 import LoginPage from './LoginPage';
 
 const AuthPage = () => {
-    const [mode, setMode] = useState('register');
+    const [mode, setMode] = useState('login');
 
     if(mode === "register") {
         return (

@@ -111,12 +111,74 @@
     font-weight: bold;
     margin: 1rem 0;
 }
-.post2022-register-submit-btn > img {
+.post2022-register-submit-btn > img, .post2022-login-submit-btn > img {
     width: 100%;
+}
+
+/* Login */
+.post2022-login-page-contents-div {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.post2022-login-page-bg-div {
+    background-color: #2f3c54;
+    justify-content: center;
+    align-items: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.post2022-login-page-rgbtn {
+    background-color: #f7d7a8;
+    border: 0;
+    outline: 0;
+    width: 9.6rem;
+    height: 3rem;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+.post2022-login-page-loginbtn {
+    background-color: #2f3c54;
+    color: #f7d7a8;
+    border: 0;
+    outline: 0;
+    width: 9.6rem;
+    height: 3rem;
+    font-weight: bold;
+}
+
+.post2022-login-submit-btn {
+    background-color: #2f3c54;
+    border: 0;
+    outline: 0;
+    width: 10rem;
+    height: 3rem;
+    color: white;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+/* Post Page (Log In) */
+.post2022-page {
+    background-color: #2f3c54;
+}
+.post2022-long-bg-img {
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
 }
 
 @media (min-width: 768px) {
     .post2022-register-page-contents-div {
         top: 60%;
+    }
+    .post2022-login-page-contents-div {
+        top: 50%;
     }
 }
