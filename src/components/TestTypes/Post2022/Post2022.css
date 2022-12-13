@@ -178,22 +178,22 @@
 .post2022-alert-bell-img {
     width: 3.7rem;
     position: absolute;
-    top: 22.3%;
-    left: 83%;
+    top: 180px;
+    left: 320px;
     transform: translate(-50%, -50%);
 }
 
 .post2022-page-mailcount {
     color: white;
     position: absolute;
-    top: 19%;
-    left: 86%;
+    top: 150px;
+    left: 331px;
     transform: translate(-50%, -50%);
 }
 
 .post2022-page-whosname {
     position: absolute;
-    top: 26.3%;
+    top: 13.9rem;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 6px;
@@ -209,7 +209,7 @@
 .post2022-page-btn-div {
     width: 100%;
     position: absolute;
-    top: 32rem;
+    top: 550px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -225,7 +225,7 @@
 .post2022-page-mails-div {
     width: 100%;
     position: absolute;
-    top: 70%;
+    top: 610px;
     left: 50%;
     transform: translate(-50%, 0%);
 }
@@ -371,8 +371,8 @@
     font-size: 0.9rem;
     position: absolute;
     top: 10rem;
-    left: 50%;
-    width: 12rem;
+    left: 53%;
+    width: 11rem;
     transform: translate(-50%, -50%);
     text-align: start;
 }
@@ -404,10 +404,10 @@
     color: #7c7c7c;
     z-index: 1;
     position: absolute;
-    top: 13rem;
-    left: 50%;
+    top: 12.7rem;
+    left: 53%;
     transform: translate(-50%, -50%);
-    width: 12rem;
+    width: 11rem;
     text-align: start;
     display: block;
     text-align: start;
@@ -475,5 +475,87 @@
     }
     .post2022-login-page-contents-div {
         top: 50%;
+    }
+
+    /* Post Page */
+    .post2022-page-whosname {
+        position: absolute;
+        top: 23rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1rem;
+        color: #4A1101;
+    }
+
+    .post2022-alert-bell-img {
+        top: 22.3%;
+        left: 58%;
+    }
+    
+    .post2022-page-mailcount {
+        top: 20%;
+        left: 58.5%;
+    }
+
+    .post2022-page-share-mypost-btn {
+        position: absolute;
+        width: 15rem;
+        top: 23rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .post2022-page-goto-mypost-btn {
+        position: absolute;
+        width: 15rem;
+        top: 23rem;
+        left: 58%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .post2022-page-send-mail-btn {
+        position: absolute;
+        width: 15rem;
+        top: 23rem;
+        left: 42%;
+        transform: translate(-50%, -50%);
+    }
+    .post2022-page-mails-div {
+        top: 1000px;
+        width: 45rem;
+    }
+
+    .post2022-page-envelop-div {
+        cursor: pointer;
+    }
+
+    .post2022-page-envelop {
+        width: 15rem;
+        margin: 1rem;
+    }
+
+    .post2022-page-nickname-onletter {
+        top: -800%;
+        font-size: 1.2rem;
+    }
+
+    /* Write */
+    .post2022-write-page-textarea {
+        font-size: 1rem;
+        height: 17.5rem;
+        width: 20rem;
+    }
+
+    .post2022-write-page-whosname {
+        font-size: 1rem;
+        top: 20rem;
+        left: 50%;
+        width: 17.5rem;
+    }
+
+    .post2022-write-page-nickname-input {
+        font-size: 1rem;
+        top: 18rem;
+        left: 50%;
+        width: 17.5rem;
     }
 }
