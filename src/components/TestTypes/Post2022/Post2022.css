@@ -172,6 +172,301 @@
     width: 100%;
     max-width: 40rem;
     margin: 0 auto;
+    position: relative;
+}
+
+.post2022-alert-bell-img {
+    width: 3.7rem;
+    position: absolute;
+    top: 22.3%;
+    left: 83%;
+    transform: translate(-50%, -50%);
+}
+
+.post2022-page-mailcount {
+    color: white;
+    position: absolute;
+    top: 19%;
+    left: 86%;
+    transform: translate(-50%, -50%);
+}
+
+.post2022-page-whosname {
+    position: absolute;
+    top: 26.3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6px;
+    color: #4A1101;
+}
+
+.post2022-page-share-mypost-btn {
+    cursor: pointer;
+    width: 10.7rem;
+    margin: 0 0 1rem;
+}
+
+.post2022-page-btn-div {
+    width: 100%;
+    position: absolute;
+    top: 32rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.post2022-page-goto-mypost-btn {
+    width: 9.3rem;
+}
+
+.post2022-page-send-mail-btn {
+    width: 9.3rem;
+}
+
+.post2022-page-mails-div {
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.post2022-page-envelop-div {
+    position: relative;
+    display: inline;
+}
+
+.post2022-page-envelop {
+    width: 35%;
+    margin: 0.3rem;
+}
+
+.post2022-page-nickname-onletter {
+    position: absolute;
+    top: -500%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--post-font);
+}
+
+.post2022-page-nickname-onletter {
+    font-size: 0.8rem;
+    position: absolute;
+    top: -420%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Popup */
+.post2022-popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.post2022-popup-letter-form {
+    width: 20rem;
+}
+
+.post2022-popup-inner {
+    position: relative;
+    left: 0%;
+    /* right: 3rem; */
+    top: 7rem;
+    bottom: 3rem;
+    margin: auto;
+    width: 23rem;
+}
+
+.post2022-popup-letter-form {
+    position: absolute;
+    top: 15rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20rem;
+}
+
+.post2022-popup-message {
+    color: #7c7c7c;
+    z-index: 1;
+    position: absolute;
+    top: 0rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 15rem auto 1rem;
+    width: 14rem;
+    height: 10rem;
+    overflow-y: scroll;
+    text-align: left;
+    font-family: var(--post-font);
+    font-size: 1rem;
+    line-height: 1.3rem;
+}
+
+.post2022-popup-fromNickname, .post2022-popup-head {
+    color: #7c7c7c;
+    z-index: 1;
+    position: absolute;
+    top: 21rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13rem;
+    font-size: 1rem;
+    text-align: start;
+}
+
+.post2022-popup-head {
+    top: 22.5rem;
+}
+
+.post2022-popup-nickname-input {
+    width: 13rem;
+    position: absolute;
+    top: 22rem;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+
+.post2022-popup-close-btn {
+    position: relative;
+    top: 2rem;
+    left: 37%;
+    font-size: 1rem;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    color: #FFE1C0;
+}
+
+/* Write */
+.post2022-write-page-div {
+    background-color: #2f3c54;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30rem;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.post2022-write-page-postbox-div {
+    position: relative;
+}
+
+.post2022-write-page-letter-form-img {
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.post2022-write-page-whosname {
+    color: #7c7c7c;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    width: 12rem;
+    transform: translate(-50%, -50%);
+    text-align: start;
+}
+
+.post2022-write-page-submit-form {
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.post2022-write-page-textarea {
+    font-size: 0.7rem;
+    background-color: #FFFCF8;
+    border-width: 0;
+    height: 10.5rem;
+    width: 10rem;
+    display: block;
+    resize: none;
+}
+
+.post2022-write-page-textarea:focus {
+    outline: none;
+}
+
+.post2022-write-page-nickname-input {
+    font-size: 0.9rem;
+    background-color: #FFFCF8;
+    color: #7c7c7c;
+    z-index: 1;
+    position: absolute;
+    top: 13rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12rem;
+    text-align: start;
+    display: block;
+    text-align: start;
+
+}
+.post2022-write-page-nickname-input > .ant-input {
+    width: 70%;
+}
+.post2022-write-page-nickname-input:focus {
+    outline: none;
+}
+
+.post2022-write-page-nickname-input::placeholder {
+    color: black;
+}
+
+.post2022-write-page-submit-btn {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.post2022-write-page-submit-btn-img {
+    width: 10rem;
+    position: absolute;
+    top: 165%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Write Complete Popup */
+.post2022-postwrite-send-complete-postbox {
+    position: absolute;
+    width: 20rem;
+    top: 15rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.post2022-postwrite-complete-to-postbox {
+    cursor: pointer;
+    position: absolute;
+    width: 7rem;
+    top: 26rem;
+    left: 32.5%;
+    transform: translate(-50%, -50%);
+}
+
+.post2022-postwrite-complete-close {
+    cursor: pointer;
+    position: absolute;
+    width: 7rem;
+    top: 26rem;
+    left: 67.5%;
+    transform: translate(-50%, -50%);
 }
 
 @media (min-width: 768px) {

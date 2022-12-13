@@ -13,21 +13,18 @@ const PostPage = (props) => {
     const [isLogin, setIsLogin] = useState(props.location.state === localStorage.getItem("access_token"));
     const [mailList, setMailList] = useState([]);
     const [mailCount, setMailCount] = useState(0);
-    const [mailNum, setMailNum] = useState(0);
     const [userNickname, setUserNickname] = useState('');
     const [fromNickname, setFromNickname] = useState('');
     const [message, setMessage] = useState('');
-    const letterOrder = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4]
+    const letterOrder = ['red', 'blue', 'blue', 'red', 'red', 'blue', 'blue', 'red', 'red', 'blue'];
     const api_url = 'https://api.ktestone.com';
     const [ShowPopup, setShowPopup] = useState(false);
 
-    const postListBackgroundImg = "https://images.ktestone.com/PostImg2022/PostList/postList_bg_long.png"
-    const [mainTitleImg, setMainTitleImg] = useState("https://images.ktestone.com/PostImg/Background/main_title_2022.png");
-    const postBoxImg = "https://images.ktestone.com/PostImg/Object/Postbox.png"
-    const [sendMailImg, setSendMailImg] = useState("https://images.ktestone.com/PostImg/Button/send-mail-btn.png");
-    const [shareMyPostImg, setShareMyPostImg] = useState("https://images.ktestone.com/PostImg/Button/share-mypost-btn.png");
-    const [goToMyPostImg, setGoToMyPostImg] = useState("https://images.ktestone.com/PostImg/Button/go-to-mypost-btn.png");
-    const nickNameInput = "https://images.ktestone.com/PostImg/MailForm/nickname-input.png";
+    const postListBackgroundImg = "https://images.ktestone.com/PostImg2022/PostList/postList_bg_long.png";
+    const alertBellImg = "https://images.ktestone.com/PostImg2022/PostList/postList_bell.png";
+    const sendButtonImg = "https://images.ktestone.com/PostImg2022/PostList/postList_send_button.png";
+    const createBoxButtonImg = "https://images.ktestone.com/PostImg2022/PostList/postList_create_button.png";
+    const popupImg = "https://images.ktestone.com/PostImg2022/PostList/postList_popup_.png";
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
@@ -68,23 +65,22 @@ const PostPage = (props) => {
         let mails = [];
         list.map((mail, ix) => (
             mails.push(<div
-                            className='post-page-envelop-div'
+                            className='post2022-page-envelop-div'
                             key={`envelop-div-${mail.id}`}
                             onClick={() => {
                                 if(login === true) {
                                     getMail(mail.id);
-                                    setMailNum(ix);
                                 }
                             }}
                             >
                             <img
-                                src={`https://images.ktestone.com/PostImg/Envelop/envelop-${letterOrder[ix]}.png`}
+                                src={`https://images.ktestone.com/PostImg2022/PostList/${letterOrder[ix]}Post.png`}
                                 alt={`Envelop${ix}`}
                                 key={`envelop-img-div-${mail.id}`}
-                                className="post-page-envelop"
+                                className="post2022-page-envelop"
                             />
                             <p
-                                className='post-page-nickname-onletter'
+                                className='post2022-page-nickname-onletter'
                                 key={`envelop-nickname-div-${mail.id}`}
                             >{isLogin ? `${mail.nickname}` : null}</p>
                         </div>
@@ -96,7 +92,7 @@ const PostPage = (props) => {
     const pageRenderer = (page, mailCount) => {
         return(
             <Pagination
-                className='pagination'
+                className='post2022-pagination'
                 activePage={page}
                 itemsCountPerPage={10}
                 totalItemsCount={mailCount}
@@ -116,17 +112,16 @@ const PostPage = (props) => {
         )
     };
 
-    const eachMail = <div className="popup">
-                        <div className="popup-inner">
-                            <button onClick={() => setShowPopup(false)} className='popup-close-btn'>X</button>
+    const eachMail = <div className="post2022-popup">
+                        <div className="post2022-popup-inner">
                             <img
-                                src={`https://images.ktestone.com/PostImg/MailForm/letter-${letterOrder[mailNum]}.png`}
+                                src={popupImg}
                                 alt="letter"
-                                className='popup-letter-form' />
-                            <h4 className="popup-head">{`${userNickname}`}{'에게'}</h4>
-                            <p className="popup-message">{message}</p>
-                            <img src={nickNameInput} className='popup-nickname-input' alt="popup-nickname-input"/>
-                            <p className="popup-fromNickname">{`from ${fromNickname}`}</p>
+                                className='post2022-popup-letter-form' />
+                            <p className="post2022-popup-message">{message}</p>
+                            <p className="post2022-popup-fromNickname">From : {`${fromNickname}`}</p>
+                            <p className="post2022-popup-head">To: {`${userNickname}`}</p>
+                            <button onClick={() => setShowPopup(false)} className='post2022-popup-close-btn'>X</button>
                         </div>
                     </div>
 
@@ -139,34 +134,26 @@ const PostPage = (props) => {
         axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("access_token")}`;
         return(
             <div className='post2022-page'>
+                {/* Background */}
                 <img src={postListBackgroundImg} alt="bg-img" className='post2022-long-bg-img'/>
-                <div className='post2022-page-bg-div' >
-                    {/* <img src={mainTitleImg} alt="당신에게 나는 어떤 사람인가요?" className='post2022-page-maintitle' /> */}
-                    <div className="post2022-page-postbox-div">
-                        {/* <img src={postBoxImg} alt="POSTBOX" className="post2022-page-postbox"/> */}
-                        <h4 className='post2022-page-whosname'>{`${userNickname}`} {`님의`}<br></br>POST</h4>
-                        <h4 className='post2022-page-mailcount'>{mailCount}{`개의 편지`}</h4>
-                    </div>
-                    {/* Coupang or Mails */}
-                    <>
-                        <div className='post2022-page-btn-div'>
-                            <img src={sendMailImg} alt="Send Mail" className="post2022-page-send-mail-btn" onClick={() => {
-                                _eventSenderGA("Paging", "Click Post-to-write Button", "post page");
-                                props.history.push({
-                                    pathname:`/post2022/${props.match.params.username}/postwrite/`,
-                                })
-                            }} />
-                            <CopyToClipboard text={`https://ktestone.com/kapable.github.io/post2021/${props.match.params.username}/`}>
-                                <img src={shareMyPostImg} alt="Share My Post" onClick={onShareBtnClick} className='post2022-page-share-mypost-btn' />
-                            </CopyToClipboard>
-                        </div>             
-                        <div className='post2022-page-mails-div'>
-                            {mailList.length === 0 ? nullMailRenderer() : mailRenderer(mailList, isLogin)}
-                        </div>
-                        {pageRenderer(page, mailCount)}
-                    </>
-                    <br></br>
+
+                {/* Count Bell */}
+                <img src={alertBellImg} alt="alertBellImg" className='post2022-alert-bell-img' />
+                <p className='post2022-page-mailcount'>{mailCount}</p>
+
+                {/* User name */}
+                <p className='post2022-page-whosname'>{`${userNickname}`}님의</p>
+
+                <div className='post2022-page-btn-div'>
+                    <CopyToClipboard text={`https://ktestone.com/kapable.github.io/post2021/${props.match.params.username}/`}>
+                        <img src={createBoxButtonImg} alt="Share My Post" onClick={onShareBtnClick} className='post2022-page-share-mypost-btn' />
+                    </CopyToClipboard>
+                </div>             
+                {/* Contents */}
+                <div className='post2022-page-mails-div'>
+                    {mailList.length === 0 ? nullMailRenderer() : mailRenderer(mailList, isLogin)}
                 </div>
+                {pageRenderer(page, mailCount)}
                 <div className="post2022-popup-div">
                     {ShowPopup ? 
                         eachMail
@@ -177,38 +164,42 @@ const PostPage = (props) => {
     } else {
         return (
             <div className='post2022-page'>
-                <img src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
-                <div className='post2022-page-bg-div'>
-                    <img src={"https://images.ktestone.com/PostImg/Background/main_title.png"} alt="당신에게 나는 어떤 사람이었나요?" className='post2022-page-maintitle' />
-                    <div className="post2022-page-postbox-div">
-                        <img src={postBoxImg} alt="POSTBOX" className="post2022-page-postbox"/>
-                        <h4 className='post2022-page-whosname'>{`${userNickname}`} {`님의`}<br></br>POST</h4>
-                        <h4 className='post2022-page-mailcount'>{mailCount}{`개의 편지`}</h4>
-                    </div>
-                    {/* Coupang or Mails */}
-                    <>
-                        <div className='post2022-page-btn-div'>
-                            <img src={sendMailImg} alt="Send Mail" className="post2022-page-send-mail-btn" onClick={() => {
-                                _eventSenderGA("Paging", "Click Post-to-write Button", "post page");
-                                props.history.push({
-                                    pathname:`/post2022/${props.match.params.username}/postwrite/`,
-                                });
-                            }} />
-                            <img src={goToMyPostImg} alt="Go to My Post" onClick={() => {
-                                _eventSenderGA("Paging", "Click Post-to-auth Button", "post page");
-                                props.history.push({
-                                    pathname:`/postAuth2022/`,
-                                    state: {
-                                        language: 'Kor'
-                                    },
-                                });
-                            }} className='post2022-page-goto-mypost-btn' />
-                        </div>
-                        <div className='post2022-page-mails-div'>
-                            {mailList.length === 0 ? nullMailRenderer() : mailRenderer(mailList, isLogin)}
-                        </div>
-                            {pageRenderer(page, mailCount)}
-                    </>
+                {/* Background */}
+                <img src={postListBackgroundImg} alt="bg-img" className='post2022-long-bg-img'/>
+
+                {/* Count Bell */}
+                <img src={alertBellImg} alt="alertBellImg" className='post2022-alert-bell-img' />
+                <p className='post2022-page-mailcount'>{mailCount}</p>
+
+                {/* User name */}
+                <p className='post2022-page-whosname'>{`${userNickname}`}님의</p>
+
+                <div className='post2022-page-btn-div'>
+                    <img src={sendButtonImg} alt="Send Mail" className="post2022-page-send-mail-btn" onClick={() => {
+                        _eventSenderGA("Paging", "Click Post-to-write Button", "post page");
+                        props.history.push({
+                            pathname:`/post2022/${props.match.params.username}/postwrite/`,
+                        });
+                    }} />
+                    <img src={createBoxButtonImg} alt="Go to My Post" onClick={() => {
+                        _eventSenderGA("Paging", "Click Post-to-auth Button", "post page");
+                        props.history.push({
+                            pathname:`/postAuth2022/`,
+                            state: {
+                                language: 'Kor'
+                            },
+                        });
+                    }} className='post2022-page-goto-mypost-btn' />
+                </div>             
+                {/* Contents */}
+                <div className='post2022-page-mails-div'>
+                    {mailList.length === 0 ? nullMailRenderer() : mailRenderer(mailList, isLogin)}
+                </div>
+                {pageRenderer(page, mailCount)}
+                <div className="post2022-popup-div">
+                    {ShowPopup ? 
+                        eachMail
+                        : null}
                 </div>
             </div>
         );

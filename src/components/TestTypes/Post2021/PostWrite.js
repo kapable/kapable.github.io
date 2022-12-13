@@ -22,7 +22,7 @@ function PostWrite(props) {
         'Content-Type': 'application/json',
         'access-control-allow-origin': '*',
         'x-powered-by': 'Express' 
-    },})
+    },});
 
     function _eventSenderGA(category, action, label){
         ReactGA.event({
@@ -30,17 +30,17 @@ function PostWrite(props) {
             action: action,
             label: label
         });
-    }
+    };
 
     function onMessageHandler(e) {
         e.preventDefault();
         setMessage(e.target.value);
-    }
+    };
 
     function onNicknameHandler(e) {
         e.preventDefault();
         setNickname(e.target.value);
-    }
+    };
 
     const getUserNickname = useCallback(
         async () => {
@@ -50,7 +50,7 @@ function PostWrite(props) {
             })
         },
         [key],
-    )
+    );
 
     useEffect(() => {
         getUserNickname();
@@ -67,13 +67,13 @@ function PostWrite(props) {
             setCompleteToClose("https://images.ktestone.com/PostImg/English/Button/complete-close-btn.png");
             setCompletePopupBg("https://images.ktestone.com/PostImg/English/Object/complete_send_mail.png");
         }
-    }, [getUserNickname, props])
+    }, [getUserNickname, props]);
 
     let body = {
         "userkey": key,
         "nickname": nickname,
         "text": message,
-    }
+    };
 
     const completePopup = <div className="popup">
                             <div className="popup-inner">
