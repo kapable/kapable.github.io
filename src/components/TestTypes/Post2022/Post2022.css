@@ -178,7 +178,7 @@
 .post2022-alert-bell-img {
     width: 3.7rem;
     position: absolute;
-    top: 290px;
+    top: 390px;
     left: 320px;
     transform: translate(-50%, -50%);
 }
@@ -186,7 +186,7 @@
 .post2022-page-mailcount {
     color: white;
     position: absolute;
-    top: 260px;
+    top: 360px;
     left: 331px;
     transform: translate(-50%, -50%);
 }
