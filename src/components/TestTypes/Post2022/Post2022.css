@@ -32,7 +32,7 @@
 
 .post2022-register-page-contents-div {
     position: absolute;
-    top: 75%;
+    top: calc(75% + 110px);
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -118,7 +118,7 @@
 /* Login */
 .post2022-login-page-contents-div {
     position: absolute;
-    top: 65%;
+    top: calc(65% + 110px);
     left: 50%;
     transform: translate(-50%, -50%);
 }
