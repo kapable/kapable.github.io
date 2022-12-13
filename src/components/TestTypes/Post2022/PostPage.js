@@ -20,11 +20,11 @@ const PostPage = (props) => {
     const api_url = 'https://api.ktestone.com';
     const [ShowPopup, setShowPopup] = useState(false);
 
-    const postListBackgroundImg = "https://images.ktestone.com/PostImg2022/PostList/postList_bg_long.png";
-    const alertBellImg = "https://images.ktestone.com/PostImg2022/PostList/postList_bell.png";
-    const sendButtonImg = "https://images.ktestone.com/PostImg2022/PostList/postList_send_button.png";
-    const createBoxButtonImg = "https://images.ktestone.com/PostImg2022/PostList/postList_create_button.png";
-    const popupImg = "https://images.ktestone.com/PostImg2022/PostList/postList_popup_.png";
+    const [postListBackgroundImg, setPostListBackgroundImg] = useState("");
+    const [alertBellImg, setAlertBellImg] = useState("");
+    const [sendButtonImg, setSendButtonImg] = useState("");
+    const [createBoxButtonImg, setCreateBoxButtonImg] = useState("");
+    const [popupImg, setPopupImg] = useState("");
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
@@ -128,6 +128,11 @@ const PostPage = (props) => {
     useEffect(() => {
         setIsLogin(props.location.state === localStorage.getItem("access_token"));
         getList();
+        setPostListBackgroundImg("https://images.ktestone.com/PostImg2022/PostList/postList_bg_long.png");
+        setAlertBellImg("https://images.ktestone.com/PostImg2022/PostList/postList_bell.png");
+        setSendButtonImg("https://images.ktestone.com/PostImg2022/PostList/postList_send_button.png");
+        setCreateBoxButtonImg("https://images.ktestone.com/PostImg2022/PostList/postList_create_button.png");
+        setPopupImg("https://images.ktestone.com/PostImg2022/PostList/postList_popup_.png");
     }, [props, getList])
 
     if (isLogin) {
