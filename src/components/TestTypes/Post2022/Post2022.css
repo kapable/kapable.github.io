@@ -32,7 +32,7 @@
 
 .post2022-register-page-contents-div {
     position: absolute;
-    top: calc(75% + 110px);
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -118,7 +118,7 @@
 /* Login */
 .post2022-login-page-contents-div {
     position: absolute;
-    top: calc(65% + 110px);
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -178,7 +178,7 @@
 .post2022-alert-bell-img {
     width: 3.7rem;
     position: absolute;
-    top: 180px;
+    top: 290px;
     left: 320px;
     transform: translate(-50%, -50%);
 }
@@ -186,7 +186,7 @@
 .post2022-page-mailcount {
     color: white;
     position: absolute;
-    top: 150px;
+    top: 260px;
     left: 331px;
     transform: translate(-50%, -50%);
 }
@@ -209,7 +209,7 @@
 .post2022-page-btn-div {
     width: 100%;
     position: absolute;
-    top: 550px;
+    top: 580px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
