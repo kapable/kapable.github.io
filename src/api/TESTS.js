@@ -59,7 +59,7 @@ var TESTS = [
                     {
                         type: "E",
                         score: 2,
-                        content: "아 너무 잘 놀았다~!ㅎㅎ 이게 힐링이지!!("
+                        content: "아 너무 잘 놀았다~!ㅎㅎ 이게 힐링이지!!"
                     },
                     {
                         type: "I",
