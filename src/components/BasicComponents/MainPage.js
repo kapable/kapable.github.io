@@ -19,9 +19,9 @@ function MainPage(props) {
             <OhterLangIconsMain />
 
             {/* Go to POST 2022 */}
-            {/* <Link to='/post2022/' className="main-link-block" key="post2022-banner">
+            <Link to='/post2022/' className="main-link-block" key="post2022-banner">
                 <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022-thumb.png`} alt="POST-2022" />
-            </Link> */}
+            </Link>
 
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">

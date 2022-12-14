@@ -32,7 +32,7 @@
 
 .post2022-register-page-contents-div {
     position: absolute;
-    /* top: 75%; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -303,7 +303,7 @@
     height: 10rem;
     overflow-y: scroll;
     text-align: left;
-    font-family: var(--post-font);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1rem;
     line-height: 1.3rem;
 }
