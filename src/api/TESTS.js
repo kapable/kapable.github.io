@@ -234,7 +234,7 @@ var TESTS = [
                 type: "ESTJ",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "thasns",
+                query: "tjflRhcsns",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/snowflake/ESTJ.jpg'
             },
