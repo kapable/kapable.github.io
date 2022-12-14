@@ -25,6 +25,7 @@ const PostPage = (props) => {
     const [sendButtonImg, setSendButtonImg] = useState("");
     const [createBoxButtonImg, setCreateBoxButtonImg] = useState("");
     const [popupImg, setPopupImg] = useState("");
+    const [shareMyBox, setShareMyBox] = useState("");
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
@@ -133,6 +134,7 @@ const PostPage = (props) => {
         setSendButtonImg("https://images.ktestone.com/PostImg2022/PostList/postList_send_button.png");
         setCreateBoxButtonImg("https://images.ktestone.com/PostImg2022/PostList/postList_create_button.png");
         setPopupImg("https://images.ktestone.com/PostImg2022/PostList/postList_popup_.png");
+        setShareMyBox("https://images.ktestone.com/PostImg2022/PostList/postList_share_my_box_btn.png")
     }, [props, getList])
 
     if (isLogin) {
@@ -151,7 +153,7 @@ const PostPage = (props) => {
 
                 <div className='post2022-page-btn-div'>
                     <CopyToClipboard text={`https://ktestone.com/kapable.github.io/post2021/${props.match.params.username}/`}>
-                        <img src={createBoxButtonImg} alt="Share My Post" onClick={onShareBtnClick} className='post2022-page-share-mypost-btn' />
+                        <img src={shareMyBox} alt="Share My Post" onClick={onShareBtnClick} className='post2022-page-share-mypost-btn' />
                     </CopyToClipboard>
                 </div>             
                 {/* Contents */}
