@@ -38,193 +38,193 @@ var TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '친구가 갑자기 눈싸움을 걸었을 때 나는?',
+                question: '쉬는 날 집에서 누워있는데 친구가 갑자기 보자고 할 때 나는?',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: '피할 수 없으면 즐긴다는 마인드 눈 잔뜩 집어서 바로 반격한다'
+                        content: '심심했는데 좋아!\n바로 준비해서 나갈 준비를 한다.'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '이런 거 왜 하냐며 정색하고 반응해주지 않는다'
+                        content: '갑작스러운 약속이 부담스러워 핑계를 대고 나가지 않는다.'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "밖에서 기분좋게 잘 놀고 집에 갈 때 쯤 나는?",
+                question: "많은 사람들 앞에서 말을 해야할 때 나는?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "아 너무 잘 놀았다~!ㅎㅎ 이게 힐링이지!!"
+                        content: "많은 사람들이 나에게 주목하면 기분이 좋다."
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "아~ 재밌었다!ㅎㅎ 이제 집에가서 좀 쉬어야지~"
+                        content: "나에게 많은 사람들이 주목하는 자리가 불편하다."
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "밖에서 엄청난 텐션의 새로운 사람은 만났을 때 나는?",
+                question: "주말에 약속이 꽉 찼을 때 나는?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "이 정도 텐션이라고..?! 나도 질 수 없지!!"
+                        content: "이번주 주말도 알차고 재밌게 보내겠다!\n기분이 좋아!"
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "내 친구 OOO 보다 더 돌아이네 어떡하지.."
+                        content: "주말 중에 적어도 하루는 쉬어야 하는데..\n어떡하지..?"
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "친구가 눈사람을 만들자고 하면 나는?",
+                question: "집에 있을 때 나는?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "빨리 귀엽게 만들어서 SNS 올려야지~"
+                        content: "아무 생각도 하지 않는다"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "눈 사람 무슨 모양으로 만들까? 손 들고 있는 모양?\n추우니까 모자도 씌워줘야겠지?"
+                        content: "이런 저런 상상을 자주 한다"
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "사람을 판단할 때 나는?",
+                question: "요리 할 때 나는?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "명확한 나만의 기준으로만 판단한다"
+                        content: "레시피에 나온 정량대로 넣어서 음식을 만든다."
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "내 기준이 있지만,\n그때 그때 내 느낌에 따라 바뀔 수 있다"
+                        content: '“대충 이정도 넣으면 되겠지”생각하며 손대중으로 넣는다.'
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "음식을 할 때 나에게 더 가까운 것은?",
+                question: "친구가 어제 내가 본 연극에 대해 물어 볼 때 나는?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "요리방법에 한 큰 술이라고 적혀 있으니까~\n정확하게 한 큰 술 넣어야지"
+                        content: "대학교에서 만난 연인들이 헤어졌는데,\n다시 만나는 과정에서 생기는 갈등을 다룬 사랑 관련 연극이었어."
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "한 큰 술..?\n음..이정도 넣으면 더 맛있을거 같은데??\n이렇게 넣어 봐야지"
+                        content: "주인공들이 너무 멋있었어!\n만약 영화나 드라마로도 나오면 꼭 볼 거야! "
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "연인이 스트레스 받는다고 맛있는거 먹으러가자고 한다면 나는?",
+                question: "친구가 준비하던 면접에서 떨어졌다고 우울해 할 때 내 반응은?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "그래 그럴 땐 일단 먹어야지\n한식, 중식, 양식 뭐 먹을래?\n너 양식 좋아하니까 양식 먹을까?"
+                        content: "아쉽겠다.. 다음 시험은 또 언제야?"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "무슨 일 있었어??\n왜 그래 누구야 누가 그랬어?!"
+                        content: "준비하느라 고생했을 텐데 많이 힘들겠다..ㅠ"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "친구가 아끼는 물건을 잃어 버렸을 때 나는?",
+                question: "내가 더 듣고 싶은 칭찬은?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "그 물건 마지막으로 본게 언제야?\n빨리 찾아보자"
+                        content: "완전 잘했다!! \n이 부분을 약간만 수정하면 더 좋겠다!"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "헐 그 물건 너가 아끼던거 아니였어..?\n어떡해..ㅠㅠ"
+                        content: "진짜 열심히 했네 정말 고생 많았어!!"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "친구가 나에게 살쪘냐고 물어봤다 내 대답은?",
+                question: "친구가 차 사고가 났다고 했을 때 나는?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "ㅇㅇ 내가 아는 살 찐 사람들 중에 TOP3안에 듬 ㅎㅎ"
+                        content: "괜찮아? 너 보험은 들어 놨어?\n어떻게 사고가 난거야??"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "뭔소리야 모르겠는데?\n지금 괜찮은데? 갑자기 왜?"
+                        content: "괜찮아? 어디 다친 곳은 없어??ㅠ"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "아침에 출근/등교할 때 보통 내 휴대폰 배터리 상태는?",
+                question: "배달음식을 주문할 때 나는?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "50% 이상"
+                        content: "어떤 식당인지 검색해서 리뷰, 별점, 후기 등을\n찾아보고 심사숙고해서 주문한다."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "50% 이하"
+                        content: "음식점 썸네일 이미지만 봐도\n맛집인지 아닌지 느낌이 온다."
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "과제나 업무를 받았을 때 나는?",
+                question: "여행 계획을 짤 때 나는?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "뭐부터 해야 할지 세세하게 계획을 잡고 시작한다"
+                        content: "일자 별로 세세하게 일정을 정리해 놓는다."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "관련 자료 조사부터 쭉 찾아보고 틀을 잡는다"
+                        content: "비행기 표를 끊었다면\n계획의 반 이상은 끝났다고 생각한다."
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "친구와 약속이 있는 당일에 나는?",
+                question: "친구와 내일 맛집을 가기로 약속을 잡고나서 나는?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "2~3시간 전부 터 느긋하게 준비를\n끝내고 앉아서 나갈 준비를 한다"
+                        content: "교통편, 시간, 만남장소 등\n세세하고 정확하게 짜고 친구에게 알려준다."
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "시간 거의 다되었을 때 부랴부랴 준비하면서\n친구에게 준비 빨리한다고 말한다"
+                        content: "맛있는 음식을 먹을 생각에 행복해 한다."
                     },
                 ]
             },
