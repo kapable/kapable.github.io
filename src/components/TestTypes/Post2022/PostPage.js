@@ -2,11 +2,9 @@ import axios from 'axios';
 import React, { useState, useEffect, useCallback } from 'react';
 import { withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-import ScriptTag from 'react-script-tag'
 import Pagination from "react-js-pagination";
 import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
-import { useCookies } from 'react-cookie';
 
 const PostPage = (props) => {
     const [page, setPage] = useState(1);
@@ -61,6 +59,33 @@ const PostPage = (props) => {
             setShowPopup(true);
         })
     }
+    const metaTagRenderer = () => {
+        return (
+            <Helmet>
+                {/* <!-- Primary Meta Tags --> */}
+                <title>퍼스널 우체통</title>
+                <meta name="title" content="퍼스널 우체통 - 케이테스트"/>
+                <meta name="description" content="나만의 퍼스널 우체통" data-react-helmet="true"/>
+                <link rel="main-url" href="https://ktestone.com/kapable.github.io/post2022/"/>
+
+                {/* <!-- Open Graph / Facebook --> */}
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://ktestone.com/kapable.github.io/post2022/"/>
+                <meta property="og:title" content="퍼스널 우체통 - 케이테스트"/>
+                <meta property="og:description" content="나만의 퍼스널 우체통"/>
+                <meta property="og:image" content="https://images.ktestone.com/meta/post2021/post2021-meta.png"/>
+                <meta property="og:image:alt" content="퍼스널 우체통 - 케이테스트" />
+
+                {/* <!-- Twitter --> */}
+                <meta property="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/post2022/"/>
+                <meta property="twitter:title" content="퍼스널 우체통 - 케이테스트"/>
+                <meta property="twitter:description" content="나만의 퍼스널 우체통"/>
+                <meta property="twitter:image" content="https://images.ktestone.com/meta/post2021/post2021-meta.png"/>
+                <meta property="twitter:image:alt" content="퍼스널 우체통 - 케이테스트" />
+            </Helmet>
+        )
+}
 
     const mailRenderer = (list, login) => {
         let mails = [];
@@ -141,6 +166,7 @@ const PostPage = (props) => {
         axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem("access_token")}`;
         return(
             <div className='post2022-page'>
+                {metaTagRenderer()}
                 {/* Background */}
                 <img src={postListBackgroundImg} alt="bg-img" className='post2022-long-bg-img'/>
 
@@ -171,6 +197,7 @@ const PostPage = (props) => {
     } else {
         return (
             <div className='post2022-page'>
+                {metaTagRenderer()}
                 {/* Background */}
                 <img src={postListBackgroundImg} alt="bg-img" className='post2022-long-bg-img'/>
 

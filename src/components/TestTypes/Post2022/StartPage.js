@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
@@ -14,20 +14,50 @@ const Post2022 = ({ language }) => {
         });
     };
 
+    const metaTagRenderer = () => {
+        let _PostMetaTag = <Helmet>
+                            {/* <!-- Primary Meta Tags --> */}
+                            <title>퍼스널 우체통</title>
+                            <meta name="title" content="퍼스널 우체통 - 케이테스트"/>
+                            <meta name="description" content="나만의 퍼스널 우체통" data-react-helmet="true"/>
+                            <link rel="main-url" href="https://ktestone.com/kapable.github.io/post2022/"/>
+
+                            {/* <!-- Open Graph / Facebook --> */}
+                            <meta property="og:type" content="website"/>
+                            <meta property="og:url" content="https://ktestone.com/kapable.github.io/post2022/"/>
+                            <meta property="og:title" content="퍼스널 우체통 - 케이테스트"/>
+                            <meta property="og:description" content="나만의 퍼스널 우체통"/>
+                            <meta property="og:image" content="https://images.ktestone.com/meta/post2021/post2021-meta.png"/>
+                            <meta property="og:image:alt" content="퍼스널 우체통 - 케이테스트" />
+
+                            {/* <!-- Twitter --> */}
+                            <meta property="twitter:card" content="summary_large_image"/>
+                            <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/post2022/"/>
+                            <meta property="twitter:title" content="퍼스널 우체통 - 케이테스트"/>
+                            <meta property="twitter:description" content="나만의 퍼스널 우체통"/>
+                            <meta property="twitter:image" content="https://images.ktestone.com/meta/post2021/post2021-meta.png"/>
+                            <meta property="twitter:image:alt" content="퍼스널 우체통 - 케이테스트" />
+                        </Helmet>
+            return _PostMetaTag
+    }
+
     return (
-        <div className='post2022-intro-main-div'>
-            <Link
-                to={{
-                    pathname: `/postAuth2022/`,
-                    state: {
-                        language: language
-                    },}}
-                onClick={() => {
-                    _eventSenderGA("Paging", "Click Start-to-auth Button", "post start page");
-                }}>
-                <img src={introImgSrc} alt="intro-img" className='post2022-intro-img' />
-            </Link>
-        </div>
+        <Fragment>
+            {metaTagRenderer()}
+            <div className='post2022-intro-main-div'>
+                <Link
+                    to={{
+                        pathname: `/postAuth2022/`,
+                        state: {
+                            language: language
+                        },}}
+                        onClick={() => {
+                            _eventSenderGA("Paging", "Click Start-to-auth Button", "post start page");
+                        }}>
+                    <img src={introImgSrc} alt="intro-img" className='post2022-intro-img' />
+                </Link>
+            </div>
+        </Fragment>
     );
 };
 
