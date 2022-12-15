@@ -43,7 +43,7 @@ var TESTS = [
                     {
                         type: "E",
                         score: 2,
-                        content: '심심했는데 좋아!\n바로 준비해서 나갈 준비를 한다.'
+                        content: '심심했는데 좋아!\n바로 나갈 준비를 한다.'
                     },
                     {
                         type: "I",
@@ -64,7 +64,7 @@ var TESTS = [
                     {
                         type: "I",
                         score: 5,
-                        content: "나에게 많은 사람들이 주목하는 자리가 불편하다."
+                        content: "많은 사람들이 나에게 주목하는 자리가 불편하다."
                     },
                 ]
             },
@@ -102,17 +102,17 @@ var TESTS = [
             },
             {
                 which:"SN",
-                question: "요리 할 때 나는?",
+                question: "요리중 간 할 때 나는?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "레시피에 나온 정량대로 넣어서 음식을 만든다."
+                        content: "레시피에 나온 정량대로 넣어 간을 맞춘다."
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: '“대충 이정도 넣으면 되겠지”생각하며 손대중으로 넣는다.'
+                        content: '“대충 이정도 넣으면 되겠지”생각하며 손 대중으로 넣는다.'
                     },
                 ]
             },
@@ -139,7 +139,7 @@ var TESTS = [
                     {
                         type: "T",
                         score: 2,
-                        content: "아쉽겠다.. 다음 시험은 또 언제야?"
+                        content: "아쉽겠다.. 다음 면접은 또 언제야?"
                     },
                     {
                         type: "F",
