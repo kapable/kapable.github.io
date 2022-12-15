@@ -179,7 +179,7 @@ const PostPage = (props) => {
                 <p className='post2022-page-whosname'>{`${userNickname}`}님의</p>
 
                 <div className='post2022-page-btn-div'>
-                    <CopyToClipboard text={`https://ktestone.com/kapable.github.io/post2021/${props.match.params.username}/`}>
+                    <CopyToClipboard text={`https://ktestone.com/kapable.github.io/post2022/${props.match.params.username}/`}>
                         <img src={shareMyBox} alt="Share My Post" onClick={onShareBtnClick} className='post2022-page-share-mypost-btn' />
                     </CopyToClipboard>
                 </div>             
