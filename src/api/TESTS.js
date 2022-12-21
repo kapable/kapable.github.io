@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 var TESTS = [
     // order tests with newly date order
+    // yearEndParty2022
+    {
+        info : {
+            mainTitle:"연말 파티 테스트 2022",
+            subTitle:"내가 연말 파티 필수템이라면?",
+            mainUrl:"yearEndParty2022",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/yearEndParty2022-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/yearEndParty2022-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '연말 파티가 끝난 후 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '아 올해 연말도 너무 잘 놀았다!\n에너지 충전 완료!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '아 올해 연말 재밌었다~\n이제 집에가서 쉬어야지..'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "나에게 맞는 주말 계획은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "주중에 회사 안에만 있었으니까\n주말엔 밖에서 알차게 보내야지!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "주중에 회사에만 나와있었으니까\n주말에는 집에서 푹 쉬어야지!"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "오랜만에 혼자 여행 가려고 숙소를 잡으려고 한다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "새로운 사람들과 함께 놀 수 있는 게스트 하우스"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "나 혼자만의 공간이 중요한 호텔"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "친구가 “만약 너가 무인도에 가 그럼 어떻게 할래?”\n라고 한다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "내가 무인도를 왜 감?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "진짜 무인도에 가서 뭘 할지 상상을 해본다"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "드라마나 영화를 볼 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "배우들의 연기에 몰입하고 드라마/영화\n그 자체에 집중해서 본다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '이 드라마가 말하고 있는 숨겨진 메시지가 무엇인지,\n반전이 있을지 생각하면서 본다.'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "여행가기 전 날 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "빨리 가고 싶어서 짐 챙기고 바로 잠을 청한다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "침 챙기고 누워서 내일 여행가서\n재밌게 노는 상상을 하다가 잠든다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "갑자기 머리를 짧게 자른 친구에게 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "머리 잘랐네? 이쁘다 어디서 잘랐어?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "무슨 일 있었어? 갑자기 머리를 잘랐네?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "준비한 PT발표가 끝났다 내가 듣고 싶은 칭찬은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "와 완전 인상적이더라~\n근데 이 부분 약간만 수정하면 더 좋겠다!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "와 이거 준비 하는데 엄청 고생했겠는데?\n너무 잘했다~!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 고민을 털어놨을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "친구의 이야기를 듣고 최대한 문제를 해결해 주려고 한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "친구에게 감정이입을 하면서,\n리액션을 많이 한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "가려던 레스토랑이 예약이 다 차버렸을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "진작 예약하지 않은 나를 원망한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "아쉽다.. 다음에 딴데 가면되지 뭐"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구들과 연말 파티 계획을 짤 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "파티 장소, 시간, 준비물, 당일 무엇을 할 건지\n미리 세세하게 정해 놓는다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "시간과 장소만 정했다면\n준비는 거의 다 끝나간다고 생각한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "파티나 행사 룩을 고를 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "전날부터 머리부터 발끝까지 미리 세팅 해둔다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "당일 날 준비하면서 마음에 드는 옷으로 입고 간다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "vhrwnr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkxldksrud",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "akdlzm",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "alfjqhf",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "vhffkfhdlem",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "tidemffldp",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkxlvlfl",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "tiavpdls",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "vkxlzjxms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmvlzj",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tnrcnlgothwp",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "zpdlzm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkxlrjfdl",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "zkvpxm",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "zosemf",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "vndtjs",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/yearEndParty2022/INFP.jpg'
+            },
+        ]
+    },
     // snowflake
     {
         info : {
