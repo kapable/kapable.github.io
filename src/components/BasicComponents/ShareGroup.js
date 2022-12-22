@@ -16,6 +16,7 @@ const ShareGroup = ({ link }) => {
         margin: 0 auto 2.5rem;
     `;
     const URLShareButton = styled.button`
+        padding: 0;
         width: 48px;
         height: 48px;
         color: white;
