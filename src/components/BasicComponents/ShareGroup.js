@@ -47,7 +47,7 @@ const ShareGroup = ({ link, testTitle }) => {
 
     return (
         <ShareGroupDiv>
-            <FacebookShareButton url={link} quote={testTitle}>
+            <FacebookShareButton url={link} quote={testTitle} hashtag={testTitle}>
                 <FacebookIcon size={48} round={true} style={{ padding:"0 0.5rem" }}/>
             </FacebookShareButton>
             <TwitterShareButton url={link} title={testTitle}>
