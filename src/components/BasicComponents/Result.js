@@ -20,6 +20,7 @@ import PCTMBTIBAR from '../SubComponents/PctMBTIBar';
 import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
 import '../TestTypes/FactPok/factPok.css';
+import ShareGroup from './ShareGroup';
 
 class Result extends Component {
     static propTypes = {
@@ -924,6 +925,7 @@ class Result extends Component {
                     
                     <div className="share">
                         <h5 className="share-title">{ppl_list.includes(this.state.current_test) ? null : "친구에게 공유하기"}</h5>
+                        <ShareGroup link={this.state.current_test.includes("facialExpressionAnalyzer") ? "https://ktestone.com/kapable.github.io/" + this.state.current_test+'/' : this.state.sharable_url+'/'}/>
                         <div className="share">
                             {/* if facialExpAnalyzer, copy url is test home, other tests' urls are result urls */}
                             <CopyToClipboard text={this.state.current_test.includes("facialExpressionAnalyzer") ? "https://ktestone.com/kapable.github.io/" + this.state.current_test+'/' : this.state.sharable_url+'/'}>
