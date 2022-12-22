@@ -47,7 +47,7 @@ const ShareGroup = ({ link, testTitle }) => {
 
     return (
         <ShareGroupDiv>
-            <FacebookShareButton url={'https://ktestone.com/kapable.github.io/yearEndParty2022/result/tiavpdls/'} quote={testTitle} hashtag={'#'+testTitle.replace(/\s/g,'')}>
+            <FacebookShareButton url={link} quote={testTitle} hashtag={'#'+testTitle.replace(/\s/g,'')}>
                 <FacebookIcon size={48} round={true} style={{ padding:"0 0.5rem" }}/>
             </FacebookShareButton>
             <TwitterShareButton url={link} title={testTitle}>
