@@ -45,13 +45,21 @@ const ShareGroup = ({ link, testTitle }) => {
         alert("링크가 복사됐어요!");
     }, [_eventSenderGA]);
 
+    const _onFacebookButtonClick = useCallback(() => {
+        _eventSenderGA("Sharing", "Click Facebook-share Button", "result page");
+    }, [_eventSenderGA]);
+
+    const _onTwitterButtonClick = useCallback(() => {
+        _eventSenderGA("Sharing", "Click Twitter-share Button", "result page");
+    }, [_eventSenderGA]);
+
     return (
         <ShareGroupDiv>
             <FacebookShareButton url={link} quote={testTitle} hashtag={'#'+testTitle.replace(/\s/g,'')}>
-                <FacebookIcon size={48} round={true} style={{ padding:"0 0.5rem" }}/>
+                <FacebookIcon onClick={_onFacebookButtonClick} size={48} round={true} style={{ padding:"0 0.5rem" }}/>
             </FacebookShareButton>
             <TwitterShareButton url={link} title={testTitle}>
-                <TwitterIcon size={48} round={true} style={{ padding:"0 0.5rem" }}/>
+                <TwitterIcon onClick={_onTwitterButtonClick} size={48} round={true} style={{ padding:"0 0.5rem" }}/>
             </TwitterShareButton>
             <CopyToClipboard text={link}>
                 <URLShareButton onClick={_onShareButtonClick}>URL</URLShareButton>
