@@ -925,7 +925,9 @@ class Result extends Component {
                     
                     <div className="share">
                         <h5 className="share-title">{ppl_list.includes(this.state.current_test) ? null : "친구에게 공유하기"}</h5>
-                        <ShareGroup link={this.state.current_test.includes("facialExpressionAnalyzer") ? "https://ktestone.com/kapable.github.io/" + this.state.current_test+'/' : this.state.sharable_url+'/'}/>
+                        <ShareGroup
+                            link={this.state.current_test.includes("facialExpressionAnalyzer") ? "https://ktestone.com/kapable.github.io/" + this.state.current_test+'/' : this.state.sharable_url+'/'}
+                            testTitle={TESTS.find((test) => test?.info?.mainUrl === this.state.current_test)?.info?.mainTitle}/>
                         <div className="share">
                             {/* if facialExpAnalyzer, copy url is test home, other tests' urls are result urls */}
                             <CopyToClipboard text={this.state.current_test.includes("facialExpressionAnalyzer") ? "https://ktestone.com/kapable.github.io/" + this.state.current_test+'/' : this.state.sharable_url+'/'}>

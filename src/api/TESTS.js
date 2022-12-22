@@ -21,7 +21,7 @@ function range(start, stop, step) {
     return result;
 };
 
-var TESTS = [
+const TESTS = [
     // order tests with newly date order
     // yearEndParty2022
     {

@@ -9,7 +9,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import ReactGA from 'react-ga';
 
 
-const ShareGroup = ({ link }) => {
+const ShareGroup = ({ link, testTitle }) => {
     const ShareGroupDiv = styled.div`
         display: flex;
         justify-content: center;
@@ -47,10 +47,10 @@ const ShareGroup = ({ link }) => {
 
     return (
         <ShareGroupDiv>
-            <FacebookShareButton url={link}>
+            <FacebookShareButton url={link} quote={testTitle}>
                 <FacebookIcon size={48} round={true} style={{ padding:"0 0.5rem" }}/>
             </FacebookShareButton>
-            <TwitterShareButton url={link}>
+            <TwitterShareButton url={link} title={testTitle}>
                 <TwitterIcon size={48} round={true} style={{ padding:"0 0.5rem" }}/>
             </TwitterShareButton>
             <CopyToClipboard text={link}>
@@ -64,4 +64,5 @@ export default ShareGroup;
 
 ShareGroup.propTypes = {
     link: PropTypes.string.isRequired,
+    testTitle: PropTypes.string.isRequired,
 };
