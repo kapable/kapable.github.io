@@ -274,14 +274,14 @@ class App extends Component {
                 {/* meta tag form for all main page */}
                 {this.mainMetaTagRenderer()}
                 {/* <MainPage all_tests_url={this.all_lang_renderer()}/> */}
-                <MainPage all_tests_url={this.each_lang_renderer("Kor")}/>
+                <MainPage all_tests_url={this.each_lang_renderer("Kor")} lang={'Kor'}/>
             </Route>
 
             {/* go to "Each langs Main" page */}
             {this.state.lang_list.map((lang)=>(
               <Route
                 path={'/' + lang + '/'}
-                component={() => <MainPage all_tests_url={this.each_lang_renderer(lang)}/>}
+                component={() => <MainPage all_tests_url={this.each_lang_renderer(lang)} lang={lang}/>}
                 key={lang}
                 exact
               />
@@ -290,7 +290,7 @@ class App extends Component {
             {this.state.lang_list.map((lang)=>(
               <Route
                 path={'/kapable.github.io/' + lang + '/'}
-                component={() => <MainPage all_tests_url={this.each_lang_renderer(lang)}/>}
+                component={() => <MainPage all_tests_url={this.each_lang_renderer(lang)} lang={lang}/>}
                 key={lang}
                 exact
               />

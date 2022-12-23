@@ -19,9 +19,11 @@ function MainPage(props) {
             <OhterLangIconsMain />
 
             {/* Go to POST 2022 */}
-            <Link to='/post2022/' className="main-link-block" key="post2022-banner">
-                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022-thumb.png`} alt="POST-2022" />
-            </Link>
+            {props.lang === 'Kor' ? (
+                <Link to='/post2022/' className="main-link-block" key="post2022-banner">
+                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022-thumb.png`} alt="POST-2022" />
+                </Link>
+            ) : null}
 
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
@@ -36,21 +38,25 @@ function MainPage(props) {
                     return null;
                 })}
             </div>
+            
+            {props.lang === 'Kor' ? (
+                <>
+                    {/* Go to FactPok */}
+                    <Link to='/factPok/' className="main-link-block" key="factpok-banner">
+                        <img className='test-main-img' src={"https://images.ktestone.com/main-thumbnail/factPok-thumb.png"} alt='factPok' />
+                    </Link>
 
-            {/* Go to FactPok */}
-            <Link to='/factPok/' className="main-link-block" key="factpok-banner">
-                <img className='test-main-img' src={"https://images.ktestone.com/main-thumbnail/factPok-thumb.png"} alt='factPok' />
-            </Link>
+                    {/* Go to Acrostic */}
+                    <Link to='/acrostic/' className="main-link-block" key="acrostic-banner">
+                        <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/acrostic-thumb.png`} alt="Acrostic" />
+                    </Link>
 
-            {/* Go to Acrostic */}
-            <Link to='/acrostic/' className="main-link-block" key="acrostic-banner">
-                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/acrostic-thumb.png`} alt="Acrostic" />
-            </Link>
-
-            {/* Go to POST 2021 */}
-            <Link to='/post2021/' className="main-link-block" key="post2021-banner">
-                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2021-thumb.png`} alt="POST-2021" />
-            </Link>
+                    {/* Go to POST 2021 */}
+                    <Link to='/post2021/' className="main-link-block" key="post2021-banner">
+                        <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2021-thumb.png`} alt="POST-2021" />
+                    </Link>
+                </>
+            ) : null}
 
             {/* Go to POST 2021 ENG */}
             {props.match.path !== '/Kor/'
@@ -76,16 +82,18 @@ function MainPage(props) {
             </div>
             
             {/* Go to metapangapply 2021 */}
-            <Link to='/metapangapply/' className="main-link-block" key="metapangapply-banner">
+            {/* <Link to='/metapangapply/' className="main-link-block" key="metapangapply-banner">
                 <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/metaPangApply-thumb.png`} alt="POST-2021" />
-            </Link>
+            </Link> */}
             {/* Go to Jelling Games Banner */}
-            <a
-                target='_blank'
-                rel="noopener noreferrer"
-                href='https://jellinggame.com/'
-                className='to-jelling-banner'
-            > <img src={JELLINGBANNERKOR} className='test-main-img' alt="go to Jelling games" /> </a>
+            {props.lang === 'Kor' ? (
+                <a
+                    target='_blank'
+                    rel="noopener noreferrer"
+                    href='https://jellinggame.com/'
+                    className='to-jelling-banner'
+                > <img src={JELLINGBANNERKOR} className='test-main-img' alt="go to Jelling games" /> </a>
+            ) : null}
             <a
                 target='_blank'
                 rel="noopener noreferrer"
