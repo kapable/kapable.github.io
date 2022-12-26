@@ -22,6 +22,7 @@ import COPYBTN from '../../api/DefaultImg/test-intro-copy-link-btn.png';
 import BACKBTN from '../../api/DefaultImg/test-intro-other-tests-btn.png';
 import ScriptTag from 'react-script-tag'
 import ReactGA from 'react-ga';
+import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 
 class Intro extends Component {
     constructor(props){
@@ -225,6 +226,12 @@ class Intro extends Component {
                             onClick={this._onMainButtonClick}
                             alt="다른 테스트 하러 뒤로가기"/>
                     </div>
+                    <AdsenseAdvertiser
+                        client="ca-pub-2382342018701919"
+                        slot="5663135072"
+                        format="auto"
+                        responsive="true"
+                    />
                 </div>
             </Fragment>
         );
