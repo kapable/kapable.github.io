@@ -8,6 +8,7 @@ import '../TestTypes/Post2021/Post2021.css';
 import '../TestTypes/Post2021/PostPopup.css';
 import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
+import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 
 function MainPage(props) {
 
@@ -17,12 +18,12 @@ function MainPage(props) {
                 <img className='main-header' src={MAINHEADER} alt="K-test"/>
             </div>
             <OhterLangIconsMain />
-            <ins className="adsbygoogle"
-                style={{display:"block"}}
-                data-ad-client="ca-pub-2382342018701919"
-                data-ad-slot="5663135072"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
+            <AdsenseAdvertiser
+                client="ca-pub-2382342018701919"
+                slot="5663135072"
+                format="auto"
+                responsive="true"
+            />
             {/* Go to POST 2022 */}
             {props.lang === 'Kor' ? (
                 <Link to='/post2022/' className="main-link-block" key="post2022-banner">

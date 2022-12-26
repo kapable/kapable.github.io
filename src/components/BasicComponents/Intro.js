@@ -91,9 +91,6 @@ class Intro extends Component {
         }
     }
     componentDidMount(){
-        // if condition for Adsense domain
-        // if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
-
         // go to quiz mode when TONYMOLY factPok contents start
         let factPokQueries = ["factPok", "MyFactPok", "FriendFactPok"];
         if(factPokQueries.some(el => this.state.quiz_url.includes(el))) {

@@ -91,9 +91,6 @@ class App extends Component {
     });
     ReactGA.set({page:window.location.pathname+window.location.search})
     ReactGA.pageview(window.location.pathname+window.location.search);
-
-    // if condition for Adsense domain
-    if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
   all_lang_renderer(){
     let i = 0;
