@@ -17,7 +17,7 @@ const defaultOptions = {
 class Loading extends Component {
   componentDidMount(){
     // if condition for Adsense domain
-    // if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
+    if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
 
   render(){
@@ -25,11 +25,6 @@ class Loading extends Component {
       if((window.location.href.includes("localhost") || window.location.href.includes("ktestone.com")) && (!ppl_list.includes(this.props.test))) {
           return(
             <Fragment>
-              {/* <ins className="kakao_ad_area" style={{display:"none"}}
-              data-ad-unit    = "DAN-M3XcjSrV4BrUGCJG"
-              data-ad-width   = "300"
-              data-ad-height  = "250"></ins>
-              <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag> */}
               <div className="loading" >
                   <Lottie options={defaultOptions} height={120} width={120}/>
               </div>

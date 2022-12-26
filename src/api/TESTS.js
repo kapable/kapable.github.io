@@ -40864,6 +40864,6 @@ const TESTS = [
             },
         ]
     },
-]
+];
 
 export default TESTS;

@@ -93,7 +93,7 @@ class App extends Component {
     ReactGA.pageview(window.location.pathname+window.location.search);
 
     // if condition for Adsense domain
-    // if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
+    if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
   all_lang_renderer(){
     let i = 0;
