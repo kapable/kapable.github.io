@@ -243,7 +243,7 @@ class App extends Component {
       {/* CPC Banner Upper */}
       {/* {this.cpcBannerUpperScriptor()} */}
 
-      <div id="optadATF" style={{"minHeight": "110px"}}></div>
+      {/* <div id="optadATF" style={{"minHeight": "110px"}}></div> */}
 
       <Router basename='/kapable.github.io/'>
         <ScrollToTop>
