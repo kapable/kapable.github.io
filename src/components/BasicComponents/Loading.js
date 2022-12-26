@@ -17,9 +17,7 @@ const defaultOptions = {
 class Loading extends Component {
   componentDidMount(){
     // if condition for Adsense domain
-    if(window.location.href.includes("niair.xyz")){
-        if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
-    }
+    // if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
 
   render(){
@@ -57,7 +55,7 @@ class Loading extends Component {
               <ins className="adsbygoogle"
                   style={{display:"block"}}
                   data-ad-client="ca-pub-2382342018701919"
-                  data-ad-slot="4650135764"
+                  data-ad-slot="5663135072"
                   data-ad-format="auto"
                   data-full-width-responsive="true"></ins>
               <div className="loading" >

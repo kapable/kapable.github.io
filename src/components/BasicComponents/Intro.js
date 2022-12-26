@@ -92,9 +92,7 @@ class Intro extends Component {
     }
     componentDidMount(){
         // if condition for Adsense domain
-        if(this.state.quiz_url.includes("niair.xyz")){
-            if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
-        }
+        // if(window) (window.adsbygoogle = window.adsbygoogle || []).push({});
 
         // go to quiz mode when TONYMOLY factPok contents start
         let factPokQueries = ["factPok", "MyFactPok", "FriendFactPok"];
