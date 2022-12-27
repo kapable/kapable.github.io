@@ -338,7 +338,7 @@ class Result extends Component {
 
     otherTestBannerRenderer() {
         let personalColor2022ListKor = ["personalColor2022",];
-        let personalColor2022List = ["personalColor2022Eng", "personalColor2022CN"];
+        let EngTestList = ["personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let flowerBTIList = ["flowerBTIEng"];
@@ -367,16 +367,21 @@ class Result extends Component {
                     > <img src={JELLINGBANNERKOR} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                 </Fragment>
             )
-        } else if (personalColor2022List.includes(this.state.current_test)) {
-            const jelling_outlink = "https://bit.ly/30QKtw1";
+        } else if (EngTestList.includes(this.state.current_test)) {
             return(
                 <Fragment>
                     <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={jelling_outlink}
+                    href='https://ktestone.com/kapable.github.io/flowerBTIEng/'
                     className="to-ppl-banner-text"
-                    > <img src={JELLINGBANNERENG} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    > <img src={`https://images.ktestone.com/main-thumbnail/flowerBTIEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/oneSidedLoveEng/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/oneSidedLoveEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                 </Fragment>
             )
         } else if (percentageMBTI2022ListKor.includes(this.state.current_test)) {
