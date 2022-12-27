@@ -578,7 +578,7 @@ class Result extends Component {
                             <meta property="og:image:height" content="400"/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        {/* <div id="optadnpm ATB" style={{"minHeight": "220px"}}></div> */}
+                        <div id="optadnpm ATB" style={{"minHeight": "220px"}}></div>
                         <img src={img_src} className='result-img' alt={final_type} />
                     </Fragment>
                 )
