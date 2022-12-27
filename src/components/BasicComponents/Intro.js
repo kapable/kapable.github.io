@@ -22,7 +22,6 @@ import COPYBTN from '../../api/DefaultImg/test-intro-copy-link-btn.png';
 import BACKBTN from '../../api/DefaultImg/test-intro-other-tests-btn.png';
 import ScriptTag from 'react-script-tag'
 import ReactGA from 'react-ga';
-import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 
 class Intro extends Component {
     constructor(props){
