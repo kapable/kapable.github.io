@@ -189,7 +189,7 @@ class Intro extends Component {
                         <meta property="twitter:image" content={this.state.current_test.info.mainImage}/>
                         <meta property="twitter:image:alt" content={this.state.current_test.info.mainTitle} />
                     </Helmet>
-                    <div id="optadnpm ATB" style={{"minHeight": "220px"}}></div>
+                    {/* <div id="optadnpm ATB" style={{"minHeight": "220px"}}></div> */}
                     <img
                         className="intro-main-img"
                         onClick={this._onStartButtonClick}
