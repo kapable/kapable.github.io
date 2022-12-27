@@ -14,7 +14,6 @@ import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
 import ScriptTag from 'react-script-tag';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
-import JELLINGBANNERENG from '../../api/DefaultImg/go-to-jelling-eng.png';
 import KAKAOPLUSFRIEND from '../../api/DefaultImg/go-to-kakao-plusfriend.png';
 import PCTMBTIBAR from '../SubComponents/PctMBTIBar';
 import { instanceOf } from 'prop-types';
@@ -338,7 +337,7 @@ class Result extends Component {
 
     otherTestBannerRenderer() {
         let personalColor2022ListKor = ["personalColor2022",];
-        let EngTestList = ["personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
+        let EngTestList = ["snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let flowerBTIList = ["flowerBTIEng"];
@@ -370,6 +369,12 @@ class Result extends Component {
         } else if (EngTestList.includes(this.state.current_test)) {
             return(
                 <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/snowflakeEng/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/snowflakeEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                     <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -528,7 +533,7 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ['lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
+            let ppl_list = ["snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
             let tonymoly_list = ["factPok", "MyFactPok", "FriendFactPok",];
             if(ppl_list.includes(this.state.current_test)) {
