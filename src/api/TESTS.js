@@ -26,8 +26,8 @@ const TESTS = [
     // snowflakeEng
     {
         info : {
-            mainTitle:"크리스마스 눈송이 테스트",
-            subTitle:"내가 눈송이라면 어떤 눈송이일까?",
+            mainTitle:"Snowflake Test",
+            subTitle:"What if I were a snowflake? | snowflake test",
             mainUrl:"snowflakeEng",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/snowflakeEng-intro.jpeg",
@@ -999,7 +999,7 @@ const TESTS = [
     {
         info : {
             mainTitle:"크리스마스 눈송이 테스트",
-            subTitle:"내가 눈송이라면 어떤 눈송이일까?",
+            subTitle:"내가 눈송이라면 어떤 눈송이일까? | 눈송이 테스트",
             mainUrl:"snowflake",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/snowflake-intro.jpg",
