@@ -24,329 +24,329 @@ function range(start, stop, step) {
 const TESTS = [
     // order tests with newly date order
     // snowflakeEng
-    // {
-    //     info : {
-    //         mainTitle:"크리스마스 눈송이 테스트",
-    //         subTitle:"내가 눈송이라면 어떤 눈송이일까?",
-    //         mainUrl:"snowflakeEng",
-    //         scoreType:"typeCountingMBTI",
-    //         mainImage:"https://images.ktestone.com/introImages/snowflakeEng-intro.jpeg",
-    //         thumbImage:"https://images.ktestone.com/main-thumbnail/snowflakeEng-thumb.png",
-    //         horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-    //         lang:"Eng"
-    //     },
-    //     questions:[
-    //         {
-    //             which:"EI",
-    //             question: 'When you are resting at home on a day off\nand a friend suddenly asks to go out,\nwhat can be your reaction?',
-    //             answers:[
-    //                 {
-    //                     type: "E",
-    //                     score: 2,
-    //                     content: 'I was just bored. Okay,\nI will get ready to go out right now.'
-    //                 },
-    //                 {
-    //                     type: "I",
-    //                     score: 5,
-    //                     content: "I don't go out with an excuse\nbecause It's burdensome to go out suddenly."
-    //                 },
-    //             ],
-    //         },
-    //         {
-    //             which:"EI",
-    //             question: "When you have to speak in front of many people,\nhow do you feel?",
-    //             answers:[
-    //                 {
-    //                     type: "E",
-    //                     score: 2,
-    //                     content: "I feel good when\nmany people pay attention to me."
-    //                 },
-    //                 {
-    //                     type: "I",
-    //                     score: 5,
-    //                     content: "I'm uncomfortable with\na lot of people paying attention to me."
-    //                 },
-    //             ]
-    //         },
-    //         {
-    //             which:"EI",
-    //             question: "When you are full of appointments on the weekend,\nwhat can be your reaction?",
-    //             answers:[
-    //                 {
-    //                     type: "E",
-    //                     score: 2,
-    //                     content: "I'm going to have a good time\nand have fun this weekend!\nI feel great!"
-    //                 },
-    //                 {
-    //                     type: "I",
-    //                     score: 5,
-    //                     content: "I need at least one day off during the weekend.\nWhat should I do?"
-    //                 },
-    //             ]
-    //         },
-    //         {
-    //             which:"SN",
-    //             question: "What do you think about most\nwhen you are at home?",
-    //             answers:[
-    //                 {
-    //                     type: "S",
-    //                     score: 2,
-    //                     content: "I am not thinking much"
-    //                 },
-    //                 {
-    //                     type: "N",
-    //                     score: 5,
-    //                     content: "I often imagine this and that"
-    //                 },
-    //             ]
-    //         },
-    //         {
-    //             which:"SN",
-    //             question: "How do you season food?",
-    //             answers:[
-    //                 {
-    //                     type: "S",
-    //                     score: 2,
-    //                     content: "I follow a recipe."
-    //                 },
-    //                 {
-    //                     type: "N",
-    //                     score: 5,
-    //                     content: 'I just follow my intuition.'
-    //                 },
-    //             ]
-    //         },
-    //         {
-    //             which:"SN",
-    //             question: "When a friend asks about\nthe play you watched yesterday,\nwhat can be your reaction?",
-    //             answers:[
-    //                 {
-    //                     type: "S",
-    //                     score: 2,
-    //                     content: "It was a play about the conflict\nthat arises in the process of\nreuniting a couple on campus."
-    //                 },
-    //                 {
-    //                     type: "N",
-    //                     score: 5,
-    //                     content: "The main characters were so cool!\nIf it comes out as a movie or drama,\nI will definitely watch it!"
-    //                 },
-    //             ]
-    //         },
-    //         {
-    //             which:"TF",
-    //             question: "When your friend gets depressed\nbecause he failed in the job interview,\nwhat can be your reaction?",
-    //             answers:[
-    //                 {
-    //                     type: "T",
-    //                     score: 2,
-    //                     content: "Pity.. when is the next interview?"
-    //                 },
-    //                 {
-    //                     type: "F",
-    //                     score: 5,
-    //                     content: "I feel so sorry about that."
-    //                 },
-    //             ]
-    //         },
-    //         {
-    //             which:"TF",
-    //             question: "What compliment do you want to hear most?",
-    //             answers:[
-    //                 {
-    //                     type: "T",
-    //                     score: 2,
-    //                     content: "Well done!!\nBut it would be better if\nyou slightly modify certain part."
-    //                 },
-    //                 {
-    //                     type: "F",
-    //                     score: 5,
-    //                     content: "Good job,\nyou did really well!"
-    //                 },
-    //             ]
-    //         },
-    //         {
-    //             which:"TF",
-    //             question: "When your friend had a car accident,\nwhat will you do?",
-    //             answers:[
-    //                 {
-    //                     type: "T",
-    //                     score: 2,
-    //                     content: "Are you okay?\nDo you have car insurance?\nHow it happened?"
-    //                 },
-    //                 {
-    //                     type: "F",
-    //                     score: 5,
-    //                     content: "Are you okay?\ndid you get hurt anywhere?"
-    //                 },
-    //             ]
-    //         },
-    //         {
-    //             which:"JP",
-    //             question: "When ordering food for delivery,\nhow do I do?",
-    //             answers:[
-    //                 {
-    //                     type: "J",
-    //                     score: 2,
-    //                     content: "To order food,\nI have to look for review and rating,\netc, carefully."
-    //                 },
-    //                 {
-    //                     type: "P",
-    //                     score: 5,
-    //                     content: "I can order just by\nlooking at the thumbnail image."
-    //                 },
-    //             ]
-    //         },
-    //         {
-    //             which:"JP",
-    //             question: "When planning a trip,\nwhat do you do?",
-    //             answers:[
-    //                 {
-    //                     type: "J",
-    //                     score: 2,
-    //                     content: "I need a detail and\norganized schedule for the trip."
-    //                 },
-    //                 {
-    //                     type: "P",
-    //                     score: 5,
-    //                     content: "I think more than half of the plan\nis done if the plane ticket is ready."
-    //                 },
-    //             ]
-    //         },
-    //         {
-    //             which:"JP",
-    //             question: "After making an appointment with a friend\nto go to a must-visit restaurant tomorrow,\nwhat will you do?",
-    //             answers:[
-    //                 {
-    //                     type: "J",
-    //                     score: 2,
-    //                     content: "I will inform my friends about\ntransportation, time, and where to meet."
-    //                 },
-    //                 {
-    //                     type: "P",
-    //                     score: 5,
-    //                     content: "I just feel happy at\nthe thought of eating delicious food."
-    //                 },
-    //             ]
-    //         },
-    //     ],
-    //     results:[
-    //         {
-    //             type: "ESTJ",
-    //             desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
-    //             `,
-    //             query: "tjflRhcsns",
-    //             score_range:range(26),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ESTJ.jpg'
-    //         },
-    //         {
-    //             type: "ESTP",
-    //             desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-    //             query: "tptjfsns",
-    //             score_range:range(26, 51),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ESTP.jpg'
-    //         },
-    //         {
-    //             type: "ESFJ",
-    //             desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-    //             query: "thasns",
-    //             score_range:range(51, 75),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ESFJ.jpg'
-    //         },
-    //         {
-    //             type: "ESFP",
-    //             desc: `친숙한 댕댕이 , 리트리버\n`,
-    //             query: "aksmfsns",
-    //             score_range:range(76, 101),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ESFP.jpg'
-    //         },
-    //         {
-    //             type: "ENTJ",
-    //             desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-    //             query: "djfdjasns",
-    //             score_range:range(76, 101),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ENTJ.jpg'
-    //         },
-    //         {
-    //             type: "ENTP",
-    //             desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
-    //             `,
-    //             query: "tjtjfsns",
-    //             score_range:range(26),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ENTP.jpg'
-    //         },
-    //         {
-    //             type: "ENFJ",
-    //             desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-    //             query: "dudnsns",
-    //             score_range:range(26, 51),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ENFJ.jpg'
-    //         },
-    //         {
-    //             type: "ENFP",
-    //             desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-    //             query: "qhasns",
-    //             score_range:range(51, 75),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ENFP.jpg'
-    //         },
-    //         {
-    //             type: "ISTJ",
-    //             desc: `친숙한 댕댕이 , 리트리버\n`,
-    //             query: "cjtsns",
-    //             score_range:range(76, 101),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ISTJ.jpg'
-    //         },
-    //         {
-    //             type: "ISTP",
-    //             desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-    //             query: "thddlsns",
-    //             score_range:range(76, 101),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ISTP.jpg'
-    //         },
-    //         {
-    //             type: "ISFJ",
-    //             desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-    //             query: "toqursns",
-    //             score_range:range(76, 101),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ISFJ.jpg'
-    //         },
-    //         {
-    //             type: "ISFP",
-    //             desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
-    //             `,
-    //             query: "rkfnsns",
-    //             score_range:range(26),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ISFP.jpg'
-    //         },
-    //         {
-    //             type: "INTJ",
-    //             desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-    //             query: "gkaqkrsns",
-    //             score_range:range(26, 51),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/INTJ.jpg'
-    //         },
-    //         {
-    //             type: "INTP",
-    //             desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-    //             query: "vhtmfsns",
-    //             score_range:range(51, 75),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/INTP.jpg'
-    //         },
-    //         {
-    //             type: "INFJ",
-    //             desc: `친숙한 댕댕이 , 리트리버\n`,
-    //             query: "qkasns",
-    //             score_range:range(76, 101),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/INFJ.jpg'
-    //         },
-    //         {
-    //             type: "INFP",
-    //             desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-    //             query: "tkfkdsns",
-    //             score_range:range(76, 101),
-    //             img_src:'https://images.ktestone.com/resultImages/snowflakeEng/INFP.jpg'
-    //         },
-    //     ]
-    // },
+    {
+        info : {
+            mainTitle:"크리스마스 눈송이 테스트",
+            subTitle:"내가 눈송이라면 어떤 눈송이일까?",
+            mainUrl:"snowflakeEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/snowflakeEng-intro.jpeg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/snowflakeEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Eng"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'When you are resting at home on a day off\nand a friend suddenly asks to go out,\nwhat can be your reaction?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I was just bored. Okay,\nI will get ready to go out right now.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I don't go out with an excuse\nbecause It's burdensome to go out suddenly."
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "When you have to speak in front of many people,\nhow do you feel?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I feel good when\nmany people pay attention to me."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I'm uncomfortable with\na lot of people paying attention to me."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "When you are full of appointments on the weekend,\nwhat can be your reaction?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I'm going to have a good time\nand have fun this weekend!\nI feel great!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I need at least one day off during the weekend.\nWhat should I do?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you think about most\nwhen you are at home?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I am not thinking much"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "I often imagine this and that"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "How do you season food?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I follow a recipe."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: 'I just follow my intuition.'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When a friend asks about\nthe play you watched yesterday,\nwhat can be your reaction?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "It was a play about the conflict\nthat arises in the process of\nreuniting a couple on campus."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "The main characters were so cool!\nIf it comes out as a movie or drama,\nI will definitely watch it!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When your friend gets depressed\nbecause he failed in the job interview,\nwhat can be your reaction?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Pity.. when is the next interview?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I feel so sorry about that."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What compliment do you want to hear most?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Well done!!\nBut it would be better if\nyou slightly modify certain part."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Good job,\nyou did really well!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When your friend had a car accident,\nwhat will you do?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Are you okay?\nDo you have car insurance?\nHow it happened?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Are you okay?\ndid you get hurt anywhere?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When ordering food for delivery,\nhow do I do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "To order food,\nI have to look for review and rating,\netc, carefully."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I can order just by\nlooking at the thumbnail image."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When planning a trip,\nwhat do you do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I need a detail and\norganized schedule for the trip."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I think more than half of the plan\nis done if the plane ticket is ready."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "After making an appointment with a friend\nto go to a must-visit restaurant tomorrow,\nwhat will you do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I will inform my friends about\ntransportation, time, and where to meet."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I just feel happy at\nthe thought of eating delicious food."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "tjflRhcsns",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tptjfsns",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "thasns",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "aksmfsns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "djfdjasns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "tjtjfsns",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dudnsns",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qhasns",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "cjtsns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "thddlsns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "toqursns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "rkfnsns",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gkaqkrsns",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "vhtmfsns",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "qkasns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkfkdsns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/snowflakeEng/INFP.jpg'
+            },
+        ]
+    },
     // smileColorTest
     {
         info : {
