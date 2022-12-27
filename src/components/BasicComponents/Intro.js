@@ -226,12 +226,12 @@ class Intro extends Component {
                             onClick={this._onMainButtonClick}
                             alt="다른 테스트 하러 뒤로가기"/>
                     </div>
-                    <AdsenseAdvertiser
+                    {/* <AdsenseAdvertiser
                         client="ca-pub-2382342018701919"
                         slot="5663135072"
                         format="auto"
                         responsive="true"
-                    />
+                    /> */}
                 </div>
             </Fragment>
         );
