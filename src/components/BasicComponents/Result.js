@@ -512,7 +512,6 @@ class Result extends Component {
                                 쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
                             </button>
                         </a>
-                        <p className='result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
                     </div>
                 </div>
             )
@@ -956,6 +955,7 @@ class Result extends Component {
                         {this.pplBannerRenderer()}
                     </div>
                     {this.adTagRenderer()}
+                    <p className='result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
                     <p><b>*(추천) 사파리, 크롬 네이버 브라우저에서<br />조금 더 쾌적하게 이용 가능합니다!</b></p>
 
                     <OtherLangIcons currentTest={this.state.current_test}/>
