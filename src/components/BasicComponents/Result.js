@@ -428,20 +428,18 @@ class Result extends Component {
     };
 
     adTagRenderer(){
-        if (!this.state.ppl_list.includes(this.state.current_test)) {
-            return(
-                <Fragment>
-                    <div id="protag-in_article_video"></div>
-                        <ScriptTag type="text/javascript">
-                            {`window.googletag = window.googletag || { cmd: [] };
-                            window.protag = window.protag || { cmd: [] };
-                            window.protag.cmd.push(function () {
-                                window.protag.display("protag-in_article_video");
-                            });`}
-                        </ScriptTag>
-                </Fragment>
-            )
-        }
+        return(
+            <Fragment>
+                <div id="protag-in_article_video"></div>
+                    <ScriptTag type="text/javascript">
+                        {`window.googletag = window.googletag || { cmd: [] };
+                        window.protag = window.protag || { cmd: [] };
+                        window.protag.cmd.push(function () {
+                            window.protag.display("protag-in_article_video");
+                        });`}
+                    </ScriptTag>
+            </Fragment>
+        )
     };
 
     affiliateRenderer(){
@@ -726,7 +724,6 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        {this.adTagRenderer()}
                         {this.state.isOpened || this.state.coupangCookies
                         ? (<img src={img_src} className='result-img' alt={final_type} />)
                         : (<>
@@ -777,7 +774,6 @@ class Result extends Component {
                     </Helmet>
                     <PCTMBTIBAR result_score={result_score} result_color={result_color} bg_img_src={bg_img_src} />
                     <img src={img_src} className='result-img' alt={final_type} />
-                    {this.adTagRenderer()}
                 </Fragment>
             )
         } else if(this.state.current_test === "dogSounds" || this.state.current_test === "dogSoundsEng") {
@@ -919,7 +915,7 @@ class Result extends Component {
                         {/* PPL banner image */}
                         {this.pplBannerRenderer()}
                     </div>
-
+                    {this.adTagRenderer()}
                     <p><b>*(추천) 사파리, 크롬 네이버 브라우저에서<br />조금 더 쾌적하게 이용 가능합니다!</b></p>
 
                     <OtherLangIcons currentTest={this.state.current_test}/>
