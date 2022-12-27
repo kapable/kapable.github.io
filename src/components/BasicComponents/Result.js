@@ -341,6 +341,8 @@ class Result extends Component {
         let personalColor2022List = ["personalColor2022Eng", "personalColor2022CN"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
+        let flowerBTIList = ["flowerBTIEng"];
+        let oneSidedList = ["oneSidedLoveEng"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -409,6 +411,34 @@ class Result extends Component {
                     href='https://ktestone.com/kapable.github.io/personalColorEng/'
                     className="to-ppl-banner-text"
                     > <img src={`https://images.ktestone.com/main-thumbnail/personalColorEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                </Fragment>
+            )
+        } else if (flowerBTIList.includes(this.state.current_test)) {
+            return (
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/oneSidedLoveEng/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/oneSidedLoveEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                </Fragment>
+            )
+        } else if (oneSidedList.includes(this.state.current_test)) {
+            return (
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/flowerBTIEng/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/flowerBTIEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/personalColor2022Eng/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor2022Eng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                 </Fragment>
             )
         }
