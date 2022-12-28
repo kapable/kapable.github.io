@@ -27,7 +27,7 @@ const TESTS = [
     {
         info : {
             mainTitle:"Smile Dating Test",
-            subTitle:"Let's find out your dating style with a smiley character | Smile test | Smile love test",
+            subTitle:"Let's find out your dating style with a smiley character | Smile test | Smile love test | smile date test",
             mainUrl:"smileColorTestEng",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/smileColorTestEng-intro.jpg",
