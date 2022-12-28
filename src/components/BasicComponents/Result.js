@@ -342,6 +342,9 @@ class Result extends Component {
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let flowerBTIList = ["flowerBTIEng"];
         let oneSidedList = ["oneSidedLoveEng"];
+        let kbmtiList = ["kbmti"];
+        let oneSidedLoveList = ["oneSidedLove"];
+        let snowflakeList = ["snowflake"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -461,6 +464,75 @@ class Result extends Component {
                     href='https://ktestone.com/kapable.github.io/personalColor2022Eng/'
                     className="to-ppl-banner-text"
                     > <img src={`https://images.ktestone.com/main-thumbnail/personalColor2022Eng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                </Fragment>
+            )
+        } else if (kbmtiList.includes(this.state.current_test)) {
+            return (
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/yearEndParty2022/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/yearEndParty2022-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/snowflake/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/snowflake-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/personalColor2023/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor2023-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                </Fragment>
+            )
+        } else if (oneSidedLoveList.includes(this.state.current_test)) {
+            return (
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/persoanlSixteenSkin/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/persoanlSixteenSkin-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/snowflake/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/snowflake-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/personalColor2023/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor2023-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                </Fragment>
+            )
+        } else if (snowflakeList.includes(this.state.current_test)) {
+            return (
+                <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/persoanlSixteenSkin/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/persoanlSixteenSkin-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/personalColor2023/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor2023-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/oneSidedLove/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/oneSidedLove-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                 </Fragment>
             )
         } else {
