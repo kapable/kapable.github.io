@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // smileColorTestEng
+    // {
+    //     info : {
+    //         mainTitle:"Smile Dating Test",
+    //         subTitle:"Let's find out your dating style with a smiley character | Smile test | Smile love test",
+    //         mainUrl:"smileColorTestEng",
+    //         scoreType:"typeCountingMBTI",
+    //         mainImage:"https://images.ktestone.com/introImages/smileColorTestEng-intro.jpg",
+    //         thumbImage:"https://images.ktestone.com/main-thumbnail/smileColorTestEng-thumb.png",
+    //         horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+    //         lang:"Eng"
+    //     },
+    //     questions:[
+    //         {
+    //             which:"EI",
+    //             question: 'When you have no plan for the weekend,\nwhat will you do?',
+    //             answers:[
+    //                 {
+    //                     type: "E",
+    //                     score: 2,
+    //                     content: 'I will call my friends or\nacquaintances right away to make\nan appointment for the weekend.'
+    //                 },
+    //                 {
+    //                     type: "I",
+    //                     score: 5,
+    //                     content: 'I will lie in bed all day and rest.'
+    //                 },
+    //             ],
+    //         },
+    //         {
+    //             which:"EI",
+    //             question: "What will you do if you have\nan unexpected appointment suddenly?",
+    //             answers:[
+    //                 {
+    //                     type: "E",
+    //                     score: 2,
+    //                     content: "It will be fun!\nI will go to the appointment\nif I have nothing special."
+    //                 },
+    //                 {
+    //                     type: "I",
+    //                     score: 5,
+    //                     content: "Because it is not one of my plans,\nI will just make some excuses."
+    //                 },
+    //             ]
+    //         },
+    //         {
+    //             which:"EI",
+    //             question: "What will you do when a friend\ntakes you to a blind date?",
+    //             answers:[
+    //                 {
+    //                     type: "E",
+    //                     score: 2,
+    //                     content: "I will take the initiative first\nand try to improve the atmosphere."
+    //                 },
+    //                 {
+    //                     type: "I",
+    //                     score: 5,
+    //                     content: "I will wait until someone talk to me first."
+    //                 },
+    //             ]
+    //         },
+    //         {
+    //             which:"SN",
+    //             question: "What do you think when you get on a plane for a trip?",
+    //             answers:[
+    //                 {
+    //                     type: "S",
+    //                     score: 2,
+    //                     content: "I wish it arrives ASAP."
+    //                 },
+    //                 {
+    //                     type: "N",
+    //                     score: 5,
+    //                     content: "It's gonna be fun!\nhowever I may wonder how this airplane can fly?"
+    //                 },
+    //             ]
+    //         },
+    //         {
+    //             which:"SN",
+    //             question: "What are your concerns when you eat out?",
+    //             answers:[
+    //                 {
+    //                     type: "S",
+    //                     score: 2,
+    //                     content: "I'm worried about which of\nthe two favorite foods to eat at the restaurant"
+    //                 },
+    //                 {
+    //                     type: "N",
+    //                     score: 5,
+    //                     content: "While I'm eating,\nI may think about what to eat for next meal."
+    //                 },
+    //             ]
+    //         },
+    //         {
+    //             which:"SN",
+    //             question: "After you see a music contest,\nwhat can be your response?",
+    //             answers:[
+    //                 {
+    //                     type: "S",
+    //                     score: 2,
+    //                     content: "Wow it is really grand.\nI will listen to this song every day once it comes out."
+    //                 },
+    //                 {
+    //                     type: "N",
+    //                     score: 5,
+    //                     content: "Wow.. are those lyrics based on\nthe story of that person's experience?\nPerhaps, I wonder how long they practiced."
+    //                 },
+    //             ]
+    //         },
+    //         {
+    //             which:"TF",
+    //             question: "How will you react when your friend tells you\nthat he/she went shopping because he/she was depressed?",
+    //             answers:[
+    //                 {
+    //                     type: "T",
+    //                     score: 2,
+    //                     content: "What did you buy?\nIt wasn't an impulse purchase, was it?"
+    //                 },
+    //                 {
+    //                     type: "F",
+    //                     score: 5,
+    //                     content: "What happened?\nDid you go shopping all of a sudden?"
+    //                 },
+    //             ]
+    //         },
+    //         {
+    //             which:"TF",
+    //             question: "A friend suddenly said that he just had passed an exam.\nWhat can be your reaction?",
+    //             answers:[
+    //                 {
+    //                     type: "T",
+    //                     score: 2,
+    //                     content: "Oh what test was it?\ncongratulations!"
+    //                 },
+    //                 {
+    //                     type: "F",
+    //                     score: 5,
+    //                     content: "Wow congratulations!\nYou must have worked hard. Good job!"
+    //                 },
+    //             ]
+    //         },
+    //         {
+    //             which:"TF",
+    //             question: "When your girlfriend suddenly loses something important,\nwhat can be your reaction?",
+    //             answers:[
+    //                 {
+    //                     type: "T",
+    //                     score: 2,
+    //                     content: "How did you lose it?\nWhere did you last see it?"
+    //                 },
+    //                 {
+    //                     type: "F",
+    //                     score: 5,
+    //                     content: "That was what you loved.\nI feel sorry. "
+    //                 },
+    //             ]
+    //         },
+    //         {
+    //             which:"JP",
+    //             question: "What will you do when going to a restaurant with your lover?",
+    //             answers:[
+    //                 {
+    //                     type: "J",
+    //                     score: 2,
+    //                     content: "I will make a reservation in advance and decide what to eat."
+    //                 },
+    //                 {
+    //                     type: "P",
+    //                     score: 5,
+    //                     content: "Just before going to eat,\nI may rush to find a right place to make a reservation."
+    //                 },
+    //             ]
+    //         },
+    //         {
+    //             which:"JP",
+    //             question: "How do you choose a date dress?",
+    //             answers:[
+    //                 {
+    //                     type: "J",
+    //                     score: 2,
+    //                     content: "The day before,\nI set from head to toe."
+    //                 },
+    //                 {
+    //                     type: "P",
+    //                     score: 5,
+    //                     content: "I may choose my best clothes\njust before I go out on the day."
+    //                 },
+    //             ]
+    //         },
+    //         {
+    //             which:"JP",
+    //             question: "What will you do if you decide to go on a trip with your lover?",
+    //             answers:[
+    //                 {
+    //                     type: "J",
+    //                     score: 2,
+    //                     content: "I will make a detailed plan for each day in advance."
+    //                 },
+    //                 {
+    //                     type: "P",
+    //                     score: 5,
+    //                     content: "Just by buying a plane ticket,\nI think, 70% of preparation is done."
+    //                 },
+    //             ]
+    //         },
+    //     ],
+    //     results:[
+    //         {
+    //             type: "ESTJ",
+    //             desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+    //             `,
+    //             query: "mint",
+    //             score_range:range(26),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/ESTJ.jpg'
+    //         },
+    //         {
+    //             type: "ESTP",
+    //             desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+    //             query: "yellow",
+    //             score_range:range(26, 51),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/ESTP.jpg'
+    //         },
+    //         {
+    //             type: "ESFJ",
+    //             desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+    //             query: "pink",
+    //             score_range:range(51, 75),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/ESFJ.jpg'
+    //         },
+    //         {
+    //             type: "ESFP",
+    //             desc: `친숙한 댕댕이 , 리트리버\n`,
+    //             query: "purple",
+    //             score_range:range(76, 101),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/ESFP.jpg'
+    //         },
+    //         {
+    //             type: "ENTJ",
+    //             desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+    //             query: "blue",
+    //             score_range:range(76, 101),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/ENTJ.jpg'
+    //         },
+    //         {
+    //             type: "ENTP",
+    //             desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+    //             `,
+    //             query: "red",
+    //             score_range:range(26),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/ENTP.jpg'
+    //         },
+    //         {
+    //             type: "ENFJ",
+    //             desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+    //             query: "orange",
+    //             score_range:range(26, 51),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/ENFJ.jpg'
+    //         },
+    //         {
+    //             type: "ENFP",
+    //             desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+    //             query: "olive",
+    //             score_range:range(51, 75),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/ENFP.jpg'
+    //         },
+    //         {
+    //             type: "ISTJ",
+    //             desc: `친숙한 댕댕이 , 리트리버\n`,
+    //             query: "burgundy",
+    //             score_range:range(76, 101),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/ISTJ.jpg'
+    //         },
+    //         {
+    //             type: "ISTP",
+    //             desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+    //             query: "beige",
+    //             score_range:range(76, 101),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/ISTP.jpg'
+    //         },
+    //         {
+    //             type: "ISFJ",
+    //             desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+    //             query: "navy",
+    //             score_range:range(76, 101),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/ISFJ.jpg'
+    //         },
+    //         {
+    //             type: "ISFP",
+    //             desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+    //             `,
+    //             query: "grey",
+    //             score_range:range(26),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/ISFP.jpg'
+    //         },
+    //         {
+    //             type: "INTJ",
+    //             desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+    //             query: "khaki",
+    //             score_range:range(26, 51),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/INTJ.jpg'
+    //         },
+    //         {
+    //             type: "INTP",
+    //             desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+    //             query: "green",
+    //             score_range:range(51, 75),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/INTP.jpg'
+    //         },
+    //         {
+    //             type: "INFJ",
+    //             desc: `친숙한 댕댕이 , 리트리버\n`,
+    //             query: "brown",
+    //             score_range:range(76, 101),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/INFJ.jpg'
+    //         },
+    //         {
+    //             type: "INFP",
+    //             desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+    //             query: "sky",
+    //             score_range:range(76, 101),
+    //             img_src:'https://images.ktestone.com/resultImages/smileColorTestEng/INFP.jpg'
+    //         },
+    //     ]
+    // },
     // snowflakeEng
     {
         info : {
