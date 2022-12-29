@@ -620,9 +620,10 @@ class Result extends Component {
 
     affiliateRenderer(){
         const cookieRocketCoupangLink = "https://link.coupang.com/a/JSIHC";
-        let otherAdProb = 0.4 >= Math.random();
+        let otherAdProb = 0.3 >= Math.random();
         const othersLink = [
             { test: "personalScentBTI", coupangLink: "https://link.coupang.com/a/FFVJ2" },
+            { test: "chaebol", coupangLink: "https://link.coupang.com/a/JUjGP" },
         ];
         const testsArray = othersLink.map(({ test }) => test);
         return (
