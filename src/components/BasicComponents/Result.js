@@ -434,6 +434,12 @@ class Result extends Component {
                     <a
                     target="_blank"
                     rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/smileColorTestEng/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/smileColorTestEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href='https://ktestone.com/kapable.github.io/snowflakeEng/'
                     className="to-ppl-banner-text"
                     > <img src={`https://images.ktestone.com/main-thumbnail/snowflakeEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
@@ -448,6 +454,12 @@ class Result extends Component {
         } else if (oneSidedList.includes(this.state.current_test)) {
             return (
                 <Fragment>
+                    <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href='https://ktestone.com/kapable.github.io/smileColorTestEng/'
+                    className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/main-thumbnail/smileColorTestEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                     <a
                     target="_blank"
                     rel="noopener noreferrer"
