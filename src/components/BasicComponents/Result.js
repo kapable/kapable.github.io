@@ -52,13 +52,8 @@ class Result extends Component {
             num_shares_count:0,
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
-            amazonCookies: cookies.get('amazon') || null,
-            rakutenCookies: cookies.get('rakuten') || null,
             isOpened: false,
             adProb: 1.1 >= Math.random(),
-            coupangLink: "https://link.coupang.com/a/l7x1e",
-            coupangLink2: "https://link.coupang.com/a/FFVJ2",
-            amazonLink: "https://www.amazon.com/?&_encoding=UTF8&tag=ktestone-20&linkCode=ur2&linkId=adc3bdba997e0a439e4fa8467501bc3a&camp=1789&creative=9325",
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
         this._eventSenderGA = this._eventSenderGA.bind(this);
@@ -68,18 +63,7 @@ class Result extends Component {
         this.adTagRenderer = this.adTagRenderer.bind(this);
         this.otherTestBannerRenderer = this.otherTestBannerRenderer.bind(this);
         this.onCoupangButtonClick = this.onCoupangButtonClick.bind(this);
-        this.onAmazonButtonClick = this.onAmazonButtonClick.bind(this);
-    };
-    
-    onAmazonButtonClick(){
-        const { cookies } = this.props;
-        const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
-        cookies.set('amazon', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
-        this.setState({
-            amazonCookies: cookies.get('amazon'),
-            isOpened: true,
-        });
-        this._eventSenderGA("Paging", "Click go-to-Amazon Button", "result page");
+        this.onOtherCoupangButtonClick = this.onOtherCoupangButtonClick.bind(this);
     };
 
     onCoupangButtonClick(){
@@ -91,6 +75,18 @@ class Result extends Component {
             isOpened: true,
         });
         this._eventSenderGA("Paging", "Click go-to-Coupang Button", "result page");
+        console.log("Click go-to-Coupang");
+    };
+    onOtherCoupangButtonClick(){
+        const { cookies } = this.props;
+        const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
+        cookies.set('coupang', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        this.setState({
+            coupangCookies: cookies.get('coupang'),
+            isOpened: true,
+        });
+        this._eventSenderGA("Paging", "Click go-to-Other-Coupang Button", "result page");
+        console.log("Click go-to-Other-Coupang");
     };
     
     _eventSenderGA(category, action, label){
@@ -596,39 +592,23 @@ class Result extends Component {
     };
 
     affiliateRenderer(){
-        if(window.location.href.includes("Others")) { // basically for Engl
-            return (
-                <Fragment>
-                    <a href={this.state.amazonLink} target="_blank" rel='noreferrer noopener'>
-                        <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onAmazonButtonClick}>
-                            View results after viewing Amazon
+        const cookieRocketCoupangLink = "https://link.coupang.com/a/JSIHC";
+        let otherAdProb = 0.4 >= Math.random();
+        const othersLink = [
+            { test: "personalScentBTI", coupangLink: "https://link.coupang.com/a/FFVJ2" },
+        ];
+        const testsArray = othersLink.map(({ test }) => test);
+        return (
+            <div className='article-adCover-div-1'>
+                <div className='article-adCover-div-2'>
+                    <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
+                        <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : this.onCoupangButtonClick}>
+                            쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
                         </button>
                     </a>
-                    <p className='result-coupang-comment'>* Affiliate disclosure: As an Amazon Associate,<br />we may earn commissions from qualifying purchases from Amazon.com</p>
-                </Fragment>
-            )
-        } else if (window.location.href.includes("JP") || window.location.href.includes("Jp")) {
-            return (
-                <Fragment>
-                    <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem'}} onClick={this.onAmazonButtonClick}>
-                        結果を見る
-                    </button>
-                    <p className='result-coupang-comment'>* 提携企業公示:<br />Amazon Associateで当社はAmazon.comで購入資格を取得し、<br />手数料を受け取ることができます。</p>
-                </Fragment>
-            )
-        } else {
-            return (
-                <div className='article-adCover-div-1'>
-                    <div className='article-adCover-div-2'>
-                        <a href={window.location.href.includes("personalScentBTI") || window.location.href.includes("personalIncense") ? this.state.coupangLink2 : this.state.coupangLink} target="_blank" rel='noreferrer noopener'>
-                            <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={this.onCoupangButtonClick}>
-                                쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
-                            </button>
-                        </a>
-                    </div>
                 </div>
-            )
-        }
+            </div>
+        )
     };
 
     resultRender(){
