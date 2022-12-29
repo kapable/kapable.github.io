@@ -26,8 +26,8 @@ const TESTS = [
     // fishShapedBun
     {
         info : {
-            mainTitle:"요즘 뜨는 재벌집 테스트",
-            subTitle:"나는 어떤 인물과 같을까? | 재벌집 테스트",
+            mainTitle:"붕어빵 성격 테스트",
+            subTitle:"붕어빵으로 알아보는 나의 성격 | 붕어빵 성격 테스트 | 붕어빵 테스트",
             mainUrl:"fishShapedBun",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/fishShapedBun-intro.jpg",
