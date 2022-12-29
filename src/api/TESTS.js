@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // chaebol
+    {
+        info : {
+            mainTitle:"요즘 뜨는 재벌집 테스트",
+            subTitle:"나는 어떤 인물과 같을까? | 재벌집 테스트",
+            mainUrl:"chaebol",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/chaebol-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/chaebol-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '집에 누워있는데 갑자기 친한 동료가 만나자고 한다?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '‘오히려 좋아’, 바로 나갈게!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '‘아 좀 귀찮은데…’, 미안 몸이 안좋아서ㅠ'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "빈 강의실에서 나는 어디에 앉을까?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "중앙 부분(주위에 사람들이 많아야 더 즐겁잖아)"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "벽 근처(벽에서 누군가 훅 치고 들어오진 않겠지)"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "오랜만에 동창회에 참석했을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "오랜만에 만난 친구들과 신나게 이야기함"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "예전에 친하게 지냈었던 친구들하고만 이야기함"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "회장님께 업무보고가 다가오는데 일이 손에 안잡힌다면, 무슨 생각을 할까?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "‘어떤 질문을 하실까?’, ‘어떤 부분을 더 수정해야하지?’"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "‘일 없는 세상은 어떨까?’, ‘업무보고는 왜 존재하고 왜 해야만 할까?’ "
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "업무보고(혹은 발표) 할 때 나의 스타일은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "이쪽 파트까지 5분 소요되니까, 두번째 파트와 세번째 파트에 3분씩 잡고 결론 부분은 4분정도 사용해야겠다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '이정도면 어림잡아 15분 정도 나오겠지?'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "비행기 타기 전 드는 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "기내식 뭐 나오지?’, ‘좌석 불편하지 않을까?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "비행기 떨어지면 어떡하지?’, ‘바다에 떨어지면 어떻게 살지? 구명조끼 챙겨야하나?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '“너 적성에 안 맞으니 그만둬”라는 말에 나는?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "그렇게 보여? 내가 다른 사람보다 발전이 느린가?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "너무 상처받게 말한다. 너무 싫어 그런말."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "축 처진 동료가 우울하다고 말했을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "왜 우울해? 뭐 때문에 우울한 거야?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "5초 만에 감정이입 완료. 같이 글썽거린다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "내 꿈에 대해 설명했을 때 “그게 돈이 되는 기가?”라고 하면",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "그러게? 그 부분까진 생각 못해봤네 의견 묻길 잘했다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "돈 얘기보단 같이 꿈에 대해 같이 얘기해주면 좋았을텐데… 속상해"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "회장님과 내일 점심 식사를 하기로 했다.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "아침은 가볍게 먹고,10시에 샴푸…11시 지하철이 빠르지, 먹고 나서 후식은…"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "이왕 이렇게 된 거 맛있게 먹고오자!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친한 동료와 해외여행 계획 짜게 된 나는",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "할 거면 제대로! 일별로 세부 일정을 정리한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "비행기 표만 끊어두고 계획의 80% 끝난다고 생각한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나는 어떤 삶을 더 선호?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "반복되는 일상/업무 선호, 편-안"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "쳇바퀴 같은 인생은 질색 매일매일 변화가 있어야 함"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "zkfltmak",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "djdEndaofur",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "smdfurdlTsms",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dmldyraks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ekdehfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ghlwkdsla",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "wkqhswndml",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "wkdbfhdns",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wjtmdtkwk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "goruftk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "rydiddlTsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "tmdnltrkdl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rPtkswjrdls",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "wjsfirwjrdls",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wpsxmfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENrtladlTsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chaebol/INFP.jpg'
+            },
+        ]
+    },
     // smileColorTestEng
     {
         info : {
