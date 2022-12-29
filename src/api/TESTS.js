@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // fishShapedBun
+    {
+        info : {
+            mainTitle:"요즘 뜨는 재벌집 테스트",
+            subTitle:"나는 어떤 인물과 같을까? | 재벌집 테스트",
+            mainUrl:"fishShapedBun",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/fishShapedBun-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/fishShapedBun-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '새로운 모임의 단톡방이 만들어 졌을 때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '어색한 분위기를 살리려고 인사하고, 리액션이나 이모티콘을 사용해 본다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '인사만 하고 별다른 톡은 남기지 않는다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "내가 세우는 주말 계획은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "평일에 회사에만 있었으니 주말엔 밖에서 신나게 놀아야지!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "평일에 회사에만 나와있었으니까 주말엔 집에서 푹 쉬어야겠다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "친구들과 알차게 놀고나서 집갈 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "오늘 너무 알차게 놀았다! 에너치 충전완료!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "아 재밌었다! 이제 집에 가서 좀 쉬어야지.."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연극을 볼 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "배우들의 연기에 집중해서 본다. 연극 자체에 몰입해서 본다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "연극 중에 반전이나, 숨겨져 있는 메시지가 있지 않을까 생각하면서 본다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "처음으로 가보는 해외여행 전날 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "빨리 내일이 오기만 바라면서 바로 잔다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '누워서 여행가서 재밌게 노는 상상을 하다가 잠든다.'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "집에서 누워서 쉴 때 내가 하는 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "아무 생각 안하고 그저 쉬는 것에 집중한다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "이런 저런 상상을 하면서 쉰다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '친구가 첫 월급으로 고가의 물건을 샀다고 했을 때 내 반응은?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "와 예쁜데? 근데 겁나 비싸겠다 얼마임?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "이열~ 열심히 일한 첫 월급으로 산거라 뿌듯하겠다 야"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 속 깊은 이야기를 털어놨을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "친구의 말을 끝까지 듣고 조언을 해준다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "친구의 말에 감정이입을 하며, 리액션을 잘 해준다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "물건을 살 때 내가 더 중요하게 보는 것은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "가격과 성능 등 실용적인 부분"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "예쁜게 최고지! 디자인과 감성"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "소개팅 나갈 옷을 고를 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "전날부터 머리부터 발끝 까지 깔끔하게 세팅해 놓는다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "당일 날 준비하면서 마음에 드는 옷으로 입고 나간다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "한 달 무료체험 구독 서비스를 끊고 마음에 안 들었을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "한달이 지난 시점에 맞춰서 바로 해지 한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "해지 해야지 하고 까먹고 몇 달 더 사용하다가 해지한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구들과 모이자는 말이 나왔을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "몇 일, 몇 시, 어디서, 무엇을 할건지 세세하게 정해놓지 않으면 불안함을 느낀다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "다들 시간 되서 만난다고 확정나면 나머지는 어떻게든 된다고 생각한다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "clwm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "chzh",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "Ekfrl",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "eksvkx",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gmrdlawk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "alsxmchzh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "wktorrhrnak",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "tbzmfla",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "rlacl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "rjadmszhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "Tnr",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "tmdnltrkdl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "eksghqkr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qksksk",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "EKdzhdqjxj",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shrck",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBun/INFP.jpg'
+            },
+        ]
+    },
     // chaebol
     {
         info : {
