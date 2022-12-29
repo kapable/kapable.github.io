@@ -20,6 +20,7 @@ import { instanceOf } from 'prop-types';
 import { withCookies, Cookies } from 'react-cookie';
 import '../TestTypes/FactPok/factPok.css';
 import ShareGroup from './ShareGroup';
+import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 
 class Result extends Component {
     static propTypes = {
@@ -341,6 +342,7 @@ class Result extends Component {
         let kbmtiList = ["kbmti"];
         let oneSidedLoveList = ["oneSidedLove"];
         let snowflakeList = ["snowflake"];
+        let fishShapedBunList = ["fishShapedBun"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -366,216 +368,223 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
+            const rederTestList = ["smileColorTestEng", "snowflakeEng", "flowerBTIEng", "oneSidedLoveEng"];
             return(
                 <Fragment>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/smileColorTestEng/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/smileColorTestEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/snowflakeEng/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/snowflakeEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/flowerBTIEng/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/flowerBTIEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/oneSidedLoveEng/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/oneSidedLoveEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    {rederTestList.map((test) => (
+                        <>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="5663135072"
+                                format="auto"
+                                responsive="true"
+                            />
+                        </>
+                    ))}
                 </Fragment>
             )
         } else if (percentageMBTI2022ListKor.includes(this.state.current_test)) {
+            const rederTestList = ["personalColor2022", "personalColor"];
             return(
                 <Fragment>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/personalColor2022/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor2022-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/personalColor/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    {rederTestList.map((test) => (
+                        <>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="5663135072"
+                                format="auto"
+                                responsive="true"
+                            />
+                        </>
+                    ))}
                 </Fragment>
             )
         } else if (percentageMBTI2022ListOverseas.includes(this.state.current_test)) {
+            const rederTestList = ["personalColor2022Eng", "personalColorEng"];
             return(
                 <Fragment>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/personalColor2022Eng/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor2022Eng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/personalColorEng/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColorEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    {rederTestList.map((test) => (
+                        <>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="5663135072"
+                                format="auto"
+                                responsive="true"
+                            />
+                        </>
+                    ))}
                 </Fragment>
             )
         } else if (flowerBTIList.includes(this.state.current_test)) {
+            const rederTestList = ["fishShapedBun", "smileColorTestEng", "snowflakeEng", "oneSidedLoveEng"];
             return (
                 <Fragment>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/smileColorTestEng/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/smileColorTestEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/snowflakeEng/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/snowflakeEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/oneSidedLoveEng/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/oneSidedLoveEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    {rederTestList.map((test) => (
+                        <>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="5663135072"
+                                format="auto"
+                                responsive="true"
+                            />
+                        </>
+                    ))}
                 </Fragment>
             )
         } else if (oneSidedList.includes(this.state.current_test)) {
+            const rederTestList = ["smileColorTestEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
             return (
                 <Fragment>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/smileColorTestEng/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/smileColorTestEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/snowflakeEng/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/snowflakeEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/flowerBTIEng/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/flowerBTIEng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/personalColor2022Eng/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor2022Eng-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    {rederTestList.map((test) => (
+                        <>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="5663135072"
+                                format="auto"
+                                responsive="true"
+                            />
+                        </>
+                    ))}
                 </Fragment>
             )
         } else if (kbmtiList.includes(this.state.current_test)) {
+            const rederTestList = ["fishShapedBun", "smileColorTest", "yearEndParty2022", "snowflake", "personalColor2023",];
             return (
                 <Fragment>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/yearEndParty2022/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/yearEndParty2022-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/snowflake/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/snowflake-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/personalColor2023/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor2023-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    {rederTestList.map((test) => (
+                        <>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="5663135072"
+                                format="auto"
+                                responsive="true"
+                            />
+                        </>
+                    ))}
                 </Fragment>
             )
         } else if (oneSidedLoveList.includes(this.state.current_test)) {
+            const rederTestList = ["fishShapedBun", "smileColorTest", "persoanlSixteenSkin", "snowflake", "personalColor2023",];
             return (
                 <Fragment>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/persoanlSixteenSkin/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/persoanlSixteenSkin-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/snowflake/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/snowflake-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/personalColor2023/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor2023-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    {rederTestList.map((test) => (
+                        <>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="5663135072"
+                                format="auto"
+                                responsive="true"
+                            />
+                        </>
+                    ))}
                 </Fragment>
             )
         } else if (snowflakeList.includes(this.state.current_test)) {
+            const rederTestList = ["smileColorTest", "fishShapedBun", "personalColor2023", "oneSidedLove"];
             return (
                 <Fragment>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/persoanlSixteenSkin/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/persoanlSixteenSkin-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/personalColor2023/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/personalColor2023-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/oneSidedLove/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/oneSidedLove-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    {rederTestList.map((test) => (
+                        <>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="5663135072"
+                                format="auto"
+                                responsive="true"
+                            />
+                        </>
+                    ))}
+                </Fragment>
+            )
+        } else if (fishShapedBunList.includes(this.state.current_test)) {
+            const rederTestList = ["smileColorTest", "personalColor2023", "oneSidedLove", "persoanlSixteenSkin"];
+            return (
+                <Fragment>
+                    {rederTestList.map((test) => (
+                        <>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="5663135072"
+                                format="auto"
+                                responsive="true"
+                            />
+                        </>
+                    ))}
                 </Fragment>
             )
         } else {
+            const rederTestList = ["fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
             return(
                 <Fragment>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/fishShapedBun/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/fishShapedBun-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/persoanlSixteenSkin/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/persoanlSixteenSkin-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/oneSidedLove/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/oneSidedLove-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/kbmti/'
-                    className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/kbmti-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    {rederTestList.map((test) => (
+                        <>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="5663135072"
+                                format="auto"
+                                responsive="true"
+                            />
+                        </>
+                    ))}
                 </Fragment>
             )
         }
@@ -643,7 +652,7 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ["fishShapedBun", "chaebol", "smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
+            let ppl_list = ["chaebol", "smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
             let tonymoly_list = ["factPok", "MyFactPok", "FriendFactPok",];
             if(ppl_list.includes(this.state.current_test)) {
