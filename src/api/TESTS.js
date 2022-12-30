@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // rabbit2023
+    {
+        info : {
+            mainTitle:"2023 흑묘년 토끼 테스트",
+            subTitle:"2023 흑묘년 나는 무슨 토끼일까? | 2023 흑묘년 토끼 성격 테스트 | 토끼 테스트",
+            mainUrl:"rabbit2023",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/rabbit2023-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/rabbit2023-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '2023년 1월 나의 모습은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '연말에 만나지 못했던 사람들 가득!\n신년회 약속으로 보낸다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '이제 새로운 한 해 시작이다!\n작년 한 해를 마무리하는 시간을 가지며 에너지를 충전한다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "친구들과의 여행에서 선호하는 유형이 있다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "아쉽지 않게 여행지 구석구석을 돌아다니기!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "조용한 숙소에서 우리끼리 휴식 취하기!"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "일에 대한 고민이 생겼다,\n지인들과 어디까지 얘기를 할까?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "다른 사람과 이야기했을 때 내가 생각지도 못한\n결과물이 나올 수 있기에 고민 상담을 최대한 한다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "아주 가까운 지인 1명에게만 고민 상담을 한다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "2023년 친구들과 일출을 보러 간 나의 모습은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "어플을 보니 오늘 해는 7시 46분에 뜬다고 했어!\n얼른 사진 찍어서 SNS에 올려야지!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "1년이라는 시간을 참 길었구나..\n올해에는 무슨 소원을 빌지?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "친구들과 새해 모임통장을 하기로 하였다!\n가장 먼저 하고 싶은 일은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "누구 계좌에 각자 얼마를 넣을지 먼저 얘기한다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '모임 통장으로 앞으로 어떻게 쓸 것인지 먼저 얘기힌다.'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 더 좋아하는 사람의 유형이 이 중에 있다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "이론을 적용하여 문제 해결에 기쁨을 느끼는 이과생"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "철학과 문학에 대한 사색과 토론을 즐기는 문과생"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '2023년 연인이 나를 위한 새해 이벤트를 준비했다면\n내가 할 칭찬은?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "고마워 요즘 바쁠 텐데 언제 이런 걸 생각했어?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "사랑해 최고야 나 정말 감동했어..."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 축- 쳐진 상태로 우울하다고 말했을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "왜 우울해?\n뭐 때문에 우울한 거야?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "5초 만에 감정이입 완료..\n같이 글썽거린다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "연인이 나와 싸운 얘기를 친구들에게 하며 불만을 얘기했다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "자기도 완벽하지 않으면서 내 욕을 해?\n화가 난다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "어떻게 나에 대해 얘기할 수 있지?\n속상하다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "2023년 신년 계획을 세워본다면 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "1월부터 12월까지 월단위로 계획을 세운다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "언제까지 “이건 꼭 해야지”\n정도의 기한만 정해둔다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "SNS핫플을 가기로 한 나,\n나들이 룩을 고를 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "전날에 머리부터 발끝까지 세팅해둔다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "나가기 직전 마음에 드는 옷을 입는다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "2023년 어느 날,\n갑자기 내일 세상이 멸망한다고 하면\n오늘 하고 싶은 데이트는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "지금까지 지냈던 일상이 가장 소중해,\n특별한 것은 없지만 소소하게 평소처럼 보낸다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "지금까지 못해봤던 게 너무 억울해!\n시도해 보지 않았던 특별한 데이트로 꽉꽉 채운다!"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qnrrmr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "xnfldksxk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "clsclffk",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ejcl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "apffjfnem",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "cpzmansml",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "fkdldjsgpem",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fhqdldj",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "xpelemdnjvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkqksk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "fprtm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "aktmzkfk",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "zofflvhsldk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "tia",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dldrmffltl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "todkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rabbit2023/INFP.jpg'
+            },
+        ]
+    },
     // fishShapedBun
     {
         info : {
