@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // fishShapedBunEng
+    {
+        info : {
+            mainTitle:"붕어빵 성격 테스트",
+            subTitle:"붕어빵으로 알아보는 나의 성격 | 붕어빵 성격 테스트 | 붕어빵 테스트",
+            mainUrl:"fishShapedBunEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/fishShapedBunEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/fishShapedBunEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'When a new group chatting rom is created by a new group,\nI will?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Say hello to break the ice and\nuse the reactions or emoticons.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Just say hello and not leave any particular message.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What is my weekend plan?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "As I have to work in the office on weekdays,\nI will have a fun outside on weekends"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "As I have to work in the office on weekdays,\nI will take a full rest at home on weekends"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "After having a good time with friends,\non the way back home, I will",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I had a great fun!\nI recharged my energy fully"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Ah, it was great! Now,\nI should go back home and have a rest.."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When I watch a play,\nI will",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I concentrate on watching the actors’ performances.\nI spend time focusing on the play itself."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "I watch the play trying to\nfind a twist or hidden message"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "A day before making an overseas travel in my life,\nI will",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Go to sleep longing for the next day."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: 'Imagine a pleasant travel laying on\nmy bed and fall in sleep.'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When taking a rest at home,\nI will",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Think nothing and just focus on the rest only"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Take a rest imaging this and that"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: 'When my friend says she buy an expensive product\nwith her first salary, I will ',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Say what a pretty thing it is! By the way,\nhow much did you pay for it?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Say you feel confident as you have worked hard\nand paid for it with your first salary"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When a friend tells you about her own privacy,\nI will",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Listen to her completely and\ngive her a piece of advice."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Empathize with her and react well"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When I buy a good,\nI will value more for",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Practical things such as price and function etc"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Pretty one is the best!\nDesign and sensibility"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When I go for a blind date and choose clothes,\nI will",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Neatly set from head to toe on the previous day."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Just pick up the closes I like on the day."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When I subscribe a month free trial service\nbut don’t like it, I will",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Just unsubscribe at the time of one month passed"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Forget to unsubscribe it and\nfinally unsubscribe it several months later"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When my friends talk to me for gathering together,\nI will",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Feel anxious unless the time, the date,\nthe day for the meeting and things to do are firmly confirmed in detail."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Think I follow them if they fix the schedule"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "clwm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "chzh",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "Ekfrl",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "eksvkx",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gmrdlawk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "alsxmchzh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "wktorrhrnak",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "tbzmfla",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "rlacl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "rjadmszhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "Tnr",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "tmdnltrkdl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "eksghqkr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qksksk",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "EKdzhdqjxj",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shrck",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/fishShapedBunEng/INFP.jpg'
+            },
+        ]
+    },
     // rabbit2023
     {
         info : {

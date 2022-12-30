@@ -334,7 +334,7 @@ class Result extends Component {
 
     otherTestBannerRenderer() {
         let personalColor2022ListKor = [];
-        let EngTestList = ["smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
+        let EngTestList = ["fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let flowerBTIList = ["flowerBTIEng"];
@@ -369,7 +369,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
-            const rederTestList = ["smileColorTestEng", "snowflakeEng", "flowerBTIEng", "oneSidedLoveEng"];
+            const rederTestList = ["fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "oneSidedLoveEng"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -413,7 +413,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (percentageMBTI2022ListOverseas.includes(this.state.current_test)) {
-            const rederTestList = ["personalColor2022Eng", "personalColorEng"];
+            const rederTestList = ["fishShapedBunEng", "personalColor2022Eng", "personalColorEng"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -435,7 +435,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (flowerBTIList.includes(this.state.current_test)) {
-            const rederTestList = ["fishShapedBun", "smileColorTestEng", "snowflakeEng", "oneSidedLoveEng"];
+            const rederTestList = ["fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "oneSidedLoveEng"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -457,7 +457,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (oneSidedList.includes(this.state.current_test)) {
-            const rederTestList = ["smileColorTestEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
+            const rederTestList = ["fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -677,7 +677,7 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ["smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
+            let ppl_list = ["fishShapedBunEng", "smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
             let tonymoly_list = ["factPok", "MyFactPok", "FriendFactPok",];
             if(ppl_list.includes(this.state.current_test)) {
