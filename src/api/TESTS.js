@@ -33,7 +33,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/fishShapedBunEng-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/fishShapedBunEng-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Kor"
+            lang:"Eng"
         },
         questions:[
             {
