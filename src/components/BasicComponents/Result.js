@@ -391,7 +391,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (percentageMBTI2022ListKor.includes(this.state.current_test)) {
-            const rederTestList = ["personalColor2022", "personalColor"];
+            const rederTestList = ["luckyBag2023", "personalColor2022", "personalColor"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -479,7 +479,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (kbmtiList.includes(this.state.current_test)) {
-            const rederTestList = ["fishShapedBun", "smileColorTest", "yearEndParty2022", "snowflake", "personalColor2023",];
+            const rederTestList = ["luckyBag2023", "fishShapedBun", "smileColorTest", "yearEndParty2022", "snowflake", "personalColor2023",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -501,7 +501,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (oneSidedLoveList.includes(this.state.current_test)) {
-            const rederTestList = ["fishShapedBun", "smileColorTest", "persoanlSixteenSkin", "snowflake", "personalColor2023",];
+            const rederTestList = ["luckyBag2023", "fishShapedBun", "smileColorTest", "persoanlSixteenSkin", "snowflake", "personalColor2023",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -523,7 +523,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (snowflakeList.includes(this.state.current_test)) {
-            const rederTestList = ["smileColorTest", "fishShapedBun", "personalColor2023", "oneSidedLove"];
+            const rederTestList = ["luckyBag2023", "smileColorTest", "fishShapedBun", "personalColor2023", "oneSidedLove"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -545,7 +545,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (fishShapedBunList.includes(this.state.current_test)) {
-            const rederTestList = ["smileColorTest", "personalColor2023", "oneSidedLove", "persoanlSixteenSkin"];
+            const rederTestList = ["luckyBag2023", "smileColorTest", "personalColor2023", "oneSidedLove", "persoanlSixteenSkin"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -567,7 +567,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (rabbit2023List.includes(this.state.current_test)) {
-            const rederTestList = ["fishShapedBun", "smileColorTest", "lovejewerly"];
+            const rederTestList = ["luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -589,7 +589,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
+            const rederTestList = ["luckyBag2023", "fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -648,6 +648,7 @@ class Result extends Component {
             { test: "personalScentBTI", coupangLink: "https://link.coupang.com/a/FFVJ2" },
             { test: "chaebol", coupangLink: "https://link.coupang.com/a/JUjGP" },
             { test: "rabbit2023", coupangLink: "https://link.coupang.com/a/J8xPY" },
+            { test: "luckyBag2023", coupangLink: "https://link.coupang.com/a/FFVJ2" },
         ];
         const testsArray = othersLink.map(({ test }) => test);
         return (

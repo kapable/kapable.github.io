@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // luckyBag2023
+    {
+        info : {
+            mainTitle:"복주머니 테스트",
+            subTitle:"나의 2023년 새해 운세는? | 복주머니 운세 테스트 | 2023 복주머니 테스트",
+            mainUrl:"luckyBag2023",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/luckyBag2023-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/luckyBag2023-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '새해 운세를 점치고 싶을 때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '유명한 점집이나 사주카페를 방문하다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '전화 신점이나 사주 어플을 이용한다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "나는 보통 연휴에",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "그동안 못 봤던 친구들을 만나러 나간다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "집에서 쉬면서 못 봤던 영화나 드라마를 본다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "새해 인사를 할 때는",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "내가 먼저 사람들에게 새해 인사를 하는 편이다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "사람들에게 먼저 올 때까지 기다렸다 하는 편이다"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "당장 내일 죽게 된다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "무슨 말도 안 되는 소리야?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "죽으면 귀신이 될까? 천국과 지옥은 어떤 곳일까?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "가구를 조립할 때",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "설명서를 정독하고 정석 그대로 조립한다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '설명서는 거들 뿐. 내 감대로 조립한다'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나는 영화를 볼 때",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "기승전결이 확실한 닫힌 결말을 선호한다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "해석의 여지가 많은 열린 결말을 선호한다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '친구가 어떤 일로 스트레스를 받고 있다면?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "현실적으로 해결 가능한 방안을 제시해 준다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "친구가 느끼는 감정에 공감을 해주고 위로해 준다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "내가 더 중요하게 생각하는 것은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "과정보단 결과가 중요하다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "결과보단 과정이 더 중요하다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "”생각해 볼게“ 는",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "곰곰이 정말 생각해 본다는 뜻이다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "대충 거절이라는 뜻이다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나는 물건을 쓰고",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "제자리에 잘 두는 편이다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "아무 곳에 나 놔두는 편이다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "갑자기 생긴 신년 약속에",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "이미 할 일이 계획되어 있어서 거절한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "심심했는데 바로 알겠다고 한다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "새해 신년 계획을 세운다면",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "월별로 구체적인 목표와 방향을 세운다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "대충 큰 목표 하나만 정한다"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "godqhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "woanf",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gkrdjq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "tmdwls",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dlsrl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "tjdrhd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gkqrur",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "tkfkd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dhlah",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "smdfur",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "goddns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dydrl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ekdldjxm",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dugod",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "rjsrkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkfka",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/luckyBag2023/INFP.jpg'
+            },
+        ]
+    },
     // fishShapedBunEng
     {
         info : {
