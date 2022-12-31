@@ -642,7 +642,7 @@ class Result extends Component {
     };
 
     affiliateRenderer(){
-        const cookieRocketCoupangLink = "https://link.coupang.com/a/JSIHC";
+        const cookieRocketCoupangLink = "https://link.coupang.com/a/KgpKa";
         let otherAdProb = 0.3 >= Math.random();
         const othersLink = [
             { test: "personalScentBTI", coupangLink: "https://link.coupang.com/a/FFVJ2" },
