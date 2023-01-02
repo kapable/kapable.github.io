@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // bread2023
+    {
+        info : {
+            mainTitle:"새해 식빵 테스트",
+            subTitle:"식빵 캐릭터로 보는 새해 나의 성격은? | 식빵 테스트 | 2023 식빵 캐릭터 테스트",
+            mainUrl:"bread2023",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/bread2023-intro.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/bread2023-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '나의 새해 인사 스타일은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '먼저 연락해서 새해 인사를 한다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '먼저 새해 인사가 오면 답장을 한다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "처음 보는 사람과 대화할 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "적극적으로 대화를 이끌어 나간다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "상대방의 말에 맞춰주며 대화한다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "친구와 약속 잡을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "친구에게 먼저 연락하는 편이다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "친구에게 먼저 연락이 오는 편이다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "해돋이 보러 가는 길에 휴게소 표지판이 보일 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "아직 00휴게소구나 아직 멀었네."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "휴게소 가면 뭐 먹을지 미리 생각해 본다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "고속도로에 차가 너무 막힐 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "이래서 언제 도착하나 싶다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '목적지로 순간 이동하는 상상을 해본다.'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "가봤던 곳을 또 가게 되었을 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "이미 가봤던 곳이니, 최대한 빠른 길로 간다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "이 길로는 한 번 가봤으니, 다른 길로도 한 번 가본다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '친구가 운전 중 졸려 할 때 나는?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "휴게소, 졸음 쉼터 위치를 찾아 알려준다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "옆에서 쉴 틈 없이 계속 말을 걸어준다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "나에게 사과할 때 먼저 해야 하는 것은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "납득이 되는 자세한 상황 설명 먼저"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "진심 어린 사과 먼저"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "내가 받고 싶은 새해 선물은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "지금 나에게 딱 필요했던 실용적인 선물"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "예전에 흘리듯 말했던 것을 기억했다가 사준 선물"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "새해에 해돋이를 보러 가기 전 날 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "미리 차 막히는 구간,\n최적의 경로 등 세세하게 찾아보고 출발 준비를 한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "출발 시간만 정하고,\n차에 내비게이션이 있으니 일단 잔다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "새해에 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "새해 계획을 미리 다 짜놓았다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "아직 명확한 새해 계획은 없다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "새해에는 뭐든 정리를 잘해보겠다는 다짐을 한다고 했을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "원래 정리 잘 해서 굳이 다짐할 필요까지는 없다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "약간 자신 없다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "gjtp",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "RnfQkffj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "tkghltodghkf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dmlfl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shQKRN",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wkrtlatkadlf",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhwlfkv",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "wmrgmd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ahqja",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "rmrgustlfwndml",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "rpdmfms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "rnlckslwma",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qnstjr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "akdldnpdl",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ELdzld",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "akdtkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bread2023/INFP.jpg'
+            },
+        ]
+    },
     // luckyBag2023
     {
         info : {
