@@ -646,8 +646,8 @@ class Result extends Component {
         let otherAdProb = 0.3 >= Math.random();
         const othersLink = [
             { test: "personalScentBTI", coupangLink: "https://link.coupang.com/a/FFVJ2" },
-            { test: "chaebol", coupangLink: "https://link.coupang.com/a/JUjGP" },
-            { test: "rabbit2023", coupangLink: "https://link.coupang.com/a/J8xPY" },
+            { test: "chaebol", coupangLink: "https://link.coupang.com/a/KvzD5" },
+            { test: "rabbit2023", coupangLink: "https://link.coupang.com/a/KvzfS" },
             { test: "luckyBag2023", coupangLink: "https://link.coupang.com/a/FFVJ2" },
         ];
         const testsArray = othersLink.map(({ test }) => test);
