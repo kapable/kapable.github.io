@@ -15,7 +15,6 @@ import Game from '../TestTypes/Game'
 import OtherLangIcons from '../SubComponents/OtherLangIcons';
 import TESTS from '../../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
-import Typist from 'react-typist';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Helmet } from 'react-helmet';
 import COPYBTN from '../../api/DefaultImg/test-intro-copy-link-btn.png';
@@ -159,7 +158,6 @@ class Intro extends Component {
         let _mainTitle = this.state.current_test.info.mainTitle;
         let _subTitle = this.state.current_test.info.subTitle;
         let _thumbImage = this.state.current_test.info.mainImage;
-        const noCountTests = ['dragonBTI'];
 
         return (
             <Fragment>
@@ -198,13 +196,13 @@ class Intro extends Component {
                     <p><b>*(추천) 사파리, 크롬 네이버 브라우저에서<br />조금 더 쾌적하게 이용 가능합니다!</b></p>
                     <OtherLangIcons currentTest={this.state.current_test.info.mainUrl}/>
                     
-                    {noCountTests.includes(this.state.current_test.info.mainUrl)
+                    {/* {noCountTests.includes(this.state.current_test.info.mainUrl)
                     ? (null)
                     : (
                         <Typist className="start-btn-participants">
                             현재까지 총 {this.state.participants}명이 참여했어요.
                         </Typist>
-                    )}
+                    )} */}
 
                     {/* CPC Banner Intro footer */}
                     {/* {this.cpcBannerIntroFooterScriptor()} */}
