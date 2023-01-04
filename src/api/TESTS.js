@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // musicNote
+    {
+        info : {
+            mainTitle:"음표 매력 테스트",
+            subTitle:"음표로 보는 나의 매력은? | 음표 테스트",
+            mainUrl:"musicNote",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/musicNote-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/musicNote-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '평소 친구들과 모임에서 나의 데시벨은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '높은 편이다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '낮은 편이다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "새로운 모임에서 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "전체적인 대화에 잘 끼어드는 편이다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "들어오는 질문에 대답하는 편이다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "새로운 모임에서 어떤 활발한 사람이 말을 걸 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "말을 자연스럽게 잘 받아 치고,\n나도 같이 대화를 이어 나간다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "무슨 말을 해야 할지 모르겠고 부담스럽다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "이상형이 나에게 매력적이라고 말했을 때 내 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "내 어디가 매력적인지 궁금해진다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "이 사람이랑 벌써 사귀고 연애하는 상상을 한다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "친구가 갑자기 10년 뒤에 뭐 하고 있을까 물어봤을 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "몰라? 내가 어캐앎?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '우리는 아마 성공한 사람이 되어있지 않을까?\n건물 사야지~'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나에게 새로운 업무가 주어진다면 내 선택은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "확실한 가이드라인이 있는 업무"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "자유롭게 내 생각을 적용해 볼 수 있는 업무"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '내가 대화를 할 때 더 신경 쓰는 것은?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "대화 주제와 흐름"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "말투와 표정"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 잘못을 저지른 것을 봤을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "솔직하게 친구가 한 잘못에 대해 이야기 해준다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "친구의 잘못을 최대한 돌려서 인지시켜준다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 이사한 집이 너무 춥다고 한다.\n나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "히터 고장 난거 아니야?\n히터 확인해 봤어?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "이 추운 날씨에 너무 추웠겠다ㅠ"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "집 근처에 새로운 카페가 생겼을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "원래 가던 카페보다 가까운 곳이네,\n맛을 한 번 봐야하니까 내일 퇴근길에 가봐야겠다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "오 새로운 카페네 조만간 가봐야지."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구들을 집에 초대할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "음식 메뉴, 주문 수량, 인원까지 확실하게 정하고 미리 준비한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "'인원 파악, 메뉴만 정하고 모자라면 더 시키지 뭐' 하고 간단하게 준비한다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구들과 여행가기로 했는데 아무연락이 없을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "“왜 연락이 없지..?” 하며 각종 교통, 숙소 예약들을 걱정한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "“언젠가 말 나오겠지” 하며 별로 생각하지 않는다"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dhfflavy",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ejqmfdlteks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "wjavkfqns",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "shvdmsdmawkfl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ehehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "tkqns",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tlqdbrqns",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "vkfqns",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wjatkqns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dhsdma",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkqnstnla",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dlqns",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "sofla",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "skwdmsdmawkfl",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "vkfqnstnla",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dlqnstnla",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNote/INFP.jpg'
+            },
+        ]
+    },
     // bread2023
     {
         info : {

@@ -391,7 +391,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (percentageMBTI2022ListKor.includes(this.state.current_test)) {
-            const rederTestList = ["bread2023", "luckyBag2023", "personalColor2022", "personalColor"];
+            const rederTestList = ["musicNote", "bread2023", "luckyBag2023", "personalColor2022", "personalColor"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -435,7 +435,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (flowerBTIList.includes(this.state.current_test)) {
-            const rederTestList = ["bread2023", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "oneSidedLoveEng"];
+            const rederTestList = ["musicNote", "bread2023", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "oneSidedLoveEng"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -457,7 +457,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (oneSidedList.includes(this.state.current_test)) {
-            const rederTestList = ["fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
+            const rederTestList = ["musicNote", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -479,7 +479,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (kbmtiList.includes(this.state.current_test)) {
-            const rederTestList = ["bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "yearEndParty2022", "snowflake", "personalColor2023",];
+            const rederTestList = ["musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "yearEndParty2022", "snowflake", "personalColor2023",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -501,7 +501,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (oneSidedLoveList.includes(this.state.current_test)) {
-            const rederTestList = ["bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "persoanlSixteenSkin", "snowflake", "personalColor2023",];
+            const rederTestList = ["musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "persoanlSixteenSkin", "snowflake", "personalColor2023",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -523,7 +523,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (snowflakeList.includes(this.state.current_test)) {
-            const rederTestList = ["bread2023", "luckyBag2023", "smileColorTest", "fishShapedBun", "personalColor2023", "oneSidedLove"];
+            const rederTestList = ["musicNote", "bread2023", "luckyBag2023", "smileColorTest", "fishShapedBun", "personalColor2023", "oneSidedLove"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -545,7 +545,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (fishShapedBunList.includes(this.state.current_test)) {
-            const rederTestList = ["bread2023", "luckyBag2023", "smileColorTest", "personalColor2023", "oneSidedLove", "persoanlSixteenSkin"];
+            const rederTestList = ["musicNote", "bread2023", "luckyBag2023", "smileColorTest", "personalColor2023", "oneSidedLove", "persoanlSixteenSkin"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -567,7 +567,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (rabbit2023List.includes(this.state.current_test)) {
-            const rederTestList = ["bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
+            const rederTestList = ["musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -589,7 +589,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["bread2023", "luckyBag2023", "fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
+            const rederTestList = ["musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -661,7 +661,7 @@ class Result extends Component {
                     </a>
                 </div>
             </div>
-        )
+        );
     };
 
     resultRender(){
