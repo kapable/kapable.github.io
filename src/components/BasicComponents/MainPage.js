@@ -19,11 +19,11 @@ function MainPage(props) {
             <OhterLangIconsMain />
 
             {/* Fortune Cookie */}
-            {/* {props.lang === 'Kor' ? (
+            {props.lang === 'Kor' ? (
                 <Link to='/fortuneCookie/' className="main-link-block" key="fortuneCookie-banner">
                     <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fortuneCookie-thumb.png`} alt="POST-2022" />
                 </Link>
-            ) : null} */}
+            ) : null}
 
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
