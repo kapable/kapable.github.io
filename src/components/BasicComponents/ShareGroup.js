@@ -13,23 +13,23 @@ const ShareGroupDiv = styled.div`
         justify-content: center;
         margin: 0 auto 2.5rem;
     `;
-    const URLShareButton = styled.button`
-        padding: 0;
-        width: 48px;
-        height: 48px;
-        color: white;
-        border-radius: 24px;
-        border: 0px;
-        margin: 0 0.5rem;
-        font-weight: 800;
-        font-size: 18px;
-        cursor: pointer;
-        background-color: #5996F0;
-        &:hover {
-            background-color: #B2CCF2;
-        }
+const URLShareButton = styled.button`
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    color: white;
+    border-radius: 24px;
+    border: 0px;
+    margin: 0 0.5rem;
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #5996F0;
+    &:hover {
+        background-color: #B2CCF2;
+    }
     `;
-    
+
 const ShareGroup = ({ link, testTitle }) => {
     
 

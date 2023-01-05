@@ -12,6 +12,21 @@ import quotes from '../../../api/QUOTES';
 import ShareGroup from '../../BasicComponents/ShareGroup';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
+import Lottie from 'react-lottie';
+import * as loading from '../../../loading-animation-fortuneCookie.json'
+
+const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: loading.default,
+    rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice'
+    }
+};
+
+const LoadingDiv = styled.div`
+        padding: 10rem 0;
+    `;
 
 const ResultDiv = styled.div`
         @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
@@ -36,9 +51,10 @@ const ResultDiv = styled.div`
             top: 20rem;
         }
     `;
+
 const FortuneCookie = () => {
     
-    const [isIntro, setIsIntro] = useState(true);
+    const [mode, setMode] = useState('intro');
     const [quote, setQuote] = useState({});
 
     const _eventSenderGA = (category, action, label) => {
@@ -61,15 +77,18 @@ const FortuneCookie = () => {
     };
 
     const onFortuneClick = useCallback(() => {
-        setIsIntro(!isIntro);
-    }, [isIntro]);
+        setMode('loading');
+        setTimeout(function(){
+            setMode('result')
+        }, 4700);
+    }, []);
 
     useEffect(() => {
         let random_int = getRandomInt(0, quotes.length - 1);
         setQuote(quotes[random_int]);
     }, []);
 
-    if(isIntro) {
+    if(mode === 'intro') {
         return (
             <div>
                 <Helmet>
@@ -121,7 +140,13 @@ const FortuneCookie = () => {
                 </Link>
             </div>
         );
-    } else {
+    } else if(mode === 'loading') {
+        return(
+            <LoadingDiv>
+                <Lottie options={defaultOptions} height={120} width={120}/>
+            </LoadingDiv>
+        )
+    } else if(mode === 'result') {
         return (
             <div>
                 <Helmet>
