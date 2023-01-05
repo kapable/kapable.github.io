@@ -85,7 +85,7 @@ const FortuneCookie = () => {
         setMode('loading');
         setTimeout(function(){
             setMode('result')
-        }, 4700);
+        }, 3500);
     }, []);
 
     useEffect(() => {
