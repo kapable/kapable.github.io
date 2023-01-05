@@ -51,6 +51,21 @@ const ResultDiv = styled.div`
         .fortune-cookie-person-div {
             top: 20rem;
         }
+
+        @media (min-width: 768px) {
+            img {
+                width: 35rem;
+            }
+
+            .fortune-cookie-quote-div, .fortune-cookie-person-div {
+                top: 22rem;
+                width: 17rem;
+            }
+
+            .fortune-cookie-person-div {
+                top: 30rem;
+            }
+        }
     `;
 
 const FortuneCookie = () => {
@@ -85,7 +100,7 @@ const FortuneCookie = () => {
         setMode('loading');
         setTimeout(function(){
             setMode('result')
-        }, 3500);
+        }, 3000);
     }, []);
 
     useEffect(() => {
@@ -98,7 +113,7 @@ const FortuneCookie = () => {
         return(
             <Fragment>
                 {rederTestList.map((test) => (
-                    <>
+                    <div key={`${test}-key`}>
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
@@ -111,7 +126,7 @@ const FortuneCookie = () => {
                             format="auto"
                             responsive="true"
                         />
-                    </>
+                    </div>
                 ))}
             </Fragment>
         );

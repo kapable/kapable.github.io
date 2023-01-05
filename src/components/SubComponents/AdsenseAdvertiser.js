@@ -17,7 +17,7 @@ import React, { useEffect } from 'react';
     }, []);
     return (
         <ins
-            class={className}
+            className={className}
             style={{ display: "block" }}
             data-ad-client={client}
             data-ad-slot={slot}
