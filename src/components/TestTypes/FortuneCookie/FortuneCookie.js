@@ -75,7 +75,7 @@ const ResultDiv = styled.div`
 
 const FortuneCookie = () => {
     
-    const [mode, setMode] = useState('result');
+    const [mode, setMode] = useState('intro');
     const [quote, setQuote] = useState({});
 
     const _eventSenderGA = (category, action, label) => {
