@@ -48,6 +48,11 @@ const ResultDiv = styled.div`
             transform: translate(-50%, -50%);
         }
 
+        .fortune-cookie-quote-div {
+            height: 7.5rem;
+            overflow-y: scroll;
+        }
+
         .fortune-cookie-person-div {
             top: 20rem;
         }
@@ -70,7 +75,7 @@ const ResultDiv = styled.div`
 
 const FortuneCookie = () => {
     
-    const [mode, setMode] = useState('intro');
+    const [mode, setMode] = useState('result');
     const [quote, setQuote] = useState({});
 
     const _eventSenderGA = (category, action, label) => {
@@ -222,7 +227,7 @@ const FortuneCookie = () => {
                 </Helmet>
                 <ResultDiv>
                     <img src={`https://images.ktestone.com/meta/fortuneCookie/fortuneCookie-result.png`} className='result-img' alt="" />
-                    <div className='fortune-cookie-quote-div'>{quote?.quote}</div>
+                    <div className='fortune-cookie-quote-div'><p>{quote?.quote}</p></div>
                     <div className='fortune-cookie-person-div'>- {quote?.person}</div>
                 </ResultDiv>
 
