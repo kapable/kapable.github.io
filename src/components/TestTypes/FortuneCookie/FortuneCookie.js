@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { Fragment, useCallback, useEffect, useState } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
@@ -14,6 +14,7 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import Lottie from 'react-lottie';
 import * as loading from '../../../loading-animation-fortuneCookie.json'
+import AdsenseAdvertiser from '../../SubComponents/AdsenseAdvertiser';
 
 const defaultOptions = {
     loop: true,
@@ -70,6 +71,10 @@ const FortuneCookie = () => {
         alert("링크가 복사됐어요!");
     };
 
+    const _onPPLBannerClick = () => {
+        _eventSenderGA("Outlinking", "Click PPL-Banner Button", "result page");
+    };
+
     const getRandomInt = (min, max) => {
         min = Math.ceil(min);
         max = Math.ceil(max);
@@ -87,6 +92,30 @@ const FortuneCookie = () => {
         let random_int = getRandomInt(0, quotes.length - 1);
         setQuote(quotes[random_int]);
     }, []);
+
+    const otherTestBannerRenderer = () => {
+        const rederTestList = ["flowerBTI", "kbmti", "musicNote", "fishShapedBun", "oneSidedLove", "bread2023",];
+        return(
+            <Fragment>
+                {rederTestList.map((test) => (
+                    <>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={`https://ktestone.com/kapable.github.io/${test}/`}
+                            className="to-ppl-banner-text"
+                            > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={test} onClick={_onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                        <AdsenseAdvertiser
+                            client="ca-pub-2382342018701919"
+                            slot="5663135072"
+                            format="auto"
+                            responsive="true"
+                        />
+                    </>
+                ))}
+            </Fragment>
+        );
+    };
 
     if(mode === 'intro') {
         return (
@@ -214,6 +243,7 @@ const FortuneCookie = () => {
                             />
                     </div>
                 </Link>
+                {otherTestBannerRenderer()}
             </div>
         );
     };
