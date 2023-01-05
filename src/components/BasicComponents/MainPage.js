@@ -17,12 +17,13 @@ function MainPage(props) {
                 <img className='main-header' src={MAINHEADER} alt="K-test"/>
             </div>
             <OhterLangIconsMain />
-            {/* Go to POST 2022 */}
-            {props.lang === 'Kor' ? (
-                <Link to='/post2022/' className="main-link-block" key="post2022-banner">
-                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022-thumb.png`} alt="POST-2022" />
+
+            {/* Fortune Cookie */}
+            {/* {props.lang === 'Kor' ? (
+                <Link to='/fortuneCookie/' className="main-link-block" key="fortuneCookie-banner">
+                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fortuneCookie-thumb.png`} alt="POST-2022" />
                 </Link>
-            ) : null}
+            ) : null} */}
 
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
@@ -55,6 +56,13 @@ function MainPage(props) {
                         <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2021-thumb.png`} alt="POST-2021" />
                     </Link>
                 </>
+            ) : null}
+
+            {/* Go to POST 2022 */}
+            {props.lang === 'Kor' ? (
+                <Link to='/post2022/' className="main-link-block" key="post2022-banner">
+                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022-thumb.png`} alt="POST-2022" />
+                </Link>
             ) : null}
 
             {/* Go to POST 2021 ENG */}
