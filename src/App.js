@@ -27,7 +27,7 @@ import AuthPage2022 from './components/TestTypes/Post2022/Users/AuthPage';
 import Auth from './hoc/auth';
 import Acrostic from './components/TestTypes/Acrostic';
 import FactPok from './components/TestTypes/FactPok/FactPok';
-import FortuneCookie from './components/TestTypes/FortuneCookie';
+import FortuneCookie from './components/TestTypes/FortuneCookie/FortuneCookie';
 
 
 class App extends Component {
