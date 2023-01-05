@@ -8,9 +8,7 @@ import {
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import ReactGA from 'react-ga';
 
-
-const ShareGroup = ({ link, testTitle }) => {
-    const ShareGroupDiv = styled.div`
+const ShareGroupDiv = styled.div`
         display: flex;
         justify-content: center;
         margin: 0 auto 2.5rem;
@@ -31,6 +29,9 @@ const ShareGroup = ({ link, testTitle }) => {
             background-color: #B2CCF2;
         }
     `;
+    
+const ShareGroup = ({ link, testTitle }) => {
+    
 
     const _eventSenderGA = useCallback((category, action, label) => {
         ReactGA.event({

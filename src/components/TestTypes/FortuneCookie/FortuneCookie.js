@@ -13,8 +13,7 @@ import ShareGroup from '../../BasicComponents/ShareGroup';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
-const FortuneCookie = () => {
-    const ResultDiv = styled.div`
+const ResultDiv = styled.div`
         @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
         font-family: 'Nanum Gothic', sans-serif;
         img {
@@ -37,6 +36,8 @@ const FortuneCookie = () => {
             top: 20rem;
         }
     `;
+const FortuneCookie = () => {
+    
     const [isIntro, setIsIntro] = useState(true);
     const [quote, setQuote] = useState({});
 
