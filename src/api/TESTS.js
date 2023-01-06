@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // waterLove
+    {
+        info : {
+            mainTitle:"워터 연애 테스트",
+            subTitle:"워터로 알아보는 나의 연애 성향은? | 워터 테스트 | 물 테스트 | 물 연애 테스트",
+            mainUrl:"waterLove",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/waterLove-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/waterLove-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '새로운 동호회에 들어갔는데 내 이상형이 있다면?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '적극적으로 다가가 대화를 시도한다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '그 사람 주변에서 맴돌며 대화할 틈을 찾는다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "연인과 데이트 중 연인의 친구를 만났을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "반갑게 인사하고 자연스럽게 같이 대화를 한다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "간단한 인사만 하고 옆에서 조용히 대화를 듣고 있는다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "둘 중 더 싫은 데이트는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "하루 종일 좁은 실내 안에서만 있는 지루하고 조용한 데이트"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "하루 종일 사람 많은 장소에서 시끄럽고 정신없는 데이트"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인이 친구들과 노는데 연락이 안됐을 때 내가 화난 이유는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "이유가 뭐든 연락이 안되는 것 자체에 화가 난다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "연락이 안되서 온 갖 상상에 빠지게 해서 화가 난다"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "좋아하던 이성에게 고백했는데 상대가 받아줬을 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "그저 지금 이 순간이 짜릿하고 행복하다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '행복한 기분과 동시에\n이 사람과의 행복한 미래를 미리 상상해 본다'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "그토록 좋아하던 사람과 사귀게 된 다음날 아침에 일어난 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "평소 아침과 별로 다를 것 없다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "창문에 들어오는 아침 햇살 마저 우리를 축복 해주는 듯하다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '기념일에 내가 연인에게 주고 싶은 선물은?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "지금 연인에게 필요할 것 같은 실용적인 물건"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "연인이 예전에 흘리듯이 말했던 물건"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 갑자기 헤어져서 기운이 없고 우울하다고 한다 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "왜 헤어짐?? 밥은 먹었어?\n밥을 안 먹으니까 기운이 없지 나와 밥 먹자"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "괜찮아?ㅠ 너무 힘들겠다 오늘 한 잔 할까?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "연인과 싸웠을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "화나지만 일단 내가 지금 왜 화났는지 이성적으로 말해본다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "할말은 많은데 화나고 서러워서 눈물부터 나올 것 같다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "좋아하는 사람에게 고백할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "날을 정해 놓고 계획을 세워 완벽한 고백 준비를 한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "사랑은 타이밍! 가능성을 열어놓고, 분위기 봐서 고백한다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "내가 더 선호하는 데이트 방식은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "카페, 음식점 예약, 영화 예매 등 미리 계획해 놓고 하는 데이트"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "데이트 장소 뭐 할지 간단하게 정하고,\n이것저것 해보는 데이트를 즐긴다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인이 갑작스레 집에 놀러 온다고 한다면 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "평소에 잘 치워 놔서 디테일한 부분만 가볍게 청소 한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 급하게 눈에 보이는 것만 치워 놓는다"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dhfflavy",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ejqmfdlteks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "wjavkfqns",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "shvdmsdmawkfl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ehehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "tkqns",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tlqdbrqns",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "vkfqns",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wjatkqns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dhsdma",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkqnstnla",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dlqns",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "sofla",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "skwdmsdmawkfl",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "vkfqnstnla",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dlqnstnla",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLove/INFP.jpg'
+            },
+        ]
+    },
     // musicNote
     {
         info : {
