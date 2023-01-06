@@ -76,9 +76,8 @@ class Result extends Component {
             coupangCookies: cookies.get('coupang'),
             isOpened: true,
         });
-        if(this.state.originAdProb) {
-            this._eventSenderGA("Paging", "Click go-to-Coupang Button", "result page");
-        }
+        this._eventSenderGA("Paging", "Click go-to-Coupang Button", "result page");
+        // if(this.state.originAdProb) {}
     };
     onOtherCoupangButtonClick(){
         const { cookies } = this.props;
