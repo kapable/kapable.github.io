@@ -1138,6 +1138,12 @@ class Result extends Component {
             <Fragment>
                 
                 <div className="result">
+                    <AdsenseAdvertiser
+                        client="ca-pub-2382342018701919"
+                        slot="5663135072"
+                        format="auto"
+                        responsive="true"
+                    />
                     <div className="result-header">
                     {/* <div id="optadnpm ATB" style={{"minHeight": "220px"}}></div> */}
                         <h5 className="result-title">결과는...</h5>
