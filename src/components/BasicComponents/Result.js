@@ -54,6 +54,7 @@ class Result extends Component {
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
             isOpened: false,
+            originAdProb: 0.1 >= Math.random(),
             adProb: 1.1 >= Math.random(),
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
@@ -75,8 +76,9 @@ class Result extends Component {
             coupangCookies: cookies.get('coupang'),
             isOpened: true,
         });
-        this._eventSenderGA("Paging", "Click go-to-Coupang Button", "result page");
-        console.log("Click go-to-Coupang");
+        if(this.state.originAdProb) {
+            this._eventSenderGA("Paging", "Click go-to-Coupang Button", "result page");
+        }
     };
     onOtherCoupangButtonClick(){
         const { cookies } = this.props;
@@ -87,7 +89,6 @@ class Result extends Component {
             isOpened: true,
         });
         this._eventSenderGA("Paging", "Click go-to-Other-Coupang Button", "result page");
-        console.log("Click go-to-Other-Coupang");
     };
     
     _eventSenderGA(category, action, label){
@@ -344,6 +345,7 @@ class Result extends Component {
         let snowflakeList = ["snowflake"];
         let fishShapedBunList = ["fishShapedBun"];
         let rabbit2023List = ["rabbit2023"];
+        let waterLoveList = ["waterLove"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -588,7 +590,29 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else {
+        } else if (waterLoveList.includes(this.state.current_test)) {
+            const rederTestList = ["fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
+            return (
+                <Fragment>
+                    {rederTestList.map((test) => (
+                        <>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="5663135072"
+                                format="auto"
+                                responsive="true"
+                            />
+                        </>
+                    ))}
+                </Fragment>
+            )
+        }else {
             const rederTestList = ["waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
             return(
                 <Fragment>
@@ -642,7 +666,7 @@ class Result extends Component {
     };
 
     affiliateRenderer(){
-        const cookieRocketCoupangLink = "https://link.coupang.com/a/KgpKa";
+        const cookieRocketCoupangLink = this.state.originAdProb ? "https://link.coupang.com/a/KgpKa" : "https://link.coupang.com/a/LgvP2";
         let otherAdProb = 0.3 >= Math.random();
         const othersLink = [
             { test: "personalScentBTI", coupangLink: "https://link.coupang.com/a/FFVJ2" },

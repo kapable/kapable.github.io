@@ -234,35 +234,35 @@ const TESTS = [
                 type: "ESTJ",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "dhfflavy",
+                query: "ahsxksk",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/ESTJ.jpg'
             },
             {
                 type: "ESTP",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "ejqmfdlteks",
+                query: "ehfkeh",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/ESTP.jpg'
             },
             {
                 type: "ESFJ",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "wjavkfqns",
+                query: "dhfflqls",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/ESFJ.jpg'
             },
             {
                 type: "ESFP",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "shvdmsdmawkfl",
+                query: "fkdlxmtldka",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/ESFP.jpg'
             },
             {
                 type: "ENTJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "ehehfdl",
+                query: "zhqkfxm",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/ENTJ.jpg'
             },
@@ -270,42 +270,42 @@ const TESTS = [
                 type: "ENTP",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "tkqns",
+                query: "apfleldjs",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/ENTP.jpg'
             },
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "tlqdbrqns",
+                query: "dpflskdlxm",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/ENFJ.jpg'
             },
             {
                 type: "ENFP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "vkfqns",
+                query: "tmvlspf",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/ENFP.jpg'
             },
             {
                 type: "ISTJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "wjatkqns",
+                query: "xkswkskdlxm",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/ISTJ.jpg'
             },
             {
                 type: "ISTP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "dhsdma",
+                query: "xhfmakffls",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/ISTP.jpg'
             },
             {
                 type: "ISFJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "tkqnstnla",
+                query: "wlfmzhs",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/ISFJ.jpg'
             },
@@ -313,35 +313,35 @@ const TESTS = [
                 type: "ISFP",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "dlqns",
+                query: "dprtlskdlxm",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/ISFP.jpg'
             },
             {
                 type: "INTJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "sofla",
+                query: "eldhqxpdlwm",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/INTJ.jpg'
             },
             {
                 type: "INTP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "skwdmsdmawkfl",
+                query: "dpzkskdlxm",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/INTP.jpg'
             },
             {
                 type: "INFJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "vkfqnstnla",
+                query: "ansfkdlxm",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/INFJ.jpg'
             },
             {
                 type: "INFP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "dlqnstnla",
+                query: "tpdlwl",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/waterLove/INFP.jpg'
             },

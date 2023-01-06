@@ -167,23 +167,23 @@ class Intro extends Component {
                     <Helmet>
                         {/* <!-- Primary Meta Tags --> */}
                         <title>{this.state.current_test.info.mainTitle}-케이테스트</title>
-                        <meta name="title" content={this.state.current_test.info.mainTitle+'- 케이테스트 | 퍼스널컬러 테스트 진단'}/>
-                        <meta name="description" content={this.state.current_test.info.subTitle+'- 케이테스트 | 퍼스널컬러 테스트 진단 크리스마스 테스트 mbti 눈꽃 눈송이 테스트'} data-react-helmet="true"/>
+                        <meta name="title" content={this.state.current_test.info.mainTitle+'- 케이테스트 | MBTI 테스트 검사'}/>
+                        <meta name="description" content={this.state.current_test.info.subTitle+'- 케이테스트 | MBTI 테스트 검사'} data-react-helmet="true"/>
                         <link rel="main-url" href={this.state.quiz_url}/>
 
                         {/* <!-- Open Graph / Facebook --> */}
                         <meta property="og:type" content="website"/>
                         <meta property="og:url" content={this.state.quiz_url}/>
-                        <meta property="og:title" content={this.state.current_test.info.mainTitle +'- 케이테스트 | 퍼스널컬러 테스트 진단'}/>
-                        <meta property="og:description" content={this.state.current_test.info.subTitle +'- 케이테스트 | 퍼스널컬러 테스트 진단 크리스마스 테스트 mbti 눈꽃 눈송이 테스트'}/>
+                        <meta property="og:title" content={this.state.current_test.info.mainTitle +'- 케이테스트 | MBTI 테스트 검사'}/>
+                        <meta property="og:description" content={this.state.current_test.info.subTitle +'- 케이테스트 | MBTI 테스트 검사'}/>
                         <meta property="og:image" content={this.state.current_test.info.mainImage}/>
                         <meta property="og:image:alt" content={this.state.current_test.info.mainTitle} />
 
                         {/* <!-- Twitter --> */}
                         <meta property="twitter:card" content="summary_large_image"/>
                         <meta property="twitter:url" content={this.state.quiz_url}/>
-                        <meta property="twitter:title" content={this.state.current_test.info.mainTitle +'- 케이테스트 | 퍼스널컬러 테스트 진단'}/>
-                        <meta property="twitter:description" content={this.state.current_test.info.subTitle +'- 케이테스트 | 퍼스널컬러 테스트 진단 크리스마스 테스트 mbti 눈꽃 눈송이 테스트'}/>
+                        <meta property="twitter:title" content={this.state.current_test.info.mainTitle +'- 케이테스트 | MBTI 테스트 검사'}/>
+                        <meta property="twitter:description" content={this.state.current_test.info.subTitle +'- 케이테스트 | MBTI 테스트 검사'}/>
                         <meta property="twitter:image" content={this.state.current_test.info.mainImage}/>
                         <meta property="twitter:image:alt" content={this.state.current_test.info.mainTitle} />
                     </Helmet>
