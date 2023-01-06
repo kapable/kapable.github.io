@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import QuestionCount from './QuestionCount'
 import Question from './Question'
+import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 
 class Quiz extends Component {
     constructor(props){
@@ -122,6 +123,12 @@ class Quiz extends Component {
         
         return(
             <Fragment>
+                <AdsenseAdvertiser
+                    client="ca-pub-2382342018701919"
+                    slot="5663135072"
+                    format="auto"
+                    responsive="true"
+                />
                 <Question question={this.props.qAndA[this.props.quizNum].question}></Question>
                 {/* In case of Quiz with Image Options */}
                 <Fragment>

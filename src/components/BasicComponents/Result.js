@@ -54,7 +54,7 @@ class Result extends Component {
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
             isOpened: false,
-            originAdProb: 0.1 >= Math.random(),
+            originAdProb: 0.1 < Math.random(),
             adProb: 1.1 >= Math.random(),
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
@@ -1116,7 +1116,7 @@ class Result extends Component {
                 
                 <div className="result">
                     <div className="result-header">
-                    <div id="optadnpm ATB" style={{"minHeight": "220px"}}></div>
+                    {/* <div id="optadnpm ATB" style={{"minHeight": "220px"}}></div> */}
                         <h5 className="result-title">결과는...</h5>
                         <div className="result-value">
                             {this.resultRender()}
@@ -1129,6 +1129,13 @@ class Result extends Component {
 
                     <OtherLangIcons currentTest={this.state.current_test}/>
                     
+                    <AdsenseAdvertiser
+                        client="ca-pub-2382342018701919"
+                        slot="5663135072"
+                        format="auto"
+                        responsive="true"
+                    />
+
                     <div className="share">
                         <h5 className="share-title">{ppl_list.includes(this.state.current_test) ? null : "친구에게 공유하기"}</h5>
                         <ShareGroup
