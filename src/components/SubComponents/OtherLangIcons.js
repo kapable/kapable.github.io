@@ -1508,6 +1508,34 @@ export default function OtherLangIcons(props) {
         }
     };
 
+    function musicNoteEngTestLinkRenderer(){
+        if(props.currentTest === "musicNote") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/musicNoteEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
+                </div>
+            )
+        } else if(props.currentTest === "musicNoteEng") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/musicNote/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                </div>
+            )
+        }
+    };
+
     return (
         <Fragment>
             {factBTILinkRenderer()}
@@ -1525,6 +1553,7 @@ export default function OtherLangIcons(props) {
             {snowflakeLinkRenderer()}
             {smileColorTestLinkRenderer()}
             {fishShapedBunTestLinkRenderer()}
+            {musicNoteEngTestLinkRenderer()}
         </Fragment>
     );
 };

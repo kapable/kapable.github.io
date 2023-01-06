@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // musicNoteEng
+    {
+        info : {
+            mainTitle:"Note Charm test",
+            subTitle:"What is my charm in terms of musical notes? | Note test",
+            mainUrl:"musicNoteEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/musicNoteEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/musicNoteEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Eng"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What can be your noise level at a meeting with friends?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Mostly high'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Mostly low'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What do you usually do when attending a new meeting?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I tend to get involved in the overall conversation"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I tend to only answer incoming questions."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What can be your reaction when\na talkative person talks to you at a new gathering?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I respond well naturally,\nand I mostly continue the conversation as well"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I don't know what to say and it's burdensome"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What can be your reaction when\nyour ideal type says you are attractive?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I wonder where that person is attracted to"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "I am already fantasized about dating this person"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What would be your reaction when\na friend suddenly asked you what\nyou would be doing in 10 years?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I don't know?\nI have no idea"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: 'Will I ever be a successful person?\nI will have to buy some buildings perhaps'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If you were given a new job,\nwhat would you choose?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Tasks with clear guidelines"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Tasks that I can freely apply my thoughts"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: 'What do you care more about when talking to someone?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Conversation topic and flow"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Speech and expression"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When you see your friend do something wrong,\nwhat do you do?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I honestly talk to my friend about it"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I make my friend aware of\nmy friend's faults indirectly"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "A friend says the house he/she moved in is too cold.\nWhat can be your reaction?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Is the heater broken?\ndid you check the heater?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "It must have been too cold in this cold weather"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What can be your reaction when\na new cafe opens near your house?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "It's closer than the cafe I used to go to.\nI may go there tomorrow after work to try"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Oh, it's a brand new cafe.\nI'll have to try it soon"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When you invite your friends to your house,\nwhat do you do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I clearly prepare the menu for right quantity in advance"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I simply set the menu for the number of attendees,\nand if food is not enough,\nI plan to order more"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you do when you plan to go on a trip with your friends\nand no one says anything about it later?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I will wonder why no one is talking about it\nand worry about transportation,\naccommodation reservations as well"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Someday someone will mention about it"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dhfflavy",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ejqmfdlteks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "wjavkfqns",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "shvdmsdmawkfl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ehehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "tkqns",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tlqdbrqns",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "vkfqns",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wjatkqns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dhsdma",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkqnstnla",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dlqns",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "sofla",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "skwdmsdmawkfl",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "vkfqnstnla",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dlqnstnla",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/musicNoteEng/INFP.jpg'
+            },
+        ]
+    },
     // waterLove
     {
         info : {

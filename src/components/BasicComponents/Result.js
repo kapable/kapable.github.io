@@ -335,11 +335,12 @@ class Result extends Component {
 
     otherTestBannerRenderer() {
         let personalColor2022ListKor = [];
-        let EngTestList = ["fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
+        let EngTestList = ["musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let flowerBTIList = ["flowerBTIEng"];
-        let oneSidedList = ["oneSidedLoveEng"];
+        let oneSidedListEng = ["oneSidedLoveEng"];
+        let musicNoteEng = ["musicNoteEng"];
         let kbmtiList = ["kbmti"];
         let oneSidedLoveList = ["oneSidedLove"];
         let snowflakeList = ["snowflake"];
@@ -371,7 +372,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
-            const rederTestList = ["fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "oneSidedLoveEng"];
+            const rederTestList = ["musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "oneSidedLoveEng"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -458,8 +459,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (oneSidedList.includes(this.state.current_test)) {
-            const rederTestList = ["waterLove", "fortuneCookie", "musicNote", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
+        } else if (oneSidedListEng.includes(this.state.current_test)) {
+            const rederTestList = ["musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -480,7 +481,29 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (kbmtiList.includes(this.state.current_test)) {
+        } else if (musicNoteEng.includes(this.state.current_test)) {
+            const rederTestList = ["fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
+            return (
+                <Fragment>
+                    {rederTestList.map((test) => (
+                        <>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="5663135072"
+                                format="auto"
+                                responsive="true"
+                            />
+                        </>
+                    ))}
+                </Fragment>
+            )
+        }else if (kbmtiList.includes(this.state.current_test)) {
             const rederTestList = ["waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "yearEndParty2022", "snowflake", "personalColor2023",];
             return (
                 <Fragment>
