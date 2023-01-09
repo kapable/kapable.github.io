@@ -338,15 +338,10 @@ class Result extends Component {
         let EngTestList = ["musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
-        let flowerBTIList = ["flowerBTIEng"];
         let oneSidedListEng = ["oneSidedLoveEng"];
         let musicNoteEng = ["musicNoteEng"];
-        let kbmtiList = ["kbmti"];
-        let oneSidedLoveList = ["oneSidedLove"];
-        let snowflakeList = ["snowflake"];
-        let fishShapedBunList = ["fishShapedBun"];
-        let rabbit2023List = ["rabbit2023"];
         let waterLoveList = ["waterLove"];
+        let kingList = ["king"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -437,28 +432,6 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (flowerBTIList.includes(this.state.current_test)) {
-            const rederTestList = ["waterLove", "fortuneCookie", "musicNote", "bread2023", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "oneSidedLoveEng"];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                            <AdsenseAdvertiser
-                                client="ca-pub-2382342018701919"
-                                slot="5663135072"
-                                format="auto"
-                                responsive="true"
-                            />
-                        </>
-                    ))}
-                </Fragment>
-            )
         } else if (oneSidedListEng.includes(this.state.current_test)) {
             const rederTestList = ["musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
             return (
@@ -503,116 +476,6 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        }else if (kbmtiList.includes(this.state.current_test)) {
-            const rederTestList = ["waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "yearEndParty2022", "snowflake", "personalColor2023",];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                            <AdsenseAdvertiser
-                                client="ca-pub-2382342018701919"
-                                slot="5663135072"
-                                format="auto"
-                                responsive="true"
-                            />
-                        </>
-                    ))}
-                </Fragment>
-            )
-        } else if (oneSidedLoveList.includes(this.state.current_test)) {
-            const rederTestList = ["waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "persoanlSixteenSkin", "snowflake", "personalColor2023",];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                            <AdsenseAdvertiser
-                                client="ca-pub-2382342018701919"
-                                slot="5663135072"
-                                format="auto"
-                                responsive="true"
-                            />
-                        </>
-                    ))}
-                </Fragment>
-            )
-        } else if (snowflakeList.includes(this.state.current_test)) {
-            const rederTestList = ["waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "smileColorTest", "fishShapedBun", "personalColor2023", "oneSidedLove"];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                            <AdsenseAdvertiser
-                                client="ca-pub-2382342018701919"
-                                slot="5663135072"
-                                format="auto"
-                                responsive="true"
-                            />
-                        </>
-                    ))}
-                </Fragment>
-            )
-        } else if (fishShapedBunList.includes(this.state.current_test)) {
-            const rederTestList = ["waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "smileColorTest", "personalColor2023", "oneSidedLove", "persoanlSixteenSkin"];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                            <AdsenseAdvertiser
-                                client="ca-pub-2382342018701919"
-                                slot="5663135072"
-                                format="auto"
-                                responsive="true"
-                            />
-                        </>
-                    ))}
-                </Fragment>
-            )
-        } else if (rabbit2023List.includes(this.state.current_test)) {
-            const rederTestList = ["waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                            <AdsenseAdvertiser
-                                client="ca-pub-2382342018701919"
-                                slot="5663135072"
-                                format="auto"
-                                responsive="true"
-                            />
-                        </>
-                    ))}
-                </Fragment>
-            )
         } else if (waterLoveList.includes(this.state.current_test)) {
             const rederTestList = ["fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
             return (
@@ -635,8 +498,30 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
+        } else if (kingList.includes(this.state.current_test)) {
+            const rederTestList = ["waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
+            return (
+                <Fragment>
+                    {rederTestList.map((test) => (
+                        <>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="5663135072"
+                                format="auto"
+                                responsive="true"
+                            />
+                        </>
+                    ))}
+                </Fragment>
+            )
         }else {
-            const rederTestList = ["waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
+            const rederTestList = ["king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (

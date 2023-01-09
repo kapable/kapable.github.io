@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // king
+    {
+        info : {
+            mainTitle:"왕 성격 테스트",
+            subTitle:"나는 무슨 왕일까? | 왕 테스트",
+            mainUrl:"king",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/king-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/king-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '모임에서 내가 더 가까운 쪽은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '활발하고 적극적으로 내 의견을 말함'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '조용하고 소극적으로 내 의견을 말함'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "한 달에 주말도 없이 휴일이 딱 하루 주어진다면 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "친구들이나 연인과 밖에서 신나게 논다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "혼자 집에서 푹 쉰다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "사람 많은 핫 한 맛집에서 직원을 불러야 한다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "바로 “저기요!~” 하고 큰소리로 부른다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "손을 들거나, 올 때 까지 기다린다"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "추억의 예능 프로그램을 볼 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "이건 다시 봐도 재밌네ㅋㅋㅋ"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "이거 다시 방영하면 좋을 텐데..\n다음에는 000이 MC로 나오면 더 재밌겠다"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "놀이 공원을 갔는데 어떤 애기가 아이스크림을 들고 뛰고 있다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "애기 너무 귀엽다ㅎㅎ"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '저렇게 뛰다가 넘어지거나 아이스크림 떨어뜨리면 어떡하지..?'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "과거로 돌아가면 뭘 하고 싶냐는 친구의 말에 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "그런 일은 일어나지 않아 친구야^^"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "로또 번호 외워서 가야지~ㅎㅎ"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '내가 잘하는 무언가를 남에게 가르쳐 준다면?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "잘 할 수 있도록 자세히 알려주고,\n문제점을 찾아 고쳐준다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "리액션과 칭찬을 자주하며,\n잘 할 수 있도록 자세히 알려준다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "갑자기 친구가 나랑 안 맞는다고 절교 선언했을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "어이없고 황당하지만,\n이유가 뭔지 물어본다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "충격적이고 상처받아서 벙찐다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "호감가는 이성에게 내가 더 많이 하는 것은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "끊임 없는 질문과 관심"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "진심 가득한 리액션과 공감"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나의 메일함 상태는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "메일을 자주 확인하고,\n정리를 자주한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "메일 확인은 하지만 정리는 딱히 하지 않는다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "같이 여행가면 더 힘들 것 같은 사람은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "이미 짰었던 계획을 다 무시하고,\n자기 하고 싶은거 다 하려는 사람"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "무조건 자기 계획대로만 해야 하고,\n안 따라주면 분위기 망치는 사람"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나와 가까운 것은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "한 가지 목표를 정해 놓고 꾸준히 함"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "여러가지 목표를 설정하고 다양한 시도를 함"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "RHseo",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/king/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qksgkd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/king/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "clsahr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/king/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "rhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/king/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "akfQkf",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/king/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ehwjs",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/king/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dmlfl",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/king/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "rmdwjd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/king/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wlswl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/king/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ghsqkq",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/king/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "thtla",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/king/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "rnlcksg",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/king/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhwlq",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/king/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "thfwlr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/king/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "clsarh",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/king/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkdtkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/king/INFP.jpg'
+            },
+        ]
+    },
     // musicNoteEng
     {
         info : {
