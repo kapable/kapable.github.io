@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // waterLoveEng
+    {
+        info : {
+            mainTitle:"Water Dating Test",
+            subTitle:"What is my dating personality recognized as water? | Water Test | Water Love Test",
+            mainUrl:"waterLoveEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/waterLoveEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/waterLoveEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Eng"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What would you do\nif you entered a new club\nand met someone you are interested in?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I would actively try to talk to the person'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I would find opportunities to\nhang around him/her and talk'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "While dating a lover,\nif you meet your lover’s friend,\nwhat will you do?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I will say hello and talk naturally"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I just say hi and listen to their conversation"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Which date do you hate more?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "A boring and quiet date in\na small space all day long"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "A date in a crowded and noisy place all day long"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When you lover is with his/her friends\nand you can't reach him,\nwhat can make you angry?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Whatever the reason is,\nI will be angry at not being able to contact my lover"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Because I can't get in touch,\nI will be mad at my lover for making me\nimagine all kinds of things"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When you confessed to the opposite sex you liked\nand the person accepted it, what would you do?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I would be just thrilled and happy at the moment"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: 'I would feel happy and imagine a happy future\nwith the person in advance'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "How do you feel when you wake up the next morning\nafter dating someone you like?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "It will be same as usual morning"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Even the morning sunlight coming through\nthe window seems to bless us"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: 'What gift would you like to give your lover on the anniversary?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Practical items that my lover might need right now"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Things lovers talked about in the past"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What can be your reaction\nif your friend was depressed after a breakup?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Why did you break up ? did you eat?\nLet’s go out to eat with me"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Are you okay?\nIt must be hard.\nWould you like to have a drink with me tonight?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When you argue with your lover,\nwhat do you do?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Even when I am angry,\nI try to rationally figure out why I am angry."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I have a lot to say,\nbut first I feel like crying out of anger and sadness."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What will you do when confessing to someone you like?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I will set a date, make a plan,\nand prepare for a perfect confession"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Timing is important!\nI will wait for right time\nand atmosphere to confess"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What kind of date do you like more?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "A planed date after reservation at café or restaurant"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "An unplanned date,\nsuch as deciding what to do on the day\nof the date and doing this and that"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "If you lover suddenly visits over to your house,\nwhat can be your reaction?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Because I always keep my house clean,\nso I'll just clean it lightly"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Urgently I will clear my house up"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ahsxksk",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ehfkeh",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dhfflqls",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "fkdlxmtldka",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "zhqkfxm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "apfleldjs",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dpflskdlxm",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "tmvlspf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "xkswkskdlxm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "xhfmakffls",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlfmzhs",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dprtlskdlxm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "eldhqxpdlwm",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dpzkskdlxm",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ansfkdlxm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tpdlwl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/waterLoveEng/INFP.jpg'
+            },
+        ]
+    },
     // king
     {
         info : {

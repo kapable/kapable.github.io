@@ -335,10 +335,10 @@ class Result extends Component {
 
     otherTestBannerRenderer() {
         let personalColor2022ListKor = [];
-        let EngTestList = ["musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
+        let EngTestList = ["waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
-        let oneSidedListEng = ["oneSidedLoveEng"];
+        let waterLoveEngList = ["waterLoveEng"];
         let musicNoteEng = ["musicNoteEng"];
         let waterLoveList = ["waterLove"];
         let kingList = ["king"];
@@ -367,7 +367,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
-            const rederTestList = ["musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "oneSidedLoveEng"];
+            const rederTestList = ["waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "oneSidedLoveEng"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -432,7 +432,7 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (oneSidedListEng.includes(this.state.current_test)) {
+        } else if (waterLoveEngList.includes(this.state.current_test)) {
             const rederTestList = ["musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
             return (
                 <Fragment>
