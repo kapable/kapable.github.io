@@ -341,7 +341,7 @@ class Result extends Component {
         let waterLoveEngList = ["waterLoveEng"];
         let musicNoteEng = ["musicNoteEng"];
         let waterLoveList = ["waterLove"];
-        let kingList = ["king"];
+        let memoList = ["memo"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -477,7 +477,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (waterLoveList.includes(this.state.current_test)) {
-            const rederTestList = ["fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
+            const rederTestList = ["memo", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -498,8 +498,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (kingList.includes(this.state.current_test)) {
-            const rederTestList = ["waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
+        } else if (memoList.includes(this.state.current_test)) {
+            const rederTestList = ["king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -520,8 +520,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        }else {
-            const rederTestList = ["king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
+        } else {
+            const rederTestList = ["memo", "king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -610,7 +610,7 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ["waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
+            let ppl_list = ["memo", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
             let tonymoly_list = ["factPok", "MyFactPok", "FriendFactPok",];
             if(ppl_list.includes(this.state.current_test)) {
