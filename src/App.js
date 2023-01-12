@@ -28,6 +28,7 @@ import Auth from './hoc/auth';
 import Acrostic from './components/TestTypes/Acrostic';
 import FactPok from './components/TestTypes/FactPok/FactPok';
 import FortuneCookie from './components/TestTypes/FortuneCookie/FortuneCookie';
+import TodayLuck from './components/TestTypes/TodayLuck/TodayLuck';
 
 
 class App extends Component {
@@ -244,6 +245,9 @@ class App extends Component {
       <Router basename='/kapable.github.io/'>
         <ScrollToTop>
           <Switch>
+            {/* go to "TodayLuck" page */}
+            <Route path="/todayLuck/" component={() => <TodayLuck />} />
+
             {/* go to "FactPok" page */}
             <Route path="/fortuneCookie/" component={() => <FortuneCookie />} />
 
