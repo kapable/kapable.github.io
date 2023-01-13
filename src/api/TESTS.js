@@ -30,7 +30,7 @@ const TESTS = [
             subTitle:"물감으로 나를 표현한다면? | 물감 테스트",
             mainUrl:"paints",
             scoreType:"typeCountingMBTI",
-            mainImage:"https://images.ktestone.com/introImages/paints-intro.jpg",
+            mainImage:"https://images.ktestone.com/introImages/paints-intro.png",
             thumbImage:"https://images.ktestone.com/main-thumbnail/paints-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
             lang:"Kor"
