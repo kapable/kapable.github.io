@@ -341,7 +341,7 @@ class Result extends Component {
         let waterLoveEngList = ["waterLoveEng"];
         let musicNoteEng = ["musicNoteEng"];
         let waterLoveList = ["waterLove"];
-        let memoList = ["memo"];
+        let paintsList = ["paints"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -389,7 +389,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (percentageMBTI2022ListKor.includes(this.state.current_test)) {
-            const rederTestList = ["waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "personalColor2022", "personalColor"];
+            const rederTestList = ["paints", "memo", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "personalColor2022", "personalColor"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -498,8 +498,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (memoList.includes(this.state.current_test)) {
-            const rederTestList = ["king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
+        } else if (paintsList.includes(this.state.current_test)) {
+            const rederTestList = ["memo", "king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -521,7 +521,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["memo", "king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
+            const rederTestList = ["paints", "memo", "king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
