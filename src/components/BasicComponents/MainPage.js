@@ -19,13 +19,13 @@ function MainPage(props) {
             </div>
             <OhterLangIconsMain />
 
-            <AdsenseAdvertiser
+            {/* <AdsenseAdvertiser
                 client="ca-pub-2382342018701919"
                 slot="2858791575"
                 format="auto"
                 responsive="true"
-                style={{display:"inline-block",width:"768px",height:"450px"}}
-            />
+                style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
+            /> */}
 
             {/* Fortune Cookie */}
             {props.lang === 'Kor' ? (
