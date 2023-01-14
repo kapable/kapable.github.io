@@ -7,7 +7,6 @@ const TodayLuck = () => {
     const saju_url = 'https://saju.ktestone.com';
     const headerOptions = {
         'Content-Type': 'application/json',
-        'access-control-allow-origin': '*',
         'x-powered-by': 'Express' 
     };
     const instance = axios.create({headers: headerOptions,});
@@ -22,7 +21,7 @@ const TodayLuck = () => {
         // })
         const sayHello = async () => {
             try {
-                await axios.get(saju_url + `/today/total`, headerOptions)
+                await axios.get(saju_url + `/today/total`)
                 .then(res => {
                     console.log(res);
                 })
