@@ -42,11 +42,6 @@ const PostWrite = (props) => {
 
     const getUserNickname = useCallback(
         async () => {
-            const saju_url = 'https://saju.ktestone.com';
-            await axios.get(saju_url + `/today/total`)
-                .then(res => {
-                    console.log(res);
-                })
             await axios.get(api_url + `/post?userKey=${encodeURIComponent(key)}&page=1&amount=10`)
             .then(res => {
                 setUserNickname(res.data.user.nickname);

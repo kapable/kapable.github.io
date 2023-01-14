@@ -41,6 +41,11 @@ const PostPage = (props) => {
 
     const getList = useCallback(
         async () => {
+            const saju_url = 'https://saju.ktestone.com';
+            await axios.get(saju_url + `/today/total`)
+                .then(res => {
+                    console.log(res);
+                })
             await axios.get(api_url + `/post?userKey=${props.match.params.username}&page=${page}&amount=10`)
             .then(res => {
                 setMailList(res.data.rows);
