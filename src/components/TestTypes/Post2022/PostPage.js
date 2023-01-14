@@ -42,7 +42,7 @@ const PostPage = (props) => {
     const getList = useCallback(
         async () => {
             const saju_url = 'https://saju.ktestone.com';
-            await axios.get(saju_url + `/today/total`)
+            await axios.get(saju_url + `/today/total`, {withCredentials:true})
                 .then(res => {
                     console.log(res);
                 })

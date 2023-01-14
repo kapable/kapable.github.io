@@ -6,6 +6,7 @@ import React, { useEffect } from 'react';
         slot = "",
         format = "",
         responsive = "",
+        style = { display: "block" }
     }) => {
     useEffect(() => {
         try {
@@ -18,7 +19,7 @@ import React, { useEffect } from 'react';
     return (
         <ins
             className={className}
-            style={{ display: "block" }}
+            style={style}
             data-ad-client={client}
             data-ad-slot={slot}
             data-ad-format={format}
