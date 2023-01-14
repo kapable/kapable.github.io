@@ -27,26 +27,41 @@ function MainPage(props) {
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
             />
 
+            {/* Main Test Banners(Top) */}
+            <div className="main-link-div">
+                {props.all_tests_url.slice(0,11).map((item, idx)=>{
+                    if(idx % 3 === 0) {
+                        return(
+                            <Fragment key={item[0].replaceAll('/','')+'fragment'}>
+                                <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
+                                    <img className="test-main-img" src={item[1]} alt={item[2]}/>
+                                </Link>
+                                <AdsenseAdvertiser
+                                    key={item[0].replaceAll('/','')+'-adsense'}
+                                    client="ca-pub-2382342018701919"
+                                    slot="3780210756"
+                                    format="auto"
+                                    responsive="true"
+                                    style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
+                                />
+                            </Fragment>
+                        )
+                    } else {
+                        return (
+                            <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
+                                <img className="test-main-img" src={item[1]} alt={item[2]}/>
+                            </Link>
+                        )
+                    };
+                })}
+            </div>
+
             {/* Fortune Cookie */}
             {props.lang === 'Kor' ? (
                 <Link to='/fortuneCookie/' className="main-link-block" key="fortuneCookie-banner">
                     <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fortuneCookie-thumb.png`} alt="POST-2022" />
                 </Link>
             ) : null}
-
-            {/* Main Test Banners(Top) */}
-            <div className="main-link-div">
-                {props.all_tests_url.map((item, idx)=>{
-                    if(idx < 11) {
-                        return(
-                            <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                                <img className="test-main-img" src={item[1]} alt={item[2]}/>
-                            </Link>
-                        )
-                    };
-                    return null;
-                })}
-            </div>
             
             {props.lang === 'Kor' ? (
                 <>
@@ -85,15 +100,30 @@ function MainPage(props) {
 
             {/* Main Test Banners(Bottom) */}
             <div className="main-link-div">
-                {props.all_tests_url.map((item, idx)=>{
-                    if(idx >= 11) {
+                {props.all_tests_url.slice(11).map((item, idx)=>{
+                    if(idx % 3 === 0) {
                         return(
+                            <Fragment key={item[0].replaceAll('/','')+'fragment'}>
+                                <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
+                                    <img className="test-main-img" src={item[1]} alt={item[2]}/>
+                                </Link>
+                                <AdsenseAdvertiser
+                                    key={item[0].replaceAll('/','')+'-adsense'}
+                                    client="ca-pub-2382342018701919"
+                                    slot="3780210756"
+                                    format="auto"
+                                    responsive="true"
+                                    style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
+                                />
+                            </Fragment>
+                        )
+                    } else {
+                        return (
                             <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
                                 <img className="test-main-img" src={item[1]} alt={item[2]}/>
                             </Link>
                         )
                     };
-                    return null;
                 })}
             </div>
             
