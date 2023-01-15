@@ -341,7 +341,7 @@ class Result extends Component {
         let waterLoveEngList = ["waterLoveEng"];
         let musicNoteEng = ["musicNoteEng"];
         let waterLoveList = ["waterLove"];
-        let paintsList = ["paints"];
+        let orbuculumList = ["orbuculum"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -498,8 +498,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (paintsList.includes(this.state.current_test)) {
-            const rederTestList = ["memo", "king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
+        } else if (orbuculumList.includes(this.state.current_test)) {
+            const rederTestList = ["paints", "memo", "king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -521,7 +521,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["paints", "memo", "king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
+            const rederTestList = ["orbuculum", "paints", "memo", "king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (

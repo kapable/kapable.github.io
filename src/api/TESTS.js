@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // orbuculum
+    {
+        info : {
+            mainTitle:"마법의 유리구슬 운세테스트",
+            subTitle:"나의 시크릿 복은 무엇일까? | 유리구슬 테스트 | 운세 테스트",
+            mainUrl:"orbuculum",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/orbuculum-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/orbuculum-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '당신의 눈앞에 있는 원석 중 마음에 드는 색깔을 고르세요.',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '행복과 에너지의 노란색 원석'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '직관과 지혜의 보라색 원석'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "작년 당신에게 부족했다고 생각되는 마음은 무엇인가요?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "따스한 감성으로 사랑하며 조화를 이루며 사는 ‘의’의 자세"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "세상을 향한 열정을 함께 꿈꿀 줄 아는 ‘예’의 자세"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "성공한 사람들의 ‘운’에 대한 이야기 중 당신의 마음에 꽂히는 말은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "대니얼 카너먼 – 성공은 재능과 운으로 결정된다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "빌게이츠 – 신은 운을 N분의 1로 고루 분배하지 않는다."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "지금 당신 눈앞에 펼쳐졌으면 하는 장면을 고르세요.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "어스름한 새벽, 차가운 이슬공기가 맺혀있는 울창한 숲"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "늦은 오후, 파스텔톤 노을이 펼쳐지고 약한 파도가 일렁이는 바다"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "길을 걷던 중, 두 갈래 길이 있습니다. 어느 길로 가시겠습니까?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "부러진 표지판이 가리키는 구불구불 예측할 수 없는 국도와 같은 길"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '정상적인 표지판이 가리키는 시원하게 쭉 펼쳐진 고속도로와 같은 길'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "타로점을 보러 간 당신,\n어떤 사람에게 끌리나요?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "머리부터 발끝까지 정갈하게 단정된 차림의 타로마스터"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "오랜 내공이 느껴지는 히피차림의 타로마스터"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '새해 당신에게 재물운이 펼쳐졌으면 하는 계절은?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "여름/겨울"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "봄/가을"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "이 중에 나를 올 한 해 주인공으로 만들어 줄 것 같은 카드는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "이 중에 나를 올 한 해 주인공으로 만들어 줄 것 같은 카드는?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "신성한 영감과 창작의 아이디어를 받는 마법사 카드"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "당신이 운세/타로/점을 본다면 그 이유는 무엇인가요?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "단순한 호기심"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "미래에 대한 불안함"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "당신에게 타고난 돈그릇이 있다면 어떤 스타일일까요?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "투박하고 거칠지만 자연의 매력이 느껴지는 분청사기"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "투박하고 거칠지만 자연의 매력이 느껴지는 분청사기"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "풍수인테리어 아이템 중 당신의 취향은 무엇인가요?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "해바라기 그림"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "부엉이 장식"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "사실 지금까지의 모든 것은 꿈이었습니다, 당신이 눈을 뜬 곳은 어디일까요? ",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "깊은 심해 한가운데"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "사건의 지평선 한가운데"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "fpem",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "spdlvzmffhqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "akspzlspzh",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dlekffj",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "xhzlqkf",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dusemd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dusen",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "akxmfytlzk",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ekffkghtm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tntwkclf",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "skator",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "emflazocu",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tkstpqpfldk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qhrwhfl",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "qndjddl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "xjzltjr",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/orbuculum/INFP.jpg'
+            },
+        ]
+    },
     // paints
     {
         info : {
