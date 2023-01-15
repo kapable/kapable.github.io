@@ -580,6 +580,7 @@ class Result extends Component {
             { test: "personalScentBTI", coupangLink: "https://link.coupang.com/a/FFVJ2" },
             { test: "chaebol", coupangLink: "https://link.coupang.com/a/KvzD5" },
             { test: "rabbit2023", coupangLink: "https://link.coupang.com/a/KvzfS" },
+            { test: "orbuculum", coupangLink: "https://link.coupang.com/a/KvzfS" },
             { test: "luckyBag2023", coupangLink: "https://link.coupang.com/a/FFVJ2" },
         ];
         const testsArray = othersLink.map(({ test }) => test);
