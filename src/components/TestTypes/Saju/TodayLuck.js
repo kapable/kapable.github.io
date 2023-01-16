@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import axios from 'axios';
+import { DatePicker } from 'antd';
+// import 'antd/dist/antd.css'; 
 
 const TodayLuck = () => {
     const [year, setYear] = useState("");
@@ -20,11 +22,15 @@ const TodayLuck = () => {
         getToday();
     }, [saju_url]);
 
+    const onChange = useCallback((date) => {
+        console.log(date);
+    }, []);
+
 
     return (
         <div>
             <h1>태어난 연도와 월을 입력해주세요</h1>
-            {/* <DatePicker onChange={onChange} /> */}
+            <DatePicker onChange={onChange} />
             <div>{result ? result : null}</div>
         </div>
     );
