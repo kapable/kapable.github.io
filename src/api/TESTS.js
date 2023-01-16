@@ -23,6 +23,228 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // despicable
+    {
+        info : {
+            mainTitle:"싸가지 테스트",
+            subTitle:"너 싸가지 없는 거야, 알아? | 싸가지 테스트 | 재수 테스트 | 재수 없음 테스트",
+            mainUrl:"despicable",
+            scoreType:"numberScoring",
+            mainImage:"https://images.ktestone.com/introImages/despicable-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/despicable-thumb.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                question: '친구와의 약속에서 10분정도 늦었다, 친구의 질책에 나는?',
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: '‘10분 정도는 늦을수도 있지 않나…’ 라고 생각한다.'
+                    },
+                    {
+                        type: "너구리",
+                        score: 0,
+                        content: '웃으면서 ‘아 미안미안~’ 하며 넘어간다.'
+                    },
+                ],
+            },
+            {
+                question: '친구들한테 싸가지 없단 소리를 종종 듣곤한다.',
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: '그렇다.'
+                    },
+                    {
+                        type: "너구리",
+                        score: 0,
+                        content: '아니다.'
+                    },
+                ],
+            },
+            {
+                question: '다른사람과 식당에 갔을 때 나는?',
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: '먼저 수저를 놓거나 물을 따라주는 편이다.'
+                    },
+                    {
+                        type: "너구리",
+                        score: 0,
+                        content: '딱히 별다른 생각이 없는 편이다.'
+                    },
+                ],
+            },
+            {
+                question: '친구가 재미없는 얘기를 했을 때 내 대답은?',
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: '“진짜 개노잼이다 너ㅋㅋㅋ”'
+                    },
+                    {
+                        type: "너구리",
+                        score: 0,
+                        content: '“물어본 사람?”'
+                    },
+                ],
+            },
+            {
+                question: '부모님의 잔소리에 나는?',
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: '“내가 알아서 한다니까?”'
+                    },
+                    {
+                        type: "너구리",
+                        score: 0,
+                        content: '“나 애 아니야 이제, 걱정 그만해”'
+                    },
+                ],
+            },
+            {
+                question: '친구들이 도움을 요청할 때 나는?',
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: '도와주려고 생각은 하지만 바쁠 땐 대차게 거절한다.'
+                    },
+                    {
+                        type: "너구리",
+                        score: 0,
+                        content: '무슨 이런 부탁을 하냐고 말하면서 도와준다.'
+                    },
+                ],
+            },
+            {
+                question: '길 가다 다른 사람과 부딪혔을 때 나는?',
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: '길 가다 다른 사람과 부딪혔을 때 나는?'
+                    },
+                    {
+                        type: "너구리",
+                        score: 0,
+                        content: '“괜찮으세요?”, 다치지 않았는지 물어본다.'
+                    },
+                ],
+            },
+            {
+                question: '음식을 배달했는데 다른 음식이 배달 왔을 때 나는?',
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: '음식점에 전화해서 화난 말투로 다시 배달해달라고 한다.'
+                    },
+                    {
+                        type: "너구리",
+                        score: 0,
+                        content: '온갖 욕을 하지만 그냥 먹는다.'
+                    },
+                ],
+            },
+            {
+                question: '친한친구가 고민상담을 할 때 나는?',
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: '적당히 공감을 해주지만 속으로는 딴 생각을 한다.'
+                    },
+                    {
+                        type: "너구리",
+                        score: 0,
+                        content: '귀찮은 티를 내지만 진심 어린 충고를 해준다.'
+                    },
+                ],
+            },
+            {
+                question: '개인적인 이유로 기분이 안좋을 때 나는?',
+                answers:[
+                    {
+                        type: "사자",
+                        score: 1,
+                        content: '본인의 감정이 잘 드러나는 편이다.'
+                    },
+                    {
+                        type: "너구리",
+                        score: 0,
+                        content: '기분이 나쁘더라도 다른 사람에겐 웃으며 대하는 편이다.'
+                    },
+                ],
+            },
+        ],
+        results:[
+            {
+                type: "",
+                desc: "",
+                query: "akejxpfptk",
+                score_range:range(1),
+                img_src:'https://images.ktestone.com/resultImages/despicable/akejxpfptk.jpg'
+            },
+            {
+                type: "",
+                desc: "",
+                query: "woaalsdl",
+                score_range:range(1,3),
+                img_src:'https://images.ktestone.com/resultImages/despicable/woaalsdl.jpg'
+            },
+            {
+                type: "",
+                desc: "",
+                query: "dpawltpeo",
+                score_range:range(3,5),
+                img_src:'https://images.ktestone.com/resultImages/despicable/dpawltpeo.jpg'
+            },
+            {
+                type: "",
+                desc: "",
+                query: "tlqkrus",
+                score_range:range(5,7),
+                img_src:'https://images.ktestone.com/resultImages/despicable/tlqkrus.jpg'
+            },
+            {
+                type: "",
+                desc: "",
+                query: "diddkcl",
+                score_range:range(7,8),
+                img_src:'https://images.ktestone.com/resultImages/despicable/diddkcl.jpg'
+            },
+            {
+                type: "",
+                desc: "",
+                query: "Rhseo",
+                score_range:range(8,9),
+                img_src:'https://images.ktestone.com/resultImages/despicable/Rhseo.jpg'
+            },
+            {
+                type: "",
+                desc: "",
+                query: "ghkdqudwkd",
+                score_range:range(9,10),
+                img_src:'https://images.ktestone.com/resultImages/despicable/ghkdqudwkd.jpg'
+            },
+            {
+                type: "",
+                desc: "",
+                query: "anstlsqnffidqo",
+                score_range:range(10,11),
+                img_src:'https://images.ktestone.com/resultImages/despicable/anstlsqnffidqo.jpg'
+            },
+        ]
+    },
     // orbuculum
     {
         info : {
