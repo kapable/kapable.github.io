@@ -579,6 +579,7 @@ class Result extends Component {
         const othersLink = [
             { test: "personalScentBTI", coupangLink: "https://link.coupang.com/a/FFVJ2" },
             { test: "chaebol", coupangLink: "https://link.coupang.com/a/KvzD5" },
+            { test: "despicable", coupangLink: "https://link.coupang.com/a/KvzD5" },
             { test: "rabbit2023", coupangLink: "https://link.coupang.com/a/KvzfS" },
             { test: "orbuculum", coupangLink: "https://link.coupang.com/a/KvzfS" },
             { test: "luckyBag2023", coupangLink: "https://link.coupang.com/a/FFVJ2" },
