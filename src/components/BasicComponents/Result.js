@@ -341,7 +341,7 @@ class Result extends Component {
         let waterLoveEngList = ["waterLoveEng"];
         let oneSidedLoveEng = ["oneSidedLoveEng"];
         let waterLoveList = ["waterLove"];
-        let despicableList = ["despicable"];
+        let holidayLoveList = ["holidayLove"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -371,7 +371,7 @@ class Result extends Component {
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
-                        <>
+                        <Fragment key={test + '-test-key'}>
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -384,7 +384,7 @@ class Result extends Component {
                                 format="auto"
                                 responsive="true"
                             />
-                        </>
+                        </Fragment>
                     ))}
                 </Fragment>
             )
@@ -393,7 +393,7 @@ class Result extends Component {
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
-                        <>
+                        <Fragment key={test + '-test-key'}>
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -406,7 +406,7 @@ class Result extends Component {
                                 format="auto"
                                 responsive="true"
                             />
-                        </>
+                        </Fragment>
                     ))}
                 </Fragment>
             )
@@ -415,7 +415,7 @@ class Result extends Component {
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
-                        <>
+                        <Fragment key={test + '-test-key'}>
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -428,7 +428,7 @@ class Result extends Component {
                                 format="auto"
                                 responsive="true"
                             />
-                        </>
+                        </Fragment>
                     ))}
                 </Fragment>
             )
@@ -437,7 +437,7 @@ class Result extends Component {
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
-                        <>
+                        <Fragment key={test + '-test-key'}>
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -450,7 +450,7 @@ class Result extends Component {
                                 format="auto"
                                 responsive="true"
                             />
-                        </>
+                        </Fragment>
                     ))}
                 </Fragment>
             )
@@ -459,7 +459,7 @@ class Result extends Component {
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
-                        <>
+                        <Fragment key={test + '-test-key'}>
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -472,7 +472,7 @@ class Result extends Component {
                                 format="auto"
                                 responsive="true"
                             />
-                        </>
+                        </Fragment>
                     ))}
                 </Fragment>
             )
@@ -481,7 +481,7 @@ class Result extends Component {
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
-                        <>
+                        <Fragment key={test + '-test-key'}>
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -494,16 +494,16 @@ class Result extends Component {
                                 format="auto"
                                 responsive="true"
                             />
-                        </>
+                        </Fragment>
                     ))}
                 </Fragment>
             )
-        } else if (despicableList.includes(this.state.current_test)) {
-            const rederTestList = ["paints", "memo", "king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
+        } else if (holidayLoveList.includes(this.state.current_test)) {
+            const rederTestList = ["proud", "despicable", "paints", "memo", "king", "waterLove",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
-                        <>
+                        <Fragment key={test + '-test-key'}>
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -516,16 +516,16 @@ class Result extends Component {
                                 format="auto"
                                 responsive="true"
                             />
-                        </>
+                        </Fragment>
                     ))}
                 </Fragment>
             )
         } else {
-            const rederTestList = ["despicable", "orbuculum", "paints", "memo", "king", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "persoanlSixteenSkin", "kbmti", "oneSidedLove"];
+            const rederTestList = ["holidayLove", "proud", "despicable", "orbuculum", "paints", "memo", ];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
-                        <>
+                        <Fragment key={test + '-test-key'}>
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -538,7 +538,7 @@ class Result extends Component {
                                 format="auto"
                                 responsive="true"
                             />
-                        </>
+                        </Fragment>
                     ))}
                 </Fragment>
             )
@@ -580,9 +580,11 @@ class Result extends Component {
             { test: "personalScentBTI", coupangLink: "https://link.coupang.com/a/FFVJ2" },
             { test: "chaebol", coupangLink: "https://link.coupang.com/a/KvzD5" },
             { test: "despicable", coupangLink: "https://link.coupang.com/a/KvzD5" },
+            { test: "proud", coupangLink: "https://link.coupang.com/a/KvzD5" },
             { test: "rabbit2023", coupangLink: "https://link.coupang.com/a/KvzfS" },
             { test: "orbuculum", coupangLink: "https://link.coupang.com/a/KvzfS" },
             { test: "luckyBag2023", coupangLink: "https://link.coupang.com/a/FFVJ2" },
+            { test: "holidayLove", coupangLink: "https://link.coupang.com/a/MqiqA" },
         ];
         const testsArray = othersLink.map(({ test }) => test);
         return (
