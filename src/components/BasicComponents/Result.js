@@ -339,7 +339,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let waterLoveEngList = ["waterLoveEng"];
-        let musicNoteEng = ["musicNoteEng"];
+        let oneSidedLoveEng = ["oneSidedLoveEng"];
         let waterLoveList = ["waterLove"];
         let orbuculumList = ["orbuculum"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
@@ -454,8 +454,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (musicNoteEng.includes(this.state.current_test)) {
-            const rederTestList = ["fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
+        } else if (oneSidedLoveEng.includes(this.state.current_test)) {
+            const rederTestList = ["lovejewerlyEng", "musicNoteEng", "waterLoveEng", "fishShapedBunEng", "snowflakeEng"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
