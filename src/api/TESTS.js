@@ -155,7 +155,7 @@ const TESTS = [
                     {
                         type: "T",
                         score: 2,
-                        content: "이 중에 나를 올 한 해 주인공으로 만들어 줄 것 같은 카드는?"
+                        content: "자신감과 권위의 에너지를 풍기는 황제 카드"
                     },
                     {
                         type: "F",
@@ -187,7 +187,7 @@ const TESTS = [
                     {
                         type: "J",
                         score: 2,
-                        content: "투박하고 거칠지만 자연의 매력이 느껴지는 분청사기"
+                        content: "세심하게 굴곡 하나 없이 반듯하게 빚은 백자"
                     },
                     {
                         type: "P",
