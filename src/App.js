@@ -29,6 +29,7 @@ import Acrostic from './components/TestTypes/Acrostic';
 import FactPok from './components/TestTypes/FactPok/FactPok';
 import FortuneCookie from './components/TestTypes/FortuneCookie/FortuneCookie';
 import TodayLuck from './components/TestTypes/Saju/TodayLuck';
+import TodayLuckResult from './components/TestTypes/Saju/TodayLuckResult';
 
 
 class App extends Component {
@@ -246,7 +247,8 @@ class App extends Component {
         <ScrollToTop>
           <Switch>
             {/* go to "todayLuck" page */}
-            <Route path="/todayLuck/" component={() => <TodayLuck />} />
+            <Route path="/todayLuck/" component={() => <TodayLuck />} exact/>
+            <Route path="/todayLuck/:query" component={() => <TodayLuckResult />} />
 
             {/* go to "FactPok" page */}
             <Route path="/fortuneCookie/" component={() => <FortuneCookie />} />

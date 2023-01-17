@@ -367,7 +367,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
-            const rederTestList = ["waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "oneSidedLoveEng"];
+            const rederTestList = ["memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "oneSidedLoveEng"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -439,7 +439,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (memoEngEngList.includes(this.state.current_test)) {
-            const rederTestList = ["waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
+            const rederTestList = ["smileColorTestEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (

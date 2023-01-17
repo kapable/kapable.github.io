@@ -1,63 +1,61 @@
 import React, { useCallback, useState } from 'react';
-import axios from 'axios';
-import { DatePicker, Divider } from 'antd';
-import 'antd/dist/antd.css';
+import { DatePicker } from 'antd';
 import moment from 'moment';
 import 'moment/locale/ko';
 import locale from 'antd/es/date-picker/locale/ko_KR';
+import { withRouter } from 'react-router';
+import crypto from 'crypto-js';
+import Lottie from 'react-lottie';
+import * as loading from '../../../loading-animation.json';
 
-const TodayLuck = () => {
+const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: loading.default,
+    rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice'
+    }
+};
+
+const TodayLuck = (props) => {
     const dateFormat = 'YYYYMMDD';
     const [day, setDay] = useState("");
-    const [result, setResult] = useState({});
-
-
-    const saju_url = 'https://saju.ktestone.com';
+    const [isLoading, setIsLoading] = useState(false);
 
     const getToday = useCallback(async () => {
-        await axios.get(
-            saju_url + '/today/total/' + day
-        )
-        .then((res) => {
-            setResult(res?.data)
-        });
-    }, [day]);
+        if(!day) {
+            return alert('날짜를 입력해주세요!');
+        }
+        const today_date = moment().format(dateFormat);
+        const query_date = [today_date, day].join('-');
+        const crypto_query_date = encodeURIComponent(crypto.AES.encrypt(JSON.stringify(query_date), 'ktestsaju').toString());
+        
+        setIsLoading(true);
+        setTimeout(() => {
+            props.history.push(`/todayLuck/${crypto_query_date}`)
+        }, "2500");
+    }, [day, props]);
 
     const onChange = useCallback((date) => {
         setDay(moment(date).format(dateFormat));
     }, [dateFormat]);
 
-
-    return (
-        <div>
-            <h1>태어난 연도와 월을 입력해주세요</h1>
-            <DatePicker onChange={onChange} allowClear locale={locale}/>
-            <div>---</div>
+    if(isLoading) {
+        return (
+            <Lottie options={defaultOptions} height={120} width={120}/>
+        )
+    } else {
+        return (
             <div>
-                <button onClick={getToday}>확인하기</button>
+                <h1>태어난 연도와 월을 입력해주세요</h1>
+                <DatePicker onChange={onChange} allowClear locale={locale}/>
+                <div>---</div>
+                <div>
+                    <button onClick={getToday}>확인하기</button>
+                </div>
             </div>
-            <Divider />
-            <div>
-                <h3>오늘의 총운</h3>
-                <p>{result ? result?.total_result : null}</p>
-                <Divider />
-                <h3>오늘의 애정운</h3>
-                <p>{result ? result?.love_result : null}</p>
-                <Divider />
-                <h3>오늘의 소망운</h3>
-                <p>{result ? result?.wish_result : null}</p>
-                <Divider />
-                <h3>오늘의 사업운</h3>
-                <p>{result ? result?.biz_result : null}</p>
-                <Divider />
-                <h3>오늘의 방위운</h3>
-                <p>{result ? result?.direction_result : null}</p>
-                <Divider />
-                <h3>오늘의 금전운</h3>
-                <p>{result ? result?.wealth_result : null}</p>
-            </div>
-        </div>
-    );
+        );
+    }
 };
 
-export default TodayLuck;
+export default withRouter(TodayLuck);
