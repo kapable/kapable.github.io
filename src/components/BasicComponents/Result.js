@@ -340,7 +340,7 @@ class Result extends Component {
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let memoEngEngList = ["memoEngEng"];
         let oneSidedLoveEng = ["oneSidedLoveEng"];
-        let waterLoveList = ["waterLove"];
+        let loveCharacterList = ["loveCharacter"];
         let holidayLoveList = ["holidayLove"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
@@ -486,8 +486,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (waterLoveList.includes(this.state.current_test)) {
-            const rederTestList = ["memo", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "fishShapedBun", "smileColorTest", "lovejewerly"];
+        } else if (loveCharacterList.includes(this.state.current_test)) {
+            const rederTestList = ["proud", "despicable", "paints", "memo", "smileColorTest", "lovejewerly"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -511,7 +511,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (holidayLoveList.includes(this.state.current_test)) {
-            const rederTestList = ["proud", "despicable", "paints", "memo", "king", "waterLove",];
+            const rederTestList = ["loveCharacter", "proud", "despicable", "paints", "memo", "king", "waterLove",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -535,7 +535,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["holidayLove", "proud", "despicable", "orbuculum", "paints", "memo", ];
+            const rederTestList = ["loveCharacter", "holidayLove", "proud", "despicable", "orbuculum", "paints", "memo", ];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
