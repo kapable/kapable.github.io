@@ -1,0 +1,9 @@
+.loveCharacter-intro-images-container {
+    max-width: 456px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.loveCharacter-intro-left-img, .loveCharacter-intro-right-img {
+    width: 50%;
+}

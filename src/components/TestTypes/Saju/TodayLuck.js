@@ -22,7 +22,7 @@ const TodayLuck = (props) => {
     const [day, setDay] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
-    const getToday = useCallback(async () => {
+    const onSubmitClick = useCallback(async () => {
         if(!day) {
             return alert('날짜를 입력해주세요!');
         }
@@ -51,7 +51,7 @@ const TodayLuck = (props) => {
                 <DatePicker onChange={onChange} allowClear locale={locale}/>
                 <div>---</div>
                 <div>
-                    <button onClick={getToday}>확인하기</button>
+                    <button onClick={onSubmitClick}>확인하기</button>
                 </div>
             </div>
         );

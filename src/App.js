@@ -30,6 +30,7 @@ import FactPok from './components/TestTypes/FactPok/FactPok';
 import FortuneCookie from './components/TestTypes/FortuneCookie/FortuneCookie';
 import TodayLuck from './components/TestTypes/Saju/TodayLuck';
 import TodayLuckResult from './components/TestTypes/Saju/TodayLuckResult';
+import LoveCharacter from './components/TestTypes/LoveCharacter/LoveCharacter';
 
 
 class App extends Component {
@@ -246,11 +247,14 @@ class App extends Component {
       <Router basename='/kapable.github.io/'>
         <ScrollToTop>
           <Switch>
+            {/* go to "LoveCharacter" page */}
+            <Route path="/loveCharacter/" component={() => <LoveCharacter />} />
+
             {/* go to "todayLuck" page */}
             <Route path="/todayLuck/" component={() => <TodayLuck />} exact/>
             <Route path="/todayLuck/:query" component={() => <TodayLuckResult />} />
 
-            {/* go to "FactPok" page */}
+            {/* go to "FortuneCookie" page */}
             <Route path="/fortuneCookie/" component={() => <FortuneCookie />} />
 
             {/* go to "FactPok" page */}

@@ -27,6 +27,11 @@ function MainPage(props) {
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
             />
 
+            {/* Go to FactPok */}
+            <Link to='/loveCharacter/' className="main-link-block" key="loveCharacter-banner">
+                <img className='test-main-img' src={"https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png"} alt='loveCharacter' />
+            </Link>
+
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
                 {props.all_tests_url.slice(0,11).map((item, idx)=>{
