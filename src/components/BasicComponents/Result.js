@@ -384,7 +384,7 @@ class Result extends Component {
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
+                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
                             />
                         </Fragment>
                     ))}
@@ -408,7 +408,7 @@ class Result extends Component {
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
+                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
                             />
                         </Fragment>
                     ))}
@@ -432,7 +432,7 @@ class Result extends Component {
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
+                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
                             />
                         </Fragment>
                     ))}
@@ -456,7 +456,7 @@ class Result extends Component {
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
+                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
                             />
                         </Fragment>
                     ))}
@@ -480,7 +480,7 @@ class Result extends Component {
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
+                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
                             />
                         </Fragment>
                     ))}
@@ -504,7 +504,7 @@ class Result extends Component {
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
+                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
                             />
                         </Fragment>
                     ))}
@@ -528,7 +528,7 @@ class Result extends Component {
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
+                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
                             />
                         </Fragment>
                     ))}
@@ -552,7 +552,7 @@ class Result extends Component {
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
+                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
                             />
                         </Fragment>
                     ))}
