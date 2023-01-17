@@ -47479,7 +47479,7 @@ const TESTS = [
                     {
                         type: "E",
                         score: 2,
-                        content: '재밌겠다 콜 이지!!\n애인한데 바로 물어볼게!'
+                        content: '재밌겠다 콜 이지!!\n애인한테 바로 물어볼게!'
                     },
                     {
                         type: "I",
@@ -47803,7 +47803,7 @@ const TESTS = [
                     {
                         type: "E",
                         score: 2,
-                        content: '재밌겠다 콜 이지!!\n애인한데 바로 물어볼게!'
+                        content: '재밌겠다 콜 이지!!\n애인한테 바로 물어볼게!'
                     },
                     {
                         type: "I",

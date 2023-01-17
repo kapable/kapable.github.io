@@ -101,8 +101,12 @@ class Result extends Component {
 
     _onBackToStartButtonClick(){
         let factPokQueries = ["factPok", "MyFactPok", "FriendFactPok"];
+        let loveCharacterQueries = ["loveCharacter", "loveCharacterFemale", "loveCharacterMale"];
         if(factPokQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/factPok/";
+        };
+        if(loveCharacterQueries.some(el => this.state.current_url.includes(el))) {
+            window.location.href = window.location.origin + "/kapable.github.io/loveCharacter/";
         };
         this._eventSenderGA("Paging", "Click Re-test Button", "result page");
         this.setState({
