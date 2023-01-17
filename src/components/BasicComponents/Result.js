@@ -351,19 +351,19 @@ class Result extends Component {
                     rel="noopener noreferrer"
                     href='https://ktestone.com/kapable.github.io/percentageMBTI2022/'
                     className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/percentageMBTI2022-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    > <img src={`https://images.ktestone.com/main-thumbnail/percentageMBTI2022-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                     <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href='http://pf.kakao.com/_IxnRfb'
                     className="to-ppl-banner-text"
-                    > <img src={KAKAOPLUSFRIEND} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    > <img src={KAKAOPLUSFRIEND} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                     <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href={jelling_outlink}
                     className="to-ppl-banner-text"
-                    > <img src={JELLINGBANNERKOR} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                    > <img src={JELLINGBANNERKOR} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
@@ -377,14 +377,14 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
                             />
                         </Fragment>
                     ))}
@@ -401,14 +401,14 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
                             />
                         </Fragment>
                     ))}
@@ -425,14 +425,14 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
                             />
                         </Fragment>
                     ))}
@@ -449,14 +449,14 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
                             />
                         </Fragment>
                     ))}
@@ -473,14 +473,14 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
                             />
                         </Fragment>
                     ))}
@@ -497,14 +497,14 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
                             />
                         </Fragment>
                     ))}
@@ -521,14 +521,14 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
                             />
                         </Fragment>
                     ))}
@@ -545,14 +545,14 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
                                 slot="6832785479"
                                 format="auto"
                                 responsive="true"
-                                style={{ display:"inline-block", width:"100%", maxWidth:"40rem", margin: '0 11px' }}
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
                             />
                         </Fragment>
                     ))}
