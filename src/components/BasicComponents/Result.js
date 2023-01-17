@@ -379,10 +379,12 @@ class Result extends Component {
                                 className="to-ppl-banner-text"
                                 > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                             <AdsenseAdvertiser
+                                key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
-                                slot="5663135072"
+                                slot="6832785479"
                                 format="auto"
                                 responsive="true"
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
                             />
                         </Fragment>
                     ))}
@@ -401,10 +403,12 @@ class Result extends Component {
                                 className="to-ppl-banner-text"
                                 > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                             <AdsenseAdvertiser
+                                key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
-                                slot="5663135072"
+                                slot="6832785479"
                                 format="auto"
                                 responsive="true"
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
                             />
                         </Fragment>
                     ))}
@@ -423,10 +427,12 @@ class Result extends Component {
                                 className="to-ppl-banner-text"
                                 > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                             <AdsenseAdvertiser
+                                key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
-                                slot="5663135072"
+                                slot="6832785479"
                                 format="auto"
                                 responsive="true"
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
                             />
                         </Fragment>
                     ))}
@@ -445,10 +451,12 @@ class Result extends Component {
                                 className="to-ppl-banner-text"
                                 > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                             <AdsenseAdvertiser
+                                key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
-                                slot="5663135072"
+                                slot="6832785479"
                                 format="auto"
                                 responsive="true"
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
                             />
                         </Fragment>
                     ))}
@@ -467,10 +475,12 @@ class Result extends Component {
                                 className="to-ppl-banner-text"
                                 > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                             <AdsenseAdvertiser
+                                key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
-                                slot="5663135072"
+                                slot="6832785479"
                                 format="auto"
                                 responsive="true"
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
                             />
                         </Fragment>
                     ))}
@@ -489,10 +499,12 @@ class Result extends Component {
                                 className="to-ppl-banner-text"
                                 > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                             <AdsenseAdvertiser
+                                key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
-                                slot="5663135072"
+                                slot="6832785479"
                                 format="auto"
                                 responsive="true"
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
                             />
                         </Fragment>
                     ))}
@@ -511,10 +523,12 @@ class Result extends Component {
                                 className="to-ppl-banner-text"
                                 > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                             <AdsenseAdvertiser
+                                key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
-                                slot="5663135072"
+                                slot="6832785479"
                                 format="auto"
                                 responsive="true"
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
                             />
                         </Fragment>
                     ))}
@@ -533,10 +547,12 @@ class Result extends Component {
                                 className="to-ppl-banner-text"
                                 > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                             <AdsenseAdvertiser
+                                key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
-                                slot="5663135072"
+                                slot="6832785479"
                                 format="auto"
                                 responsive="true"
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem" }}
                             />
                         </Fragment>
                     ))}
