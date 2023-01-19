@@ -27,7 +27,7 @@ const TESTS = [
     {
         info : {
             mainTitle:"나 사용법 가이드 테스트",
-            subTitle:"나를 이렇게 대해줘야 합니다 | 나 사용법 가이드 테스트 with 스마일 | 나 테스트",
+            subTitle:"나를 이렇게 대해줘야 합니다 | 나 사용법 가이드 테스트 with 스마일 | 나 사용 가이드 테스트 with 스마일 | 나 테스트",
             mainUrl:"meGuide",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/meGuide-intro.jpg",
