@@ -30,6 +30,7 @@ const TodayLuckResult = (props) => {
 
     return (
         <div>
+            <img style={{width:"100%", maxWidth:"25rem",margin:"2rem auto"}} src="https://images.ktestone.com/meta/saju/todayLuck-top-banner-sample.png" alt='todayLuck-top-banner-sample'/>
             <h3>오늘의 총운</h3>
             <p>{result ? result?.total_result : null}</p>
             <Divider />
@@ -49,6 +50,7 @@ const TodayLuckResult = (props) => {
             <p>{result ? result?.wealth_result : null}</p>
             <Divider />
             <button onClick={onRestartButtonClick}>다시 보러 가기</button>
+            <img style={{width:"100%", maxWidth:"25rem",margin:"2rem auto"}} src="https://images.ktestone.com/meta/saju/todayLuck-top-banner-sample.png" alt='todayLuck-top-banner-sample'/>
         </div>
     );
 };

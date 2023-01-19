@@ -47,6 +47,7 @@ const TodayLuck = (props) => {
     } else {
         return (
             <div>
+                <img style={{width:"100%", maxWidth:"25rem",margin:"2rem auto"}} src="https://images.ktestone.com/meta/saju/todayLuck-top-banner-sample.png" alt='todayLuck-top-banner-sample'/>
                 <h1>태어난 연도와 월을 입력해주세요</h1>
                 <DatePicker onChange={onChange} allowClear locale={locale}/>
                 <div>---</div>
