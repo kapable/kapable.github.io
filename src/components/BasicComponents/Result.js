@@ -345,7 +345,7 @@ class Result extends Component {
         let memoEngEngList = ["memoEngEng"];
         let oneSidedLoveEng = ["oneSidedLoveEng"];
         let loveCharacterList = ["loveCharacter", "loveCharacterFemale", "loveCharacterMale"];
-        let holidayLoveList = ["holidayLove"];
+        let meGuideList = ["meGuide"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -514,8 +514,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (holidayLoveList.includes(this.state.current_test)) {
-            const rederTestList = ["loveCharacter", "proud", "despicable", "paints", "memo", "king", "waterLove",];
+        } else if (meGuideList.includes(this.state.current_test)) {
+            const rederTestList = ["loveCharacter", "holidayLove", "proud", "despicable", "paints", "memo", "king", "waterLove",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -539,7 +539,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["loveCharacter", "holidayLove", "proud", "despicable", "orbuculum", "paints", "memo", ];
+            const rederTestList = ["meGuide", "loveCharacter", "holidayLove", "proud", "despicable", "orbuculum", "paints", "memo", ];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
