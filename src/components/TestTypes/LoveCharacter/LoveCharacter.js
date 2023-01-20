@@ -6,8 +6,9 @@ import COPYBTN from '../../../api/DefaultImg/test-intro-copy-link-btn.png';
 import BACKBTN from '../../../api/DefaultImg/test-intro-other-tests-btn.png';
 import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
+import OtherLangIcons from '../../SubComponents/OtherLangIcons';
 
-const LoveCharacter = () => {
+const LoveCharacter = ({lang}) => {
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
             category: category,
@@ -17,8 +18,9 @@ const LoveCharacter = () => {
     };
 
     const _onShareButtonClick = () => {
+        const alertMsg = lang === 'Kor' ? '"링크가 복사됐어요!"' : 'the link copied!'
         _eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
-        return alert("링크가 복사됐어요!");
+        return alert(alertMsg);
     };
 
     return (
@@ -48,15 +50,16 @@ const LoveCharacter = () => {
             </Helmet>
             <Router basename='/kapable.github.io/' forceRefresh={true}>
                 <div className='loveCharacter-intro-images-container'>
-                    <Link to='/loveCharacterFemale/'>
-                        <img className='loveCharacter-intro-left-img' src="https://images.ktestone.com/introImages/loveCharacter-intro-left.jpg" alt="loveCharacterFemale"/>
+                    <Link to={`/loveCharacterFemale${lang === 'Kor' ? '' : 'Eng'}/`}>
+                        <img className='loveCharacter-intro-left-img' src={`https://images.ktestone.com/introImages/loveCharacter${lang === 'Kor' ? '' : 'Eng'}-intro-left.jpg`} alt="loveCharacterFemale"/>
                     </Link>
-                    <Link to='/loveCharacterMale/'>
-                        <img className='loveCharacter-intro-right-img' src="https://images.ktestone.com/introImages/loveCharacter-intro-right.jpg" alt="loveCharacterMale"/>
+                    <Link to={`/loveCharacterMale${lang === 'Kor' ? '' : 'Eng'}/`}>
+                        <img className='loveCharacter-intro-right-img' src={`https://images.ktestone.com/introImages/loveCharacter${lang === 'Kor' ? '' : 'Eng'}-intro-right.jpg`} alt="loveCharacterMale"/>
                     </Link>
                 </div>
+            <OtherLangIcons currentTest={lang === 'Kor' ? "loveCharacter" : "loveCharacterEng"}/>
             <div className="test-intro-with-friend">
-                <CopyToClipboard text="https://ktestone.com/kapable.github.io/loveCharacter/">
+                <CopyToClipboard text={`https://ktestone.com/kapable.github.io/loveCharacter${lang === 'Kor' ? '' : 'Eng'}/`}>
                     <img
                         src={COPYBTN}
                         className="test-intro-with-friend-img"

@@ -47767,6 +47767,654 @@ const TESTS = [
             },
         ]
     },
+    // loveCharacterFemaleEng
+    {
+        info : {
+            mainTitle:"Love Character Test - Female",
+            subTitle:"What kind of my character is my love character? - Female | Love chracter test - male female boyfriend girlfriend",
+            mainUrl:"loveCharacterFemaleEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'When you go on a blind date, how do you do?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I can't stand the awkwardness and try to say anything or ask some questions"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I hate awkwardness, but I will wait until the other person says something'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "When your friend asks you to go on a couple date, what can be your reaction?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "It's going to be fun, of course, we'll go on a couple date together. I'll ask my lover right away"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Suddenly? I'll ask my lover first and think about it (Should I say I'm not going...)"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What do you do at the beginning of a relationship?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I tend to ask lots of questions"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I tend to be responsive and empathize first"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "How would you react if you were looking through your childhood photos and found a picture of the two of you together?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Wow, the world is really small Miraculous! How could this happen?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Wow, it's like a movie. It must be our destiny! Maybe we met in a past life"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you do if you woke up from a bad dream?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "It looks so real! anyway, I need to go back to sleep."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Oh, why do I have such a strange dream? Should I be worried about something?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: `When you go to a must-eat restaurant, which route do you want to take?`,
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I'm not interested in sightseeing along the way, so I prefer to take shortcuts."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Even if it takes a little longer, if possible, I will go the scenic route"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If you play your lover a song you like and he/she doesn't like it, what can be your reaction?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I might wonder why my lover does not like this masterpiece"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I understand that each person has a different taste in music, but I might feel sad for nothing."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When you received a call that your lover argues with his/her friend, what would you do?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Why? what are the reasons for that?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Are you okay? You must have been upset, your friend must have done something wrong right?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "How would you react if your lover couldn't come to your anniversary?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I'll ask for a good reason, but anyway it's so sad"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I'm upset and regretful that I couldn't meet my lover on the anniversary I mentioned in advance."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What would you do if your lover asked you to see a movie while you had work to do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I have something to do today. How about tomorrow at 3pm?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I have work to do, but I think I do have plenty of time, okay let's go see it!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When you have a conflict with your lover, what do you do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I must first clearly define and then solve it."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I look at the situation first and decide whether or not to solve it right away depending on the mood"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you do right after going on a fun trip with your lover?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I'll unpack my travel luggage, take a shower, and rest"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I will rest after shower and sort things out later"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "rjfzmfjtnl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dlsaordhkd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "vudghkwndmlwk",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "akdldnpdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "eksghqkr",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qnfehwj",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "eodeodal",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qnsdnlrlapdlzj",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "fkEpsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqtnsdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dhfkrrkfkr",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "thtlawoddl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cmsepfp",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "wkdsuwowlf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "rhdrkadhkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleEng/INFP.jpg'
+            },
+        ]
+    },
+    // loveCharacterMaleEng
+    {
+        info : {
+            mainTitle:"Love Character Test - Male",
+            subTitle:"What kind of my character is my love character? - Male | Love chracter test - male female boyfriend girlfriend",
+            mainUrl:"loveCharacterMaleEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'When you go on a blind date, how do you do?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I can't stand the awkwardness and try to say anything or ask some questions"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I hate awkwardness, but I will wait until the other person says something'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "When your friend asks you to go on a couple date, what can be your reaction?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "It's going to be fun, of course, we'll go on a couple date together. I'll ask my lover right away"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Suddenly? I'll ask my lover first and think about it (Should I say I'm not going...)"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What do you do at the beginning of a relationship?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I tend to ask lots of questions"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I tend to be responsive and empathize first"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "How would you react if you were looking through your childhood photos and found a picture of the two of you together?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Wow, the world is really small Miraculous! How could this happen?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Wow, it's like a movie. It must be our destiny! Maybe we met in a past life"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you do if you woke up from a bad dream?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "It looks so real! anyway, I need to go back to sleep."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Oh, why do I have such a strange dream? Should I be worried about something?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: `When you go to a must-eat restaurant, which route do you want to take?`,
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I'm not interested in sightseeing along the way, so I prefer to take shortcuts."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Even if it takes a little longer, if possible, I will go the scenic route"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If you play your lover a song you like and he/she doesn't like it, what can be your reaction?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I might wonder why my lover does not like this masterpiece"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I understand that each person has a different taste in music, but I might feel sad for nothing."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When you received a call that your lover argues with his/her friend, what would you do?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Why? what are the reasons for that?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Are you okay? You must have been upset, your friend must have done something wrong right?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "How would you react if your lover couldn't come to your anniversary?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I'll ask for a good reason, but anyway it's so sad"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I'm upset and regretful that I couldn't meet my lover on the anniversary I mentioned in advance."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What would you do if your lover asked you to see a movie while you had work to do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I have something to do today. How about tomorrow at 3pm?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I have work to do, but I think I do have plenty of time, okay let's go see it!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When you have a conflict with your lover, what do you do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I must first clearly define and then solve it."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I look at the situation first and decide whether or not to solve it right away depending on the mood"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you do right after going on a fun trip with your lover?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I'll unpack my travel luggage, take a shower, and rest"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I will rest after shower and sort things out later"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wksthfleoakdhkd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhlrkdsodb",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekwjdekrka",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dyffhfkdlvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmdqntk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dkfEMftlswkq",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhfemsflxmflqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fldortusaksfpq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "Rhseo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wkdrldusdo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Whfqh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gjekd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dnjzjghfflr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ajdEoflsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleEng/INFP.jpg'
+            },
+        ]
+    },
     // loveCharacterFemale
     {
         info : {

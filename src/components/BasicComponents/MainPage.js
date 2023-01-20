@@ -57,9 +57,10 @@ function MainPage(props) {
             </div>
 
             {/* Go to LoveCharacter */}
-            <Link to='/loveCharacter/' className="main-link-block" key="loveCharacter-banner">
-                <img className='test-main-img' src={"https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png"} alt='loveCharacter' />
+            <Link to={props.lang === 'Kor' ? '/loveCharacter/' : '/loveCharacterEng/'} className="main-link-block" key="loveCharacter-banner">
+                <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang === 'Kor' ? '' : 'Eng'}-thumb.png`} alt='loveCharacter' />
             </Link>
+            
 
             {/* Main Test Banners(Middle) */}
             <div className="main-link-div">

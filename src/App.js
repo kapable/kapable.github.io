@@ -248,7 +248,8 @@ class App extends Component {
         <ScrollToTop>
           <Switch>
             {/* go to "LoveCharacter" page */}
-            <Route path="/loveCharacter/" component={() => <LoveCharacter />} />
+            <Route path="/loveCharacter/" component={() => <LoveCharacter lang={'Kor'} />} />
+            <Route path="/loveCharacterEng/" component={() => <LoveCharacter lang={'Eng'} />} />
 
             {/* go to "todayLuck" page */}
             <Route path="/todayLuck/" component={() => <TodayLuck />} exact/>

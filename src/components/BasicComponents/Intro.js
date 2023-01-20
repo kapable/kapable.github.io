@@ -92,7 +92,7 @@ class Intro extends Component {
     }
     componentDidMount(){
         // go to quiz mode when TONYMOLY factPok contents start
-        let dualQueries = ["factPok", "MyFactPok", "FriendFactPok", "loveCharacter", "loveCharacterFemale", "loveCharacterMale"];
+        let dualQueries = ["factPok", "MyFactPok", "FriendFactPok", "loveCharacter", "loveCharacterFemale", "loveCharacterMale", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng"];
         if(dualQueries.some(el => this.state.quiz_url.includes(el))) {
             this.setState({
                 mode:"quiz"
