@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveWarning
+    {
+        info : {
+            mainTitle:"연애 경고장 테스트",
+            subTitle:"경고장으로 보는 나의 연애 성향은? | 경고 테스트 | 연애 경고 테스트",
+            mainUrl:"loveWarning",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveWarning-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveWarning-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '연인이 갑자기 친구를 부른다고 한다면?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '대화를 이끌고 적극적으로 이야기한다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '질문에 잘 대답해 주고 공감해 준다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "간만에 찾아온 연휴 연인과 함께 여행을 간다면 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "에너지를 얻는 신나고 재밌는 여행"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "에너지를 충전하는 차분한 힐링 여행"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "연인과 데이트 중 연인의 친구를 마주쳤다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "자연스럽게 같이 이야기한다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "인사만 하고 옆에서 가만히 있는다"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연락을 주고받던 썸 타던 이성이 갑자기 장시간 연락이 되지 않는다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "뭐지 바쁜가?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "뭐지? 내가 싫어졌나?ㅠ 아니면 갑자기 잠수..?ㅠㅠ"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인이 영화를 보고 나도 저런 삶을 살아보고 싶다고 한다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "그런 일은 일어나지 않겠지만, 일어난다면 진짜 좋긴 좋겠다!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '나도 그런 생각해봤는데, 나는 그런 삶을 산다면 하고 싶은 게 많아!'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "장기연애 중 연인이 “우리 벌써 사귄 지 이만큼이나 됐어!”라고 한다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "벌써 그렇게 됐구나! (시간 참 빠르다)"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "벌써 그렇게 됐네! (과연 애인과 결혼까지 할 수 있을까..?)"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '연인과 데이트 약속이 있는 날 피치 못할 사정으로 약속에 늦었을 때 나는?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "늦은 이유를 먼저 말하고 사과한다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "사과를 먼저 하고 이유를 말한다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "연인과 아는 맛집에 갔는데, 연인이 별로 맛이 없다고 한다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "왜 맛이 없는지 물어보고, 이유가 타당하면 인정한다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "입맛에 안 맞을 수 있지만 서운하고, 너무하다고 생각한다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 갑자기 결혼을 한다고 한다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "갑자기? 왜? 누구랑? 뭐야 뭐야?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "갑자기? 대박 축하해! 내 청첩장 잘 챙겨 놔~"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "내가 선호하는 데이트 방식은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "하나에서 열까지 계획을 세워 둔 계획적인 데이트"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "모든 가능성을 열어 둔 틀만 정한 즉흥적인 데이트"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "썸남 썸녀와의 첫 데이트 전날 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "이미 맛집은 예약했고, 갈 카페 위치, 입을 옷, 시간까지 철저하게 계획해 놓는다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "맛집 예약만 겨우 하고, 옷은 내일 그냥 깔끔하게만 입자고 생각한다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "내가 가려고 했던 맛집에 도착했는데 웨이팅이 너무 길다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "계획이 틀어지는 게 싫어 기다리거나, 아쉽지만 미리 찾아 놓은 두 번째 맛집으로 옮긴다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "아쉽지만 빠르게 다른 곳을 찾아본다"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dusen",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "Qkfrks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "vkfks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "chfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "shfks",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "gksmftor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkfrntor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "cjdfhrtor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "skator",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tnvtor",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ghltor",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "qkator",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarning/INFP.jpg'
+            },
+        ]
+    },
     // meGuide
     {
         info : {

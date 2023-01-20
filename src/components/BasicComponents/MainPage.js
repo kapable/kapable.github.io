@@ -29,7 +29,7 @@ function MainPage(props) {
 
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
-                {props.all_tests_url.slice(0,1).map((item, idx)=>{
+                {props.all_tests_url.slice(0,2).map((item, idx)=>{
                     if(idx % 3 === 0) {
                         return(
                             <Fragment key={item[0].replaceAll('/','')+'fragment'}>
@@ -64,7 +64,7 @@ function MainPage(props) {
 
             {/* Main Test Banners(Middle) */}
             <div className="main-link-div">
-                {props.all_tests_url.slice(1,11).map((item, idx)=>{
+                {props.all_tests_url.slice(2,11).map((item, idx)=>{
                     if(idx % 3 === 0) {
                         return(
                             <Fragment key={item[0].replaceAll('/','')+'fragment'}>
