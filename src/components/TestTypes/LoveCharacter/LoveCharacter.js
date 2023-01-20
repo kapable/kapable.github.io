@@ -25,10 +25,9 @@ const LoveCharacter = ({lang}) => {
 
     return (
         <div>
-            <Helmet>
-                {lang === 'Kor'
+            {lang === 'Kor'
                 ? (
-                    <Fragment>
+                    <Helmet>
                         {/* <!-- Primary Meta Tags --> */}
                         <title>연애 캐릭터 테스트</title>
                         <meta name="title" content="연애 캐릭터 테스트 - 케이테스트"/>
@@ -50,10 +49,10 @@ const LoveCharacter = ({lang}) => {
                         <meta property="twitter:description" content="남친 & 여친 연애 캐릭터 테스트하기 - 연애 캐릭터 테스트 | 연애 테스트 | 연애캐릭터 테스트 남자편 여자편"/>
                         <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png`}/>
                         <meta property="twitter:image:alt" content="연애 캐릭터 테스트 - 케이테스트" />
-                    </Fragment>
+                    </Helmet>
                 )
                 : (
-                    <Fragment>
+                    <Helmet>
                         {/* <!-- Primary Meta Tags --> */}
                         <title>Love Charactet Test</title>
                         <meta name="title" content="Love Charactet Test - KTEST"/>
@@ -75,10 +74,9 @@ const LoveCharacter = ({lang}) => {
                         <meta property="twitter:description" content="Boyfriend & Girlfriend Love Charactet Test - Love Charactet Test | Love Test | Love character test male female"/>
                         <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacterEng-thumb.png`}/>
                         <meta property="twitter:image:alt" content="Love Charactet Test - KTEST" />
-                    </Fragment>
+                    </Helmet>
                 )
-                }
-            </Helmet>
+            }
             <Router basename='/kapable.github.io/' forceRefresh={true}>
                 <div className='loveCharacter-intro-images-container'>
                     <Link to={`/loveCharacterFemale${lang === 'Kor' ? '' : 'Eng'}/`}>
