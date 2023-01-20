@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './loveCharacter.css';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { BrowserRouter as Router, Link, withRouter } from 'react-router-dom';
@@ -26,27 +26,58 @@ const LoveCharacter = ({lang}) => {
     return (
         <div>
             <Helmet>
-                {/* <!-- Primary Meta Tags --> */}
-                <title>연애 캐릭터 테스트</title>
-                <meta name="title" content="연애 캐릭터 테스트 - 케이테스트"/>
-                <meta name="description" content="남친 & 여친 연애 캐릭터 테스트하기 - 연애 캐릭터 테스트 | 연애 테스트 | 연애캐릭터 테스트 남자편 여자편" data-react-helmet="true"/>
-                <link rel="main-url" href="https://ktestone.com/kapable.github.io/loveCharacter/"/>
+                {lang === 'Kor'
+                ? (
+                    <Fragment>
+                        {/* <!-- Primary Meta Tags --> */}
+                        <title>연애 캐릭터 테스트</title>
+                        <meta name="title" content="연애 캐릭터 테스트 - 케이테스트"/>
+                        <meta name="description" content="남친 & 여친 연애 캐릭터 테스트하기 - 연애 캐릭터 테스트 | 연애 테스트 | 연애캐릭터 테스트 남자편 여자편" data-react-helmet="true"/>
+                        <link rel="main-url" href="https://ktestone.com/kapable.github.io/loveCharacter/"/>
 
-                {/* <!-- Open Graph / Facebook --> */}
-                <meta property="og:type" content="website"/>
-                <meta property="og:url" content="https://ktestone.com/kapable.github.io/loveCharacter/"/>
-                <meta property="og:title" content="연애 캐릭터 테스트 - 케이테스트"/>
-                <meta property="og:description" content="남친 & 여친 연애 캐릭터 테스트하기 - 연애 캐릭터 테스트 | 연애 테스트 | 연애캐릭터 테스트 남자편 여자편"/>
-                <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacter${lang === 'Kor' ? '' : 'Eng'}-thumb.png`}/>
-                <meta property="og:image:alt" content="연애 캐릭터 테스트 - 케이테스트" />
+                        {/* <!-- Open Graph / Facebook --> */}
+                        <meta property="og:type" content="website"/>
+                        <meta property="og:url" content="https://ktestone.com/kapable.github.io/loveCharacter/"/>
+                        <meta property="og:title" content="연애 캐릭터 테스트 - 케이테스트"/>
+                        <meta property="og:description" content="남친 & 여친 연애 캐릭터 테스트하기 - 연애 캐릭터 테스트 | 연애 테스트 | 연애캐릭터 테스트 남자편 여자편"/>
+                        <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png`}/>
+                        <meta property="og:image:alt" content="연애 캐릭터 테스트 - 케이테스트" />
 
-                {/* <!-- Twitter --> */}
-                <meta property="twitter:card" content="summary_large_image"/>
-                <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/loveCharacter/"/>
-                <meta property="twitter:title" content="연애 캐릭터 테스트 - 케이테스트"/>
-                <meta property="twitter:description" content="남친 & 여친 연애 캐릭터 테스트하기 - 연애 캐릭터 테스트 | 연애 테스트 | 연애캐릭터 테스트 남자편 여자편"/>
-                <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacter${lang === 'Kor' ? '' : 'Eng'}-thumb.png`}/>
-                <meta property="twitter:image:alt" content="연애 캐릭터 테스트 - 케이테스트" />
+                        {/* <!-- Twitter --> */}
+                        <meta property="twitter:card" content="summary_large_image"/>
+                        <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/loveCharacter/"/>
+                        <meta property="twitter:title" content="연애 캐릭터 테스트 - 케이테스트"/>
+                        <meta property="twitter:description" content="남친 & 여친 연애 캐릭터 테스트하기 - 연애 캐릭터 테스트 | 연애 테스트 | 연애캐릭터 테스트 남자편 여자편"/>
+                        <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png`}/>
+                        <meta property="twitter:image:alt" content="연애 캐릭터 테스트 - 케이테스트" />
+                    </Fragment>
+                )
+                : (
+                    <Fragment>
+                        {/* <!-- Primary Meta Tags --> */}
+                        <title>Love Charactet Test</title>
+                        <meta name="title" content="Love Charactet Test - KTEST"/>
+                        <meta name="description" content="Boyfriend & Girlfriend Love Charactet Test - Love Charactet Test | Love Test | Love character test male female" data-react-helmet="true"/>
+                        <link rel="main-url" href="https://ktestone.com/kapable.github.io/loveCharacter/"/>
+
+                        {/* <!-- Open Graph / Facebook --> */}
+                        <meta property="og:type" content="website"/>
+                        <meta property="og:url" content="https://ktestone.com/kapable.github.io/loveCharacter/"/>
+                        <meta property="og:title" content="Love Charactet Test - KTEST"/>
+                        <meta property="og:description" content="Boyfriend & Girlfriend Love Charactet Test - Love Charactet Test | Love Test | Love character test male female"/>
+                        <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacterEng-thumb.png`}/>
+                        <meta property="og:image:alt" content="Love Charactet Test - KTEST" />
+
+                        {/* <!-- Twitter --> */}
+                        <meta property="twitter:card" content="summary_large_image"/>
+                        <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/loveCharacter/"/>
+                        <meta property="twitter:title" content="Love Charactet Test - KTEST"/>
+                        <meta property="twitter:description" content="Boyfriend & Girlfriend Love Charactet Test - Love Charactet Test | Love Test | Love character test male female"/>
+                        <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacterEng-thumb.png`}/>
+                        <meta property="twitter:image:alt" content="Love Charactet Test - KTEST" />
+                    </Fragment>
+                )
+                }
             </Helmet>
             <Router basename='/kapable.github.io/' forceRefresh={true}>
                 <div className='loveCharacter-intro-images-container'>
