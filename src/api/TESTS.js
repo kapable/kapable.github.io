@@ -48462,7 +48462,7 @@ const TESTS = [
             },
             {
                 which:"EI",
-                question: "연에 초반에 나는?",
+                question: "연애 초반에 나는?",
                 answers:[
                     {
                         type: "E",
@@ -48786,7 +48786,7 @@ const TESTS = [
             },
             {
                 which:"EI",
-                question: "연에 초반에 나는?",
+                question: "연애 초반에 나는?",
                 answers:[
                     {
                         type: "E",

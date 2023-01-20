@@ -1086,9 +1086,9 @@ class Result extends Component {
                             className="back-to-main-btn-img"
                             alt="다른 테스트 하러가기"
                             />
-                        {this.otherTestBannerRenderer()}
                     </div>
                 </div>
+                {this.otherTestBannerRenderer()}
                 {/* New Test banners */}
                 {/* {this.horizontalNewTestRenderer()} */}
 
