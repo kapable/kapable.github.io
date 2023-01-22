@@ -38,7 +38,7 @@ const TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '연인이 갑자기 친구를 부른다고 한다면?',
+                question: '이성 친구들이 많은 모임에서 나는?',
                 answers:[
                     {
                         type: "E",
