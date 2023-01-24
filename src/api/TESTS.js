@@ -23,6 +23,654 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // smileColorTestCn
+    {
+        info : {
+            mainTitle:"微笑约会测试",
+            subTitle:"从笑脸看我的恋爱倾向 |  微笑约会测试",
+            mainUrl:"smileColorTestCn",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/smileColorTestCn-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/smileColorTestCn-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"CN"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '无所事事悠闲的周末我会？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '马上联系朋友们约时间见面。'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '一整天躺在床上休息。'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "突然有出乎意料的约会时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "真有意思！没什么特别的事的话会赴约。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "不在我的计划之内..会找借口拒绝。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "朋友介绍参加某个聚会时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "主动跟他人打招呼，尽量营造好气氛。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "他人主动说话之前一直等待。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "坐上飞机准备去旅游时的我会想？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "啊，快点儿到就好了。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "好期待哇！可是飞机起飞的原理是什么呢？"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "吃饭时我的苦恼是？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "饭馆的两个我的最爱菜品中该选哪个呢？"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "吃着午饭就开始纠结晚饭该吃什么"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "看歌唱竞选节目时的我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "哇~帅爆了！这个音源发布的话我会一整天都听TT"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "哇..这歌词是他的真实故事吗？可想而知他练习得有多努力"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "听说抑郁的朋友说自己去购物时的我会？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "买什么啦？不会盲目地疯狂购物了吧？.."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "发生什么事了吗？怎么突然去购物了？"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "朋友突然告诉我他考试合格时我的反应是？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "喔，什么考试呀？？总之祝贺你！"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "哇，祝贺祝贺！辛苦了辛苦了！"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "女朋友珍惜的物件突然丢失时我会？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "怎么搞的怎么会丢了呀TT最后一次是在哪里看到的?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "那是她非常珍惜的东西TT怎么办TT"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "和恋人一起去美食餐馆时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "提前预约好，也想好要吃什么菜品再出发。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "临近约会日期的时候才着急地去预约。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "选择约会打扮时的我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "前一天就做好从头到脚的造型。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "一边准备一边选自己相穿的衣服出门。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "决定和恋人一起去旅游时的我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "提前仔细列好每天的出行计划。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "只要订好机票就觉得70%的准备已经做好了。"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "mint",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "yellow",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "pink",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "purple",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "blue",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "red",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "orange",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "olive",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "burgundy",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "beige",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "navy",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "grey",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "khaki",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "green",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "brown",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sky",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestCn/INFP.jpg'
+            },
+        ]
+    },
+    // smileColorTestJP
+    {
+        info : {
+            mainTitle:"笑顔の恋愛テスト",
+            subTitle:"スマイルキャラクターで調べる私の恋愛性向は？ |  笑顔の恋愛テスト",
+            mainUrl:"smileColorTestJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/smileColorTestJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/smileColorTestJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"JP"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '特別な用事のない週末に私は？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '友達や知人にすぐ連絡して約束を取る。'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '一日中、ベッドに横になって休む。'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "急に予定になかった約束ができると私は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "楽しそう! 特別な用事がなければ約束に行く。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "私の計画になかったのに。。。言い訳をする。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "友人の紹介である集まりに出たとき私は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "先に主導的に話しかけ、雰囲気を盛り上げようと努力する。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "人々が先に話しかけてくるまで待ってみる。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "旅行に行くため飛行機に乗った時、私が思うことは？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "あ～、早く着くといいな。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "楽しそう！ところで飛行機はどういう原理で飛ぶだろう。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "ご飯を食べるとき、私の悩みは？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "訪ねた食堂の最愛のメニュー二つの中で何を選ぶかの悩み。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "昼食を食べながら夕飯は何にしようかなの悩み。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "音楽の競演プログラムを見たとき私は？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "わぁ～最高だ。これ音源発売されると毎日聞くよ。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "わぁ、この歌詞はあの人が経験した話かな。練習はどれほどやったのかな。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "友人が、憂鬱だったのでショッピングしたと言った時、私は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "何買ったの？なんでもかんでも買いまくってはいないよね。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "何かあったの？急にショッピング？"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "友人が急に試験に合格したと言った、私の反応は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "お～、何の試験だったの。おめでとう。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "お～、頑張ったね。お疲れ!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "彼女が突然大事にしていたものをなくした時、私は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "どうやって無くしてしまったの。最後に見たのはどこ？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "それ、君が大切にした物だったのに。。どうしよう。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "恋人と美味しいお店を訪ねようとする時、私は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "前もって予約をして、何を食べるかメニューまで考えてから訪ねる。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "約束の日が近づいた時、急いで探して予約する。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "デート服を選ぶとき、私は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "前日に頭から足先までセットしておく。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "当日準備しながらひかれる服を着ていく。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "恋人と旅行に行こうとする時、私は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "日別に計画を細かく、前もって立てておく。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "飛行機のチケットさえ手に入れば7割は終わったと思う。"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "mint",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "yellow",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "pink",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "purple",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "blue",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "red",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "orange",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "olive",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "burgundy",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "beige",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "navy",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "grey",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "khaki",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "green",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "brown",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sky",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestJP/INFP.jpg'
+            },
+        ]
+    },
     // loveWarning
     {
         info : {
