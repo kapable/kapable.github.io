@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // meGuideJP
+    {
+        info : {
+            mainTitle:"私の使い方のテスト",
+            subTitle:"私をこうしてください | 私の使い方のテスト",
+            mainUrl:"meGuideJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/meGuideJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/meGuideJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"JP"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '自分にもっと近いのは？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '人といるときエネルギが充電される。'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '一人でいるときエネルギが充電される。'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "海外旅行に行くと私は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "有名な都市らを観光し、新しい人々に出会える旅行"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "美しい景色を眺めながら思索に耽る旅行"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "満員の居酒屋で昔よく聞いていたアイドルの曲が流れると？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "一緒に歌いながらテンションが上がる。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "一緒に歌う友人に静かにしてと言う。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "眠る前に私は？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "何も考えず眠りにつく。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "様々な事を想像しながら眠りにつく。"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "新しい電子製品を買った時に私は？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "マニュアルを見て説明通りに使用してみる。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: 'まずは感であれこれ押しながら使ってみる。'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "新しい業務を引き受けた時に私は？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "ガイドラインが確実で、具体的に指示してくれることを望む。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "方向性の提示と簡単な指示だけで、残りはまかせてほしい。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '友人が作ったクッキーを食べて、すごく美味しかった時の私の反応は？',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "わあ～、これどうやって作ったの？本当に自分で作った？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "わあ～これすごく美味しい！お疲れ！"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "チームを分けて行うスポーツゲームで、私のチームが負けていると？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "どうすれば勝てるか方法を探して実行してみる。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "メンバー達ががっかりしているかもしれないので励ましてファイトを叫ぶ。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "明日まで出さなければならない重要な業務が途中システムエラーで吹っ飛んでしまったら？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "瞬間頭に来るが、素早く思い出せる部分から作成しなおす。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "メンタルが崩れて悲しんでから、やっと作成しなおす。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "友達と遊ぶ場所を移すとき私は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "どこに行くか、何をするかをはっきり決めて出ようと言う。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "一旦外に出てから決めようと言う。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "計画がずれた時に私は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "頭に来て悔しいが、プランBを計画しておいたのでそれだけでも幸いだと思う。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "困惑するが仕方ないので他の事を探してみる。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "私が見た時もっと不思議な友人は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "何も整理しないで流れるまま即興的に、何事もなく生きていく友人。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "時間、分、秒単位で計画を立てエクセルで細かく日程を整理する友人。"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "mint",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "yellow",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "pink",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "purple",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "blue",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "red",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "orange",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "olive",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "burgundy",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "beige",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "navy",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "grey",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "khaki",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "green",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "brown",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sky",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideJP/INFP.jpg'
+            },
+        ]
+    },
     // smileColorTestCn
     {
         info : {

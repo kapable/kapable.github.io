@@ -341,9 +341,9 @@ class Result extends Component {
         let personalColor2022ListKor = [];
         let EngTestList = ["memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
         let CNTestList = ["auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
-        let JPTestList = ["flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
+        let JPTestList = ["smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
         let smileColorTestCnList = ["smileColorTestCn"];
-        let smileColorTestJPList = ["smileColorTestJP"];
+        let meGuideJPList = ["meGuideJP"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let loveCharacterEngList = ["loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng"];
@@ -542,7 +542,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (JPTestList.includes(this.state.current_test)) {
-            const rederTestList = ["smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
+            const rederTestList = ["meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -589,8 +589,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (smileColorTestJPList.includes(this.state.current_test)) {
-            const rederTestList = ["flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
+        } else if (meGuideJPList.includes(this.state.current_test)) {
+            const rederTestList = ["smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
