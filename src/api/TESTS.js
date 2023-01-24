@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // meGuideEng
+    {
+        info : {
+            mainTitle:"Me Use Guide",
+            subTitle:"you should treat me like this",
+            mainUrl:"meGuideEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/meGuideEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/meGuideEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Eng"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'Which of the following applies to you?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I get some energy when I'm with people"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I get recharged when I am alone'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What kind of overseas trip do you want?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "A trip that I can see famous cities and meet new people"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "A trip that I can be immersed in contemplation while looking at beautiful scenery"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What would be your reaction if an idol song you used to listen to came out in a crowded bar?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I get excited while singing along"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I tell my friend singing along to be quiet"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you do before going to sleep?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I go to sleep without thinking anything"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "I fall asleep while imagining all kinds of things"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When you buy new electronics, what do you do?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I look at the manual and just follow it"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: 'I’m trying to get used to it by pressing this and that '
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you expect when you receive a new project at work?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I expect there are certain guidelines in detail"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "I expect there are simple guidelines or directions to follow"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: 'How do you react when you eat a delicious cookie made by your friend?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Wow, how did you make this? Are you sure you made it?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Wow, this is so delicious! You must have worked hard to make it"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What is your reaction if your team is losing a sporting event?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: 'I try to find a way to reverse it.'
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: 'Feeling sorry, I cheer our team by shouting “fighting”.'
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What if a system error causes you to lose an important job that needs to be submitted by tomorrow?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I might get upset at the moment, but I quickly start over again"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I'm mentally broken I'm upset and I barely write again"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What would you do if you were hanging out with your friends and you had to move somewhere else?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Let’s decide where to go first"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "We can decide while walking"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What can be your reaction when plans go awry?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "You'll be angry and upset, but luckily, we have a plan B, so it's okay"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "It's embarrassing, but I have no choice but to look for something else"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Who is more mysterious from your point of view?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "A friend who does not organize and improvises at random"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "A friend who has detailed schedules in minutes and seconds in an Excel file"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "mint",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "yellow",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "pink",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "purple",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "blue",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "red",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "orange",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "olive",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "burgundy",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "beige",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "navy",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "grey",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "khaki",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "green",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "brown",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sky",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/meGuideEng/INFP.jpg'
+            },
+        ]
+    },
     // meGuideJP
     {
         info : {
