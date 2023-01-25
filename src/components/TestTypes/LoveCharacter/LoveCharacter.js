@@ -117,7 +117,7 @@ const LoveCharacter = ({lang}) => {
                         <img className='loveCharacter-intro-right-img' src={`https://images.ktestone.com/introImages/loveCharacter${lang === 'Kor' ? '' : lang}-intro-right.jpg`} alt="loveCharacterMale"/>
                     </Link>
                 </div>
-            <OtherLangIcons currentTest={lang === 'Kor' ? "loveCharacter" : "loveCharacterEng"}/>
+            <OtherLangIcons currentTest={lang === 'Kor' ? "loveCharacter" : `loveCharacter${lang}`}/>
             <div className="test-intro-with-friend">
                 <CopyToClipboard text={`https://ktestone.com/kapable.github.io/loveCharacter${lang === 'Kor' ? '' : lang}/`}>
                     <img
