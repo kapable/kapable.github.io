@@ -250,6 +250,7 @@ class App extends Component {
             {/* go to "LoveCharacter" page */}
             <Route path="/loveCharacter/" component={() => <LoveCharacter lang={'Kor'} />} />
             <Route path="/loveCharacterEng/" component={() => <LoveCharacter lang={'Eng'} />} />
+            <Route path="/loveCharacterCN/" component={() => <LoveCharacter lang={'CN'} />} />
 
             {/* go to "todayLuck" page */}
             <Route path="/todayLuck/" component={() => <TodayLuck />} exact/>

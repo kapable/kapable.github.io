@@ -27,6 +27,11 @@ function MainPage(props) {
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
             />
 
+            {/* Go to LoveCharacter */}
+            <Link to={props.lang === 'Kor' ? '/loveCharacter/' : `/loveCharacter${props.lang}`} className="main-link-block" key="loveCharacter-banner">
+                <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang === 'Kor' ? '' : props.lang}-thumb.png`} alt='loveCharacter' />
+            </Link>
+
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
                 {props.all_tests_url.slice(0,2).map((item, idx)=>{
@@ -55,11 +60,6 @@ function MainPage(props) {
                     };
                 })}
             </div>
-
-            {/* Go to LoveCharacter */}
-            <Link to={props.lang === 'Kor' ? '/loveCharacter/' : '/loveCharacterEng/'} className="main-link-block" key="loveCharacter-banner">
-                <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang === 'Kor' ? '' : 'Eng'}-thumb.png`} alt='loveCharacter' />
-            </Link>
             
 
             {/* Main Test Banners(Middle) */}

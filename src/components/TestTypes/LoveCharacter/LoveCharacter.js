@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import './loveCharacter.css';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { BrowserRouter as Router, Link, withRouter } from 'react-router-dom';
@@ -23,11 +23,10 @@ const LoveCharacter = ({lang}) => {
         return alert(alertMsg);
     };
 
-    return (
-        <div>
-            {lang === 'Kor'
-                ? (
-                    <Helmet>
+    const metaTagRenderer = useCallback(() => {
+        if(lang === 'Kor') {
+            return(
+                <Helmet>
                         {/* <!-- Primary Meta Tags --> */}
                         <title>연애 캐릭터 테스트</title>
                         <meta name="title" content="연애 캐릭터 테스트 - 케이테스트"/>
@@ -50,18 +49,19 @@ const LoveCharacter = ({lang}) => {
                         <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png`}/>
                         <meta property="twitter:image:alt" content="연애 캐릭터 테스트 - 케이테스트" />
                     </Helmet>
-                )
-                : (
-                    <Helmet>
+            )
+        } else if (lang === 'Eng') {
+            return(
+                <Helmet>
                         {/* <!-- Primary Meta Tags --> */}
                         <title>Love Charactet Test</title>
                         <meta name="title" content="Love Character Test - KTEST"/>
                         <meta name="description" content="Boyfriend & Girlfriend Love Character Test - Love Character Test | Love Test | Love character test male female" data-react-helmet="true"/>
-                        <link rel="main-url" href="https://ktestone.com/kapable.github.io/loveCharacter/"/>
+                        <link rel="main-url" href="https://ktestone.com/kapable.github.io/loveCharacterEng/"/>
 
                         {/* <!-- Open Graph / Facebook --> */}
                         <meta property="og:type" content="website"/>
-                        <meta property="og:url" content="https://ktestone.com/kapable.github.io/loveCharacter/"/>
+                        <meta property="og:url" content="https://ktestone.com/kapable.github.io/loveCharacterEng/"/>
                         <meta property="og:title" content="Love Character Test - KTEST"/>
                         <meta property="og:description" content="Boyfriend & Girlfriend Love Character Test - Love Character Test | Love Test | Love character test male female"/>
                         <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacterEng-thumb.png`}/>
@@ -69,26 +69,57 @@ const LoveCharacter = ({lang}) => {
 
                         {/* <!-- Twitter --> */}
                         <meta property="twitter:card" content="summary_large_image"/>
-                        <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/loveCharacter/"/>
+                        <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/loveCharacterEng/"/>
                         <meta property="twitter:title" content="Love Character Test - KTEST"/>
                         <meta property="twitter:description" content="Boyfriend & Girlfriend Love Character Test - Love Character Test | Love Test | Love character test male female"/>
                         <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacterEng-thumb.png`}/>
                         <meta property="twitter:image:alt" content="Love Character Test - KTEST" />
                     </Helmet>
-                )
-            }
+            )
+        } else if (lang === 'CN') {
+            return(
+                <Helmet>
+                        {/* <!-- Primary Meta Tags --> */}
+                        <title>Love Charactet Test</title>
+                        <meta name="title" content="恋爱角色测试 - KTEST"/>
+                        <meta name="description" content="我的爱情角色是什么样的角色？ 恋爱角色测试 - 恋爱角色测试 | 恋爱角色测试" data-react-helmet="true"/>
+                        <link rel="main-url" href="https://ktestone.com/kapable.github.io/loveCharacterCN/"/>
+
+                        {/* <!-- Open Graph / Facebook --> */}
+                        <meta property="og:type" content="website"/>
+                        <meta property="og:url" content="https://ktestone.com/kapable.github.io/loveCharacterCN/"/>
+                        <meta property="og:title" content="恋爱角色测试 - KTEST"/>
+                        <meta property="og:description" content="我的爱情角色是什么样的角色？ 恋爱角色测试 - 恋爱角色测试 | 恋爱角色测试"/>
+                        <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacterCN-thumb.png`}/>
+                        <meta property="og:image:alt" content="恋爱角色测试 - KTEST" />
+
+                        {/* <!-- Twitter --> */}
+                        <meta property="twitter:card" content="summary_large_image"/>
+                        <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/loveCharacterCN/"/>
+                        <meta property="twitter:title" content="恋爱角色测试 - KTEST"/>
+                        <meta property="twitter:description" content="我的爱情角色是什么样的角色？ 恋爱角色测试 - 恋爱角色测试 | 恋爱角色测试"/>
+                        <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacterCN-thumb.png`}/>
+                        <meta property="twitter:image:alt" content="恋爱角色测试 - KTEST" />
+                    </Helmet>
+            )
+        }
+    }, [lang]);
+
+    return (
+        <div>
+            {metaTagRenderer()}
             <Router basename='/kapable.github.io/' forceRefresh={true}>
                 <div className='loveCharacter-intro-images-container'>
-                    <Link to={`/loveCharacterFemale${lang === 'Kor' ? '' : 'Eng'}/`}>
-                        <img className='loveCharacter-intro-left-img' src={`https://images.ktestone.com/introImages/loveCharacter${lang === 'Kor' ? '' : 'Eng'}-intro-left.jpg`} alt="loveCharacterFemale"/>
+                    <Link to={`/loveCharacterFemale${lang === 'Kor' ? '' : lang}/`}>
+                        <img className='loveCharacter-intro-left-img' src={`https://images.ktestone.com/introImages/loveCharacter${lang === 'Kor' ? '' : lang}-intro-left.jpg`} alt="loveCharacterFemale"/>
                     </Link>
-                    <Link to={`/loveCharacterMale${lang === 'Kor' ? '' : 'Eng'}/`}>
-                        <img className='loveCharacter-intro-right-img' src={`https://images.ktestone.com/introImages/loveCharacter${lang === 'Kor' ? '' : 'Eng'}-intro-right.jpg`} alt="loveCharacterMale"/>
+                    <Link to={`/loveCharacterMale${lang === 'Kor' ? '' : lang}/`}>
+                        <img className='loveCharacter-intro-right-img' src={`https://images.ktestone.com/introImages/loveCharacter${lang === 'Kor' ? '' : lang}-intro-right.jpg`} alt="loveCharacterMale"/>
                     </Link>
                 </div>
             <OtherLangIcons currentTest={lang === 'Kor' ? "loveCharacter" : "loveCharacterEng"}/>
             <div className="test-intro-with-friend">
-                <CopyToClipboard text={`https://ktestone.com/kapable.github.io/loveCharacter${lang === 'Kor' ? '' : 'Eng'}/`}>
+                <CopyToClipboard text={`https://ktestone.com/kapable.github.io/loveCharacter${lang === 'Kor' ? '' : lang}/`}>
                     <img
                         src={COPYBTN}
                         className="test-intro-with-friend-img"
