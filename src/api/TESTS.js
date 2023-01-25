@@ -49391,7 +49391,7 @@ const TESTS = [
     {
         info : {
             mainTitle:"恋爱角色测试",
-            subTitle:"我的爱情角色是什么样的角色？",
+            subTitle:"我的爱情角色是什么样的角色？ | 恋爱角色测试 - 女方,男方",
             mainUrl:"loveCharacterMaleCN",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
@@ -49715,7 +49715,7 @@ const TESTS = [
     {
         info : {
             mainTitle:"恋爱角色测试",
-            subTitle:"我的爱情角色是什么样的角色？",
+            subTitle:"我的爱情角色是什么样的角色？ | 恋爱角色测试 - 女方,男方",
             mainUrl:"loveCharacterFemaleCN",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
