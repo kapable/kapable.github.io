@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // characteristicChracter
+    {
+        info : {
+            mainTitle:"성격 캐릭터 테스트",
+            subTitle:"캐릭터로 보는 나의 성격은? | 성격 테스트",
+            mainUrl:"characteristicChracter",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/characteristicChracter-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/characteristicChracter-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '나와 가까운 것은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '낯가림이 별로 없다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '사람들과 친해지는 시간이 오래 걸린다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "친구들에게 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "연락을 먼저 하는 편이다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "오는 연락에 답장하는 편이다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "기분이 좋지 않은 일이 생겼을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "밖에서 사람들을 만나면서 기분을 푼다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "집에서 조용히 생각을 정리해본다"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나가려고 하는데 갑자기 비가 온다면 나의 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "비 오네 우산 챙겨야겠다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "비 오면 바닥 미끄러운데 혹시나 길 가다 넘어지는 거 아니겠지?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "단체로 술집에 갔는데 직원이 좁아 보이는 쟁반에 맥주잔들을 들고 오고 있다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "이제 맥주 나오는구나 생각한다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '위태롭게 오다가 우리 테이블 왔을 때 쏟는 상상을 하면서 불안해한다'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "샤워할 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "아무 생각 없이 그냥 샤워만 한다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "에코가 빵빵한 화장실에서 노래를 흥얼거리면서 샤워한다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '친구가 처음 보는 신기한 물건을 꺼냈을 때 나의 반응은?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "와! 이게 뭐야?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "와! 신기하다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "새집으로 이사 가면서 바꿀 가구들을 볼 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "편리성, 가격, 크기 등 꼼꼼히 따져본다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "디자인이 예쁜지, 이사 갈 집과 잘 어울리는지를 생각해본다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 힘들다며 고민 상담을 한다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "들어보고 해결해주려고 한다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "들어주고 위로해 준다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "할 일이 있는데 친구들과 논다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "아직 할 일이 남아 있다는 생각에 편하게 놀지 못한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "어차피 노는 거 그냥 재밌게 논다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구가 A 지역으로 놀러 가기로 약속했는데,\n갑자기 B 지역으로 가보자고 한다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "이미 세워놓은 계획이 있는데 혼란스럽다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "갑작스럽긴 하지만 가려는 의도는 같으니, 알겠다고 한다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "내가 더 선호하는 것은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "계획과 질서"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "가능성과 새로움"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Rhseo",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qnsdnlrlapdlzj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "rkstjqdhkd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dlsTkdkTk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "rPghlrdhkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qksgkddk",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhalstkdekatk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "tkckdnjs",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wjswktkwjs",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "akssmdwwnRns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "vmfhdlfrTlqfj",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "thdnffltm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rkawjdzjsxmfhffj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "vorvhrfj",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dosmfrdmsdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dbflapsxkf",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracter/INFP.jpg'
+            },
+        ]
+    },
     // meGuideEng
     {
         info : {
