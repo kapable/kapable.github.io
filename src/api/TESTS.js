@@ -14232,7 +14232,6 @@ const TESTS = [
                 query: "ESTJ",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESTJ.png',
-                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "ESTP",
@@ -14240,7 +14239,6 @@ const TESTS = [
                 query: "ESTP",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESTP.png',
-                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ESFJ",
@@ -14248,7 +14246,6 @@ const TESTS = [
                 query: "ESFJ",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESFJ.png',
-                youtube_url: `https://youtu.be/HQ8_DWPgL2U`
             },
             {
                 type: "ESFP",
@@ -14256,7 +14253,6 @@ const TESTS = [
                 query: "ESFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ESFP.png',
-                youtube_url: `https://youtu.be/tDooBz7lSic`
             },
             {
                 type: "ENTJ",
@@ -14264,7 +14260,6 @@ const TESTS = [
                 query: "ENTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENTJ.png',
-                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "ENTP",
@@ -14273,7 +14268,6 @@ const TESTS = [
                 query: "ENTP",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENTP.png',
-                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ENFJ",
@@ -14281,7 +14275,6 @@ const TESTS = [
                 query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENFJ.png',
-                youtube_url: `https://youtu.be/RTtAPldbdJE`
             },
             {
                 type: "ENFP",
@@ -14289,7 +14282,6 @@ const TESTS = [
                 query: "ENFP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ENFP.png',
-                youtube_url: `https://youtu.be/fRbPIKGBqcY`
             },
             {
                 type: "ISTJ",
@@ -14297,7 +14289,6 @@ const TESTS = [
                 query: "ISTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISTJ.png',
-                youtube_url: `https://youtu.be/MHmmD5ywznc`
             },
             {
                 type: "ISTP",
@@ -14305,7 +14296,6 @@ const TESTS = [
                 query: "ISTP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISTP.png',
-                youtube_url: `https://youtu.be/WrDNVL33L5o`
             },
             {
                 type: "ISFJ",
@@ -14313,7 +14303,6 @@ const TESTS = [
                 query: "ISFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISFJ.png',
-                youtube_url: `https://youtu.be/WdFZ4C53_Iw`
             },
             {
                 type: "ISFP",
@@ -14322,7 +14311,6 @@ const TESTS = [
                 query: "ISFP",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/ISFP.png',
-                youtube_url: `https://youtu.be/IUtVhTn5g00`
             },
             {
                 type: "INTJ",
@@ -14330,7 +14318,6 @@ const TESTS = [
                 query: "INTJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/INTJ.png',
-                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "INTP",
@@ -14338,7 +14325,6 @@ const TESTS = [
                 query: "INTP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/INTP.png',
-                youtube_url: `https://youtu.be/oDZF6EJ7W-Y`
             },
             {
                 type: "INFJ",
@@ -14346,7 +14332,6 @@ const TESTS = [
                 query: "INFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/INFJ.png',
-                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "INFP",
@@ -14354,7 +14339,6 @@ const TESTS = [
                 query: "INFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTI/INFP.png',
-                youtube_url: `https://youtu.be/zFtrrokEWXQ`
             },
         ]
     },
@@ -14572,7 +14556,6 @@ const TESTS = [
                 query: "ESTJ",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESTJ.png',
-                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "ESTP",
@@ -14580,7 +14563,6 @@ const TESTS = [
                 query: "ESTP",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESTP.png',
-                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ESFJ",
@@ -14588,7 +14570,6 @@ const TESTS = [
                 query: "ESFJ",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESFJ.png',
-                youtube_url: `https://youtu.be/HQ8_DWPgL2U`
             },
             {
                 type: "ESFP",
@@ -14596,7 +14577,6 @@ const TESTS = [
                 query: "ESFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ESFP.png',
-                youtube_url: `https://youtu.be/tDooBz7lSic`
             },
             {
                 type: "ENTJ",
@@ -14604,7 +14584,6 @@ const TESTS = [
                 query: "ENTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENTJ.png',
-                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "ENTP",
@@ -14613,7 +14592,6 @@ const TESTS = [
                 query: "ENTP",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENTP.png',
-                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ENFJ",
@@ -14621,7 +14599,6 @@ const TESTS = [
                 query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENFJ.png',
-                youtube_url: `https://youtu.be/RTtAPldbdJE`
             },
             {
                 type: "ENFP",
@@ -14629,7 +14606,6 @@ const TESTS = [
                 query: "ENFP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ENFP.png',
-                youtube_url: `https://youtu.be/fRbPIKGBqcY`
             },
             {
                 type: "ISTJ",
@@ -14637,7 +14613,6 @@ const TESTS = [
                 query: "ISTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISTJ.png',
-                youtube_url: `https://youtu.be/MHmmD5ywznc`
             },
             {
                 type: "ISTP",
@@ -14645,7 +14620,6 @@ const TESTS = [
                 query: "ISTP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISTP.png',
-                youtube_url: `https://youtu.be/WrDNVL33L5o`
             },
             {
                 type: "ISFJ",
@@ -14653,7 +14627,6 @@ const TESTS = [
                 query: "ISFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISFJ.png',
-                youtube_url: `https://youtu.be/WdFZ4C53_Iw`
             },
             {
                 type: "ISFP",
@@ -14662,7 +14635,6 @@ const TESTS = [
                 query: "ISFP",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/ISFP.png',
-                youtube_url: `https://youtu.be/IUtVhTn5g00`
             },
             {
                 type: "INTJ",
@@ -14670,7 +14642,6 @@ const TESTS = [
                 query: "INTJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INTJ.png',
-                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "INTP",
@@ -14678,7 +14649,6 @@ const TESTS = [
                 query: "INTP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INTP.png',
-                youtube_url: `https://youtu.be/oDZF6EJ7W-Y`
             },
             {
                 type: "INFJ",
@@ -14686,7 +14656,6 @@ const TESTS = [
                 query: "INFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INFJ.png',
-                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "INFP",
@@ -14694,7 +14663,6 @@ const TESTS = [
                 query: "INFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIEng/INFP.png',
-                youtube_url: `https://youtu.be/zFtrrokEWXQ`
             },
         ]
     },
@@ -14912,7 +14880,6 @@ const TESTS = [
                 query: "ESTJ",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTJ.png',
-                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "ESTP",
@@ -14920,7 +14887,6 @@ const TESTS = [
                 query: "ESTP",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTP.png',
-                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ESFJ",
@@ -14928,7 +14894,6 @@ const TESTS = [
                 query: "ESFJ",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFJ.png',
-                youtube_url: `https://youtu.be/HQ8_DWPgL2U`
             },
             {
                 type: "ESFP",
@@ -14936,7 +14901,6 @@ const TESTS = [
                 query: "ESFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFP.png',
-                youtube_url: `https://youtu.be/tDooBz7lSic`
             },
             {
                 type: "ENTJ",
@@ -14944,7 +14908,6 @@ const TESTS = [
                 query: "ENTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTJ.png',
-                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "ENTP",
@@ -14953,7 +14916,6 @@ const TESTS = [
                 query: "ENTP",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTP.png',
-                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ENFJ",
@@ -14961,7 +14923,6 @@ const TESTS = [
                 query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFJ.png',
-                youtube_url: `https://youtu.be/RTtAPldbdJE`
             },
             {
                 type: "ENFP",
@@ -14969,7 +14930,6 @@ const TESTS = [
                 query: "ENFP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFP.png',
-                youtube_url: `https://youtu.be/fRbPIKGBqcY`
             },
             {
                 type: "ISTJ",
@@ -14977,7 +14937,6 @@ const TESTS = [
                 query: "ISTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTJ.png',
-                youtube_url: `https://youtu.be/MHmmD5ywznc`
             },
             {
                 type: "ISTP",
@@ -14985,7 +14944,6 @@ const TESTS = [
                 query: "ISTP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTP.png',
-                youtube_url: `https://youtu.be/WrDNVL33L5o`
             },
             {
                 type: "ISFJ",
@@ -14993,7 +14951,6 @@ const TESTS = [
                 query: "ISFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFJ.png',
-                youtube_url: `https://youtu.be/WdFZ4C53_Iw`
             },
             {
                 type: "ISFP",
@@ -15002,7 +14959,6 @@ const TESTS = [
                 query: "ISFP",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFP.png',
-                youtube_url: `https://youtu.be/IUtVhTn5g00`
             },
             {
                 type: "INTJ",
@@ -15010,7 +14966,6 @@ const TESTS = [
                 query: "INTJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTJ.png',
-                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "INTP",
@@ -15018,7 +14973,6 @@ const TESTS = [
                 query: "INTP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTP.png',
-                youtube_url: `https://youtu.be/oDZF6EJ7W-Y`
             },
             {
                 type: "INFJ",
@@ -15026,7 +14980,6 @@ const TESTS = [
                 query: "INFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFJ.png',
-                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "INFP",
@@ -15034,7 +14987,6 @@ const TESTS = [
                 query: "INFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFP.png',
-                youtube_url: `https://youtu.be/zFtrrokEWXQ`
             },
         ]
     },
@@ -15252,7 +15204,6 @@ const TESTS = [
                 query: "ESTJ",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTJ.png',
-                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "ESTP",
@@ -15260,7 +15211,6 @@ const TESTS = [
                 query: "ESTP",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESTP.png',
-                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ESFJ",
@@ -15268,7 +15218,6 @@ const TESTS = [
                 query: "ESFJ",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFJ.png',
-                youtube_url: `https://youtu.be/HQ8_DWPgL2U`
             },
             {
                 type: "ESFP",
@@ -15276,7 +15225,6 @@ const TESTS = [
                 query: "ESFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ESFP.png',
-                youtube_url: `https://youtu.be/tDooBz7lSic`
             },
             {
                 type: "ENTJ",
@@ -15284,7 +15232,6 @@ const TESTS = [
                 query: "ENTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTJ.png',
-                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "ENTP",
@@ -15293,7 +15240,6 @@ const TESTS = [
                 query: "ENTP",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENTP.png',
-                youtube_url: `https://youtu.be/hs2SH1lTyQM`
             },
             {
                 type: "ENFJ",
@@ -15301,7 +15247,6 @@ const TESTS = [
                 query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFJ.png',
-                youtube_url: `https://youtu.be/RTtAPldbdJE`
             },
             {
                 type: "ENFP",
@@ -15309,7 +15254,6 @@ const TESTS = [
                 query: "ENFP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ENFP.png',
-                youtube_url: `https://youtu.be/fRbPIKGBqcY`
             },
             {
                 type: "ISTJ",
@@ -15317,7 +15261,6 @@ const TESTS = [
                 query: "ISTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTJ.png',
-                youtube_url: `https://youtu.be/MHmmD5ywznc`
             },
             {
                 type: "ISTP",
@@ -15325,7 +15268,6 @@ const TESTS = [
                 query: "ISTP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISTP.png',
-                youtube_url: `https://youtu.be/WrDNVL33L5o`
             },
             {
                 type: "ISFJ",
@@ -15333,7 +15275,6 @@ const TESTS = [
                 query: "ISFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFJ.png',
-                youtube_url: `https://youtu.be/WdFZ4C53_Iw`
             },
             {
                 type: "ISFP",
@@ -15342,7 +15283,6 @@ const TESTS = [
                 query: "ISFP",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/ISFP.png',
-                youtube_url: `https://youtu.be/IUtVhTn5g00`
             },
             {
                 type: "INTJ",
@@ -15350,7 +15290,6 @@ const TESTS = [
                 query: "INTJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTJ.png',
-                youtube_url: `https://youtu.be/Gp1gKKCPOmM`
             },
             {
                 type: "INTP",
@@ -15358,7 +15297,6 @@ const TESTS = [
                 query: "INTP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INTP.png',
-                youtube_url: `https://youtu.be/oDZF6EJ7W-Y`
             },
             {
                 type: "INFJ",
@@ -15366,7 +15304,6 @@ const TESTS = [
                 query: "INFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFJ.png',
-                youtube_url: `https://youtu.be/HZTtUoFOcIY`
             },
             {
                 type: "INFP",
@@ -15374,7 +15311,6 @@ const TESTS = [
                 query: "INFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/auditionBTIJp/INFP.png',
-                youtube_url: `https://youtu.be/zFtrrokEWXQ`
             },
         ]
     },
@@ -48246,7 +48182,7 @@ const TESTS = [
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/test-thumb.png",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
-            lang:"Kor"
+            lang:"Etc"
         },
         questions:[
             {
@@ -48748,7 +48684,7 @@ const TESTS = [
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/wealthluck-intro.png",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
-            lang:"Kor"
+            lang:"Etc"
         },
         questions:[
             {
@@ -49068,7 +49004,7 @@ const TESTS = [
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/jaetech-intro.png",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
-            lang:"Kor"
+            lang:"Etc"
         },
         questions:[
             {
@@ -49389,7 +49325,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Kor"
+            lang:"Etc"
         },
         questions:[
             {
@@ -49717,7 +49653,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Kor"
+            lang:"Etc"
         },
         questions:[
             {
@@ -50693,7 +50629,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"CN"
+            lang:"Etc"
         },
         questions:[
             {
@@ -51017,7 +50953,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"CN"
+            lang:"Etc"
         },
         questions:[
             {
@@ -51341,7 +51277,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Kor"
+            lang:"Etc"
         },
         questions:[
             {
@@ -51665,7 +51601,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Kor"
+            lang:"Etc"
         },
         questions:[
             {
@@ -51989,7 +51925,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Kor"
+            lang:"Etc"
         },
         questions:[
             {
@@ -52313,7 +52249,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Kor"
+            lang:"Etc"
         },
         questions:[
             {

@@ -233,7 +233,6 @@ class Result extends Component {
     pplBannerRenderer(){
         let personalIncenseListGB = ["personalIncenseEng", "personalIncenseJP"];
         let personalTaroList = ["personalTaro"];
-        let auditionBtiList = ['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn'];
         // duft & doft Eng & JP
         if(personalIncenseListGB.includes(this.state.current_test)){
             const duft_outlink = "https://www.amazon.com/DUFT-DOFT-Refreshing-hydration-Feel-good/dp/B07MB55WVK"
@@ -327,21 +326,6 @@ class Result extends Component {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={hanbokBTI_outlink}
-                    className="to-ppl-banner-text"
-                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
-                </Fragment>
-            )
-        } else if (auditionBtiList.includes(this.state.current_test)) {
-            const _current_test_contents = TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0];
-            let _current_test_result = _current_test_contents.results.filter((res) => res.query === this.state.current_result)[0];
-            const audition_outlink = _current_test_result.youtube_url
-            const banner_img_src = `https://images.ktestone.com/resultImages/${this.state.current_test}/banner/${this.state.current_result}.png`
-            return(
-                <Fragment>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={audition_outlink}
                     className="to-ppl-banner-text"
                     > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                 </Fragment>
