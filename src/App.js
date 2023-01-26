@@ -79,7 +79,7 @@ class App extends Component {
       sharable_url:_sharable_url,
       pct_test: _pct_test,
       ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
-      lang_list:['Kor', 'JP', 'Eng', 'CN', 'Rus' ,'Others'],
+      lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'Rus' ,'Others'],
       articleCategory:['humor', 'red']
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);
@@ -251,6 +251,7 @@ class App extends Component {
             <Route path="/loveCharacter/" component={() => <LoveCharacter lang={'Kor'} />} />
             <Route path="/loveCharacterEng/" component={() => <LoveCharacter lang={'Eng'} />} />
             <Route path="/loveCharacterCN/" component={() => <LoveCharacter lang={'CN'} />} />
+            <Route path="/loveCharacterGer/" component={() => <LoveCharacter lang={'Ger'} />} />
 
             {/* go to "todayLuck" page */}
             <Route path="/todayLuck/" component={() => <TodayLuck />} exact/>

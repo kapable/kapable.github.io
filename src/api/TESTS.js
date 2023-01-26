@@ -49711,6 +49711,654 @@ const TESTS = [
             },
         ]
     },
+    // loveCharacterFemaleGer
+    {
+        info : {
+            mainTitle:"Beziehungstypen Test",
+            subTitle:"Was für ein Charakter ist mein Liebescharakter? | BeziehungstypenTest - Freund, Freundin",
+            mainUrl:"loveCharacterFemaleGer",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Etc"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'Wie tickst du eher beim Blind Date?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Ich bin eine kommunikative Person und fange gerne mit dem Gespräch an."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Lieber warte ich ab, bis sie/er mich anspricht.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Deine Freunde möchten Pärchendates machen. ",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Klar, es wird sicher lustig!! Ich werde meine/n FreundIn sofort fragen! "
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Was? Ähm.. Mal gucken... (Ich habe kein Bock drauf...)"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Wie verhälst du dich am Anfang der Beziehung?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Ich stelle ihr/ihn viele Fragen."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Ich bin ein guter Zuhörer. "
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Wie würdest du dich reagieren,\nwenn du zufällig ein Kindheitsfoto gemeinsam\nmit deiner/m FreundIn finden würde?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Ich kann es nicht fassen. Wie klein die Welt ist!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Ach du meine Güte, das muss ein Schicksal sein!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Gerade hattest du einen Albtraum.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Das war aber richtig realistisch.\nAch was, ich gehe wieder schlafen."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Was war denn das für ein Traum?\nHat er etwa eine Bedeutung?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: `Du und dein/e FreundIn möchten ein Restaurant besuchen.\nWelchen Weg möchtest du eher nehmen?`,
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Einen zwar langweiligen, aber kürzeren Weg."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Einen zwar längeren,\naber schönen Weg mit viel Sehenswürdigkeiten."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Deiner/m FreundIn gefällt dein Lieblingslied nicht.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Wie kann es ihr/ihm nicht gefallen?\nIch frage sie/ihn nach dem Grund."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Ich respektiere ihren/seinen Geschmack, trotzdem bin ich ein wenig traurig."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Dein/e FreundIn hat sich mit einem Freund gestritten.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Wieso? Weswegen habt ihr euch gestritten?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Oh, das muss dich echt geärgert haben.\nIch kann dich gut verstehen."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Dein/e FreundIn sagt,\ndass ihr euch am Jahrestag nicht treffen können.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Sie/er muss einen angemessenen Grund dafür haben.\nIch frage sie/ihn zunächst,\nwarum wir uns nicht sehen können."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Sie/er weiß doch ganz genau,\nwie sehr ich mich auf diesen Tag gewartet habe!\nIch bin total traurig und wütend!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Du musst etwas erledigen,\naber dein/e FreundIn möchte kurzfristig mit dir ins Kino gehen.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Sorry, aber ich muss das unbedingt heute hinter mich bringen.\nWie wäre es mit morgen 15 Uhr?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Ähm… Okay, das kann ich doch auf später verlegen! "
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Wie gehst du mit der Konflikt mit deiner/m FreundIn um?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Ich möchte sofort diskutieren,\nwie wir sie lösen wollen, oder zumindest festlegen,\nob wir jetzt oder später darüber reden möchten."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Es kommt auf die Situation an."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Du bist gerade vom Pärchenurlaub zurückgekommen.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Ich ruhe mich erst dann aus,\nnachdem ich meinen Koffer ausgepackt und mich geduscht habe."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Zuerst muss ich mal ausruhen. Alles andere kommt danach."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wksthfleoakdhkd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhlrkdsodb",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekwjdekrka",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dyffhfkdlvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmdqntk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dkfEMftlswkq",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhfemsflxmflqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fldortusaksfpq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "Rhseo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wkdrldusdo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Whfqh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gjekd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dnjzjghfflr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ajdEoflsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleGer/INFP.jpg'
+            },
+        ]
+    },
+    // loveCharacterMaleGer
+    {
+        info : {
+            mainTitle:"Beziehungstypen Test",
+            subTitle:"Was für ein Charakter ist mein Liebescharakter? | BeziehungstypenTest - Freund, Freundin",
+            mainUrl:"loveCharacterMaleGer",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Etc"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'Wie tickst du eher beim Blind Date?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Ich bin eine kommunikative Person und fange gerne mit dem Gespräch an."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Lieber warte ich ab, bis sie/er mich anspricht.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Deine Freunde möchten Pärchendates machen. ",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Klar, es wird sicher lustig!! Ich werde meine/n FreundIn sofort fragen! "
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Was? Ähm.. Mal gucken... (Ich habe kein Bock drauf...)"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Wie verhälst du dich am Anfang der Beziehung?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Ich stelle ihr/ihn viele Fragen."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Ich bin ein guter Zuhörer. "
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Wie würdest du dich reagieren,\nwenn du zufällig ein Kindheitsfoto gemeinsam\nmit deiner/m FreundIn finden würde?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Ich kann es nicht fassen. Wie klein die Welt ist!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Ach du meine Güte, das muss ein Schicksal sein!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Gerade hattest du einen Albtraum.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Das war aber richtig realistisch.\nAch was, ich gehe wieder schlafen."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Was war denn das für ein Traum?\nHat er etwa eine Bedeutung?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: `Du und dein/e FreundIn möchten ein Restaurant besuchen.\nWelchen Weg möchtest du eher nehmen?`,
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Einen zwar langweiligen, aber kürzeren Weg."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Einen zwar längeren,\naber schönen Weg mit viel Sehenswürdigkeiten."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Deiner/m FreundIn gefällt dein Lieblingslied nicht.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Wie kann es ihr/ihm nicht gefallen?\nIch frage sie/ihn nach dem Grund."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Ich respektiere ihren/seinen Geschmack, trotzdem bin ich ein wenig traurig."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Dein/e FreundIn hat sich mit einem Freund gestritten.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Wieso? Weswegen habt ihr euch gestritten?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Oh, das muss dich echt geärgert haben.\nIch kann dich gut verstehen."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Dein/e FreundIn sagt,\ndass ihr euch am Jahrestag nicht treffen können.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Sie/er muss einen angemessenen Grund dafür haben.\nIch frage sie/ihn zunächst,\nwarum wir uns nicht sehen können."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Sie/er weiß doch ganz genau,\nwie sehr ich mich auf diesen Tag gewartet habe!\nIch bin total traurig und wütend!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Du musst etwas erledigen,\naber dein/e FreundIn möchte kurzfristig mit dir ins Kino gehen.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Sorry, aber ich muss das unbedingt heute hinter mich bringen.\nWie wäre es mit morgen 15 Uhr?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Ähm… Okay, das kann ich doch auf später verlegen! "
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Wie gehst du mit der Konflikt mit deiner/m FreundIn um?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Ich möchte sofort diskutieren,\nwie wir sie lösen wollen, oder zumindest festlegen,\nob wir jetzt oder später darüber reden möchten."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Es kommt auf die Situation an."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Du bist gerade vom Pärchenurlaub zurückgekommen.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Ich ruhe mich erst dann aus,\nnachdem ich meinen Koffer ausgepackt und mich geduscht habe."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Zuerst muss ich mal ausruhen. Alles andere kommt danach."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wksthfleoakdhkd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhlrkdsodb",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekwjdekrka",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dyffhfkdlvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmdqntk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dkfEMftlswkq",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhfemsflxmflqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fldortusaksfpq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "Rhseo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wkdrldusdo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Whfqh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gjekd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dnjzjghfflr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ajdEoflsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleGer/INFP.jpg'
+            },
+        ]
+    },
     // loveCharacterMaleCN
     {
         info : {
