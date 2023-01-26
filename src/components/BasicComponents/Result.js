@@ -351,7 +351,7 @@ class Result extends Component {
 
     otherTestBannerRenderer() {
         let personalColor2022ListKor = [];
-        let EngTestList = ["loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
+        let EngTestList = ["meGuideEng", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
         let CNTestList = ["smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
         let JPTestList = ["smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
         let GerTestList = ["personalColorGer"];
@@ -360,7 +360,7 @@ class Result extends Component {
         let meGuideJPList = ["meGuideJP"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
-        let meGuideEngList = ["meGuideEng"];
+        let loveWarningEngList = ["loveWarningEng"];
         let loveCharacterList = ["loveCharacter", "loveCharacterFemale", "loveCharacterMale"];
         let characteristicChracterList = ["characteristicChracter"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
@@ -388,7 +388,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
-            const rederTestList = ["meGuideEng", "loveCharacterEng", "memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "oneSidedLoveEng"];
+            const rederTestList = ["loveWarningEng", "meGuideEng", "loveCharacterEng", "memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", "flowerBTIEng", "oneSidedLoveEng"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -459,8 +459,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (meGuideEngList.includes(this.state.current_test)) {
-            const rederTestList = ["loveCharacterEng", "smileColorTestEng", "memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
+        } else if (loveWarningEngList.includes(this.state.current_test)) {
+            const rederTestList = ["meGuideEng", "loveCharacterEng", "smileColorTestEng", "memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "snowflakeEng", "flowerBTIEng", "personalColor2022Eng"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -771,7 +771,7 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ["meGuideEng", "meGuideJP", "smileColorTestCn", "smileColorTestJP", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN", "loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer", "memoEng", "oneSidedLoveEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
+            let ppl_list = ["loveWarningEng", "meGuideEng", "meGuideJP", "smileColorTestCn", "smileColorTestJP", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN", "loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer", "memoEng", "oneSidedLoveEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
             let tonymoly_list = ["factPok", "MyFactPok", "FriendFactPok",];
             if(ppl_list.includes(this.state.current_test)) {

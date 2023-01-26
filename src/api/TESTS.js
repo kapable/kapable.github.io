@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveWarningEng
+    {
+        info : {
+            mainTitle:"Love warning test",
+            subTitle:"What is my dating tendency as a warning letter?",
+            mainUrl:"loveWarningEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveWarningEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveWarningEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Eng"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What would you do if you attended an event where there are lots of the opposite sex?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I would lead conversations and speak positively'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I would be confident in answering questions and empathizing'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "If you were going on a trip with your lover after a long time,\nwhat kind of trip would you like to take?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I would like to have an exciting and enjoyable trip where I can get energy."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I would like to go on a calm healing trip of refreshing myself"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What would you do if you were with your lover and you ran into your lover's friend?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I would just talk naturally"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I would just say hello and stay by the side"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What if the person you're dating for fun doesn't contact you?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "What's up? Maybe busy?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "What's up? Maybe bored? If not, why disappeared?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If your lover wants to live a movie-like life after watching a movie,\nwhat can be your reaction?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I don't think that's going to happen\n but if it does it'd be great!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: 'I thought about it as well.\nIf I could live that kind of life,\nI would expect lots of things.'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: `In a long-term relationship,\nhow would you react if your lover said,\n"We've been together for such a long time!"?`,
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Yes, it's been a long time! (Time flies so quickly)"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Yes, it has been long time! (Should I get married?)"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: 'What do you do when you are unavoidably late for a date?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I'll explain why I'm late and apologize"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I will apologize first and tell the reason"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What would you do if you took your lover to a must-visit restaurant you know and your lover said it is not that tasty. ",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I would ask why?\nAnd if it is reasonable, I would admit it"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "It is okay but I would be a bit sad and angry"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If your friend suddenly gets married,\nwhat can be your reaction?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Suddenly? why? with whom? What's going on?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Suddenly? Great congratulations!\nPlease take care of the wedding invitation letter~"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What kind of date do you like?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "A planned date in detail"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "A not planed date or an impromptu date"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "How will you prepare for your first date?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I will prepare everything,\nsuch as restaurant reservations, cafes to go to, clothes to wear, etc."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I'll just make a restaurant reservation and simply decide what to wear"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What will you do when you go to a restaurant and the line is too long?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I'll wait because I don't want to change it. But going to another restaurant I found beforehand could be my second choice"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I'm sorry, but I quickly find another place"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dusen",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "Qkfrks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "vkfks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "chfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "shfks",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "gksmftor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkfrntor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "cjdfhrtor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "skator",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tnvtor",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ghltor",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "qkator",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningEng/INFP.jpg'
+            },
+        ]
+    },
     // characteristicChracter
     {
         info : {
