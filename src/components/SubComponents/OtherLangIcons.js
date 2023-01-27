@@ -1659,6 +1659,12 @@ export default function OtherLangIcons(props) {
                         href="https://ktestone.com/kapable.github.io/loveCharacterGer/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/ger-icon.png' className='language-icon' alt="[ Gehen Sie zur deutschen Version. ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/spain-icon.png' className='language-icon' alt="[ paso a la versión española ]" /></a>
                 </div>
             )
         } else if(["loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng"].includes(props.currentTest)) {
@@ -1683,6 +1689,12 @@ export default function OtherLangIcons(props) {
                         href="https://ktestone.com/kapable.github.io/loveCharacterGer/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/ger-icon.png' className='language-icon' alt="[ Gehen Sie zur deutschen Version. ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/spain-icon.png' className='language-icon' alt="[ paso a la versión española ]" /></a>
                 </div>
             )
         } else if(["loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN"].includes(props.currentTest)) {
@@ -1707,6 +1719,12 @@ export default function OtherLangIcons(props) {
                         href="https://ktestone.com/kapable.github.io/loveCharacterGer/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/ger-icon.png' className='language-icon' alt="[ Gehen Sie zur deutschen Version. ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/spain-icon.png' className='language-icon' alt="[ paso a la versión española ]" /></a>
                 </div>
             )
         } else if(["loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer"].includes(props.currentTest)) {
@@ -1731,9 +1749,45 @@ export default function OtherLangIcons(props) {
                         href="https://ktestone.com/kapable.github.io/loveCharacterCN/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/personalColorES/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/spain-icon.png' className='language-icon' alt="[ paso a la versión española ]" /></a>
                 </div>
             )
-        }
+        } else if(["loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES"].includes(props.currentTest)) {
+            return(
+                <div className="go-to-each-language" style={{marginTop:'1rem'}}>
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/loveCharacter/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/loveCharacterEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/loveCharacterCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/loveCharacterGer/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/ger-icon.png' className='language-icon' alt="[ Gehen Sie zur deutschen Version. ]" /></a>
+                </div>
+            )
+        } 
     };
 
     function meGuideTestLinkRenderer(){

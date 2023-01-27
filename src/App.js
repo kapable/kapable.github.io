@@ -79,7 +79,7 @@ class App extends Component {
       sharable_url:_sharable_url,
       pct_test: _pct_test,
       ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
-      lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'Rus' ,'Others'],
+      lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'ES', 'Rus' ,'Others'],
       articleCategory:['humor', 'red']
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);
@@ -110,7 +110,7 @@ class App extends Component {
     let lang_route_list = [];
     if(lang === "Others") {
       while(m<TESTS.length){
-        if((TESTS[m].info.lang !== "Kor") && (TESTS[m].info.lang !== "Eng") && (TESTS[m].info.lang !== "CN") && (TESTS[m].info.lang !== "JP") && (TESTS[m].info.lang !== "Rus")) {
+        if((TESTS[m].info.lang !== "Kor") && (TESTS[m].info.lang !== "Eng") && (TESTS[m].info.lang !== "CN") && (TESTS[m].info.lang !== "JP") && (TESTS[m].info.lang !== "Ger") && (TESTS[m].info.lang !== "ES") && (TESTS[m].info.lang !== "Rus")) {
           lang_route_list.push(['/'+TESTS[m].info.mainUrl+'/', TESTS[m].info.thumbImage, TESTS[m].info.mainTitle]);
         }
         m = m + 1;
@@ -252,6 +252,7 @@ class App extends Component {
             <Route path="/loveCharacterEng/" component={() => <LoveCharacter lang={'Eng'} />} />
             <Route path="/loveCharacterCN/" component={() => <LoveCharacter lang={'CN'} />} />
             <Route path="/loveCharacterGer/" component={() => <LoveCharacter lang={'Ger'} />} />
+            <Route path="/loveCharacterES/" component={() => <LoveCharacter lang={'ES'} />} />
 
             {/* go to "todayLuck" page */}
             <Route path="/todayLuck/" component={() => <TodayLuck />} exact/>

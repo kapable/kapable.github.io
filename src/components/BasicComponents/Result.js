@@ -105,6 +105,7 @@ class Result extends Component {
         let loveCharacterCNQueries = ["loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN"];
         let loveCharacterEngQueries = ["loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng"];
         let loveCharacterGerQueries = ["loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer"];
+        let loveCharacterESQueries = ["loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES"];
         if(factPokQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/factPok/";
         };
@@ -119,6 +120,9 @@ class Result extends Component {
         };
         if(loveCharacterGerQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/loveCharacterGer/";
+        };
+        if(loveCharacterESQueries.some(el => this.state.current_url.includes(el))) {
+            window.location.href = window.location.origin + "/kapable.github.io/loveCharacterES/";
         };
         this._eventSenderGA("Paging", "Click Re-test Button", "result page");
         this.setState({
@@ -339,6 +343,8 @@ class Result extends Component {
         let CNTestList = ["smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
         let JPTestList = ["smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
         let GerTestList = ["personalColorGer"];
+        let ESTestList = ["personalColorES"];
+        let loveCharacterESList = ["loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES"];
         let loveCharacterGerList = ["loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer"];
         let loveCharacterCNList = ["loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN"];
         let meGuideJPList = ["meGuideJP"];
@@ -563,9 +569,57 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
+        } else if (ESTestList.includes(this.state.current_test)) {
+            const rederTestList = ["loveCharacterES"];
+            return(
+                <Fragment>
+                    {rederTestList.map((test) => (
+                        <Fragment key={test + '-test-key'}>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                            <AdsenseAdvertiser
+                                key={test+'-adsense'}
+                                client="ca-pub-2382342018701919"
+                                slot="6832785479"
+                                format="auto"
+                                responsive="true"
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+                            />
+                        </Fragment>
+                    ))}
+                </Fragment>
+            )
         } else if (GerTestList.includes(this.state.current_test)) {
             const rederTestList = ["loveCharacterGer"];
             return(
+                <Fragment>
+                    {rederTestList.map((test) => (
+                        <Fragment key={test + '-test-key'}>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                            <AdsenseAdvertiser
+                                key={test+'-adsense'}
+                                client="ca-pub-2382342018701919"
+                                slot="6832785479"
+                                format="auto"
+                                responsive="true"
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+                            />
+                        </Fragment>
+                    ))}
+                </Fragment>
+            )
+        } else if (loveCharacterESList.includes(this.state.current_test)) {
+            const rederTestList = ["personalColorES"];
+            return (
                 <Fragment>
                     {rederTestList.map((test) => (
                         <Fragment key={test + '-test-key'}>
@@ -755,7 +809,7 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ["loveWarningEng", "meGuideEng", "meGuideJP", "smileColorTestCn", "smileColorTestJP", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN", "loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer", "memoEng", "oneSidedLoveEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
+            let ppl_list = ["loveWarningEng", "meGuideEng", "meGuideJP", "smileColorTestCn", "smileColorTestJP", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN", "loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer", "loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES", "memoEng", "oneSidedLoveEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
             let tonymoly_list = ["factPok", "MyFactPok", "FriendFactPok",];
             if(ppl_list.includes(this.state.current_test)) {

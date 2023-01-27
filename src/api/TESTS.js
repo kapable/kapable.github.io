@@ -49971,6 +49971,654 @@ const TESTS = [
             },
         ]
     },
+    // loveCharacterFemaleES
+    {
+        info : {
+            mainTitle:"Test de Personalidad en noviazgo.",
+            subTitle:"¿Cuál es mi inclinación a enamorarme como personaje? | para hombres, para mujeres",
+            mainUrl:"loveCharacterFemaleES",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Etc"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'En una cita a ciegas, ¿qué tipo de personas eres?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "No soporto atmósfera incómoda, digo cualquier cosa y hago cualquier pregunta."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Aunque no me gusta lo incómodo, espero hasta que otro diga algo.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Si una pareja de tus amigos te propone una cita doble, ¿qué harías?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Suena divertido, ¡claro que sí! ¡De inmediato voy a preguntarle a mi novio/a!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "No me lo esperaba... Después de preguntarle a mi novio/a, voy a pensar. (No voy a hacerlo)"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "En un novizago, al principio, ¿qué tipo de personas eres?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Hago preguntas más."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Muestro reacción y mi empatía."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Al mirar las fotografías de tu novio/a de pequeño/a, por casualidad has encontrado una foto donde salen tu novio/a y tú. ¿Qué dirías?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Guau, el mundo es muy pequeño. ¡Qué milagro!¿Cómo puede ser?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Guau. Es como una película. Creo que íbamos a quedar. ¿Tal vez nos vimos en la vida anterior también?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Si te despiertas desde un mal sueño, ¿qué harías?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "El sueño fue muy realista. Creía que era algo real. Tendría que dormir otra vez."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Me siento mal por el sueño. ¿Algo pasaría?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: `Vas a ir a un restaurante rico con tu novio/a, ¿cuál ruta elegirías?`,
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Un atajo, que no tiene nada intersante."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Un camino un poquito sinuoso, pero más hermoso."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Has puesto tu tema favorito para tu novio/a. Pero te dice que no le gusta. ¿Cómo te sentirías?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Tienes curiosidad cómo es su gustao musical y cómo no le gusta este temazo."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Aunque sabes que se trata de gusto personal, te sientes triste."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Tu novio/a dice que ha peleado con su amigo. ¿Qué le dirías?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "¿Por qué? ¿Por qué has peleado?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "¿Estás bien? Deberías estar triste. Es su culpa."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Has esperado aniversario con ansias. Pero tu novio/a se disculpa, diciendo que hoy no puede quedar contigo. ¿Qué harías?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Aunque estoy triste, le pregunto por qué no puede quedar conmigo y si es algo justificable."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Estoy triste y enfadado/a por no poder quedar con él/ella en el aniversario que he esperado con ansias."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Tienes trabajo que hacer. Pero de repente tu novio/a te prpone ir a ver una pelí que quería ver. ¿Qué harías?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Hoy tengo que hacer algo... ¿Qué te parece a las tres de la tarde mañana?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Aunque tengo que hacer algo, tengo suficiente tiempo. Así que, claro, ¡vamos!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Cuando tienes conflicto con tu novio/a, ¿qué harías?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "De inmediato quiero decidir cómo solucionarlo y qué hacer adelante de manera clara para resolverelo."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Dependiendo de la atmósfera de la situación, puedo solucionarlo ahora o no."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Después de un viaje divertido con tu novio/a, ¿qué harías?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Arreglo mi equipaje primero, me ducho y luego descanso."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Primero descanso, me ducho y luego arreglo."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wksthfleoakdhkd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhlrkdsodb",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekwjdekrka",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dyffhfkdlvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmdqntk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dkfEMftlswkq",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhfemsflxmflqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fldortusaksfpq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "Rhseo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wkdrldusdo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Whfqh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gjekd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dnjzjghfflr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ajdEoflsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleES/INFP.jpg'
+            },
+        ]
+    },
+    // loveCharacterMaleES
+    {
+        info : {
+            mainTitle:"Test de Personalidad en noviazgo.",
+            subTitle:"¿Cuál es mi inclinación a enamorarme como personaje? | para hombres, para mujeres",
+            mainUrl:"loveCharacterMaleES",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Etc"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'En una cita a ciegas, ¿qué tipo de personas eres?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "No soporto atmósfera incómoda, digo cualquier cosa y hago cualquier pregunta."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Aunque no me gusta lo incómodo, espero hasta que otro diga algo.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Si una pareja de tus amigos te propone una cita doble, ¿qué harías?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Suena divertido, ¡claro que sí! ¡De inmediato voy a preguntarle a mi novio/a!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "No me lo esperaba... Después de preguntarle a mi novio/a, voy a pensar. (No voy a hacerlo)"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "En un novizago, al principio, ¿qué tipo de personas eres?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Hago preguntas más."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Muestro reacción y mi empatía."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Al mirar las fotografías de tu novio/a de pequeño/a, por casualidad has encontrado una foto donde salen tu novio/a y tú. ¿Qué dirías?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Guau, el mundo es muy pequeño. ¡Qué milagro!¿Cómo puede ser?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Guau. Es como una película. Creo que íbamos a quedar. ¿Tal vez nos vimos en la vida anterior también?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Si te despiertas desde un mal sueño, ¿qué harías?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "El sueño fue muy realista. Creía que era algo real. Tendría que dormir otra vez."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Me siento mal por el sueño. ¿Algo pasaría?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: `Vas a ir a un restaurante rico con tu novio/a, ¿cuál ruta elegirías?`,
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Un atajo, que no tiene nada intersante."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Un camino un poquito sinuoso, pero más hermoso."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Has puesto tu tema favorito para tu novio/a. Pero te dice que no le gusta. ¿Cómo te sentirías?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Tienes curiosidad cómo es su gustao musical y cómo no le gusta este temazo."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Aunque sabes que se trata de gusto personal, te sientes triste."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Tu novio/a dice que ha peleado con su amigo. ¿Qué le dirías?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "¿Por qué? ¿Por qué has peleado?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "¿Estás bien? Deberías estar triste. Es su culpa."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Has esperado aniversario con ansias. Pero tu novio/a se disculpa, diciendo que hoy no puede quedar contigo. ¿Qué harías?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Aunque estoy triste, le pregunto por qué no puede quedar conmigo y si es algo justificable."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Estoy triste y enfadado/a por no poder quedar con él/ella en el aniversario que he esperado con ansias."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Tienes trabajo que hacer. Pero de repente tu novio/a te prpone ir a ver una pelí que quería ver. ¿Qué harías?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Hoy tengo que hacer algo... ¿Qué te parece a las tres de la tarde mañana?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Aunque tengo que hacer algo, tengo suficiente tiempo. Así que, claro, ¡vamos!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Cuando tienes conflicto con tu novio/a, ¿qué harías?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "De inmediato quiero decidir cómo solucionarlo y qué hacer adelante de manera clara para resolverelo."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Dependiendo de la atmósfera de la situación, puedo solucionarlo ahora o no."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Después de un viaje divertido con tu novio/a, ¿qué harías?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Arreglo mi equipaje primero, me ducho y luego descanso."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Primero descanso, me ducho y luego arreglo."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wksthfleoakdhkd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhlrkdsodb",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekwjdekrka",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dyffhfkdlvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmdqntk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dkfEMftlswkq",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhfemsflxmflqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fldortusaksfpq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "Rhseo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wkdrldusdo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Whfqh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gjekd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dnjzjghfflr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ajdEoflsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleES/INFP.jpg'
+            },
+        ]
+    },
     // loveCharacterFemaleGer
     {
         info : {
