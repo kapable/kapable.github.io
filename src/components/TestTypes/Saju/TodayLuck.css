@@ -1,0 +1,20 @@
+.todayLuck-intro-img-div {
+    position: relative;
+}
+
+.todayLuck-intro-img {
+    width: 100%;
+    max-width: 35rem;
+}
+
+.todayLuck-intro-date-picker-div {
+    position: absolute;
+    top: 32rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.todayLuck-intro-date-picker {
+    border: solid #A99893 3px;
+    background-color: #364142;
+}

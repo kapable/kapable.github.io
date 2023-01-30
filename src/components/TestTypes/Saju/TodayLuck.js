@@ -7,6 +7,7 @@ import { withRouter } from 'react-router';
 import crypto from 'crypto-js';
 import Lottie from 'react-lottie';
 import * as loading from '../../../loading-animation.json';
+import './TodayLuck.css';
 
 const defaultOptions = {
     loop: true,
@@ -47,10 +48,12 @@ const TodayLuck = (props) => {
     } else {
         return (
             <div>
-                <img style={{width:"100%", maxWidth:"25rem",margin:"2rem auto"}} src="https://images.ktestone.com/meta/saju/todayLuck-top-banner-sample.png" alt='todayLuck-top-banner-sample'/>
-                <h1>태어난 연도와 월을 입력해주세요</h1>
-                <DatePicker onChange={onChange} allowClear locale={locale}/>
-                <div>---</div>
+                <div className='todayLuck-intro-img-div'>
+                    <img className='todayLuck-intro-img' src="https://images.ktestone.com/meta/saju/todayLuck-intro-input.jpeg" alt="todayLuck-intro-input"/>
+                    <div className='todayLuck-intro-date-picker-div'>
+                        <DatePicker className='todayLuck-intro-date-picker' onChange={onChange} allowClear locale={locale}/>
+                    </div>
+                </div>
                 <div>
                     <button onClick={onSubmitClick}>확인하기</button>
                 </div>
