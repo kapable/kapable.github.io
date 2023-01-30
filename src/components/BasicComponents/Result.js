@@ -352,7 +352,7 @@ class Result extends Component {
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let loveWarningEngList = ["loveWarningEng"];
         let loveCharacterList = ["loveCharacter", "loveCharacterFemale", "loveCharacterMale"];
-        let characteristicChracterList = ["characteristicChracter"];
+        let hamsterList = ["hamster"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -497,8 +497,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (characteristicChracterList.includes(this.state.current_test)) {
-            const rederTestList = ["loveWarning", "meGuide", "loveCharacter", "holidayLove", "proud", ];
+        } else if (hamsterList.includes(this.state.current_test)) {
+            const rederTestList = ["characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove", "proud", ];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -714,7 +714,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove" ];
+            const rederTestList = ["hamster", "characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove" ];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -780,6 +780,7 @@ class Result extends Component {
             { test: "orbuculum", coupangLink: "https://link.coupang.com/a/KvzfS" },
             { test: "luckyBag2023", coupangLink: "https://link.coupang.com/a/FFVJ2" },
             { test: "holidayLove", coupangLink: "https://link.coupang.com/a/MqiqA" },
+            { test: "hamster", coupangLink: "https://link.coupang.com/a/MqiqA" },
         ];
         const testsArray = othersLink.map(({ test }) => test);
         return (

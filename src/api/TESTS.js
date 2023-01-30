@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveWarning
+    {
+        info : {
+            mainTitle:"햄스터 성격 테스트",
+            subTitle:"햄스터로 보는 나의 성향은? | 햄스터 테스트",
+            mainUrl:"hamster",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/hamster-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/hamster-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '쳇바퀴를 돌릴 때 나는',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '같이 타야 재밌지~! 주변 햄스터들한테 연락한다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '나 혼자 집중해서 타는게 좋아…굴려보자…탈탈탈…'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "밥 다먹고 핸드폰을 보니 친구에게 연락이 왔다. 이번 주말에 다같이 만나자고?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "완전 좋아! 이게 얼마만에 다같이 만나는거지? 빨리 만나고 싶다!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "만나는건 좋은데 벌써 귀찮고 기 빨린다.. 일찍 만나고 일찍 헤어져야지.."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "난 어느쪽에 가까운 햄스터일까?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "약속? 없다면 만들어야지! 밖순이 햄스터"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "혼자만의 시간을 즐기는 집순이 햄스터"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "친구가 최근 내가 구매한 신상 장난감에 대해 어떤지 묻는다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "갖고 놀기엔 좋은데, 보관할 때 불편해."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "음 괜찮은 것 같아! 재밌어!"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "도착한 카페의 바닥이 조금 미끄럽다.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "바닥이 좀 미끄럽네. 넘어지지 않게 조심해야겠다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '내가 넘어지면서 친구를 잡아버리면…같이 우당탕..'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "친구들과 재밌게 놀고 집에 가서 씻고 누웠더니…",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "아 오늘 재밌었다. 다음엔 여기 가보자고 해야지"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "만약 우리가 갔던 카페에 연예인이 왔다면? 하고 상상해 본다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '새로운 장난감을 둘 자리가 없다. 내 첫번째 장난감을 빼면 딱 공간이 남는데..',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "이제 필요 없으니 버려도 될 것 같아"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "안돼 이건 의미가 있으니까 추억으로 남겨둘래.."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "오랜만에 친구 햄스터를 만났다. 친구가 속 깊은 이야기를 털어놓는다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "그럴 땐 이렇게 해보는게 어때?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "헉 그랬구나 ㅠ 괜찮아? 힘들었겠다 ㅠㅠ"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "약속장소에 도착한 나! 근데 한 친구가 늦는다고 연락이 왔다.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "알겠어! 얼마나 늦을 거 같아?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "조심히 천천히 와 ㅠㅠ"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "열심히 쳇바퀴를 굴린 후 배가 고파졌다. 해바라기씨가 13개 있다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "지금 점심이니까 6개 먹고, 저녁에 7개 먹어야지."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 배를 먼저 채워야지. 먹을 수 있는 만큼 먹어!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "얼마전에 주문한 택배가 도착했다. 가만보자 내가 뭘 샀더라…",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "가격과 기능을 따져 나에게 딱 필요한 것만."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "필요한 걸 사려고 보다가 예뻐 보이는 것도! (내가 이걸 샀었구나..?)"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "핫플 장소에 친구가 같이 가보자고 하면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "언제, 어디서, 몇시에 만날지 정하자."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "완전 좋아! 우리 맛있는 것도 먹고, 햄찌네컷도 찍자!"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dhksqurwndml",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hamster/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dpsjwkdlwj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hamster/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dowjdrufvlq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hamster/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wkdbdmldudghs",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hamster/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ehrwowk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hamster/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "akdldnpdl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hamster/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhwlfkv",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hamster/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "rhkahfdlq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hamster/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "RhseofkEp",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hamster/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "rhehr",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hamster/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "rmflawk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hamster/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "apfxld",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hamster/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ehsEktwnlal",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hamster/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "xjfandcl",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hamster/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "rhkeoakdtkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hamster/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "snsanftoa",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hamster/INFP.jpg'
+            },
+        ]
+    },
     // loveWarningEng
     {
         info : {
