@@ -23,11 +23,335 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveWarningCN
+    {
+        info : {
+            mainTitle:"恋爱警告文测试",
+            subTitle:"从警告文看我的恋爱倾向是？",
+            mainUrl:"loveWarningCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveWarningCN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveWarningCN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"CN"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '异性朋友多的聚会中我会？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '主导聊天话题，主动跟他人说话'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '认真回答对方的问题并产生共鸣'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "难得放假和恋人一起出行旅游的我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "充满活力开心愉快地享受旅游"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "当做给自己充电的机会，安静地享受旅游治愈自己"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "和恋人约会的时候碰到恋人的朋友时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "自然地一起聊天"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "只打招呼，然后静静地待在一旁"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "经常联络的暧昧异性突然很长时间联络不上时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "怎么搞的，难道很忙？"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "怎么回事？是不喜欢我了吗？TT还是突然潜水了..?TT"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "和恋人看完电影后对方说自己也想过电影里的生活时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "这种事情虽然不会发生，但如果发生的话就太好啦"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '我也有过这种想法，但如果我过上那种生活的话会想做很多事情！'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: `长期恋爱中恋人说“我们都交往这么久了呀！”的时候我会？`,
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "不知不觉都这么久了呀！（时间可真快）"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "不知不觉都这么久了呢！（到底什么时候才能和恋人结婚呢..?）"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '和恋人约会的那天突然有急事导致会迟到时我会？',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "先告诉对方迟到的理由然后道歉"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "先道歉然后再说明理由"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "和恋人去自己常去的美食餐馆吃饭，但恋人却说不太好吃时我会？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "问对方为什么不好吃，如果理由恰当的话就承认"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "虽然有可能是恋人没胃口，但也觉得很伤心，有点过分"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "朋友突然说要结婚了时我会？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "这么突然？为啥？和谁？什么嘛什么嘛？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "这么突然？哇塞，恭喜你！记得给我请帖~"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "我比较喜欢的约会方式是？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "从一到十列好计划的计划性约会"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "充满所有可能性的即兴约会"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "和暧昧男/暧昧女的第一次约会的前一天我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "提前预约好餐厅，仔细查好咖啡厅的位置，选好要穿的衣服，仔细做好所有计划"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "只预约好餐厅，明天再选要穿的衣服，认为穿得简洁大方就好"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "到了我想去的餐厅却发现排着长队时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "不愿意打乱自己的计划而选择等候，或者转移到提前找好的第二个后补餐厅"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "虽然很可惜，但也决定赶紧找另外一个地方"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dusen",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "Qkfrks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "vkfks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "chfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "shfks",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "gksmftor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkfrntor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "cjdfhrtor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "skator",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tnvtor",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ghltor",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "qkator",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningCN/INFP.jpg'
+            },
+        ]
+    },
     // loveWarningJP
     {
         info : {
-            mainTitle:"Love warning test",
-            subTitle:"What is my dating tendency as a warning letter?",
+            mainTitle:"恋愛警告状テスト",
+            subTitle:"警告状で見る私の恋愛性向は？",
             mainUrl:"loveWarningJP",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/loveWarningJP-intro.jpg",
@@ -671,7 +995,7 @@ const TESTS = [
             },
         ]
     },
-    // loveWarningJP
+    // loveWarningEng
     {
         info : {
             mainTitle:"Love warning test",
