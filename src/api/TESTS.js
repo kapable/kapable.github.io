@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveWarningES
+    {
+        info : {
+            mainTitle:"Test de la carta de advertencia del novizago",
+            subTitle:"Cuál es mi tendencia de citas de la carta de advertencia?",
+            mainUrl:"loveWarningES",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveWarningES-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveWarningES-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"ES"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'En una reunión donde hay muchos amigos/as del sexo opuesto, ¿qué harías?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Yo lidero conversaciones y hablo de manera activa'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Yo respondo bien a las preguntas y muestro empatías'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Decidiste viajar con su novio en vacacciones largas después de mucho tiempo, ¿qué tipo de viaje harías?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Viaje alegre y divertido donde se puede activar energía"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Viaje tranquilo y de recuperación donde se puede recargar energía"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Si te encuentras a un/a amigo/a de tu novio/a por casualidad durante una cita, ¿qué harías?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Naturalmente hablas junto con él/ella"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Solo le saludas y estás quieto sin hacer nada a lado de tu novio/a"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Te gusta un/a hombre/mujer y estabas hablando con él/ella mucho, pero de repente no puedes tener contacto con él/ella durante mucho tiempo. ¿Qué harías?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "¿Qué? ¿Está ocupado/a?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "¿Qué? ¿Ya dejé de gustarle? ¿Ya no quiere mantener contacto conmigo?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Después de ver una película, tu novio/a dice que quiere vivir la vida como la pelí. ¿Qué le dirías?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "No pasaría algo así. Pero si pasara, ¡me encantaría!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: 'Alguna vez he pensado lo mismo, si pudiera vivir la vida como así, ¡me gustaría hacer muchas cosas!'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: `En un noviazgo largo, tu novio/a dice ‘ya hemos salido tanto tiempo’. ¿Qué dirías tú?`,
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "¡Ya ha pasado tanto tiempo! (El tiempo pasa volando)"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "¡Ya ha pasado tanto tiempo! (¿Yo podría casarme con esta persona algún día?)"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: 'Llegaste tarde a una cita por algo inevitable, ¿qué harías?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Primero le explico por qué llegué tarde, y luego le pido disculpa"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Primero le pido disculpa, y luego le explico por qué llegué tarde"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Llevaste a tu novio/a a un restaurante popular, pero él/ella dice que no le gusta",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Le pregunto por qué no le gusta y si hay una razón justa, lo admito"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Puede ser, pero me siento malhumorado y creo que lo que dice es demasiado"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Un amigo dice que va a casarse de repente.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "¿De repente? ¿Por qué? ¿Con quién? ¿Qué pasó?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "¿De repente? ¡Felicitaciones! ¡Esperaré la invitación de boda!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "¿Qué tipo de citas prefieres?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Una cita totalmente planeada"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Una cita improvisada, que tiene muchas posibilidades"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Te queda un día antes de la primera cita. ¿Qué harías?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Ya he reservado un restaurante. He planeado todo minuciosamente, como la cafetería que voy a visitar durante la cita, ropa que voy a usar, hasta cuándo voy a salir, etc."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "He reservado un restaurante, pero ya es mucho. Pienso que voy a usar cualquier ropa bonita mañana."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Has llegado a un restaurante que quería visitar, pero hay mucha cola y tienes que esperar mucho. ¿Qué harías?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Quiero que todo salga de aceurdo con mi pan, así que espero. O aunque me molesta un poco, voy a seguir mi plan b, otro restaurante que tenía en mente"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Aunque me da pena, busco otros restaurantes de inmediato"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dusen",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "Qkfrks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "vkfks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "chfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "shfks",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "gksmftor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkfrntor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "cjdfhrtor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "skator",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tnvtor",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ghltor",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "qkator",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveWarningES/INFP.jpg'
+            },
+        ]
+    },
     // characteristicChracterEng
     {
         info : {
