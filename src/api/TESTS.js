@@ -23,7 +23,7 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
-    // loveWarning
+    // hamster
     {
         info : {
             mainTitle:"햄스터 성격 테스트",
@@ -48506,7 +48506,7 @@ const TESTS = [
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/test-thumb.png",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -49008,7 +49008,7 @@ const TESTS = [
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/wealthluck-intro.png",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -49328,7 +49328,7 @@ const TESTS = [
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/jaetech-intro.png",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -49649,7 +49649,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -49977,7 +49977,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -50305,7 +50305,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -50629,7 +50629,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -50953,7 +50953,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -51277,7 +51277,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -51601,7 +51601,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -51925,7 +51925,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -52249,7 +52249,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -52573,7 +52573,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -52897,7 +52897,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {
@@ -53221,7 +53221,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"Etc"
+            lang:""
         },
         questions:[
             {

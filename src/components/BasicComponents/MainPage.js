@@ -57,7 +57,7 @@ function MainPage(props) {
             </div>
 
             {/* Go to LoveCharacter */}
-            <Link to={props.lang === 'Kor' ? '/loveCharacter/' : `/loveCharacter${props.lang}`} className="main-link-block" key="loveCharacter-banner">
+            <Link to={props.lang === 'Kor' || props.lang === 'Others' ? '/loveCharacter/' : `/loveCharacter${props.lang}`} className="main-link-block" key="loveCharacter-banner">
                 <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang === 'Kor' ? '' : props.lang}-thumb.png`} alt='loveCharacter' />
             </Link>
             

@@ -110,7 +110,7 @@ class App extends Component {
     let lang_route_list = [];
     if(lang === "Others") {
       while(m<TESTS.length){
-        if((TESTS[m].info.lang !== "Kor") && (TESTS[m].info.lang !== "Eng") && (TESTS[m].info.lang !== "CN") && (TESTS[m].info.lang !== "JP") && (TESTS[m].info.lang !== "Ger") && (TESTS[m].info.lang !== "ES") && (TESTS[m].info.lang !== "Rus")) {
+        if((TESTS[m].info.lang !== "Kor") && (TESTS[m].info.lang !== "Eng") && (TESTS[m].info.lang !== "CN") && (TESTS[m].info.lang !== "JP") && (TESTS[m].info.lang !== "Ger") && (TESTS[m].info.lang !== "ES") && (TESTS[m].info.lang !== "Rus") && (TESTS[m].info.lang !== "")) {
           lang_route_list.push(['/'+TESTS[m].info.mainUrl+'/', TESTS[m].info.thumbImage, TESTS[m].info.mainTitle]);
         }
         m = m + 1;
