@@ -1,20 +1,102 @@
+/* Intro */
 .todayLuck-intro-img-div {
     position: relative;
 }
 
-.todayLuck-intro-img {
+.todayLuck-intro-bg {
     width: 100%;
     max-width: 35rem;
 }
 
 .todayLuck-intro-date-picker-div {
     position: absolute;
-    top: 32rem;
+    top: 22rem;
     width: 100%;
     margin: 0 auto;
+    color: #A99893;
+}
+
+.todayLuck-intro-btn {
+    position: absolute;
+    left: 50%;
+    top: 24rem;
+    transform: translateX(-50%);
+    width: 13rem;
 }
 
 .todayLuck-intro-date-picker {
     border: solid #A99893 3px;
     background-color: #364142;
+}
+
+/* Result */
+.todayLuck-top-banner-sample {
+    width: 100%;
+    max-width: 25rem;
+    margin: 2rem auto;
+}
+
+.todayLuck-result-main-div > p {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 35rem;
+}
+
+@media (min-width: 360px) {
+    .todayLuck-intro-date-picker-div {
+        top: 29rem;
+    }
+
+    .todayLuck-intro-btn {
+        top: 32rem;
+    }
+}
+@media (min-width: 370px) {
+    .todayLuck-intro-date-picker-div {
+        top: 30rem;
+    }
+
+    .todayLuck-intro-btn {
+        top: 33rem;
+    }
+}
+@media (min-width: 390px) {
+    .todayLuck-intro-date-picker-div {
+        top: 32rem;
+    }
+
+    .todayLuck-intro-btn {
+        top: 35rem;
+    }
+}
+@media (min-width: 410px) {
+    .todayLuck-intro-date-picker-div {
+        top: 34rem;
+    }
+
+    .todayLuck-intro-btn {
+        top: 37rem;
+    }
+}
+@media (min-width: 540px) {
+    .todayLuck-intro-date-picker-div {
+        top: 44rem;
+    }
+
+    .todayLuck-intro-btn {
+        top: 49rem;
+    }
+}
+@media (min-width: 768px) {
+    .todayLuck-intro-date-picker-div {
+        top: 46rem;
+    }
+
+    .todayLuck-intro-btn {
+        top: 51rem;
+    }
+
+    .todayLuck-top-banner-sample {
+        max-width: 35rem;
+    }
 }

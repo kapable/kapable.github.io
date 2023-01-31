@@ -2,10 +2,31 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { withRouter } from 'react-router';
 import axios from 'axios';
 import { Divider } from 'antd';
+import { useCookies } from 'react-cookie';
+import ReactGA from 'react-ga';
+import AGAINBTN from '../../../api/DefaultImg/result-to-again-btn.png';
+import './TodayLuck.css';
 
 const TodayLuckResult = (props) => {
     const saju_url = 'https://saju.ktestone.com';
     const [result, setResult] = useState({});
+    const [isOpened, setIsOpened] = useState(false);
+    const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
+    const coupangLink = "https://link.coupang.com/a/KgpKa";
+
+    const _eventSenderGA = (category, action, label) => {
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+    };
+
+    const onCoupangButtonClick = useCallback(() => {
+        const cookieAges = 60*60*12;
+        setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        _eventSenderGA("Opening", "Click go-to-Coupang Button", "result page");
+    }, [setCoupangCookie]);
 
     useEffect(() => {
         const getToday = async(source) => {
@@ -25,12 +46,12 @@ const TodayLuckResult = (props) => {
     }, [props]);
 
     const onRestartButtonClick = useCallback(() => {
-        props.history.push(`/todayLuck/`)
+        props.history.push(`/todayLuck/`);
     }, [props]);
 
     return (
-        <div>
-            <img style={{width:"100%", maxWidth:"25rem",margin:"2rem auto"}} src="https://images.ktestone.com/meta/saju/todayLuck-top-banner-sample.png" alt='todayLuck-top-banner-sample'/>
+        <div className='todayLuck-result-main-div'>
+            <img className='todayLuck-top-banner-sample' src="https://images.ktestone.com/meta/saju/todayLuck-top-banner-sample.png" alt='todayLuck-top-banner-sample'/>
             <h3>오늘의 총운</h3>
             <p>{result ? result?.total_result : null}</p>
             <Divider />
@@ -49,8 +70,13 @@ const TodayLuckResult = (props) => {
             <h3>오늘의 금전운</h3>
             <p>{result ? result?.wealth_result : null}</p>
             <Divider />
-            <button onClick={onRestartButtonClick}>다시 보러 가기</button>
-            <img style={{width:"100%", maxWidth:"25rem",margin:"2rem auto"}} src="https://images.ktestone.com/meta/saju/todayLuck-top-banner-sample.png" alt='todayLuck-top-banner-sample'/>
+            <div className="re-test-btn">
+                <img
+                    src={AGAINBTN}
+                    className="re-test-btn-img"
+                    onClick={onRestartButtonClick}
+                    alt="테스트 다시하기"/>
+            </div>
         </div>
     );
 };

@@ -26,7 +26,7 @@ const TodayLuck = (props) => {
     const onSubmitClick = useCallback(async () => {
         if(!day) {
             return alert('날짜를 입력해주세요!');
-        }
+        };
         const today_date = moment().format(dateFormat);
         const query_date = [today_date, day].join('-');
         const crypto_query_date = encodeURIComponent(crypto.AES.encrypt(JSON.stringify(query_date), 'ktestsaju').toString());
@@ -43,23 +43,23 @@ const TodayLuck = (props) => {
 
     if(isLoading) {
         return (
-            <Lottie options={defaultOptions} height={120} width={120}/>
-        )
+            <Lottie options={defaultOptions} height={120} width={120} style={{ marginTop: "10rem" }} />
+        );
     } else {
         return (
             <div>
                 <div className='todayLuck-intro-img-div'>
-                    <img className='todayLuck-intro-img' src="https://images.ktestone.com/meta/saju/todayLuck-intro-input.jpeg" alt="todayLuck-intro-input"/>
+                    <img className='todayLuck-intro-bg' src="https://images.ktestone.com/meta/saju/todayLuck-intro-bg.jpg" alt="todayLuck-intro-input"/>
                     <div className='todayLuck-intro-date-picker-div'>
                         <DatePicker className='todayLuck-intro-date-picker' onChange={onChange} allowClear locale={locale}/>
                     </div>
-                </div>
-                <div>
-                    <button onClick={onSubmitClick}>확인하기</button>
+                    <div className='todayLuck-intro-btn-div' onClick={onSubmitClick}>
+                        <img className='todayLuck-intro-btn' src="https://images.ktestone.com/meta/saju/todayLuck-intro-submit-btn.jpg" alt="todayLuck-intro-btn"/>
+                    </div>
                 </div>
             </div>
         );
-    }
+    };
 };
 
 export default withRouter(TodayLuck);
