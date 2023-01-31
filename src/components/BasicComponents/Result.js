@@ -498,7 +498,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (malteseList.includes(this.state.current_test)) {
-            const rederTestList = ["characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove", "proud", ];
+            const rederTestList = ["todayLuck", "characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove", "proud", ];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -714,7 +714,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["malteseList", "hamster", "characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove" ];
+            const rederTestList = ["todayLuck", "malteseList", "hamster", "characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove" ];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (

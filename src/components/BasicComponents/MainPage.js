@@ -27,6 +27,13 @@ function MainPage(props) {
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
             />
 
+            {/* TodayLuck */}
+            {props.lang === 'Kor' ? (
+                <Link to='/todayLuck/' className="main-link-block" key="todayLuck-banner">
+                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`} alt="todayLuck" />
+                </Link>
+            ) : null}
+
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
                 {props.all_tests_url.slice(0,2).map((item, idx)=>{
@@ -94,7 +101,7 @@ function MainPage(props) {
             {/* Fortune Cookie */}
             {props.lang === 'Kor' ? (
                 <Link to='/fortuneCookie/' className="main-link-block" key="fortuneCookie-banner">
-                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fortuneCookie-thumb.png`} alt="POST-2022" />
+                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fortuneCookie-thumb.png`} alt="fortuneCookie" />
                 </Link>
             ) : null}
             
