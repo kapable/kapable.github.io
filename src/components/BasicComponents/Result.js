@@ -341,18 +341,18 @@ class Result extends Component {
         let personalColor2022ListKor = [];
         let EngTestList = ["loveWarningEng", "meGuideEng", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
         let CNTestList = ["loveCharacterCN", "smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
-        let JPTestList = ["meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
+        let JPTestList = ["loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
         let GerTestList = ["personalColorGer"];
         let ESTestList = ["loveWarningES", "personalColorES"];
         let loveWarningESList = ["loveWarningES"];
         let loveCharacterGerList = ["loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer"];
         let loveWarningCNList = ["loveWarningCN"];
-        let loveWarningJPList = ["loveWarningJP"];
+        let characteristicChracterJPList = ["characteristicChracterJP"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let characteristicChracterEngList = ["characteristicChracterEng"];
         let loveCharacterList = ["loveCharacter", "loveCharacterFemale", "loveCharacterMale"];
-        let hamsterList = ["hamster"];
+        let malteseList = ["maltese"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -497,7 +497,7 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (hamsterList.includes(this.state.current_test)) {
+        } else if (malteseList.includes(this.state.current_test)) {
             const rederTestList = ["characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove", "proud", ];
             return (
                 <Fragment>
@@ -546,7 +546,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (JPTestList.includes(this.state.current_test)) {
-            const rederTestList = ["loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
+            const rederTestList = ["characteristicChracterJP", "loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -689,8 +689,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (loveWarningJPList.includes(this.state.current_test)) {
-            const rederTestList = ["meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
+        } else if (characteristicChracterJPList.includes(this.state.current_test)) {
+            const rederTestList = ["loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -714,7 +714,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["hamster", "characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove" ];
+            const rederTestList = ["malteseList", "hamster", "characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove" ];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -781,6 +781,7 @@ class Result extends Component {
             { test: "luckyBag2023", coupangLink: "https://link.coupang.com/a/FFVJ2" },
             { test: "holidayLove", coupangLink: "https://link.coupang.com/a/MqiqA" },
             { test: "hamster", coupangLink: "https://link.coupang.com/a/MqiqA" },
+            { test: "maltese", coupangLink: "https://link.coupang.com/a/KvzD5" },
         ];
         const testsArray = othersLink.map(({ test }) => test);
         return (
