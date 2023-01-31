@@ -34,7 +34,7 @@ const TodayLuck = (props) => {
         
         setIsLoading(true);
         setTimeout(() => {
-            props.history.push(`/todayLuck/${crypto_query_date}`)
+            props.history.push(`/todayLuck/${crypto_query_date}/`)
         }, "2500");
     }, [day, props]);
 

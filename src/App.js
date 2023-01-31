@@ -256,7 +256,7 @@ class App extends Component {
 
             {/* go to "todayLuck" page */}
             <Route path="/todayLuck/" component={() => <TodayLuck />} exact/>
-            <Route path="/todayLuck/:query" component={() => <TodayLuckResult />} />
+            <Route path="/todayLuck/:query/" component={() => <TodayLuckResult />} />
 
             {/* go to "FortuneCookie" page */}
             <Route path="/fortuneCookie/" component={() => <FortuneCookie />} />

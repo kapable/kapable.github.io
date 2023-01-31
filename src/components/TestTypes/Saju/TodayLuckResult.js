@@ -76,7 +76,7 @@ const TodayLuckResult = (props) => {
                 </Fragment> : 
                 <Fragment>
                     <h3>오늘의 총운</h3>
-                    <p>{result ? result?.total_result : null}</p>
+                    <p>{result ? result?.total_result?.slice(0, 100) : null}</p>
                     <div className='article-adCover-div-1'>
                         <div className='article-adCover-div-2'>
                             <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
