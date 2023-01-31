@@ -27,28 +27,28 @@ const LoveCharacter = ({lang}) => {
         if(lang === 'Kor') {
             return(
                 <Helmet>
-                        {/* <!-- Primary Meta Tags --> */}
-                        <title>연애 캐릭터 테스트</title>
-                        <meta name="title" content="연애 캐릭터 테스트 - 케이테스트"/>
-                        <meta name="description" content="남친 & 여친 연애 캐릭터 테스트하기 - 연애 캐릭터 테스트 | 연애 테스트 | 연애캐릭터 테스트 남자편 여자편" data-react-helmet="true"/>
-                        <link rel="main-url" href="https://ktestone.com/kapable.github.io/loveCharacter/"/>
+                    {/* <!-- Primary Meta Tags --> */}
+                    <title>연애 캐릭터 테스트</title>
+                    <meta name="title" content="연애 캐릭터 테스트 - 케이테스트"/>
+                    <meta name="description" content="남친 & 여친 연애 캐릭터 테스트하기 - 연애 캐릭터 테스트 | 연애 테스트 | 연애캐릭터 테스트 남자편 여자편" data-react-helmet="true"/>
+                    <link rel="main-url" href="https://ktestone.com/kapable.github.io/loveCharacter/"/>
 
-                        {/* <!-- Open Graph / Facebook --> */}
-                        <meta property="og:type" content="website"/>
-                        <meta property="og:url" content="https://ktestone.com/kapable.github.io/loveCharacter/"/>
-                        <meta property="og:title" content="연애 캐릭터 테스트 - 케이테스트"/>
-                        <meta property="og:description" content="남친 & 여친 연애 캐릭터 테스트하기 - 연애 캐릭터 테스트 | 연애 테스트 | 연애캐릭터 테스트 남자편 여자편"/>
-                        <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png`}/>
-                        <meta property="og:image:alt" content="연애 캐릭터 테스트 - 케이테스트" />
+                    {/* <!-- Open Graph / Facebook --> */}
+                    <meta property="og:type" content="website"/>
+                    <meta property="og:url" content="https://ktestone.com/kapable.github.io/loveCharacter/"/>
+                    <meta property="og:title" content="연애 캐릭터 테스트 - 케이테스트"/>
+                    <meta property="og:description" content="남친 & 여친 연애 캐릭터 테스트하기 - 연애 캐릭터 테스트 | 연애 테스트 | 연애캐릭터 테스트 남자편 여자편"/>
+                    <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png`}/>
+                    <meta property="og:image:alt" content="연애 캐릭터 테스트 - 케이테스트" />
 
-                        {/* <!-- Twitter --> */}
-                        <meta property="twitter:card" content="summary_large_image"/>
-                        <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/loveCharacter/"/>
-                        <meta property="twitter:title" content="연애 캐릭터 테스트 - 케이테스트"/>
-                        <meta property="twitter:description" content="남친 & 여친 연애 캐릭터 테스트하기 - 연애 캐릭터 테스트 | 연애 테스트 | 연애캐릭터 테스트 남자편 여자편"/>
-                        <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png`}/>
-                        <meta property="twitter:image:alt" content="연애 캐릭터 테스트 - 케이테스트" />
-                    </Helmet>
+                    {/* <!-- Twitter --> */}
+                    <meta property="twitter:card" content="summary_large_image"/>
+                    <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/loveCharacter/"/>
+                    <meta property="twitter:title" content="연애 캐릭터 테스트 - 케이테스트"/>
+                    <meta property="twitter:description" content="남친 & 여친 연애 캐릭터 테스트하기 - 연애 캐릭터 테스트 | 연애 테스트 | 연애캐릭터 테스트 남자편 여자편"/>
+                    <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png`}/>
+                    <meta property="twitter:image:alt" content="연애 캐릭터 테스트 - 케이테스트" />
+                </Helmet>
             )
         } else if (lang === 'Eng') {
             return(

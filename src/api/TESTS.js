@@ -560,35 +560,35 @@ const TESTS = [
                 `,
                 query: "wlswlgks",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/hamster/ESTJ.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/ESTJ.jpg'
             },
             {
                 type: "ESTP",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "wlrtjfwjrdls",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/hamster/ESTP.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/ESTP.jpg'
             },
             {
                 type: "ESFJ",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "rmdwjdwjrdls",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/hamster/ESFJ.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/ESFJ.jpg'
             },
             {
                 type: "ESFP",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "ghkfqkfgks",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hamster/ESFP.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/ESFP.jpg'
             },
             {
                 type: "ENTJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "ehehgks",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hamster/ENTJ.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/ENTJ.jpg'
             },
             {
                 type: "ENTP",
@@ -596,42 +596,42 @@ const TESTS = [
                 `,
                 query: "dbajfjtmgks",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/hamster/ENTP.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/ENTP.jpg'
             },
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "ekwjdgks",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/hamster/ENFJ.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/ENFJ.jpg'
             },
             {
                 type: "ENFP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "clswjfgks",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/hamster/ENFP.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/ENFP.jpg'
             },
             {
                 type: "ISTJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "rhwlqtmfjs",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hamster/ISTJ.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/ISTJ.jpg'
             },
             {
                 type: "ISTP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "gustlfwjrdls",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hamster/ISTP.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/ISTP.jpg'
             },
             {
                 type: "ISFJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "tnsenddl",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hamster/ISFJ.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/ISFJ.jpg'
             },
             {
                 type: "ISFP",
@@ -639,35 +639,35 @@ const TESTS = [
                 `,
                 query: "qnRmfjawoddl",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/hamster/ISFP.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/ISFP.jpg'
             },
             {
                 type: "INTJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "tlswndgks",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/hamster/INTJ.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/INTJ.jpg'
             },
             {
                 type: "INTP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "snscl",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/hamster/INTP.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/INTP.jpg'
             },
             {
                 type: "INFJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "rkatjdwjrdls",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hamster/INFJ.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/INFJ.jpg'
             },
             {
                 type: "INFP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "godqhrgks",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hamster/INFP.jpg'
+                img_src:'https://images.ktestone.com/resultImages/maltese/INFP.jpg'
             },
         ]
     },

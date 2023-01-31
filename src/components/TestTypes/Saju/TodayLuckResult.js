@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { Fragment, useCallback, useEffect, useState } from 'react';
 import { withRouter } from 'react-router';
 import axios from 'axios';
 import { Divider } from 'antd';
@@ -25,6 +25,7 @@ const TodayLuckResult = (props) => {
     const onCoupangButtonClick = useCallback(() => {
         const cookieAges = 60*60*12;
         setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        setIsOpened(true);
         _eventSenderGA("Opening", "Click go-to-Coupang Button", "result page");
     }, [setCoupangCookie]);
 
@@ -52,24 +53,41 @@ const TodayLuckResult = (props) => {
     return (
         <div className='todayLuck-result-main-div'>
             <img className='todayLuck-top-banner-sample' src="https://images.ktestone.com/meta/saju/todayLuck-top-banner-sample.png" alt='todayLuck-top-banner-sample'/>
-            <h3>오늘의 총운</h3>
-            <p>{result ? result?.total_result : null}</p>
-            <Divider />
-            <h3>오늘의 애정운</h3>
-            <p>{result ? result?.love_result : null}</p>
-            <Divider />
-            <h3>오늘의 소망운</h3>
-            <p>{result ? result?.wish_result : null}</p>
-            <Divider />
-            <h3>오늘의 사업운</h3>
-            <p>{result ? result?.biz_result : null}</p>
-            <Divider />
-            <h3>오늘의 방위운</h3>
-            <p>{result ? result?.direction_result : null}</p>
-            <Divider />
-            <h3>오늘의 금전운</h3>
-            <p>{result ? result?.wealth_result : null}</p>
-            <Divider />
+            {isOpened || coupangCookies?.coupang ? 
+                <Fragment>
+                    <h3>오늘의 총운</h3>
+                    <p>{result ? result?.total_result : null}</p>
+                    <Divider />
+                    <h3>오늘의 애정운</h3>
+                    <p>{result ? result?.love_result : null}</p>
+                    <Divider />
+                    <h3>오늘의 소망운</h3>
+                    <p>{result ? result?.wish_result : null}</p>
+                    <Divider />
+                    <h3>오늘의 사업운</h3>
+                    <p>{result ? result?.biz_result : null}</p>
+                    <Divider />
+                    <h3>오늘의 방위운</h3>
+                    <p>{result ? result?.direction_result : null}</p>
+                    <Divider />
+                    <h3>오늘의 금전운</h3>
+                    <p>{result ? result?.wealth_result : null}</p>
+                    <Divider />
+                </Fragment> : 
+                <Fragment>
+                    <h3>오늘의 총운</h3>
+                    <p>{result ? result?.total_result : null}</p>
+                    <div className='article-adCover-div-1'>
+                        <div className='article-adCover-div-2'>
+                            <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
+                                <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={onCoupangButtonClick}>
+                                    쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </Fragment>
+            }
             <div className="re-test-btn">
                 <img
                     src={AGAINBTN}
