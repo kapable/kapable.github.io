@@ -340,13 +340,13 @@ class Result extends Component {
     otherTestBannerRenderer() {
         let personalColor2022ListKor = [];
         let EngTestList = ["loveWarningEng", "meGuideEng", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
-        let CNTestList = ["loveCharacterCN", "smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
+        let CNTestList = ["loveWarningCN", "loveCharacterCN", "smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
         let JPTestList = ["loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
         let GerTestList = ["personalColorGer"];
         let ESTestList = ["loveWarningES", "personalColorES"];
         let loveWarningESList = ["loveWarningES"];
         let loveCharacterGerList = ["loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer"];
-        let loveWarningCNList = ["loveWarningCN"];
+        let characteristicChracterCNList = ["characteristicChracterCN"];
         let characteristicChracterJPList = ["characteristicChracterJP"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
@@ -522,7 +522,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (CNTestList.includes(this.state.current_test)) {
-            const rederTestList = ["loveWarningCN", "loveCharacterCN", "smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
+            const rederTestList = ["characteristicChracterCN", "loveWarningCN", "loveCharacterCN", "smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -641,8 +641,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (loveWarningCNList.includes(this.state.current_test)) {
-            const rederTestList = ["loveCharacterCN", "smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
+        } else if (characteristicChracterCNList.includes(this.state.current_test)) {
+            const rederTestList = ["loveWarningCN", "loveCharacterCN", "smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (

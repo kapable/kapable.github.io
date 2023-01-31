@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // characteristicChracterCN
+    {
+        info : {
+            mainTitle:"性格角色测试",
+            subTitle:"用角色看我的性格是？",
+            mainUrl:"characteristicChracterCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/characteristicChracterCN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/characteristicChracterCN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"CN"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '和我比较相似的是？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "不认生"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '和他人亲近需要投入很多时间'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "对于朋友们来说我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "主动先联系对方"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "答复联系我的朋友"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "发生心情不好的事情时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "出门见朋友们缓解不愉快"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "一个人在家里静静地整理思绪"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "准备出门的时候突然下雨我会想？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "下雨了呀，得拿伞出去啦"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "下雨的话地面会很滑，我不会走着走着摔倒吧？"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "大伙儿一起去酒吧，结果发现往我们桌位走来的服务员端的啤酒杯盘子很小时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "想着啤酒终于要来啦"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '想象他这么危险地走的话啤酒杯可能会掉下去，内心感到不安'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "洗澡时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "什么也不想，只洗澡"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "在回音很大的卫生间里一边哼着小曲一边洗澡"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '朋友拿出我第一次见到的神奇物品时我的反应是？',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "哇！这是什么啊？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "哇！好神奇啊"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "要搬去新家了，在挑选新家家具时的我会？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "仔细考虑家具的便利性、价格、大小等等"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "考虑家具的设计是否好看，是否适合新家的装潢"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "朋友感到很累，找我谈心时我会？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "倾听朋友的话并安慰他"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "倾听朋友的话之后想办法帮他解决"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "有要去做的事却在和朋友们玩的话？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "心想着还有要去做的事情，玩得不舒心"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "反正已经在玩了就玩开心点喽"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "和朋友约好要去A地区玩，结果朋友突然提议一起去B地区的话？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "已经有说好的计划却突然要改变，心里比较混乱"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "虽然有些突然，但反正决定去玩的意图一样，就说知道了"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "我更喜欢？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "计划和秩序"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "可能性和新鲜事物"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Rhseo",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qnsdnlrlapdlzj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "rkstjqdhkd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dlsTkdkTk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "rPghlrdhkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qksgkddk",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhalstkdekatk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "tkckdnjs",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wjswktkwjs",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "akssmdwwnRns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "vmfhdlfrTlqfj",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "thdnffltm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rkawjdzjsxmfhffj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "vorvhrfj",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dosmfrdmsdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dbflapsxkf",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterCN/INFP.jpg'
+            },
+        ]
+    },
     // characteristicChracterJP
     {
         info : {
