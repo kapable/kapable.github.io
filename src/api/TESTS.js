@@ -350,8 +350,8 @@ const TESTS = [
     // maltese
     {
         info : {
-            mainTitle:"햄스터 성격 테스트",
-            subTitle:"햄스터로 보는 나의 성향은? | 햄스터 테스트",
+            mainTitle:"말티즈 성격 테스트",
+            subTitle:"말티즈로 보는 나의 성향은? | 말티즈 테스트",
             mainUrl:"maltese",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/maltese-intro.jpg",

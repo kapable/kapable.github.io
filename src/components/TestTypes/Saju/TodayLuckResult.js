@@ -5,7 +5,11 @@ import { Divider } from 'antd';
 import { useCookies } from 'react-cookie';
 import ReactGA from 'react-ga';
 import AGAINBTN from '../../../api/DefaultImg/result-to-again-btn.png';
+import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
+import TOHOMEBTN from '../../../api/DefaultImg/result-to-home-btn.png';
 import './TodayLuck.css';
+import ShareGroup from '../../BasicComponents/ShareGroup';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 const TodayLuckResult = (props) => {
     const saju_url = 'https://saju.ktestone.com';
@@ -47,8 +51,19 @@ const TodayLuckResult = (props) => {
     }, [props]);
 
     const onRestartButtonClick = useCallback(() => {
+        _eventSenderGA("Paging", "Click Re-test Button", "result page");
         props.history.push(`/todayLuck/`);
     }, [props]);
+
+    const onBacktoHomeButtonClick = useCallback(() => {
+        _eventSenderGA("Paging", "Click Back-to-main Button", "result page");
+        props.history.push(`/`);
+    }, [props]);
+
+    const onShareButtonClick = useCallback(() => {
+        alert("링크가 복사됐습니다!");
+        _eventSenderGA("Sharing", "Click Copy-link Button", "result page");
+    }, [])
 
     return (
         <div className='todayLuck-result-main-div'>
@@ -88,12 +103,36 @@ const TodayLuckResult = (props) => {
                     </div>
                 </Fragment>
             }
-            <div className="re-test-btn">
+            <div className="share">
+                <h5 className="share-title">{"친구에게 공유하기"}</h5>
+                <ShareGroup
+                    link={"https://ktestone.com/kapable.github.io/todayLuck/"}
+                    testTitle={"오늘의 총운 - 케이테스트 | 사주 테스트"}/>
+                <div className="share">
+                    <CopyToClipboard text={"https://ktestone.com/kapable.github.io/todayLuck/" + props?.match?.params?.query +'/'}>
+                        <img
+                            src={COPYBTN}
+                            onClick={onShareButtonClick}
+                            className="share-btn-img"
+                            alt="링크 복사"
+                            />
+                    </CopyToClipboard>
+                </div>
+                <div className="re-test-btn">
+                    <img
+                        src={AGAINBTN}
+                        className="re-test-btn-img"
+                        onClick={onRestartButtonClick}
+                        alt="테스트 다시하기"/>
+                </div>
+            </div>
+            <div className="back-to-main" style={{display:"block"}}>
                 <img
-                    src={AGAINBTN}
-                    className="re-test-btn-img"
-                    onClick={onRestartButtonClick}
-                    alt="테스트 다시하기"/>
+                    src={TOHOMEBTN}
+                    onClick={onBacktoHomeButtonClick}
+                    className="back-to-main-btn-img"
+                    alt="다른 테스트 하러가기"
+                    />
             </div>
         </div>
     );
