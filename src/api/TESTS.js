@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // mailForMe
+    {
+        info : {
+            mainTitle:"나에게 온 편지 테스트",
+            subTitle:"나에게 온 편지는 어떤 편지 내용일까?",
+            mainUrl:"mailForMe",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/mailForMe-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/mailForMe-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '소통 시 내가 더 선호하는 대화 방식은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '전화하거나, 직접 얼굴을 보면서 말로 하는 소통'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '톡 방에서 대화, 문자 등 글로 하는 소통'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "나와 가까운 것은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "모임에서 대화 참여에 적극적이고, 인원이 많을수록 데시벨이 커진다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "여럿이 있는 모임 보다 1:1로 만났을 때 말이 많은 편이다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "스트레스 받는 일이 있다면 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "사람들을 만나거나 밖으로 나가서 스트레스를 푼다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "혼자만의 시간을 보내며 스트레스를 푼다"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "우편함에 누군가 나에게 보낸 편지가 있다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "편지 올 일이 없었는데 누구지? 나한테 온 게 맞나?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "누구지? 혹시 이거 러브레터 그런 건 아닐까?><"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 더 선호하는 대화는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "요즘 핫 한 이슈나, 관심사에 대해 이야기하는 대화"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '상상력이 가미된 어떠한 가능성이나, 미래에 대한 대화'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 더 선호하는 일은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "반복적이고 안정적인 일"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "안정적이지 않지만 무한한 가능성이 있는 일"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '친구가 좋아하던 이성에게 편지를 썼다고 한다면?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "그냥 만나서 말하지 무슨 편지야.. 그래서 뭐라고 썼는데?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "진짜? 낭만적이다 근데 혹시 부담스러워하지는 않을까?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "알고 보니 친구가 나에게 쓴 편지였다며 나에게 준다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "오오 내거였어? 뭐라고 썼는지 궁금한데?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "완전 감동이야 정성스러운 손 편지를 받다니.."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "고민이 많아 힘들다는 친구에게 편지를 쓴다면 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "애정이 담긴 조언과 문제 해결 방법에 대해 쓴다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "공감과 위로의 내용을 쓴다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구에게 편지를 쓴다면 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "어떻게 적을지 미리 생각해 놓은 대로 술술 적어 내려간다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 앉아서 그 자리에서 친구에 대해 생각나는 대로 적어 내려간다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "우연히 들어가 소품 샵에서 마음에 드는 소품을 발견했다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "눈길은 사로잡혔지만 계획되지 않은 불필요한 지출은 하지 않는다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "눈길을 사로잡은 소품을 그냥 지나치지 못하고 충동구매를 한다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나의 핸드폰의 문자 정리 상태는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "정리를 꾸준히 해서 필요한 문자 빼고는 정리가 잘되어 있다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "정리를 언제부터 안 했는지 모를 정도로 많이 쌓여 있다"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dusen",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "Qkfrks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "vkfks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "chfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "shfks",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "gksmftor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkfrntor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "cjdfhrtor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "skator",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tnvtor",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ghltor",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "qkator",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMe/INFP.jpg'
+            },
+        ]
+    },
     // characteristicChracterCN
     {
         info : {

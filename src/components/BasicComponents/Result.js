@@ -352,7 +352,7 @@ class Result extends Component {
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let characteristicChracterEngList = ["characteristicChracterEng"];
         let loveCharacterList = ["loveCharacter", "loveCharacterFemale", "loveCharacterMale"];
-        let malteseList = ["maltese"];
+        let mailForMeList = ["mailForMe"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -497,7 +497,7 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (malteseList.includes(this.state.current_test)) {
+        } else if (mailForMeList.includes(this.state.current_test)) {
             const rederTestList = ["todayLuck", "characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove", "proud", ];
             return (
                 <Fragment>
@@ -714,7 +714,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["todayLuck", "malteseList", "hamster", "characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove" ];
+            const rederTestList = ["mailForMe", "todayLuck", "hamster", "characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove" ];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
