@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // smileColorTestES
+    {
+        info : {
+            mainTitle:"Prueba de citas de sonrisa",
+            subTitle:"Descubre tu tendencia de citas con personajes sonrientes.",
+            mainUrl:"smileColorTestES",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/smileColorTestES-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/smileColorTestES-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"ES"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'En un fin de semana sin planes, ¿qué harías?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Envío mensajes a mis amigos de inmediato para tener unos planes.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Descanso en mi cama todo el día.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Tienes una cita que no se ha plneado antes, ¿qué harías?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "¡Se ve divertido! Si no tengo otros planes, voy a la cita."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "No era de mis planes... pongo unas excusas para no ir."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Un amigo te trajo a una reunión, ¿qué harías?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Dirijo las palabras a la gente primero e intento crear un ambiente agradable."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Espero hasta que me dirijan las palasbras."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Subes al avión para un viaje. ¿Qué piensas?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Quiero llegar rápido."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "¡Será divertido! Pero, ¿qué es lo qe hace volar un avión?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "¿En qué piensas al comer?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Pienso en cuál debería elegir entre las dos comidas favoritas del restaurante."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Al almorzar, pienso en qué comer para la cena."
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Viendo un programa de concurso musical, ¿qué piensas?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "¡Qué maravilloso! ¡Voy a escuchar el tema cada día cuando lo lancen!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Guau... ¿La letra es de su experiencia personal? ¿Cuánto habrá practicado?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Tu amigo te dice que fue de compras porque se sentía deprimido, ¿qué le dirías?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "¿Qué compraste? ¿Por si acaso compraste cualquier cosa?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "¿Qué te paso? ¿De repente fuiste de compras?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Tu amigo te dice que pasó un exmane, ¿qué le dirías?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "¿Qué examen fue? ¡Felicidades!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "¡Guau te felicito! ¡Imagino que sería muy duro!¡Bien hecho!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Tu novia ha perdido algo precioso para ella, ¿qué le dirías?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "¿Cómo lo has perdido? ¿Dónde lo has visto por última vez?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Ay ¿qué hacemos? Te importaba eso..."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Quieres ir a un restaurante popular con su novio/a, ¿qué harías?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Reservas de antemano y eliges hasta el menú previamente."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Cuando no te queda mucho tiempo hasta la cita, reserva con mucha prisa."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Cuando eliges ropa para citas, ¿qué harías?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Un día antes elijo toda la ropa de los pies a la cabeza."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Al preparar para salir, me pongo la ropa que me apetece."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Caundo quieres viajar con tu novio/a, ¿qué harías?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Desarrollo planes de manera detallada para cada día."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Comprar el boleto de avión es el 70%del plan."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "mint",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "yellow",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "pink",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "purple",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "blue",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "red",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "orange",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "olive",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "burgundy",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "beige",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "navy",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "grey",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "khaki",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "green",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "brown",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sky",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/smileColorTestES/INFP.jpg'
+            },
+        ]
+    },
     // mailForMe
     {
         info : {

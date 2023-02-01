@@ -344,7 +344,7 @@ class Result extends Component {
         let JPTestList = ["loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP"];
         let GerTestList = ["personalColorGer"];
         let ESTestList = ["loveWarningES", "personalColorES"];
-        let loveWarningESList = ["loveWarningES"];
+        let smileColorTestESList = ["smileColorTestES"];
         let loveCharacterGerList = ["loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer"];
         let characteristicChracterCNList = ["characteristicChracterCN"];
         let characteristicChracterJPList = ["characteristicChracterJP"];
@@ -570,7 +570,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (ESTestList.includes(this.state.current_test)) {
-            const rederTestList = ["loveWarningES", "loveCharacterES"];
+            const rederTestList = ["smileColorTestES", "loveWarningES", "loveCharacterES"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -617,8 +617,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (loveWarningESList.includes(this.state.current_test)) {
-            const rederTestList = ["loveWarningES"];
+        } else if (smileColorTestESList.includes(this.state.current_test)) {
+            const rederTestList = ["loveWarningES", "loveCharacterES"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -811,7 +811,7 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI"){
             // meta tag for PPL test contents
-            let ppl_list = ["loveWarningES", "characteristicChracterEng", "loveWarningCN", "loveWarningJP", "loveWarningEng", "meGuideEng", "meGuideJP", "smileColorTestCn", "smileColorTestJP", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN", "loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer", "loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES", "memoEng", "oneSidedLoveEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
+            let ppl_list = ["smileColorTestES", "loveWarningES", "characteristicChracterEng", "loveWarningCN", "loveWarningJP", "loveWarningEng", "meGuideEng", "meGuideJP", "smileColorTestCn", "smileColorTestJP", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN", "loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer", "loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES", "memoEng", "oneSidedLoveEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
             let tonymoly_list = ["factPok", "MyFactPok", "FriendFactPok",];
             if(ppl_list.includes(this.state.current_test)) {
