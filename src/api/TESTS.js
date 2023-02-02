@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // diet
+    {
+        info : {
+            mainTitle:"다이어트 성격 테스트",
+            subTitle:"나의 다이어트 유형은?",
+            mainUrl:"diet",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/diet-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/diet-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '다이어트를 결심했을 때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '동호회 같은 곳에 들어서 사람들하고 운동하는 편'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '집에서 홈트하는게 최고!'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "헬스장 갔는데 사람이 아무도 없다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "혼자 운동하면 외로운데 누구 안오나…"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "혼자 헬스장 사용하니까 조용하고 좋네!"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "친구가 갑작스럽게 등산을 가자 그러면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `유산소 개꿀! “지금 바로 나갈게!”`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `집에서 홈트하고싶은데… “오늘은 몸이 좀 안좋은데ㅠ”`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "다이어트를 하는데 살이 잘 안빠질 때 드는 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "운동법을 바꿔야하나? 아님 식단이 문젠가?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "살은 왜 빼야하는걸까…먹어도 살이 안찌는 세상이 올 순 없을까?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "다이어트 하는 중 밤에 치킨을 먹고싶다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "치킨은 살 많이 찌겠지? 먹으면 다이어트 실패야…"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '튀김옷 벗기고 먹으면 괜찮지 않을까…? 제로 치킨은 없나…?'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "헬스를 한다면 더 신경쓰이는 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "운동의 강도"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "근육의 움직임"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '친구가 애인과 헤어졌다고 술 한잔 하자고 했을 때 다이어트중인 나는?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "친구의 고민은 들어주되 다이어트 신경쓰느라 음식은 잘 안먹는다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "친구의 감정에 공감해주며 그날만큼은 같이 먹어준다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "금방 그만둘 줄 알았는데 진짜 열심히 하네? 라는 말을 들었다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "당연하지! 이게 나야~ (기분 좋아서 웃음 남)"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "금방 그만둘 줄 알았다니ㅠ 왜 말 그렇게 해ㅠ"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 살이 너무 안빠진다고 고민을 털어놓을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "지금 운동 어떻게 하고있는데? 식단은 제대로 하고있어?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "힘들지ㅠㅠ 우리 같이 힘내서 다이어트 해보자!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "다이어트 시작했을 때 마음가짐은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "세달정도 여유 있으니까 한달에 2kg씩만 뺄 수 있도록 하자!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "굶고 운동하다보면 살 빠지겠지~"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "다이어트 식단 짤 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "정확한 칼로리 계산과 규칙적인 식사시간 준수!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "그냥 다이어트 식품만 끼니 때마다 챙겨먹기!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나의 운동 스타일은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "요일마다 운동 스케줄 짜놓고 계획적으로 실천"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "운동방법이나 시간에 구애 받지 않고 자유롭게 하는편"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wlswlgks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/diet/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "wlrtjfwjrdls",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/diet/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "rmdwjdwjrdls",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/diet/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/diet/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ehehgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/diet/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dbajfjtmgks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/diet/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ekwjdgks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/diet/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "clswjfgks",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/diet/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "rhwlqtmfjs",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/diet/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gustlfwjrdls",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/diet/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tnsenddl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/diet/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qnRmfjawoddl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/diet/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tlswndgks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/diet/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "snscl",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/diet/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "rkatjdwjrdls",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/diet/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "godqhrgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/diet/INFP.jpg'
+            },
+        ]
+    },
     // smileColorTestES
     {
         info : {

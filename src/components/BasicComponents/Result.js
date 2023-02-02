@@ -352,7 +352,7 @@ class Result extends Component {
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let characteristicChracterEngList = ["characteristicChracterEng"];
         let loveCharacterList = ["loveCharacter", "loveCharacterFemale", "loveCharacterMale"];
-        let mailForMeList = ["mailForMe"];
+        let dietList = ["diet"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -497,8 +497,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (mailForMeList.includes(this.state.current_test)) {
-            const rederTestList = ["todayLuck", "characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove", "proud", ];
+        } else if (dietList.includes(this.state.current_test)) {
+            const rederTestList = ["mailForMe", "todayLuck", "characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove", "proud", ];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -714,7 +714,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["mailForMe", "todayLuck", "hamster", "characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove" ];
+            const rederTestList = ["diet", "mailForMe", "todayLuck", "hamster", "characteristicChracter", "loveWarning", "meGuide", "loveCharacter", "holidayLove" ];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -782,6 +782,7 @@ class Result extends Component {
             { test: "holidayLove", coupangLink: "https://link.coupang.com/a/MqiqA" },
             { test: "hamster", coupangLink: "https://link.coupang.com/a/MqiqA" },
             { test: "maltese", coupangLink: "https://link.coupang.com/a/KvzD5" },
+            { test: "diet", coupangLink: "https://link.coupang.com/a/KvzD5" },
         ];
         const testsArray = othersLink.map(({ test }) => test);
         return (
