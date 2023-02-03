@@ -681,7 +681,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/princess-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/princess-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"ETC"
+            lang:"Kor"
         },
         questions:[
             {
