@@ -1319,7 +1319,7 @@ const TESTS = [
             },
         ]
     },
-    // mailForMe
+    // mailForMeEng
     {
         info : {
             mainTitle:"나에게 온 편지 테스트",
