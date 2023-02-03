@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // mailForMeEng
+    {
+        info : {
+            mainTitle:"Test on letters sent to me",
+            subTitle:"What is the content of the letter sent to me?",
+            mainUrl:"mailForMeEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/mailForMeEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/mailForMeEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Eng"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What is your preferred method of communicating with others?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Through phone call or face-to-face'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Through text message or chat room chat'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Which of the below is closer to you?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I speak loudly in groups,\nand the more people there are,\nthe louder I speak"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Rather than having a conversation with many people,\nI tend to talk a lot in one-on-one situations"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What do you do when you suddenly have a lot of stress?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I relieve stress by meeting people or going out"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I relieve stress by spending time alone"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What would you do if you found a letter in your mailbox?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I would be surprised, but who sent it? is it for me?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "Who sent it? Could this be a love letter? ><"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What type of conversation do you prefer?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Conversation to talk about hot issues or interests these days"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: 'Conversation about imaginative possibilities or the future'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What type of work do you prefer?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Repeatable and stable work"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "I like works that have infinite possibilities even if they are not stable"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: 'What would be your reaction if your friend wrote a love letter to the opposite sex?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Why don't you just meet up? Anyway, what is it about?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Really? It sounds romantic, but doesn't it feel burdensome?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What would you do if it turns out that the letter was written to you?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Oh, was it mine? I wonder what it is"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Wow, I would be touched to receive a thoughtful handwritten letter…"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If you had to write a letter to a friend who is struggling with a lot of worries, what would you write?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I would write about advice and problem solving with affection"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I would share sympathy and consolation"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "If you were writing a letter to a friend, what would you write?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I'll write what's been on my mind"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I would write impromptu thinking"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What would you do if you stumbled into a prop shop and found a prop you liked?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "It is eye catching, but I don't make unnecessary unplanned expenses"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I would make an impulse purchase without passing by"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Do you organize text messages on your phone?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "It is well organized as I keep cleaning up"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "It's just piled up so much since I didn't organize it"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dusen",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "Qkfrks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "vkfks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "chfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "shfks",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "gksmftor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkfrntor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "cjdfhrtor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "skator",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tnvtor",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ghltor",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "qkator",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeEng/INFP.jpg'
+            },
+        ]
+    },
     // gypsophila
     {
         info : {
