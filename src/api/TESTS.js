@@ -23,6 +23,978 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // mailForMeCN
+    {
+        info : {
+            mainTitle:"Test on letters sent to me",
+            subTitle:"What is the content of the letter sent to me?",
+            mainUrl:"mailForMeCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/mailForMeCN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/mailForMeCN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"CN"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '我更偏爱的沟通方式是？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '打电话或面对面说话进行沟通'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '用文字在聊天窗口里进行沟通'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "我更倾向于？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "聚会中主动参与大家的聊天，人数越多越嗨"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "相比多数人聚集的聚会，和对方1对1见面时话更多"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "如果发生让我有负担的事时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "和朋友见面或出门解压"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "独自一个人解除心理压力"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "邮箱里有一封来信时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "没人会给我寄信呀，到底是谁呀？是寄给我的没错吗？"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "是谁呢？不会是谁写给我的情书吧？><"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "我更偏爱的对话是？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "聊最近比较火热的话题或感兴趣的领域"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '聊充满想象力的某种可能性或有关未来的话题'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "我更偏爱的工作是？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "反复且稳定的工作"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "虽然不稳定但充满无限可能性的工作"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '朋友说要给喜欢的异性写信时我会？',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "直接见面说啊，干嘛写什么信呀..所以你写了什么？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "真的？好浪漫呀，但是对方不会感到有负担吗？"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "结果发现那封信是朋友写给我的，那么我会？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "哇哇，是写给我的？真好奇你写了什么呀？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "超级感动啊，我也能收到充满真心的手写信.."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "给苦恼多且很累的朋友写一封信时我会？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "写一些对朋友有帮助的话和解决问题的方法"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "写一些安慰朋友的话和产生共鸣的内容"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "给朋友写信时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "提前想好要写什么，然后按自己脑子里的提纲顺序写"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "坐下来，然后一边想着朋友一边随意地写"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "随便走进一家工艺品店铺，发现自己喜欢的小物件时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "虽然非常吸引自己，但不在计划当中，所以不会花没必要的支出"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "无法错过吸引眼球的小物件，冲动购买"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "我手机的短信信箱状态是？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "平时坚持整理信箱，只有一些自己需要的短信，整理得有理有序"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "记不清上一次什么时候整理的，累积了一堆短信"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dusen",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "qnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "Qkfrks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "vkfks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "chfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "shfks",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "gksmftor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tkfrntor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "cjdfhrtor",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "skator",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "tnvtor",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ghltor",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "qkator",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mailForMeCN/INFP.jpg'
+            },
+        ]
+    },
+    // instaStory
+    {
+        info : {
+            mainTitle:"인스타 스토리 성격 테스트",
+            subTitle:"인스타로 알아보는 나의 성향은? | 인스타 테스트",
+            mainUrl:"instaStory",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/instaStory-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/instaStory-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"ETC"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '여행 가서 예쁜 풍경을 찍은 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '인스타에 올리고, 지인들에게 보여준다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '찍은 사진을 혼자 간직한다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "친구들 사이에서 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "보통 내가 먼저 스토리를 올린다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "보통 친구가 올린 스토리를 공유한다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "새로 사귄 친구에게 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `먼저 팔로우를 건다`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `먼저 팔로우가 오면 팔로우한다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "인스타를 올린 후 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "올리고 난 후에는 별로 신경 쓰지 않는다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "사람들이 어떤 반응일까 궁금해한다"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "친구의 스토리를 보고 DM을 보냈지만, 답장이 없다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "“바쁜가 보다” 하고 별로 신경 쓰지 않는다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '왜 답장을 하지 않는 거지? 하며 깊은 생각에 빠진다'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "전 애인이 나의 스토리를 봤다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "잘못 누른거겠지?.."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "내 스토리를 왜 본 거지? 혹시 아직 미련이 남았나?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '약간 불편했던 친구에게 팔로우 신청이 온다면?',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "모른척하고 받지 않는다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "불편하긴 하지만 감정 상해할까 봐 일단 받는다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 피드에 올린 사진이 보정한 게 너무 티가 난다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "보정한 거 다 티 난다고 말하면서 놀린다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "다 티 난다고 말해주고 싶지만, 기분 나빠 할까 봐 참는다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 맛있어 보이는 음식점 사진을 스토리에 올렸을 때 내 반응은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "대박 여기 어디야? 맛있어?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "너무 맛있었겠다 다음에는 나도 같이 가자"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "인스타 감성 맛집이나, 카페를 가기 전 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "메뉴를 미리 정해 놓고, 어떻게 사진을 찍을지 미리 생각해 놓는다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "가서 보고 메뉴를 정하고, 느낌이 가는 대로 사진을 찍는다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나와 가까운 것은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "인스타 피드를 주기적으로 정리하고, 깔끔한 느낌을 유지한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "꼭 필요한 정리만 하는 편이다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '인스타 올릴 때 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "올릴 사진과 글을 미리 생각해 놓는다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "즉흥적으로 사진을 고르고, 생각나는 대로 글을 쓴다"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/instaStory/INFP.jpg'
+            },
+        ]
+    },
+    // princess
+    {
+        info : {
+            mainTitle:"나는 어떤 나라의 공주일까? 테스트",
+            subTitle:"공주로 알아보는 나의 성격은? | 공주 테스트",
+            mainUrl:"princess",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/princess-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/princess-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"ETC"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '이번 공주 파티는 내가 주최하게 되었다.',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '갹!!!!! 아는 공주 다 불러!!!! 세상에서 제일 화려하고 신나는 파티다!!!!뒤지버지게 놀아보자'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '친한 공주들만 모여서 우아하게 놀아보자…^^'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "공주들이 다 집으로 돌아가고 나는…",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "내 성이 원래 이렇게 조용했던가…? 다음번 파티가 벌써 기다려져"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "재밌었지만 당분간은 기력 충전하면서 좀 쉬어야지!!"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "공주 파티에 처음 온 옆 나라 공주가 초대해 줘서 감사하다는 인사를 했다.",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `공주 파티가 처음이라고요?! 저 따라오세요!! 제가 진짜 재밌는 공주들 소개해 줄게요!! `
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `어머머 감사하긴요~ 재밌게 놀다 가세요~ ^^`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "이왕 주최하게 된 거 성공적인 공주 파티를 만들고 싶은데…",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "역대 공주 파티들 레퍼런스를 모아봐야겠다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "훔… 뭔가.. 이렇게 이렇게 하면 잼쓸듯…? 다 좋아할 것 같은뎅?"
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "드디어 공주 파티 전날!! 잠자리에 든 나는",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "드르렁…"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: '오랜만에 공주들 만날 생각에 너무 설렌다!! 빨리 자야 되는데 잠이 안 오네!! 아 아무 생각 하지 말고 자자!! 근데 아무 생각을 안 하는건 어떤 거지? 생각이란 뭘까?'
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "조금 친해진 옆 나라 공주가 자기 오빠를 소개해주겠다고 한다.",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "옆 나라 왕자님 존잘인데 개꿀"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: "헉 옆 나라 왕자님이라면 진짜 잘생기기로 유명한데… 나 보자마자 첫눈에 반해서 한 달도 안돼서 결혼하고 막 그러는 거 아냐? 근데 옆 나라 왕자님 전여친들이 나타나서 방해하면 어쩌지"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: '파티 준비를 하는데 손이 느리고 실수투성이인 하인을 발견!! 다른 하인들이 하는 말이 들린다. “쟤는 온 지 석 달이 넘었는데 아직도 일을 못해” “남편 죽고 일 시작한거래잖아~ 궂은일 해본 적 없이 살았대”',
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "사정이 어쨌든 솔직히 내 성에 일 못하는 하인은 필요 없어 민폐야"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "그런 사정이 있었구나… 마음이 아파…ㅠㅠ"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "공주 파티 당일!! 공주들이 모이기 시작하는데!! 갑자기 친한 00공주의 불참 연락이 왔다.",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "왜, 무슨 일 있어?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "헉!! 너무 속상해 ㅠㅠ"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "공주 파티 성공적으로 끝!! 공주들이 저마다 주최자인 나를 칭찬해준다. 제일 듣기 좋은 칭찬은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "크~~ 이제까지 공주 파티중에 제일 잘 준비하신 것 같아요. 이렇게 배워갑니다~"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "공주님 너무 수고 많으셨어요ㅠㅠ 재밌는 시간 만들어주셔서 너무 고마워요!!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "파티 장소를 꾸밀 차례. 나를 닮아 로맨틱한 핑크 장미를 데코하려는데 핑크 장미의 수가 부족해서 다른 꽃으로 바꿔야 된다는 정원사의 말…!!",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "아 스트레스 이 몸 하면 로맨틱한 핑크장민데… 그럼 두 번째 후보인 흰 장미로 부탁해요 "
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "흠… 그럼 흰 장미로 바꾸지 뭐!! 흰 장미도 예쁘니까 괜춘~"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "다 같이 즐기려고 며칠 동안 구상해서 준비해놓은 게임들이 있는데 공주들이 게임은 무슨, 수다나 떨자고 한다.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "열심히 준비했는데… 수다 타임은 따로 있는데… 기분이 조금 상했다…"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "구래!! 수다 떠는 거도 좋아 꺄르르"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '뒷나라 공주가 넘어지면서 내 드레스에 와인을 쏟아버렸다!! “헉 어떡해… 죄송해요ㅠㅠ”',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "혹시 몰라서 여분의 드레스를 준비해놨어요. 갈아입고 오면 돼요~^^"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "괜찮아요~ 드레스 빨간색이라 티도 안 남!!"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/princess/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/princess/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/princess/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/princess/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/princess/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/princess/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/princess/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/princess/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/princess/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/princess/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/princess/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/princess/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/princess/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/princess/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/princess/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/princess/INFP.jpg'
+            },
+        ]
+    },
     // mailForMeEng
     {
         info : {
