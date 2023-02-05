@@ -357,7 +357,7 @@ const TESTS = [
             mainImage:"https://images.ktestone.com/introImages/instaStory-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/instaStory-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
-            lang:"ETC"
+            lang:"Kor"
         },
         questions:[
             {
