@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // hallInTheWall
+    {
+        info : {
+            mainTitle:"맛집 성격 테스트",
+            subTitle:"맛집으로 알아보는 나의 성격은? | 맛집 테스트",
+            mainUrl:"hallInTheWall",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/hallInTheWall-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/hallInTheWall-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '친구가 한시간 이상 웨이팅있는 맛집을 당장 오늘 저녁에 가자고 할 때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '안그래도 거기 가보고 싶었는데! 가자!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '오늘 저녁에? 혹시 주말에는 안될까?'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "음식점에 들어가면 어느 자리에 앉을까?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "중앙 부분, 왁자지껄한 분위기가 좋아!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "벽 근처, 밥은 조용하게 먹고싶어"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "자주가던 맛집거리를 오랜만에 갔을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `오랜만에 왔으니 새로운 맛집들을 찾아가본다`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `예전에 갔었던 맛집 위주로 간다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "저녁식사 준비를 해야하는데 너무 귀찮을 때, 무슨 생각을 할까?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `“아 뭐해먹지?”, “그냥 배달시켜 먹을까?”`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `“배고픔이 사라지는 약은 없을까?”`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "“배고픔이 사라지는 약은 없을까?”",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "눈대중으로 양념을 하면서 요리한다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `“자동으로 계량해주는 기계는 없을까?”와 같은 잡생각을 하며 요리한다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "비행기 타기 전 드는 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `“기내식 뭐 신청했더라? 맛있었으면 좋겠다…”`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `“비행기 위험하진 않겠지? 비행기 사고 확률이 얼마더라…”`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `“너 요리 진짜 못한다”라는 말에 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "그정도로 맛없어? 뭐가 문제지…"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "열심히 준비했는데ㅠ 너무 심하게 말하니까 상처받는다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친한 친구가 안좋은일이 있어서 우울하다고 할 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `“많이 안좋은 일이야? 무슨 일인지 물어봐도 돼?”`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "같이 우울해 하며 맛있는 거 먹으러가자고 한다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `내가 갔던 맛집에 대해 설명했을 때, “별로 맛없을 것 같은데?”하면 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "그런가? 난 맛있게 먹었는데. 이런거 싫어하나보다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "맛집 공유해 주고 싶었던 건데… 속상하네ㅠ"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "뷔페에서 음식을 먹을 때 내 스타일은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `‘샐러드 먼저 먹고… 그 다음 고기하고 생선… 마지막으로 밥, 빵!’ , 순서대로 먹는다`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `‘먹고 싶은거 다 먹자!’, 눈에 보이는대로 먹고싶은걸 먹는다.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "주말에 친구와 맛집 탐방을 가기로 한 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "시간대별로 어디 음식점에 도착해야하는지, 그리고 음식 먹는 시간까지 다 계획한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "맛집을 어디로 갈지만 정하고 간다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '나의 식사 스타일은?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "몇 개의 메뉴를 정해 놓고 계속 반복"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "매일 먹는 메뉴가 달라진다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hallInTheWall/INFP.jpg'
+            },
+        ]
+    },
     // mailForMeCN
     {
         info : {
