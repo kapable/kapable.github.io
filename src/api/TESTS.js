@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // quokka
+    {
+        info : {
+            mainTitle:"쿼카 성격 테스트",
+            subTitle:"쿼카로 보는 나의 성격은? | 쿼카 테스트",
+            mainUrl:"quokka",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/quokka-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/quokka-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '나는 주기적으로 새로운 친구를 만드려고 노력한다',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '당연하지!, 친구는 많으면 많을수록 좋아'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '숙소에서 풍경을 바라보며 혼자 조용한 시간을 가지는 힐링 타임'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "정말 맛있는 맛집을 찾았을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "“여기 꼭 가봐!”, 주변에 추천하고 다닌다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "“여기 진짜 맛있다”, 혼자만 생각한다. "
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "파티나 행사 갔을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `새로운 사람에게 먼저 자신을 소개하는 편이다`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `주로 이미 알고 있는 사람과 대화하는 편이다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "가봤던 장소를 어떤 식으로 기억해?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `먹었던 음식, 방문한 장소 등으로 기억`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `그날의 분위기, 날씨, 향기 등으로 기억`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "버스에 앉아서 창밖을 바라볼 때 드는 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "창밖 이쁘다 나가서 놀고 싶다."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `이 버스는 하루에 몇대나 배차될까?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "로또 당첨에 대한 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `“1등 되면 대체 어떤 기분일까?”`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `“로또 조작은 진짜 없을까?”`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `“오늘 저녁에 뭐해?” 라는 말 뜻은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "진짜 뭐하는지 궁금해서"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "시간되는지 물어보려고"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구의 부탁에 “잠시 생각해볼게”라고 답했을 때 그 의미는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `실제로 고민할 시간이 필요 하다.`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "거절의 의미가 약간 들어가 있다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `나와 의견이 다른 사람과 토론을 할 때 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "어떻게든 내 의견을 상대방에게 설득시키려고 노력한다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "상대의 의견을 최대한 이해해보려고 노력한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "휴가 계획을 짤 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `“6시 30분까지는 관람을 마쳐야해”, 최대한 구체적으로 짠다.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `“이날은 배터지게 먹는날~~~”, 대충 컨셉만 생각해둔다.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "시험기간에 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "“오늘은 45p까지 공부해야겠다.”, 계획대로 차근차근 공부한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "“오늘 잠 안잘거니까 지금은 핸드폰 좀 보자”, 쉬다가 벼락하기를 한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '정해진 계획에 차질이 생기면 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "최대한 빨리 계획으로 돌아가기 위해 노력한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "상황마다 계획을 바꾸며 유동적으로 진행한다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/quokka/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/quokka/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/quokka/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/quokka/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/quokka/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/quokka/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/quokka/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/quokka/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/quokka/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/quokka/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/quokka/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/quokka/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/quokka/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/quokka/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/quokka/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/quokka/INFP.jpg'
+            },
+        ]
+    },
     // travelCarrier
     {
         info : {
