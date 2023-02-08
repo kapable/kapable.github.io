@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // travelCarrier
+    {
+        info : {
+            mainTitle:"여행 캐리어 테스트",
+            subTitle:"나의 여행 스타일은 어떨까? | 여행 테스트",
+            mainUrl:"travelCarrier",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/travelCarrier-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/travelCarrier-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Kor"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '내가 꿈에 그리는 여행 스타일은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '유명한 관광지를 신명 나게 돌아다니며 밤까지 노는 파티 타임'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '숙소에서 풍경을 바라보며 혼자 조용한 시간을 가지는 힐링 타임'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "커플 여행을 가기로 했던 연인과 대판 싸워 우울하다면 당신은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "친구들을 만나 스펙터클 했던 싸움 스토리를 풀며 스트레스를 해소한다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "집에서 혼자만의 시간을 가지며 생각을 정리하고 극복하려고 노력한다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "여행은 떠나고 싶지만 친구들이 모두 가지 못하는 상황이라면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `여행이란 우르르 다 같이 가야 재밌는 법! 시간 맞춰서 다음에 가야겠다`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `이참에 혼자서 여행 다녀와볼까..? 혼자도 난 재밌을 거 같은데`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "외국 공항에 도착했다 그런데 사람이 어마 무시하게 많은 상황이라면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `공항에 사람이 엄청 많네 빨리 숙소로 이동하자`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `일행의 손을 놓치고 길을 잃어버려 국제 미아가 되는 상상을 함`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "비행기 이륙 전, 창문으로 날아가는 풍선이 보인다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "풍선이 왜 있지 하고는 신경 쓰지 않음"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `여기 풍선이 왜 있담? 무슨 색깔이지?? 누가 놓쳤을까??`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "여행 중 배가 꼬르륵거려 밥을 먹을 식당을 찾기로 했다면 당신은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `음식 사진을 봤을 때 맛있어 보이는 식당으로 결정한다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `검색을 통해 맛있어 보이는 식당의 리뷰나 이벤트 등을 찾아보고 결정한다`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `여행에 가기로 한 친구 중 한 명이 못 가게 되어 아쉬워한다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "뭐 어쩔 수 없지 한 명이 줄어서 우리 일정 다시 봐야겠다."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "헐 못 가? 어쩌지 너무 아쉬운걸.. 다른 날로 다시 잡을 순 없나?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 크고 무거운 여행용 캐리어를 간신히 끌고 왔다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `그 캐리어 어디서 샀음? 엄청 크네`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "아이고 힘들었겠다 고생했어 이따가 같이 끌어줄까??"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `공항에서 친구가 짐을 잃어버려 멘붕 상태라면 당신은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "큰일인데? 빨리 유실물 관리소에 전화해 봐"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "헐 어떡함? 큰일 났다! 빨리 어디 있는지 찾아보자"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "기대하던 맛집에 드디어 도착했는데 문이 닫혀있다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `이런 변수를 대비해 미리 알아두었던 식당으로 간다`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `이런 변수는 예상하지 못했기 때문에 가까운 식당으로 간다`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "목적지로 이동 중 배가 너무 고파 꼬르륵거린다.. 이럴 때 당신은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "저기 식당이 있긴 한데.. 먹고 가면 일정이 밀릴텐데 일단 얼른 가야겠다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "오 저 식당 어떰? 배고파.. 맛있어 보이는데 저기 들려서 먹고 가자"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '즐거웠던 여행이 끝나고 집으로 왔다. 당신의 모습은?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "집에 오자마자 짐부터 풀어 정리한 후 휴식 타임"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "아 몰랑~ 일단 누워서 대신 누가 짐을 정리해 줬으면 좋겠다고 생각함"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/travelCarrier/INFP.jpg'
+            },
+        ]
+    },
     // readyToBone
     {
         info : {
