@@ -14,10 +14,10 @@ function MainPage(props) {
 
     return (
         <Fragment>
+            <OhterLangIconsMain />
             <div>
                 <img className='main-header' src={MAINHEADER} alt="K-test"/>
             </div>
-            <OhterLangIconsMain />
 
             <AdsenseAdvertiser
                 client="ca-pub-2382342018701919"
