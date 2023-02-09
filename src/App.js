@@ -255,6 +255,7 @@ class App extends Component {
             <Route path="/loveCharacterCN/" component={() => <LoveCharacter lang={'CN'} />} />
             <Route path="/loveCharacterGer/" component={() => <LoveCharacter lang={'Ger'} />} />
             <Route path="/loveCharacterES/" component={() => <LoveCharacter lang={'ES'} />} />
+            <Route path="/loveCharacterJP/" component={() => <LoveCharacter lang={'JP'} />} />
 
             {/* go to "lifetimeSaju" page */}
             <Route path="/lifetimeSaju/" component={() => <LifetimeSaju />} exact/>
