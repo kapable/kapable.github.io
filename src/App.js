@@ -31,6 +31,8 @@ import FortuneCookie from './components/TestTypes/FortuneCookie/FortuneCookie';
 import TodayLuck from './components/TestTypes/Saju/TodayLuck';
 import TodayLuckResult from './components/TestTypes/Saju/TodayLuckResult';
 import LoveCharacter from './components/TestTypes/LoveCharacter/LoveCharacter';
+import LifetimeSaju from './components/TestTypes/Saju/LifetimeSaju';
+import LifetimeSajuResult from './components/TestTypes/Saju/LifetimeSajuResult';
 
 
 class App extends Component {
@@ -253,6 +255,10 @@ class App extends Component {
             <Route path="/loveCharacterCN/" component={() => <LoveCharacter lang={'CN'} />} />
             <Route path="/loveCharacterGer/" component={() => <LoveCharacter lang={'Ger'} />} />
             <Route path="/loveCharacterES/" component={() => <LoveCharacter lang={'ES'} />} />
+
+            {/* go to "lifetimeSaju" page */}
+            <Route path="/lifetimeSaju/" component={() => <LifetimeSaju />} exact/>
+            <Route path="/lifetimeSaju/:query/" component={() => <LifetimeSajuResult />} />
 
             {/* go to "todayLuck" page */}
             <Route path="/todayLuck/" component={() => <TodayLuck />} exact/>

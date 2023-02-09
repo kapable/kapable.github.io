@@ -19,7 +19,7 @@ const defaultOptions = {
     }
 };
 
-const TodayLuck = (props) => {
+const LifetimeSaju = (props) => {
     const dateFormat = 'YYYYMMDD';
     const [day, setDay] = useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -34,7 +34,7 @@ const TodayLuck = (props) => {
         
         setIsLoading(true);
         setTimeout(() => {
-            props.history.push(`/todayLuck/${crypto_query_date}/`)
+            props.history.push(`/lifetimeSaju/${day}/`)
         }, "2500");
     }, [day, props]);
 
@@ -51,39 +51,40 @@ const TodayLuck = (props) => {
             <Fragment>
                 <Helmet>
                     {/* <!-- Primary Meta Tags --> */}
-                    <title>오늘의 총운 - 케이테스트 | 사주 테스트</title>
-                    <meta name="title" content="오늘의 총운 - 케이테스트"/>
-                    <meta name="description" content="오늘 하루 나의 총운은? - 오늘의 총운 | 케이테스트 | 사주 테스트" data-react-helmet="true"/>
+                    <title>평생 총운 - 케이테스트 | 사주 테스트</title>
+                    <meta name="title" content="평생 총운 - 케이테스트"/>
+                    <meta name="description" content="나의 평생 총운은? - 자평명리학 | 평생 총운 | 케이테스트 | 사주 테스트" data-react-helmet="true"/>
                     <link rel="main-url" href="https://ktestone.com/kapable.github.io/todayLuck/"/>
 
                     {/* <!-- Open Graph / Facebook --> */}
                     <meta property="og:type" content="website"/>
                     <meta property="og:url" content="https://ktestone.com/kapable.github.io/todayLuck/"/>
-                    <meta property="og:title" content="오늘의 총운 - 케이테스트 | 사주 테스트"/>
-                    <meta property="og:description" content="오늘 하루 나의 총운은? - 오늘의 총운 | 케이테스트 | 사주 테스트"/>
+                    <meta property="og:title" content="평생 총운 - 케이테스트 | 사주 테스트"/>
+                    <meta property="og:description" content="나의 평생 총운은? - 자평명리학 | 평생 총운 | 케이테스트 | 사주 테스트"/>
                     <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`}/>
-                    <meta property="og:image:alt" content="오늘의 총운 - 케이테스트 | 사주 테스트" />
+                    <meta property="og:image:alt" content="평생 총운 - 케이테스트 | 사주 테스트" />
 
                     {/* <!-- Twitter --> */}
                     <meta property="twitter:card" content="summary_large_image"/>
                     <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/todayLuck/"/>
-                    <meta property="twitter:title" content="오늘의 총운 - 케이테스트 | 사주 테스트"/>
-                    <meta property="twitter:description" content="오늘 하루 나의 총운은? - 오늘의 총운 | 케이테스트 | 사주 테스트"/>
+                    <meta property="twitter:title" content="평생 총운 - 케이테스트 | 사주 테스트"/>
+                    <meta property="twitter:description" content="나의 평생 총운은? - 자평명리학 | 평생 총운 | 케이테스트 | 사주 테스트"/>
                     <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`}/>
-                    <meta property="twitter:image:alt" content="오늘의 총운 - 케이테스트 | 사주 테스트" />
+                    <meta property="twitter:image:alt" content="평생 총운 - 케이테스트 | 사주 테스트" />
                 </Helmet>
-                <div className='todayLuck-intro-img-div'>
-                    <img className='todayLuck-intro-bg' src="https://images.ktestone.com/meta/saju/todayLuck-intro-bg.jpg" alt="todayLuck-intro-input"/>
-                    <div className='todayLuck-intro-date-picker-div'>
-                        <DatePicker className='todayLuck-intro-date-picker' onChange={onChange} allowClear locale={locale}/>
+                <div className='lifetime-saju-intro-img-div'>
+                    {/* <img className='lifetime-saju-intro-bg' src="https://images.ktestone.com/meta/saju/lifetime-saju-intro-bg.jpg" alt="lifetime-saju-intro-input"/> */}
+                    <div className='lifetime-saju-intro-date-picker-div'>
+                        <DatePicker className='lifetime-saju-intro-date-picker' onChange={onChange} allowClear locale={locale}/>
                     </div>
-                    <div className='todayLuck-intro-btn-div' onClick={onSubmitClick}>
-                        <img className='todayLuck-intro-btn' src="https://images.ktestone.com/meta/saju/todayLuck-intro-submit-btn.jpg" alt="todayLuck-intro-btn"/>
-                    </div>
+                    {/* <div className='lifetime-saju-intro-btn-div' onClick={onSubmitClick}>
+                        <img className='lifetime-saju-intro-btn' src="https://images.ktestone.com/meta/saju/lifetime-saju-intro-submit-btn.jpg" alt="lifetime-saju-intro-btn"/>
+                    </div> */}
+                    <button onClick={onSubmitClick}>결과 보기</button>
                 </div>
             </Fragment>
         );
     };
 };
 
-export default withRouter(TodayLuck);
+export default withRouter(LifetimeSaju);
