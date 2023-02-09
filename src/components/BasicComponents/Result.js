@@ -1295,6 +1295,7 @@ class Result extends Component {
                     </div>
                 </div>
                 {this.otherTestBannerRenderer()}
+                {this.adTagRenderer()}
                 {/* New Test banners */}
                 {/* {this.horizontalNewTestRenderer()} */}
 
