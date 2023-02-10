@@ -33,9 +33,7 @@ const LifetimeSaju = (props) => {
         if(!time) {
             return alert('시간을 입력해주세요!');
         };
-        const today_date = moment().format(dateFormat);
-        const query_date = [today_date, day].join('-');
-        const crypto_query_date = encodeURIComponent(crypto.AES.encrypt(JSON.stringify(query_date), 'ktestsaju').toString());
+        const crypto_query_date = encodeURIComponent(crypto.AES.encrypt(JSON.stringify(day), 'ktestsaju').toString());
         
         setIsLoading(true);
         setTimeout(() => {
