@@ -2266,15 +2266,43 @@ export default function OtherLangIcons(props) {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://ktestone.com/kapable.github.io/mailForMeEng/"
+                        href="https://ktestone.com/kapable.github.io/mailForMe/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://ktestone.com/kapable.github.io/mailForMeEngEng/"
+                        href="https://ktestone.com/kapable.github.io/mailForMeEng/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
+                </div>
+            )
+        }
+    };
+
+    function readyToBoneTestLinkRenderer(){
+        if(props.currentTest === "readyToBone") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/readyToBoneCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
+                </div>
+            )
+        } else if(props.currentTest === "readyToBoneCN") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/readyToBone/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                 </div>
             )
         }
@@ -2304,6 +2332,7 @@ export default function OtherLangIcons(props) {
             {loveWarningTestLinkRenderer()}
             {characteristicChracterTestLinkRenderer()}
             {mailForMeTestLinkRenderer()}
+            {readyToBoneTestLinkRenderer()}
         </Fragment>
     );
 };

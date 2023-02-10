@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // readyToBoneCN
+    {
+        info : {
+            mainTitle:"뼈 아플 준비 됐어? 테스트",
+            subTitle:"다들 뼈 아플 준비됐어? | 뼈 테스트",
+            mainUrl:"readyToBoneCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/readyToBoneCN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/readyToBoneCN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"CN"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '如果周末的约会取消了的话我会？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '赶快想办法约别人'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '暗自欢喜在家休息'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "新加入的社团非常欢迎我时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "心情特别好，很快和大家亲近并适应环境"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "有点感到负担，慎重地慢慢地适应"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "聚会气氛较尴尬时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `忍受不了尴尬的氛围，无论什么先说出来`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `虽然感觉到极度尴尬，但也会坚持到别人先说话`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "我更倾向于的恋爱是？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `思考未来的现实版恋爱`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `梦幻般理想型的恋爱`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "如果我是电视剧主角的话我的选择是？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "周围人气很高而且外貌突出的富二代"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `使用超能力的奇幻世界主角`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "和朋友聊天时朋友突然换其他话题时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `无法理解为什么突然说其他话题`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `自然地一起聊新话题`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `信任的朋友在背后说我坏话时我会？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "虽然很生气，但好奇为什么会说我坏话"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "因倍感背叛而感到非常愤怒，考虑绝交"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "朋友说出不合理的话时我会？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `明确告诉他说得不对`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "担心他会受伤，所以尽量不说或者绕着弯子告诉他"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `朋友突然说骨头疼的话我会？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "怎么突然骨头疼？要不要去医院看一下？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "没事吧？天气这么冷，肯定会很疼啊"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "如果要我选一个让自己感到有压力的理由时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `事情不按计划进行时`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `一直要反复做同样的工作时`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "更接近我的是？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "马上去做应做的事情"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "经常推迟应该做的事情"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '让我感到无语的人是？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "距离最后期限1个小时之前也不会开始行动的人"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "计划仔细到小时、分钟、秒的人"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneCN/INFP.jpg'
+            },
+        ]
+    },
     // loveFlame
     {
         info : {
