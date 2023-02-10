@@ -13,7 +13,7 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 const LifetimeSajuResult = (props) => {
     const saju_url = 'https://saju.ktestone.com';
     const [result, setResult] = useState({});
-    const [isOpened, setIsOpened] = useState(true);
+    const [isOpened, setIsOpened] = useState(false);
     const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
     const coupangLink = "https://link.coupang.com/a/KgpKa";
 
