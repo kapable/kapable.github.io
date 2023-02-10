@@ -23,6 +23,330 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // readyToBoneEng
+    {
+        info : {
+            mainTitle:"Are you ready for the bitter regret? test",
+            subTitle:"Are you ready to have painful regrets?",
+            mainUrl:"readyToBoneEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/readyToBoneEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/readyToBoneEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Eng"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What would you do if a weekend appointment was canceled suddenly?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I quickly make another appointment for the weekend'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I might like it and rest at home'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "How would you react if you received a great welcome from the club where you just joined?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I would be very happy and get along with people well"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "It will be a burden for too many welcomes, but I'm trying to adapt slowly and carefully"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What would you do when you feel awkward at an event?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I can't stand the awkwardness and would try to talk to someone`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `It might be very awkward, but I would wait until someone talk to me`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Which date do you prefer?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `A practical date that I can think about the future`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `A ideal date that I have been dreaming of`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If you were the main character in a drama, what kind of main character would you like to be?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Handsome and popular rich man"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `A hero in a fantasy world who uses superpowers`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What can be your reaction if your friend suddenly changes the topic in the middle of a conversation?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I can not understand why`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I just continue the conversation`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What would you do if a trusted friend cursed at you behind your back?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I would get mad and wonder why"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "You would feel betrayed and angry that I won't see each other anymore"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What would you do if your friend said something inappropriate?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I would just talk directly`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I would say it indirectly for fear of hurting the other person"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What would you do if your friend was very sick?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "What happened? You should go to the hospital"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Are you okay? it must hurt a lot even the weather is so cold"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When are you stressed out?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I get stressed out when things don't go as planned`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `I get stressed when I have to keep doing repetitive things`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Which one is close to you?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I just finish up things that I have to do"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I often put off things that I have to do"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '내가 더 답답하게 느껴지는 사람은?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "A person who starts work right before the deadline"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "What kind of person do you feel frustrated with?"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneEng/INFP.jpg'
+            },
+        ]
+    },
     // readyToBoneCN
     {
         info : {
