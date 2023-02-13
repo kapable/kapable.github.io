@@ -256,11 +256,6 @@ class App extends Component {
             <Route path="/loveCharacterGer/" component={() => <LoveCharacter lang={'Ger'} />} />
             <Route path="/loveCharacterES/" component={() => <LoveCharacter lang={'ES'} />} />
             <Route path="/loveCharacterJP/" component={() => <LoveCharacter lang={'JP'} />} />
-            {/* {["Kor", "Eng", "CN", "Ger", "ES", "JP"].map((lang) => (
-              lang === "Kor"
-              ? (<Route path="/loveCharacter/" component={() => <LoveCharacter lang={'Kor'} />} />)
-              : (<Route path={`/loveCharacter/${lang}`} component={() => <LoveCharacter lang={lang} />} />)
-            ))} */}
 
             {/* go to "lifetimeSaju" page */}
             <Route path="/lifetimeSaju/" component={() => <LifetimeSaju />} exact/>

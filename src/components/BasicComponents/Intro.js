@@ -17,8 +17,8 @@ import TESTS from '../../api/TESTS'
 import { BrowserRouter as Router, Redirect, Route, withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Helmet } from 'react-helmet';
-import COPYBTN from '../../api/DefaultImg/test-intro-copy-link-btn.png';
-import BACKBTN from '../../api/DefaultImg/test-intro-other-tests-btn.png';
+import COPYBTN from '../../api/DefaultImg/result-copy-link-btn.png';
+import BACKBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import ScriptTag from 'react-script-tag'
 import ReactGA from 'react-ga';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
@@ -194,7 +194,6 @@ class Intro extends Component {
                         onClick={this._onStartButtonClick}
                         src={_thumbImage}
                         alt={_mainTitle + '|' + _subTitle}/>
-                    <p><b>*(추천) 사파리, 크롬 네이버 브라우저에서<br />조금 더 쾌적하게 이용 가능합니다!</b></p>
                     <OtherLangIcons currentTest={this.state.current_test.info.mainUrl}/>
                     
                     <AdsenseAdvertiser
