@@ -52,13 +52,6 @@ class Intro extends Component {
             _sharable_url = window.location.href
         }
 
-        // get Full Today
-        let today = new Date();
-        let month = String(today.getMonth() + 1)//.padStart(2, '0');
-        let date = String(today.getDate()).padStart(2, '0');
-        let hour = String(today.getHours()).padStart(2, '0');
-        let minute = String(today.getMinutes()).padStart(2, '0');
-
         this.state = {
             mode:'intro',
             current_test:_current_test,
@@ -69,7 +62,6 @@ class Intro extends Component {
             counted_score:0, // < ------------- for calculating scores
             result_url:'/result/',
             quiz_url:_sharable_url,
-            participants:(Number(month+date+hour+minute)*10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
             num_shares_count:0,
             custom_name:"",
             custom_option:""
@@ -154,8 +146,6 @@ class Intro extends Component {
     }
 
     introPageRender(){
-
-        
         let _mainTitle = this.state.current_test.info.mainTitle;
         let _subTitle = this.state.current_test.info.subTitle;
         let _thumbImage = this.state.current_test.info.mainImage;
@@ -202,13 +192,6 @@ class Intro extends Component {
                         format="auto"
                         responsive="true"
                     />
-                    {/* {noCountTests.includes(this.state.current_test.info.mainUrl)
-                    ? (null)
-                    : (
-                        <Typist className="start-btn-participants">
-                            현재까지 총 {this.state.participants}명이 참여했어요.
-                        </Typist>
-                    )} */}
 
                     {/* CPC Banner Intro footer */}
                     {/* {this.cpcBannerIntroFooterScriptor()} */}

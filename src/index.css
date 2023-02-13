@@ -96,20 +96,23 @@ body {
   display: block;
 }
 
-/* Each Lang Icons */
+/* Each Lang Icons & Categories Icons */
 .to-other-lang-test-banner-text {
   display: inline;
   margin: 0 0.3rem;
 }
 
-.go-to-each-language-main {
+.go-to-each-language-main, .go-to-each-category-main {
   margin: 2rem auto;
   display: block;
   font-family: var(--title-font);
 }
 
-/* intro start */
+.category-icon {
+  height: 1.6rem;
+}
 
+/* intro start */
 .intro {
   margin: 0rem auto 2.5rem;
   padding: 0rem 0rem;

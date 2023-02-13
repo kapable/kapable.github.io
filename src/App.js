@@ -82,9 +82,11 @@ class App extends Component {
       pct_test: _pct_test,
       ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
       lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'ES', 'Rus' ,'Others'],
+      category_list:['saju', 'characteristic', 'love', 'etc'],
       articleCategory:['humor', 'red']
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);
+    this.lang_category_renderer = this.lang_category_renderer.bind(this);
     this.all_lang_renderer = this.all_lang_renderer.bind(this);
     this.mainMetaTagRenderer = this.mainMetaTagRenderer.bind(this);
   }
@@ -126,6 +128,18 @@ class App extends Component {
       }
     }
     return lang_route_list;
+  }
+
+  lang_category_renderer(lang, cat) {
+    let m = 0;
+    let lang_category_route_list = [];
+    while(m < TESTS.length) {
+      if(TESTS[m].info.lang === lang && TESTS[m].info.category === cat) {
+        lang_category_route_list.push(['/'+TESTS[m].info.mainUrl+'/', TESTS[m].info.thumbImage, TESTS[m].info.mainTitle]);
+      }
+      m = m + 1;
+    }
+    return lang_category_route_list;
   }
 
   reloadPage() {
@@ -314,6 +328,28 @@ class App extends Component {
                 key={lang}
                 exact
               />
+            ))}
+
+            {this.state.lang_list.map((lang) => (
+              this.state.category_list.map((cat) => (
+                <Route
+                  path={'/'+lang+'/'+cat+'/'}
+                  component={() => <MainPage all_tests_url={this.lang_category_renderer(lang, cat)} lang={lang} />}
+                  key={`${lang}-${cat}`}
+                  exact
+                />
+              ))
+            ))}
+
+            {this.state.lang_list.map((lang) => (
+              this.state.category_list.map((cat) => (
+                <Route
+                  path={'/kapable.github.io/'+lang+'/'+cat+'/'}
+                  component={() => <MainPage all_tests_url={this.lang_category_renderer(lang, cat)} lang={lang} />}
+                  key={`${lang}-${cat}`}
+                  exact
+                />
+              ))
             ))}
 
             {/* go to "Intro" page */}

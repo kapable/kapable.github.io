@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import React, { Fragment, useState } from 'react';
+import { Link, useLocation, withRouter } from 'react-router-dom';
 import MAINHEADER from '../../api/DefaultImg/main-header-2023.png';
 import OhterLangIconsMain from '../SubComponents/OhterLangIconsMain';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
@@ -9,15 +9,21 @@ import '../TestTypes/Post2021/PostPopup.css';
 import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
+import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
 
 function MainPage(props) {
-
+    const { state } = useLocation();
+    const [currentCategory, setCurrentCategory] = useState(state?.currentCategory);
     return (
         <Fragment>
+            {/* Language Converting */}
             <OhterLangIconsMain />
             <div>
                 <img className='main-header' src={MAINHEADER} alt="K-test"/>
             </div>
+
+            {/* Category Converting */}
+            {props?.lang === 'Kor' ? (<CategoryIconsMain lang={props?.lang} setCurrentCategory={setCurrentCategory} />) : null}
 
             <AdsenseAdvertiser
                 client="ca-pub-2382342018701919"
@@ -28,7 +34,7 @@ function MainPage(props) {
             />
 
             {/* TodayLuck */}
-            {props.lang === 'Kor' ? (
+            {props.lang === 'Kor' && (currentCategory === '' || currentCategory === "saju") ? (
                 <Link to='/todayLuck/' className="main-link-block" key="todayLuck-banner">
                     <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`} alt="todayLuck" />
                 </Link>
@@ -64,9 +70,12 @@ function MainPage(props) {
             </div>
 
             {/* Go to LoveCharacter */}
-            <Link to={props.lang === 'Kor' || props.lang === 'Others' ? '/loveCharacter/' : `/loveCharacter${props.lang}`} className="main-link-block" key="loveCharacter-banner">
-                <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang === 'Kor' ? '' : props.lang}-thumb.png`} alt='loveCharacter' />
-            </Link>
+            {(currentCategory === '' || currentCategory === "love")
+            ? (
+                <Link to={(props.lang === 'Kor' || props.lang === 'Others') ? '/loveCharacter/' : `/loveCharacter${props.lang}`} className="main-link-block" key="loveCharacter-banner">
+                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang === 'Kor' ? '' : props.lang}-thumb.png`} alt='loveCharacter' />
+                </Link>
+            ) : null}
             
 
             {/* Main Test Banners(Middle) */}
@@ -99,13 +108,13 @@ function MainPage(props) {
             </div>
 
             {/* Fortune Cookie */}
-            {props.lang === 'Kor' ? (
+            {props.lang === 'Kor' && (currentCategory === '' || currentCategory === "saju") ? (
                 <Link to='/fortuneCookie/' className="main-link-block" key="fortuneCookie-banner">
                     <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fortuneCookie-thumb.png`} alt="fortuneCookie" />
                 </Link>
             ) : null}
             
-            {props.lang === 'Kor' ? (
+            {props.lang === 'Kor' && (currentCategory === '' || currentCategory === "etc") ? (
                 <>
                     {/* Go to FactPok */}
                     <Link to='/factPok/' className="main-link-block" key="factpok-banner">
@@ -132,7 +141,7 @@ function MainPage(props) {
             ) : null}
 
             {/* Go to POST 2021 ENG */}
-            {props.match.path !== '/Kor/'
+            {props.match.path !== '/Kor/' && (currentCategory === '' || currentCategory === "etc")
             ? (
                 <Link to='/post2022Eng/' className="main-link-block" key="post2022Eng-banner">
                     <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022Eng-thumb.png`} alt="POST-2021" />
@@ -174,7 +183,7 @@ function MainPage(props) {
                 <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/metaPangApply-thumb.png`} alt="POST-2021" />
             </Link> */}
             {/* Go to Jelling Games Banner */}
-            {props.lang === 'Kor' ? (
+            {props.lang === 'Kor' && (currentCategory === '' || currentCategory === "etc") ? (
                 <a
                     target='_blank'
                     rel="noopener noreferrer"
