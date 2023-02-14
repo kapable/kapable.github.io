@@ -66,7 +66,7 @@ const LifetimeSajuResult = (props) => {
 
     return (
         <div className='todayLuck-result-main-div'>
-            <img className='todayLuck-top-banner-sample' src="https://images.ktestone.com/meta/saju/todayLuck-top-banner-sample.png" alt='todayLuck-top-banner-sample'/>
+            <img className='todayLuck-top-banner-sample' src="https://images.ktestone.com/meta/saju/lifetimeSaju-top-banner.jpg" alt='todayLuck-top-banner-sample'/>
             {isOpened || coupangCookies?.coupang ? 
                 <Fragment>
                     <h3>사주총평</h3>
@@ -96,7 +96,7 @@ const LifetimeSajuResult = (props) => {
                 </Fragment> : 
                 <Fragment>
                     <h3>오늘의 총운</h3>
-                    <p>{result ? result?.total_result?.slice(0, 100) : null}</p>
+                    <p>{result ? result?.total_saju?.slice(0, 100) : null}</p>
                     <div className='article-adCover-div-1'>
                         <div className='article-adCover-div-2'>
                             <a href={coupangLink} target="_blank" rel='noreferrer noopener'>

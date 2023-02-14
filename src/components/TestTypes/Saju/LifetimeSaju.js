@@ -61,34 +61,35 @@ const LifetimeSaju = (props) => {
                     <title>평생 총운 - 케이테스트 | 사주 테스트</title>
                     <meta name="title" content="평생 총운 - 케이테스트"/>
                     <meta name="description" content="나의 평생 총운은? - 자평명리학 | 평생 총운 | 케이테스트 | 사주 테스트" data-react-helmet="true"/>
-                    <link rel="main-url" href="https://ktestone.com/kapable.github.io/todayLuck/"/>
+                    <link rel="main-url" href="https://ktestone.com/kapable.github.io/lifetimeSaju/"/>
 
                     {/* <!-- Open Graph / Facebook --> */}
                     <meta property="og:type" content="website"/>
-                    <meta property="og:url" content="https://ktestone.com/kapable.github.io/todayLuck/"/>
+                    <meta property="og:url" content="https://ktestone.com/kapable.github.io/lifetimeSaju/"/>
                     <meta property="og:title" content="평생 총운 - 케이테스트 | 사주 테스트"/>
                     <meta property="og:description" content="나의 평생 총운은? - 자평명리학 | 평생 총운 | 케이테스트 | 사주 테스트"/>
-                    <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`}/>
+                    <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/lifetimeSaju-thumb.png`}/>
                     <meta property="og:image:alt" content="평생 총운 - 케이테스트 | 사주 테스트" />
 
                     {/* <!-- Twitter --> */}
                     <meta property="twitter:card" content="summary_large_image"/>
-                    <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/todayLuck/"/>
+                    <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/lifetimeSaju/"/>
                     <meta property="twitter:title" content="평생 총운 - 케이테스트 | 사주 테스트"/>
                     <meta property="twitter:description" content="나의 평생 총운은? - 자평명리학 | 평생 총운 | 케이테스트 | 사주 테스트"/>
-                    <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`}/>
+                    <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/lifetimeSaju-thumb.png`}/>
                     <meta property="twitter:image:alt" content="평생 총운 - 케이테스트 | 사주 테스트" />
                 </Helmet>
                 <div className='lifetime-saju-intro-img-div'>
-                    {/* <img className='lifetime-saju-intro-bg' src="https://images.ktestone.com/meta/saju/lifetime-saju-intro-bg.jpg" alt="lifetime-saju-intro-input"/> */}
+                    <img className='lifetime-saju-intro-bg' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-input.jpg" alt="lifetime-saju-intro-input"/>
                     <div className='lifetime-saju-intro-date-picker-div'>
                         <DatePicker className='lifetime-saju-intro-date-picker' onChange={onChange} allowClear locale={locale}/>
                     </div>
-                    <TimePicker format={timeFormat} onChange={onTimeChange} />
-                    {/* <div className='lifetime-saju-intro-btn-div' onClick={onSubmitClick}>
-                        <img className='lifetime-saju-intro-btn' src="https://images.ktestone.com/meta/saju/lifetime-saju-intro-submit-btn.jpg" alt="lifetime-saju-intro-btn"/>
-                    </div> */}
-                    <button onClick={onSubmitClick}>결과 보기</button>
+                    <div className='lifetime-saju-intro-time-picker-div'>
+                        <TimePicker className='lifetime-saju-intro-time-picker' format={timeFormat} onChange={onTimeChange} locale={locale}/>
+                    </div>
+                    <div className='lifetime-saju-intro-btn-div' onClick={onSubmitClick}>
+                        <img className='lifetime-saju-intro-btn' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-submit-btn.jpg" alt="lifetime-saju-intro-btn"/>
+                    </div>
                 </div>
             </Fragment>
         );

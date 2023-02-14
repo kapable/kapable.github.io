@@ -1,14 +1,14 @@
-/* Intro */
-.todayLuck-intro-img-div {
+/* Today Luck Intro */
+.todayLuck-intro-img-div, .lifetime-saju-intro-img-div {
     position: relative;
 }
 
-.todayLuck-intro-bg {
+.todayLuck-intro-bg, .lifetime-saju-intro-bg {
     width: 100%;
     max-width: 35rem;
 }
 
-.todayLuck-intro-date-picker-div {
+.todayLuck-intro-date-picker-div, .lifetime-saju-intro-date-picker-div, .lifetime-saju-intro-time-picker-div {
     position: absolute;
     top: 22rem;
     width: 100%;
@@ -16,7 +16,7 @@
     color: #A99893;
 }
 
-.todayLuck-intro-btn {
+.todayLuck-intro-btn, .lifetime-saju-intro-btn {
     position: absolute;
     left: 50%;
     top: 24rem;
@@ -29,7 +29,7 @@
     background-color: #364142;
 }
 
-/* Result */
+/* Today Luck Result */
 .todayLuck-top-banner-sample {
     width: 100%;
     max-width: 25rem;
@@ -42,6 +42,23 @@
     max-width: 35rem;
 }
 
+
+/* Lifetime Saju Intro */
+.lifetime-saju-intro-date-picker-div {
+    top: 44rem;
+}
+.lifetime-saju-intro-time-picker-div {
+    top: 47rem;
+}
+.lifetime-saju-intro-btn {
+    top: 52rem;
+}
+
+.lifetime-saju-intro-date-picker, .lifetime-saju-intro-time-picker {
+    border: solid #A99893 3px;
+    background-color: #2F3131;
+}
+
 @media (min-width: 360px) {
     .todayLuck-intro-date-picker-div {
         top: 29rem;
@@ -49,6 +66,16 @@
 
     .todayLuck-intro-btn {
         top: 32rem;
+    }
+
+    .lifetime-saju-intro-date-picker-div {
+        top: 27.5rem;
+    }
+    .lifetime-saju-intro-time-picker-div {
+        top: 30rem;
+    }
+    .lifetime-saju-intro-btn {
+        top: 32.5rem;
     }
 }
 @media (min-width: 370px) {
@@ -59,6 +86,15 @@
     .todayLuck-intro-btn {
         top: 33rem;
     }
+    .lifetime-saju-intro-date-picker-div {
+        top: 28.5rem;
+    }
+    .lifetime-saju-intro-time-picker-div {
+        top: 31rem;
+    }
+    .lifetime-saju-intro-btn {
+        top: 34rem;
+    }
 }
 @media (min-width: 390px) {
     .todayLuck-intro-date-picker-div {
@@ -66,6 +102,15 @@
     }
 
     .todayLuck-intro-btn {
+        top: 35rem;
+    }
+    .lifetime-saju-intro-date-picker-div {
+        top: 29.7rem;
+    }
+    .lifetime-saju-intro-time-picker-div {
+        top: 32.2rem;
+    }
+    .lifetime-saju-intro-btn {
         top: 35rem;
     }
 }
@@ -77,6 +122,15 @@
     .todayLuck-intro-btn {
         top: 37rem;
     }
+    .lifetime-saju-intro-date-picker-div {
+        top: 31.5rem;
+    }
+    .lifetime-saju-intro-time-picker-div {
+        top: 34.5rem;
+    }
+    .lifetime-saju-intro-btn {
+        top: 37.5rem;
+    }
 }
 @media (min-width: 540px) {
     .todayLuck-intro-date-picker-div {
@@ -85,6 +139,15 @@
 
     .todayLuck-intro-btn {
         top: 49rem;
+    }
+    .lifetime-saju-intro-date-picker-div {
+        top: 42rem;
+    }
+    .lifetime-saju-intro-time-picker-div {
+        top: 45rem;
+    }
+    .lifetime-saju-intro-btn {
+        top: 50rem;
     }
 }
 @media (min-width: 768px) {
@@ -98,5 +161,14 @@
 
     .todayLuck-top-banner-sample {
         max-width: 35rem;
+    }
+    .lifetime-saju-intro-date-picker-div {
+        top: 44rem;
+    }
+    .lifetime-saju-intro-time-picker-div {
+        top: 47rem;
+    }
+    .lifetime-saju-intro-btn {
+        top: 52rem;
     }
 }

@@ -34,7 +34,14 @@ function MainPage(props) {
             />
 
             {/* TodayLuck */}
-            {props.lang === 'Kor' && (currentCategory === '' || currentCategory === "saju") ? (
+            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
+                <Link to='/lifetimeSaju/' className="main-link-block" key="lifetimeSaju-banner">
+                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/lifetimeSaju-thumb.png`} alt="lifetimeSaju" />
+                </Link>
+            ) : null}
+
+            {/* TodayLuck */}
+            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
                 <Link to='/todayLuck/' className="main-link-block" key="todayLuck-banner">
                     <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`} alt="todayLuck" />
                 </Link>
