@@ -42,7 +42,6 @@
     max-width: 35rem;
 }
 
-
 /* Lifetime Saju Intro */
 .lifetime-saju-intro-date-picker-div {
     top: 44rem;
@@ -57,6 +56,10 @@
 .lifetime-saju-intro-date-picker, .lifetime-saju-intro-time-picker {
     border: solid #A99893 3px;
     background-color: #2F3131;
+}
+
+.ant-picker-input > input {
+    color: white;
 }
 
 @media (min-width: 360px) {

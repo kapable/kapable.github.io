@@ -29,6 +29,7 @@ const LifetimeSaju = (props) => {
     const [day, setDay] = useState("");
     const [time, setTime] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+    const [isTimePickerOpen, setIsTimePickerOpen] = useState(false);
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
@@ -107,7 +108,10 @@ const LifetimeSaju = (props) => {
                         <DatePicker className='lifetime-saju-intro-date-picker' onChange={onChange} allowClear locale={locale}/>
                     </div>
                     <div className='lifetime-saju-intro-time-picker-div'>
-                        <TimePicker className='lifetime-saju-intro-time-picker' format={timeFormat} onChange={onTimeChange} locale={locale}/>
+                        <TimePicker className='lifetime-saju-intro-time-picker'
+                            onClick={() => setIsTimePickerOpen(true)} open={isTimePickerOpen}
+                            onSelect={(e) => {setTime(e);setIsTimePickerOpen(false)}} allowClear={false}
+                            format={timeFormat} onChange={onTimeChange} value={time} locale={locale} showNow={false} />
                     </div>
                     <div className='lifetime-saju-intro-btn-div' onClick={onSubmitClick}>
                         <img className='lifetime-saju-intro-btn' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-submit-btn.jpg" alt="lifetime-saju-intro-btn"/>
