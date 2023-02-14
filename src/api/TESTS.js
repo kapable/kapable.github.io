@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveFlameEng
+    {
+        info : {
+            mainTitle:"Love flame test",
+            subTitle:"What kind of relationship do you see through fireworks?",
+            mainUrl:"loveFlameEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveFlameEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveFlameEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Eng",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What would you do if you suddenly met someone you like at an event?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I would try to get to know the person actively.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I will slowly try to seize the chance to chat with the person.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What do you say when you've just started dating someone?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I say everything about myself while overdoing TMI(too much information)."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I don't talk much about myself and only answer questions that are asked"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "How would you react if your lover suggested hanging out with their friends early in the relationship?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Even if it's a little sudden, I want to say "Yes, why not".`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I would refuse because it is sudden and somewhat burdensome`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "How would you react if your lover suddenly talked about the future ideally?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I would like that, but I think it's impossible in reality`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I would share my ideal thoughts`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: `What can be your reaction when your lover asks questions like "what if"?`,
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I will say “Don't worry, it won't happen”.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I will seriously think about it and answer it`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If you were to make food for lover, how would you prepare it?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I would cook according to the recipe.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I would cook with all my heart without weighing`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `If your lover lied to you, what would be your reaction?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I would be so disappointed, but first I would ask why my lover lied"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I would be very angry that my lover lied to me"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What would you do if your lover was very angry with you?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I would apologize for any mistakes and explain later`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I would apologize and try to resolve it"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What could be your intentions if you asked your love for some alone time?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I just needed time to sort out the relationship because I had been thinking too emotionally."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I had already sorted out the relationship, but I was trying to give my lover a chance to think."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What will you do just after breaking up with my lover?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I'll do anything to get rid of the blues, but I'll hold back in the end`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `To get rid of depressive feeling, I’ll change my hairstyle or buy things`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What will you do when you feel better after breaking up?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I will erase my plans with my ex and make a new plan"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I will be ready to meet someone new"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'What would you do the day before a blind date with someone new?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I would think about what to wear, hairstyle, etc."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I would get enough sleep first because I always decide on the day"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameEng/INFP.jpg'
+            },
+        ]
+    },
     // mbtiFeatures
     {
         info : {
@@ -39,183 +364,167 @@ const TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '친구가 갑자기 내가 좋아하는 사람 앞으로 끌고 가서 대화를 시도한다면?',
+                question: '주말에 연인과 신나게 놀고 나서 나는?',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: '아무렇지 않게 능청스럽게 같이 웃으며 대화한다'
+                        content: '이번 주말도 알찼다! 충전 완료!'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '갑자기 당황해서 고장나 버린 표정으로 어색해한다'
+                        content: '이번 주말도 재밌었다! 이제 집에서 푹 쉬어야지!'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "애인의 친구들과 함께 놀 때 나는?",
+                question: "평소 사람들이 많은 모임에서 나는?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "열정적이고 말이 많다"
+                        content: "열정적이고 내 의견을 자신 있게 말한다"
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "조용하게 공감을 잘한다"
+                        content: "조용하고 상대방 말에 공감을 잘한다"
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "내가 원하는 데이트는?",
+                question: "내가 선호하는 데이트는?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: `에너지 넘치고 신나는 데이트`
+                        content: `신나는 실외 데이트`
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: `감성적이고 차분한 데이트`
+                        content: `조용한 실내 데이트`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "애인에게 어제 본 드라마에 대해 이야기해준다면?",
+                question: "친구들과 술자리 약속에 간 연인이 연락 두절 상태라면?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `내가 본 드라마 그대로 상세하게 이야기한다`
+                        content: `감히 내 연락을 안 받아?!`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `내가 본 드라마를 애인이 이해하기 쉽게 조금 변형해서 이야기한다`
+                        content: `설마 다른 이성이랑 놀고 있는 건 아니겠지?`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "애인과 연극을 보고 난 후 나의 반응은?",
+                question: "연인과 여행가기 전날 나는?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "연극 너무 재밌었어! 배우들이 연기를 너무 잘하더라!"
+                        content: "빨리 가고 싶어서 일찍 잔다"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `근데 아까 그 배우가 말한 대사에 숨겨진 의미가 있지 않았을까? 내 생각엔..`
+                        content: `도착해서 신나게 노는 상상을 하다가 잔다`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "애인과 식당에서 맛있는 음식을 잔뜩 먹었을 때 나는?",
+                question: "내가 더 선호하는 대화는?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `너무 맛있다 우리 집 앞에도 생겼으면 좋겠다`
+                        content: `현재 유행하는 것이나, 관심사에 관해 이야기하는 대화`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `맛있긴 한데 너무 많이 먹었네 살찌면 어쩌지..`
+                        content: `상상력이 필요한 미래지향적인 대화`
                     },
                 ]
             },
             {
                 which:"TF",
-                question: `둘 중 더 싫은 애인은?`,
+                question: `연인과 갈등 상황에 나는?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "감정적으로 무감각한 애인"
+                        content: "답답하지만 이성적으로 갈등을 풀어가려고 침착하게 말한다"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "무논리로 징징거리는 애인"
+                        content: "할 말은 많은데 감정이 먼저 상해서 생각 정리가 잘 안된다"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "연인에게 선물을 했을 때 내가 듣고 싶은 말은?",
+                question: "활기차던 연인이 갑자기 심각한 얼굴로 고민을 털어 놓는다면?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: `어떻게 이런 생각을 했어? 완전 감동이다`
+                        content: `연인의 말을 끝까지 듣고, 문제를 해결해주려 한다`
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "너무 고마워 역시 밖에 없어 ㅠ"
+                        content: "연인에게 감정이입을 하면서, 진지하게 듣고 공감한다"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: `연인이 잘못된 행동을 했을 때 나는?`,
+                question: `연인이 아끼는 물건을 떨어뜨려서 부서졌다고 한다면?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "직설적으로 그건 아니라고 말해준다"
+                        content: "어쩌다가 떨어진 거야? 어떡해 조심하지ㅠ"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "최대한 돌려서 잘못한 행동에 대해 말해준다"
+                        content: "그거 너가 아끼던 거였는데ㅠ 어떡해ㅠ"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "좋아하는 이성에게 고백하려고 한다면?",
+                question: "연인과 데이트 약속 시간에 나는?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: `플랜B 계획까지 철저하게 계획을 세워 고백한다`
+                        content: `약속 시간보다 미리 나와 있는다`
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: `상황을 보고 적절한 타이밍에 즉흥적으로 고백한다`
+                        content: `약속 시간에 자주 늦는다`
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "연인과 데이트에 나는?",
-                answers:[
-                    {
-                        type: "J",
-                        score: 2,
-                        content: "약속 시간에 미리 나와 있는 편이다"
-                    },
-                    {
-                        type: "P",
-                        score: 5,
-                        content: "약속 시간에 늦는 일이 잦다"
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: '연인과 데이트하기 전 나는?',
+                question: "연인과 데이트하기 전 나는?",
                 answers:[
                     {
                         type: "J",
@@ -226,6 +535,22 @@ const TESTS = [
                         type: "P",
                         score: 5,
                         content: "약속 장소와 시간 정도만 정해 놓고 만난다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '연인에게 편지를 쓴다면 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "어떻게 적을지 미리 생각해 놓고 옮겨 적는다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 앉아서 그 자리에서 생각나는 대로 적는다"
                     },
                 ]
             },

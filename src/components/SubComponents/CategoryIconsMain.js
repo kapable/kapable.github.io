@@ -14,7 +14,7 @@ function CategoryIconsMain({ lang }) {
                     key={`category-${cat}`}
                     className="to-other-lang-test-banner-text"
                 ><img src={`https://images.ktestone.com/default/categoryIcon/category-btn-${cat}.png`} className='category-icon' alt={`${cat}-category`} /></Link>
-            ))};
+            ))}
         </div>
     );
 };
