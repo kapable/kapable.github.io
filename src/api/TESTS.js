@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // bondeeEng
+    {
+        info : {
+            mainTitle:"Bondee Personality Test",
+            subTitle:"What is my personality through the Bondi characters? | bondee test",
+            mainUrl:"bondeeEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/bondeeEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/bondeeEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Eng",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What would you do if you met a friend of your friend while walking down the street?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I just use my sociability to talk together'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I just say “hello” and listen to what my friend is talking about'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What is your preferred method of communication?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I communicate in person or over the phone"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I communicate using messengers such as KakaoTalk text messages"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What if you set a status message on your day off after a long time, what would you do?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I'm taking a break today after a long time. Who wants to play with me?`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I can't reply. I am on my break`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If you do house decoration in game, what would you do?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I would like to decorate a realistic house with my own interior`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I would like to decorate my house fantastically`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If you create a character in a game, what would you do?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I would create a character that reflects reality with my own unique sensibility"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I would make a bold and fantasy character like the main character in the game`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If your friend says that virtual reality games are too realistic and scary, what would you say?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `It's just a game`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `In the future, there may come a world where games and reality cannot be distinguished`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What would you do if your friend said, “You have a lot of talent,\nbut I thought you didn’t prepare much for it” after your Power Point presentation?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Yeah, I guess I have a talent, right?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I prepared a lot, but why do you think so?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "How do you express interest in the other person?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I often ask questions or help`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I respond and listen well"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What praise do you want to hear when you've done something great in a very difficult situation?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Wow, you made it! How could you do that?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Wow, I believed it too ~ It must have been hard, but you worked hard!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "If you decorate your house in the game What will you do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I start planning and decorating everything in advance, including the furniture, colors, and atmosphere `
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `I keep open to possibilities and decorate as I feel`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you do when you suddenly think of something you want to eat?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I would put up with it because it is not planned spending"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I have to eat what I want to eat! Order now"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'How do you prepare for an appointment with your friends?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I prepare everything in advance"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I am often in a last minute rush"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeEng/INFP.jpg'
+            },
+        ]
+    },
     // loveFlameEng
     {
         info : {
