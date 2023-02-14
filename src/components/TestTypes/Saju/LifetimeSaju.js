@@ -1,6 +1,7 @@
 import React, { Fragment, useCallback, useState } from 'react';
 import { DatePicker, TimePicker } from 'antd';
 import moment from 'moment';
+import ReactGA from 'react-ga';
 import 'moment/locale/ko';
 import locale from 'antd/es/date-picker/locale/ko_KR';
 import { withRouter } from 'react-router';
@@ -9,6 +10,9 @@ import Lottie from 'react-lottie';
 import * as loading from '../../../loading-animation.json';
 import './TodayLuck.css';
 import { Helmet } from 'react-helmet';
+import CopyToClipboard from 'react-copy-to-clipboard';
+import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
+import BACKBTN from '../../../api/DefaultImg/result-to-home-btn.png';
 
 const defaultOptions = {
     loop: true,
@@ -25,6 +29,14 @@ const LifetimeSaju = (props) => {
     const [day, setDay] = useState("");
     const [time, setTime] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+
+    const _eventSenderGA = (category, action, label) => {
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+    };
 
     const onSubmitClick = useCallback(async () => {
         if(!day) {
@@ -48,6 +60,16 @@ const LifetimeSaju = (props) => {
     const onTimeChange = useCallback((time) => {
         setTime(moment(time, timeFormat));
     }, [timeFormat]);
+
+    const onBacktoHomeButtonClick = useCallback(() => {
+        _eventSenderGA("Paging", "Click Back-to-main Button", "intro page");
+        props.history.push(`/`);
+    }, [props]);
+
+    const onShareButtonClick = useCallback(() => {
+        alert("링크가 복사됐습니다!");
+        _eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
+    }, [])
 
     if(isLoading) {
         return (
@@ -91,6 +113,22 @@ const LifetimeSaju = (props) => {
                         <img className='lifetime-saju-intro-btn' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-submit-btn.jpg" alt="lifetime-saju-intro-btn"/>
                     </div>
                 </div>
+                <div className="test-intro-with-friend">
+                        <CopyToClipboard text={'https://ktestone.com/kapable.github.io/lifetimeSaju/'}>
+                            <img
+                                src={COPYBTN}
+                                className="test-intro-with-friend-img"
+                                onClick={onShareButtonClick}
+                                alt="테스트 링크 복사"/>
+                        </CopyToClipboard>
+                    </div>
+                    <div className="test-intro-to-main">
+                        <img
+                            className="test-intro-to-main-img"
+                            src={BACKBTN}
+                            onClick={onBacktoHomeButtonClick}
+                            alt="다른 테스트 하러 뒤로가기"/>
+                    </div>
             </Fragment>
         );
     };

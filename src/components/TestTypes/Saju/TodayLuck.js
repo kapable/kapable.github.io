@@ -3,12 +3,16 @@ import { DatePicker } from 'antd';
 import moment from 'moment';
 import 'moment/locale/ko';
 import locale from 'antd/es/date-picker/locale/ko_KR';
+import ReactGA from 'react-ga';
 import { withRouter } from 'react-router';
 import crypto from 'crypto-js';
 import Lottie from 'react-lottie';
 import * as loading from '../../../loading-animation.json';
 import './TodayLuck.css';
 import { Helmet } from 'react-helmet';
+import CopyToClipboard from 'react-copy-to-clipboard';
+import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
+import BACKBTN from '../../../api/DefaultImg/result-to-home-btn.png';
 
 const defaultOptions = {
     loop: true,
@@ -23,6 +27,14 @@ const TodayLuck = (props) => {
     const dateFormat = 'YYYYMMDD';
     const [day, setDay] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+
+    const _eventSenderGA = (category, action, label) => {
+        ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+    };
 
     const onSubmitClick = useCallback(async () => {
         if(!day) {
@@ -41,6 +53,16 @@ const TodayLuck = (props) => {
     const onChange = useCallback((date) => {
         setDay(moment(date).format(dateFormat));
     }, [dateFormat]);
+
+    const onBacktoHomeButtonClick = useCallback(() => {
+        _eventSenderGA("Paging", "Click Back-to-main Button", "intro page");
+        props.history.push(`/`);
+    }, [props]);
+
+    const onShareButtonClick = useCallback(() => {
+        alert("링크가 복사됐습니다!");
+        _eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
+    }, []);
 
     if(isLoading) {
         return (
@@ -80,6 +102,22 @@ const TodayLuck = (props) => {
                     <div className='todayLuck-intro-btn-div' onClick={onSubmitClick}>
                         <img className='todayLuck-intro-btn' src="https://images.ktestone.com/meta/saju/todayLuck-intro-submit-btn.jpg" alt="todayLuck-intro-btn"/>
                     </div>
+                </div>
+                <div className="test-intro-with-friend">
+                    <CopyToClipboard text={'https://ktestone.com/kapable.github.io/lifetimeSaju/'}>
+                        <img
+                            src={COPYBTN}
+                            className="test-intro-with-friend-img"
+                            onClick={onShareButtonClick}
+                            alt="테스트 링크 복사"/>
+                    </CopyToClipboard>
+                </div>
+                <div className="test-intro-to-main">
+                    <img
+                        className="test-intro-to-main-img"
+                        src={BACKBTN}
+                        onClick={onBacktoHomeButtonClick}
+                        alt="다른 테스트 하러 뒤로가기"/>
                 </div>
             </Fragment>
         );

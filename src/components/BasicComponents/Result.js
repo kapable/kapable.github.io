@@ -498,7 +498,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (mbtiFeaturesList.includes(this.state.current_test)) {
-            const rederTestList = ["bondee", "loveFlame", "quokka", "travelCarrier", "readyToBone", "hallInTheWall", "instaStory",];
+            const rederTestList = ["lifetimeSaju", "bondee", "loveFlame", "quokka", "travelCarrier", "readyToBone", "hallInTheWall", "instaStory",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -714,7 +714,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["mbtiFeatures", "bondee", "loveFlame", "quokka", "travelCarrier", "readyToBone", "hallInTheWall", "instaStory"];
+            const rederTestList = ["lifetimeSaju", "mbtiFeatures", "bondee", "loveFlame", "quokka", "travelCarrier", "readyToBone", "hallInTheWall", "instaStory"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
