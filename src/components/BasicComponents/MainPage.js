@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react';
 import { Link, useLocation, withRouter } from 'react-router-dom';
-import MAINHEADER from '../../api/DefaultImg/main-header-2023.png';
 import OhterLangIconsMain from '../SubComponents/OhterLangIconsMain';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 import JELLINGBANNERENG from '../../api/DefaultImg/go-to-jelling-eng.png';
@@ -19,11 +18,11 @@ function MainPage(props) {
             {/* Language Converting */}
             <OhterLangIconsMain />
             <div>
-                <img className='main-header' src={MAINHEADER} alt="K-test"/>
+                <img className='main-header' src={(props.lang === 'Eng' || props.lang === 'JP' || props.lang === 'CN') ? `https://images.ktestone.com/default/main-header-2023${props.lang}.png` : `https://images.ktestone.com/default/main-header-2023${(props.lang === 'Kor' || !props.lang) ? '' : 'Eng'}.png`} alt="K-test"/>
             </div>
 
             {/* Category Converting */}
-            {props?.lang === 'Kor' ? (<CategoryIconsMain lang={props?.lang} setCurrentCategory={setCurrentCategory} />) : null}
+            <CategoryIconsMain lang={props?.lang} setCurrentCategory={setCurrentCategory} />
 
             <AdsenseAdvertiser
                 client="ca-pub-2382342018701919"
