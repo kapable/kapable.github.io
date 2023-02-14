@@ -359,7 +359,7 @@ const TESTS = [
             thumbImage:"https://images.ktestone.com/main-thumbnail/mbtiFeatures-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
             lang:"Kor",
-            category: "characteristic"
+            category: "love"
         },
         questions:[
             {
