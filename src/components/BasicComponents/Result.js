@@ -1019,6 +1019,42 @@ class Result extends Component {
                         </div>
                     </Fragment>
                 )
+            } else if(this.state.current_test === "mbtiFeatures") {
+                return (
+                    <Fragment>
+                        <Helmet>
+                            {/* <!-- Primary Meta Tags --> */}
+                            <title>{test_current + ' ' + this.state.current_result} 특징-케이테스트</title>
+                            <meta name="title" content={test_current + ' ' + this.state.current_result} 특징-케이테스트/>
+                            <meta name="description" content={this.state.current_result + ':' + desc_test_current} data-react-helmet="true"/>
+                            <link rel="main-url" href={this.state.sharable_url}/>
+    
+                            {/* <!-- Open Graph / Facebook --> */}
+                            <meta property="og:type" content="website"/>
+                            <meta property="og:url" content={this.state.sharable_url}/>
+                            <meta property="og:title" content={test_current + ' ' + this.state.current_result} 특징-케이테스트/>
+                            <meta property="og:description" content={this.state.current_result + ':' + desc_test_current}/>
+                            <meta property="og:image" content={img_src}/>
+                            <meta property="og:image:alt" content={this.state.current_result} />
+    
+                            {/* <!-- Twitter --> */}
+                            <meta property="twitter:card" content="summary_large_image"/>
+                            <meta property="twitter:url" content={this.state.sharable_url}/>
+                            <meta property="twitter:title" content={test_current + ' ' + this.state.current_result} 특징-케이테스트/>
+                            <meta property="twitter:description" content={this.state.current_result + ':' + desc_test_current}/>
+                            <meta property="twitter:image" content={img_src}/>
+                            <meta property="twitter:image:alt" content={this.state.current_result} />
+                        </Helmet>
+                        {this.state.isOpened || this.state.coupangCookies
+                        ? (<img src={img_src} className='result-img' alt={final_type} />)
+                        : (<>
+                            <div className='article-adCover-div'>
+                                <img src={img_src} className='result-img' alt={final_type} />
+                            </div>
+                            {this.affiliateRenderer()}
+                        </>)}
+                    </Fragment>
+                )
             } else {
                 return (
                     <Fragment>

@@ -26,7 +26,7 @@ const TESTS = [
     // mbtiFeatures
     {
         info : {
-            mainTitle:"MBTI 특징 테스트 - 연애편",
+            mainTitle:"MBTI 특징 테스트 연애편",
             subTitle:"나의 연애 특징과 연애력 지수는? | MBTI 테스트 | 연애력 테스트",
             mainUrl:"mbtiFeatures",
             scoreType:"typeCountingMBTI",
@@ -235,35 +235,35 @@ const TESTS = [
                 type: "ESTJ",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "chfhr",
+                query: "ESTJ",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/ESTJ.jpg'
             },
             {
                 type: "ESTP",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "vkfks",
+                query: "ESTP",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/ESTP.jpg'
             },
             {
                 type: "ESFJ",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "gksmf",
+                query: "ESFJ",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/ESFJ.jpg'
             },
             {
                 type: "ESFP",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "ghkfqkfgks",
+                query: "ESFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/ESFP.jpg'
             },
             {
                 type: "ENTJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "wlsghl",
+                query: "ENTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/ENTJ.jpg'
             },
@@ -271,42 +271,42 @@ const TESTS = [
                 type: "ENTP",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "Qkfrks",
+                query: "ENTP",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/ENTP.jpg'
             },
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "qhfk",
+                query: "ENFJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/ENFJ.jpg'
             },
             {
                 type: "ENFP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "ska",
+                query: "ENFP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/ENFP.jpg'
             },
             {
                 type: "ISTJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "ghl",
+                query: "ISTJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/ISTJ.jpg'
             },
             {
                 type: "ISTP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "shfks",
+                query: "ISTP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/ISTP.jpg'
             },
             {
                 type: "ISFJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "wnghkd",
+                query: "ISFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/ISFJ.jpg'
             },
@@ -314,35 +314,35 @@ const TESTS = [
                 type: "ISFP",
                 desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
                 `,
-                query: "qpdlwl",
+                query: "ISFP",
                 score_range:range(26),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/ISFP.jpg'
             },
             {
                 type: "INTJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "cjdfhr",
+                query: "INTJ",
                 score_range:range(26, 51),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/INTJ.jpg'
             },
             {
                 type: "INTP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "dusqnsghd",
+                query: "INTP",
                 score_range:range(51, 75),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/INTP.jpg'
             },
             {
                 type: "INFJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "dusen",
+                query: "INFJ",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/INFJ.jpg'
             },
             {
                 type: "INFP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "gkdis",
+                query: "INFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/mbtiFeatures/INFP.jpg'
             },
