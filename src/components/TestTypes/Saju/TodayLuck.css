@@ -59,10 +59,6 @@
     background-color: white;
 }
 
-.ant-picker-input > input {
-    color: white;
-}
-
 @media (min-width: 360px) {
     .todayLuck-intro-date-picker-div {
         top: 29rem;
