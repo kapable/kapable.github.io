@@ -1,5 +1,5 @@
 import React, { Fragment, useCallback, useState } from 'react';
-import { DatePicker, TimePicker } from 'antd';
+import { DatePicker, Select, Radio } from 'antd';
 import moment from 'moment';
 import ReactGA from 'react-ga';
 import 'moment/locale/ko';
@@ -25,11 +25,8 @@ const defaultOptions = {
 
 const LifetimeSaju = (props) => {
     const dateFormat = 'YYYYMMDD';
-    const timeFormat = 'HH';
     const [day, setDay] = useState("");
-    const [time, setTime] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-    const [isTimePickerOpen, setIsTimePickerOpen] = useState(false);
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
@@ -43,24 +40,17 @@ const LifetimeSaju = (props) => {
         if(!day) {
             return alert('날짜를 입력해주세요!');
         };
-        if(!time) {
-            return alert('시간을 입력해주세요!');
-        };
         const crypto_query_date = encodeURIComponent(crypto.AES.encrypt(JSON.stringify(day), 'ktestsaju').toString());
         
         setIsLoading(true);
         setTimeout(() => {
             props.history.push(`/lifetimeSaju/${crypto_query_date}/`)
         }, "2500");
-    }, [day, time, props]);
+    }, [day, props]);
 
     const onChange = useCallback((date) => {
         setDay(moment(date).format(dateFormat));
     }, [dateFormat]);
-
-    const onTimeChange = useCallback((time) => {
-        setTime(moment(time, timeFormat));
-    }, [timeFormat]);
 
     const onBacktoHomeButtonClick = useCallback(() => {
         _eventSenderGA("Paging", "Click Back-to-main Button", "intro page");
@@ -103,15 +93,21 @@ const LifetimeSaju = (props) => {
                     <meta property="twitter:image:alt" content="사주 총평 당신의 사주는? - 케이테스트 | 사주 테스트" />
                 </Helmet>
                 <div className='lifetime-saju-intro-img-div'>
-                    <img className='lifetime-saju-intro-bg' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-input.jpg" alt="lifetime-saju-intro-input"/>
+                    <img className='lifetime-saju-intro-bg' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-input-bg.jpg" alt="lifetime-saju-intro-input"/>
                     <div className='lifetime-saju-intro-date-picker-div'>
                         <DatePicker className='lifetime-saju-intro-date-picker' onChange={onChange} allowClear locale={locale}/>
                     </div>
                     <div className='lifetime-saju-intro-time-picker-div'>
-                        <TimePicker className='lifetime-saju-intro-time-picker'
-                            onClick={() => setIsTimePickerOpen(true)} open={isTimePickerOpen}
-                            onSelect={(e) => {setTime(e);setIsTimePickerOpen(false)}} allowClear={false}
-                            format={timeFormat} onChange={onTimeChange} value={time} locale={locale} showNow={false} />
+                        <Select className='lifetime-saju-intro-time-picker'
+                            defaultValue={'시간 모름'}
+                            options={["시간 모름", ...Array(25).keys()].map((num) => ({ value: num, label: num }))}
+                        />
+                    </div>
+                    <div className='lifetime-saju-intro-gender-picker-div'>
+                        <Radio.Group className='lifetime-saju-intro-gender-picker' defaultValue="female" buttonStyle='solid'>
+                            <Radio.Button style={{width: "4.05rem"}} value={"female"}>여성</Radio.Button>
+                            <Radio.Button style={{width: "4.05rem"}} value={"male"}>남성</Radio.Button>
+                        </Radio.Group>
                     </div>
                     <div className='lifetime-saju-intro-btn-div' onClick={onSubmitClick}>
                         <img className='lifetime-saju-intro-btn' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-submit-btn.jpg" alt="lifetime-saju-intro-btn"/>

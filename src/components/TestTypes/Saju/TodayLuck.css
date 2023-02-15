@@ -8,7 +8,7 @@
     max-width: 35rem;
 }
 
-.todayLuck-intro-date-picker-div, .lifetime-saju-intro-date-picker-div, .lifetime-saju-intro-time-picker-div {
+.todayLuck-intro-date-picker-div, .lifetime-saju-intro-date-picker-div, .lifetime-saju-intro-time-picker-div, .lifetime-saju-intro-gender-picker-div {
     position: absolute;
     top: 22rem;
     width: 100%;
@@ -53,9 +53,10 @@
     top: 52rem;
 }
 
-.lifetime-saju-intro-date-picker, .lifetime-saju-intro-time-picker {
+.lifetime-saju-intro-date-picker, .lifetime-saju-intro-time-picker, .lifetime-saju-intro-gender-picker {
+    width: 8.5rem;
     border: solid #A99893 3px;
-    background-color: #2F3131;
+    background-color: white;
 }
 
 .ant-picker-input > input {
@@ -77,8 +78,11 @@
     .lifetime-saju-intro-time-picker-div {
         top: 30rem;
     }
-    .lifetime-saju-intro-btn {
+    .lifetime-saju-intro-gender-picker-div {
         top: 32.5rem;
+    }
+    .lifetime-saju-intro-btn {
+        top: 35rem;
     }
 }
 @media (min-width: 370px) {
@@ -95,8 +99,11 @@
     .lifetime-saju-intro-time-picker-div {
         top: 31rem;
     }
+    .lifetime-saju-intro-gender-picker-div {
+        top: 33.7rem;
+    }
     .lifetime-saju-intro-btn {
-        top: 34rem;
+        top: 36.5rem;
     }
 }
 @media (min-width: 390px) {
@@ -113,8 +120,11 @@
     .lifetime-saju-intro-time-picker-div {
         top: 32.2rem;
     }
+    .lifetime-saju-intro-gender-picker-div {
+        top: 34.9rem;
+    }
     .lifetime-saju-intro-btn {
-        top: 35rem;
+        top: 38rem;
     }
 }
 @media (min-width: 410px) {
@@ -131,8 +141,11 @@
     .lifetime-saju-intro-time-picker-div {
         top: 34.5rem;
     }
-    .lifetime-saju-intro-btn {
+    .lifetime-saju-intro-gender-picker-div {
         top: 37.5rem;
+    }
+    .lifetime-saju-intro-btn {
+        top: 40.5rem;
     }
 }
 @media (min-width: 540px) {
@@ -149,8 +162,11 @@
     .lifetime-saju-intro-time-picker-div {
         top: 45rem;
     }
+    .lifetime-saju-intro-gender-picker-div {
+        top: 48rem;
+    }
     .lifetime-saju-intro-btn {
-        top: 50rem;
+        top: 53rem;
     }
 }
 @media (min-width: 768px) {
@@ -171,7 +187,10 @@
     .lifetime-saju-intro-time-picker-div {
         top: 47rem;
     }
+    .lifetime-saju-intro-gender-picker-div {
+        top: 50rem;
+    }
     .lifetime-saju-intro-btn {
-        top: 52rem;
+        top: 55rem;
     }
 }
