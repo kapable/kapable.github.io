@@ -40,8 +40,8 @@ const LifetimeSaju = (props) => {
         if(!day) {
             return alert('날짜를 입력해주세요!');
         };
+        _eventSenderGA("Paging", "Click SAJU submit Button", "intro page");
         const crypto_query_date = encodeURIComponent(crypto.AES.encrypt(JSON.stringify(day), 'ktestsaju').toString());
-        
         setIsLoading(true);
         setTimeout(() => {
             props.history.push(`/lifetimeSaju/${crypto_query_date}/`)

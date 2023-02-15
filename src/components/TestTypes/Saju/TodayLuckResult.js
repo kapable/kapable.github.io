@@ -16,7 +16,7 @@ const TodayLuckResult = (props) => {
     const [result, setResult] = useState({});
     const [isOpened, setIsOpened] = useState(false);
     const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
-    const coupangLink = "https://link.coupang.com/a/KgpKa";
+    const coupangLink = "https://link.coupang.com/a/PkXLK";
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
@@ -30,7 +30,7 @@ const TodayLuckResult = (props) => {
         const cookieAges = 60*60*12;
         setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
         setIsOpened(true);
-        _eventSenderGA("Opening", "Click go-to-Coupang Button", "result page");
+        _eventSenderGA("Paging", "Click go-to-Coupang Button(TODAY LUCK)", "result page");
     }, [setCoupangCookie]);
 
     useEffect(() => {
@@ -100,6 +100,7 @@ const TodayLuckResult = (props) => {
                                 </button>
                             </a>
                         </div>
+                        <p className='result-coupang-comment' style={{marginTop: "1rem"}}>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
                     </div>
                 </Fragment>
             }

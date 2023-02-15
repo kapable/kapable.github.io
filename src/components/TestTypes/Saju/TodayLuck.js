@@ -40,6 +40,7 @@ const TodayLuck = (props) => {
         if(!day) {
             return alert('날짜를 입력해주세요!');
         };
+        _eventSenderGA("Paging", "Click TODAY LUCK submit Button", "intro page");
         const today_date = moment().format(dateFormat);
         const query_date = [today_date, day].join('-');
         const crypto_query_date = encodeURIComponent(crypto.AES.encrypt(JSON.stringify(query_date), 'ktestsaju').toString());
