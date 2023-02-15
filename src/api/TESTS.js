@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // bondeeCN
+    {
+        info : {
+            mainTitle:"Bondee性格测试",
+            subTitle:"通过Bondee人物来看我的性格 | bondee test",
+            mainUrl:"bondeeCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/bondeeCN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/bondeeCN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"CN",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '和朋友一起散步时遇到朋友认识的人的话我会',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '发挥自己的亲和力，一起聊天'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '简短地问候，然后在朋友身边听他们的对话'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "我更偏爱的沟通方式是？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "直接见面或打电话沟通"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "使用kakao短信等软件沟通"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "好不容易能休息了！设置心情状态时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `好不容易到了休息的日子，想和我玩的请举手！`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `自我充电中，联系不到我`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "游戏中装潢家园的话我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `以我之前想要的装修风格现实地装潢家园`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `现实生活中不可能的梦幻感觉来装潢`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "游戏中打造角色时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "赋有我独特风格的现实版角色"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `游戏中像主人公一般！既勇敢又梦幻的角色`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "朋友说虚拟现实游戏过于现实，感到很害怕时，我的反应是？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `只是游戏而已嘛`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `未来也许会迎来无法分离游戏与现实的世界呢`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `发表PT之后朋友说“感觉你好像没有很努力，看来你很有才呀”时我会？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "嘿嘿…！果然我很有才"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "我明明很努力地准备了，为什么会这么想呢？TT"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "我给对方表示自己关注的方式是？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `经常提问，主动帮助对方`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "迎合对方，倾听对方的话语"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `情况极其恶劣的环境下成功完成某事时我想听到的表扬是？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "哇，你居然能成功？到底是怎么做到的呀？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "哇，果然不出所料~肯定很累，辛苦啦"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "游戏中装修家园时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `提前计划好家具、色调、氛围等等，然后再开始装修`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `展开所有可能性，随意装修家园`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "突然想吃某个食物的时候我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "认真地考虑，不属于消费计划中，所以尽量忍一忍"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "想吃什么当然要吃！立刻点餐"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '准备和朋友们的约会时我会？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "经常准备好了以后还有很多剩余时间"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "经常过了约会时间也还在准备"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/bondeeCN/INFP.jpg'
+            },
+        ]
+    },
     // bondeeEng
     {
         info : {
