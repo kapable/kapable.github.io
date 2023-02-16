@@ -32,7 +32,7 @@ function MainPage(props) {
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
             />
 
-            {/* TodayLuck */}
+            {/* Lifetime SAJU */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
                 <Link to='/lifetimeSaju/' className="main-link-block" key="lifetimeSaju-banner">
                     <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/lifetimeSaju-thumb.png`} alt="lifetimeSaju" />

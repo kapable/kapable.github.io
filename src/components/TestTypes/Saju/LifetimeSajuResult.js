@@ -15,7 +15,7 @@ const LifetimeSajuResult = (props) => {
     const [result, setResult] = useState({});
     const [isOpened, setIsOpened] = useState(false);
     const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
-    const coupangLink = "https://link.coupang.com/a/PkXLK";
+    const coupangLink = "https://link.coupang.com/a/PqWGr";
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
