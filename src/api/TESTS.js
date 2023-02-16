@@ -23,6 +23,309 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // mzScore
+    {
+        info : {
+            mainTitle:"MZ 수치 테스트 | 당신의 MZ력은?",
+            subTitle:"캐릭터로 보는 나의 MZ 수치는?",
+            mainUrl:"mzScore",
+            scoreType:"numberScoring",
+            mainImage:"https://images.ktestone.com/introImages/mzScore-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/mzScore-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "etc"
+        },
+        questions:[
+            {
+                question: `인터뷰에서 중꺾마(중요한 것은 꺾이지 않는 마음)를 처음으로 말 한 사람은?`,
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '국가대표 축구선수 조규성'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '롤 프로게이머 이상혁(Faker)'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '롤 프로게이머 김혁규(Deft)'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '국가대표 축구선수 나상호'
+                    },
+                ],
+            },
+            {
+                question: `‘모에모에 큥’과 연관된 단어와 인물은?`,
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '렌고쿠 쿄주로 (귀멸의 칼날) – 우마이! (おいしい)'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '토아 (유투버) - 오하요우데얀스 (おはようでやんす)'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '호스트 다나카상 (유투버) - 오이시쿠나레 (美味しくなれ)'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '니코 (러브 라이브!) – 니코니코니! (にっこにっこに)'
+                    },
+                ],
+            },
+            {
+                question: `신조어 ‘스불재’는 무엇의 줄임 말일까?`,
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '스타성 불타는 재능'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '스케줄 불만족시 재수정'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '스스로 불러온 재앙'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '스근하게 불맛 내는 재료'
+                    },
+                ],
+            },
+            {
+                question: `“내일 봬요 누나” (내봬누)가 나온 연애 프로그램은?`,
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '하트시그널 시즌3'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '나는솔로'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '환승연애 시즌2'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '솔로지옥 시즌2'
+                    },
+                ],
+            },
+            {
+                question: `신조어 “쿠쿠루삥뽕”을 사용할 수 있는 상황은?`,
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '연인을 그윽하게 바라보는 상황'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '친구가 연인과 이별한 상황'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '친구와 내기에서 이긴 상황'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '맛있는 음식이 눈앞에 있는 상황'
+                    },
+                ],
+            },
+            {
+                question: `신조어 ‘저메추’와 관련된 단어는?`,
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '목걸이'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '세탁기'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '떡볶이'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '가을'
+                    },
+                ],
+            },
+            {
+                question: `열 받다, 킹받네, KG받네 와 같은 뜻으로 사용하는 신조어는?`,
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '쿙받네'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '킹G받네'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '왕위 계승'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: 'H워얼V'
+                    },
+                ],
+            },
+            {
+                question: `“하남자 특”을 유행시킨 유투버는?`,
+                answers:[
+                    {
+                        type: "",
+                        score: 1,
+                        content: '침착맨'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '다나카상'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '숏박스'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '피식대학'
+                    },
+                ],
+            },
+            {
+                question: `줄임말 신조어 “오뱅알”의 뜻은?`,
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '오일 뱅크 알바'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '오늘의 방송 알림'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '오늘 방송 알찼다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '오늘의 비행기 특가 알림'
+                    },
+                ],
+            },
+            {
+                question: `다음 중 ‘예상치 못한 어려운 일도 긍정적으로 보자’는 의미의 신조어는?`,
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '드가자!'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '이겨내!'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '오히려 좋아'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '오케이 가자!'
+                    },
+                ],
+            },
+        ],
+        results:[
+            {
+                type: "vldrjvmflstptm",
+                desc: ``,
+                query: "vldrjvmflstptm",
+                score_range:range(3),
+                img_src:'https://images.ktestone.com/resultImages/mzScore/vldrjvmflstptm.jpg'
+            },
+            {
+                type: "wjfadmsRhseo",
+                desc: ``,
+                query: "wjfadmsRhseo",
+                score_range:range(3, 6),
+                img_src:'https://images.ktestone.com/resultImages/mzScore/wjfadmsRhseo.jpg'
+            },
+            {
+                type: "shfurgksms",
+                desc: ``,
+                query: "shfurgksms",
+                score_range:range(5, 7),
+                img_src:'https://images.ktestone.com/resultImages/mzScore/shfurgksms.jpg'
+            },
+            {
+                type: "qht",
+                desc: ``,
+                query: "qht",
+                score_range:range(7, 9),
+                img_src:'https://images.ktestone.com/resultImages/mzScore/qht.jpg'
+            },
+            {
+                type: "dnwnchlrkd",
+                desc: ``,
+                query: "dnwnchlrkd",
+                score_range:range(9, 11),
+                img_src:'https://images.ktestone.com/resultImages/mzScore/dnwnchlrkd.jpg'
+            },
+        ]
+    },
     // bondeeCN
     {
         info : {
