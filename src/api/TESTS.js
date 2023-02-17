@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // mbtiFeaturesEng
+    {
+        info : {
+            mainTitle:"MBTI Characteristics Test_Dating",
+            subTitle:"What are my love characteristics and love index? | MBTI Test",
+            mainUrl:"mbtiFeaturesEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/mbtiFeaturesEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/mbtiFeaturesEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"Eng",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What can be your reaction after having fun with your lover on the weekend?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'This weekend has been really great! I was completely refreshed!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'This weekend has been also fun! I will rest at home now!'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "If you attended in a crowded gathering, what would you do?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I would be enthusiastic and express my opinion confidently"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I would quietly sympathize with the other person's words"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Which date do you prefer?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `An exciting outdoor date`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `A quiet indoor date`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What would you do if you lost contact with your lover while out drinking with other friends?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `How dare you not answer me!`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Are you sure you don't hang out with other girls?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "The day before you go on a trip with your lover, what will you do?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I want to go quickly so I go to bed early"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I fall asleep imagining the trip`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Which conversation do you prefer?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `A conversation about current trend or interests`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Future-oriented conversations that require imagination`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What do you do when you are in a conflict with your lover?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "It's frustrating, but I speak calmly to resolve the conflict rationally"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I have a lot to say, but I can't come to my senses because my heart is hurt"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What would you do if your lover suddenly confessed his/her troubles with a serious face?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I would listen to the end and try to solve the problem`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I would empathize with my lover and listen sincerely"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What would you do if your lover dropped a treasured item and broke it?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "How did you drop it? Oh, sorry. Why didn’t you be more careful?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Oh, sorry. It's something you cherished"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When you date, how do you do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I show up ahead of time`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `I am often late for appointments`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Before dating your lover, what do you prepare?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I decide in detail where and what we will do"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I only decide the place and time"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'If you were to write a letter to your lover, what would you write?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I think about what to write in my head and write it down"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I sit down and write whatever comes to mind on the spot"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesEng/INFP.jpg'
+            },
+        ]
+    },
     // mzScore
     {
         info : {
