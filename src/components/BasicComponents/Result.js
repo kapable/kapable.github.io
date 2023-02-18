@@ -352,7 +352,7 @@ class Result extends Component {
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let mbtiFeaturesEngList = ["mbtiFeaturesEng"];
         let loveCharacterList = ["loveCharacter", "loveCharacterFemale", "loveCharacterMale"];
-        let speechHabitList = ["speechHabit"];
+        let newYearSemesterList = ["newYearSemester"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -497,8 +497,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (speechHabitList.includes(this.state.current_test)) {
-            const rederTestList = ["mzScore", "lifetimeSaju", "bondee", "loveFlame", "quokka", "travelCarrier",];
+        } else if (newYearSemesterList.includes(this.state.current_test)) {
+            const rederTestList = ["speechHabit", "mzScore", "lifetimeSaju", "bondee", "loveFlame", "quokka", "travelCarrier",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -714,7 +714,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["speechHabit", "mzScore", "lifetimeSaju", "mbtiFeatures", "bondee",];
+            const rederTestList = ["newYearSemester", "speechHabit", "mzScore", "lifetimeSaju", "mbtiFeatures", "bondee",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (

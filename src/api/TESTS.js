@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // newYearSemester
+    {
+        info : {
+            mainTitle:"자주 하는 말 테스트",
+            subTitle:"내가 자주 하는 말은 어떤 말 일까?",
+            mainUrl:"newYearSemester",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/newYearSemester-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/newYearSemester-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '드디어 새 학년 새 학기가 시작된다!! 반 배정을 봤는데 헉 친한 친구가 없어…!!',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '떨리지만 괜찮아. 금방 친구가 생기겠지 '
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '벌써 1년이 걱정된다ㅠㅠ'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "긴장되고 설레는 마음으로 들어간 교실! 어디에 앉을까?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "친해지고 싶게 생긴 친구 옆자리에 슬쩍~"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "조용하고 구석진 벽쪽자리 찜"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "옆자리에 앉은 짝이랑 친해지고 싶은데…",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `내가 먼저 말을 걸어본다.`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `짝이 말 걸어 줄 때까지 기다린다.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "두근거리는 등교 전날에 내가 한 생각은",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `내일 수업 안 하겠지?`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `내일 수업을 제대로 하려나? 만약에 안 한다고 그러면 바로 집에 가야 되나 아니면 새로 사귄 친구랑 놀다 가는 게 좋을까`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "새 학기 첫날인데 1교시부터 수업을 한다고 한다!!",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "아 미쳤나 봐 하기 싫어"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `도대체 왜 첫날부터 수업을 하지..? 굳이 벌써부터 해야 되나? 내용이 머리에 들어올까?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "이상하게 생긴 반찬이 급식으로 나왔다. 엑…뭐야 이게…? 괴식아닌가…?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `안 먹을래`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `근데 일단 도전!! 맛있을 수도 있잖아`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `옆 짝꿍이 종이를 자르다가 손이 베였다!!`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "으악!!! 휴지 어딨어?! 야 보건실 가자!!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "악!!! 아프겠다!!! 괜찮아?? 어떡해!!!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "쉬는 시간. 아직도 새로운 반이 익숙해지지 않아서 옆반에 있는 친한 친구를 찾아갔다. 어떤 말이 더 듣고 싶어?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `나 그 반에 같은 학원 다니는 친구 있는데 걔 소개 받을래? 너랑 성격 잘 맞아서 금방 친해질 듯`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "나도 적응이 안돼ㅠㅠ 그래도 우리 힘내자. 비록 반이 떨어졌지만 너랑 나는 계속 친하게 지내는 거야!!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `주변에 앉은 친구들이랑 수다를 떨게 됐다`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "그거 먹어 봤어? 뭐 좋아해? 질문을 하는 나"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "우와!! 맞아맞아!! 리액션을 하는 나"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "짝꿍이랑 학교 끝나고 분식집에 가기로 했다",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `참새분식은 좀 달달한 편이고 까치분식은 매운편인데 어디가 좋아? 혹시 학원가? 몇 시까지 가야 돼? `
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `맛있겠다! 뭐 먹을지 메뉴는 가서 정하자~~`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "오늘 수업 끝!! 근데 갑자기 짝꿍이 오늘은 분식 못 먹을 것 같다고 다음에 먹자고 한다.",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "왜, 무슨 일 있어? 아까는 된다며…"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "아쉽다 다음엔 꼭 같이 먹자!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '집에 와서 옆반 친구랑 통화를 했다. 친구가 오늘 친구 좀 사귀었냐고 물었다',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "내일은 애들 줄 간식이라도 가져갈까 계획 중이야"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "몰라… 뭐 어떻게든 되겠지"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/newYearSemester/INFP.jpg'
+            },
+        ]
+    },
     // speechHabit
     {
         info : {
