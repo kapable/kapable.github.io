@@ -54,7 +54,7 @@ class Result extends Component {
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
             isOpened: false,
-            originAdProb: 0.6 < Math.random(),
+            originAdProb: 0.65 < Math.random(),
             adProb: 1.1 >= Math.random(),
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
@@ -786,6 +786,7 @@ class Result extends Component {
             { test: "princess", coupangLink: "https://link.coupang.com/a/MqiqA" },
             { test: "hallInTheWall", coupangLink: "https://link.coupang.com/a/KvzD5" },
             { test: "quokka", coupangLink: "https://link.coupang.com/a/KvzD5" },
+            { test: "newYearSemester", coupangLink: "https://link.coupang.com/a/MqiqA" },
         ];
         const testsArray = othersLink.map(({ test }) => test);
         return (

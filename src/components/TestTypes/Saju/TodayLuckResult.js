@@ -16,7 +16,8 @@ const TodayLuckResult = (props) => {
     const [result, setResult] = useState({});
     const [isOpened, setIsOpened] = useState(false);
     const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
-    const coupangLink = "https://link.coupang.com/a/PqWGr";
+    const originAdProb = 0.5 < Math.random();
+    const coupangLink = originAdProb ? "https://link.coupang.com/a/PqWGr" : "https://link.coupang.com/a/PC8eL" ;
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
