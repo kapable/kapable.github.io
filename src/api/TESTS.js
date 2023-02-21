@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // thatDiary
+    {
+        info : {
+            mainTitle:"그 시절 일기장 테스트",
+            subTitle:"초등학생 시절 나는 어떤 아이였을까?",
+            mainUrl:"thatDiary",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/thatDiary-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/thatDiary-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '오늘은 학교에 전학생이 왔다! 전학생이 내 옆자리에 앉는다면?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '오 새로운 친구 생겼잖아! 어디서 왔어? 너 딱지치기 잘해??'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '두근두근 어떡하지 말을 한번 걸어볼까? 어색할 것 같은데..'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "짝꿍이 된 전학생이 교과서가 없어 곤란해 보인다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "교과서 안 가져왔구나?? 말을 하지 그랬어~ 내꺼 보여줄게!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "교과서를 옆으로 슬금슬금 밀어 같이 보자고 한다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "수업 후 쉬는 시간 나의 모습은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `친구들과 우당탕탕 모여 말뚝박기나 공기놀이를 한다`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `자리에 앉아 짝꿍과 실뜨기 놀이를 한다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "부모님께서 전학 온 친구는 어떻냐고 묻는다면 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `키가 크고 뽀글 머리였어 근데 오늘 교과서를 안 가져왔던데?`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `되게 착한 것 같아! 오늘은 나한테 지우개도 빌려줬다?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "학교에서 색칠 수업을 한다면 어느 쪽이 더 하고 싶을까?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "그려진 그림에 색칠하는 수업"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `원하는 그림을 직접 그려서 색칠하는 수업`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "동생이 학교 앞에서 파는 병아리를 사왔다면 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `병아리 귀엽네 잘 키워 봐~`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `엄마한테 혼날 거 같은데.. 근데 얘네 아무래도 배고픈가 봐 뭘 줘야 하지..? 이러다가 커서 닭 되는 거 아냐??`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `찰흙으로 만들기 수업 중 짝꿍이 망쳤다며 울고 있다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "왜 울어~? 시간 많은데 천천히 다시 하면 되지"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "울지마ㅠ 괜찮아 다시 해보자! 내가 도와줄게!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "짝꿍이 받아쓰기 시험을 잘 봐서 칭찬을 받았다고 한다 나의 반응은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `몇 점 맞았는데? 오 나보다 잘 봤네?`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "우와 좋겠다!! 나도 잘 봐서 칭찬받고 싶다~"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `수련회를 가는데 같이 다니기로 한 친구가 못 간다고 하면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "왜 못 가? 그럼 다른 친구한테 같이 다니자고 물어봐야겠다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "절대 절대 못 가는 거야? 난 너랑 같이 가고 싶었는데 아쉽다ㅠ"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "내일 수업을 위해 선생님이 준비물을 가져오라고 한다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `하교 후 준비물을 미리 준비해 가방에 챙겨 둔다`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `완전 까먹고 있다가 학교 가는 길에 생각나서 부랴부랴 산다`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "심부름 가는 길에 재밌어 보이는 오락기를 발견한다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "심부름을 후다닥 먼저 하고 발견했던 오락을 하러 간다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "발견 즉시 앉아서 오락을 하다가 나중에 심부름을 마저 한다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '오늘은 방학 마지막 날! 방학 숙제가 일기장 쓰기였다면 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "난 매일매일 일기를 써놨지~ 방학 숙제는 오늘 거만 쓰면 끝!!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "아 맞다 깜빡했네 엄청 밀려 있는데 언제 다 쓰지 비상이다!"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/thatDiary/INFP.jpg'
+            },
+        ]
+    },
     // newYearSemester
     {
         info : {
