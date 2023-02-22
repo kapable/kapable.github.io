@@ -54,7 +54,7 @@ class Result extends Component {
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
             isOpened: false,
-            originAdProb: 0.65 < Math.random(),
+            originAdProb: 0.6 < Math.random(),
             adProb: 1.1 >= Math.random(),
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
@@ -352,7 +352,7 @@ class Result extends Component {
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let mbtiFeaturesEngList = ["mbtiFeaturesEng"];
         let loveCharacterList = ["loveCharacter", "loveCharacterFemale", "loveCharacterMale"];
-        let thatDiaryList = ["thatDiary"];
+        let loveCellList = ["loveCell"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -497,8 +497,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (thatDiaryList.includes(this.state.current_test)) {
-            const rederTestList = ["newYearSemester", "speechHabit", "mzScore", "lifetimeSaju", "bondee", "loveFlame", "quokka", "travelCarrier",];
+        } else if (loveCellList.includes(this.state.current_test)) {
+            const rederTestList = ["thatDiary", "newYearSemester", "speechHabit", "mzScore", "lifetimeSaju", "bondee",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -714,7 +714,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["thatDiary", "newYearSemester", "speechHabit", "mzScore", "lifetimeSaju", "mbtiFeatures", "bondee",];
+            const rederTestList = ["loveCell", "thatDiary", "newYearSemester", "speechHabit", "mzScore", "lifetimeSaju",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
