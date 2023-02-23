@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // speechHabitCN
+    {
+        info : {
+            mainTitle:"经常说的话测试",
+            subTitle:"我经常说什么话呢？",
+            mainUrl:"speechHabitCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/speechHabitCN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/speechHabitCN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"CN",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '和朋友玩的时候朋友突然问能不能叫别人一起来时我会？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '不介意一起玩！'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '这么突然？有点…'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "好不容易休假了，但朋友突然叫我出门时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "反正也没事~好呀！准备出门！"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "这么突然？今天我有事，不好意思.."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "参加人数较多的聚会时我不喜欢的氛围是？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `所有人都处于尴尬而且静默的状态`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `备受大家的瞩目，被问很多问题的情况`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "晚上睡觉时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `睡觉的时候什么也不想，只集中于睡眠`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `思绪连篇，很晚入睡`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "好久没看过这么有趣的电影了，电影的结局是开放式的话我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "好不容易看到这么有趣的电影，但结局居然是开放式的，感到好可惜"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `开放式的结局让我不由地联想起来`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "朋友突然玩起平衡问答游戏，让我从“潜水分手 VS 换乘分手”中选一时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `휴.. 꿈이네~`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `“一边说“要选你自己选吧”一边心想为什么会问这种没意思的问题`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `约会迟到很久的朋友一到就先解释自己迟到的原因时我会？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "迟到的原因挺有说服力的，没办法啦（慢慢消气）"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "不应该先道歉吗？（更生气）"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "给对方讲解我熟知的知识时我会？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `准确详细地按照字典里的意思和含义来讲解`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "尽量把意思和含义变通成让对方容易理解的内容来讲解"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `向朋友诉说烦恼时我希望？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "同意我说的话，解决问题"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "与我产生共鸣并安慰我"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "我更有自信的是",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `一件事情坚持到底`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `同时进行多个事情`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "如果我在负责时长一个月的工作或课题时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "即使后面会发生一些变动，也会选择提前完成"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "反正时间还很长，展开所有可能性，慢慢地推进"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '手上有要办的事情却不得不出门和朋友们玩的时候我会？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "总是惦记着要做的事情"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "反正都出来了，决定先玩嗨起再说"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitCN/INFP.jpg'
+            },
+        ]
+    },
     // loveCell
     {
         info : {
