@@ -33,6 +33,8 @@ import TodayLuckResult from './components/TestTypes/Saju/TodayLuckResult';
 import LoveCharacter from './components/TestTypes/LoveCharacter/LoveCharacter';
 import LifetimeSaju from './components/TestTypes/Saju/LifetimeSaju';
 import LifetimeSajuResult from './components/TestTypes/Saju/LifetimeSajuResult';
+import LifeInterpreting from './components/TestTypes/Saju/LifeInterpreting';
+import LifeInterpretingResult from './components/TestTypes/Saju/LifeInterpretingResult';
 
 
 class App extends Component {
@@ -270,6 +272,10 @@ class App extends Component {
             <Route path="/loveCharacterGer/" component={() => <LoveCharacter lang={'Ger'} />} />
             <Route path="/loveCharacterES/" component={() => <LoveCharacter lang={'ES'} />} />
             <Route path="/loveCharacterJP/" component={() => <LoveCharacter lang={'JP'} />} />
+
+            {/* go to "lifeInterpreting" page */}
+            <Route path="/lifeInterpreting/" component={() => <LifeInterpreting />} exact/>
+            <Route path="/lifeInterpreting/:query/" component={() => <LifeInterpretingResult />} />
 
             {/* go to "lifetimeSaju" page */}
             <Route path="/lifetimeSaju/" component={() => <LifetimeSaju />} exact/>
