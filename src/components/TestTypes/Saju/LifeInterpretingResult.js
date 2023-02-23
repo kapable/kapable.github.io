@@ -13,7 +13,7 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 const LifetimeSajuResult = (props) => {
     const saju_url = 'https://saju.ktestone.com';
     const [result, setResult] = useState({});
-    const [isOpened, setIsOpened] = useState(true);
+    const [isOpened, setIsOpened] = useState(false);
     const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
     const originAdProb = 0.5 < Math.random();
     const coupangLink = originAdProb ? "https://link.coupang.com/a/PqWGr" : "https://link.coupang.com/a/PC8eL" ;
@@ -82,7 +82,7 @@ const LifetimeSajuResult = (props) => {
                 </Fragment> : 
                 <Fragment>
                     <h3>오늘의 총운</h3>
-                    <p>{result ? result?.total_saju?.slice(0, 100) : null}</p>
+                    <p>{result ? result?.early_luck?.slice(0, 100) : null}</p>
                     <div className='article-adCover-div-1'>
                         <div className='article-adCover-div-2'>
                             <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
