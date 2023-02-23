@@ -36,6 +36,7 @@ const LifetimeSajuResult = (props) => {
     useEffect(() => {
         const getToday = async(source) => {
             try {
+                console.log(source);
                 await axios.get(
                     saju_url + '/lifeInterpreting/total/' + source
                 )

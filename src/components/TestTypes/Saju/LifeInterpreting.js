@@ -44,7 +44,7 @@ const LifeInterpreting = (props) => {
         const crypto_query_date = encodeURIComponent(crypto.AES.encrypt(JSON.stringify(day), 'ktestsaju').toString());
         setIsLoading(true);
         setTimeout(() => {
-            props.history.push(`/lifeInterpreting/${day}/`)
+            props.history.push(`/lifeInterpreting/${crypto_query_date}/`)
         }, "2500");
     }, [day, props]);
 
