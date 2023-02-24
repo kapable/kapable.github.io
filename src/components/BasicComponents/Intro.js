@@ -57,6 +57,7 @@ class Intro extends Component {
             current_test:_current_test,
             qAndA:_current_test.questions,
             scoreType:_current_test.info.scoreType,
+            lang:_current_test.info.lang,
             answer_type_obj:_answer_type_obj, // < ------------- for calculating type += 1
             quizNumber:0,
             counted_score:0, // < ------------- for calculating scores
@@ -518,7 +519,7 @@ class Intro extends Component {
     lodingPageRender(){
         return(
             <div className="loading-upper">
-                <Loading test={this.state.current_test.info.mainUrl}/>
+                <Loading test={this.state.current_test.info.mainUrl} lang={this.state.lang} />
                 {setTimeout(function(){
                     this.setState({mode:"result"})
                 }.bind(this), 4700)}

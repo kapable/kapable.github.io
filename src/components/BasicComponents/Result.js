@@ -1266,7 +1266,7 @@ class Result extends Component {
             <Fragment>
                 <div className="result">
                     {/* Coupang Partners Dynamic Banner */}
-                    {TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0].info.lang === 'Kor' ? <CoupangDynamicBanner /> : null}
+                    {TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0].info.lang === 'Kor' ? <CoupangDynamicBanner page={'result'} /> : null}
 
                     {/* Adsense */}
                     <AdsenseAdvertiser
