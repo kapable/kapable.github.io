@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // speechHabitEng
+    {
+        info : {
+            mainTitle:"Frequently spoken words Test",
+            subTitle:"What do you often say?",
+            mainUrl:"speechHabitEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/speechHabitEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/speechHabitEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What would you do if you were hanging out with a friend and your friend wants to invite an acquaintance?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "No problem. Let's have fun together!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Suddenly? that would be a bit uncomfortable…'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What do you do when your friend calls to come out on a sweet holiday?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Okay! I have nothing special now! I'll get ready and go!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Suddenly? Sorry, I have work to do today."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What do you hate more when you go to a gathering with a lot of people?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `A situation with awkward silence`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `A situation where everyone pays attention through many questions`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you do right before you fall asleep?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I just focus on sleeping without thinking`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I fall asleep late while thinking about this and that.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What would you do if the movie you enjoyed watching after a long time ended with an open ending?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I would still enjoy it, but it's a pity that it has an open ending"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I would imagine an open ending at will`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What would you do if your friend asked you if it would be better to break up with someone new or cut off contact and break up?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I would just say, “you can pick one not me” and wonder why my friend ask such a useless question. `
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `“I would just say “Oh, both are the worst” and think about it seriously`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What would you do if your friend were late for an appointment and make excuses?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I would say “it is understandable” (it is okay don’t worry!)"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I would say “Please say sorry first.” (I might angry)"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "How would you explain what you know to others?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I would explain it as it is`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I would explain in an easy way for others to understand."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What do you expect when you share your concerns with a friend?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I look forward to empathy and resolution of the problem"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I want empathy and comfort in my words"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What are you more confident about?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `Finishing up one thing. `
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `Doing multitasking. `
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "If you were given a task or assignment with a deadline of one month, what would you do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "There may be additional things later, so I would finish it in advance."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I still have plenty of time, so I would just do it step by step slowly "
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'If you come out to play while there are things to do, what would you do?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "It would bother me continuously as I might keep thinking of things to do. "
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I've already decided anyway, so I would try to enjoy. "
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitEng/INFP.jpg'
+            },
+        ]
+    },
     // speechHabitCN
     {
         info : {
