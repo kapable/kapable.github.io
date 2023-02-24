@@ -21,6 +21,7 @@ import { withCookies, Cookies } from 'react-cookie';
 import '../TestTypes/FactPok/factPok.css';
 import ShareGroup from './ShareGroup';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
+import CoupangDynamicBanner from '../SubComponents/CoupangDynamicBanner';
 
 class Result extends Component {
     static propTypes = {
@@ -1263,8 +1264,11 @@ class Result extends Component {
         let ppl_list = ["factPok", "MyFactPok", "FriendFactPok",];
         return(
             <Fragment>
-                
                 <div className="result">
+                    {/* Coupang Partners Dynamic Banner */}
+                    {TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0].info.lang === 'Kor' ? <CoupangDynamicBanner /> : null}
+
+                    {/* Adsense */}
                     <AdsenseAdvertiser
                         client="ca-pub-2382342018701919"
                         slot="5663135072"
