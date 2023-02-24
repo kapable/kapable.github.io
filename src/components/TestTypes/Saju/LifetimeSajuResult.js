@@ -96,7 +96,7 @@ const LifetimeSajuResult = (props) => {
                     <Divider />
                 </Fragment> : 
                 <Fragment>
-                    <h3>오늘의 총운</h3>
+                    <h3>사주총평</h3>
                     <p>{result ? result?.total_saju?.slice(0, 100) : null}</p>
                     <div className='article-adCover-div-1'>
                         <div className='article-adCover-div-2'>
@@ -113,10 +113,10 @@ const LifetimeSajuResult = (props) => {
             <div className="share">
                 <h5 className="share-title">{"친구에게 공유하기"}</h5>
                 <ShareGroup
-                    link={"https://ktestone.com/kapable.github.io/todayLuck/"}
-                    testTitle={"오늘의 총운 - 케이테스트 | 사주 테스트"}/>
+                    link={"https://ktestone.com/kapable.github.io/lifetimeSaju/"}
+                    testTitle={"사주총평 - 케이테스트 | 사주 테스트"}/>
                 <div className="share">
-                    <CopyToClipboard text={"https://ktestone.com/kapable.github.io/todayLuck/" + props?.match?.params?.query +'/'}>
+                    <CopyToClipboard text={"https://ktestone.com/kapable.github.io/lifetimeSaju/" + props?.match?.params?.query +'/'}>
                         <img
                             src={COPYBTN}
                             onClick={onShareButtonClick}

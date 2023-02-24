@@ -714,7 +714,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["loveCell", "thatDiary", "newYearSemester", "speechHabit", "mzScore", "lifetimeSaju",];
+            const rederTestList = ["lifeInterpreting", "loveCell", "thatDiary", "newYearSemester", "speechHabit", "mzScore", "lifetimeSaju",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
