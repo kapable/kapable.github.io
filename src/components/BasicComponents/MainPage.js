@@ -32,17 +32,10 @@ function MainPage(props) {
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
             />
 
-            {/* Lifetime SAJU */}
+            {/* Life Interpreting Luck */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
-                <Link to='/lifetimeSaju/' className="main-link-block" key="lifetimeSaju-banner">
-                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/lifetimeSaju-thumb.png`} alt="lifetimeSaju" />
-                </Link>
-            ) : null}
-
-            {/* TodayLuck */}
-            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
-                <Link to='/todayLuck/' className="main-link-block" key="todayLuck-banner">
-                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`} alt="todayLuck" />
+                <Link to='/lifeInterpreting/' className="main-link-block" key="lifeInterpreting-banner">
+                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/lifeInterpreting-thumb.png`} alt="lifeInterpreting" />
                 </Link>
             ) : null}
 
@@ -74,6 +67,20 @@ function MainPage(props) {
                     };
                 })}
             </div>
+
+            {/* Lifetime SAJU */}
+            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
+                <Link to='/lifetimeSaju/' className="main-link-block" key="lifetimeSaju-banner">
+                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/lifetimeSaju-thumb.png`} alt="lifetimeSaju" />
+                </Link>
+            ) : null}
+
+            {/* TodayLuck */}
+            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
+                <Link to='/todayLuck/' className="main-link-block" key="todayLuck-banner">
+                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`} alt="todayLuck" />
+                </Link>
+            ) : null}
 
             {/* Go to LoveCharacter */}
             {(currentCategory === '' || currentCategory === "love")

@@ -67,7 +67,7 @@ const LifetimeSajuResult = (props) => {
 
     return (
         <div className='todayLuck-result-main-div'>
-            <img className='todayLuck-top-banner-sample' src="https://images.ktestone.com/meta/saju/lifetimeSaju-top-banner.jpg" alt='todayLuck-top-banner-sample'/>
+            <img className='todayLuck-top-banner-sample' src="https://images.ktestone.com/meta/saju/lifeInterpreting-top-banner.jpg" alt='todayLuck-top-banner-sample'/>
             {isOpened || coupangCookies?.coupang ? 
                 <Fragment>
                     <h3>초년운</h3>

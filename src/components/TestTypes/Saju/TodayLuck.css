@@ -1,14 +1,16 @@
 /* Today Luck Intro */
-.todayLuck-intro-img-div, .lifetime-saju-intro-img-div {
+.todayLuck-intro-img-div, .lifetime-saju-intro-img-div, .life-interpreting-intro-img-div {
     position: relative;
 }
 
-.todayLuck-intro-bg, .lifetime-saju-intro-bg {
+.todayLuck-intro-bg, .lifetime-saju-intro-bg, .life-interpreting-intro-bg {
     width: 100%;
     max-width: 35rem;
 }
 
-.todayLuck-intro-date-picker-div, .lifetime-saju-intro-date-picker-div, .lifetime-saju-intro-time-picker-div, .lifetime-saju-intro-gender-picker-div {
+.todayLuck-intro-date-picker-div,
+.lifetime-saju-intro-date-picker-div, .lifetime-saju-intro-time-picker-div, .lifetime-saju-intro-gender-picker-div,
+.life-interpreting-intro-date-picker-div, .life-interpreting-intro-time-picker-div, .life-interpreting-intro-gender-picker-div {
     position: absolute;
     top: 22rem;
     width: 100%;
@@ -16,7 +18,7 @@
     color: #A99893;
 }
 
-.todayLuck-intro-btn, .lifetime-saju-intro-btn {
+.todayLuck-intro-btn, .lifetime-saju-intro-btn, .life-interpreting-intro-btn {
     position: absolute;
     left: 50%;
     top: 24rem;
@@ -53,7 +55,8 @@
     top: 52rem;
 }
 
-.lifetime-saju-intro-date-picker, .lifetime-saju-intro-time-picker, .lifetime-saju-intro-gender-picker {
+.lifetime-saju-intro-date-picker, .lifetime-saju-intro-time-picker, .lifetime-saju-intro-gender-picker,
+.life-interpreting-intro-date-picker, .life-interpreting-intro-time-picker, .life-interpreting-intro-gender-picker {
     width: 8.5rem;
     border: solid #A99893 3px;
     background-color: white;
@@ -68,16 +71,16 @@
         top: 32rem;
     }
 
-    .lifetime-saju-intro-date-picker-div {
+    .lifetime-saju-intro-date-picker-div, .life-interpreting-intro-date-picker-div {
         top: 27.5rem;
     }
-    .lifetime-saju-intro-time-picker-div {
+    .lifetime-saju-intro-time-picker-div, .life-interpreting-intro-time-picker-div {
         top: 30rem;
     }
-    .lifetime-saju-intro-gender-picker-div {
+    .lifetime-saju-intro-gender-picker-div, .life-interpreting-intro-gender-picker-div {
         top: 32.5rem;
     }
-    .lifetime-saju-intro-btn {
+    .lifetime-saju-intro-btn, .life-interpreting-intro-btn {
         top: 35rem;
     }
 }
@@ -89,16 +92,16 @@
     .todayLuck-intro-btn {
         top: 33rem;
     }
-    .lifetime-saju-intro-date-picker-div {
+    .lifetime-saju-intro-date-picker-div, .life-interpreting-intro-date-picker-div {
         top: 28.5rem;
     }
-    .lifetime-saju-intro-time-picker-div {
+    .lifetime-saju-intro-time-picker-div, .life-interpreting-intro-time-picker-div {
         top: 31rem;
     }
-    .lifetime-saju-intro-gender-picker-div {
+    .lifetime-saju-intro-gender-picker-div, .life-interpreting-intro-gender-picker-div {
         top: 33.7rem;
     }
-    .lifetime-saju-intro-btn {
+    .lifetime-saju-intro-btn, .life-interpreting-intro-btn {
         top: 36.5rem;
     }
 }
@@ -110,16 +113,16 @@
     .todayLuck-intro-btn {
         top: 35rem;
     }
-    .lifetime-saju-intro-date-picker-div {
+    .lifetime-saju-intro-date-picker-div, .life-interpreting-intro-date-picker-div {
         top: 29.7rem;
     }
-    .lifetime-saju-intro-time-picker-div {
+    .lifetime-saju-intro-time-picker-div, .life-interpreting-intro-time-picker-div {
         top: 32.2rem;
     }
-    .lifetime-saju-intro-gender-picker-div {
+    .lifetime-saju-intro-gender-picker-div, .life-interpreting-intro-gender-picker-div {
         top: 34.9rem;
     }
-    .lifetime-saju-intro-btn {
+    .lifetime-saju-intro-btn, .life-interpreting-intro-btn {
         top: 38rem;
     }
 }
@@ -131,16 +134,16 @@
     .todayLuck-intro-btn {
         top: 37rem;
     }
-    .lifetime-saju-intro-date-picker-div {
+    .lifetime-saju-intro-date-picker-div, .life-interpreting-intro-date-picker-div {
         top: 31.5rem;
     }
-    .lifetime-saju-intro-time-picker-div {
+    .lifetime-saju-intro-time-picker-div, .life-interpreting-intro-time-picker-div {
         top: 34.5rem;
     }
-    .lifetime-saju-intro-gender-picker-div {
+    .lifetime-saju-intro-gender-picker-div, .life-interpreting-intro-gender-picker-div {
         top: 37.5rem;
     }
-    .lifetime-saju-intro-btn {
+    .lifetime-saju-intro-btn, .life-interpreting-intro-btn {
         top: 40.5rem;
     }
 }
@@ -152,16 +155,16 @@
     .todayLuck-intro-btn {
         top: 49rem;
     }
-    .lifetime-saju-intro-date-picker-div {
+    .lifetime-saju-intro-date-picker-div, .life-interpreting-intro-date-picker-div {
         top: 42rem;
     }
-    .lifetime-saju-intro-time-picker-div {
+    .lifetime-saju-intro-time-picker-div, .life-interpreting-intro-time-picker-div {
         top: 45rem;
     }
-    .lifetime-saju-intro-gender-picker-div {
+    .lifetime-saju-intro-gender-picker-div, .life-interpreting-intro-gender-picker-div {
         top: 48rem;
     }
-    .lifetime-saju-intro-btn {
+    .lifetime-saju-intro-btn, .life-interpreting-intro-btn {
         top: 53rem;
     }
 }
@@ -177,16 +180,16 @@
     .todayLuck-top-banner-sample {
         max-width: 35rem;
     }
-    .lifetime-saju-intro-date-picker-div {
+    .lifetime-saju-intro-date-picker-div, .life-interpreting-intro-date-picker-div {
         top: 44rem;
     }
-    .lifetime-saju-intro-time-picker-div {
+    .lifetime-saju-intro-time-picker-div, .life-interpreting-intro-time-picker-div {
         top: 47rem;
     }
-    .lifetime-saju-intro-gender-picker-div {
+    .lifetime-saju-intro-gender-picker-div, .life-interpreting-intro-gender-picker-div {
         top: 50rem;
     }
-    .lifetime-saju-intro-btn {
+    .lifetime-saju-intro-btn, .life-interpreting-intro-btn {
         top: 55rem;
     }
 }

@@ -71,46 +71,46 @@ const LifeInterpreting = (props) => {
             <Fragment>
                 <Helmet>
                     {/* <!-- Primary Meta Tags --> */}
-                    <title>사주 총평 당신의 사주는? - 케이테스트 | 사주 테스트</title>
-                    <meta name="title" content="사주 총평 당신의 사주는? - 케이테스트"/>
-                    <meta name="description" content="무료 사주를 케이테스트에서 제공합니다. | 나의 평생 총운은? - 자평명리학 | 평생 총운 | 케이테스트 | 사주 테스트" data-react-helmet="true"/>
+                    <title>인생 풀이 | 내 인생운은 어떨까? - 케이테스트 | 사주 테스트</title>
+                    <meta name="title" content="인생 풀이 | 내 인생운은 어떨까? - 케이테스트"/>
+                    <meta name="description" content="무료 사주를 케이테스트에서 제공합니다. | 내 인생운은 어떨까? | 인생 풀이 | 케이테스트 | 사주 테스트" data-react-helmet="true"/>
                     <link rel="main-url" href="https://ktestone.com/kapable.github.io/lifeInterpreting/"/>
 
                     {/* <!-- Open Graph / Facebook --> */}
                     <meta property="og:type" content="website"/>
                     <meta property="og:url" content="https://ktestone.com/kapable.github.io/lifeInterpreting/"/>
-                    <meta property="og:title" content="사주 총평 당신의 사주는? - 케이테스트 | 사주 테스트"/>
-                    <meta property="og:description" content="무료 사주를 케이테스트에서 제공합니다. | 나의 평생 총운은? - 자평명리학 | 평생 총운 | 케이테스트 | 사주 테스트"/>
+                    <meta property="og:title" content="인생 풀이 | 내 인생운은 어떨까? - 케이테스트 | 사주 테스트"/>
+                    <meta property="og:description" content="무료 사주를 케이테스트에서 제공합니다. | 내 인생운은 어떨까? | 인생 풀이 | 케이테스트 | 사주 테스트"/>
                     <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/lifeInterpreting-thumb.png`}/>
-                    <meta property="og:image:alt" content="사주 총평 당신의 사주는? - 케이테스트 | 사주 테스트" />
+                    <meta property="og:image:alt" content="인생 풀이 | 내 인생운은 어떨까? - 케이테스트 | 사주 테스트" />
 
                     {/* <!-- Twitter --> */}
                     <meta property="twitter:card" content="summary_large_image"/>
                     <meta property="twitter:url" content="https://ktestone.com/kapable.github.io/lifeInterpreting/"/>
-                    <meta property="twitter:title" content="사주 총평 당신의 사주는? - 케이테스트 | 사주 테스트"/>
-                    <meta property="twitter:description" content="무료 사주를 케이테스트에서 제공합니다. | 나의 평생 총운은? - 자평명리학 | 평생 총운 | 케이테스트 | 사주 테스트"/>
+                    <meta property="twitter:title" content="인생 풀이 | 내 인생운은 어떨까? - 케이테스트 | 사주 테스트"/>
+                    <meta property="twitter:description" content="무료 사주를 케이테스트에서 제공합니다. | 내 인생운은 어떨까? | 인생 풀이 | 케이테스트 | 사주 테스트"/>
                     <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/lifeInterpreting-thumb.png`}/>
-                    <meta property="twitter:image:alt" content="사주 총평 당신의 사주는? - 케이테스트 | 사주 테스트" />
+                    <meta property="twitter:image:alt" content="인생 풀이 | 내 인생운은 어떨까? - 케이테스트 | 사주 테스트" />
                 </Helmet>
-                <div className='lifetime-saju-intro-img-div'>
-                    <img className='lifetime-saju-intro-bg' src="https://images.ktestone.com/meta/saju/lifeInterpreting-intro-input-bg.jpg" alt="lifetime-saju-intro-input"/>
-                    <div className='lifetime-saju-intro-date-picker-div'>
-                        <DatePicker className='lifetime-saju-intro-date-picker' onChange={onChange} allowClear locale={locale}/>
+                <div className='life-interpreting-intro-img-div'>
+                    <img className='life-interpreting-intro-bg' src="https://images.ktestone.com/meta/saju/lifeInterpreting-intro-input-bg.jpg" alt="life-interpreting-intro-input"/>
+                    <div className='life-interpreting-intro-date-picker-div'>
+                        <DatePicker className='life-interpreting-intro-date-picker' onChange={onChange} allowClear locale={locale}/>
                     </div>
-                    <div className='lifetime-saju-intro-time-picker-div'>
-                        <Select className='lifetime-saju-intro-time-picker'
+                    <div className='life-interpreting-intro-time-picker-div'>
+                        <Select className='life-interpreting-intro-time-picker'
                             defaultValue={'시간 모름'}
                             options={["시간 모름", ...Array(25).keys()].map((num) => ({ value: num, label: num }))}
                         />
                     </div>
-                    <div className='lifetime-saju-intro-gender-picker-div'>
-                        <Radio.Group className='lifetime-saju-intro-gender-picker' defaultValue="female" buttonStyle='solid'>
+                    <div className='life-interpreting-intro-gender-picker-div'>
+                        <Radio.Group className='life-interpreting-intro-gender-picker' defaultValue="female" buttonStyle='solid'>
                             <Radio.Button style={{width: "4.05rem"}} value={"female"}>여성</Radio.Button>
                             <Radio.Button style={{width: "4.05rem"}} value={"male"}>남성</Radio.Button>
                         </Radio.Group>
                     </div>
-                    <div className='lifetime-saju-intro-btn-div' onClick={onSubmitClick}>
-                        <img className='lifetime-saju-intro-btn' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-submit-btn.jpg" alt="lifetime-saju-intro-btn"/>
+                    <div className='life-interpreting-intro-btn-div' onClick={onSubmitClick}>
+                        <img className='life-interpreting-intro-btn' src="https://images.ktestone.com/meta/saju/lifeInterpreting-intro-submit-btn.jpg" alt="life-interpreting-intro-btn"/>
                     </div>
                 </div>
                 <div className="test-intro-with-friend">
