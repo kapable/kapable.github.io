@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // chatGPTCharacteristic
+    {
+        info : {
+            mainTitle:"챗 GPT 인공지능 성격 테스트",
+            subTitle:"인공지능 캐릭터로 알아보는 나의 성격은?",
+            mainUrl:"chatGPTCharacteristic",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/chatGPTCharacteristic-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/chatGPTCharacteristic-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '당신은 어떻게 에너지를 충전합니까?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '밖에서 사람들과 만나면서 충전한다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '집에서 쉬면서 충전한다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "모임에서 당신은 어떤 사람 입니까?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "적극적으로 분위기를 주도하는 사람"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "적극적으로 분위기에 맞추는 사람"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "새로운 사람을 사귈 때 당신은 어떤 유형입니까?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `넓고 얕게 사귀는 유형`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `좁고 깊게 사귀는 유형`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "당신은 어떤 유형의 사람입니까?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `현재에 집중하는 사람`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `미래 지향적인 사람`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "당신은 영화, 드라마를 볼 때 어떤 타입 입니까?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "배우의 연기와 스토리에 집중하는 타입"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `감정적, 자극적인 부분에 집중 및 상상으로 결말을 추론하는 타입`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "당신은 아무 생각 없이 30분 이상 있을 수 있습니까?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `있다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `“없다`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `드라마, 영화 시청 중 슬픈 장면이 나올 때 당신은 자주 눈물을 흘립니까?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "눈물을 흘리지 않는다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "자주 눈물을 흘린다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "누군가 당신에게 선물을 한다면 당신은 무슨 감정입니까?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `왜 주는지 몰라서 당황스럽다`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "먼저 선물에 감동한다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `문제 상황이 일어났을 때 당신의 상태는 어떻게 변합니까?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "이성적으로 바뀐다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "감정적으로 바뀐다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "둘 중 당신은 어떤 사람에 해당합니까?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `한 가지 일을 완벽하게 끝내는 사람`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `여러가지 일을 동시에 잘하는 사람`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "약속이 있는 당신은 어느 경우가 더 많습니까?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "약속 시간 보다 일찍 도착하는 경우가 많다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "약속 시간 보다 늦는 경우가 많다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '당신의 여행은 어떤 스타일 입니까?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "여러 경험을 해볼 수 있는 자유로운 여행"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "가는 장소를 미리 정해 놓은 계획적인 여행"
+                    }, 
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/chatGPTCharacteristic/INFP.jpg'
+            },
+        ]
+    },
     // speechHabitEng
     {
         info : {
