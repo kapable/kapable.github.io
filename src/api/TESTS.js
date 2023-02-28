@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // shootingStar
+    {
+        info : {
+            mainTitle:"별똥별 이상형 테스트",
+            subTitle:"별똥별에게 이상형 소원을 빌어보자",
+            mainUrl:"shootingStar",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/shootingStar-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/shootingStar-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '이번 주 내내 약속이 있었는데 주말에 산속 캠핑을 가자고 한다!',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '갈래!! 산이면 별똥별도 보이려나? 완전 힐링 ㅜ'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '미안.. 이번 주 계속 나가서 나 힘들어.. 휴식이 필요해ㅜ'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "결국 도착한 캠핑장! 그런데 사람들이 우글우글하다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "와우 사람 많다 여긴 핫플이 분명해 우리 잘 찾아온 듯!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "사람이 왜 이렇게 많지 아무래도 우리 날을 잘못 잡은 듯"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "캠핑장에서 만난 사람들이 별똥별을 보러 다 같이 가자고 하면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `다 같이 보면 더 좋지! 이참에 친해지면 재밌겠다`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `우리는 따로 가자.. 모르는 사람들 많잖아 불편쓰..`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "별똥별을 보러 캄캄한 산속을 올라가는 중에 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `아우 어두워 언제 도착한담`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `갑자기 곰이 튀어나오는 건 아니겠지? 근데 여기 곰이 사나?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "별똥별을 보고 소원을 빌자고 하면 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "어차피 소원 안 들어줄 텐데 그래도 예쁘긴 하다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `이미 소원이 이루어져 행복해하는 내 모습을 상상하고 있음`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "하늘에서 떨어지는 별똥별을 보면 드는 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `우주에서 떨어지는 불타는 돌이랄까`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `저 안에 외계인 들어있어서 지구 침략 당할 수도 있음`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `연인이 요즘 힘들어 보인다며 힐링 여행을 가자고 하면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "여행? 좋다 어디로 갈까? (내가 힘들어 보이나?)"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "헐ㅜ 고마워 신경 써줘서ㅜ (감동의 쓰나미가 몰려옴)"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "연인과 여행 중 뭔가를 사러 밖에 다녀온다고 한다!",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `다녀올 꺼야? 잘 다녀와 올 때 메로나!`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "같이 가까? 혼자 가면 심심할 텐데"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `여행지에서 옆 커플이 크게 싸우고 있다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "뭔 일이래? 뭔 소리까지 지른담"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "저 사람 우는데? 어뜨케ㅜㅜ 여기서 왜 싸우지? 어쩌냐ㅜㅜ"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "여행을 계획할 때 나의 스타일은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `9시에 만나서 12시에 도착하면 밥을 여기서 먹고 나가서 이러쿵저러쿵`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `저녁밥은 여기서 뇸뇸~ 담날은 여기서 룰루~ 계획 끝`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "여행 계획을 다 짜놨는데 한 명이 더 간다고 한다!",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "이미 다 짜놨는데.. 다시 짜야겠네… 후"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "같이 가자! 어떻게든 되겠지!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '별똥별을 보러 왔는데 비가 와서 결국 못 봤다!',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "분명 비 안 온다고 했는데.. 하지만 난 우산을 챙겨왔지"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "내 별똥별ㅜㅜ 우산이나 사야겠다. 오늘 비 온다고 했었나?"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/shootingStar/INFP.jpg'
+            },
+        ]
+    },
     // loveCellCN
     {
         info : {
