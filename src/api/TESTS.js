@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveSpeed
+    {
+        info : {
+            mainTitle:"연애 속도 테스트",
+            subTitle:"과연 나의 연애 성공 속도와 연애 성향은 어떨까?",
+            mainUrl:"loveSpeed",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveSpeed-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveSpeed-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '호감이 있는 이성과 대화할 때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '자연스럽게 대화를 이끌어 나가는 편이다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '말 할 때 마다 생각하고 말하는 편이다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "연인과 무엇을 할지 결정할 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "주도적으로 결정을 한다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "연인이 어떤 결정을 하는지 지켜본다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "친구들과 대화할 때 나와 가까운 것은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `친구가 이야기하고 있을 때 끼어들 때가 많다`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `내가 이야기할 때 친구가 끼어들 때가 많다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "썸 중이던 이성과 사귀게 되었다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `연애에 성공해 기분이 좋고, 행복하다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `설레는 미래를 그려보고, 행복해한다 `
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인과의 관계에서 나에게 중요한 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "현재에 연애에 집중하는 것"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `함께하는 미래에 대해 이야기하고 준비하는 것`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인에게 내가 더 많이 하는 대화 방식은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `최근에 일어난 일이나, 내가 경험했던 이야기를 하는 것`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `일어나지 않은 일에 대해 이야기 하고, 어떻게 할지 물어보는 것`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `연인이 누군가와 실랑이를 벌이고 있다면 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "哇왜 그러는지 물어보고, 연인에게 괜찮은 지 물어본다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "일단 연인의 편을 들고, 무슨 일인지 알아본다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "연인과 갈등 상황 시에 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `내가 생각하는 문제점을 솔직하게 이야기하고 해결하려고 한다`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "내가 느끼는 감정들을 먼저 충분히 정리한 후 해결한다 "
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `연인과 갈등 상황 시에 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "내가 생각하는 문제점을 솔직하게 이야기하고 해결하려고 한다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "내가 느끼는 감정을 먼저 충분히 정리한 후 해결한다 "
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인과 데이트 시에 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `연인과 데이트는 뭐든 미리 세세하게 계획해서 하는 편이다`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `연인과 데이트에서 즉흥적으로 새로운 것을 경험해 보는 편이다`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나의 생활과 가까운 것은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "나의 생활에는 계획적인 루틴이 많은 편이다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "先나의 생활에는 새롭고 즉흥적인 일들이 많은 편이다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '내가 생각하는 연인간의 약속은?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "연인과의 약속은 무슨 일이 있더라도 꼭 지켜야 한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "연인과의 약속은 상황에 따라 유연하게 바뀔 수 있다"
+                    }, 
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeed/INFP.jpg'
+            },
+        ]
+    },
     // shootingStar
     {
         info : {
