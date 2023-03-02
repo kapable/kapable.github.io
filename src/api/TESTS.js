@@ -76,12 +76,12 @@ const TESTS = [
                     {
                         type: "E",
                         score: 2,
-                        content: `친구가 이야기하고 있을 때 끼어들 때가 많다`
+                        content: `친구가 이야기하고 있는데 내가 끼어드는 경우가 많다`
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: `내가 이야기할 때 친구가 끼어들 때가 많다`
+                        content: `내가 이야기할 때 친구가 끼어드는 경우가 많다`
                     },
                 ]
             },
@@ -140,7 +140,7 @@ const TESTS = [
                     {
                         type: "T",
                         score: 2,
-                        content: "哇왜 그러는지 물어보고, 연인에게 괜찮은 지 물어본다"
+                        content: "왜 그러는지 물어보고, 연인에게 괜찮은 지 물어본다"
                     },
                     {
                         type: "F",
@@ -151,17 +151,17 @@ const TESTS = [
             },
             {
                 which:"TF",
-                question: "연인과 갈등 상황 시에 나는?",
+                question: "내가 연애에서 더 중요하게 생각하는 것은?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: `내가 생각하는 문제점을 솔직하게 이야기하고 해결하려고 한다`
+                        content: `신뢰하는 관계와 문제 해결이 우선인 연애`
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "내가 느끼는 감정들을 먼저 충분히 정리한 후 해결한다 "
+                        content: "감정적인 교류와 공감이 먼저인 연애"
                     },
                 ]
             },
@@ -209,7 +209,7 @@ const TESTS = [
                     {
                         type: "P",
                         score: 5,
-                        content: "先나의 생활에는 새롭고 즉흥적인 일들이 많은 편이다"
+                        content: "나의 생활에는 새롭고 즉흥적인 일들이 많은 편이다"
                     },
                 ]
             },
