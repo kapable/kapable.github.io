@@ -102,6 +102,7 @@ class Result extends Component {
 
     _onBackToStartButtonClick(){
         let factPokQueries = ["factPok", "MyFactPok", "FriendFactPok"];
+        let coupleCharacterQueries = ["coupleCharacter", "coupleCharacterFemale", "coupleCharacterMale"];
         let loveCharacterQueries = ["loveCharacter", "loveCharacterFemale", "loveCharacterMale"];
         let loveCharacterCNQueries = ["loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN"];
         let loveCharacterEngQueries = ["loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng"];
@@ -109,6 +110,9 @@ class Result extends Component {
         let loveCharacterESQueries = ["loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES"];
         if(factPokQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/factPok/";
+        };
+        if(coupleCharacterQueries.some(el => this.state.current_url.includes(el))) {
+            window.location.href = window.location.origin + "/kapable.github.io/coupleCharacter/";
         };
         if(loveCharacterQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/loveCharacter/";

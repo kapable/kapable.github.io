@@ -32,6 +32,14 @@ function MainPage(props) {
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
             />
 
+            {/* Go to CoupleCharacter */}
+            {(currentCategory === '' || currentCategory === "love")
+            ? (
+                <Link to={(props.lang === 'Kor' || props.lang === 'Others') ? '/coupleCharacter/' : `/coupleCharacter${props.lang}`} className="main-link-block" key="coupleCharacter-banner">
+                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter${props.lang === 'Kor' ? '' : props.lang}-thumb.png`} alt='coupleCharacter' />
+                </Link>
+            ) : null}
+
             {/* Life Interpreting Luck */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
                 <Link to='/lifeInterpreting/' className="main-link-block" key="lifeInterpreting-banner">

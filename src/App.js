@@ -30,7 +30,7 @@ import FactPok from './components/TestTypes/FactPok/FactPok';
 import FortuneCookie from './components/TestTypes/FortuneCookie/FortuneCookie';
 import TodayLuck from './components/TestTypes/Saju/TodayLuck';
 import TodayLuckResult from './components/TestTypes/Saju/TodayLuckResult';
-import LoveCharacter from './components/TestTypes/LoveCharacter/LoveCharacter';
+import TwoSplitedIntro from './components/TestTypes/TwoSplitedIntro/TwoSplitedIntro';
 import LifetimeSaju from './components/TestTypes/Saju/LifetimeSaju';
 import LifetimeSajuResult from './components/TestTypes/Saju/LifetimeSajuResult';
 import LifeInterpreting from './components/TestTypes/Saju/LifeInterpreting';
@@ -265,13 +265,16 @@ class App extends Component {
       <Router basename='/kapable.github.io/'>
         <ScrollToTop>
           <Switch>
+            {/* go to "CoupleCharacter" page */}
+            <Route path="/coupleCharacter/" component={() => <TwoSplitedIntro test={"coupleCharacter"} lang={'Kor'} info={{ title: "커플 캐릭터 테스트 - 케이테스트", subTitle: "커플 캐릭터로 보는 나의 연애 성향은? - 커플 캐릭터 테스트 여자편 남자편 - 케이테스트" }} />} />
+
             {/* go to "LoveCharacter" page */}
-            <Route path="/loveCharacter/" component={() => <LoveCharacter lang={'Kor'} />} />
-            <Route path="/loveCharacterEng/" component={() => <LoveCharacter lang={'Eng'} />} />
-            <Route path="/loveCharacterCN/" component={() => <LoveCharacter lang={'CN'} />} />
-            <Route path="/loveCharacterGer/" component={() => <LoveCharacter lang={'Ger'} />} />
-            <Route path="/loveCharacterES/" component={() => <LoveCharacter lang={'ES'} />} />
-            <Route path="/loveCharacterJP/" component={() => <LoveCharacter lang={'JP'} />} />
+            <Route path="/loveCharacter/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'Kor'} info={{ title: "연애 캐릭터 테스트 - 케이테스트", subTitle: "캐릭터로 보는 나의 연애 성향은? - 연애 캐릭터 테스트 남자편 여자편 - 케이테스트" }} />} />
+            <Route path="/loveCharacterEng/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'Eng'} info={{ title: "Love Character Test - KTEST", subTitle: "What kind of my character is my love character? - Male | Love chracter test - male female boyfriend girlfriend - KTEST" }} />} />
+            <Route path="/loveCharacterCN/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'CN'} info={{ title: "恋爱角色测试 - KTEST", subTitle: "我的爱情角色是什么样的角色？ | 恋爱角色测试 - 女方,男方 - KTEST" }} />} />
+            <Route path="/loveCharacterGer/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'Ger'} info={{ title: "Beziehungstypen Test - KTEST", subTitle: "Was für ein Charakter ist mein Liebescharakter? | BeziehungstypenTest - Freund, Freundin - KTEST" }} />} />
+            <Route path="/loveCharacterES/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'ES'} info={{ title: "Test de Personalidad en noviazgo. - KTEST", subTitle: "¿Cuál es mi inclinación a enamorarme como personaje? | para hombres, para mujeres - KTEST" }} />} />
+            <Route path="/loveCharacterJP/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'JP'} info={{ title: "恋愛キャラクターテスト - KTEST", subTitle: "私の恋愛キャラクターはどんなキャラクターかな? - KTEST" }} />} />
 
             {/* go to "lifeInterpreting" page */}
             <Route path="/lifeInterpreting/" component={() => <LifeInterpreting />} exact/>

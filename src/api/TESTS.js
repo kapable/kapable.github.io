@@ -67940,6 +67940,656 @@ const TESTS = [
             },
         ]
     },
+    // coupleCharacterFemale
+    {
+        info : {
+            mainTitle:"커플 캐릭터 테스트 - 여자편 | 남자편",
+            subTitle:"커플 캐릭터로 보는 나의 연애 성향은? - 여자편 | 남자편 | 커플 캐릭터 테스트 여자편 남자편",
+            mainUrl:"coupleCharacterFemale",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '연인과 어떤 데이트를 할지 정할 때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '주도적이고 적극적인 편이다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '연인의 결정에 반응하고 동의하는 편이다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "나와 가까운 것은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "사람들과 있을 때도 말이 많고 연인과 있을 때는 말이 더 많다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "사람들과 있을 때는 말이 별로 없고, 연인과 있을 때 말이 많다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "연애 초 연인이랑 주말동안 꽉 찬 데이트를 했다면 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `너무 알차고 행복한 데이트였다ㅎㅎ 힐링 완료!`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `재밌는 데이트였다ㅎㅎ 그래도 다음주 이틀 중 하루는 쉬자고 할까…?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "늦게까지 연인과 연락 중에 연인이 “이제 얼른 자자” 라고 한다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `그래~ 시간이 늦긴 했지 이제 자야겠다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `왜 갑자기 자자고 그러지? 혹시 내가 귀찮나..?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인과 식당에서 음식을 먹는데 너무 맛있다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "너무 맛있고 다음에 또 오고 싶다는 생각이 든다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `너무 맛있는데 이 음식을 어떻게 만들었을 지 상상해 본다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인에게 음식을 해줬는데 연인이 너무 맛있다며 어떻게 만들었냐고 묻는다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `레시피 대로 만들었다고 말해준다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `나의 손맛으로 만들었다고 말해준다`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `길 가다 어떤 이성이 나에게 이상형이라며 번호를 물어본다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "기분은 좋지만, 내 어디가 이상형인지 궁금하다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "기분이 좋고, 이 사람이랑 사귀면 어떨지 상상해 본다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "연애 초 연락할 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `질문과 관심이 많았다`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "공감과 리액션이 많았다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `연인이 나에게 음식을 해준다면 나의 감동 포인트는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "연인이 만든 음식의 퀄리티와 맛에 감동한다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "나를 위해 음식을 한 것 자체에 감동한다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인과 함께 캠핑을 와서 마트를 들린다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `사야할 것을 미리 정해서 사야하는 것만 사서 캠핑장으로 돌아간다`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `써야할 가능성을 생각해서 이것저것 구경해보면서 사서 돌아간다`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인과 실내에서 배달 음식을 시켜 먹고 난 후 정리할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "먹은 음식은 바로바로 깨끗하게 치워야 한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "좀 쉬고 대화하다가 천천히 치운다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '연인과 유명 맛집을 가려고 한다면 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "최적의 경로와 최단 시간을 찾아 빠르게 가기 위한 준비를 한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "가기전까지 여유 부리다가 급하게 도착하는 방법을 찾아본다"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wksthfleoakdhkd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhlrkdsodb",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekwjdekrka",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dyffhfkdlvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmdqntk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dkfEMftlswkq",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhfemsflxmflqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fldortusaksfpq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "Rhseo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wkdrldusdo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Whfqh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gjekd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dnjzjghfflr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ajdEoflsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemale/INFP.jpg'
+            },
+        ]
+    },
+    // coupleCharacterMale
+    {
+        info : {
+            mainTitle:"커플 캐릭터 테스트 - 남자편 | 여자편",
+            subTitle:"커플 캐릭터로 보는 나의 연애 성향은? - 남자편 | 여자편 | 커플 캐릭터 테스트 남자편 여자편",
+            mainUrl:"coupleCharacterMale",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '연인과 어떤 데이트를 할지 정할 때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '주도적이고 적극적인 편이다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '연인의 결정에 반응하고 동의하는 편이다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "나와 가까운 것은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "사람들과 있을 때도 말이 많고 연인과 있을 때는 말이 더 많다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "사람들과 있을 때는 말이 별로 없고, 연인과 있을 때 말이 많다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "연애 초 연인이랑 주말동안 꽉 찬 데이트를 했다면 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `너무 알차고 행복한 데이트였다ㅎㅎ 힐링 완료!`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `재밌는 데이트였다ㅎㅎ 그래도 다음주 이틀 중 하루는 쉬자고 할까…?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "늦게까지 연인과 연락 중에 연인이 “이제 얼른 자자” 라고 한다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `그래~ 시간이 늦긴 했지 이제 자야겠다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `왜 갑자기 자자고 그러지? 혹시 내가 귀찮나..?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인과 식당에서 음식을 먹는데 너무 맛있다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "너무 맛있고 다음에 또 오고 싶다는 생각이 든다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `너무 맛있는데 이 음식을 어떻게 만들었을 지 상상해 본다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인에게 음식을 해줬는데 연인이 너무 맛있다며 어떻게 만들었냐고 묻는다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `레시피 대로 만들었다고 말해준다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `나의 손맛으로 만들었다고 말해준다`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `길 가다 어떤 이성이 나에게 이상형이라며 번호를 물어본다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "기분은 좋지만, 내 어디가 이상형인지 궁금하다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "기분이 좋고, 이 사람이랑 사귀면 어떨지 상상해 본다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "연애 초 연락할 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `질문과 관심이 많았다`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "공감과 리액션이 많았다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `연인이 나에게 음식을 해준다면 나의 감동 포인트는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "연인이 만든 음식의 퀄리티와 맛에 감동한다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "나를 위해 음식을 한 것 자체에 감동한다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인과 함께 캠핑을 와서 마트를 들린다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `사야할 것을 미리 정해서 사야하는 것만 사서 캠핑장으로 돌아간다`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `써야할 가능성을 생각해서 이것저것 구경해보면서 사서 돌아간다`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인과 실내에서 배달 음식을 시켜 먹고 난 후 정리할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "먹은 음식은 바로바로 깨끗하게 치워야 한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "좀 쉬고 대화하다가 천천히 치운다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '연인과 유명 맛집을 가려고 한다면 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "최적의 경로와 최단 시간을 찾아 빠르게 가기 위한 준비를 한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "가기전까지 여유 부리다가 급하게 도착하는 방법을 찾아본다"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wksthfleoakdhkd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhlrkdsodb",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekwjdekrka",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dyffhfkdlvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmdqntk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dkfEMftlswkq",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhfemsflxmflqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fldortusaksfpq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "Rhseo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wkdrldusdo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Whfqh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gjekd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dnjzjghfflr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ajdEoflsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMale/INFP.jpg'
+            },
+        ]
+    },
 ];
 
 export default TESTS;
