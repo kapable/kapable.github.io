@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveSpeedEng
+    {
+        info : {
+            mainTitle:"Dating speed test",
+            subTitle:"Your dating tendency through speed",
+            mainUrl:"loveSpeedEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveSpeedEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveSpeedEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What do you do when you talk to someone you like?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I tend to lead conversations naturally'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I usually think carefully before talking to someone'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What do you do when you have to decide what to do with your lover?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I take initiative in making decisions"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I'm just waiting for my lover to decide"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What do you do when you talk to your friends?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I often interrupt when my friends are talking`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I often have friends interrupt when I am talking`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What would you do if the person you were dating became your boyfriend or girlfriend?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I'm sure you would feel good and happy because I've succeeded in dating`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I would picture an exciting future and feel happy`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "How do you usually communicate with your lover?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I talk about something that happened recently or about my experience"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I talk about my imagination and ask questions about it`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What is important to you in your relationship with your lover?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Focusing on dating in the present`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Talking about the future together and prepare anything for that`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What do you do if your lover is arguing with someone?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I ask why, and check with my lover to see if things are getting better now"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I'll take my lover's side for now and find out what's going on later"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What do you value more in a relationship?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I value trust and problem solving comes first`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I value emotional exchange and empathy comes first"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What do you do when you are in conflict with your lover?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I talk honestly about the problems I think and try to solve them"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I try to clear my mind first and then work things out later"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you do when dating your lover?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I tend to plan every date with my lover in detail in advance`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `When I'm in a relationship, I naturally try to experience new things`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What is close to your life?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "There are many planned routines in my life"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "There are a lot of impromptu things in my life"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'What is the meaning of a promise with your lover to you?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I must keep my promise to my lover no matter what"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I can flexibly change my appointments with my lover depending on the situation"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedEng/INFP.jpg'
+            },
+        ]
+    },
     // loveSpeed
     {
         info : {
