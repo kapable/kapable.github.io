@@ -33,7 +33,7 @@ function MainPage(props) {
             />
 
             {/* Go to CoupleCharacter */}
-            {(!currentCategory || currentCategory === "love")
+            {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
             ? (
                 <Link to={(props.lang === 'Kor' || props.lang === 'Others') ? '/coupleCharacter/' : `/coupleCharacter${props.lang}`} className="main-link-block" key="coupleCharacter-banner">
                     <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter${props.lang === 'Kor' ? '' : props.lang}-thumb.png`} alt='coupleCharacter' />
@@ -91,7 +91,7 @@ function MainPage(props) {
             ) : null}
 
             {/* Go to LoveCharacter */}
-            {(!currentCategory|| currentCategory === "love")
+            {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
             ? (
                 <Link to={(props.lang === 'Kor' || props.lang === 'Others') ? '/loveCharacter/' : `/loveCharacter${props.lang}`} className="main-link-block" key="loveCharacter-banner">
                     <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang === 'Kor' ? '' : props.lang}-thumb.png`} alt='loveCharacter' />
