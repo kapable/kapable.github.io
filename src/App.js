@@ -316,7 +316,6 @@ class App extends Component {
             <Route path='/' exact>
                 {/* meta tag form for all main page */}
                 {this.mainMetaTagRenderer()}
-                {/* <MainPage all_tests_url={this.all_lang_renderer()}/> */}
                 <MainPage all_tests_url={this.each_lang_renderer("Kor")} lang={'Kor'}/>
             </Route>
 
@@ -444,7 +443,7 @@ class App extends Component {
           <h5>광고 및 후원 문의<br></br>Advertising and Sponsorship Contact</h5>
           <p>soumy21@naver.com</p>
           <p>Disclaimer:<br></br>All content is provided for fun and entertainment purposes only</p>
-          <p>©주식회사 쿠키로켓 All Rights Reserved. 2022.</p>
+          <p>©주식회사 쿠키로켓 All Rights Reserved. 2023.</p>
       </div>
     </Fragment>
     </Router>
