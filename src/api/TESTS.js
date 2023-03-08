@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveSpringFlower
+    {
+        info : {
+            mainTitle:"연애 봄 꽃잎 테스트",
+            subTitle:"커플 캐릭터로 보는 나의 연애 성향은?",
+            mainUrl:"loveSpringFlower",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveSpringFlower-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveSpringFlower-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '사람들을 대할 때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '밝고 열정적으로 대화를 이끌어 나간다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '진지하게 대화에 참여하고 적극적으로 공감한다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "좋아하는 사람이 생겼을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "적극적으로 의견을 말하고, 약속을 잡는 편이다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "상대의 의견에 동의하고, 상황에 알맞은 리액션을 하는 편이다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "연인과 문제가 생겼을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `말이 많아진다`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `생각이 많아진다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 더 이해하기 힘든 연인의 행동은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `졸리다고 하고 답장도 없이 먼저 잠든 연인`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `잘 자라고 해놓고 안자고 계속 연락을 이어가는 연인`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 더 선호하는 연애는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "현재에 충실한 연애"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `미래를 생각하는 연애`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인이 갑자기 안 하던 행동을 한다면 내 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `갑자기 왜 이래? (진짜 왜 이러는 거지?)`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `무슨 일 있나? (끝없는 상상을 한다)`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `친구가 연인에 대한 불만을 털어놓는다면 나의 반응은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "끝까지 다 들어보고 명확하게 잘 잘못을 생각해보고 내 의견을 말해준다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "끝까지 들어보니 둘 다 이해가 가지만 일단 친구 편을 들어준다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 오래 사귄 연인이랑 헤어졌다고 한다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `헉 너희가? 왜?`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "헐 어떡해.. 괜찮아?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `연인이 이해할 수 없는 행동을 했을 때 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "왜 저런 행동을 했는지 이해가 안 가서 물어본다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "연인이 왜 그런 행동을 했는지 최대한 이해하려고 해본다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "데이트 계획을 짤 때 내가 연인에게 화나는 이유는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `연인이 데이트 계획 짜는 것에 적극적으로 참여하지 않아서`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `매번 똑같은 지루한 데이트를 요구해서`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인과의 첫 데이트에서 내가 불안한 이유는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "가려 했던 맛집 중 한 곳이 오픈 마감 일정이 명확하게 나와 있지 않아서"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "데이트가 코앞인데 아직 식당 예약을 깜빡해서"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '데이트 당일 식당 예약을 했는데 연인이 갑자기 다른 메뉴가 먹고 싶다고 한다면?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "연인을 설득해서 원래 가려고 했던 식당에 간다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "다른 메뉴도 상관없어서 예약을 취소하고 그 메뉴를 먹자고 한다"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlower/INFP.jpg'
+            },
+        ]
+    },
     // loveSpeedEng
     {
         info : {
