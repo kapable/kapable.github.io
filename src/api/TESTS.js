@@ -103,7 +103,7 @@ const TESTS = [
             },
             {
                 which:"SN",
-                question: "친구가 오늘 말도 없이 강의에 무단결석했다면?내가 더 선호하는 연애는?",
+                question: "친구가 오늘 말도 없이 강의에 무단결석했다면?",
                 answers:[
                     {
                         type: "S",
