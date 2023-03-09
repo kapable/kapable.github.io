@@ -42,17 +42,14 @@ function MainPage(props) {
             {/* Go to CoupleCharacter */}
             {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
             ? (
-                <Link to={(props.lang === 'Kor' || props.lang === 'Others') ? '/coupleCharacter/' : `/coupleCharacter${props.lang}`} className="main-link-block" key="coupleCharacter-banner">
-                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter${props.lang === 'Kor' ? '' : props.lang}-thumb.png`} alt='coupleCharacter' />
+                <Link to={'/coupleCharacter/'} className="main-link-block" key="coupleCharacter-banner">
+                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter-thumb.png`} alt='coupleCharacter' />
                 </Link>
-            ) : null}
-
-            {/* Life Interpreting Luck */}
-            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
-                <Link to='/lifeInterpreting/' className="main-link-block" key="lifeInterpreting-banner">
-                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/lifeInterpreting-thumb.png`} alt="lifeInterpreting" />
+            ) : (
+                <Link to={`/coupleCharacter${props.lang}`} className="main-link-block" key="coupleCharacter-banner">
+                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter${props.lang}-thumb.png`} alt='coupleCharacter' />
                 </Link>
-            ) : null}
+            )}
 
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
@@ -83,6 +80,13 @@ function MainPage(props) {
                 })}
             </div>
 
+            {/* Life Interpreting Luck */}
+            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
+                <Link to='/lifeInterpreting/' className="main-link-block" key="lifeInterpreting-banner">
+                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/lifeInterpreting-thumb.png`} alt="lifeInterpreting" />
+                </Link>
+            ) : null}
+
             {/* Lifetime SAJU */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
                 <Link to='/lifetimeSaju/' className="main-link-block" key="lifetimeSaju-banner">
@@ -100,10 +104,14 @@ function MainPage(props) {
             {/* Go to LoveCharacter */}
             {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
             ? (
-                <Link to={(props.lang === 'Kor' || props.lang === 'Others') ? '/loveCharacter/' : `/loveCharacter${props.lang}`} className="main-link-block" key="loveCharacter-banner">
-                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang === 'Kor' ? '' : props.lang}-thumb.png`} alt='loveCharacter' />
+                <Link to={'/loveCharacter/'} className="main-link-block" key="loveCharacter-banner">
+                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png`} alt='loveCharacter' />
                 </Link>
-            ) : null}
+            ) : (
+                <Link to={`/loveCharacter${props.lang}`} className="main-link-block" key="loveCharacter-banner">
+                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang}-thumb.png`} alt='loveCharacter' />
+                </Link>
+            )}
             
 
             {/* Main Test Banners(Middle) */}
