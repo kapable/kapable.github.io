@@ -71414,27 +71414,27 @@ const TESTS = [
             },
             {
                 which:"EI",
-                question: '요거트 먹을 때 뚜껑에 묻은 요거트를 나는?',
+                question: '톡을 보냈는데 오타가 났다면?',
                 answers:[
                     {
                         type: "",
                         score: 0,
-                        content: '습관처럼 핥아먹는다'
+                        content: '삭제하고 다시 적는다'
                     },
                     {
                         type: "",
                         score: 1,
-                        content: '아무 생각없이 쿨 하게 버린다'
+                        content: '그대로 놔둔다 '
                     },
                     {
                         type: "",
                         score: 0,
-                        content: '고민하다가 아까워서 핥아먹는다'
+                        content: '미안하다고 사과하고 다시 적는다'
                     },
                     {
                         type: "",
                         score: 0,
-                        content: '안 좋은 성분이 있을 것 같아서 버린다'
+                        content: '오타 난 부분만 따로 적어 놓는다'
                     },
                 ],
             },
@@ -71727,27 +71727,27 @@ const TESTS = [
             },
             {
                 which:"EI",
-                question: '요거트 먹을 때 뚜껑에 묻은 요거트를 나는?',
+                question: '톡을 보냈는데 오타가 났다면?',
                 answers:[
                     {
                         type: "",
                         score: 0,
-                        content: '습관처럼 핥아먹는다'
+                        content: '삭제하고 다시 적는다'
                     },
                     {
                         type: "",
                         score: 1,
-                        content: '아무 생각없이 쿨 하게 버린다'
+                        content: '그대로 놔둔다 '
                     },
                     {
                         type: "",
                         score: 0,
-                        content: '고민하다가 아까워서 핥아먹는다'
+                        content: '미안하다고 사과하고 다시 적는다'
                     },
                     {
                         type: "",
                         score: 0,
-                        content: '안 좋은 성분이 있을 것 같아서 버린다'
+                        content: '오타 난 부분만 따로 적어 놓는다'
                     },
                 ],
             },
