@@ -70865,6 +70865,632 @@ const TESTS = [
             },
         ]
     },
+    // haGenderFemale
+    {
+        info : {
+            mainTitle:"하남자 하여자 테스트 - 남자편 | 여자편",
+            subTitle:"나는 과연 몇% 확률로 하남자/하여자 일까? - 남자편 | 여자편",
+            mainUrl:"haGenderFemale",
+            scoreType:"numberScoring",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"",
+                question: '요거트 먹을 때 뚜껑에 묻은 요거트를 나는?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '습관처럼 핥아먹는다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '아무 생각없이 쿨 하게 버린다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '고민하다가 아까워서 핥아먹는다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '안 좋은 성분이 있을 것 같아서 버린다'
+                    },
+                ],
+            },
+            {
+                which:"",
+                question: '눈물 나게 매운 음식을 먹는다면?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '우유를 찾는다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '중독성 있어서 오히려 좋다 이겨낸다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '물을 찾는다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '입에다가 찬물을 갖다 댄다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '가을(9월~11월)과 봄(3월~6월)에 나는?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '에어컨과 히터를 사용한다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '에어컨과 히터는 쳐다도 안 본다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '선풍기와 전기난로를 사용한다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '상황에 따라 에어컨과 히터를 사용한다 '
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '전에 만나던 X에게 전화가 온다면?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '무슨 말 할지 궁금해서 받는다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '진작에 차단해서 전화 올 일 없다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '받아서 욕을 하거나 화를 낸다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '모솔이라 해당 사항 없다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '상대방에게는 곤란하지만 하고 싶은 말이 있을 때 나는?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '돌려서 말한다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '바로 말한다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '그냥 말하지 않는다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '고민하다가 나중에 말한다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '나는 불의를 본다면?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '쳐다는 보지만 그냥 지나친다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '못 참지! 바로 참교육하러 간다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '괜히 불똥 튈 까봐 몸을 사린다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '도망치듯 지나간다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '거울을 봤을 때 나는?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '솔직히 평타는 치는 것 같다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '세상에서 내가 제일 예쁘고 잘 생겼다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '나는 조금 못난 것 같다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '솔직히 평타 이상인 것 같다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '내가 놀라는 소리는?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '풍선이 터지는 소리'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '친구의 ㄱ소리'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '사람 비명소리'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '총소리'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '요거트 먹을 때 뚜껑에 묻은 요거트를 나는?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '습관처럼 핥아먹는다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '아무 생각없이 쿨 하게 버린다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '고민하다가 아까워서 핥아먹는다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '안 좋은 성분이 있을 것 같아서 버린다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '부모님에게 혼난 후 나의 행동은?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '방문 세게 닫음'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '그냥 아무렇지 않게 내 할거함'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '집 나감'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '씩씩댐'
+                    },
+                ],
+            },
+        ],
+        results:[
+            {
+                type: "",
+                desc: ``,
+                query: "rntlqrn",
+                score_range:range(3),
+                img_src:'https://images.ktestone.com/resultImages/haGenderFemale/1.jpg'
+            },
+            {
+                type: "",
+                desc: ``,
+                query: "vkftlq",
+                score_range:range(3, 6),
+                img_src:'https://images.ktestone.com/resultImages/haGenderFemale/2.jpg'
+            },
+            {
+                type: "",
+                desc: ``,
+                query: "dbrtlqdh",
+                score_range:range(6, 7),
+                img_src:'https://images.ktestone.com/resultImages/haGenderFemale/3.jpg'
+            },
+            {
+                type: "",
+                desc: ``,
+                query: "dltlqdh",
+                score_range:range(7, 9),
+                img_src:'https://images.ktestone.com/resultImages/haGenderFemale/4.jpg'
+            },
+            {
+                type: "",
+                desc: ``,
+                query: "dlfvmfh",
+                score_range:range(9, 11),
+                img_src:'https://images.ktestone.com/resultImages/haGenderFemale/5.jpg'
+            }
+        ]
+    },
+    // haGenderMale
+    {
+        info : {
+            mainTitle:"하남자 하여자 테스트 - 남자편 | 여자편",
+            subTitle:"나는 과연 몇% 확률로 하남자/하여자 일까? - 남자편 | 여자편",
+            mainUrl:"haGenderMale",
+            scoreType:"numberScoring",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"",
+                question: '요거트 먹을 때 뚜껑에 묻은 요거트를 나는?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '습관처럼 핥아먹는다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '아무 생각없이 쿨 하게 버린다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '고민하다가 아까워서 핥아먹는다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '안 좋은 성분이 있을 것 같아서 버린다'
+                    },
+                ],
+            },
+            {
+                which:"",
+                question: '눈물 나게 매운 음식을 먹는다면?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '우유를 찾는다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '중독성 있어서 오히려 좋다 이겨낸다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '물을 찾는다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '입에다가 찬물을 갖다 댄다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '가을(9월~11월)과 봄(3월~6월)에 나는?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '에어컨과 히터를 사용한다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '에어컨과 히터는 쳐다도 안 본다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '선풍기와 전기난로를 사용한다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '상황에 따라 에어컨과 히터를 사용한다 '
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '전에 만나던 X에게 전화가 온다면?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '무슨 말 할지 궁금해서 받는다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '진작에 차단해서 전화 올 일 없다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '받아서 욕을 하거나 화를 낸다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '모솔이라 해당 사항 없다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '상대방에게는 곤란하지만 하고 싶은 말이 있을 때 나는?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '돌려서 말한다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '바로 말한다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '그냥 말하지 않는다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '고민하다가 나중에 말한다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '나는 불의를 본다면?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '쳐다는 보지만 그냥 지나친다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '못 참지! 바로 참교육하러 간다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '괜히 불똥 튈 까봐 몸을 사린다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '도망치듯 지나간다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '거울을 봤을 때 나는?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '솔직히 평타는 치는 것 같다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '세상에서 내가 제일 예쁘고 잘 생겼다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '나는 조금 못난 것 같다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '솔직히 평타 이상인 것 같다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '내가 놀라는 소리는?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '풍선이 터지는 소리'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '친구의 ㄱ소리'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '사람 비명소리'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '총소리'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '요거트 먹을 때 뚜껑에 묻은 요거트를 나는?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '습관처럼 핥아먹는다'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '아무 생각없이 쿨 하게 버린다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '고민하다가 아까워서 핥아먹는다'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '안 좋은 성분이 있을 것 같아서 버린다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: '부모님에게 혼난 후 나의 행동은?',
+                answers:[
+                    {
+                        type: "",
+                        score: 0,
+                        content: '방문 세게 닫음'
+                    },
+                    {
+                        type: "",
+                        score: 1,
+                        content: '그냥 아무렇지 않게 내 할거함'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '집 나감'
+                    },
+                    {
+                        type: "",
+                        score: 0,
+                        content: '씩씩댐'
+                    },
+                ],
+            },
+        ],
+        results:[
+            {
+                type: "",
+                desc: ``,
+                query: "rntlqrn",
+                score_range:range(3),
+                img_src:'https://images.ktestone.com/resultImages/haGenderMale/1.jpg'
+            },
+            {
+                type: "",
+                desc: ``,
+                query: "vkftlq",
+                score_range:range(3, 6),
+                img_src:'https://images.ktestone.com/resultImages/haGenderMale/2.jpg'
+            },
+            {
+                type: "",
+                desc: ``,
+                query: "dbrtlqdh",
+                score_range:range(6, 7),
+                img_src:'https://images.ktestone.com/resultImages/haGenderMale/3.jpg'
+            },
+            {
+                type: "",
+                desc: ``,
+                query: "dltlqdh",
+                score_range:range(7, 9),
+                img_src:'https://images.ktestone.com/resultImages/haGenderMale/4.jpg'
+            },
+            {
+                type: "",
+                desc: ``,
+                query: "dlfvmfh",
+                score_range:range(9, 11),
+                img_src:'https://images.ktestone.com/resultImages/haGenderMale/5.jpg'
+            }
+        ]
+    },
 ];
 
 export default TESTS;

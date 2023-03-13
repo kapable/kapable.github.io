@@ -39,6 +39,16 @@ function MainPage(props) {
                 </a>
             ) : null}
 
+            {/* Go to HaGender */}
+            {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
+            ? (
+                <Link to={'/haGender/'} className="main-link-block" key="haGender-banner">
+                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/haGender-thumb.png`} alt='haGender' />
+                </Link>
+            ) : (
+                null
+            )}
+
             {/* Go to CoupleCharacter */}
             {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
             ? (

@@ -85,7 +85,7 @@ class Intro extends Component {
     }
     componentDidMount(){
         // go to quiz mode when TONYMOLY factPok contents start
-        let dualQueries = ["coupleCharacterCN", "coupleCharacterMaleCN", "coupleCharacterFemaleCN", "coupleCharacterEng", "coupleCharacterMaleEng", "coupleCharacterFemaleEng", "coupleCharacterMale", "coupleCharacterFemale", "factPok", "MyFactPok", "FriendFactPok", "loveCharacter", "loveCharacterFemale", "loveCharacterMale", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN", "loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer", "loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES"];
+        let dualQueries = ["haGender", "haGenderMale", "haGenderFemale", "coupleCharacterCN", "coupleCharacterMaleCN", "coupleCharacterFemaleCN", "coupleCharacterEng", "coupleCharacterMaleEng", "coupleCharacterFemaleEng", "coupleCharacterMale", "coupleCharacterFemale", "factPok", "MyFactPok", "FriendFactPok", "loveCharacter", "loveCharacterFemale", "loveCharacterMale", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN", "loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer", "loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES"];
         if(dualQueries.some(el => this.state.quiz_url.includes(el))) {
             this.setState({
                 mode:"quiz"

@@ -265,6 +265,9 @@ class App extends Component {
       <Router basename='/kapable.github.io/'>
         <ScrollToTop>
           <Switch>
+            {/* go to "HaGender" page */}
+            <Route path="/haGender/" component={() => <TwoSplitedIntro test={"haGender"} lang={'Kor'} info={{ title: "하남자 하여자 테스트 - 남자편 | 여자편 - 케이테스트", subTitle: "나는 과연 몇% 확률로 하남자/하여자 일까? - 남자편 | 여자편 - 케이테스트" }} />} />
+
             {/* go to "CoupleCharacter" page */}
             <Route path="/coupleCharacter/" component={() => <TwoSplitedIntro test={"coupleCharacter"} lang={'Kor'} info={{ title: "커플 캐릭터 테스트 - 케이테스트", subTitle: "커플 캐릭터로 보는 나의 연애 성향은? - 커플 캐릭터 테스트 여자편 남자편 - 케이테스트" }} />} />
             <Route path="/coupleCharacterEng/" component={() => <TwoSplitedIntro test={"coupleCharacter"} lang={'Eng'} info={{ title: "Couple character test - Male | Female - KTEST", subTitle: "Your dating personality as couple character? - Male | Female - KTEST" }} />} />

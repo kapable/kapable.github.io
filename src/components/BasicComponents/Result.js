@@ -55,7 +55,7 @@ class Result extends Component {
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
             isOpened: false,
-            originAdProb: 0.5 < Math.random(),
+            originAdProb: 0.6 < Math.random(),
             adProb: 1.1 >= Math.random(),
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
@@ -108,6 +108,7 @@ class Result extends Component {
         let loveCharacterEngQueries = ["loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng"];
         let loveCharacterGerQueries = ["loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer"];
         let loveCharacterESQueries = ["loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES"];
+        let haGenderQueries = ["haGender", "haGenderFemale", "haGenderMale"];
         if(factPokQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/factPok/";
         };
@@ -128,6 +129,9 @@ class Result extends Component {
         };
         if(loveCharacterESQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/loveCharacterES/";
+        };
+        if(haGenderQueries.some(el => this.state.current_url.includes(el))) {
+            window.location.href = window.location.origin + "/kapable.github.io/haGender/";
         };
         this._eventSenderGA("Paging", "Click Re-test Button", "result page");
         this.setState({
@@ -356,7 +360,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let coupleCharacterEngList = ["coupleCharacterEng", "coupleCharacterMaleEng", "coupleCharacterFemaleEng"];
-        let loveCharacterList = ["loveCharacter", "loveCharacterFemale", "loveCharacterMale"];
+        let haGenderList = ["haGender", "haGenderFemale", "haGenderMale"];
         let loveUniversityList = ["loveUniversity"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
@@ -478,8 +482,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (loveCharacterList.includes(this.state.current_test)) {
-            const rederTestList = ["meGuide", "paints", "memo", "smileColorTest", "lovejewerly", "holidayLove", "proud", "despicable", "orbuculum"];
+        } else if (haGenderList.includes(this.state.current_test)) {
+            const rederTestList = ["loveCharacter", "meGuide", "paints", "memo", "smileColorTest"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -719,7 +723,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["loveUniversity", "loveSpringFlower", "loveSpeed", "shootingStar", "chatGPTCharacteristic", "lifetimeSaju",];
+            const rederTestList = ["haGender", "loveUniversity", "loveSpringFlower", "lifetimeSaju",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
