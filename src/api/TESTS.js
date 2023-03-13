@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveSpringFlowerCN
+    {
+        info : {
+            mainTitle:"恋爱春季花卉测试",
+            subTitle:"通过春季开放的花朵来看我的恋爱风格是？",
+            mainUrl:"loveSpringFlowerCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveSpringFlowerCN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveSpringFlowerCN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"CN",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '与他人聊天时我会？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '开朗热情地主导整个聊天'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '认真地参与进聊天并积极地与大家产生共鸣'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "遇到心仪的对象时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "主动告诉对方自己的心意，然后计划约会日期"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "同意对方的意见，根据具体情况给予相应的反应"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "和恋人之间产生问题时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `话语变得越来越多`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `心思越来越繁多`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "那些恋人的举动会让我很难理解？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `明明让我去睡却一直联系的恋人`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `说自己很困，然后毫无任何回复就先入睡的恋人`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "我更喜欢的恋爱风格是？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "思考未来的恋爱"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `忠实于现今的恋爱`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "如果恋人的举动突然和平时不同时，我会想？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `为什么突然会这样？（真是的，干嘛要这样？`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `发生什么事了吗？（不停地想象）`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `朋友向我诉说有关恋人的不满时，我的反应是？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "听到最后，然后明确地思考不对的地方，再表达自己的意见"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "听到最后觉得双方都有理，但也会先站在朋友这边"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "朋友说和交往很久的恋人分手了时我会？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `啊，你们俩分了啊？为什么？`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "额..怎么是好..你没事吧？"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `当恋人做出让我无法理解的举动时我会？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "无法理解为什么会做出这种举动，所以直接问恋人"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "尽最大的努力去理解恋人为什么会做出这种举动"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "计划约会时让我跟恋人发火的理由是？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `恋人不主动和我一起计划约会`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `每次都要求一样无聊的约会`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "和恋人初次约会时让我不满的理由是？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "准备去的一家美食餐厅的营业时间不准确"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "马上就要去约会了，却还没有预约好餐厅"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '约会当天预约了餐厅，结果恋人却说自己想吃别的时我会？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "说服恋人，还是去预约好的餐厅"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "吃别的也无所谓，取消预约去恋人想吃的餐厅"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerCN/INFP.jpg'
+            },
+        ]
+    },
     // loveUniversity
     {
         info : {
