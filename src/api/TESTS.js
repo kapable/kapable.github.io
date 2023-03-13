@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveSpringFlowerEng
+    {
+        info : {
+            mainTitle:"Spring petal love test",
+            subTitle:"What is your style of love compared to petals that bloom in spring?",
+            mainUrl:"loveSpringFlowerEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveSpringFlowerEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveSpringFlowerEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'How do you communicate with people?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '开I lead conversations enthusiastically.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I have a sincere and active conversation while empathizing.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What do you do when you meet someone you like?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I actively express my thoughts and try to make an appointment with that person"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I tend to agree with the other person's opinion and react appropriately to the situation."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What do you do when you have a problem with your lover?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `话I tend to talk a lot.`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I tend to have a lot of thoughts.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Which situation is more difficult to understand your lover's behavior?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `It's hard for me to understand my lover who says good night but keeps talking without sleeping.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `It's hard to understand my lover who says he's sleepy and goes to sleep without replying.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Which relationship do you prefer?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "A relationship thinking about the future"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `A relationship faithful to the present`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If your lover suddenly does unusual things, what can be your reaction?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Why? All of sudden? (what’s wrong with you?)`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `What happened? (I'll imagine this and that endlessly)`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `If your friend complaints about his/her lover, what can be your reaction?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I listen to the end, think clearly, and give my opinion."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "After listening to the end, I understand the situation, but for now, I sympathize with the friend next to me."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If your friend broke up with a long-time lover what can be your reaction?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Oh well, why? `
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Oh my god, are you okay now?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What do you do when your lover does something crazy?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I will ask why my love did that."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I will try understanding why my lover did it."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What can upset you when planning a date with your lover?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `It can be upsetting if my lover isn't proactive about making plans.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `It can be upsetting if my lover wants to have the same boring date every time.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What can make you anxious on the first date?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I feel anxious when the restaurant we are going to visit does not have business hours specified."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I get anxious when I forget to make a reservation at a restaurant."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'If your lover suddenly wants to eat a different menu than you planned, how would you react?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I would persuade my lover to go to the restaurant we originally intended to go to."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "As I don't care, it is okay to change the menu."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpringFlowerEng/INFP.jpg'
+            },
+        ]
+    },
     // loveSpringFlowerCN
     {
         info : {
