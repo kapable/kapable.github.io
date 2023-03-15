@@ -360,8 +360,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let loveSpringFlowerEngList = ["loveSpringFlowerEng"];
-        let haGenderList = ["haGender", "haGenderFemale", "haGenderMale"];
-        let loveUniversityList = ["loveUniversity"];
+        let cantWaitList = ["cantWait"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -482,32 +481,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (haGenderList.includes(this.state.current_test)) {
-            const rederTestList = ["loveCharacter", "meGuide", "paints", "memo", "smileColorTest"];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (loveUniversityList.includes(this.state.current_test)) {
-            const rederTestList = ["loveSpringFlower", "shootingStar", "chatGPTCharacteristic", "lifeInterpreting", "thatDiary"];
+        } else if (cantWaitList.includes(this.state.current_test)) {
+            const rederTestList = ["haGender", "loveCharacter", "meGuide", "paints", "memo", "smileColorTest"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -723,7 +698,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["haGender", "loveUniversity", "loveSpringFlower", "lifetimeSaju",];
+            const rederTestList = ["cantWait", "haGender", "loveUniversity", "loveSpringFlower", "lifetimeSaju",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
