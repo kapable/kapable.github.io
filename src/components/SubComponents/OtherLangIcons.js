@@ -2628,6 +2628,34 @@ export default function OtherLangIcons(props) {
         }
     };
 
+    function cantWaitTestLinkRenderer(){
+        if(props.currentTest === "cantWait") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/cantWaitCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
+                </div>
+            )
+        } else if(props.currentTest === "cantWaitCN") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/cantWait/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                </div>
+            )
+        }
+    };
+
     return (
         <Fragment>
             {factBTILinkRenderer()}
@@ -2658,6 +2686,7 @@ export default function OtherLangIcons(props) {
             {speechHabitTestLinkRenderer()}
             {coupleCharacterTestLinkRenderer()}
             {loveSpringFlowerTestLinkRenderer()}
+            {cantWaitTestLinkRenderer()}
         </Fragment>
     );
 };

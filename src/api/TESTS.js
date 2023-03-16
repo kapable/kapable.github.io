@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // cantWaitCN
+    {
+        info : {
+            mainTitle:"这我可忍受不了测试",
+            subTitle:"通过MBTI了 解我无法忍受的情况",
+            mainUrl:"cantWaitCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/cantWaitCN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/cantWaitCN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"CN",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '我最忍受不了的情况是？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '人数较多气氛很尴尬的聚会'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '一瞬间太多人突然关注我'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "有话想对大家说的时候我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "直截了当地口头来传达我想说的话"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "通过短信、SNS等渠道用文字传达我想说的话"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "对于朋友而言我是？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `会主动联络对方的类型`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `等待对方主动联络我的类型`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "发呆时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `什么都不想`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `虽然心想着别胡思乱想，但也停止不下来忧虑的心`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "长途开车的时候堵车特别严重的话我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "心想这车也太堵了吧…是出什么事了吗？难道是出车祸了？"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `想象自己在堵塞的车道中央自由行驶的情景`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "观看电影、电视剧的时候我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `集中观察演员的情感和演技`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `探寻编剧和导演想传递的意思, 或者想象结局之后的内容`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `朋友联络我说自己很累的时候我会？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "先问他发生了什么事情，然后再安慰他"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "先安慰他，然后再问发生了什么事情"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "原谅约会迟到的朋友的原因是？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `因为听到了不得不迟到的合理原因`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "因为朋友一到就立马道歉了"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `观看悲剧或电影的时候我会？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "虽然有时候也会过于伤感而流泪，但也是一瞬间的事儿"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "忍不住眼泪，情绪停留时间很长"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "朋友聚会要转移到另一个场所的时候我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `先决定好要去哪，然后再出发`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `先出发，然后再决定去哪里`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "去家门口新开的餐厅吃饭，发现有生以来从未吃过的菜品时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "虽然挺好奇的，但不知道是什么味道，所以还是选自己想好要吃的菜品"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "反正也没想好要吃什么，既然好奇就尝尝新"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '点菜的时候我会？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "很容易选好菜品"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "点菜往往需要很久的时间"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitCN/INFP.jpg'
+            },
+        ]
+    },
     // cantWait
     {
         info : {
