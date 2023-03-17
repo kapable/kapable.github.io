@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // cantWaitEng
+    {
+        info : {
+            mainTitle:`"I can't stand this" test`,
+            subTitle:"Things you can't stand through MBTI?",
+            mainUrl:"cantWaitEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/cantWaitEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/cantWaitEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'Which one is more unbearable to you?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Awkward atmosphere when there are many people around'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'The moment a lot of people focus on me.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What methods do you use when you need to communicate with people?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I like face-to-face and direct communication."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I prefer to communicate in writing using text or social media."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "How do you contact your friends?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I prefer to contact my friends first.`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `My friends tend to contact me first.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Do you think when you spacing out?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I can think nothing.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I can't stop thinking even when I shouldn't.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If your car gets too stuck during a long drive, what can be your reaction?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Oh, traffic jam again. What's going on? Had an accident?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I would imagine the road is open in the middle of a traffic jam and I am driving.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you focus on when watching dramas or movies?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I focused on the emotions and acting of the characters.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I find the meaning the writer or director wants to say or imagine what will happen after the ending.`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What do you do when your friend calls you saying they are having a hard time?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I ask why first and comfort."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I comfort first and ask why."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If you forgive a friend who is late for an appointment, what can be the reason?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Because there are good reasons for being late.`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Because I hear a quick apology right away."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What do you do when you watch a sad drama or movie?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "There are times when I shed tears because I am sad, but only for a moment."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I can't hold back my tears and my emotions linger."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you do when you have to go somewhere else from a gathering with friends?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I prefer to decide next place first and leave. `
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `It's okay to go out and decide later.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "If you go to a new restaurant in front of your house and there is a menu that you have never seen before, what would be your reaction?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I'm curious but I'm not sure what to eat, so I choose a menu I've thought of beforehand."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I am not sure what to eat, so I would just try anything."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'How do you choose your food?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I make decisions easily."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I take a long time to decide on the menu"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cantWaitEng/INFP.jpg'
+            },
+        ]
+    },
     // cantWaitCN
     {
         info : {
