@@ -39,30 +39,6 @@ function MainPage(props) {
                 </a>
             ) : null}
 
-            {/* Go to HaGender */}
-            {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
-            ? (
-                <Link to={'/haGender/'} className="main-link-block" key="haGender-banner">
-                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/haGender-thumb.png`} alt='haGender' />
-                </Link>
-            ) : (
-                null
-            )}
-
-            {/* Go to CoupleCharacter */}
-            {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
-            ? (
-                <Link to={'/coupleCharacter/'} className="main-link-block" key="coupleCharacter-banner">
-                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter-thumb.png`} alt='coupleCharacter' />
-                </Link>
-            ) : (
-                (props.lang === 'Eng' || props.lang === 'CN')
-                ? <Link to={`/coupleCharacter${props.lang}`} className="main-link-block" key="coupleCharacter-banner">
-                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter${props.lang}-thumb.png`} alt='coupleCharacter' />
-                </Link>:null
-                
-            )}
-
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
                 {props.all_tests_url.slice(0,2).map((item, idx)=>{
@@ -91,6 +67,30 @@ function MainPage(props) {
                     };
                 })}
             </div>
+
+            {/* Go to HaGender */}
+            {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
+            ? (
+                <Link to={'/haGender/'} className="main-link-block" key="haGender-banner">
+                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/haGender-thumb.png`} alt='haGender' />
+                </Link>
+            ) : (
+                null
+            )}
+
+            {/* Go to CoupleCharacter */}
+            {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
+            ? (
+                <Link to={'/coupleCharacter/'} className="main-link-block" key="coupleCharacter-banner">
+                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter-thumb.png`} alt='coupleCharacter' />
+                </Link>
+            ) : (
+                (props.lang === 'Eng' || props.lang === 'CN')
+                ? <Link to={`/coupleCharacter${props.lang}`} className="main-link-block" key="coupleCharacter-banner">
+                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter${props.lang}-thumb.png`} alt='coupleCharacter' />
+                </Link>:null
+                
+            )}
 
             {/* Life Interpreting Luck */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (

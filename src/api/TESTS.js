@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // onFire
+    {
+        info : {
+            mainTitle:"폼 미쳤다! 테스트",
+            subTitle:"MBTI로 보는 나의 폼 근황은?",
+            mainUrl:"onFire",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/onFire-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/onFire-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '둘 중 내가 더 잘하는 것은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '나는 모임을 주도하는 것을 잘하는 것 같다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '나는 혼자 재밌게 노는 것을 잘하는 것 같다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "둘 중 나의 의견을 전달할 때 더 폼이 좋다고 생각하는 것은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "사람들 앞에서 직접 말로 내 의견을 전달하는 것"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "나의 의견을 글로 작성하고 사람들에게 전달하는 것"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "내가 더 기 빨리는 상황은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `핵아싸들 사이에 있기`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `핵인싸들 사이에 있기`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "조립해야 하는 제품을 조립할 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `무조건 설명서를 보고 조립을 한다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `일단 설명서 없이 감으로 조립을 시도한다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "음악을 들을 때 내가 먼저 신경 쓰는 순서는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "멜로디가 먼저 가사가 다음"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `가사가 먼저 멜로디가 다음`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 놀이기구를 무서워하는 이유는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `그냥 겁이 많다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `놀이 기구를 타고 떨어지는 상상을 많이 한다`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `친구가 나랑 안 맞는 것 같다고 한다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "왜 그렇게 생각하는데? 하며 궁금해한다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "마음에 상처를 받고 혼자 생각에 빠진다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "무언가 해냈을 때 내가 더 듣고 싶은 칭찬은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `와 폼 미쳤네! 역시 악마의 재능..ㄷㄷ `
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "고생한 만큼 엄청 잘 했다 수고 많았어!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `내가 더 잘하는 것은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "무언가를 알려주고, 문제 해결에 도움을 주는 것"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "감정적으로 공감을 해주고, 챙겨 주는 것"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "사고 싶었던 물건을 구매할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `미리 찾아서 꼼꼼히 따져보고 구매한다`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `상황에 맞춰서 유연하게 구매를 결정한다`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "내가 희열을 느끼는 부분은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "계획했던 부분을 끝까지 완벽하게 마무리를 잘하는 것"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "갑자기 생긴 문제를 임기응변으로 잘 수습했을 때"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '내가 더 불편한 상황은?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "계획을 미리 세워놓았는데 수정해야 할 일이 생기는 것"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "중간에 더 좋은 길을 찾아도 계획대로 쭉 실행해야 하는 것"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/onFire/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/onFire/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/onFire/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/onFire/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/onFire/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/onFire/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/onFire/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/onFire/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/onFire/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/onFire/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/onFire/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/onFire/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/onFire/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/onFire/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/onFire/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/onFire/INFP.jpg'
+            },
+        ]
+    },
     // cantWaitEng
     {
         info : {
