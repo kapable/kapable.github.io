@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // springPicninc
+    {
+        info : {
+            mainTitle:"봄 소풍 테스트",
+            subTitle:"내 소풍 스타일은 어떨까?",
+            mainUrl:"springPicninc",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/springPicninc-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/springPicninc-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "etc"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '둘 중 더 힐링 되는 소풍 스타일을 고르라면?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '친구들과 우르르 함께 가서 게임하고 노는 피크닉'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '친한 친구와 돗자리 펴고 대화하면서 쉬는 피크닉'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "주말에 야외로 소풍을 가자고 한다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "날도 좋은데 피크닉 좋다! 가보자잇!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "살짝 귀찮달까.. 갈지 말지 고민됨"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "즐거웠던 소풍이 끝나고 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `이제 다른 데 가서 놀고 싶음`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `이제 집에 가서 쉬고 싶음`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "도시락을 쌀 때 드는 내 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `나 소질 있네 맛있게 잘 싼 듯!`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `너무 맛있어서 애들이 기절하면 어쩐담`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "소풍 가기 전날 나의 모습은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "소풍 재밌겠당 도시락 맛있겠당"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `늦잠 자서 도시락 못 싸고 허둥거리는 내 모습이 상상됨`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "친구가 소풍 어땠냐고 물어보면 내 대답은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `꽃도 예쁘고 날씨도 좋았어 근데 사람 무지 많더라`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `거기 분위기 너무 좋고 낭만 그 잡채~ `
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `필요한 물품을 살 때 내 모습은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "소풍 바구니 한번 쓰고 안 쓸 거잖아 사지 말자"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "저 소풍 바구니도 사야 댐 갬성템이라구"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 ‘도시락 대충 싼 것 같은데 되게 맛있다’ 라고 하면 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `그치 야무지게 잘 싸왔지! 나 좀 재능 있는 듯`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "대충 아냐.. 일찍 일어나서 되게 열심히 싸온 건데?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `친구가 ‘아침부터 도시락 싸느라고 힘들었어’ 라고 하면 내 대답은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "도시락 메뉴 뭔데? 한번 볼래!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "아침부터 고생했겠다ㅜ 도시락 맛있을 거 같은데??"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나의 약속을 잡는 방식은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `몇 시에 만나서 뭘 하고 끝나면 몇 시니깐 어쩌구저쩌구`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `일단 만나서 정하자 소풍 갈래?`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "갑자기 지금 소풍을 떠나자고 한다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "지금?? 무작정 어떻게 가? 담에 계획 잡고 가야지"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "소풍 좋지! 일단 가보자 여기 어때?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '소풍 장소에 돗자리 펼 자리가 없다면?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "이러면 내 계획에 차질이 생기는데 아 스트레스"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "아 큰일이네 그냥 딴 데 갈까?"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/springPicninc/INFP.jpg'
+            },
+        ]
+    },
     // onFire
     {
         info : {
