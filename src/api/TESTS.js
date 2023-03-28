@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveSpicyCN
+    {
+        info : {
+            mainTitle:"麻辣味恋爱测试",
+            subTitle:"我的恋爱究竟有辣？",
+            mainUrl:"loveSpicyCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveSpicyCN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveSpicyCN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"CN",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '会看异性的哪个部分？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '比起性格外貌更重要'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '比起外貌性格更重要'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "恋人做或说了讨厌的事情时会?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "会立即说想说的话"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "会先整理逻辑后慢慢说或写段话"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "走路时，有陌生的异性搭讪会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `可以很自然的聊天并变得亲近`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `警惕心变重，说话会卡壳`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "我希望的恋人类型是？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `比起未来更注重现在关系的恋人`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `比起现在更注重未来并设想的恋人`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "在恋爱关系，我属于？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "会先说想做什么的情况更多"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `同意恋人的意见，想着可不可行之后回答的情况更多`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "和恋人聊回忆时，我属于？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `会很清晰的记得当时的场景、天气、时间及氛围`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `会把当时的回忆比喻成某个东西`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `两个朋友突然吵起来，我会？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "听完两个朋友的话后，提出建议"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "先拦住他们之后聆听"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "在正在准备的考试中，恋人合格了的话会？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `哇，不愧是你！恭喜你！就知道你会一次考上！`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "哇，真不错，认真学习还是很有用的！"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `朋友说看到了跟我说在工作的恋人和其他异性玩耍时，我会？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "想确认现场照片，让朋友马上拍照发过来"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "感到背叛，马上问是哪里之后冲过去"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "和恋人为旅行做准备时，我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `会准确知道需要的东西过后整理`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `感觉什么都需要，所以需要整理的东西很多`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "在与恋人约会前，我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "会事前定好衣服与要去的地方"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "粗略定好要去哪里后，享受即兴约会"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '和恋人逛百货商店时，我会？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "就算是漂亮的东西或是衣服，如果在计划外就不会购买"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "会冲动购买漂亮的东西或衣服"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyCN/INFP.jpg'
+            },
+        ]
+    },
     // loveInMyHead
     {
         info : {
