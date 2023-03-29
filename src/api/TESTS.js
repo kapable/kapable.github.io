@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveInMyHeadEng
+    {
+        info : {
+            mainTitle:"Love test in your head",
+            subTitle:"What's on your mind when you're dating?",
+            mainUrl:"loveInMyHeadEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveInMyHeadEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveInMyHeadEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What do you do when you learn that you like each other?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I quietly start talking about our relationship.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I'm afraid to talk first, so I'll just wait.`
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What kind of person do you like more?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Someone who is different from me and can share a different experience."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Someone I feel comfortable with when I'm with them."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What do you expect from your lover when you are depressed at home?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I expect my lover to take me out and do something together.`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I expect my lover to wait until I clear my mind and overcome my depression.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If you were to cook porridge when your lover was sick, what would you make?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I would make it with the porridge recipe from internet.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I would cook porridge with all my heart and my cooking skills.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you think of when you go to an exhibition and see art works?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I'm curious about the selling price because I think it must be expensive."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I’m curious about why they made these works like this.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If your lover wants to go another way to a restaurant you used to go together, what can be your reaction?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `It would be better to go the original way because it is the best way to get there.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Okay, let's try the other way. We can look around on the way.`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `If your lover struggles and cries, what would you do?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I would try to find quick remedy or solution for that."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I would sympathize and comfort my lover as much as possible."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If your friend does fact attack to you while talking, what can be your reaction?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `You have no right to judge me. Just take care of yourself well.`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "You don't need to mention what I already know."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `If there are a lot of people when you go cherry blossom viewing with your lover, what can be your reaction?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "It looks so beautiful but too crowded. Want to try somewhere else?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Cherry blossoms are really pretty, there are so many people, as expected. Now it's really spring"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What can be your reaction if the appointment time and place suddenly changed in a club activity?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `Oh, I already made a plan, it makes me uncomfortable and angry.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `It's okay if there is a good excuse.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "If someone in a meeting goes off-topic, what can be your reaction?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I may feel very uncomfortable."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "That is fine as long as the new topic is interesting. "
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'How would you react if your lover suddenly came to your house while you were resting?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I'm a bit uncomfortable with sudden visits for whatever reason."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Even a sudden visit is fine as long as there are things interesting or tempting."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveInMyHeadEng/INFP.jpg'
+            },
+        ]
+    },
     // loveSpicyEng
     {
         info : {
