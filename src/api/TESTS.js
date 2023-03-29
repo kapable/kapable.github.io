@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveSpicyEng
+    {
+        info : {
+            mainTitle:"Spiciness test of your love",
+            subTitle:"The spiciness of your love through MBTI!",
+            mainUrl:"loveSpicyEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveSpicyEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveSpicyEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What are the important things for you when observing the opposite sex?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '比I focus more on appearance than personality.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I focus more on personality than looks.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What do you do when your lover does or says something you don't like?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I tend to say everything I want to say at that time."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I organize my thoughts and speak slowly or express them in letters."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What would you do if someone on the street talks to you?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `If I can have a good conversation, I can be friendly. `
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `First of all, I will be alert and I'm afraid I won't be able to speak properly.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What kind of love do you prefer?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `A love that focuses on the present rather than the future.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `A love to focuses on and prepare for the future.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Which of the following applies to you in your relationship?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I often propose to do something."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `After agreeing to my lover's proposal, I give feedback whether it's okay or not.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "How do you remember when you talk about your memories with your lover?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I remember the exact location, weather, time, and atmosphere, etc.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I remember that time compared to something.`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `If two friends of you suddenly fight, what can be your reaction?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "After listening to both sides, I try to come up with a solution."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I will stop fighting and hear what happened."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If your lover passed an exam, what would be your reaction?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `wow! congratulation! I knew you would pass in one go!`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Wow, that's really good, it's worth the hard work, huh!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What would you do if your friend told you that your lover is cheating on you?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I will ask my friend to take a picture of the scene."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I'm angry and I'm going to ask where they are now."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you do when preparing for a trip with your lover?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I prepare what I need exactly.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `I think I need a lot, so I prepare a lot.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you do before a date with your lover?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I tend to decide beforehand where to go and what to wear."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I simply decide where to go and enjoy spontaneous dates."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'What would you do if you went to a department store with your lover?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I would not make impulse purchases even for pretty clothes."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "There are times when I buy pretty things or clothes impulsively."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpicyEng/INFP.jpg'
+            },
+        ]
+    },
     // loveSpicyCN
     {
         info : {
