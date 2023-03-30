@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // emotionGraph
+    {
+        info : {
+            mainTitle:"감정 그래프 테스트",
+            subTitle:"나의 감정 기복을 그래프로 확인해 보자!",
+            mainUrl:"emotionGraph",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/emotionGraph-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/emotionGraph-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '나를 더 괴롭게 하는 상황은 무엇일까?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '며칠 동안 집구석 밖으로 한 발자국도 못 나감'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '며칠 동안 계속 밖에서 밤늦게까지 놀아야 함'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "처음 보는 친구와 단둘이 있게 된다면 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "처음엔 어색해도 말 잘 통하면 어느새 절친되어 있음"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "대화는 하지만 어색한 공기가 흐르고 뭔가 계속 불편"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "오늘 하루 종일 밖에서 신나게 놀았다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `쉬고 싶긴 한데 이미 약속이 꽉 차있음`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `당분간은 집 콕 해야지 날 내버려 두셈`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "친구가 혼자 해외여행을 간다고 하면 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `혼자 가면 재밌음? 어디로 가는데?`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `혼자 갔다가 소매치기나 납치당하는 거 아냐?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "갑자기 급한 일이 있어 먼저 간다는 친구 내 모습은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "나중에 뭔 일인지 얘기해 주겠지"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `뭔 일이지 어떤 급한 일?? 분명 큰일 같은데`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "친구와 놀고 집으로 가는 버스를 기다릴 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `빨리 집 가서 쉬어야지 오늘 재밌었다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `사실은 이미 막차가 떠났던 거지 그럼 집 어케 갈지 의문`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `‘그럴 수 있지’는 주로 어떤 상황일 때 말할까?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "이해가 1도 되지 않지만 대충 대답할 때"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "상대방을 위로할 때나 괜찮다고 말할 때"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 나에게 서운하다고 한다. 내 대답은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `엥 왜지? 그게 왜 어떤 부분이?`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "서운할 수 있겠다 미안해 그럴 의도는 아니었어"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `‘요즘 하루 종일 기분이 오락가락해’라고 하면 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "뭐 사람이 가끔 그럴 수 있지"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "안 그래도 걱정했어.. 요즘 무슨 일 있어??"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "대화 중에 친구가 딴 소리를 한다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `딴 소리 하지 말아 봐 우리 다른 얘기 중이었잖아`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `오 뭔 얘기야? 웃기네ㅋㅋ 근데 우리 뭔 얘기 중이었더라`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구가 갑자기 집으로 놀러 오겠다 하면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "아.. 왜? 지금? (오늘 정해 둔 일정이 있는데.. 불편..)"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "뭐 하게? 할 일 있었는데 내일 하지 뭐 오히려 좋아~"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '외출 전 옷을 고를 때 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "미리 전날에 날씨나 일정을 생각해서 코디 해놔야 편안"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "뭐 입을지 생각해놓긴 했지만 당일 내 기분에 따라 바뀜"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraph/INFP.png'
+            },
+        ]
+    },
     // loveInMyHeadEng
     {
         info : {
