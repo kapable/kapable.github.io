@@ -771,6 +771,7 @@ class Result extends Component {
             { test: "hallInTheWall", coupangLink: "https://link.coupang.com/a/KvzD5" },
             { test: "quokka", coupangLink: "https://link.coupang.com/a/KvzD5" },
             { test: "newYearSemester", coupangLink: "https://link.coupang.com/a/MqiqA" },
+            { test: "cherryBlossomSite", coupangLink: "https://link.coupang.com/a/TtJp6" },
         ];
         const testsArray = othersLink.map(({ test }) => test);
         return (
