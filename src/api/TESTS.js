@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveMagazineCN
+    {
+        info : {
+            mainTitle:"杂志恋爱测试",
+            subTitle:"通过杂志了解我的恋爱风格",
+            mainUrl:"loveMagazineCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveMagazineCN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveMagazineCN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"CN",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '和初次见面的人打招呼时我会？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '能轻松地开始对话并亲切地接近对方'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '只打打招呼然后心想着以后慢慢了解对方'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "朋友给我介绍异性时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "和会主动联系对方的人"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "对方主动联系我之前一直等候"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "和介绍对象相互了解的阶段对这份关系产生烦恼时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `通过和朋友们见面诉说来解决烦恼`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `独自一个人充分思考之后再解决烦恼`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "和介绍对象终于迎来交往第1天的时候我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `很开心，也很感慨`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `脑海里想象着我们谈恋爱的模样`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "第一次和恋人去野营之前我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "搜索安装帐篷的方法，思考需要哪些必需品"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `想象浪漫、如同电视剧和电影中曾看到的野营场面`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "抵达野营场所做好一切准备之后一起坐下来的时候刚好看到美丽的夕阳时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `真美啊，但这些东西什么时候整理好回家啊..`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `真的好美啊, 希望和恋人在一起的这一瞬间暂停`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `好不容易等到和恋人约会的日子却迟到了的话？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "解释迟到的理由然后道歉"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "先说抱歉然后告诉恋人会尽快到达"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "平时一直保持联络的恋人一旦上班了就不容易联系上的话？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `认为工作的时候当然会不方便联络，能充分理解`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "虽然知道他很忙但也有点小伤心"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `因为小事和恋人吵架时我会？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "虽然很生气但也会冷静地诉说自己的想法"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "虽然有很多话想说，但总是先受情绪影响"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "和恋人去赏花时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `提前选好地点和时间，按计划行动`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `恋人说去哪里就去哪里`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "赏花时有一段路段人群满满的话我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "虽然内心想知道是怎么回事但只会路过"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "好奇发生了什么事，前往查看"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '和恋人去经常光顾的餐厅的路上发现了新路径时我会？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "还是走平时走的路"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "尝试走一次新路线"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineCN/INFP.jpg'
+            },
+        ]
+    },
     // loveMagazine
     {
         info : {
