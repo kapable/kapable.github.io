@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveMagazineEng
+    {
+        info : {
+            mainTitle:"Dating magazine test",
+            subTitle:"What kind of dating style do you see in magazines?",
+            mainUrl:"loveMagazineEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveMagazineEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveMagazineEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What if you greet to someone you meet for the first time?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I can talk and approach easily.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I think I should just say hello and get to know the person slowly.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What can be your reaction when your friend introduces you to someone new?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I tend to take the initiative in contacting the person first."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I tend to wait for the person to contact me first."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "At the stage of getting to know the person you were introduced to, what do you do when you have concerns with the person?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I usually solve the problem by meeting and talking with people I know.`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I usually solve the problem by taking time alone to think.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What can be your reaction when you first meet an introduced person?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I feel happy and thrilled.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I picture our relationship in advance with all kinds of imagination.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you do before going camping with your lover for the first time?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I look up how to set up a tent and think about what the essentials are."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I imagine camping that I have seen in dramas and movies.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What kind of reaction would you get if you arrived at the campsite, finished all the preparations, and sat down to enjoy the beautiful sunset?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Wow, it's so pretty, but when are we going to wrap this up and go back.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Wow, it's so pretty, I hope this moment with my lover lasts forever.`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What if you are late for a date with your lover after a long time?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I'll explain why I'm late and say sorry."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I will say sorry and try to get there ASAP."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If your lover usually keeps in touch, but does not contact you when he is working, what can be your reaction?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I can fully understand that it's not easy to get in touch at work.`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I can understand but I might be still a bit sad."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What would you do if you had an argument with your lover over small things?？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I might be angry, but I calmly say my thoughts first to my lover."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I have a lot to say, but the emotions come first."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What would you do if you went to a flower garden with your lover?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I would try to go with a plan, such as deciding when and where to go.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `I would just follow what my lover wants.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What would you do if a lot of people gathered in a certain area while visiting a flower garden?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I would be curious what's going on there, but I would ignore it and go on my way."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I would be curious about what's there, so I would take a look."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'If you found a new way to go to a restaurant you often go to with your lover, what would you do?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I would just take the usual way."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I would try the new way to get there."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveMagazineEng/INFP.jpg'
+            },
+        ]
+    },
     // loveMagazineCN
     {
         info : {
