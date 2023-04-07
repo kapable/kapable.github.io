@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // cloudLove
+    {
+        info : {
+            mainTitle:"구름 연애 이상형 테스트",
+            subTitle:"구름으로 보는 나의 이상형은?",
+            mainUrl:"cloudLove",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/cloudLove-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/cloudLove-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '처음 만난 사람들과 인사를 나눈다면?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '쉽게 말을 걸고 친근하게 다가간다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '가벼운 인사 정도만 하고 천천히 알아가야지 생각한다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "친구가 새로운 이성을 소개해 줬을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "상대에게 먼저 연락을 주도적으로 하는 편이다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "상대에게 먼저 연락해 오기를 기다리는 편이다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "소개받은 사람과 서로 알아가는 단계, 상대와 관계에서 고민이 생겼을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `친구, 지인 등 사람들을 만나 이야기를 하면서 고민을 해결하는 편이다`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `혼자 생각할 시간을 충분히 가지고 고민을 해결하는 편이다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "소개받은 이성과 드디어 1일이 되었을 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `기쁘고, 감격스럽다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `상상으로 미리 우리 연애를 그려 본다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인과 처음으로 캠핑을 가기 전 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "텐트 설치하는 법을 찾아보고, 필수 템들이 뭐가 있는지 생각해 본다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `낭만적이고, 드라마 영화에서 보는 캠핑을 상상해본다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "캠핑 장소에 도착해서 모든 준비를 끝내고, 앉았는데 노을이 예쁘게 지고 있다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `예쁘다, 근데 이거 언제 다 정리하고 돌아가냐..`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `너무 예쁘다 연인과 함께하는 이 순간이 멈췄으면 좋겠다`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `연인과 사소한 문제로 다툼이 벌어진다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "화나지만 일단 내 생각부터 침착하게 말해 본다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "할 말은 많지만, 감정부터 앞서게 된다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "연인과 오랜만에 데이트하는 날 약속 장소에 늦는다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `늦은 이유를 설명하고 미안하다고 말한다`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "미안하다고 말하고 최대한 빨리 가겠다고 말한다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `평소에는 꾸준히 연락 잘해주는 연인이 회사만 가면 연락이 잘 안된다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "일 한다면 당연한 거라고 생각한다 충분히 이해된다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "바쁜 것은 알지만, 그래도 좀 서운하다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인과 꽃 구경을 간다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `장소와 시간 등 미리 찾아보고 계획적으로 간다`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `그냥 연인이 가자고 하는 곳으로 간다`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "꽃구경 중 어느 구간에 사람이 북적북적 몰려 있다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "뭐지? 싶지만 무시하고 가던 길을 간다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "뭐가 있는지 궁금해서 한 번 구경하러 간다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '연인과 자주 가는 맛집을 가는 길, 맛집으로 가는 새로운 길을 발견했다면?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "그냥 평소 가던 길로 간다 "
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "그쪽으로도 한 번 가본다 "
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLove/INFP.jpg'
+            },
+        ]
+    },
     // loveMagazineEng
     {
         info : {

@@ -360,7 +360,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let loveMagazineEngList = ["loveMagazineEng"];
-        let loveMagazineList = ["loveMagazine"];
+        let cloudLoveList = ["cloudLove"];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -481,8 +481,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (loveMagazineList.includes(this.state.current_test)) {
-            const rederTestList = ["emotionGraph", "cherryBlossomSite", "loveInMyHead", "loveSpicy", "springPicninc",];
+        } else if (cloudLoveList.includes(this.state.current_test)) {
+            const rederTestList = ["loveMagazine", "emotionGraph", "cherryBlossomSite", "loveInMyHead", "loveSpicy",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -698,7 +698,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else {
-            const rederTestList = ["emotionGraph", "cherryBlossomSite", "loveInMyHead", "loveSpicy", "springPicninc", "onFire", "cantWait", "lifetimeSaju",];
+            const rederTestList = ["cloudLove", "emotionGraph", "cherryBlossomSite", "loveInMyHead", "loveSpicy",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
