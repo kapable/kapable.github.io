@@ -39,193 +39,193 @@ const TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '처음 만난 사람들과 인사를 나눈다면?',
+                question: '갑작스럽게 동창회를 한다며, 친구들에게 연락이 온다면?',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: '쉽게 말을 걸고 친근하게 다가간다'
+                        content: '무조건 콜이지 갈게!'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '가벼운 인사 정도만 하고 천천히 알아가야지 생각한다'
+                        content: '나는 다음에 갈게..!'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "친구가 새로운 이성을 소개해 줬을 때 나는?",
+                question: "결국 동창회에 갔는데, 동창회가 생각보다 늦게까지 이어진다면?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "상대에게 먼저 연락을 주도적으로 하는 편이다"
+                        content: "시간이 지날수록 신나져서 오히려 좋다"
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "상대에게 먼저 연락해 오기를 기다리는 편이다"
+                        content: "이제 슬슬 가려고 각을 잰다"
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "소개받은 사람과 서로 알아가는 단계, 상대와 관계에서 고민이 생겼을 때 나는?",
+                question: "모임이 마무리가 되어 갈 때쯤 어색했던 한 친구가 집 방향이 같다면?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: `친구, 지인 등 사람들을 만나 이야기를 하면서 고민을 해결하는 편이다`
+                        content: `어차피 가는 길 같이 떠들면서 간다`
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: `혼자 생각할 시간을 충분히 가지고 고민을 해결하는 편이다`
+                        content: `이미 지칠 대로 지쳐서 돌아서라도 혼자 간다`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "소개받은 이성과 드디어 1일이 되었을 때 나는?",
+                question: "동창회에 있었던 얼굴만 아는 이성 친구에게 연락이 온다면?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `기쁘고, 감격스럽다`
+                        content: `왜 연락한 거지?`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `상상으로 미리 우리 연애를 그려 본다`
+                        content: `무슨 일이지? 혹시..`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "연인과 처음으로 캠핑을 가기 전 나는?",
+                question: "전시회에 가서 작품들을 보고 든 생각은?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "텐트 설치하는 법을 찾아보고, 필수 템들이 뭐가 있는지 생각해 본다"
+                        content: "비쌀 것 같은데 얼마에 판매하려나?"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `낭만적이고, 드라마 영화에서 보는 캠핑을 상상해본다`
+                        content: `이 작품들은 왜 이렇게 만들었을까?`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "캠핑 장소에 도착해서 모든 준비를 끝내고, 앉았는데 노을이 예쁘게 지고 있다면?",
+                question: "동창 이성 친구가 나에게 밥 먹자고 한다면?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `예쁘다, 근데 이거 언제 다 정리하고 돌아가냐..`
+                        content: `듣기 좋은 멜로디가 흐르는 음악`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `너무 예쁘다 연인과 함께하는 이 순간이 멈췄으면 좋겠다`
+                        content: `지금 내 마음을 대변하는 가사가 담긴 음악`
                     },
                 ]
             },
             {
                 which:"TF",
-                question: `연인과 사소한 문제로 다툼이 벌어진다면?`,
+                question: `연인에게 도시락을 싸줬는데, 연인이 마음에 쏙 드는 칭찬을 한다면?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "화나지만 일단 내 생각부터 침착하게 말해 본다"
+                        content: "당연하지~ 누가 만든 건데~"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "할 말은 많지만, 감정부터 앞서게 된다"
+                        content: "고마워 내가 진짜 열심히 만들었거든...ㅠㅠ"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "연인과 오랜만에 데이트하는 날 약속 장소에 늦는다면?",
+                question: "연인에게 고민을 털어놓는다면 내가 원하는 것은?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: `늦은 이유를 설명하고 미안하다고 말한다`
+                        content: `현실적인 문제 해결 방법과 적극적인 행동`
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "미안하다고 말하고 최대한 빨리 가겠다고 말한다"
+                        content: "감정적인 공감과 맛있는 것을 먹으러 가자는 말"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: `평소에는 꾸준히 연락 잘해주는 연인이 회사만 가면 연락이 잘 안된다면?`,
+                question: `연인이 사고 싶었던 물건을 샀다고 했을 때 나의 반응은?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "일 한다면 당연한 거라고 생각한다 충분히 이해된다"
+                        content: "사보니까 어때? 좋아? 나도 사진으로 보여줘!"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "바쁜 것은 알지만, 그래도 좀 서운하다"
+                        content: "완전 잘했다! 전부터 사고 싶어했던거잖아"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "연인과 꽃 구경을 간다면?",
+                question: "연인과 함께 처음으로 해외여행을 간다면 나는?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: `장소와 시간 등 미리 찾아보고 계획적으로 간다`
+                        content: `주도적으로 여행 계획을 세우는 편이다`
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: `그냥 연인이 가자고 하는 곳으로 간다`
+                        content: `주로 연인이 주도하고, 연인의 의견에 동의하는 편이다`
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "꽃구경 중 어느 구간에 사람이 북적북적 몰려 있다면?",
+                question: "연인과 행복한 여행을 다녀온 후 집에 도착한 나는?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "뭐지? 싶지만 무시하고 가던 길을 간다"
+                        content: "바로 짐 정리하고, 사진 정리까지 싹 끝낸 후 쉰다"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "뭐가 있는지 궁금해서 한 번 구경하러 간다"
+                        content: "짐은 일단 내려놓고, 좀 쉬었다가 정리한다"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: '연인과 자주 가는 맛집을 가는 길, 맛집으로 가는 새로운 길을 발견했다면?',
+                question: '친구들에게 갑자기 만나자는 연락이 온다면?',
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "그냥 평소 가던 길로 간다 "
+                        content: "갑자기? 지금은 안될 것 같은데 다음엔 미리 말해 줘!"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "그쪽으로도 한 번 가본다 "
+                        content: "갑자기? 지금은 마침 시간이 비긴 하니까 콜!"
                     },
                 ]
             },
