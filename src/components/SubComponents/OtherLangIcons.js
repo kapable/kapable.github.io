@@ -2829,6 +2829,7 @@ export default function OtherLangIcons(props) {
             )
         }
     };
+
     function labelStickerTestLinkRenderer(){
         if(props.currentTest === "labelSticker") {
             return(
@@ -2850,6 +2851,34 @@ export default function OtherLangIcons(props) {
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://ktestone.com/kapable.github.io/labelSticker/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                </div>
+            )
+        }
+    };
+
+    function cloudLoveTestLinkRenderer(){
+        if(props.currentTest === "cloudLove") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/cloudLoveyCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
+                </div>
+            )
+        } else if(props.currentTest === "cloudLoveCN") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/cloudLove/"
                         className="to-personalColorOut-test-banner-text"
                     ><img src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                 </div>
@@ -2892,6 +2921,7 @@ export default function OtherLangIcons(props) {
             {loveInMyHeadTestLinkRenderer()}
             {loveMagazineTestLinkRenderer()}
             {labelStickerTestLinkRenderer()}
+            {cloudLoveTestLinkRenderer()}
         </Fragment>
     );
 };

@@ -23,6 +23,332 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // cloudLoveCN
+    {
+        info : {
+            mainTitle:"云浪漫的理想化测试",
+            subTitle:"我理想的云计算类型是什么？",
+            mainUrl:"cloudLoveCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/cloudLoveCN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/cloudLoveCN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"CN",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '接到朋友的联络说突然要办同学聚会的话我会？'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '没问题，当然要去！'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '我下次再去..!'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "最后去了同学聚会但聚会结束的比想象中的要晚时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "越玩越嗨反而觉得更好"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "慢慢准备离开"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "聚会快结束的时候，发现和自己关系一般的一个朋友的回家方向和自己一样时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `反正同一条路就一起边聊边走呗`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `已经身心疲惫，就算绕路也想自己一个人走`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "聚会中只有一面之识的异性朋友突然联系我时？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `干嘛会联系我？`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `什么事呢？难道..`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "异性老同学突然约我吃饭时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "和我？为啥？这么突然？"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `这难道是要和我约会的意思！？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "和异性朋友发展成恋人了。一起听心动的歌曲时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `听起来很浪漫的音乐`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `包含代表我心意的歌词的音乐`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `给恋人准备了便当，恋人很满意还表扬我的话？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "那当然~谁做的呢~"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "谢谢，我真的很努力做好的..TT"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "给恋人诉说我的烦恼时我希望？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `现实的问题解决方案和主动的行动`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "情感上的共鸣和说一起去吃好吃的话"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `恋人说买到了想买的东西时我的反应是？?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "买到了感觉怎么样？开心吗？给我看看照片！"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "真棒！这是你很久前就一直想买的呢"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "第一次和恋人去海外旅游时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `主动列好旅游计划`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `主要由恋人做主，同意恋人的所有意见`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "和恋人结束了幸福的旅游，回到家时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "直接整理好所有行李和照片，然后休息"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "先放下所有行李，休息一会儿之后再整理"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '朋友突然说要见面时我会？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "这么突然？现在不行呢，下次提前告诉我！"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "这么突然？现在刚好有时间，见面吧！"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/INFP.jpg'
+            },
+        ]
+    },
     // labelStickerEng
     {
         info : {
