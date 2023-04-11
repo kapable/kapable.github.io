@@ -23,6 +23,332 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // labelStickerEng
+    {
+        info : {
+            mainTitle:"Label Sticker Test",
+            subTitle:"Let's put a sticker on my heart",
+            mainUrl:"labelStickerEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/labelStickerEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/labelStickerEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: `You're hanging out with your friends and it's already 10pm!`,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I have to burn tonight No one can wind up at home'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `Now I'm getting impatient and want to go home, so I'm looking away`
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "When I go home after a get-together with friends, I ask the question?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Want to go along for the ride"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I want to go alone and quietly"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What if the appointment was canceled over the weekend?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Damn. Don't you know anyone? I'll have to call them`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `It's a shame, but it's nice. I don't have to leave.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What decisions did I make?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Once a decision is made, it is not rethought`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I keep thinking and wondering if my decisions are right`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When crossing the street, I?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Just winging it "
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `What if there was an accident here and it was a hit and run? I imagine what I would do`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What if you're on the subway and no one sits next to you?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Everyone's standing, there's plenty of room`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Why aren't you sitting down? Do I look like a weirdo?`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `When close friends are arguing, I?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Fighting over what, oh exciting"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Why fight...? What should I do?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What if your friend is crying at a meeting?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Why are you crying... I shouldn't talk to you, let's just leave you alone`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Why are you crying~ Talk to me, you're making me cry too"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What if a friend reads my KakaoTalk?
+                `,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I'm busy and don't really care"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Reread the conversation to make sure I didn't do something wrong"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When I'm getting ready to go out, I use the?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I'm always prepared because I start at a set time`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `It's clearly prepared early, but strangely always arrives late`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When I organize my desk, I?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Take it out and organize it neatly in an order that makes it easier to use"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Find what you need, even if it feels like you just left it behind"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: `What if your chores are piling up and you're too tired?`,
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Do the chores you're supposed to do, even if you're tired, and then take a break"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Rest first, chores later"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/INFP.jpg'
+            },
+        ]
+    },
     // labelSticker
     {
         info : {
