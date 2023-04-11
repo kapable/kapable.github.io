@@ -795,11 +795,11 @@ class Result extends Component {
 
         const _current_test_contents = TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0];
         let _current_test_result = _current_test_contents.results.filter((res) => res.query === this.state.current_result)[0];
-        let final_type = _current_test_result.type
-        let final_desc = _current_test_result.desc
-        let img_src = _current_test_result.img_src
-        let test_current = _current_test_contents.info.mainTitle
-        let desc_test_current = _current_test_contents.info.subTitle
+        let final_type = _current_test_result.type;
+        let final_desc = _current_test_result.desc;
+        let img_src = _current_test_result.img_src;
+        let test_current = _current_test_contents.info.mainTitle;
+        let desc_test_current = _current_test_contents.info.subTitle;
 
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI" || _current_test_contents.info.scoreType === "numberScoring" ){
