@@ -361,6 +361,7 @@ class Result extends Component {
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let loveMagazineEngList = ["loveMagazineEng"];
         let labelStickerList = ["labelSticker"];
+        let jaetechList = ['jaetech'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -697,6 +698,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
+        } else if (jaetechList.includes(this.state.current_test)) {
+            return null;
         } else {
             const rederTestList = ["labelSticker", "cloudLove", "emotionGraph", "cherryBlossomSite", "loveInMyHead", "loveSpicy",];
             return(
@@ -1041,6 +1044,41 @@ class Result extends Component {
                         </>)}
                     </Fragment>
                 )
+            } else if(this.state.current_test === "jaetech") {  
+                return (
+                    <Fragment>
+                        <Helmet>
+                            {/* <!-- Primary Meta Tags --> */}
+                            <title>{test_current + ' ' + this.state.current_result + ' - 케이테스트'} </title>
+                            <meta name="title" content={test_current + ' ' + this.state.current_result + ' - 케이테스트'} />
+                            <meta name="description" content={this.state.current_result + ':' + desc_test_current} data-react-helmet="true"/>
+                            <link rel="main-url" href={this.state.sharable_url}/>
+    
+                            {/* <!-- Open Graph / Facebook --> */}
+                            <meta property="og:type" content="website"/>
+                            <meta property="og:url" content={this.state.sharable_url}/>
+                            <meta property="og:title" content={test_current + ' ' + this.state.current_result + ' - 케이테스트'} />
+                            <meta property="og:description" content={this.state.current_result + ':' + desc_test_current}/>
+                            <meta property="og:image" content={img_src}/>
+                            <meta property="og:image:alt" content={this.state.current_result} />
+    
+                            {/* <!-- Twitter --> */}
+                            <meta property="twitter:card" content="summary_large_image"/>
+                            <meta property="twitter:url" content={this.state.sharable_url}/>
+                            <meta property="twitter:title" content={test_current + ' ' + this.state.current_result + ' - 케이테스트'} />
+                            <meta property="twitter:description" content={this.state.current_result + ':' + desc_test_current}/>
+                            <meta property="twitter:image" content={img_src}/>
+                            <meta property="twitter:image:alt" content={this.state.current_result} />
+                        </Helmet>
+                        <img src={img_src} className='result-img' alt={final_type} />
+                        <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={` https://PC5tOwFSxk6rMl5hMJ6LPA.adtouch.adbrix.io/api/v1/click/9Q82sxDp8UCS7rbbCZHBhw?deeplink_custom_path=hmallmobile%3a%2f%2fm%2fgoAppLiveChat.do%3fpReferCode%3dla1%26pTcCode%3d0000003962%26utm_source%3dlabang%26utm_medium%3dcpc_da%26utm_campaign%3dtracking`}
+                        className="to-ppl-banner-text"
+                        > <img src={`https://images.ktestone.com/meta/HmallTest.jpg`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                    </Fragment>
+                )
             } else {
                 return (
                     <Fragment>
@@ -1245,7 +1283,7 @@ class Result extends Component {
     };
 
     resultPageRender(){
-        let ppl_list = ["factPok", "MyFactPok", "FriendFactPok",];
+        let ppl_list = ["factPok", "MyFactPok", "FriendFactPok", "jaetech"];
         return(
             <Fragment>
                 <div className="result">
@@ -1268,7 +1306,7 @@ class Result extends Component {
                         {/* PPL banner image */}
                         {this.pplBannerRenderer()}
                     </div>
-                    <p className='result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
+                    {ppl_list.includes(this.state.current_test) ? null : <p className='result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>}
 
                     <OtherLangIcons currentTest={this.state.current_test}/>
                     
@@ -1280,7 +1318,7 @@ class Result extends Component {
                     />
 
                     <div className="share">
-                        <h5 className="share-title">{ppl_list.includes(this.state.current_test) ? null : "친구에게 공유하기"}</h5>
+                        <h5 className="share-title">친구에게 공유하기</h5>
                         <ShareGroup
                             link={"https://ktestone.com/kapable.github.io/" + this.state.current_test + "/"}
                             testTitle={TESTS.find((test) => test?.info?.mainUrl === this.state.current_test)?.info?.mainTitle}/>
@@ -1288,7 +1326,7 @@ class Result extends Component {
                             {/* if facialExpAnalyzer, copy url is test home, other tests' urls are result urls */}
                             <CopyToClipboard text={this.state.current_test.includes("facialExpressionAnalyzer") ? "https://ktestone.com/kapable.github.io/" + this.state.current_test+'/' : this.state.sharable_url+'/'}>
                                 <img
-                                    src={ppl_list.includes(this.state.current_test) ? "https://images.ktestone.com/meta/factPok/factPok-link-copy-btn.png" : COPYBTN}
+                                    src={COPYBTN}
                                     onClick={this._onShareButtonClick}
                                     className="share-btn-img"
                                     alt="링크 복사"
