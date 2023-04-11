@@ -71,7 +71,8 @@ class Result extends Component {
 
     onCoupangButtonClick(){
         const { cookies } = this.props;
-        const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
+        // const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
+        const cookieAges = 60*60*2;
         cookies.set('coupang', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
         this.setState({
             coupangCookies: cookies.get('coupang'),
