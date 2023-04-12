@@ -87,17 +87,17 @@ const TESTS = [
             },
             {
                 which:"SN",
-                question: "엘리베이터를 탓을 때 나의 생각은?",
+                question: "엘리베이터를 탔을 때 나의 생각은?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `엘베가 왜 이렇게 느리담`
+                        content: `빨리 도착해라`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `갑자기 엘베가 멈춰서 갇혔는데 핸드폰도 먹통인 거지`
+                        content: `엘베가 멈췄는데 핸드폰 먹통되면 어떻게 해야하지?`
                     },
                 ]
             },
