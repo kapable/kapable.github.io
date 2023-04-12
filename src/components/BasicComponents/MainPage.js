@@ -60,6 +60,13 @@ function MainPage(props) {
                 </Link>
             ) : null}
 
+            {/* RRR Car Test */}
+            {/* {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
+                <a target='_blank' rel="noopener noreferrer" href="https://bit.ly/401a25W" className="main-link-block" key="rrr-intro-banner">
+                    <img className="test-main-img" src={`https://images.ktestone.com/introImages/RRR-intro.jpg`} alt="rrr-intro" />
+                </a>
+            ) : null} */}
+
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
                 {props.all_tests_url.slice(0,2).map((item, idx)=>{
