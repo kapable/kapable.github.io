@@ -55,7 +55,7 @@ class Result extends Component {
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
             isOpened: false,
-            originAdProb: 0.6 < Math.random(),
+            originAdProb: 0.1 < Math.random(),
             adProb: 1.1 >= Math.random(),
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
@@ -1116,7 +1116,7 @@ class Result extends Component {
                         </>)}
                     </Fragment>
                 )
-            }
+            };
             
         //  and other case of Type Quizes
         } else if (_current_test_contents.info.scoreType === 'percentageMBTI') {
@@ -1264,7 +1264,7 @@ class Result extends Component {
                     </Fragment>
                 )
             }
-        }
+        };
 
     };
 
