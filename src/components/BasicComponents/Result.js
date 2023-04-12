@@ -55,7 +55,7 @@ class Result extends Component {
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
             isOpened: false,
-            originAdProb: 0.55 < Math.random(),
+            originAdProb: 0.5 < Math.random(),
             adProb: 1.1 >= Math.random(),
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
@@ -361,7 +361,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let labelStickerEngList = ["labelStickerEng"];
-        let labelStickerList = ["labelSticker"];
+        let labelStickerLoveList = ["labelStickerLove"];
         let jaetechList = ['jaetech'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
@@ -483,8 +483,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (labelStickerList.includes(this.state.current_test)) {
-            const rederTestList = ["cloudLove", "loveMagazine", "emotionGraph", "cherryBlossomSite", "loveInMyHead", "loveSpicy",];
+        } else if (labelStickerLoveList.includes(this.state.current_test)) {
+            const rederTestList = ["labelSticker", "cloudLove", "loveMagazine", "emotionGraph",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -702,7 +702,7 @@ class Result extends Component {
         } else if (jaetechList.includes(this.state.current_test)) {
             return null;
         } else {
-            const rederTestList = ["labelSticker", "cloudLove", "emotionGraph", "cherryBlossomSite", "loveInMyHead", "loveSpicy",];
+            const rederTestList = ["labelStickerLove", "labelSticker", "cloudLove", "emotionGraph",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (

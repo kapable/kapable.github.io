@@ -2907,7 +2907,7 @@ export default function OtherLangIcons(props) {
             {waterLoveTestLinkRenderer()}
             {loveCharacterTestLinkRenderer()}
             {meGuideTestLinkRenderer()}
-            {loveWarningTestLinkRenderer()};
+            {loveWarningTestLinkRenderer()}
             {characteristicChracterTestLinkRenderer()}
             {mailForMeTestLinkRenderer()}
             {readyToBoneTestLinkRenderer()}

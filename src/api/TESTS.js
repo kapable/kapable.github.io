@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // labelStickerLove
+    {
+        info : {
+            mainTitle:"라벨 스티커 테스트 연애편",
+            subTitle:"스티커로 연인에게 내 맘을 표현해보자",
+            mainUrl:"labelStickerLove",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/labelStickerLove-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/labelStickerLove-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '식당에 밥을 먹으러 왔다!\n그런데 사장님이 친근하게 말을 건다면?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '자주 와야겠당 너무 친절하시네'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '감사하긴 하지만 살짝 불편쓰..'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "일주일 내내 약속이 생겨 나가야 한다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "좀 피곤하려나? 그래도 집에 계속 있는 거보단 나아"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "그럴 일은 없어 이런 끔찍한 질문을 하다니"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "약속이 끝나고 집에 왔을 때 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `오늘 너무 재밌었다ㅎㅎ 내일도 재밌겠다ㅎㅎ`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `후 드디어 집이다. 피곤해.. 내일은 무조건 쉬어야지`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "엘리베이터를 탓을 때 나의 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `엘베가 왜 이렇게 느리담`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `갑자기 엘베가 멈춰서 갇혔는데 핸드폰도 먹통인 거지`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "애인이 내가 모르는 이성과 함께 있다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "누군지 바로 물어봄"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `물어보기 전 그 짧은 순간 온갖 상상의 상상을 다 해봄`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 자주 하는 말은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `그럴 수 있지, 글쎄, 뭔 소리야`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `만약에, 혹시나, 그럴 수 있잖아, 왜 때문이지?`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `‘생각 좀 해볼게’의 뜻을 고르라면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "실제로 고민할 시간이 필요함"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "거절하고 싶은데 상대방 기분 상할까 봐 눈치 보는 중"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "애인이 나에게 고민 상담을 한다면",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `최대한 해결해 주려고 함`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "최대한 들어주려고 함"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `애인이 ‘오늘 되게 편하게 입고 왔네?’라고 하면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "엉 오늘은 좀 편하게 입고 싶었어"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "너무 추리하게 입고 왔나 봐ㅜ 신경 좀 쓸 걸.."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "오늘은 집 대청소 하기로 한 날!\n그런데 애인이 집 앞으로 나오라고 한다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `오늘 대청소 하려고 했는데.. 이렇게 갑자기 오는 건 좀…`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `청소 이따가 하면 되지! 내일 해도 되고!`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "보통 데이트할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "항상 뭘 할지 미리 알아보고 정한 후 만나는 편"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 만나서 뭐 할지 정하는 편"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '평소 나의 약속을 잡는 방식은?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "지금은 안되고 다음 주 주말 저녁은 어떤데"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "지금 뭐 해? 삼겹살 ㄱ?"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLove/INFP.jpg'
+            },
+        ]
+    },
     // cloudLoveCN
     {
         info : {
