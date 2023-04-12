@@ -1080,33 +1080,33 @@ const TESTS = [
             },
             {
                 which:"SN",
-                question: "전시회에 가서 작품들을 보고 든 생각은?",
+                question: "연락이 온 이성 친구가 나에게 밥 먹자고 한다면?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "비쌀 것 같은데 얼마에 판매하려나?"
+                        content: "나랑? 왜? 갑자기?"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `이 작품들은 왜 이렇게 만들었을까?`
+                        content: `이거 혹시 데이트 신청!?`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "동창 이성 친구가 나에게 밥 먹자고 한다면?",
+                question: "연락 온 이성 친구와 밥을 먹고 난 후 사이가 더욱 가까워 졌을 때 나는?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `듣기 좋은 멜로디가 흐르는 음악`
+                        content: `설레고, 더 자주 만나고 싶다는 생각을 한다`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `지금 내 마음을 대변하는 가사가 담긴 음악`
+                        content: `사귀고, 이성과 데이트 하는 상상을 한다`
                     },
                 ]
             },
