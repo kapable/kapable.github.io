@@ -365,194 +365,194 @@ const TESTS = [
         questions:[
             {
                 which:"EI",
-                question: `You're hanging out with your friends and it's already 10pm!`,
+                question: 'when you are having a good time with your friends and notice that it is very late in the evening, what can be your reaction?'
+                ,
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: 'I have to burn tonight No one can wind up at home'
+                        content: 'I will look around people to find the right time to go home.'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: `Now I'm getting impatient and want to go home, so I'm looking away`
+                        content: `I'm going to claim no one can go home because we have to have a real good time tonight`
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "When I go home after a get-together with friends, I ask the question?",
+                question: "When you go home after a gathering with friends, which way do you prefer?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "Want to go along for the ride"
+                        content: "Going home with friends together"
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "I want to go alone and quietly"
+                        content: "Going home quietly alone"
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "What if the appointment was canceled over the weekend?",
+                question: "If an appointment was canceled on the weekend, what can be your reaction?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: `Damn. Don't you know anyone? I'll have to call them`
+                        content: `Damn, Is there anyone to meet? I should try to contact some friends.`
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: `It's a shame, but it's nice. I don't have to leave.`
+                        content: `It's unfortunate, but it is better. I can be free.`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "What decisions did I make?",
+                question: "After you make a decision, what can be your reaction?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `Once a decision is made, it is not rethought`
+                        content: `I keep thinking about whether the decision I made is right or wrong.`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `I keep thinking and wondering if my decisions are right`
+                        content: `I do not reconsider a decision once made`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "When crossing the street, I?",
+                question: "When you cross the crosswalk, how do you do?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "Just winging it "
+                        content: "I just rush across without thinking"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `What if there was an accident here and it was a hit and run? I imagine what I would do`
+                        content: `What if I had an accident here and it was a hit and run?  I would imagine this and that`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "What if you're on the subway and no one sits next to you?",
+                question: "When no one sits next to you on the subway, what can be your reaction?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `Everyone's standing, there's plenty of room`
+                        content: `I feel just happy the fact that I have a seat to sit comfortably.`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `Why aren't you sitting down? Do I look like a weirdo?`
+                        content: `Why? I would ask myself if I look like a weirdo.`
                     },
                 ]
             },
             {
                 which:"TF",
-                question: `When close friends are arguing, I?`,
+                question: `When your close friends argue each other, what can be your reaction?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "Fighting over what, oh exciting"
+                        content: "Why do they fight over something like that? I might be a little excited anyway. "
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "Why fight...? What should I do?"
+                        content: "Why do they fight? Should I stop them?"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "What if your friend is crying at a meeting?",
+                question: "If your friend is crying sadly at the meeting place, how would you react?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: `Why are you crying... I shouldn't talk to you, let's just leave you alone`
+                        content: `Why are you crying? Perhaps it is not right time to talk so I will wait`
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "Why are you crying~ Talk to me, you're making me cry too"
+                        content: "Why are you crying Just talk. You make me cry too"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: `What if a friend reads my KakaoTalk?
-                `,
+                question: `If your friend reads your KakaoTalk and doesn't reply, what can be your reaction?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "I'm busy and don't really care"
+                        content: "I guess busy? and I don't really care"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "Reread the conversation to make sure I didn't do something wrong"
+                        content: "I recheck the conversation to see if I typed something wrong"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "When I'm getting ready to go out, I use the?",
+                question: "What do you do when getting ready to go out?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: `I'm always prepared because I start at a set time`
+                        content: `I am always relaxed because I prepare in advance`
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: `It's clearly prepared early, but strangely always arrives late`
+                        content: `I'm sure I prepare everything, but strangely, I barely make it`
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "When I organize my desk, I?",
+                question: "How do you organize your desk?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "Take it out and organize it neatly in an order that makes it easier to use"
+                        content: "I take all out and arrange them neatly in a convenient order"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "Find what you need, even if it feels like you just left it behind"
+                        content: "It seems like things are everywhere, but I can find what I need anytime"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: `What if your chores are piling up and you're too tired?`,
+                question: 'If you are too tired to do housework, what can be your reaction?',
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "Do the chores you're supposed to do, even if you're tired, and then take a break"
+                        content: "Even if I'm tired, I tidy up first and then take a break"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "Rest first, chores later"
+                        content: "I rest first and do housework later！"
                     },
                 ]
             },
