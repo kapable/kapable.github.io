@@ -1289,7 +1289,16 @@ class Result extends Component {
             <Fragment>
                 <div className="result">
                     {/* Coupang Partners Dynamic Banner */}
-                    {TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0].info.lang === 'Kor' ? <CoupangDynamicBanner page={'result'} /> : null}
+                    {TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0].info.lang === 'Kor'
+                    ? (this.state.current_test !== 'labelSticker' && this.state.current_test !== 'labelStickerLove'
+                        ? <CoupangDynamicBanner page={'result'} />
+                        : (<a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={`https://ktestone.com/kapable.github.io/labelSticker${this.state.current_test === 'labelSticker' ? 'Love' : '' }/`}
+                            className="to-ppl-banner-text"
+                        > <img src={`https://images.ktestone.com/main-thumbnail/labelSticker${this.state.current_test === 'labelSticker' ? 'Love' : '' }-thumb.png`} className='ppl-banner-img' alt={'labelStickerLove'} onClick={this._onPPLBannerClick}/> </a>))
+                    : null}
 
                     {/* Adsense */}
                     <AdsenseAdvertiser
@@ -1298,6 +1307,7 @@ class Result extends Component {
                         format="auto"
                         responsive="true"
                     />
+                    
                     <div className="result-header">
                     {/* <div id="optadnpm ATB" style={{"minHeight": "220px"}}></div> */}
                         <h5 className="result-title">결과는...</h5>
