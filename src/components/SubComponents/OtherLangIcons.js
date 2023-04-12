@@ -1,12 +1,12 @@
-import React from 'react'
-import { Fragment } from 'react'
+import React from 'react';
+import { Fragment } from 'react';
 
 export default function OtherLangIcons(props) {
     function factBTILinkRenderer(){
         if(props.currentTest === "personalColorFact") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -24,7 +24,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColorFactEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -42,7 +42,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColorFactInd") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -64,7 +64,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "dringkingHabit") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -82,7 +82,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "dringkingHabitEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -100,7 +100,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "dringkingHabitJP") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -122,7 +122,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "personalColor") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -188,7 +188,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColorJP") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -254,7 +254,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColorEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -320,7 +320,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColorCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -386,7 +386,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColorES") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -452,7 +452,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColorArb") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -518,7 +518,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColorInd") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -590,7 +590,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColorRus") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -656,7 +656,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColorMalay") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -722,7 +722,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColorGer") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -788,7 +788,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColorFra") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -858,7 +858,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "personalColor2022") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -876,7 +876,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColor2022Eng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -894,7 +894,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalColor2022CN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -916,7 +916,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "flowerBTI") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -934,7 +934,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "flowerBTIEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -952,7 +952,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "flowerBTIJP") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -974,7 +974,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "personalIncense") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -992,7 +992,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalIncenseJP") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1010,7 +1010,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "personalIncenseEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1032,7 +1032,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "hanbokBTI") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1050,7 +1050,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "hanbokBTIJP") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1068,7 +1068,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "hanbokBTIEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1090,7 +1090,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "oneSidedLove") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1120,7 +1120,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "oneSidedLoveJP") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1150,7 +1150,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "oneSidedLoveRus") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1180,7 +1180,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "oneSidedLoveCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1210,7 +1210,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "oneSidedLoveEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1244,7 +1244,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "idealType") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1256,7 +1256,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "idealTypeEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1272,7 +1272,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "fruitAlt") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1284,7 +1284,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "fruitAltEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1300,7 +1300,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "lovejewerly") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1312,7 +1312,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "lovejewerlyEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1328,7 +1328,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "auditionBTI") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1352,7 +1352,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "auditionBTIEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1376,7 +1376,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "auditionBTICn") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1400,7 +1400,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "auditionBTIJP") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1428,7 +1428,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "snowflake") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1440,7 +1440,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "snowflakeEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1456,7 +1456,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "smileColorTest") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1486,7 +1486,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "smileColorTestEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1516,7 +1516,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "smileColorTestJP") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1546,7 +1546,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "smileColorTestCn") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1576,7 +1576,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "smileColorTestES") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1610,7 +1610,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "fishShapedBun") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1622,7 +1622,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "fishShapedBunEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1638,7 +1638,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "musicNote") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1650,7 +1650,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "musicNoteEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1666,7 +1666,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "waterLove") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1678,7 +1678,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "waterLoveEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1694,7 +1694,7 @@ export default function OtherLangIcons(props) {
         if(["loveCharacter", "loveCharacterFemale", "loveCharacterMale"].includes(props.currentTest)) {
             return(
                 <div className="go-to-each-language" style={{marginTop:'1rem'}}>
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1730,7 +1730,7 @@ export default function OtherLangIcons(props) {
         } else if(["loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng"].includes(props.currentTest)) {
             return(
                 <div className="go-to-each-language" style={{marginTop:'1rem'}}>
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1766,7 +1766,7 @@ export default function OtherLangIcons(props) {
         } else if(["loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN"].includes(props.currentTest)) {
             return(
                 <div className="go-to-each-language" style={{marginTop:'1rem'}}>
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1802,7 +1802,7 @@ export default function OtherLangIcons(props) {
         } else if(["loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer"].includes(props.currentTest)) {
             return(
                 <div className="go-to-each-language" style={{marginTop:'1rem'}}>
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1838,7 +1838,7 @@ export default function OtherLangIcons(props) {
         } else if(["loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES"].includes(props.currentTest)) {
             return(
                 <div className="go-to-each-language" style={{marginTop:'1rem'}}>
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1874,7 +1874,7 @@ export default function OtherLangIcons(props) {
         } else if(["loveCharacterJP", "loveCharacterFemaleJP", "loveCharacterMaleJP"].includes(props.currentTest)) {
             return(
                 <div className="go-to-each-language" style={{marginTop:'1rem'}}>
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1914,7 +1914,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "meGuide") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1932,7 +1932,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "meGuideEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1950,7 +1950,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "meGuideJP") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1972,7 +1972,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "loveWarning") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2002,7 +2002,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "loveWarningEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2032,7 +2032,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "loveWarningJP") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2062,7 +2062,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "loveWarningCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2092,7 +2092,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "loveWarningES") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2126,7 +2126,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "characteristicChracter") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2150,7 +2150,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "characteristicChracterEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2174,7 +2174,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "characteristicChracterJP") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2198,7 +2198,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "characteristicChracterCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2226,7 +2226,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "mailForMe") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2244,7 +2244,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "mailForMeEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2262,7 +2262,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "mailForMeCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2284,7 +2284,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "readyToBone") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2302,7 +2302,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "readyToBoneCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2320,7 +2320,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "readyToBoneEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2342,7 +2342,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "loveFlame") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2360,7 +2360,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "loveFlameCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2378,7 +2378,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "loveFlameEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2400,7 +2400,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "bondee") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2418,7 +2418,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "bondeeEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2436,7 +2436,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "bondeeCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2458,7 +2458,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "speechHabit") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2476,7 +2476,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "speechHabitEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2494,7 +2494,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "speechHabitCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2516,7 +2516,7 @@ export default function OtherLangIcons(props) {
         if(["coupleCharacter", "coupleCharacterFemale", "coupleCharacterMale"].includes(props.currentTest)) {
             return(
                 <div className="go-to-each-language" style={{marginTop:'1rem'}}>
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2534,7 +2534,7 @@ export default function OtherLangIcons(props) {
         } else if(["coupleCharacterEng", "coupleCharacterFemaleEng", "coupleCharacterMaleEng"].includes(props.currentTest)) {
             return(
                 <div className="go-to-each-language" style={{marginTop:'1rem'}}>
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2552,7 +2552,7 @@ export default function OtherLangIcons(props) {
         } else if(["coupleCharacterCN", "coupleCharacterFemaleCN", "coupleCharacterMaleCN"].includes(props.currentTest)) {
             return(
                 <div className="go-to-each-language" style={{marginTop:'1rem'}}>
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2574,7 +2574,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "loveSpringFlower") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2592,7 +2592,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "loveSpringFlowerCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2610,7 +2610,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "loveSpringFlowerEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2632,7 +2632,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "cantWait") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2650,7 +2650,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "cantWaitCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2668,7 +2668,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "cantWaitEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2690,7 +2690,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "loveSpicy") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2708,7 +2708,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "loveSpicyCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2726,7 +2726,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "loveSpicyEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2748,7 +2748,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "loveInMyHead") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2760,7 +2760,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "loveInMyHeadEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2776,7 +2776,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "loveMagazine") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2794,7 +2794,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "loveMagazineCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2812,7 +2812,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "loveMagazineEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2834,7 +2834,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "labelSticker") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2846,7 +2846,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "labelStickerEng") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2862,7 +2862,7 @@ export default function OtherLangIcons(props) {
         if(props.currentTest === "cloudLove") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2874,7 +2874,7 @@ export default function OtherLangIcons(props) {
         } else if(props.currentTest === "cloudLoveCN") {
             return(
                 <div className="go-to-each-language">
-                    <h3>▼GO TO MY COUNTRY▼</h3>
+                    <h3>▼OTHER LANGUAGES▼</h3>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2888,40 +2888,40 @@ export default function OtherLangIcons(props) {
 
     return (
         <Fragment>
-            {factBTILinkRenderer()};
-            {dringkingHabitLinkRenderer()};
-            {personalColorLinkRenderer()};
-            {personalColor2022LinkRenderer()};
-            {personalIncenseLinkRenderer()};
-            {hanbokBTILinkgRenderer()};
-            {oneSidedLoveLinkRenderer()};
-            {idealTypeLinkRenderer()};
-            {fruitAltLinkRenderer()};
-            {lovejewerlyLinkRenderer()};
-            {auditionBTILinkRenderer()};
-            {flowerBTILinkRenderer()};
-            {snowflakeLinkRenderer()};
-            {smileColorTestLinkRenderer()};
-            {fishShapedBunTestLinkRenderer()};
-            {musicNoteEngTestLinkRenderer()};
-            {waterLoveTestLinkRenderer()};
-            {loveCharacterTestLinkRenderer()};
-            {meGuideTestLinkRenderer()};
+            {factBTILinkRenderer()}
+            {dringkingHabitLinkRenderer()}
+            {personalColorLinkRenderer()}
+            {personalColor2022LinkRenderer()}
+            {personalIncenseLinkRenderer()}
+            {hanbokBTILinkgRenderer()}
+            {oneSidedLoveLinkRenderer()}
+            {idealTypeLinkRenderer()}
+            {fruitAltLinkRenderer()}
+            {lovejewerlyLinkRenderer()}
+            {auditionBTILinkRenderer()}
+            {flowerBTILinkRenderer()}
+            {snowflakeLinkRenderer()}
+            {smileColorTestLinkRenderer()}
+            {fishShapedBunTestLinkRenderer()}
+            {musicNoteEngTestLinkRenderer()}
+            {waterLoveTestLinkRenderer()}
+            {loveCharacterTestLinkRenderer()}
+            {meGuideTestLinkRenderer()}
             {loveWarningTestLinkRenderer()};
-            {characteristicChracterTestLinkRenderer()};
-            {mailForMeTestLinkRenderer()};
-            {readyToBoneTestLinkRenderer()};
-            {loveFlameTestLinkRenderer()};
-            {bondeeTestLinkRenderer()};
-            {speechHabitTestLinkRenderer()};
-            {coupleCharacterTestLinkRenderer()};
-            {loveSpringFlowerTestLinkRenderer()};
-            {cantWaitTestLinkRenderer()};
-            {loveSpicyTestLinkRenderer()};
-            {loveInMyHeadTestLinkRenderer()};
-            {loveMagazineTestLinkRenderer()};
-            {labelStickerTestLinkRenderer()};
-            {cloudLoveTestLinkRenderer()};
+            {characteristicChracterTestLinkRenderer()}
+            {mailForMeTestLinkRenderer()}
+            {readyToBoneTestLinkRenderer()}
+            {loveFlameTestLinkRenderer()}
+            {bondeeTestLinkRenderer()}
+            {speechHabitTestLinkRenderer()}
+            {coupleCharacterTestLinkRenderer()}
+            {loveSpringFlowerTestLinkRenderer()}
+            {cantWaitTestLinkRenderer()}
+            {loveSpicyTestLinkRenderer()}
+            {loveInMyHeadTestLinkRenderer()}
+            {loveMagazineTestLinkRenderer()}
+            {labelStickerTestLinkRenderer()}
+            {cloudLoveTestLinkRenderer()}
         </Fragment>
     );
 };
