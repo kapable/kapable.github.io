@@ -1292,13 +1292,21 @@ class Result extends Component {
                     {TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0].info.lang === 'Kor'
                     ? (this.state.current_test !== 'labelSticker' && this.state.current_test !== 'labelStickerLove'
                         ? <CoupangDynamicBanner page={'result'} />
-                        : (<a
+                        : (this.state.current_test === 'labelSticker'
+                            ? (<a
                             target="_blank"
                             rel="noopener noreferrer"
-                            href={`https://ktestone.com/kapable.github.io/labelSticker${this.state.current_test === 'labelSticker' ? 'Love' : '' }/`}
+                            href={`https://ktestone.com/kapable.github.io/labelStickerLove/`}
                             className="to-ppl-banner-text"
-                        > <img src={`https://images.ktestone.com/main-thumbnail/labelSticker${this.state.current_test === 'labelSticker' ? 'Love' : '' }-thumb.png`} className='ppl-banner-img' alt={'labelStickerLove'} onClick={this._onPPLBannerClick}/> </a>))
-                    : null}
+                        > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerLove-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerLove'} onClick={this._onPPLBannerClick}/> </a>)
+                            : (<a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={`https://ktestone.com/kapable.github.io/labelSticker/`}
+                            className="to-ppl-banner-text"
+                        > <img src={`https://images.ktestone.com/main-thumbnail/labelSticker${this.state.current_test === 'labelSticker' ? 'Love' : '' }-thumb.png`}
+                        className='ppl-banner-img' alt={'labelStickerLove'} onClick={this._onPPLBannerClick}/> </a>))
+                    ): null}
 
                     {/* Adsense */}
                     <AdsenseAdvertiser
