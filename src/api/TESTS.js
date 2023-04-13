@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // emotionGraphEng
+    {
+        info : {
+            mainTitle:"Emotion Graph Test",
+            subTitle:"Let's check your emotional ups and downs with a graph!",
+            mainUrl:"emotionGraphEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/emotionGraphEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/emotionGraphEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'Which situation bothers you more?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `When I can't even step out of my house for days`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'When I have to hang out till late for several days'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What would you do if you were alone with a friend you hadn't seen before?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Even if I'm awkward at first, if we communicate well, we can be best friends without noticing it."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I can have a conversation but it's awkward and uncomfortable."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "If you've been playing outside all day today, what can be your reaction?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I want to rest, but my schedule is already too busy.`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I'll have to stay at home for a while, leave me alone.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What would you do if your friend told you to go on a trip abroad alone?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Is it fun to go alone? Where are you going? I might ask.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I worry about being pickpocketed or kidnapped`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What would be your reaction if your friend suddenly had something urgent and left first?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Urgent? I guess it seems something serious."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I think my friend will tell me what happens later`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When you wait for the bus with your friend to go home after hanging out, what can be your reaction?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I should go home quickly and rest. Today was fun`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Perhaps, the last bus has already left, so I wonder how I will go home`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `In what situations do you usually say “it is possible” ?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "When I have to give a rough answer even though I can’t understand at all."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "When I comfort the other person."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If my friend is sad and a bit upset about me, what is your answer?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Why? Just tell me what made you feel like that.`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "It can be possible. I'm sorry, that wasn't my intention."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `When your friend says “I've been in a bad mood all day lately” , what can be your reaction?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Everyone has times like that."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I already worried about you. what's the matter?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "How would you react if your friend suddenly changed the subject of conversation?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `Please don’t change the topic. We were talking about something else.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `Oh, what is it? That's funny haha Anyway, what did we just talk about?`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "If your friend suddenly wants to come over to your house, what can be your reaction?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Oh, why? Now? (I have a schedule for today.. uncomfortable..."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "What do you want to do? I have something to do, but I can do it tomorrow. I feel better."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'What do you do when choosing clothes before going out?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I feel good when I decide what to wear according to the weather and plan the day ahead."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I decided what to wear, but it can be changed based on my mood on the day"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ESTJ.png'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ESTP.png'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ESFJ.png'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ESFP.png'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ENTJ.png'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ENTP.png'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ENFJ.png'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ENFP.png'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ISTJ.png'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ISTP.png'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ISFJ.png'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ISFP.png'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/INTJ.png'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/INTP.png'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/INFJ.png'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/INFP.png'
+            },
+        ]
+    },
     // labelStickerJP
     {
         info : {
