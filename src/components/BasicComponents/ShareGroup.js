@@ -30,29 +30,28 @@ const URLShareButton = styled.button`
     }
     `;
 
-const ShareGroup = ({ link, testTitle }) => {
-    
+export const _eventSenderGA = (category, action, label) => {
+    ReactGA.event({
+        category: category,
+        action: action,
+        label: label
+    });
+};
 
-    const _eventSenderGA = useCallback((category, action, label) => {
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    }, []);
+const ShareGroup = ({ link, testTitle }) => {
 
     const _onShareButtonClick = useCallback(() => {
         _eventSenderGA("Sharing", "Click Copy-link Button", "result page");
         alert("링크가 복사됐어요!");
-    }, [_eventSenderGA]);
+    }, []);
 
     const _onFacebookButtonClick = useCallback(() => {
         _eventSenderGA("Sharing", "Click Facebook-share Button", "result page");
-    }, [_eventSenderGA]);
+    }, []);
 
     const _onTwitterButtonClick = useCallback(() => {
         _eventSenderGA("Sharing", "Click Twitter-share Button", "result page");
-    }, [_eventSenderGA]);
+    }, []);
 
     return (
         <ShareGroupDiv>

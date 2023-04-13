@@ -9,6 +9,7 @@ import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
+import { _eventSenderGA } from './ShareGroup';
 
 function MainPage(props) {
     const { state } = useLocation();
@@ -62,7 +63,7 @@ function MainPage(props) {
 
             {/* RRR Car Test */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
-                <a target='_blank' rel="noopener noreferrer" href="https://bit.ly/401a25W" className="main-link-block" key="rrr-intro-banner">
+                <a target='_blank' rel="noopener noreferrer" href="https://bit.ly/401a25W" className="main-link-block" key="rrr-intro-banner" onClick={() => _eventSenderGA("Paging", "Click RRR Car Thumbnail", "main page")}>
                     <img className="test-main-img" src={`https://images.ktestone.com/introImages/RRR-intro.jpg`} alt="rrr-intro" />
                 </a>
             ) : null}
