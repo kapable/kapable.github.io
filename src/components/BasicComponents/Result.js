@@ -1075,7 +1075,7 @@ class Result extends Component {
                         <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href={` https://PC5tOwFSxk6rMl5hMJ6LPA.adtouch.adbrix.io/api/v1/click/9Q82sxDp8UCS7rbbCZHBhw?deeplink_custom_path=hmallmobile%3a%2f%2fm%2fgoAppLiveChat.do%3fpReferCode%3dla1%26pTcCode%3d0000003962%26utm_source%3dlabang%26utm_medium%3dcpc_da%26utm_campaign%3dtracking`}
+                        href={`https://PC5tOwFSxk6rMl5hMJ6LPA.adtouch.adbrix.io/api/v1/click/29kIDhdJm0WC7B1v4JrBBQ?cb_1={CUSTOM_PARAM}`}
                         className="to-ppl-banner-text"
                         > <img src={`https://images.ktestone.com/meta/HmallTest.jpg`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                     </Fragment>
