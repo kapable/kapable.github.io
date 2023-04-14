@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // labelStickerFriendship
+    {
+        info : {
+            mainTitle:"라벨 스티커 테스트 우정편",
+            subTitle:"스티커로 우리의 우정을 확인해 보자!",
+            mainUrl:"labelStickerFriendship",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/labelStickerFriendship-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/labelStickerFriendship-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '나의 스트레스 해소법은 무엇일까?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '친구들을 만나 수다 떨고 놀기'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '집에서 아무것도 안 하고 누워 쉬기'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "친구들과의 단체 모임에서 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "안 친한 친구들과도 이참에 친해지면 좋겠다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "안 친한 친구가 말 걸면 불편한데"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "일주일 동안 친구들과 약속을 잡는 횟수는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `일주일에 최소 3~4일 일주일 내내도 가능`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `일주일에 0~2일 일단 연달아서 약속 안 잡음`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "달리는 버스에 앉아 창밖을 바라볼 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `날씨 좋네 나가서 놀고 싶다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `운전기사님은 하루에 몇 번이나 이 길을 다니시는걸까?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "일주일 동안 피자만 먹기 가능? 이라고 질문 했을 때 내 반응은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "오우 불가능 느끼해서 안돼"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `(매일 피자 먹는 상상 중) 피자 종류는 매일 다름?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "친구와 공사장을 지나가는 중 나의 모습은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `공사 중이군 (아무 생각 없이 지나간다)`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `저거 떨어지면 어떡해? 날라올 것 같아 무서워`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `넌 나랑 친구 왜 해? 라고 묻는다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "질문이 그게 뭐임 넌 왜 하는데"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "왜 이런 질문을 하는 거지.. ? 내가 뭐 잘못했나?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 다쳤다고 연락이 왔다! 내 반응은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `어쩌다가 다친 거야 병원 다녀왔어?`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "무슨 일이야? 괜찮아? 많이 아파?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `오전에 출근해야 하는 친구가 새벽까지 놀고 있다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "체력 좋다? 언제 가려고?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "곧 출근해야 하잖아 힘들 텐데 괜찮겠어?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구들을 집에 초대하기로 했다면 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `1인이 최소 이 정도 먹는다고 치고.. 충분하겠다`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `일단 이 정도 하고 모자라면 더 시키자`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "외출하기 귀찮을 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "(약속 시간 한참 전) 그래도 슬슬 준비해야지"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "(약속 시간 아슬아슬) 이제는 진짜 준비 해야지"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '친구와 만나 밥을 먹으러 가는 중! 내 모습은?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "원래 이거 먹기로 했잖아 예약도 다 해놨음"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "저게 더 맛있어 보이지 않아? 저거 먹을래?"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerFriendship/INFP.jpg'
+            },
+        ]
+    },
     // emotionGraphEng
     {
         info : {
