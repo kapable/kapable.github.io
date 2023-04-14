@@ -67,6 +67,7 @@ class Result extends Component {
         this.otherTestBannerRenderer = this.otherTestBannerRenderer.bind(this);
         this.onCoupangButtonClick = this.onCoupangButtonClick.bind(this);
         this.onOtherCoupangButtonClick = this.onOtherCoupangButtonClick.bind(this);
+        this.labelTestUpperBannerRenderer = this.labelTestUpperBannerRenderer.bind(this);
     };
 
     onCoupangButtonClick(){
@@ -1268,6 +1269,59 @@ class Result extends Component {
 
     };
 
+    labelTestUpperBannerRenderer() {
+        if (this.state.current_test === 'labelSticker') {
+            return (
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={`https://ktestone.com/kapable.github.io/labelStickerFriendship/`}
+                        className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerFriendship-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerFriendship'} onClick={this._onPPLBannerClick}/> </a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={`https://ktestone.com/kapable.github.io/labelStickerLove/`}
+                        className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerLove-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerLove'} onClick={this._onPPLBannerClick}/> </a>
+                </Fragment>
+            )
+        } else if (this.state.current_test === 'labelStickerLove') {
+            return (<Fragment>
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`https://ktestone.com/kapable.github.io/labelStickerFriendship/`}
+                    className="to-ppl-banner-text"
+                > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerFriendship-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerFriendship'} onClick={this._onPPLBannerClick}/> </a>
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`https://ktestone.com/kapable.github.io/labelSticker/`}
+                    className="to-ppl-banner-text"
+                > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelSticker-banner.jpeg`} className='ppl-banner-img' alt={'labelSticker'} onClick={this._onPPLBannerClick}/> </a>
+            </Fragment>)
+        } else if (this.state.current_test === 'labelStickerFriendship') {
+            return(
+                <Fragment>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={`https://ktestone.com/kapable.github.io/labelStickerLove/`}
+                        className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerLove-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerLove'} onClick={this._onPPLBannerClick}/> </a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={`https://ktestone.com/kapable.github.io/labelSticker/`}
+                        className="to-ppl-banner-text"
+                    > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelSticker-banner.jpeg`} className='ppl-banner-img' alt={'labelSticker'} onClick={this._onPPLBannerClick}/> </a>
+                </Fragment>
+            )
+        }
+    }
+
     mainPageRender(){
         return(
             <Router >
@@ -1290,22 +1344,9 @@ class Result extends Component {
                 <div className="result">
                     {/* Coupang Partners Dynamic Banner */}
                     {TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0].info.lang === 'Kor'
-                    ? (this.state.current_test !== 'labelSticker' && this.state.current_test !== 'labelStickerLove'
+                    ? (this.state.current_test !== 'labelSticker' && this.state.current_test !== 'labelStickerLove' && this.state.current_test !== 'labelStickerFriendship'
                         ? <CoupangDynamicBanner page={'result'} />
-                        : (this.state.current_test === 'labelSticker'
-                            ? (<a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={`https://ktestone.com/kapable.github.io/labelStickerLove/`}
-                            className="to-ppl-banner-text"
-                        > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerLove-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerLove'} onClick={this._onPPLBannerClick}/> </a>)
-                            : (<a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={`https://ktestone.com/kapable.github.io/labelSticker/`}
-                            className="to-ppl-banner-text"
-                        > <img src={`https://images.ktestone.com/main-thumbnail/labelSticker${this.state.current_test === 'labelSticker' ? 'Love' : '' }-thumb.png`}
-                        className='ppl-banner-img' alt={'labelStickerLove'} onClick={this._onPPLBannerClick}/> </a>))
+                        : this.labelTestUpperBannerRenderer()
                     ): null}
 
                     {/* Adsense */}
