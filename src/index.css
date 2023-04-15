@@ -481,6 +481,10 @@ body {
   color: var(--font-color);
 }
 
+.crop-result-img {
+  -webkit-touch-callout: none;
+}
+
 .result-user-pic {
   width: 20rem;
   margin: 1rem auto;

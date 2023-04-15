@@ -1110,8 +1110,10 @@ class Result extends Component {
                         {this.state.isOpened || this.state.coupangCookies
                         ? (<img src={img_src} className='result-img' alt={final_type} />)
                         : (<>
-                            <div className='article-adCover-div'>
-                                <img src={img_src} className='result-img' alt={final_type} />
+                            <div className='article-adCover-div' oncontextmenu="return false" 
+                                ondragstart="return false" 
+                                onselectstart="return false">
+                                <img src={img_src} className='result-img crop-result-img' alt={final_type} />
                             </div>
                             {this.affiliateRenderer()}
                         </>)}
