@@ -23,6 +23,656 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // emotionGraphCN
+    {
+        info : {
+            mainTitle:"情绪图表测试",
+            subTitle:"通过图表确认我的情绪起伏",
+            mainUrl:"emotionGraphCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/emotionGraphCN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/emotionGraphCN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"CN",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '什么样的情况更折磨我？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '几天不出门一步'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '几天一直要在外面玩几个通宵'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "和初次见面的人单独相处时我会？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "虽然初次见面会有点尴尬，但聊得来的话马上会成为好朋友"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "虽然会聊天，但尴尬的空气中会感到不舒服"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "今天在外面玩了一整天的话？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `虽然想休息但已经有很多约会等着我了`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `接下来要宅一段时间，谁都别管我`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "朋友说想一个人去旅游时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `一个人去的话有意思吗？要去哪里？`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `一个人去的话会不会遇到小偷或被绑架？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "朋友突然有急事要先走的时候我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "以后问发生什么事的话应该会告诉我的"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `이到底是什么事那么着急？？明明是出大事了`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "和朋友见面之后在等回家的公交时我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `快回家休息吧，今天玩得真嗨`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `其实最后一班公交已经走了，考虑该怎么回家`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `什么情况下会说‘也有可能会这样’`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "完全无法理解，很郁闷的时候"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "安慰对方的时候或说没事儿的时候"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "朋友对我说自己很伤心时我的回复是？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `咦？为什么？哪里让你伤心了？`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "这也许会让你伤心，对不起我不是故意的"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `对方说‘最近一整天情绪都不稳定’时我会？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "人嘛，有时候会这样"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "你不说我也在担心..最近发生什么事了？？"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "聊天中朋友突然说其他话题时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `喔，什么情况呀？好搞笑hh 但我们不是在聊别的吗`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `别说其他的，我们不是在聊别的话题嘛`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "朋友突然说要来我家玩时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "啊..为什么？现在吗？（今天有其它日程..不舒服..）"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "干嘛呀？本来有别的事，那就推到明天喽，反而更好呢~"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '出门前选衣服的时候我会？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "提前看好天气再考虑好日程，然后选好搭配"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "虽然有提前想好要穿什么，但当天又受心情影响改变想法"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphCN/INFP.jpg'
+            },
+        ]
+    },
+    // labelStickerLoveEng
+    {
+        info : {
+            mainTitle:"Label Sticker Test Love Edition",
+            subTitle:"Let's express our feelings to our lovers with stickers",
+            mainUrl:"labelStickerLoveEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/labelStickerLoveEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/labelStickerLoveEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'If you come to a restaurant to eat and the owner of the restaurant talks to you in a friendly way, what can be your reaction?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'So kind! I think I should come often.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I'm grateful, but a little uncomfortable."
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "If you have appointments all week, what can be your reaction?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "It might be a bit tiring, but it's better than being at home."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "It is a terrible question. I am not going to be that busy."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "When you come home after your appointment, which one is close to you?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I had so much fun today, tomorrow will be fun too haha`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `Oh, I am finally home I'm tired. I have to rest unconditionally from tomorrow.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When you blame the elevator, which one is close to you?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I hope to arrive soon.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I worry about what to do if the elevator stops and my cell phone is not working.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If you lover is with someone of the opposite sex you don't know, what can be your reaction?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I immediately ask who the person is."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I would imagine all sorts of things in a brief moment before asking.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you often say?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `It can be, well, what are you talking about?`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `If, maybe, it could be, why?`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What does "I'll think about it" mean in your definition?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I really need some time to think about it"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "It's a way of talking that I want to say no but don't want to hurt the other person's feelings."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "How would you react if your lover talked about their worries?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I try to solve it as much as possible.`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I try to listen as much as possible."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `My lover said, “You dressed very comfortably today” what can be your reaction?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Eh, I wanted to dress comfortably today"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Am I too underdressed? I think I'll have to pay more attention next time"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Today is the day I am supposed to clean the house, but if If your lover asks you to go out on the day you have to clean the house, what can be your reaction?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I have to clean up today... it's a bit uncomfortable…`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `I'll do the cleaning later! I think I can do it tomorrow.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "How do you usually go on a date?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I always find out what I'm going to do in advance and meet."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I prefer to meet first and decide what to do later."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'How do you usually make appointments?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I am not available now, but why don’t we have dinner together next weekend."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I ask first this and that, such as some questions like what are you doing now? You want to try pork belly?"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerLoveEng/INFP.jpg'
+            },
+        ]
+    },
     // labelStickerFriendship
     {
         info : {
@@ -562,35 +1212,35 @@ const TESTS = [
                 `,
                 query: "chfhr",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ESTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ESTJ.jpg'
             },
             {
                 type: "ESTP",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "vkfks",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ESTP.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ESTP.jpg'
             },
             {
                 type: "ESFJ",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "gksmf",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ESFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ESFJ.jpg'
             },
             {
                 type: "ESFP",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "ghkfqkfgks",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ESFP.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ESFP.jpg'
             },
             {
                 type: "ENTJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "wlsghl",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ENTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ENTJ.jpg'
             },
             {
                 type: "ENTP",
@@ -598,42 +1248,42 @@ const TESTS = [
                 `,
                 query: "Qkfrks",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ENTP.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ENTP.jpg'
             },
             {
                 type: "ENFJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "qhfk",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ENFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ENFJ.jpg'
             },
             {
                 type: "ENFP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "ska",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ENFP.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ENFP.jpg'
             },
             {
                 type: "ISTJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "ghl",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ISTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ISTJ.jpg'
             },
             {
                 type: "ISTP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "shfks",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ISTP.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ISTP.jpg'
             },
             {
                 type: "ISFJ",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "wnghkd",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ISFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ISFJ.jpg'
             },
             {
                 type: "ISFP",
@@ -641,35 +1291,35 @@ const TESTS = [
                 `,
                 query: "qpdlwl",
                 score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ISFP.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/ISFP.jpg'
             },
             {
                 type: "INTJ",
                 desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
                 query: "cjdfhr",
                 score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/INTJ.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/INTJ.jpg'
             },
             {
                 type: "INTP",
                 desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
                 query: "dusqnsghd",
                 score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/INTP.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/INTP.jpg'
             },
             {
                 type: "INFJ",
                 desc: `친숙한 댕댕이 , 리트리버\n`,
                 query: "dusen",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/INFJ.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/INFJ.jpg'
             },
             {
                 type: "INFP",
                 desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
                 query: "gkdis",
                 score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/INFP.png'
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphEng/INFP.jpg'
             },
         ]
     },
