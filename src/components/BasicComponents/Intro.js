@@ -597,11 +597,11 @@ class Intro extends Component {
     render(){
         return (
             <Fragment>
-                {/* {this.state.current_test.info.mainUrl === 'jaetech' ? (
+                {this.state.current_test.info.mainUrl === 'jaetech' ? (
                     <audio
                     src='https://docs.google.com/uc?export=open&id=14JlzHWUE2TqAsN237ft43SOw02xDPori'
                     autoPlay loop controls/>
-                )  : null} */}
+                )  : null}
                 {this.pageRenderer()}
             </Fragment>
         );
