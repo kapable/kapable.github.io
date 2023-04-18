@@ -65,7 +65,8 @@ class Intro extends Component {
             quiz_url:_sharable_url,
             num_shares_count:0,
             custom_name:"",
-            custom_option:""
+            custom_option:"",
+            audio: new Audio('https://docs.google.com/uc?export=open&id=14JlzHWUE2TqAsN237ft43SOw02xDPori')
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
         this._onMainButtonClick = this._onMainButtonClick.bind(this);
@@ -74,7 +75,7 @@ class Intro extends Component {
     }
     reloadPage() {
         // for blocking Adfit banner with page refreshing for PPL
-        let ppl_list = ['personalTaro', 'personalIncense']
+        let ppl_list = ['personalTaro', 'personalIncense', 'jaetech']
         if(ppl_list.includes(this.props.test)){
             var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
             var now = Date.now();
@@ -105,6 +106,7 @@ class Intro extends Component {
         this.setState({
             mode:'quiz'
         })
+        this.state.audio.play();
     }
 
     _onMainButtonClick(){
@@ -595,6 +597,11 @@ class Intro extends Component {
     render(){
         return (
             <Fragment>
+                {/* {this.state.current_test.info.mainUrl === 'jaetech' ? (
+                    <audio
+                    src='https://docs.google.com/uc?export=open&id=14JlzHWUE2TqAsN237ft43SOw02xDPori'
+                    autoPlay loop controls/>
+                )  : null} */}
                 {this.pageRenderer()}
             </Fragment>
         );
