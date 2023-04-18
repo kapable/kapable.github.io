@@ -22,7 +22,7 @@ import BACKBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import ScriptTag from 'react-script-tag'
 import ReactGA from 'react-ga';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
-import {Howl, Howler} from 'howler';
+import {Howl} from 'howler';
 import sample from '../../api/sample.mp3'
 
 class Intro extends Component {
@@ -68,9 +68,10 @@ class Intro extends Component {
             num_shares_count:0,
             custom_name:"",
             custom_option:"",
-            audio: new Audio('https://docs.google.com/uc?export=open&id=14JlzHWUE2TqAsN237ft43SOw02xDPori'),
+            // audio: new Audio('https://docs.google.com/uc?export=open&id=14JlzHWUE2TqAsN237ft43SOw02xDPori'),
+            audio: new Audio(sample),
             sound: new Howl({
-                src: [sample],
+                src: sample,
                 autoplay: true,
                 loop: true,
             })
@@ -114,7 +115,7 @@ class Intro extends Component {
             mode:'quiz'
         })
         // this.state.audio.play();
-        this.state.sound.play();
+        // this.state.sound.play();
     }
 
     _onMainButtonClick(){
@@ -153,7 +154,7 @@ class Intro extends Component {
                 <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
             </Fragment>
         )
-        } 
+        }
     }
 
     introPageRender(){
@@ -605,11 +606,12 @@ class Intro extends Component {
     render(){
         return (
             <Fragment>
-                {/* {this.state.current_test.info.mainUrl === 'jaetech' ? (
+                {this.state.current_test.info.mainUrl === 'jaetech' ? (
                     <audio
-                    src='https://docs.google.com/uc?export=open&id=14JlzHWUE2TqAsN237ft43SOw02xDPori'
+                    // src='https://docs.google.com/uc?export=open&id=14JlzHWUE2TqAsN237ft43SOw02xDPori'
+                    src={sample}
                     autoPlay loop controls/>
-                )  : null} */}
+                )  : null}
                 {this.pageRenderer()}
             </Fragment>
         );
