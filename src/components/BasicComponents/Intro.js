@@ -22,7 +22,6 @@ import BACKBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import ScriptTag from 'react-script-tag'
 import ReactGA from 'react-ga';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
-import {Howl} from 'howler';
 import sample from '../../api/sample.mp3'
 
 class Intro extends Component {
@@ -68,13 +67,6 @@ class Intro extends Component {
             num_shares_count:0,
             custom_name:"",
             custom_option:"",
-            // audio: new Audio('https://docs.google.com/uc?export=open&id=14JlzHWUE2TqAsN237ft43SOw02xDPori'),
-            audio: new Audio(sample),
-            sound: new Howl({
-                src: sample,
-                autoplay: true,
-                loop: true,
-            })
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
         this._onMainButtonClick = this._onMainButtonClick.bind(this);
@@ -114,8 +106,8 @@ class Intro extends Component {
         this.setState({
             mode:'quiz'
         })
-        // this.state.audio.play();
-        // this.state.sound.play();
+        const audio = new Audio(sample)
+        audio.play();
     }
 
     _onMainButtonClick(){
@@ -606,12 +598,12 @@ class Intro extends Component {
     render(){
         return (
             <Fragment>
-                {this.state.current_test.info.mainUrl === 'jaetech' ? (
+                {/* {this.state.current_test.info.mainUrl === 'jaetech' ? (
                     <audio
                     // src='https://docs.google.com/uc?export=open&id=14JlzHWUE2TqAsN237ft43SOw02xDPori'
                     src={sample}
                     autoPlay loop controls/>
-                )  : null}
+                )  : null} */}
                 {this.pageRenderer()}
             </Fragment>
         );
