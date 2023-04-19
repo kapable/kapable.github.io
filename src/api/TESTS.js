@@ -24,7 +24,7 @@ function range(start, stop, step) {
 const TESTS = [
     // order tests with newly date order
     // emotionGraphCN
-    {
+    { 
         info : {
             mainTitle:"情绪图表测试",
             subTitle:"通过图表确认我的情绪起伏",
@@ -35834,193 +35834,195 @@ const TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '팀원이 생일일 때 나는?',
+                question: '문득 술이 땡기는 날 나는?'
+                ,
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: '먼저 축하한다며 단톡에 생일 축하톡과 함께\n출근해서 마주치면 생일 축하한다고 말한다.'
+                        content: '친구들에게 연락을 돌리며 술친구를 찾는다'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '생일인지 모르다가 뒤늦게 카톡을 보고 알아챈다.'
+                        content: '집에서 사색을 즐기며 혼술 한다'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "궁금한 질문이 있어 상사에게 카톡을 보냈지만,\n답장이 오지 않는다.",
+                question: "술자리 중 친구가 아는 지인을 불러도 되냐고 물어본다면 나는?"
+                ,
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "바쁘신지 물어보고 카톡 확인을 부탁하거나\n직접 물어본다."
+                        content: "좋지! 불러 불러~!!"
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "일단 답장이 올 때까지 기다려본다."
+                        content: "아 갑자기? 그냥 우리끼리 마시자~"
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "회의 중 나의 모습과 가까운 것은?",
+                question: "술집에서 벨을 눌렀는데 아무도 오지 않을 때 나는?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "폭풍 아이디어를 내며 주도적으로 참여한다."
+                        content: `큰 소리로 직원을 부른다`
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "다른 사람들의 아이디어를 적고,\n정리하며 듣는 역할을 많이한다."
+                        content: `손을 들거나, 벨을 한 번 더 누르고 기다린다`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "말도 안 되는 업무를 하라고 하는 상사에게 나는?",
+                question: "술과 안주를 직원이 매우 불안하게 들고 온다면?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "말은 안되지만 일단 하라니까 한다."
+                        content: `저 직원 왜 저렇게 아슬아슬하게 들고 오는 거지??`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "그게 말이 안 되는데 어떻게 진행하는지 물어본다."
+                        content: `이미 내 앞에서 와장창! 하는 상상을 하며 불안해한다`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "새로 맡은 프로젝트를 진행할 때 나는?",
+                question: "술자리 먹다가 갑자기 친구가 만약에 로또 당첨되면 어떻게 할 거냐고 묻는다면?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "기존 매뉴얼이 있는지 찾아보고\n매뉴얼을 읽는다."
+                        content: "로또를 안 샀는데? 로또 사주고 물어봐 친구야^^"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "일단 내가 먼저 해보다가\n막히는 부분이 있으면 물어본다."
+                        content: `나는 하고 싶은 거 많아!! 사고 싶었던 거 다 사고 얼마는 저축하고… `
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "프로젝트를 보고 하는 날,\n나의 모습과 가까운 것은?",
+                question: "새로 주문한 안주가 나왔는데 한 입 먹자마자 입에서 녹는다면?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "준비한 대본대로 발표한다."
+                        content: `와 입에서 녹네! 너무 맛있는데?!`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: "발표하는 순간만큼은 스티븐 잡스가 되어보려고 한다!"
+                        content: `와 입에서 녹네! 어떻게 만든 거지? 혹시 MSG 잔뜩 들어간 거 아니야 이거?`
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "할 일이 많은데 친한 팀원이\n커피 마시러 가자고 할 때 나는?",
+                question: `내 옆자리에 앉은 친구가 술에 취해 갑자기 운다면 나는?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "아...지금 바쁜데…그래도 가자는데…\n리프레시 타임은 필요하니까 다녀와서 하자!"
+                        content: "갑자기 왜 울어? 무슨 일이야? "
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "지금은 너무 할 일이 많아 나중에 가자고 한다."
+                        content: "괜찮아?? 울지마~ 나까지 슬프잖아 ㅠㅠ"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "상사에게 심한 꾸지람을 들었을 때 나는?",
+                question: "옆자리 테이블과 시비가 붙었다 하지만 내 친구가 잘못해 일어난 일이라면?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "기분이 상하고 힘들긴 하지만 그러려니 한다."
+                        content: `바로 친구에게 너의 잘못이라고 말해준다`
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "참으려고 하지만 계속 기분이 안 좋고\n왜 그랬지 하며 머릿속에 맴돈다."
+                        content: "최대한 돌려서 너의 잘못이었다고 말해준다 "
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "부하직원이 계속 같은 실수를 했을 때 나는?",
+                question: `친구가 많이 취한 것 같다며 집에 간다고 한다면?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "부하직원의 미래를 위해서\n객관적이며 따끔한 조언을 한다."
+                        content: "너 별로 안 먹은 거 같은데? 벌써 가? 에이~"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "상처받지 않도록 돌려서 잘 말해본다."
+                        content: "그래~ 많이 먹긴 했어~ "
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "평소 나의 업무 스타일과 가까운 것은?",
+                question: "친구들과 2차를 가는 곳을 정할 때 나는?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "늘 평소에 스케줄을 정리해서\n마감일까지 급하지 않다."
+                        content: `일단 나가서 정하자~`
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "마감일 전까지 여유롭게 하다 마감일이 다가오면\n극도의 집중력을 발휘해 끝낸다."
+                        content: `여기서 정하고 나가자, 여기는 어때?`
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "출근할 때 나는?",
+                question: "2차로 정한 술집으로 갔는데, 웨이팅을 해야 한다면?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "‘몇 시에 나가야 지각하지 않겠구나’\n하며 미리 출근하려고 한다."
+                        content: "그냥 다른 술집으로 가자고 한다"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "매일 짜릿한 출근시간!\n아슬아슬하게 출근한다."
+                        content: "이미 정한 곳이니, 기다리자고 한다"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "일을 마무리하지 못하고 퇴근했을 때 나는?",
+                question: '거의 끝나가는 술자리, 계산할 때쯤 나는?',
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "아 그냥 다 하고 올 걸 그랬나?\n하며 내내 마음이 불편한 채 퇴근한다."
+                        content: "미리 정산해 놓고, 누가 계산하고, 어떻게 받을 건지 정하자고 한다"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "내일 와서 마저 하면 되겠지?\n하며 가벼운 마음으로 퇴근한다."
+                        content: "우리 계산 어떻게 할까?"
                     },
                 ]
             },
