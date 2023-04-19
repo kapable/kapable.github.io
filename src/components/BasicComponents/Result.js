@@ -54,7 +54,7 @@ class Result extends Component {
             num_shares_count:0,
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
-            isOpened: false,
+            isOpened: true,
             originAdProb: 0.5 < Math.random(),
             adProb: 1.1 >= Math.random(),
         };
@@ -782,11 +782,16 @@ class Result extends Component {
         return (
             <div className='article-adCover-div-1'>
                 <div className='article-adCover-div-2'>
-                    <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
+                    <p><b>쿠팡 인기상품 확인하고 결과 확인하세요!</b></p>
+                    <div className='article-adCover-div-3'>
+                        <button className='coupang-close-button'>X</button>
+                        <iframe title="coupangs" src="https://ads-partners.coupang.com/widgets.html?id=656355&template=carousel&trackingCode=AF4396324&subId=&width=350&height=140" width="350" height="140" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
+                    </div>
+                    {/* <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
                         <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : this.onCoupangButtonClick}>
                             쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
                         </button>
-                    </a>
+                    </a> */}
                 </div>
             </div>
         );
