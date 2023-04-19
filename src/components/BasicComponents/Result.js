@@ -54,9 +54,10 @@ class Result extends Component {
             num_shares_count:0,
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
-            isOpened: true,
+            isOpened: false,
             originAdProb: 0.5 < Math.random(),
             adProb: 1.1 >= Math.random(),
+            coupangCount: 5,
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
         this._eventSenderGA = this._eventSenderGA.bind(this);
@@ -66,9 +67,27 @@ class Result extends Component {
         this.adTagRenderer = this.adTagRenderer.bind(this);
         this.otherTestBannerRenderer = this.otherTestBannerRenderer.bind(this);
         this.onCoupangButtonClick = this.onCoupangButtonClick.bind(this);
+        this.onCoupangCloseButtonClick = this.onCoupangCloseButtonClick.bind(this)
         this.onOtherCoupangButtonClick = this.onOtherCoupangButtonClick.bind(this);
         this.labelTestUpperBannerRenderer = this.labelTestUpperBannerRenderer.bind(this);
     };
+
+    componentDidMount() {
+        this.inter = setInterval(() => {
+            if (this.state.coupangCount <= 0) {
+            clearInterval(this.inter);
+            this.setState({
+                coupangCount: 0
+            }); 
+            } else {
+            this.setState((prevState) => ({coupangCount: prevState.coupangCount - 1})); 
+            }
+        }, 1000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.inter);
+    }
 
     onCoupangButtonClick(){
         const { cookies } = this.props;
@@ -83,6 +102,19 @@ class Result extends Component {
             this._eventSenderGA("Paging", "Click go-to-Coupang Button", "result page");
         }
     };
+
+    onCoupangCloseButtonClick() {
+        const { cookies } = this.props;
+        // const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
+        const cookieAges = 60*60*2;
+        cookies.set('coupang', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        this.setState({
+            coupangCookies: cookies.get('coupang'),
+            isOpened: true,
+        });
+        this._eventSenderGA("Closing", "Click Close-Coupang Button", "result page");
+    }
+
     onOtherCoupangButtonClick(){
         const { cookies } = this.props;
         const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
@@ -782,10 +814,16 @@ class Result extends Component {
         return (
             <div className='article-adCover-div-1'>
                 <div className='article-adCover-div-2'>
-                    <p><b>쿠팡 인기상품 확인하고 결과 확인하세요!</b></p>
                     <div className='article-adCover-div-3'>
-                        <button className='coupang-close-button'>X</button>
-                        <iframe title="coupangs" src="https://ads-partners.coupang.com/widgets.html?id=656355&template=carousel&trackingCode=AF4396324&subId=&width=350&height=140" width="350" height="140" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
+                        <p><b>쿠팡 인기상품 확인하고 결과 확인하세요!</b></p>
+                        <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
+                            <button className='coupang-cover-button' onClick={this.onCoupangCloseButtonClick}></button>
+                        </a>
+                        <iframe  title="coupangs" src="https://ads-partners.coupang.com/widgets.html?id=656355&template=carousel&trackingCode=AF4396324&subId=&width=350&height=140" width="350" height="140" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
+                        <button className='coupang-close-button'
+                            onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}>
+                            {this.state.coupangCount === 0 ? "X" : this.state.coupangCount}
+                        </button>
                     </div>
                     {/* <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
                         <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : this.onCoupangButtonClick}>
