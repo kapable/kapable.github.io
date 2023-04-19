@@ -22,7 +22,7 @@ import BACKBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import ScriptTag from 'react-script-tag'
 import ReactGA from 'react-ga';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
-import sample from '../../api/sample.mp3'
+// import sample from '../../api/sample.mp3'
 
 class Intro extends Component {
     constructor(props){
@@ -106,8 +106,8 @@ class Intro extends Component {
         this.setState({
             mode:'quiz'
         })
-        const audio = new Audio(sample)
-        audio.play();
+        // const audio = new Audio(sample)
+        // audio.play();
     }
 
     _onMainButtonClick(){
@@ -598,12 +598,6 @@ class Intro extends Component {
     render(){
         return (
             <Fragment>
-                {/* {this.state.current_test.info.mainUrl === 'jaetech' ? (
-                    <audio
-                    // src='https://docs.google.com/uc?export=open&id=14JlzHWUE2TqAsN237ft43SOw02xDPori'
-                    src={sample}
-                    autoPlay loop controls/>
-                )  : null} */}
                 {this.pageRenderer()}
             </Fragment>
         );
