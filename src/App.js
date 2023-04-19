@@ -35,6 +35,7 @@ import LifetimeSaju from './components/TestTypes/Saju/LifetimeSaju';
 import LifetimeSajuResult from './components/TestTypes/Saju/LifetimeSajuResult';
 import LifeInterpreting from './components/TestTypes/Saju/LifeInterpreting';
 import LifeInterpretingResult from './components/TestTypes/Saju/LifeInterpretingResult';
+import Privacy from './components/BasicComponents/Privacy';
 
 
 class App extends Component {
@@ -431,6 +432,7 @@ class App extends Component {
             ))}
 
             {/* go to User related pages */}
+            <Route exact path="/privacy" component={Privacy} />
             <Route exact path="/login" component={Auth(LoginPage, false)} />
             <Route exact path="/register" component={Auth(RegisterPage, false)} />
             {/* <Route exact path="/MyPage/:userId" component={Auth(MyPage, true)} /> */}
@@ -449,6 +451,12 @@ class App extends Component {
           <p>soumy21@naver.com</p>
           <p>Disclaimer:<br></br>All content is provided for fun and entertainment purposes only</p>
           <p>©주식회사 쿠키로켓 All Rights Reserved. 2023.</p>
+          <p><a
+            style={{color:"lightGrey"}}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={'https://ktestone.com/privacy'}
+        >개인정보 처리방침</a></p>
       </div>
     </Fragment>
     </Router>
