@@ -13,10 +13,11 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 const LifetimeSajuResult = (props) => {
     const saju_url = 'https://saju.ktestone.com';
     const [result, setResult] = useState({});
-    const [isOpened, setIsOpened] = useState(false);
+    const [isOpened, setIsOpened] = useState(true);
     const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
     const originAdProb = 0.5 < Math.random();
     const coupangLink = originAdProb ? "https://link.coupang.com/a/PqWGr" : "https://link.coupang.com/a/PC8eL" ;
+    const [coupangCount, setCoupangCount] = 5;
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
@@ -27,10 +28,17 @@ const LifetimeSajuResult = (props) => {
     };
 
     const onCoupangButtonClick = useCallback(() => {
-        const cookieAges = 60*60*12;
+        const cookieAges = 60*60*2;
         setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
         setIsOpened(true);
         _eventSenderGA("Paging", "Click go-to-Coupang Button(SAJU)", "result page");
+    }, [setCoupangCookie]);
+
+    const onCoupangCloseButtonClick = useCallback(() => {
+        const cookieAges = 60*60*2;
+        setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        setIsOpened(true);
+        _eventSenderGA("Closing", "Click Close-Coupang Button(SAJU)", "result page");
     }, [setCoupangCookie]);
 
     useEffect(() => {
@@ -83,6 +91,22 @@ const LifetimeSajuResult = (props) => {
                 <Fragment>
                     <h3>초년운</h3>
                     <p>{result ? result?.early_luck?.slice(0, 100) : null}</p>
+                    {/* <div className='article-adCover-div-1'>
+                        <div className='article-adCover-div-2'>
+                            <div className='article-adCover-div-3'>
+                                <p><b>쿠팡 인기상품 확인하고 결과 확인하세요!</b></p>
+                                <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
+                                    <button className='coupang-cover-button' onClick={onCoupangButtonClick}></button>
+                                </a>
+                                <iframe  title="coupangs" src="https://ads-partners.coupang.com/widgets.html?id=656355&template=carousel&trackingCode=AF4396324&subId=&width=350&height=140" width="350" height="140" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
+                                <button className='coupang-close-button'
+                                    onClick={coupangCount === 0 ? onCoupangCloseButtonClick : null}>
+                                    {coupangCount === 0 ? "X" : coupangCount}
+                                </button>
+                            </div>
+                        </div>
+                        <p className='result-coupang-comment' style={{marginTop: "1rem"}}>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
+                    </div> */}
                     <div className='article-adCover-div-1'>
                         <div className='article-adCover-div-2'>
                             <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
@@ -91,7 +115,7 @@ const LifetimeSajuResult = (props) => {
                                 </button>
                             </a>
                         </div>
-                        <p className='result-coupang-comment' style={{marginTop: "1rem"}}>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
+                        
                     </div>
                 </Fragment>
             }
