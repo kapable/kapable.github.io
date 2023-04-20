@@ -57,7 +57,9 @@ class Result extends Component {
             isOpened: false,
             originAdProb: 0.5 < Math.random(),
             adProb: 1.1 >= Math.random(),
+            startTimer: false,
             coupangCount: 5,
+            ABTestProb: 0.5 < Math.random()
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
         this._eventSenderGA = this._eventSenderGA.bind(this);
@@ -73,23 +75,29 @@ class Result extends Component {
     };
 
     componentDidMount() {
-        this.inter = setInterval(() => {
-            if (this.state.coupangCount <= 0) {
-                clearInterval(this.inter);
-                this.setState({
-                    coupangCount: 0
-                }); 
-            } else {
-                this.setState((prevState) => ({coupangCount: prevState.coupangCount - 1})); 
-            }
-        }, 1000);
+        setTimeout(function () {
+            this.setState({
+                startTimer: true
+            })
+            this.inter = setInterval(() => {
+                if (this.state.coupangCount <= 0) {
+                    clearInterval(this.inter);
+                    this.setState({
+                        coupangCount: 0
+                    }); 
+                } else {
+                    this.setState((prevState) => ({coupangCount: prevState.coupangCount - 1})); 
+                }
+            }, 1000);
+        }.bind(this), 2000)
+
     }
 
     componentWillUnmount() {
         clearInterval(this.inter);
     }
 
-    onCoupangButtonClick(){
+    onCoupangButtonClick(type){
         const { cookies } = this.props;
         // const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
         const cookieAges = 60*60*2;
@@ -99,7 +107,7 @@ class Result extends Component {
             isOpened: true,
         });
         if(this.state.originAdProb) {
-            this._eventSenderGA("Paging", "Click go-to-Coupang Button", "result page");
+            this._eventSenderGA("Paging", `Click go-to-Coupang Button(${type})`, "result page");
         }
     };
 
@@ -814,22 +822,50 @@ class Result extends Component {
         return (
             <div className='article-adCover-div-1'>
                 <div className='article-adCover-div-2'>
-                    <div className='article-adCover-div-3'>
-                        <p style={{fontSize:'1rem'}}><b><span style={{color:'#0074E9'}}>인기 상품</span> 확인하고 결과 확인하세요!</b></p>
-                        <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
-                            <button className='coupang-cover-button' onClick={this.onCoupangButtonClick}></button>
-                        </a>
-                        <iframe  title="coupangs" src="https://ads-partners.coupang.com/widgets.html?id=656355&template=carousel&trackingCode=AF4396324&subId=&width=350&height=140" width="350" height="80" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
-                        <button className='coupang-close-button'
-                            onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}>
-                            {this.state.coupangCount === 0 ? "X" : this.state.coupangCount}
-                        </button>
-                    </div>
-                    {/* <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
-                        <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : this.onCoupangButtonClick}>
-                            쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
-                        </button>
-                    </a> */}
+                    {
+                        this.state.ABTestProb
+                        ? (
+                            // New Version Coupang
+                            <div className='article-adCover-div-3'>
+                                <p style={{fontSize:'1rem'}}><b><span style={{color:'#0074E9'}}>인기 상품</span> 확인하고 결과 확인하세요!</b></p>
+                                <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
+                                    <button className='coupang-cover-button'
+                                        onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : () => this.onCoupangButtonClick('New')}>
+                                    </button>
+                                </a>
+                                <iframe  title="coupangs" src="https://ads-partners.coupang.com/widgets.html?id=656355&template=carousel&trackingCode=AF4396324&subId=&width=350&height=140" width="350" height="80" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
+                                {this.state.startTimer ? (
+                                    <button className='coupang-close-button'
+                                        onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}>
+                                        {
+                                            
+                                            this.state.coupangCount === 0 ? "X" : this.state.coupangCount
+                                        }
+                                    </button>
+                                ) : null}
+                                
+                            </div>
+                        )
+                        : (
+                            // Original Version Coupang
+                            <div className='article-adCover-div-3'>
+                                <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
+                                    <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : () => this.onCoupangButtonClick('Original')}>
+                                        쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
+                                    </button>
+                                </a>
+                                {this.state.startTimer ? (
+                                    <button className='coupang-close-button'
+                                        onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}>
+                                        {
+                                            
+                                            this.state.coupangCount === 0 ? "X" : this.state.coupangCount
+                                        }
+                                    </button>
+                                ) : null}
+                            </div>
+                        )
+                    }
                 </div>
             </div>
         );
