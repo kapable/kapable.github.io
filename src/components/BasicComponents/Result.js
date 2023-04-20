@@ -1447,6 +1447,19 @@ class Result extends Component {
                         {/* PPL banner image */}
                         {this.pplBannerRenderer()}
                     </div>
+                    
+                    {/* LabelSticker Goods Banner */}
+                    {(this.state.current_test === 'labelSticker' || this.state.current_test === 'labelStickerLove' || this.state.current_test === 'labelStickerFriendship'
+                        ? (
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://rootssolution.co.kr/76/?idx=333`}
+                                className="to-ppl-banner-text"
+                            > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelSticker-goods-banner.jpg`} className='ppl-banner-img' alt={'toLabelSticker-goods'} onClick={this._onPPLBannerClick}/> </a>
+                        )
+                        : null
+                    )}
                     {ppl_list.includes(this.state.current_test) ? null : <p className='result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>}
 
                     <OtherLangIcons currentTest={this.state.current_test}/>
