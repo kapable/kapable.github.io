@@ -91,7 +91,7 @@ const LifetimeSajuResult = (props) => {
                 <Fragment>
                     <h3>초년운</h3>
                     <p>{result ? result?.early_luck?.slice(0, 100) : null}</p>
-                    {/* <div className='article-adCover-div-1'>
+                    <div className='article-adCover-div-1'>
                         <div className='article-adCover-div-2'>
                             <div className='article-adCover-div-3'>
                                 <p><b>쿠팡 인기상품 확인하고 결과 확인하세요!</b></p>
@@ -106,8 +106,8 @@ const LifetimeSajuResult = (props) => {
                             </div>
                         </div>
                         <p className='result-coupang-comment' style={{marginTop: "1rem"}}>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
-                    </div> */}
-                    <div className='article-adCover-div-1'>
+                    </div>
+                    {/* <div className='article-adCover-div-1'>
                         <div className='article-adCover-div-2'>
                             <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
                                 <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={onCoupangButtonClick}>
@@ -116,7 +116,7 @@ const LifetimeSajuResult = (props) => {
                             </a>
                         </div>
                         
-                    </div>
+                    </div> */}
                 </Fragment>
             }
             <div className="share">

@@ -413,7 +413,7 @@ body {
 
 .article-adCover-div-1 {
   position: relative;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.8);
   height: 6rem;
   top: -6rem;
   width: 100%;
@@ -436,7 +436,7 @@ body {
 .coupang-close-button {
   position: absolute;
   right: 0;
-  background-color: #F7552F;
+  background-color: lightgray;
   border: none;
   color: white;
   cursor: pointer;

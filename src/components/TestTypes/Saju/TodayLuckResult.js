@@ -13,6 +13,7 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 
 const TodayLuckResult = (props) => {
     const saju_url = 'https://saju.ktestone.com';
+    // const saju_url = 'http://localhost:3065';
     const [result, setResult] = useState({});
     const [isOpened, setIsOpened] = useState(true);
     const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);

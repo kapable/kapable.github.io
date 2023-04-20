@@ -75,12 +75,12 @@ class Result extends Component {
     componentDidMount() {
         this.inter = setInterval(() => {
             if (this.state.coupangCount <= 0) {
-            clearInterval(this.inter);
-            this.setState({
-                coupangCount: 0
-            }); 
+                clearInterval(this.inter);
+                this.setState({
+                    coupangCount: 0
+                }); 
             } else {
-            this.setState((prevState) => ({coupangCount: prevState.coupangCount - 1})); 
+                this.setState((prevState) => ({coupangCount: prevState.coupangCount - 1})); 
             }
         }, 1000);
     }
@@ -815,11 +815,11 @@ class Result extends Component {
             <div className='article-adCover-div-1'>
                 <div className='article-adCover-div-2'>
                     <div className='article-adCover-div-3'>
-                        <p><b>쿠팡 인기상품 확인하고 결과 확인하세요!</b></p>
+                        <p style={{fontSize:'1rem'}}><b><span style={{color:'#0074E9'}}>인기 상품</span> 확인하고 결과 확인하세요!</b></p>
                         <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
                             <button className='coupang-cover-button' onClick={this.onCoupangButtonClick}></button>
                         </a>
-                        <iframe  title="coupangs" src="https://ads-partners.coupang.com/widgets.html?id=656355&template=carousel&trackingCode=AF4396324&subId=&width=350&height=140" width="350" height="140" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
+                        <iframe  title="coupangs" src="https://ads-partners.coupang.com/widgets.html?id=656355&template=carousel&trackingCode=AF4396324&subId=&width=350&height=140" width="350" height="80" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
                         <button className='coupang-close-button'
                             onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}>
                             {this.state.coupangCount === 0 ? "X" : this.state.coupangCount}
