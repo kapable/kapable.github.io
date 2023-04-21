@@ -23,6 +23,333 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // labelStickerCN
+    {
+        info : {
+            mainTitle:"标签贴纸测试",
+            subTitle:"用贴纸洞察一下我的内心吧",
+            mainUrl:"labelStickerCN",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/labelStickerCN-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/labelStickerCN-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"CN",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '和朋友们玩着玩着发现已经到晚上10点了！'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '今晚要嗨通宵，谁都不准回家'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '慢慢地想回家了，一直看周围的眼色'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "朋友聚会结束后回家的时候我会？"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "想和其他人一起边聊边走"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "想独自一个人安静地走"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "周末的约会取消了的时候？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `我晕…没人和我见面了么？得联系联系别人`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `虽然有点可惜..也挺好的呀？这样我也不用出门了？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "在下决定的时候我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `一旦下定决心了就不会反复思考`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `一直边思考我下的决定是否正确边苦恼`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "过马路的时候我会？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "什么也不想赶快过马路"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `想象着这里如果出车祸司机逃跑的话我该怎么办？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "上地铁啦！但谁都不坐在我旁边的话？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `大家都站着呀，空座位那么多，我运气真好`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `为什么没人坐呢？难道我看起来很奇怪吗?`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `好朋友们吵架时我会？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "因为那点儿事儿吵，哇，真有意思"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "为什么吵架呢..?该怎么劝呢？"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "朋友在约会地点哭得很伤心的话？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `干嘛哭啊..问的话不太好吧，还是别打扰他了`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "干嘛哭啊~告诉我啊，搞得我也想哭了呢T"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `朋友看了我的卡考却不回复的话？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "可能太忙了吧，不太在意"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "重新看一遍聊天记录，看看是不是我说错话了"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "准备出门时我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `计划好的时间起开始准备，所以总是很悠闲`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `明明很早就开始准备了，为什么总是快迟到呢`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "整理书桌的时候我会？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "按照经常使用的顺序整理整齐"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "即使看起来很乱也能马上找出自己需要的东西"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '家务堆了一堆却很疲惫的话？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "累也要先完成家务之后再休息"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "先休息，家务活完了再考虑"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerCN/INFP.jpg'
+            },
+        ]
+    },
     // emotionGraphCN
     { 
         info : {
