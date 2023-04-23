@@ -13,11 +13,12 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 const LifetimeSajuResult = (props) => {
     const saju_url = 'https://saju.ktestone.com';
     const [result, setResult] = useState({});
-    const [isOpened, setIsOpened] = useState(true);
+    const [isOpened, setIsOpened] = useState(false);
     const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
     const originAdProb = 0.5 < Math.random();
     const coupangLink = originAdProb ? "https://link.coupang.com/a/PqWGr" : "https://link.coupang.com/a/PC8eL" ;
-    const [coupangCount, setCoupangCount] = 5;
+    const [coupangCount, setCoupangCount] = useState(5);
+    const [startTimer, setStartTimer] = useState(false);
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
@@ -58,6 +59,19 @@ const LifetimeSajuResult = (props) => {
         getToday(props?.match?.params?.query);
     }, [props]);
 
+    useEffect(() => {
+        setStartTimer(true);
+        const interval = setInterval(() => {
+        if (coupangCount <= 0) {
+            clearInterval(interval);
+            setCoupangCount(0)
+        } else {
+            setCoupangCount(coupangCount-1);
+        }
+        }, 1000);
+        return () => clearInterval(interval);
+    }, [coupangCount]);
+
     const onRestartButtonClick = useCallback(() => {
         _eventSenderGA("Paging", "Click Re-test Button", "result page");
         props.history.push(`/lifeInterpreting/`);
@@ -94,29 +108,24 @@ const LifetimeSajuResult = (props) => {
                     <div className='article-adCover-div-1'>
                         <div className='article-adCover-div-2'>
                             <div className='article-adCover-div-3'>
-                                <p><b>쿠팡 인기상품 확인하고 결과 확인하세요!</b></p>
                                 <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
-                                    <button className='coupang-cover-button' onClick={onCoupangButtonClick}></button>
+                                    <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={onCoupangButtonClick}>
+                                        쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
+                                    </button>
                                 </a>
-                                <iframe  title="coupangs" src="https://ads-partners.coupang.com/widgets.html?id=656355&template=carousel&trackingCode=AF4396324&subId=&width=350&height=140" width="350" height="140" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
-                                <button className='coupang-close-button'
-                                    onClick={coupangCount === 0 ? onCoupangCloseButtonClick : null}>
-                                    {coupangCount === 0 ? "X" : coupangCount}
-                                </button>
+                                {startTimer ? (
+                                    <button className='coupang-close-button'
+                                        onClick={coupangCount === 0 ? onCoupangCloseButtonClick : null}>
+                                        {
+                                            
+                                            coupangCount === 0 ? "X" : coupangCount
+                                        }
+                                    </button>
+                                ) : null}
                             </div>
                         </div>
                         <p className='result-coupang-comment' style={{marginTop: "1rem"}}>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
                     </div>
-                    {/* <div className='article-adCover-div-1'>
-                        <div className='article-adCover-div-2'>
-                            <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
-                                <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={onCoupangButtonClick}>
-                                    쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
-                                </button>
-                            </a>
-                        </div>
-                        
-                    </div> */}
                 </Fragment>
             }
             <div className="share">

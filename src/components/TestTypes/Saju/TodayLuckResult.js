@@ -15,10 +15,12 @@ const TodayLuckResult = (props) => {
     const saju_url = 'https://saju.ktestone.com';
     // const saju_url = 'http://localhost:3065';
     const [result, setResult] = useState({});
-    const [isOpened, setIsOpened] = useState(true);
+    const [isOpened, setIsOpened] = useState(false);
     const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
     const originAdProb = 0.5 < Math.random();
     const coupangLink = originAdProb ? "https://link.coupang.com/a/PqWGr" : "https://link.coupang.com/a/PC8eL" ;
+    const [coupangCount, setCoupangCount] = useState(5);
+    const [startTimer, setStartTimer] = useState(false);
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
@@ -33,6 +35,13 @@ const TodayLuckResult = (props) => {
         setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
         setIsOpened(true);
         _eventSenderGA("Paging", "Click go-to-Coupang Button(TODAY LUCK)", "result page");
+    }, [setCoupangCookie]);
+
+    const onCoupangCloseButtonClick = useCallback(() => {
+        const cookieAges = 60*60*2;
+        setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        setIsOpened(true);
+        _eventSenderGA("Closing", "Click Close-Coupang Button(SAJU)", "result page");
     }, [setCoupangCookie]);
 
     useEffect(() => {
@@ -51,6 +60,19 @@ const TodayLuckResult = (props) => {
         };
         getToday(props?.match?.params?.query);
     }, [props]);
+
+    useEffect(() => {
+        setStartTimer(true);
+        const interval = setInterval(() => {
+        if (coupangCount <= 0) {
+            clearInterval(interval);
+            setCoupangCount(0)
+        } else {
+            setCoupangCount(coupangCount-1);
+        }
+        }, 1000);
+        return () => clearInterval(interval);
+    }, [coupangCount]);
 
     const onRestartButtonClick = useCallback(() => {
         _eventSenderGA("Paging", "Click Re-test Button", "result page");
@@ -96,11 +118,22 @@ const TodayLuckResult = (props) => {
                     <p>{result ? result?.total_result?.slice(0, 100) : null}</p>
                     <div className='article-adCover-div-1'>
                         <div className='article-adCover-div-2'>
-                            <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
-                                <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={onCoupangButtonClick}>
-                                    쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
-                                </button>
-                            </a>
+                            <div className='article-adCover-div-3'>
+                                <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
+                                    <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={onCoupangButtonClick}>
+                                        쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
+                                    </button>
+                                </a>
+                                {startTimer ? (
+                                    <button className='coupang-close-button'
+                                        onClick={coupangCount === 0 ? onCoupangCloseButtonClick : null}>
+                                        {
+                                            
+                                            coupangCount === 0 ? "X" : coupangCount
+                                        }
+                                    </button>
+                                ) : null}
+                            </div>
                         </div>
                         <p className='result-coupang-comment' style={{marginTop: "1rem"}}>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
                     </div>
