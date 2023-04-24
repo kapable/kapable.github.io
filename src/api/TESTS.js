@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveTicketEng
+    {
+        info : {
+            mainTitle:"Love Voucher Test",
+            subTitle:"What voucher would you like to receive from your lover?",
+            mainUrl:"loveTicketEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveTicketEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveTicketEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'How do you feel when you arrive home after a fun date with your lover?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'It was so much fun! I have to meet some friends tomorrow~' 
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'It was so fun but a bit tired. I should rest at home tomorrow '
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "if you went out because you had something to do, but it was finished sooner than expected, what can be your reaction?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "It's over sooner than I thought. Okay, I will call my friends to hang out. "
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Great! I'm excited to go home and rest."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "On Friday after hard work, if your lover you were supposed to see tomorrow asks to meet you today, what can be your reaction?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Maybe? After all, there is nothing else! Okay! `
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I want to go home and rest today, so let's have fun tomorrow`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If your lover asks “What should we do if there is a sudden war?” what can be your reaction?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Don’t worry because that doesn't happen.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Let’s quickly grab what we need and go to the underground bunker. Where is the underground bunker?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When you're so hungry on a diet, what do you think?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "If I were a person who would not gain weight no matter how much you ate, what would I eat now?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I think my friend will tell me what happens later`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What if you were to marry your lover?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Our relationship is still far from marriage. I don't think it's too late to think about it later.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Just imagining where we will go for our honeymoon or wedding makes me happy.`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `If you lover said to you “I just like you” what can be your reaction?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Really? What do you like about me? I like you about ~~~"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "me too me too! I guess we can get along! (Impressed)"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What do you think when you find out that your lover is not feeling well?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I wish to hear from my lover why.`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "What's going on? Maybe it's not because of me? I wonder."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `your lover says “I cried because I had a sad dream today”, what can be your reaction?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "What did you dream about? A dream is just a dream, so don’t cry."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Was it such a sad dream, what kind of dream was it?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Your anniversary with your lover is in two weeks, what can be your reaction?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `Only two weeks left? I have to hurry up. Let's start with the list first.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `I think I should think about it slowly because I still have enough time to prepare.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When you buy a present for your lover's birthday, what do you do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I should buy it after carefully checking the brand, reviews, etc."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I've decided which gift to buy, but I can change it if I find a better gift"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "If you were trying to clean your house that hadn't been cleaned for a while, but your lover suddenly came to visit you, what can be your reaction?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "It's nice to see my lover, but I'm a little uncomfortable because I have plans."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "It's sudden, but I can clean my house tomorrow."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketEng/INFP.jpg'
+            },
+        ]
+    },
     // loveTicket
     {
         info : {
