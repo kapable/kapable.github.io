@@ -175,7 +175,7 @@ body {
 .question-p {
   /* white space for line break */
   white-space: pre-line;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 800;
 }
 
@@ -205,10 +205,12 @@ body {
 }
 
 .option-btn {
+  border: #ff5f07 solid 2px;
+  border-radius: 1rem;
   background-color: var(--bg-color);
   font-family: var(--content-font);
   font-weight: bolder;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 800;
   height: 9em;
   width: 20rem;
@@ -216,6 +218,7 @@ body {
   word-break: keep-all;
   white-space: pre-line;
   cursor: pointer;
+  box-shadow: 3px 3px lightgray;
 }
 
 .question-progress {
