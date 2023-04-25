@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
 :root {
-  --bg-color: #ededed;
+  /* --bg-color: #ededed; */
+  --bg-color: white;
   --font-color: black;
   --title-font: sans-serif, "NanumSquare", "Noto Sans";
   --content-font: sans-serif, "NanumSquare", "Noto Sans";
