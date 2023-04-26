@@ -885,7 +885,7 @@ class Result extends Component {
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI" || _current_test_contents.info.scoreType === "numberScoring" ){
             // meta tag for PPL test contents
-            let ppl_list = ["hmall", "loveTicketEng", "labelStickerCN", "labelStickerLoveEng", "emotionGraphCN", "loveCharacterFemaleJP", "loveCharacterMaleJP", "emotionGraphEng", "labelStickerJP", "cloudLoveCN", "labelStickerEng", "loveMagazineEng", "loveMagazineCN", "loveInMyHeadCN", "loveInMyHeadEng", "loveSpicyEng", "loveSpicyCN", "cantWaitEng", "cantWaitCN", "loveSpringFlowerCN", "loveSpringFlowerEng", "loveSpringFlowerCNList", "coupleCharacterMaleCN", "coupleCharacterFemaleCN", "coupleCharacterMaleEng", "coupleCharacterFemaleEng", "loveSpeedEng", "loveCellEng", "loveCellCN", "speechHabitEng", "speechHabitCN", "mbtiFeaturesEng", "bondeeCN", "bondeeEng", "loveFlameEng", "loveFlameCN", "readyToBoneEng", "readyToBoneCN", "mailForMeCN", "mailForMeEng", "smileColorTestES", "loveWarningES", "characteristicChracterCN", "characteristicChracterEng", "loveWarningCN", "loveWarningJP", "loveWarningEng", "meGuideEng", "meGuideJP", "smileColorTestCn", "smileColorTestJP", "loveCharacterJP", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN", "loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer", "loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES", "memoEng", "characteristicChracterJP",  "oneSidedLoveJP", "oneSidedLoveEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
+            let ppl_list = ["loveTicketEng", "labelStickerCN", "labelStickerLoveEng", "emotionGraphCN", "loveCharacterFemaleJP", "loveCharacterMaleJP", "emotionGraphEng", "labelStickerJP", "cloudLoveCN", "labelStickerEng", "loveMagazineEng", "loveMagazineCN", "loveInMyHeadCN", "loveInMyHeadEng", "loveSpicyEng", "loveSpicyCN", "cantWaitEng", "cantWaitCN", "loveSpringFlowerCN", "loveSpringFlowerEng", "loveSpringFlowerCNList", "coupleCharacterMaleCN", "coupleCharacterFemaleCN", "coupleCharacterMaleEng", "coupleCharacterFemaleEng", "loveSpeedEng", "loveCellEng", "loveCellCN", "speechHabitEng", "speechHabitCN", "mbtiFeaturesEng", "bondeeCN", "bondeeEng", "loveFlameEng", "loveFlameCN", "readyToBoneEng", "readyToBoneCN", "mailForMeCN", "mailForMeEng", "smileColorTestES", "loveWarningES", "characteristicChracterCN", "characteristicChracterEng", "loveWarningCN", "loveWarningJP", "loveWarningEng", "meGuideEng", "meGuideJP", "smileColorTestCn", "smileColorTestJP", "loveCharacterJP", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN", "loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer", "loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES", "memoEng", "characteristicChracterJP",  "oneSidedLoveJP", "oneSidedLoveEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "snowflakeEng", 'lovejewerlyEng', 'personalColorFactEng', 'flowerBTIJP','flowerBTIEng','personalColor2022Eng','personalColorJP','personalColorCN','personalColorES','personalColorArb','personalColorInd','personalColorRus','personalColorMalay','personalColorGer', 'personalColorFra', 'persoanlColorFactInd', 'personalColorEng', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncenseEng', 'personalIncenseJP', 'dringkingHabitEng', 'dringkingHabitJP', 'hanbokBTI', 'hanbokBTIEng', 'hanbokBTIJP'];
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
             let tonymoly_list = ["factPok", "MyFactPok", "FriendFactPok",];
             if(ppl_list.includes(this.state.current_test)) {
@@ -1159,6 +1159,50 @@ class Result extends Component {
                         className="to-ppl-banner-text"
                         > <img src={`https://images.ktestone.com/meta/HmallTest.jpg`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                     </Fragment>
+                )
+            } else if(this.state.current_test === "hmall") {
+                const hmall_type_link_obj = {
+                    "ESTP":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861316",
+                    "ESFP":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861317",
+                    "ENFP":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861318",
+                    "INFP":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861319",
+                    "ENTJ":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861320",
+                    "INFJ":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861321",
+                    "INTJ":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861322",
+                    "ESTJ":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861323",
+                    "INTP":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861333",
+                    "ENFJ":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861334",
+                    "ISFJ":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861335",
+                    "ENTP":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861336",
+                    "ISTJ":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861337",
+                    "ISTP":     
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861338",
+                    "ISFP":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861339",
+                    "ESFJ":    
+                    "http://www.hmall.com/m/dpk/plPlanSaleL.do?PlanSaleSectID=2861340",
+                }
+                return (
+                    <a target="_blank"
+                        rel="noopener noreferrer"
+                        href={hmall_type_link_obj[_current_test_result.type]}
+                        ><button style={{backgroundColor:"white", border:"orange 3px solid", fontSize:"2rem", cursor: "pointer"}}>
+                            Hmall로 결과 보러가기
+                        </button>
+                    </a>
                 )
             } else {
                 return (
