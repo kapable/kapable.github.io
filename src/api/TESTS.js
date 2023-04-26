@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveTicketJP
+    {
+        info : {
+            mainTitle:"ラブバウチャーテスト",
+            subTitle:"恋人からどんなクーポンをもらいたいですか？",
+            mainUrl:"loveTicketJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveTicketJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveTicketJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"JP",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '恋人からどんなクーポンをもらいたいですか？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'めっちゃ楽しかったー！明日は友達に会いに行かなきゃ～' 
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'とても楽しかったけど、ちょっと疲れた。明日は家でゆっくり休まないと'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "もし、用事があって出かけたが、予定より早く終わってしまった場合、どんな反応が考えられますか？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "思ったより早く終わっちゃったね、じゃあ、友達呼んで遊びに行くよ"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Great!家に帰ってゆっくり休むのが楽しみです"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "頑張った後の金曜日、明日会うはずだった恋人が今日会いましょうと言われたら、どんな反応になるでしょうか？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `もしかして？ 結局、他に何もない！？よし！`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `今日は家に帰ってゆっくり休みたいので、明日も楽しみましょう`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Iもし恋人に「突然戦争が起きたらどうしよう」と言われたら、あなたの反応はどうなりますか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `んなことは起きないので心配しないでください。`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `っさと必要なものを手に入れて、地下バンカーに行きましょう。 地下バンカーはどこですか？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "ダイエットでお腹がすいたとき、どう思いますか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "辞めたくなるほどつらいです"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `もし私がいくら食べても太らない人だったら、今何を食べますか？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "もし恋人と結婚するとしたら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `私たちの関係はまだ結婚には程遠いです。 後から考えても遅くないと思います。`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `新婚旅行や結婚式で行く場所を想像するだけで幸せな気分になります。`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `恋人から「好きなだけだよ」と言われたら、あなたの反応はどうなりますか？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "そうなんですか、私のどこが好きなんですか～～～～～～～～～～～～～"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "俺も俺も！ 仲良くなれるんだな！（感動）"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "恋人の体調不良を知ったらどう思いますか？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `恋人から理由を聞きたいです`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "どうしたんだろう、私のせいじゃないのかな、どうなんだろう"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `恋人が「今日は悲しい夢を見たから泣いた」と言ったら、あなたの反応は？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "どんな夢を見たの？ 夢は夢だから泣かないでね"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "そんな悲しい夢だったのでしょうか、どんな夢だったのでしょうか"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "恋人との記念日があと2週間、あなたの反応は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `あと2週間しかないって？ 大変だね、とりあえずリストから作成しよう.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `まだ準備期間があるので、ゆっくり考えた方がいいと思います.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "恋人の誕生日プレゼントを買うとき私は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "ブランドや口コミなどをよく確認してから買うべきですね"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "買うプレゼントは決めたけど、もっといいプレゼントがあれば変えられます"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'ばらく掃除をしていなかった家を掃除しようとしたら、突然恋人が訪ねてきたとしたら、どんな反 応になるでしょうか？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "恋人に会えるのは嬉しいけど、予定があるからちょっと気が引ける (ジェイ)"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "突然ですが、明日は家の掃除ができますね(ﾟ▽ﾟ)"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTicketJP/INFP.jpg'
+            },
+        ]
+    },
     // loveTicketEng
     {
         info : {
