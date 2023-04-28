@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // polaroidCharacteristic
+    {
+        info : {
+            mainTitle:"폴라로이드 성격 테스트",
+            subTitle:"내 성격을 폴라로이드 사진으로 찍어보자",
+            mainUrl:"polaroidCharacteristic",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/polaroidCharacteristic-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/polaroidCharacteristic-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '나에게 진정한 휴식시간 이란 무엇일까?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '바깥으로 나가 사람들을 만나며 보내는 시간'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '하루 종일 집에서 쉬며 보내는 시간'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "어쩌다 보니 어색한 친구들과 함께 노래방에 왔다! 내 모습은 어떨까?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "이참에 다 친해지는 거지! 신나게 노래 부르고 놈"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "뭔가 노래 부르긴 좀 어색.. 일단 앉아서 부르는 노래 들음"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "여행 중 친구들과 다 함께 단체 사진을 찍고 싶다!\n누군가에게 부탁을 해야 한다면 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `주변에 있는 분께 사진 찍어달라고 직접 부탁한다`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `저분께 부탁해 보라고 친구에게 속삭인다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "식당에서 밥을 먹는데 갑자기 서비스를 주신다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `아싸 서비스 야미~ 맛있겠다!`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `원래 다 주시는 걸까? 근데 이렇게 주시면 남는 게 있으신가`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "평소 연락하지 않던 친구가 갑자기 만나자고 한다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "무슨 일 때문인지 바로 물어본다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `갑자기 뭐지..? 혹시 돈 빌리러..? 고민하다 물어본다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "친구와 함께 재난 영화를 보고 나왔다! 내 모습은 어떨까?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `영화 재밌었다~ 보길 잘했어`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `만약에 내가 주인공이라면 뭐부터 해야 할까? 일단 마트부터 털어야겠지?`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `영화를 보고 감동을 받아 울고 있는 친구를 본다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "왜 우는 거지..  어느 부분 때문에 우는 거야?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "나도 눈물 나ㅜㅜ 완전 감동이지ㅜㅜ"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "고민을 얘기하며 속상하다는 내 친구! 나의 대답은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `그럼 일단 이렇게 해봐. 저렇게는 해봤어?`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "그랬구나ㅜ 나였어도 속상했을 거 같아 괜찮아질 거야!!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `여러 명이 함께 식사 메뉴를 고를 때 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "이 메뉴는 어떤지 바로 물어봄"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "난 먹고 싶은 메뉴가 있지만 혹시 싫어할 수도 있으니까 일단 눈치 봄"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "만나기로 한 약속 장소가 처음 가보는 곳일 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `전날 어떻게 가야 할지, 빠른 경로 등 미리 알아봄`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `전날 대충 걸리는 시간만 보고 당일에 경로 검색해 보면서 감`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "다음 주 주말에 약속이 있다! 뭐 할지 일정을 짜볼까?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "이미 뭐 할지 다 생각해 놨음"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "다음 주인데 왜 벌써 일정을 짬?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '약속 시간에 30분 정도 늦는다는 친구! 내 반응은?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "30분?? 난 이미 출발했는데.. 일정도 수정해야 하잖아.."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "사실 나도 늦을 뻔ㅎㅎ 오히려 좋아~"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristic/INFP.jpg'
+            },
+        ]
+    },
     // loveTicketJP
     {
         info : {
