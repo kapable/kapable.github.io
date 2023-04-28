@@ -190,12 +190,14 @@ class Intro extends Component {
                         alt={_mainTitle + '|' + _subTitle}/>
                     <OtherLangIcons currentTest={this.state.current_test.info.mainUrl}/>
                     
-                    <AdsenseAdvertiser
+                    {this.state.current_test.info.mainUrl === 'hmall' ? null : (
+                        <AdsenseAdvertiser
                         client="ca-pub-2382342018701919"
                         slot="5663135072"
                         format="auto"
                         responsive="true"
                     />
+                    )}
 
                     {/* CPC Banner Intro footer */}
                     {/* {this.cpcBannerIntroFooterScriptor()} */}
