@@ -123,12 +123,14 @@ class Quiz extends Component {
         
         return(
             <Fragment>
-                <AdsenseAdvertiser
+                {window.location.href.split('/').includes('hmall') ? null : (
+                    <AdsenseAdvertiser
                     client="ca-pub-2382342018701919"
                     slot="5663135072"
                     format="auto"
                     responsive="true"
                 />
+                )}
                 <Question question={this.props.qAndA[this.props.quizNum].question}></Question>
                 {/* In case of Quiz with Image Options */}
                 <Fragment>
