@@ -9,7 +9,7 @@ class QuestionCount extends Component {
                 <div className='progress-bar' >
                     <ProgressBar
                         completed={this.props.quizCount / this.props.totalCount * 100 + 10}
-                        isLabelVisible={false} baseBgColor='#fbf7f2' bgColor='#b70048'
+                        isLabelVisible={false} baseBgColor='#fbf7f2' bgColor='#E62381'
                         height='10px' width='100%' transitionDuration='.3s'/>
                 </div>
                 <div className="question-count">
