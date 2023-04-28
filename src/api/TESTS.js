@@ -74778,7 +74778,7 @@ const TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '날씨 온도 습도 모든 것이 완벽한\n간만에 쉬는 주말, 나는?',
+                question: '날씨 온도 습도 모든 것이 완벽한 간만에 쉬는 주말, 나는?',
                 answers:[
                     {
                         type: "E",
@@ -74794,7 +74794,7 @@ const TESTS = [
             },
             {
                 which:"EI",
-                question: "때 마침 친구가 자기도 쉬는 날이라고\n만나자며 연락이 왔다!",
+                question: "때 마침 친구가 자기도 쉬는 날이라고 만나자며 연락이 왔다!",
                 answers:[
                     {
                         type: "E",
@@ -74810,7 +74810,7 @@ const TESTS = [
             },
             {
                 which:"EI",
-                question: "결국 만난 친구가 쇼핑하자며,\n백화점에 가자고 한다면?",
+                question: "결국 만난 친구가 쇼핑하자며, 백화점에 가자고 한다면?",
                 answers:[
                     {
                         type: "E",
@@ -74826,7 +74826,7 @@ const TESTS = [
             },
             {
                 which:"SN",
-                question: "카페에서 폰으로 쇼핑을 하기로 했다.\n그런데 마침 경품 이벤트 알림이 뜬다면?",
+                question: "카페에서 폰으로 쇼핑을 하기로 했다 그런데 마침 경품 이벤트 알림이 뜬다면?",
                 answers:[
                     {
                         type: "S",
@@ -74836,13 +74836,13 @@ const TESTS = [
                     {
                         type: "N",
                         score: 5,
-                        content: `경품 이벤트? 이미 당첨 되서 1등 상품을 받는 상상을 해본다`
+                        content: `경품 이벤트? 이미 당첨 돼서 1등 상품을 받는 상상을 해본다`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "이벤트 참여 중에 카페 진동벨이 울렸다,\n평소 덤벙거리는 친구가 음료를 불안하게 들고 온다면?",
+                question: "이벤트 참여 중에 카페 진동벨이 울렸다, 평소 덤벙거리는 친구가 음료를 불안하게 들고 온다면?",
                 answers:[
                     {
                         type: "S",
@@ -74858,7 +74858,7 @@ const TESTS = [
             },
             {
                 which:"SN",
-                question: "무사히 도착 후 다시 쇼핑을 하는 중,\n마음에 드는 제품을 보게 되었다 내가 중점적으로 보는 것은?",
+                question: "무사히 도착 후 다시 쇼핑을 하는 중, 마음에 드는 제품을 보게 되었다 내가 중점적으로 보는 것은?",
                 answers:[
                     {
                         type: "S",
@@ -74874,7 +74874,7 @@ const TESTS = [
             },
             {
                 which:"TF",
-                question: `친구가 쇼핑 중 사려는 2가지 제품 중에 고민이라며\n어떤 제품을 살지 물어본다면?`,
+                question: `친구가 쇼핑 중 사려는 2가지 제품 중에 고민이라며 어떤 제품을 살지 물어본다면?`,
                 answers:[
                     {
                         type: "T",
@@ -74890,7 +74890,7 @@ const TESTS = [
             },
             {
                 which:"TF",
-                question: "내가 결정을 해줬는데도\n친구가 결정을 쉽게 못한다면?",
+                question: "내가 결정을 해줬는데도 친구가 결정을 쉽게 못한다면?",
                 answers:[
                     {
                         type: "T",
@@ -74906,7 +74906,7 @@ const TESTS = [
             },
             {
                 which:"TF",
-                question: `마침내 친구가 물건을 고르고,\n나에게 고맙다고 말하려는 상황 내가 듣고 싶은 칭찬은?`,
+                question: `마침내 친구가 물건을 고르고, 나에게 고맙다고 말하려는 상황 내가 듣고 싶은 칭찬은?`,
                 answers:[
                     {
                         type: "T",
@@ -74922,7 +74922,7 @@ const TESTS = [
             },
             {
                 which:"JP",
-                question: "어느새 저녁을 먹을 시간,\n어떤 음식점을 갈지 정할 때 나는?",
+                question: "어느새 저녁을 먹을 시간 어떤 음식점을 갈지 정할 때 나는?",
                 answers:[
                     {
                         type: "J",
@@ -74938,7 +74938,7 @@ const TESTS = [
             },
             {
                 which:"JP",
-                question: "친구와 갈 맛집을 정한 후 가는 길에\n사람들이 몰려 있는 구간이 있다면?",
+                question: "친구와 갈 맛집을 정한 후 가는 길에 사람들이 몰려 있는 구간이 있다면?",
                 answers:[
                     {
                         type: "J",
@@ -74954,7 +74954,7 @@ const TESTS = [
             },
             {
                 which:"JP",
-                question: '친구와 밥을 먹고 집에 돌아가는 길\n동네에서 처음 보는 낯선 길을 발견했다면?',
+                question: '친구와 밥을 먹고 집에 돌아가는 길 동네에서 처음 보는 낯선 길을 발견했다면?',
                 answers:[
                     {
                         type: "J",
