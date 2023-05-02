@@ -102,7 +102,7 @@ class Intro extends Component {
         });
     }
     _onStartButtonClick(){
-        this._eventSenderGA("Paging", "Click Start-test Button", "intro page");
+        this._eventSenderGA("Paging", `Click ${this.state.current_test.info.mainUrl === 'hmall' ? 'hmall' : ''}Start-test Button`, "intro page");
         this.setState({
             mode:'quiz'
         })

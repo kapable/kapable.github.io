@@ -1199,7 +1199,9 @@ class Result extends Component {
                     <a target="_blank"
                         rel="noopener noreferrer"
                         href={hmall_type_link_obj[_current_test_result.type]}>
-                        <img style={{maxWidth:"16.5rem"}} src='https://images.ktestone.com/meta/hmall/hmall-go-to-result-btn.png' alt="Hmall로 결과 보러가기" />
+                        <img style={{maxWidth:"16.5rem"}} src='https://images.ktestone.com/meta/hmall/hmall-go-to-result-btn.png' alt="Hmall로 결과 보러가기"
+                            onClick={this._eventSenderGA("Paging", "Click go-to-Hmall Button", "result page")}
+                        />
                     </a>
                 )
             } else {

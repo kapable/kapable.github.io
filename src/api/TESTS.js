@@ -23,6 +23,327 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // hmall
+    {
+        info : {
+            mainTitle:"브랜드 테스트",
+            subTitle:"브랜드 테스트",
+            mainUrl:"hmall",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/hmall-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/hmall-thumb.png",
+            lang:"Kor",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '날씨 온도 습도 모든 것이 완벽한 간만에 쉬는 주말, 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '날씨가 이렇게 좋은데 이러고 있을 수 없어 나가야지!' 
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '이런 온도 습도 완벽해! 낮잠자기 딱 좋잖아?!..zZ'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "때 마침 친구가 자기도 쉬는 날이라고 만나자며 연락이 왔다!",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "진짜? 대박 잘됐다! 콜! 마침 나가려던 참 이였는데!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "아.. 지금? 갑자기..? (고민중..)"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "결국 만난 친구가 쇼핑하자며, 백화점에 가자고 한다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `완전 좋아! 안 그래도 요즘 쇼핑하고 싶었는데!!`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `어차피 폰으로 다 볼 수 있는데 조용한 카페나 가서 구경하자!`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "카페에서 폰으로 쇼핑을 하기로 했다 그런데 마침 경품 이벤트 알림이 뜬다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `경품 이벤트? 뭐 주는 거지? 클릭해서 자세히 알아본다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `경품 이벤트? 이미 당첨 돼서 1등 상품을 받는 상상을 해본다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "이벤트 참여 중에 카페 진동벨이 울렸다, 평소 덤벙거리는 친구가 음료를 불안하게 들고 온다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "왜 저렇게 불안하게 들고오는거야?.."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `이미 내 앞에서 음료를 쏟는 상상을 한다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "무사히 도착 후 다시 쇼핑을 하는 중, 마음에 드는 제품을 보게 되었다 내가 중점적으로 보는 것은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `성능과, 효율, 어떤 점이 편리하게 설계되었는지 본다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `디자인과 컬러 느낌 적인 부분을 중점적으로 본다`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `친구가 쇼핑 중 사려는 2가지 제품 중에 고민이라며 어떤 제품을 살지 물어본다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "결정해서 말해주고 왜 이 물건을 선택했는지 설명해준다 "
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "너무 어려워.. 나도 덩달아 고민에 빠진다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "내가 결정을 해줬는데도 친구가 결정을 쉽게 못한다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `결정 잘해 준거 같은데? 왜 지?`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "나름 신중하게 골랐는데.. 혹시 내가 결정한게 기분이 나빴나?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `마침내 친구가 물건을 고르고, 나에게 고맙다고 말하려는 상황 내가 듣고 싶은 칭찬은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "너 진짜 설득력 좋다! 어떻게 그런 생각을 했어? 너 말 듣고 이거 질렀다!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "고마워!! 진짜 고민 많았는데 역시 너 밖에 없다!!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "어느새 저녁을 먹을 시간 어떤 음식점을 갈지 정할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `여기서 정하고 나가자 어디 갈까? 생각해 둔 곳이 있긴 한데..`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `어디 갈래? 일단 나가서 정할까?`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구와 갈 맛집을 정한 후 가는 길에 사람들이 몰려 있는 구간이 있다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "뭐지? 싶지만 원래 가려던 길을 간다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "뭔지 궁금해서 친구에게 한번 가보자고 한다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '친구와 밥을 먹고 집에 돌아가는 길 동네에서 처음 보는 낯선 길을 발견했다면?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "원래 가던 길로 빠르게 집에 간다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "동네에 이런 길이 있었어? 하며 새로운 길로 가본다"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: ``,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hmall/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: ``,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hmall/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: ``,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hmall/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: ``,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hmall/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: ``,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hmall/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: ``,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hmall/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: ``,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hmall/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: ``,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hmall/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: ``,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hmall/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: ``,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hmall/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: ``,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hmall/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: ``,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hmall/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: ``,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hmall/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: ``,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hmall/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: ``,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hmall/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: ``,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hmall/INFP.jpg'
+            },
+        ]
+    },
     // polaroidCharacteristic
     {
         info : {
@@ -74760,327 +75081,6 @@ const TESTS = [
                 query: "INFP",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/jaetech/INFP.png'
-            },
-        ]
-    },
-    // hmall
-    {
-        info : {
-            mainTitle:"브랜드 테스트",
-            subTitle:"브랜드 테스트",
-            mainUrl:"hmall",
-            scoreType:"typeCountingMBTI",
-            mainImage:"https://images.ktestone.com/introImages/hmall-intro.jpg",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
-            lang:"",
-            category: "characteristic"
-        },
-        questions:[
-            {
-                which:"EI",
-                question: '날씨 온도 습도 모든 것이 완벽한 간만에 쉬는 주말, 나는?',
-                answers:[
-                    {
-                        type: "E",
-                        score: 2,
-                        content: '날씨가 이렇게 좋은데 이러고 있을 수 없어 나가야지!' 
-                    },
-                    {
-                        type: "I",
-                        score: 5,
-                        content: '이런 온도 습도 완벽해! 낮잠자기 딱 좋잖아?!..zZ'
-                    },
-                ],
-            },
-            {
-                which:"EI",
-                question: "때 마침 친구가 자기도 쉬는 날이라고 만나자며 연락이 왔다!",
-                answers:[
-                    {
-                        type: "E",
-                        score: 2,
-                        content: "진짜? 대박 잘됐다! 콜! 마침 나가려던 참 이였는데!"
-                    },
-                    {
-                        type: "I",
-                        score: 5,
-                        content: "아.. 지금? 갑자기..? (고민중..)"
-                    },
-                ]
-            },
-            {
-                which:"EI",
-                question: "결국 만난 친구가 쇼핑하자며, 백화점에 가자고 한다면?",
-                answers:[
-                    {
-                        type: "E",
-                        score: 2,
-                        content: `완전 좋아! 안 그래도 요즘 쇼핑하고 싶었는데!!`
-                    },
-                    {
-                        type: "I",
-                        score: 5,
-                        content: `어차피 폰으로 다 볼 수 있는데 조용한 카페나 가서 구경하자!`
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "카페에서 폰으로 쇼핑을 하기로 했다 그런데 마침 경품 이벤트 알림이 뜬다면?",
-                answers:[
-                    {
-                        type: "S",
-                        score: 2,
-                        content: `경품 이벤트? 뭐 주는 거지? 클릭해서 자세히 알아본다`
-                    },
-                    {
-                        type: "N",
-                        score: 5,
-                        content: `경품 이벤트? 이미 당첨 돼서 1등 상품을 받는 상상을 해본다`
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "이벤트 참여 중에 카페 진동벨이 울렸다, 평소 덤벙거리는 친구가 음료를 불안하게 들고 온다면?",
-                answers:[
-                    {
-                        type: "S",
-                        score: 2,
-                        content: "왜 저렇게 불안하게 들고오는거야?.."
-                    },
-                    {
-                        type: "N",
-                        score: 5,
-                        content: `이미 내 앞에서 음료를 쏟는 상상을 한다`
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "무사히 도착 후 다시 쇼핑을 하는 중, 마음에 드는 제품을 보게 되었다 내가 중점적으로 보는 것은?",
-                answers:[
-                    {
-                        type: "S",
-                        score: 2,
-                        content: `성능과, 효율, 어떤 점이 편리하게 설계되었는지 본다`
-                    },
-                    {
-                        type: "N",
-                        score: 5,
-                        content: `디자인과 컬러 느낌 적인 부분을 중점적으로 본다`
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: `친구가 쇼핑 중 사려는 2가지 제품 중에 고민이라며 어떤 제품을 살지 물어본다면?`,
-                answers:[
-                    {
-                        type: "T",
-                        score: 2,
-                        content: "결정해서 말해주고 왜 이 물건을 선택했는지 설명해준다 "
-                    },
-                    {
-                        type: "F",
-                        score: 5,
-                        content: "너무 어려워.. 나도 덩달아 고민에 빠진다"
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: "내가 결정을 해줬는데도 친구가 결정을 쉽게 못한다면?",
-                answers:[
-                    {
-                        type: "T",
-                        score: 2,
-                        content: `결정 잘해 준거 같은데? 왜 지?`
-                    },
-                    {
-                        type: "F",
-                        score: 5,
-                        content: "나름 신중하게 골랐는데.. 혹시 내가 결정한게 기분이 나빴나?"
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: `마침내 친구가 물건을 고르고, 나에게 고맙다고 말하려는 상황 내가 듣고 싶은 칭찬은?`,
-                answers:[
-                    {
-                        type: "T",
-                        score: 2,
-                        content: "너 진짜 설득력 좋다! 어떻게 그런 생각을 했어? 너 말 듣고 이거 질렀다!"
-                    },
-                    {
-                        type: "F",
-                        score: 5,
-                        content: "고마워!! 진짜 고민 많았는데 역시 너 밖에 없다!!"
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: "어느새 저녁을 먹을 시간 어떤 음식점을 갈지 정할 때 나는?",
-                answers:[
-                    {
-                        type: "J",
-                        score: 2,
-                        content: `여기서 정하고 나가자 어디 갈까? 생각해 둔 곳이 있긴 한데..`
-                    },
-                    {
-                        type: "P",
-                        score: 5,
-                        content: `어디 갈래? 일단 나가서 정할까?`
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: "친구와 갈 맛집을 정한 후 가는 길에 사람들이 몰려 있는 구간이 있다면?",
-                answers:[
-                    {
-                        type: "J",
-                        score: 2,
-                        content: "뭐지? 싶지만 원래 가려던 길을 간다"
-                    },
-                    {
-                        type: "P",
-                        score: 5,
-                        content: "뭔지 궁금해서 친구에게 한번 가보자고 한다"
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: '친구와 밥을 먹고 집에 돌아가는 길 동네에서 처음 보는 낯선 길을 발견했다면?',
-                answers:[
-                    {
-                        type: "J",
-                        score: 2,
-                        content: "원래 가던 길로 빠르게 집에 간다"
-                    },
-                    {
-                        type: "P",
-                        score: 5,
-                        content: "동네에 이런 길이 있었어? 하며 새로운 길로 가본다"
-                    },
-                ]
-            },
-        ],
-        results:[
-            {
-                type: "ESTJ",
-                desc: ``,
-                query: "ESTJ",
-                score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/hmall/ESTJ.jpg'
-            },
-            {
-                type: "ESTP",
-                desc: ``,
-                query: "ESTP",
-                score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/hmall/ESTP.jpg'
-            },
-            {
-                type: "ESFJ",
-                desc: ``,
-                query: "ESFJ",
-                score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/hmall/ESFJ.jpg'
-            },
-            {
-                type: "ESFP",
-                desc: ``,
-                query: "ESFP",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hmall/ESFP.jpg'
-            },
-            {
-                type: "ENTJ",
-                desc: ``,
-                query: "ENTJ",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hmall/ENTJ.jpg'
-            },
-            {
-                type: "ENTP",
-                desc: ``,
-                query: "ENTP",
-                score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/hmall/ENTP.jpg'
-            },
-            {
-                type: "ENFJ",
-                desc: ``,
-                query: "ENFJ",
-                score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/hmall/ENFJ.jpg'
-            },
-            {
-                type: "ENFP",
-                desc: ``,
-                query: "ENFP",
-                score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/hmall/ENFP.jpg'
-            },
-            {
-                type: "ISTJ",
-                desc: ``,
-                query: "ISTJ",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hmall/ISTJ.jpg'
-            },
-            {
-                type: "ISTP",
-                desc: ``,
-                query: "ISTP",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hmall/ISTP.jpg'
-            },
-            {
-                type: "ISFJ",
-                desc: ``,
-                query: "ISFJ",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hmall/ISFJ.jpg'
-            },
-            {
-                type: "ISFP",
-                desc: ``,
-                query: "ISFP",
-                score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/hmall/ISFP.jpg'
-            },
-            {
-                type: "INTJ",
-                desc: ``,
-                query: "INTJ",
-                score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/hmall/INTJ.jpg'
-            },
-            {
-                type: "INTP",
-                desc: ``,
-                query: "INTP",
-                score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/hmall/INTP.jpg'
-            },
-            {
-                type: "INFJ",
-                desc: ``,
-                query: "INFJ",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hmall/INFJ.jpg'
-            },
-            {
-                type: "INFP",
-                desc: ``,
-                query: "INFP",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/hmall/INFP.jpg'
             },
         ]
     },
