@@ -61,13 +61,6 @@ function MainPage(props) {
                 </Link>
             ) : null}
 
-            {/* RRR Car Test */}
-            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
-                <a target='_blank' rel="noopener noreferrer" href="https://bit.ly/401a25W" className="main-link-block" key="rrr-intro-banner" onClick={() => _eventSenderGA("Paging", "Click RRR Car Thumbnail", "main page")}>
-                    <img className="test-main-img" src={`https://images.ktestone.com/introImages/RRR-intro.jpg`} alt="rrr-intro" />
-                </a>
-            ) : null}
-
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
                 {props.all_tests_url.slice(0,2).map((item, idx)=>{
@@ -133,7 +126,6 @@ function MainPage(props) {
                     <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang}-thumb.png`} alt='loveCharacter' />
                 </Link> : null
             )}
-            
 
             {/* Main Test Banners(Middle) */}
             <div className="main-link-div">
@@ -163,6 +155,14 @@ function MainPage(props) {
                     };
                 })}
             </div>
+
+
+            {/* RRR Car Test */}
+            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
+                <a target='_blank' rel="noopener noreferrer" href="https://bit.ly/401a25W" className="main-link-block" key="rrr-intro-banner" onClick={() => _eventSenderGA("Paging", "Click RRR Car Thumbnail", "main page")}>
+                    <img className="test-main-img" src={`https://images.ktestone.com/introImages/RRR-intro.jpg`} alt="rrr-intro" />
+                </a>
+            ) : null}
 
             {/* Fortune Cookie */}
             {props.lang === 'Kor' && (currentCategory === '' || currentCategory === "saju") ? (
