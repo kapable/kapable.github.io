@@ -23,6 +23,333 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // polaroidCharacteristicEng
+    {
+        info : {
+            mainTitle:"Polaroid Personality Test",
+            subTitle:"What is your personality that can be recognized through Polaroid photos?",
+            mainUrl:"polaroidCharacteristicEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/polaroidCharacteristicEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/polaroidCharacteristicEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What is the meaning of rest for you?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Going out and meeting people'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Resting at home all day'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "If you Somehow came to a karaoke with your friends who are not that comfortable and close to you. What would you do?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Great, I can get to know everyone right now! I would sing and have fun"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I think it would be a little awkward. I'll just sit and listen"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What if you want to take a group photo with your friends while traveling and you have to ask someone to do it?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I directly ask someone around me to take a picture`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I whisper to my friend to ask someone over there`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When you eat at a restaurant, how would you react if the owner offered you an extra dish?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I love it~ it looks delicious!`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Is this service included in the menu? I wonder if there is any profit left by doing this service?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If a friend you hadn't been in contact with all of a sudden asked to see you, what can be your reaction?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I immediately ask what's the matter."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Suddenly? You want to borrow money? I worry and ask.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If you went out to see a disaster movie with your friend, which one is closer to you?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I enjoyed the movie~ It was good to see it`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `What should I do first if I were the main character? Should I rob the mart first`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `If your friend is moved to tears by the movie, what will you do?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Why are you crying? What did you cry for?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I'm in tears too, I'm completely moved as well"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What would you say if your friend told you about his troubles and said he was upset?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I would say “try this and that”`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I would say “oh I understand, you must be upset. You will feel better soon!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What if you have to choose a menu with several people, what would you do?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I immediately suggest a menu right away."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "There is a menu I want to eat, but I wait. "
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you do when you meet someone in a completely new place?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I try to find out in advance how to get there the day before, the fast route, etc.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `I just check the time it takes the day before and searched for the route on the day`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "How would you react if your lover asked you to make plans for the upcoming weekend?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I have already thought of what to do"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "It's next week, why do we have to schedule already?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'How would you react if your friend told you that he would be 30 minutes late for an appointment?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "30 minutes? I've already left... then, I have to adjust the schedule too. ."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Actually, I was almost late too haha I rather like it~"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicEng/INFP.jpg'
+            },
+        ]
+    },
     // hmall
     {
         info : {
