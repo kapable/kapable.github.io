@@ -440,9 +440,9 @@ body {
 .coupang-close-button {
   position: absolute;
   left: 0;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   top: 50%;
-  background-color: lightgray;
+  background-color: black;
   border: none;
   color: white;
   cursor: pointer;
