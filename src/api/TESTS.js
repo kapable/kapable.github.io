@@ -23,6 +23,333 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // emotionGraphJP
+    {
+        info : {
+            mainTitle:"エモーショングラフテスト",
+            subTitle:"感情の起伏をグラフで確認してみよう！",
+            mainUrl:"emotionGraphJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/emotionGraphJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/emotionGraphJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"JP",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'どちらの状況がより気になりますか？'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '家から一歩も出られない日が続くと'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '数日間、遅くまで遊んだりするときは'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "初対面の友人と二人きりになったらどうしますか？"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "最初はぎこちなくても、コミュニケーションがうまくいけば、気づかないうちに親友になれるんです。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "会話はできるけど、気まずくて落ち着かない。 "
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "今日一日外で遊んだとしたら、どんな反応ができるでしょうか。",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `休みたいけど、もうスケジュールが忙しすぎる。`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `しばらくは家にいるしかないんだから、ほっといてよ。`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "もし、友人に「一人で海外旅行に行こう」と言われたら、どうしますか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `一人で行くのは楽しいですか？どこに行くんですか？と聞くことがあります。`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `スリや誘拐の心配がある`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "もし、あなたの友人が急に急用ができて先に帰った場合、あなたはどのような反応をしますか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "後日、友人が教えてくれると思います"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `緊急ですか？何か重大なことだと思うのですが`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "友達と遊んで帰ろうとバスを待っているとき、どんなリアクションができるでしょうか。",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `早く帰って休まないとね。今日は楽しかった`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `もしかしたら、最終バスがもう出てしまって、どうやって帰ろうかなぁ`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `普段、どのような場面で「可能性がある」とおっしゃるのでしょうか？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "全く理解できないのに、大雑把な答えを出さなければならないとき。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "相手を慰めるとき。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "もし友人が私のことを悲しんで、少し動揺していたら、あなたはどう答えますか？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `どうして？何がそうさせたのか、教えてください。`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "可能性があるのです。ごめんなさい、そんなつもりじゃなかったんです。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `友達が「最近ずっと機嫌が悪いんだ」と言ったとき、あなたはどんな反応をすることができるでしょうか？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "誰にでもそういう時期があるものです。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "もう心配してたんだよ、どうしたんだよ"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "もし、友人が突然会話の話題を変えたら、あなたはどう反応しますか？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `話題を変えないでください。私たちは別の話をしていたんです。`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `え、何ですか？おかしいな......ハハ とにかく、今何の話をしたんだっけ？`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "もし、あなたの友人が突然あなたの家に来たいと言い出したら、あなたはどんな反応をすることができるでしょうか？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "え、なんで？今からですか（今日は予定があるので...落ち着かない...）。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "どうしたいんですか？やりたいことがあるんだけど、明日でもいいや。元気になったよ"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'お出かけ前の洋服選びで工夫していることは？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "天気によって着るものを決めたり、一日の計画を立てたりすると、気持ちがいいんです。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "着るものは自分で決めたが、その日の気分で変えることができる"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/emotionGraphJP/INFP.jpg'
+            },
+        ]
+    },
     // polaroidCharacteristicJP
     {
         info : {
