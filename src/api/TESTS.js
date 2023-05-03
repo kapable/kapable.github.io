@@ -23,6 +23,333 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // polaroidCharacteristicJP
+    {
+        info : {
+            mainTitle:"ポラロイド性格診断",
+            subTitle:"ポラロイド写真でわかる、あなたの個性とは？",
+            mainUrl:"polaroidCharacteristicJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/polaroidCharacteristicJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/polaroidCharacteristicJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"JP",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'あなたにとって、休息とは何ですか？'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '外出すること、人に会うこと'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '一日中、家で休んでいる'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "もしあなたが、気の置けない仲の良い友人とカラオケに来たとしたら。あなたならどうしますか？"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "いいね、今ならみんなと仲良くなれるよ！歌ったり、楽しんだり"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "いいね、今ならみんなと仲良くなれるよ！歌ったり、楽しんだり"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "旅行先で友人と集合写真を撮りたいとき、誰かに頼まなければいけないとしたら？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `直接、周りの人に撮影をお願いしている`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `私は友人に小声で「あそこにいる人に聞いてみて」と言う。`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "レストランで食事をするとき、店主から追加の料理を勧められたら、どんな反応をしますか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `いいなぁ～、おいしそうです！`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `このサービスはメニューに含まれているのでしょうか？このサービスをすることで利益は残るのでしょうかね？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "もし、連絡を取っていなかった友人から突然会いたいと言われたら、どんな反応をすればいいのでしょうか。",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "すぐに「どうしたんですか？"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `いきなり？お金を借りたいんですか？と心配になり聞いてみる。`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "友人と震災映画を観に行った場合、どちらが近いでしょうか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `友人と震災映画を観に行った場合、どちらが近いでしょうか？`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `自分が主人公だったら、まず何をすべきか？まずマートを襲うべき？`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `もし、友人が映画を見て感動して泣いてしまったら、あなたはどうしますか？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "なぜ泣くのですか？何のために泣いたのか？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "私も涙が出そうです、私も完全に感動しています"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "もし、あなたの友人が悩みを打ち明け、「動揺している」と言ったら、あなたは何と言いますか？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `あれこれ試してみてください」と言いたいですね。`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "私なら、「ああ、わかりますよ、動揺しているんでしょう。すぐに元気になりますよ！"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `もし、何人かでメニューを選ばなければならないとしたら、どうしますか？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "早速、すぐにメニューを提案します。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "食べたいメニューがあるのですが、待ちます。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "全く知らない土地で出会った時、どうする？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `前日の行き方、高速ルートなど、事前に調べておくようにしています。`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `前日に所要時間を確認し、当日はルート検索をするだけです`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "恋人に「今度の週末に予定を入れよう」と言われたら、どう反応しますか？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "もう、どうしたらいいのか考えています"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "来週なのに、なぜもうスケジュールが決まっているのだろう？"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'もし、あなたの友人が「約束の時間に30分遅れる」と言ったら、あなたはどう反応しますか?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "30分ですか?もう帰っちゃったよ...じゃあ、スケジュールも調整しないとね"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "実は私も遅刻しそうになりました(笑) むしろ好きです～(笑)"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/polaroidCharacteristicJP/INFP.jpg'
+            },
+        ]
+    },
     // earthCharacteristic
     {
         info : {
