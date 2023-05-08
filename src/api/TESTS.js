@@ -23,6 +23,333 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // mbtiFeaturesJP
+    {
+        info : {
+            mainTitle:"MBTI 特徴テスト_恋愛編",
+            subTitle:"私の恋愛特徴と恋愛力指数は:???",
+            mainUrl:"mbtiFeaturesJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/mbtiFeaturesJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/mbtiFeaturesJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"JP",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '週末に恋人と楽しんだ後、どのような反応をすることができるのでしょうか。'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'この週末は本当に最高でした！すっかりリフレッシュできました！'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'この週末も楽しかったです！これから家でゆっくり休みます！'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "もし、混雑した集まりに参加したら、どうする？"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "熱意を持って、自分の意見を自信をもって伝える"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "相手の言葉に静かに共感してしまう"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "どちらの日付がいい？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `ワクワクするようなアウトドアデート`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `静かな室内デート`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "他の友人と飲みに行っている時に、恋人と連絡が取れなくなったらどうしますか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `よくもまあ、答えてくれないものだ！`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `本当に他の女の子とつるんでいないのか？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋人と旅行に行く前日、あなたはどうしますか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "早く行きたいので、早く寝ます"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `旅を想像して眠りにつく`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "どちらの会話がお好みですか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `今のトレンドや興味のあることについての会話`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `想像力が必要な未来志向の会話`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `恋人と衝突したとき、どうする？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "悔しいけど、合理的に解決するために冷静に話す"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "言いたいことは山ほどあるが、心が傷ついているので正気に戻れない"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "もし、恋人が真剣な顔で突然悩みを告白してきたら、あなたはどうしますか？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `最後まで聞いて、問題を解決しようと思います`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "恋人に共感し、真摯に耳を傾けてしまう"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `もし恋人が大切なものを落として壊してしまったら、どうしますか？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "どうやって落としたんですか？あ、ごめんね。どうしてもっと気をつけなかったの？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "あ、ごめんなさい。あなたが大切にしていたものです"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "デートするとき、どうする？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `先回りして顔を出す`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `約束の時間に遅れることが多い`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "恋人とデートする前に、何を準備しますか？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "どこで何をするのか、細かく決めていく"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "場所と時間を決めるのは自分だけ"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'もし、恋人に手紙を書くとしたら、どんなことを書きますか？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "頭の中で何を書くか考え、それを書き留める"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "座ってその場で思いついたことを書く"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mbtiFeaturesJP/INFP.jpg'
+            },
+        ]
+    },
     // emotionGraphJP
     {
         info : {
