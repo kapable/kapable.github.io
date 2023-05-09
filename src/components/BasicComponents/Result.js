@@ -401,7 +401,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let polaroidCharacteristicEngList = ["polaroidCharacteristicEng"];
-        let earthCharacteristicList = ["earthCharacteristic"];
+        let jengaList = ["jenga"];
         let hmallList = ['hmall'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
@@ -523,8 +523,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (earthCharacteristicList.includes(this.state.current_test)) {
-            const rederTestList = ["polaroidCharacteristic", "loveTicket", "labelStickerFriendship", "labelStickerLove", "labelSticker", "cloudLove", "loveMagazine", "emotionGraph",];
+        } else if (jengaList.includes(this.state.current_test)) {
+            const rederTestList = ["earthCharacteristic", "polaroidCharacteristic", "loveTicket", "labelStickerFriendship", "labelStickerLove", "labelSticker",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -742,7 +742,7 @@ class Result extends Component {
         } else if (hmallList.includes(this.state.current_test)) {
             return null;
         } else {
-            const rederTestList = ["earthCharacteristic", "polaroidCharacteristic", "loveTicket", "labelStickerFriendship", "labelStickerLove", "labelSticker", "cloudLove", "emotionGraph",];
+            const rederTestList = ["jenga", "earthCharacteristic", "polaroidCharacteristic", "loveTicket", "labelStickerFriendship", "labelStickerLove", "labelSticker",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
