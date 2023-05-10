@@ -14010,6 +14010,333 @@ const TESTS = [
             },
         ]
     },
+    // loveSpeedJP
+    {
+        info : {
+            mainTitle:"恋愛速度テスト",
+            subTitle:"私の恋愛成功速度はどれくらい速いかな?",
+            mainUrl:"loveSpeedJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveSpeedJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveSpeedJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"JP",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '好きな人と話す時はどうする？'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '自然と会話をリードすることが多いですね。'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '私は普段から、人と話すときはよく考えてから話すようにしています。'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "恋人と何をするか決める時、私は？"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "主体的に意思決定をしている"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "恋人がどんな決定をするのか見守る。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "友だちと話すときはどうする？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `友達が話しているときに割り込むことが多い`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `私が話しているときに、友達が割り込んでくることがよくあるんです。`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "サム中だった異性と付き合うようになったら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `付き合うことに成功したので、きっと気持ちよく幸せになれると思います。`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `ワクワクするような未来を思い浮かべて、幸せを感じるのです。`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋人との関係で大切にしていることは何ですか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "現在、恋愛に集中すること"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `二人の未来を語り合い、そのために何かを準備する。`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "普段、恋人とどのようなコミュニケーションをとっているのでしょうか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `最近あったことや、自分の経験談を話す。`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `自分の想像を話したり、それについて質問したりします。`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `恋人が誰かと口論していたら、どうするのですか？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "なぜそうするのか聞いて、恋人に大丈夫なのか聞いてみる。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "今は恋人の味方をして、後で事情を知ることにしよう。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "あなたは恋愛において、何をより重視しますか？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `信頼関係を大切にし、問題解決を第一に考えています。`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "私は感情的な交流を大切にし、共感が第一です。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `恋人と対立しているときはどうするのでしょうか？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "自分が思う問題点を正直に話し、解決しようとする。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "まずは頭の中を整理して、後で解決するようにしています。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "恋人とデートするときはどうする？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `恋人とのデートは毎回事前に細かく計画する傾向がある`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `恋人とのデートで即興的に新しいことを経験してみる方だ。`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "あなたの生活に密着したものは何ですか？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "私の人生には、計画的なルーティンがたくさんあります。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "私の人生には、即興的なことがたくさんあります。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'あなたにとって恋人との約束の意味とは？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "恋人との約束は何があっても守らなければならない。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "恋人との約束は状況に応じて柔軟に変更できるんです。"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveSpeedJP/INFP.jpg'
+            },
+        ]
+    },
     // loveSpeedEng
     {
         info : {
