@@ -14985,6 +14985,331 @@ const TESTS = [
             },
         ]
     },
+    // loveCellJP
+    {
+        info : {
+            mainTitle:"恋愛細胞キャラクターテスト",
+            subTitle:"私の恋愛細胞キャラクターと恋愛細胞活動数値は？",
+            mainUrl:"loveCellJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveCellJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveCellJP-thumb.png",
+            horizontalBanner: "",
+            lang:"JP",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '好きな人に私の興味を引く方法は？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '積極的な表現と質問で注目を集める'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '積極的な傾聴と共感で注目を集める'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "新しい人を作るときの私は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "新しい人とすぐに打ち解けることができる。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "新しい人と仲良くなるのに時間がかかることが多い"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "恋人と遊びに来た遊園地に人がたくさんいたら？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `うわー、やっぱり！！人が多い！！わくわくするわー！`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `うわぁ、人が多くて疲れるなぁ…`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "気になる異性と連絡中、相手が長い間連絡が取れない場合は？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `少し待てば連絡が来るだろう～。`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `私が何か言い間違えた？ もしかして私が嫌われた？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋人と一緒に海外旅行に行くことになった日、飛行機に乗るときに私は？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "わくわくする～、行ってみたらすごく楽しいだろう？"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `もしこの飛行機が飛行中に突然墜落したら...？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋人が浮気をしたけど、実は夢だったとしたら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `ヒュー。夢だね〜。`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `もしかして...？ 無理して恋人に「もしかして私に何か隠してるんじゃないの？`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `友達から連絡が来る異性ができたとしたら？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "イ・ヨル～誰だ？ イケメン/美人か？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "本当に？ すごい！ おめでとう！ うまくいくよ。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "恋人との葛藤の状況に私は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `できるだけ理性的に論理的に話す`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "感情が高ぶり、言いたいことはたくさんあるが、うまくまとまらない。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `友達が以前会った異性の話をしている時に突然泣いたら？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "ねえ、なんで急に泣いてるの？ あの子のせいで泣いてるの？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "おい、大丈夫か？ そんなくだらないことは忘れてくれ、お前の涙がもったいない。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "気になる異性が突然家に遊びに来ると宣言したら？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `隅々まできれいに掃除する`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `まずは目に見えるところだけ簡単に掃除する`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "新しい仕事を任された私は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "まずはどうするか計画から立てる"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "まずは始めてみて、状況を見て柔軟性を発揮する。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '恋人と映画を見に行くことになった日、突然恋人が別の映画が観たいと言ったら？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "ただ、もともと見ようと思っていた映画を見ようとする"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "どっちでもいいからそうしよう、と言う"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCellJP/INFP.jpg'
+            },
+        ]
+    },
     // loveCellCN
     {
         info : {
