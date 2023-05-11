@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser'; 
 import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
@@ -112,12 +112,10 @@ function Article(props) {
                     <img className='article-mainImg' alt='' src={props.source.mainImg} /></a>
                 {relatedArticleRenderer(props.source.relatedArticles)}
                 <Link to={'/blog/' + props.source.category + '/'} className="article-go-back-link" onClick={_onBackToListButtonClick}>
-                <div
-                    className="go-to-back-btn-article"
-                    >← 다른 기사 보러가기</div></Link>
+                    <div className="go-to-back-btn-article">← 다른 기사 보러가기</div></Link>
             </div>
         </Fragment>
     )
 }
 
-export default Article;
+export default withRouter(Article);
