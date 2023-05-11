@@ -65,6 +65,9 @@
     },
     "cacheAjaxRequests": false,
     "include": [
+      "kapable.github.io/blog",
+      "kapable.github.io/blog/MBTI/",
+      "kapable.github.io/blog/MBTI/ISTJchar/",
       "/",
       "/kapable.github.io/personalColor",
       "/kapable.github.io/personalColor2022",
@@ -667,8 +670,7 @@
       "/kapable.github.io/acrostic/",
       "/kapable.github.io/fortuneCookie/",
       "/kapable.github.io/todayLuck/",
-      "/kapable.github.io/lifetimeSaju/",
-      "kapable.github.io/blog/MBTI/ISTJchar/"
+      "/kapable.github.io/lifetimeSaju/"
     ]
   },
   "eslintConfig": {

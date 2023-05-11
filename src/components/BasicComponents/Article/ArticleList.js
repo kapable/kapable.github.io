@@ -1,8 +1,9 @@
 import React, { Fragment, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import ARTICLES from '../../../api/ARTICLES';
 import ReactGA from 'react-ga';
 import './Article.css';
+import { Helmet } from 'react-helmet';
 // import ARTICLEBANNER from '../../../api/DefaultImg/Ktest-funny.png';
 
 function ArticleList(props) {
@@ -10,6 +11,32 @@ function ArticleList(props) {
     const [Category, setCategory] = useState(props.category);
 
     const category_object = {"MBTI":"MBTI",};
+
+    const metaTagRenderer = () => {
+        return(
+            <Helmet>
+                {/* <!-- Primary Meta Tags --> */}
+                <title>케이테스트 블로그</title>
+                <meta name="title" content={'케이테스트 블로그'}/>
+                <meta name="description" content={'케이테스트 블로그'} data-react-helmet="true"/>
+                <link rel="main-url" href={'https://ktestone.com/kapable.github.io/blog/'}/>
+
+                {/* <!-- Open Graph / Facebook --> */}
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content={'https://ktestone.com/kapable.github.io/blog/'}/>
+                <meta property="og:title" content={'케이테스트 블로그'}/>
+                <meta property="og:description" content={'케이테스트 블로그'}/>
+                <meta property="og:image" content={'https://images.ktestone.com/introImages/labelSticker-intro.jpg'}/>
+
+                {/* <!-- Twitter --> */}
+                <meta property="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:url" content={'https://ktestone.com/kapable.github.io/blog/'}/>
+                <meta property="twitter:title" content={'케이테스트 블로그'}/>
+                <meta property="twitter:description" content={'케이테스트 블로그'}/>
+                <meta property="twitter:image" content={'https://images.ktestone.com/introImages/labelSticker-intro.jpg'}/>
+            </Helmet>
+        )
+    }
 
     function _eventSenderGA(category, action, label){
         ReactGA.event({
@@ -73,6 +100,7 @@ function ArticleList(props) {
 
     return (
         <Fragment>
+            {metaTagRenderer()}
             {/* <img className="test-main-img" src={ARTICLEBANNER} alt="KTEST-Funny" /> */}
             {categoryButtonRenderer(category_object)}
             {articleRenderer(ARTICLES, Category)}
@@ -82,4 +110,4 @@ function ArticleList(props) {
     );
 };
 
-export default ArticleList;
+export default withRouter(ArticleList);
