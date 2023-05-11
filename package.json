@@ -65,8 +65,8 @@
     },
     "cacheAjaxRequests": false,
     "include": [
-      "kapable.github.io/blog/",
-      "kapable.github.io/blog/ISTJchar",
+      "/kapable.github.io/blog/",
+      "/kapable.github.io/blog/ISTJchar",
       "/",
       "/kapable.github.io/personalColor",
       "/kapable.github.io/personalColor2022",
