@@ -257,7 +257,7 @@ function MainPage(props) {
             > <img src={JELLINGBANNERENG} className='test-main-img' alt="go to Jelling games" /> </a>
 
             {/* Go to K-funny articles */}
-            <Link to='/blog/MBTI/' className="main-link-block" key="article-banner">
+            <Link to='/blog/' className="main-link-block" key="article-banner">
                 <img className="test-main-img" src={ARTICLEBANNER} alt="KTEST-Blog" />
             </Link>
 
