@@ -5,7 +5,7 @@ import ReactGA from 'react-ga';
 import './Article.css';
 import { Helmet } from 'react-helmet';
 
-function ArticleList(props) {
+function ArticleList() {
 
     const metaTagRenderer = () => {
         return(

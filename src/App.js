@@ -385,7 +385,7 @@ class App extends Component {
             ))}
 
             {/* go to "Article list" page */}
-            <Route path={'/blog/'} component={() => <ArticleList />} exact/>
+            <Route path={'/blog/'} component={ArticleList} exact/>
 
             {/* go to "Article" page */}
             {ARTICLES.map((item)=>(
