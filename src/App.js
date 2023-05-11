@@ -3,9 +3,7 @@ import MainPage from './components/BasicComponents/MainPage';
 import Intro from './components/BasicComponents/Intro'
 import ResultToIntro from './components/SubComponents/ResultToIntro'
 import ScrollToTop from './components/SubComponents/ScrollToTop'
-import TESTS from './api/TESTS'
-import METAPANGAPPLY from './components/TestTypes/MetaPangApply/LandingPage';
-import METAPANGAPPLYCOMPLETE from './components/TestTypes/MetaPangApply/CompletedPage';
+import TESTS from './api/TESTS';
 import POSTSTART from './components/TestTypes/Post2021/StartPage';
 import POSTPOST from './components/TestTypes/Post2021/PostPage';
 import POSTWRITE from './components/TestTypes/Post2021/PostWrite';
@@ -86,7 +84,7 @@ class App extends Component {
       ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
       lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'ES', 'Rus' ,'Others'],
       category_list:['saju', 'characteristic', 'love', 'etc'],
-      articleCategory:['humor', 'red']
+      articleCategory:['MBTI',]
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);
     this.lang_category_renderer = this.lang_category_renderer.bind(this);
@@ -388,11 +386,11 @@ class App extends Component {
             ))}
 
             {/* go to "Article list" page */}
-            <Route path={`${'/kfunny' || '/kfunny/'}`} component={() => <ArticleList category={'humor'}/>} exact/>
+            <Route path={`${'/blog' || '/blog/'}`} component={() => <ArticleList category={'MBTI'}/>} exact/>
             
             {this.state.articleCategory.map((item) => (
               <Route
-                path={"/kfunny/" + item}
+                path={"/blog/" + item}
                 component={() => <ArticleList category={item}/>}
                 key={item}
                 exact
@@ -401,21 +399,17 @@ class App extends Component {
 
             {this.state.articleCategory.map((item) => (
               <Route
-                path={"/kfunny/" + item + '/'}
+                path={"/blog/" + item + '/'}
                 component={() => <ArticleList category={item}/>}
                 key={item}
                 exact
               />
             ))}
-
-            {/* go to "MetaPang Apply" page */}
-            <Route exact path="/metapangapply/completed" component={() => <METAPANGAPPLYCOMPLETE />} />
-            <Route exact path="/metapangapply" component={() => <METAPANGAPPLY />} />
 
             {/* go to "Article" page */}
             {ARTICLES.map((item)=>(
               <Route
-                path={"/kfunny/" + item.mainUrl + '/'}
+                path={"/blog/" + item.mainUrl + '/'}
                 component={() => <Article source={item}/>}
                 key={item.mainUrl}
                 exact
@@ -424,7 +418,7 @@ class App extends Component {
 
             {ARTICLES.map((item)=>(
               <Route
-                path={"/kfunny/" + item.category + '/' + item.mainUrl + '/'}
+                path={"/blog/" + item.category + '/' + item.mainUrl + '/'}
                 component={() => <Article source={item}/>}
                 key={item.mainUrl}
                 exact

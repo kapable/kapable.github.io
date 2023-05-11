@@ -9,7 +9,7 @@ import ARTICLES from '../../../api/ARTICLES';
 
 function Article(props) {
 
-    let _sharable_url = window.location.href
+    let _sharable_url = window.location.href;
 
     useEffect(() => {
         Array.from(document.querySelectorAll('div.article-contents > img')).map((im) => (
@@ -55,15 +55,15 @@ function Article(props) {
         return(
             <Helmet>
                 {/* <!-- Primary Meta Tags --> */}
-                <title>{props.source.mainTitle}-케이테스트</title>
-                <meta name="title" content={props.source.mainTitle+'-케이퍼니'}/>
+                <title>{props.source.mainTitle}-케이테스트 블로그</title>
+                <meta name="title" content={props.source.mainTitle+'-케이테스트 블로그'}/>
                 <meta name="description" content={props.source.metaTag} data-react-helmet="true"/>
                 <link rel="main-url" href={_sharable_url}/>
 
                 {/* <!-- Open Graph / Facebook --> */}
                 <meta property="og:type" content="website"/>
                 <meta property="og:url" content={_sharable_url}/>
-                <meta property="og:title" content={props.source.mainTitle+'-케이퍼니'}/>
+                <meta property="og:title" content={props.source.mainTitle+'-케이테스트 블로그'}/>
                 <meta property="og:description" content={props.source.metaTag}/>
                 <meta property="og:image" content={props.source.mainImg}/>
                 <meta property="og:image:alt" content={props.source.mainTitle} />
@@ -71,7 +71,7 @@ function Article(props) {
                 {/* <!-- Twitter --> */}
                 <meta property="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:url" content={_sharable_url}/>
-                <meta property="twitter:title" content={props.source.mainTitle+'-케이퍼니'}/>
+                <meta property="twitter:title" content={props.source.mainTitle+'-케이테스트 블로그'}/>
                 <meta property="twitter:description" content={props.source.metaTag}/>
                 <meta property="twitter:image" content={props.source.mainImg}/>
                 <meta property="twitter:image:alt" content={props.source.mainTitle} />
@@ -108,8 +108,10 @@ function Article(props) {
                 <div className="article-contents">
                     {ReactHtmlParser(props.source.contents)}
                 </div>
+                <a target='_blank' rel="noopener noreferrer" href="https://ktestone.com/kapable.github.io/labelSticker/">
+                    <img className='article-mainImg' alt='' src={props.source.mainImg} /></a>
                 {relatedArticleRenderer(props.source.relatedArticles)}
-                <Link to={'/kfunny/' + props.source.category + '/'} className="article-go-back-link" onClick={_onBackToListButtonClick}>
+                <Link to={'/blog/' + props.source.category + '/'} className="article-go-back-link" onClick={_onBackToListButtonClick}>
                 <div
                     className="go-to-back-btn-article"
                     >← 다른 기사 보러가기</div></Link>

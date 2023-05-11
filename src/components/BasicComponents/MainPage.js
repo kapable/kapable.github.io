@@ -9,6 +9,7 @@ import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
+import ARTICLEBANNER from '../../api/DefaultImg/Ktest-funny.png';
 import { _eventSenderGA } from './ShareGroup';
 
 function MainPage(props) {
@@ -256,9 +257,9 @@ function MainPage(props) {
             > <img src={JELLINGBANNERENG} className='test-main-img' alt="go to Jelling games" /> </a>
 
             {/* Go to K-funny articles */}
-            {/* <Link to='/kfunny/humor/' className="main-link-block" key="article-banner">
-                <img className="test-main-img" src={ARTICLEBANNER} alt="KTEST-Funny" />
-            </Link> */}
+            <Link to='/blog/MBTI/' className="main-link-block" key="article-banner">
+                <img className="test-main-img" src={ARTICLEBANNER} alt="KTEST-Blog" />
+            </Link>
 
             {/** Floating Button for KakaoPlusFriend */}
             <KakaoPlusFriendBtn />
