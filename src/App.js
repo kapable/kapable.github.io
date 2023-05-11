@@ -84,7 +84,6 @@ class App extends Component {
       ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
       lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'ES', 'Rus' ,'Others'],
       category_list:['saju', 'characteristic', 'love', 'etc'],
-      articleCategory:['MBTI',]
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);
     this.lang_category_renderer = this.lang_category_renderer.bind(this);
@@ -386,39 +385,12 @@ class App extends Component {
             ))}
 
             {/* go to "Article list" page */}
-            <Route path={`${'/blog' || '/blog/'}`} component={() => <ArticleList category={'MBTI'}/>} exact/>
-            
-            {this.state.articleCategory.map((item) => (
-              <Route
-                path={"/blog/" + item}
-                component={() => <ArticleList category={item}/>}
-                key={item}
-                exact
-              />
-            ))}
-
-            {this.state.articleCategory.map((item) => (
-              <Route
-                path={"/blog/" + item + '/'}
-                component={() => <ArticleList category={item}/>}
-                key={item}
-                exact
-              />
-            ))}
+            <Route path={'/blog/'} component={() => <ArticleList />} exact/>
 
             {/* go to "Article" page */}
             {ARTICLES.map((item)=>(
               <Route
                 path={"/blog/" + item.mainUrl + '/'}
-                component={() => <Article source={item}/>}
-                key={item.mainUrl}
-                exact
-              />
-            ))}
-
-            {ARTICLES.map((item)=>(
-              <Route
-                path={"/blog/" + item.category + '/' + item.mainUrl + '/'}
                 component={() => <Article source={item}/>}
                 key={item.mainUrl}
                 exact
