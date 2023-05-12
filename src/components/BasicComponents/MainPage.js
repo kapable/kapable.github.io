@@ -34,13 +34,6 @@ function MainPage(props) {
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
             />
 
-            {/* Go to DOODLING for Kor lang */}
-            {(props.lang === 'Kor' || !props.lang) ? (
-                <a href={`https://doodling.kr/`} target="_blank" rel='noreferrer noopener'>
-                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/go-to-doodling-thumb.jpeg`} alt='go-to-doodling' />
-                </a>
-            ) : null}
-
             {/* Life Interpreting Luck */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
                 <Link to='/lifeInterpreting/' className="main-link-block" key="lifeInterpreting-banner">
