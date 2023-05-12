@@ -797,7 +797,7 @@ class Result extends Component {
     };
 
     affiliateRenderer(){
-        const cookieRocketCoupangLink = this.state.originAdProb ? "https://link.coupang.com/a/KgpKa" : "https://link.coupang.com/a/LgvP2";
+        const cookieRocketCoupangLink = this.state.originAdProb ? "https://link.coupang.com/a/X2X8X" : "https://link.coupang.com/a/X2Zw2";
         let otherAdProb = 0.2 >= Math.random();
         const othersLink = [
             { test: "personalScentBTI", coupangLink: "https://link.coupang.com/a/FFVJ2" },
