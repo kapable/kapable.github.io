@@ -112,10 +112,10 @@ function Article(props) {
                     <img className='article-mainImg' alt='' src={props.source.mainImg} /></a>
                 {relatedArticleRenderer(props.source.relatedArticles)}
                 <Link to={'/blog/'} className="article-go-back-link" onClick={_onBackToListButtonClick}>
-                    <div className="go-to-back-btn-article">← 다른 기사 보러가기</div></Link>
+                    <div className="go-to-back-btn-article">← 다른 글 보러가기</div></Link>
             </div>
         </Fragment>
-    )
-}
+    );
+};
 
 export default withRouter(Article);

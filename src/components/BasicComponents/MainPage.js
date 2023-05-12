@@ -265,7 +265,7 @@ function MainPage(props) {
             <KakaoPlusFriendBtn />
         </Fragment>
         
-    )   
-}
+    );
+};
 
 export default withRouter(MainPage);
