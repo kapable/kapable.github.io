@@ -54,7 +54,7 @@ class Result extends Component {
             num_shares_count:0,
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
-            isOpened: false,
+            isOpened: true,
             originAdProb: 0.55 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
