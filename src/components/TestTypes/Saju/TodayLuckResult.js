@@ -15,7 +15,7 @@ const TodayLuckResult = (props) => {
     const saju_url = 'https://saju.ktestone.com';
     // const saju_url = 'http://localhost:3065';
     const [result, setResult] = useState({});
-    const [isOpened, setIsOpened] = useState(false);
+    const [isOpened, setIsOpened] = useState(true);
     const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
     const originAdProb = 0.5 < Math.random();
     const coupangLink = originAdProb ? "https://link.coupang.com/a/PqWGr" : "https://link.coupang.com/a/PC8eL" ;
