@@ -82908,6 +82908,656 @@ const TESTS = [
             },
         ]
     },
+    // coupleCharacterFemaleJP
+    {
+        info : {
+            mainTitle:"カップルキャラクターテスト - 女方,男方",
+            subTitle:"私が花びらだったら、果たしてどんな花びらだろう？ - 女方,男方",
+            mainUrl:"coupleCharacterFemaleJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '恋人とどんなデートをするか決めるとき、私は？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '主体的で積極的な方'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '恋人の決定に反応して同意する方'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "自分に近いものは？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "人といるときも口数が多く、恋人といるときはもっと口数が多い"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "人といるときは無口で、恋人といるときは口数が多い"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "恋愛初期の恋人と週末に充実したデートをしたとしたら、私は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `とても充実した幸せなデートでした（笑）癒されました！`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `楽しいデートでした（笑）でも、来週の2日のうち1日は休もうかな...？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "遅くまで恋人との連絡中に、恋人が「もう早く寝よう」と言ったら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `そうだ～、時間が遅くなったけど、もう寝ようかな`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `なんで急に寝ようって言うんだ？ もしかして俺が面倒くさいのか...？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋人とレストランで食事をするとき、あまりにも美味しかったら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "とても美味しくて、また来たいと思う"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `とても美味しいので、この料理をどうやって作ったのか想像してみる`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋人に料理を作ってあげたら、恋人がとても美味しいと言いながら、どうやって作ったのか聞いてきたら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `レシピ通りに作ったと教えてくれる`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `私は、"自分のセンスで作った "と答えるでしょう`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `道すがら、ある異性が私に理想型だと言って番号を聞いたら？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "気分はいいけど、自分のどこが理想的なのか気になる"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "気分が良く、この人と付き合ったらどうなるか想像してみる"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "恋愛初めの連絡時に私は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `質問や関心が多かった`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "共感とリアクションが多かった"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `恋人が私に料理を作ってくれたら、私の感動ポイントは？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "恋人が作った料理のクオリティと味に感動する"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "私のために食べ物を作ってくれたこと自体に感動する"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "恋人と一緒にキャンプに来て、スーパーに立ち寄るなら？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `買うべきものをあらかじめ決めて、買うべきものだけを買ってキャンプ場に戻る`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `使う可能性を考えて、あれこれ見て回りながら買って帰る`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "恋人と室内で出前を頼んで食べた後の片付けは？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "食べた食べ物はすぐにきれいに片付けなければならない"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "少し休憩して会話しながらゆっくり片付ける"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '恋人と有名なグルメを食べに行くなら私は？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "最適なルートと最短時間を探して、早く行くための準備をする"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "行く前に余裕を持って、急いで到着する方法を探してみる"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wksthfleoakdhkd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhlrkdsodb",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekwjdekrka",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dyffhfkdlvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmdqntk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dkfEMftlswkq",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhfemsflxmflqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fldortusaksfpq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "Rhseo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wkdrldusdo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Whfqh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gjekd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dnjzjghfflr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ajdEoflsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleJP/INFP.jpg'
+            },
+        ]
+    },
+    // coupleCharacterMaleJP
+    {
+        info : {
+            mainTitle:"カップルキャラクターテスト - 女方,男方",
+            subTitle:"私が花びらだったら、果たしてどんな花びらだろう？ - 女方,男方",
+            mainUrl:"coupleCharacterMaleJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '恋人とどんなデートをするか決めるとき、私は？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '主体的で積極的な方'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '恋人の決定に反応して同意する方'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "自分に近いものは？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "人といるときも口数が多く、恋人といるときはもっと口数が多い"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "人といるときは無口で、恋人といるときは口数が多い"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "恋愛初期の恋人と週末に充実したデートをしたとしたら、私は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `とても充実した幸せなデートでした（笑）癒されました！`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `楽しいデートでした（笑）でも、来週の2日のうち1日は休もうかな...？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "遅くまで恋人との連絡中に、恋人が「もう早く寝よう」と言ったら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `そうだ～、時間が遅くなったけど、もう寝ようかな`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `なんで急に寝ようって言うんだ？ もしかして俺が面倒くさいのか...？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋人とレストランで食事をするとき、あまりにも美味しかったら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "とても美味しくて、また来たいと思う"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `とても美味しいので、この料理をどうやって作ったのか想像してみる`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋人に料理を作ってあげたら、恋人がとても美味しいと言いながら、どうやって作ったのか聞いてきたら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `レシピ通りに作ったと教えてくれる`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `私は、"自分のセンスで作った "と答えるでしょう`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `道すがら、ある異性が私に理想型だと言って番号を聞いたら？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "気分はいいけど、自分のどこが理想的なのか気になる"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "気分が良く、この人と付き合ったらどうなるか想像してみる"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "恋愛初めの連絡時に私は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `質問や関心が多かった`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "共感とリアクションが多かった"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `恋人が私に料理を作ってくれたら、私の感動ポイントは？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "恋人が作った料理のクオリティと味に感動する"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "私のために食べ物を作ってくれたこと自体に感動する"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "恋人と一緒にキャンプに来て、スーパーに立ち寄るなら？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `買うべきものをあらかじめ決めて、買うべきものだけを買ってキャンプ場に戻る`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `使う可能性を考えて、あれこれ見て回りながら買って帰る`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "恋人と室内で出前を頼んで食べた後の片付けは？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "食べた食べ物はすぐにきれいに片付けなければならない"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "少し休憩して会話しながらゆっくり片付ける"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '恋人と有名なグルメを食べに行くなら私は？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "最適なルートと最短時間を探して、早く行くための準備をする"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "行く前に余裕を持って、急いで到着する方法を探してみる"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wksthfleoakdhkd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhlrkdsodb",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekwjdekrka",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dyffhfkdlvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmdqntk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dkfEMftlswkq",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhfemsflxmflqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fldortusaksfpq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "Rhseo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wkdrldusdo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Whfqh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gjekd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dnjzjghfflr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ajdEoflsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleJP/INFP.jpg'
+            },
+        ]
+    },
     // coupleCharacterFemaleCN
     {
         info : {
