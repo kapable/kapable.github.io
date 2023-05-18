@@ -59,7 +59,7 @@ class Result extends Component {
             adProb: 1.1 >= Math.random(),
             startTimer: false,
             coupangCount: 5,
-            ABTestProb: 0.5 < Math.random()
+            ABTestProb: 0.9 < Math.random()
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
         this._eventSenderGA = this._eventSenderGA.bind(this);
@@ -89,7 +89,7 @@ class Result extends Component {
                     this.setState((prevState) => ({coupangCount: prevState.coupangCount - 1})); 
                 }
             }, 1000);
-        }.bind(this), 10);
+        }.bind(this), 3000);
     }
 
     componentWillUnmount() {
