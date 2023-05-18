@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // earthCharacteristicEng
+    {
+        info : {
+            mainTitle:"Earth personality test",
+            subTitle:"What is your personality through Earth?",
+            mainUrl:"earthCharacteristicEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/earthCharacteristicEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/earthCharacteristicEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'How do you rest on the weekend?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'At first, I just leave my house'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Probably, I can relax at home all day'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: `How would you react if the restaurant owner greeted you with a "hello" and served you an extra dish?`,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I would feel happy and think I should visit here more often"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "It is nice but I would be burdened"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What do you do when you have a minor conflict with a friend?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I try to resolve the conflict right away`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I think once slowly and try to resolve the conflict`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What would your reaction be if your friend asked you what you would do if the earth were to end?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Suddenly? No way, what made you think like that?`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I'm scared just thinking about it. Is there a way to survive?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If your friend ask you to play a balance game about “Wearing winter clothes in summer VS Wearing summer clothes in winter”, what can be your response?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I would just say “you do it, not me”"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I would say “How many clothes can I wear?” while thinking seriously`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When talking to friends, which one is closer to you?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I focus on the topic of the current topic`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I think of other things while talking`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What would be your reaction if your friend saw a movie about the end of the earth?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Was it fun? It must be an obvious ending"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I must be full of thrills. Was it fun?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If your friend is stressed out and asks you for a drink, what might be your reaction?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `What are you going to eat for the drink? You should eat something very delicious when you are down`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "What happened? Who made you hard?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `How do you express interest in people?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I express infinite interest and ask lots of questions"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I just listen and react"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Which situation are you more uncomfortable with?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `When sudden changes occur`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `When I just have to stick to the plan even though there's a better way`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you worry about when buying something?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I don’t worry as I tend to make a spending plan in advance"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I just buy without worries when I really like something"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'What would you do if you were to travel around the world for one month?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I carefully divided the month into detailed plans"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I decide only the big things that are important until I go, and enjoy the thrilling emotions"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicEng/INFP.jpg'
+            },
+        ]
+    },
     // cantWaitJP
     {
         info : {
