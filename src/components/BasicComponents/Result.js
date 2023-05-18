@@ -89,7 +89,7 @@ class Result extends Component {
                     this.setState((prevState) => ({coupangCount: prevState.coupangCount - 1})); 
                 }
             }, 1000);
-        }.bind(this), 3000);
+        }.bind(this), 1300);
     }
 
     componentWillUnmount() {
