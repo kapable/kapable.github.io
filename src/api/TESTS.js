@@ -23,6 +23,331 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // earthCharacteristicJP
+    {
+        info : {
+            mainTitle:"地球性格テスト",
+            subTitle:"地球を通したあなたの個性は何ですか？",
+            mainUrl:"earthCharacteristicJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/earthCharacteristicJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/earthCharacteristicJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"JP",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '週末に休むときの私は？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '一旦外に出る'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '一日中家に横たわることができる'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "よく行くお店で、知り合いのふりをしてサービスしてくれたら？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "気分がいいので、もっと頻繁に行かなきゃと思う"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "気持ちはいいけど負担になる"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "友達と些細なトラブルが発生したら？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `今すぐ葛藤を解決しようとする`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `一度考えて、ゆっくり葛藤を解決しようとする`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "もし友人が私に「もし地球が滅亡したらどうするの？」と聞かれたら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `いきなり？ いや、なんでそんなこと考えるの？`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `考えるだけで怖い...生きる方法あるかな...?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "友達が私に「夏に冬服を着るVS冬に夏服を着る」バランスゲームを聞かれたら?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "「こんなのお前がやれよ」と答えない"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `"何着まで着られるの？"と尋ねながら真剣に悩む`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "友達と話すとき、自分に近いものは？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `現在の話のテーマに集中する`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `話しながら別のことを考える`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `友人が地球が滅びるという内容の映画を見たとしたら？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "面白かったか？ ありきたりな結末だったような気もするが"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "スリル満点だったでしょう 楽しかった？"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "友達がストレスが溜まっていると言ってお酒を飲もうって言ったら？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `おつまみは何を食べるの？ そんな時は美味しいものを食べないとね`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "どうしたの、どうしたの？ 誰が、誰に苦労させたの？"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `人に興味を示すとき、私は？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "無限の関心と質問をする"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "傾聴とリアクションをする"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "私がもっと不便な状況は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `突然の変化が発生したとき`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `もっと良い方法があるのに、計画通りにしかできないとき`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "物を買うときに私が悩むのは？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "事前に消費計画を立てておくので、特に悩むことはない"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "私の目を引いたのに何の悩みが必要なのか？ とりあえず購入する"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '一ヶ月間世界一周をすると言われたとき、私は？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "まさに一ヶ月を細かく分けて綿密な計画を立てます"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "行くまでに大事な大きなことだけを決めて、ドキドキする気持ちを満喫する"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/earthCharacteristicJP/INFP.jpg'
+            },
+        ]
+    },
     // DIY
     {
         info : {
@@ -1012,198 +1337,198 @@ const TESTS = [
             category: "love"
         },
         questions:[
-    {
-        which:"EI",
-        question: 'If you played around whole weekend at home with your friends, what do you want to do?',
-        answers:[
             {
-                type: "E",
-                score: 2,
-                content: `I've been at home too long and I have to go out tomorrow`
+                which:"EI",
+                question: 'If you played around whole weekend at home with your friends, what do you want to do?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I've been at home too long and I have to go out tomorrow`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I still need my alone time at home because I couldn’t do my own things.'
+                    },
+                ],
             },
             {
-                type: "I",
-                score: 5,
-                content: 'I still need my alone time at home because I couldn’t do my own things.'
-            },
-        ],
-    },
-    {
-        which:"EI",
-        question: "What if you were at home two days in a row?",
-        answers:[
-            {
-                type: "E",
-                score: 2,
-                content: "I'm so bored. I want to go out. Please get me out."
-            },
-            {
-                type: "I",
-                score: 5,
-                content: "For me, this is real relaxation and happiness~"
-            },
-        ]
-    },
-    {
-        which:"EI",
-        question: "What would you say to a friend who asked to meet you today?",
-        answers:[
-            {
-                type: "E",
-                score: 2,
-                content: `Okay, I am free today. Where do you want to meet?`
+                which:"EI",
+                question: "What if you were at home two days in a row?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I'm so bored. I want to go out. Please get me out."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "For me, this is real relaxation and happiness~"
+                    },
+                ]
             },
             {
-                type: "I",
-                score: 5,
-                content: `Not today, I have to rest today`
-            },
-        ]
-    },
-    {
-        which:"SN",
-        question: "What if you pass by your ideal type while walking down the street?",
-        answers:[
-            {
-                type: "S",
-                score: 2,
-                content: `Oh, really this person is my deal type.`
-            },
-            {
-                type: "N",
-                score: 5,
-                content: `What if the person likes me or ask for my number?`
-            },
-        ]
-    },
-    {
-        which:"SN",
-        question: "What can be your answer if you are asked how the café we went to on the weekend?",
-        answers:[
-            {
-                type: "S",
-                score: 2,
-                content: "I liked the soft and quiet music and the interior."
+                which:"EI",
+                question: "What would you say to a friend who asked to meet you today?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Okay, I am free today. Where do you want to meet?`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `Not today, I have to rest today`
+                    },
+                ]
             },
             {
-                type: "N",
-                score: 5,
-                content: `It was really great! It was cozy and nice!`
-            },
-        ]
-    },
-    {
-        which:"SN",
-        question: "How do you feel when you watch the sunset with your lover?",
-        answers:[
-            {
-                type: "S",
-                score: 2,
-                content: `Wow, it is a beautiful sunset.`
-            },
-            {
-                type: "N",
-                score: 5,
-                content: `This sunset can be seen from the other side of the earth because the earth is round`
-            },
-        ]
-    },
-    {
-        which:"TF",
-        question: `What can be your answer if you are asked why there is not enough rain these days?`,
-        answers:[
-            {
-                type: "T",
-                score: 2,
-                content: "Around this time of year, it is like that."
+                which:"SN",
+                question: "What if you pass by your ideal type while walking down the street?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Oh, really this person is my deal type.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `What if the person likes me or ask for my number?`
+                    },
+                ]
             },
             {
-                type: "F",
-                score: 5,
-                content: "Right! it is not really nice that it’s raining occasionally."
-            },
-        ]
-    },
-    {
-        which:"TF",
-        question: "What is your answer when your friend asks you about their lover's not replying after checking the massage?",
-        answers:[
-            {
-                type: "T",
-                score: 2,
-                content: `There must have been a situation where they couldn't contact you~`
-            },
-            {
-                type: "F",
-                score: 5,
-                content: "What's the reason? If I were you, I'd feel sad."
-            },
-        ]
-    },
-    {
-        which:"TF",
-        question: `What if your lover has to work overtime because he has a lot of work today?`,
-        answers:[
-            {
-                type: "T",
-                score: 2,
-                content: "What is that about? Why you have to work overtime?"
+                which:"SN",
+                question: "What can be your answer if you are asked how the café we went to on the weekend?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I liked the soft and quiet music and the interior."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `It was really great! It was cozy and nice!`
+                    },
+                ]
             },
             {
-                type: "F",
-                score: 5,
-                content: "Oh really? It must be hard to work overtime. Do you have to stay till late?"
-            },
-        ]
-    },
-    {
-        which:"JP",
-        question: "What If your lover made a so detail plan to do together?",
-        answers:[
-            {
-                type: "J",
-                score: 2,
-                content: `It is nice and simple. I feel comfortable that we have a nice plan`
-            },
-            {
-                type: "P",
-                score: 5,
-                content: `I'm out of breath just by looking at it`
-            },
-        ]
-    },
-    {
-        which:"JP",
-        question: "What do you usually do when you go on a date with your lover?",
-        answers:[
-            {
-                type: "J",
-                score: 2,
-                content: "I tend to decide what time to meet and what to do before in advance."
+                which:"SN",
+                question: "How do you feel when you watch the sunset with your lover?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Wow, it is a beautiful sunset.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `This sunset can be seen from the other side of the earth because the earth is round`
+                    },
+                ]
             },
             {
-                type: "P",
-                score: 5,
-                content: "I prefer to meet first and decide what to do"
+                which:"TF",
+                question: `What can be your answer if you are asked why there is not enough rain these days?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Around this time of year, it is like that."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Right! it is not really nice that it’s raining occasionally."
+                    },
+                ]
             },
-        ]
-    },
-    {
-        which:"JP",
-        question: 'What if you find a cafe that looks good on a date with your lover?',
-        answers:[
             {
-                type: "J",
-                score: 2,
-                content: "I'll visit next time. Where we were supposed to go today?"
+                which:"TF",
+                question: "What is your answer when your friend asks you about their lover's not replying after checking the massage?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `There must have been a situation where they couldn't contact you~`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "What's the reason? If I were you, I'd feel sad."
+                    },
+                ]
             },
             {
-                type: "P",
-                score: 5,
-                content: "Oh, let's go here, we can always visit back to where we were to go later "
+                which:"TF",
+                question: `What if your lover has to work overtime because he has a lot of work today?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "What is that about? Why you have to work overtime?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Oh really? It must be hard to work overtime. Do you have to stay till late?"
+                    },
+                ]
             },
-        ]
-    },
+            {
+                which:"JP",
+                question: "What If your lover made a so detail plan to do together?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `It is nice and simple. I feel comfortable that we have a nice plan`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `I'm out of breath just by looking at it`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you usually do when you go on a date with your lover?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I tend to decide what time to meet and what to do before in advance."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I prefer to meet first and decide what to do"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'What if you find a cafe that looks good on a date with your lover?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I'll visit next time. Where we were supposed to go today?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Oh, let's go here, we can always visit back to where we were to go later "
+                    },
+                ]
+            },
         ],
         results:[
             {
