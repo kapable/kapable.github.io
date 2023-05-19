@@ -694,12 +694,12 @@ const TESTS = [
                     {
                         type: "E",
                         score: 2,
-                        content: '활발하고, 분위기를 주도하는 경향이 있다' 
+                        content: '활발하고, 분위기를 주도하는 편이다' 
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '별로 안 친한 사람이 말 걸면 좀 불편하다'
+                        content: '상대방의 말에 경청하고 주로 질문에 대답하는 편이다'
                     },
                 ],
             },
@@ -721,17 +721,17 @@ const TESTS = [
             },
             {
                 which:"EI",
-                question: "1:1로 대화할 때 내가 더 짜증 나는 것은?",
+                question: "쉬는 주말 밖에서 신나게 놀고 난 후 나의 상태는?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: `질문을 했는데 상대가 오래 뜸을 들이는 것`
+                        content: `역시 쉬는 날에는 밖에서 놀아야지! 에너지 충전 완료!`
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: `대답할 말 생각 중인데 재촉하는 것`
+                        content: `오랜만에 너무 재밌었다! 이제 집에 가서 좀 쉬어야지!`
                     },
                 ]
             },
@@ -769,17 +769,17 @@ const TESTS = [
             },
             {
                 which:"SN",
-                question: "출근길 버스 안에서 하는 생각은?",
+                question: "배달음식 주문할 때 나와 가까운 것은?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `언제 도착해서 언제 퇴근하지? 후..`
+                        content: `일단 배고프니까 이미지보고 맛있어 보이는 것을 주문한다`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `회사까지 순간이동 하는 상상을 해본다`
+                        content: `여긴 왜 배달비가 비쌀까? 여기는 리뷰가 왜 별로 없을까? 궁금한 것 다 찾아보고 늦게 주문한다`
                     },
                 ]
             },
@@ -859,23 +859,23 @@ const TESTS = [
                     {
                         type: "P",
                         score: 5,
-                        content: "중요한 부분과, 틀만 대략적으로 계획하고 가서 생각한다"
+                        content: "중요한 부분과, 틀만 대략적으로 생각하고 간다"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: '내가 만족감을 느끼는 하루는?',
+                question: '친구와 약속이 있는 당일에 나와 가까운 것은?',
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "내 예상대로 순탄하게 흘러간 하루"
+                        content: "2~3시간 전부터 느긋하게 준비를 끝내고 약속 장소에 늦지 않게 간다"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "새로움과 변화를 경험한 하루"
+                        content: "시간 거의 다 되었을 때부터 급하게 준비를 할 때가 많다"
                     },
                 ]
             },
