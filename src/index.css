@@ -595,6 +595,10 @@ body {
   color: var(--font-color);
 }
 
+.share-title-saju {
+  margin-top: 4.5rem;
+}
+
 .share {
   font-family: var(--title-font);
   display: inline;
