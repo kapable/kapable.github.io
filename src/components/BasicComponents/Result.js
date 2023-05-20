@@ -59,7 +59,6 @@ class Result extends Component {
             adProb: 1.1 >= Math.random(),
             startTimer: false,
             coupangCount: 5,
-            ABTestProb: 0.9 < Math.random()
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
         this._eventSenderGA = this._eventSenderGA.bind(this);
@@ -810,7 +809,7 @@ class Result extends Component {
 
     affiliateRenderer(){
         const cookieRocketCoupangLink = this.state.originAdProb ? "https://link.coupang.com/a/X2X8X" : "https://link.coupang.com/a/X2Zw2";
-        let otherAdProb = 0.2 >= Math.random();
+        let otherAdProb = 0.1 > Math.random();
         const othersLink = [
             { test: "personalScentBTI", coupangLink: "https://link.coupang.com/a/FFVJ2" },
             { test: "chaebol", coupangLink: "https://link.coupang.com/a/KvzD5" },
@@ -834,48 +833,19 @@ class Result extends Component {
             <div className='article-adCover-div-1'>
                 <div className='article-adCover-div-2'>
                     {
-                        this.state.ABTestProb
-                        ? (
-                            // New Version Coupang
-                            <div className='article-adCover-div-3'>
-                                <p style={{fontSize:'1rem'}}><b><span style={{color:'#0074E9'}}>인기 상품</span> 확인하고 결과 확인하세요!</b></p>
-                                <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
-                                    <button className='coupang-cover-button'
-                                        onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : () => this.onCoupangButtonClick('New')}>
-                                    </button>
-                                </a>
-                                <iframe  title="coupangs" src="https://ads-partners.coupang.com/widgets.html?id=656355&template=carousel&trackingCode=AF4396324&subId=&width=350&height=140" width="350" height="80" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
-                                {this.state.startTimer ? (
-                                    <button className='coupang-close-button'
-                                        onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}>
-                                        {
-                                            
-                                            this.state.coupangCount === 0 ? "X" : this.state.coupangCount
-                                        }
-                                    </button>
-                                ) : null}
-                                
-                            </div>
-                        )
-                        : (
-                            // Original Version Coupang
-                            <div className='article-adCover-div-3'>
-                                <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
-                                    <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : () => this.onCoupangButtonClick('Original')}>
-                                        쿠팡 보고 결과 보기<br /><p style={{ fontSize: '0.5rem', color: 'lightgray' }}>원치 않을 경우 뒤로 가기를 눌러주세요</p>
-                                    </button>
-                                </a>
-                                {this.state.startTimer ? (
-                                    <button className='coupang-close-button'
-                                        onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}>
-                                        {
-                                            
-                                            this.state.coupangCount === 0 ? "X" : this.state.coupangCount
-                                        }
-                                    </button>
-                                ) : null}
-                            </div>
-                        )
+                        <div className='article-adCover-div-3'>
+                            <p><span style={{color:"#4185F4"}}>콘텐츠를 보기 전</span> 쿠팡 쇼핑을 해보세요</p>
+                            <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
+                                <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : () => this.onCoupangButtonClick('Original')}>
+                                    버튼 누르고 계속 보기
+                                </button>
+                            </a>
+                            {this.state.startTimer ? (
+                                <p style={{ fontSize: '10px', color: 'grey', marginTop: "1em" }}>원치 않을 경우 {  
+                                    this.state.coupangCount === 0 ? <span style={{color:'red'}}>X</span> : this.state.coupangCount
+                                    }를 눌러주세요</p>
+                            ) : null}
+                        </div>
                     }
                 </div>
             </div>
@@ -1514,7 +1484,7 @@ class Result extends Component {
                         )
                         : null
                     )}
-                    {ppl_list.includes(this.state.current_test) ? null : <p className='result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>}
+                    {ppl_list.includes(this.state.current_test) ? null : <p className='result-coupang-comment' style={{color:'grey'}}>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>}
 
                     <OtherLangIcons currentTest={this.state.current_test}/>
                     
