@@ -842,7 +842,7 @@ class Result extends Component {
                             </a>
                             {this.state.startTimer ? (
                                 <p style={{ fontSize: '10px', color: 'grey', marginTop: "1em" }}>원치 않을 경우 {  
-                                    this.state.coupangCount === 0 ? <span style={{color:'red'}}>X</span> : this.state.coupangCount
+                                    this.state.coupangCount === 0 ? <span style={{color:'red', cursor:'pointer'}} onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}>X</span> : this.state.coupangCount
                                     }를 눌러주세요</p>
                             ) : null}
                         </div>
