@@ -32,6 +32,13 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.article-list-row {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  border-top: solid #F47DC1 5px;
+}
+
 .article-list-date {
   color: gray;
 }

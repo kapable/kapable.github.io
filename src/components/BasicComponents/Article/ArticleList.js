@@ -4,6 +4,7 @@ import ARTICLES from '../../../api/ARTICLES';
 import ReactGA from 'react-ga';
 import './Article.css';
 import { Helmet } from 'react-helmet';
+import { Col, Row } from 'antd';
 
 function ArticleList() {
 
@@ -21,14 +22,14 @@ function ArticleList() {
                 <meta property="og:url" content={'https://ktestone.com/kapable.github.io/blog/'}/>
                 <meta property="og:title" content={'케이테스트 블로그'}/>
                 <meta property="og:description" content={'케이테스트 블로그'}/>
-                <meta property="og:image" content={'https://images.ktestone.com/introImages/labelSticker-intro.jpg'}/>
+                <meta property="og:image" content={'https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png'}/>
 
                 {/* <!-- Twitter --> */}
                 <meta property="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:url" content={'https://ktestone.com/kapable.github.io/blog/'}/>
                 <meta property="twitter:title" content={'케이테스트 블로그'}/>
                 <meta property="twitter:description" content={'케이테스트 블로그'}/>
-                <meta property="twitter:image" content={'https://images.ktestone.com/introImages/labelSticker-intro.jpg'}/>
+                <meta property="twitter:image" content={'https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png'}/>
             </Helmet>
         )
     }
@@ -42,11 +43,11 @@ function ArticleList() {
     };
 
     const _onArticleButtonClick = () => {
-        _eventSenderGA("Paging", "Click Article Title Button", "article list page");
+        _eventSenderGA("Paging", "Click Article Title Button", "blog article list page");
     };
 
     const _onBackToMainButtonClick = () => {
-        _eventSenderGA("Paging", "Click Back-to-main Button", "article list page");
+        _eventSenderGA("Paging", "Click Back-to-main Button", "blog article list page");
     };
 
     const articleRenderer = (li) => {
@@ -54,23 +55,37 @@ function ArticleList() {
         for (let article of li) {
             article_list.push(
             <Link to={"/blog/" + article.mainUrl + '/'} className="article-list-link" onClick={_onArticleButtonClick} key={article.mainUrl}>
-                <div className="article-list-div">
-                    {article.mainTitle}
-                    <p className="article-list-date">{article.date}</p>
-                </div>
-            </Link>)
-            // if (article.category === val) {
-            // }
-        }
+                <Row align='middle' justify="center" className='article-list-row'>
+                    <Col span={6}>
+                        <img src={'https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png'} alt={article.mainTitle} width={"100%"} />
+                    </Col>
+                    <Col span={12}>
+                        <Row align='middle' justify="left" style={{padding: '0.5rem 1rem 0'}}>
+                            <h3><b>{article.mainTitle}</b></h3>
+                        </Row>
+                        <Row align='middle' justify="left" style={{padding: '0 1rem'}}>
+                            <p className="article-list-date">{article.metaTag}</p>
+                        </Row>
+                    </Col>
+                    <Col span={6}>
+                        <p className="article-list-date">{article.date}</p>
+                    </Col>
+                </Row>
+            </Link>);
+        };
         return article_list;
     };
 
     return (
         <Fragment>
             {metaTagRenderer()}
+            <img className="main-header" style={{marginTop: '1rem'}} src={`https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png`} alt="KTEST-Blog" />
+            <Link to='/' className="main-link-block" key="blog-to-ktest-banner" onClick={_onBackToMainButtonClick}>
+                <img className="test-main-img" src={`https://images.ktestone.com/default/blog-to-ktest-button.jpg`} alt="blog-to-ktest" />
+            </Link>
             {articleRenderer(ARTICLES)}
-            <Link to='/' className="article-list-go-back-link" onClick={_onBackToMainButtonClick}>
-                <div className="go-to-back-btn">← 메인으로 돌아가기</div></Link>
+            {articleRenderer(ARTICLES)}
+            {articleRenderer(ARTICLES)}
         </Fragment>
     );
 };
