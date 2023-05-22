@@ -57,7 +57,7 @@ function ArticleList() {
             <Link to={"/blog/" + article.mainUrl + '/'} className="article-list-link" onClick={_onArticleButtonClick} key={article.mainUrl}>
                 <Row align='middle' justify="center" className='article-list-row'>
                     <Col span={6}>
-                        <img src={'https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png'} alt={article.mainTitle} width={"100%"} />
+                        <img src={article.thumbImg} alt={article.mainTitle} width={"100%"} />
                     </Col>
                     <Col span={12}>
                         <Row align='middle' justify="left" style={{padding: '0.5rem 1rem 0'}}>
@@ -83,8 +83,6 @@ function ArticleList() {
             <Link to='/' className="main-link-block" key="blog-to-ktest-banner" onClick={_onBackToMainButtonClick}>
                 <img className="test-main-img" src={`https://images.ktestone.com/default/blog-to-ktest-button.jpg`} alt="blog-to-ktest" />
             </Link>
-            {articleRenderer(ARTICLES)}
-            {articleRenderer(ARTICLES)}
             {articleRenderer(ARTICLES)}
         </Fragment>
     );

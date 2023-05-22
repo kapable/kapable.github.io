@@ -122,12 +122,12 @@ const TodayLuckResult = (props) => {
                                 <p><b><span style={{color:"#4185F4"}}>콘텐츠를 보기 전</span> 쿠팡 쇼핑을 해보세요</b></p>
                                 <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
                                     <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={onCoupangButtonClick}>
-                                        버튼 누르고 계속 보기
+                                        버튼 누르고 결과 보기
                                     </button>
                                 </a>
                                 {startTimer ? (
                                     <p style={{ fontSize: '10px', color: 'grey', marginTop: "1em" }}>원치 않을 경우 {  
-                                        coupangCount === 0 ? <span style={{color:'red', cursor:'pointer'}} onClick={coupangCount === 0 ? onCoupangCloseButtonClick : null}>X</span> : coupangCount
+                                        coupangCount === 0 ? <span style={{color:'red', cursor:'pointer', fontSize: '13px'}} onClick={coupangCount === 0 ? onCoupangCloseButtonClick : null}><b>X</b></span> : coupangCount
                                         }를 눌러주세요</p>
                                 ) : null}
                             </div>

@@ -836,12 +836,12 @@ class Result extends Component {
                         <p><b><span style={{color:"#4185F4"}}>콘텐츠를 보기 전</span> 쿠팡 쇼핑을 해보세요</b></p>
                         <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
                             <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : () => this.onCoupangButtonClick('Original')}>
-                                버튼 누르고 계속 보기
+                                버튼 누르고 결과 보기
                             </button>
                         </a>
                         {this.state.startTimer ? (
                             <p style={{ fontSize: '10px', color: 'grey', marginTop: "1em" }}>원치 않을 경우 {  
-                                this.state.coupangCount === 0 ? <span style={{color:'red', cursor:'pointer', fontSize: '11.5px'}} onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}>X</span> : this.state.coupangCount
+                                this.state.coupangCount === 0 ? <span style={{color:'red', cursor:'pointer', fontSize: '13px'}} onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}><b>X</b></span> : this.state.coupangCount
                                 }를 눌러주세요</p>
                         ) : null}
                     </div>
