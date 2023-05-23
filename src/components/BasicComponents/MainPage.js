@@ -54,6 +54,13 @@ function MainPage(props) {
                 </Link>
             ) : null}
 
+            {/* CASPER SOCIAL CLUB Test */}
+            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
+                <a target='_blank' rel="noopener noreferrer" href="https://bit.ly/3OuqjhT" className="main-link-block" key="casper-social-club-thumb-banner" onClick={() => _eventSenderGA("Paging", "Click RRR Car Thumbnail", "main page")}>
+                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/casper-social-club-thumb.jpg`} alt="rrr-intro" />
+                </a>
+            ) : null}
+
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
                 {props.all_tests_url.slice(0,2).map((item, idx)=>{
