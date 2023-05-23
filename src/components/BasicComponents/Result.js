@@ -95,7 +95,7 @@ class Result extends Component {
         clearInterval(this.inter);
     }
 
-    onCoupangButtonClick(type){
+    onCoupangButtonClick(test){
         const { cookies } = this.props;
         // const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
         const cookieAges = 60*60*2;
@@ -105,7 +105,8 @@ class Result extends Component {
             isOpened: true,
         });
         if(this.state.originAdProb) {
-            this._eventSenderGA("Paging", `Click go-to-Coupang Button(${type})`, "result page");
+            this._eventSenderGA("Paging", `Click go-to-Coupang Button(${test})`, "result page");
+            this._eventSenderGA("Paging", `Click go-to-Coupang Button`, "result page");
         }
     };
 
@@ -835,7 +836,7 @@ class Result extends Component {
                     <div className='article-adCover-div-3'>
                         <p><b><span style={{color:"#4185F4"}}>콘텐츠를 보기 전</span> 쿠팡 쇼핑을 해보세요</b></p>
                         <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
-                            <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : () => this.onCoupangButtonClick('Original')}>
+                            <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : () => this.onCoupangButtonClick(this.state.current_test)}>
                                 버튼 누르고 결과 보기
                             </button>
                         </a>
