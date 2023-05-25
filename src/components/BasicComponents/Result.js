@@ -22,6 +22,7 @@ import '../TestTypes/FactPok/factPok.css';
 import ShareGroup from './ShareGroup';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CoupangDynamicBanner from '../SubComponents/CoupangDynamicBanner';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 class Result extends Component {
     static propTypes = {
@@ -64,6 +65,7 @@ class Result extends Component {
         this._eventSenderGA = this._eventSenderGA.bind(this);
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
         this._onPPLBannerClick = this._onPPLBannerClick.bind(this);
+        this._onGotoBlogClick = this._onGotoBlogClick.bind(this);
         this.horizontalNewTestRenderer = this.horizontalNewTestRenderer.bind(this);
         this.adTagRenderer = this.adTagRenderer.bind(this);
         this.otherTestBannerRenderer = this.otherTestBannerRenderer.bind(this);
@@ -202,6 +204,10 @@ class Result extends Component {
 
     _onPPLBannerClick(){
         this._eventSenderGA("Outlinking", "Click PPL-Banner Button", "result page");
+    };
+
+    _onGotoBlogClick(){
+        this._eventSenderGA("Outlinking", "Click Go-to-Blog Button", "result page");
     };
 
     cpcBannerResultFooterScriptor(){
@@ -1210,7 +1216,13 @@ class Result extends Component {
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
                         {this.state.isOpened || this.state.coupangCookies
-                        ? (<img src={img_src} className='result-img' alt={final_type} />)
+                        ? (<>
+                            <img src={img_src} className='result-img' alt={final_type} />
+                            {_current_test_contents.info?.blogUrl ? (
+                                <Link to={`../../../blog/${_current_test_contents.info?.blogUrl}`} onClick={this._onGotoBlogClick}>
+                                    <img className='result-to-blog-banner' src={`https://images.ktestone.com/default/to-test-blog-banner.jpg`} alt='to-test-blog-banner'/></Link>
+                            ) : null}
+                        </>)
                         : (<>
                             <div className='article-adCover-div' oncontextmenu="return false" 
                                 ondragstart="return false" 
@@ -1483,7 +1495,7 @@ class Result extends Component {
                         )
                         : null
                     )}
-                    {ppl_list.includes(this.state.current_test) ? null : <p className='result-coupang-comment' style={{color:'grey'}}>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>}
+                    {ppl_list.includes(this.state.current_test) || this.state.isOpened || this.state.coupangCookies ? null : <p className='result-coupang-comment' style={{color:'grey'}}>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>}
 
                     <OtherLangIcons currentTest={this.state.current_test}/>
                     

@@ -517,6 +517,11 @@ body {
   -webkit-touch-callout: none;
 }
 
+.result-to-blog-banner {
+  margin-top: 1rem;
+  width: 100%;
+}
+
 .result-user-pic {
   width: 20rem;
   margin: 1rem auto;
