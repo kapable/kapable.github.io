@@ -35,8 +35,15 @@
 .article-list-row {
   width: 100%;
   max-width: 450px;
-  margin: 0 auto;
-  border-top: solid #F47DC1 5px;
+  margin: 1rem auto;
+  border: solid black 2px;
+  border-radius: 1rem;
+}
+
+.article-list-thumb {
+  width: 110%;
+  border-top-left-radius: 0.7rem;
+  border-bottom-left-radius: 0.7rem;
 }
 
 .article-list-date {

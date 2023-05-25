@@ -57,10 +57,10 @@ function ArticleList() {
             <Link to={"/blog/" + article.mainUrl + '/'} className="article-list-link" onClick={_onArticleButtonClick} key={article.mainUrl}>
                 <Row align='middle' justify="center" className='article-list-row'>
                     <Col span={6}>
-                        <img src={article.thumbImg} alt={article.mainTitle} width={"100%"} />
+                        <img className='article-list-thumb' src={article.thumbImg} alt={article.mainTitle} />
                     </Col>
                     <Col span={12}>
-                        <Row align='middle' justify="left" style={{padding: '0.5rem 1rem 0'}}>
+                        <Row align='middle' justify="left" style={{padding: '0.5rem 2rem 0'}}>
                             <h3><b>{article.mainTitle}</b></h3>
                         </Row>
                         <Row align='middle' justify="left" style={{padding: '0 1rem'}}>

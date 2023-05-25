@@ -39,193 +39,196 @@ const TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '약속이 있어 밖에 나왔을 때 주로 내 모습은?',
+                question: '기분이 좋지 않을 때 나는?'
+                ,
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: '벌써 간다고? 이제 시작인데 무슨 소리람?'
+                        content: '사람들과 밖에서 놀면서 기분을 푼다'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '이제 슬슬 집 가고 싶은데.. 침대 보고싶다.'
+                        content: '집에서 조용히 방해받지 않고 쉬면서 기분을 푼다'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "애인에게 화가 났을 때 나는?",
+                question: "사람들과 친해질 때 나와 가까운 것은?"
+                ,
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "왜 화가 났는지 바로 이야기하면서 품"
+                        content: "낯가림 없이 사람들과 자연스럽게 이야기를 나눈다"
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "일단 생각을 정리할 시간이 필요함 (침묵)"
+                        content: "낯가림이 있고, 사람들과 친해지는 데 긴 시간이 걸린다"
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "대화 중 정적이 흐르면?",
+                question: "사람들과 연락할 때 나는?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: `이 정적 난 참을 수 없어… 아무 말 대잔치 시전`
+                        content: `주로 사람들에게 먼저 연락하는 편이다`
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: `눈치 보면서 누군가 말할 때까지 기다려 봄`
+                        content: `주로 사람들에게서 먼저 연락이 오는 편이다`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "만나기로 했던 애인이 오늘따라 피곤하다고 한다면?",
+                question: "무언가를 새로 시작할 때 내가 더 중요하게 생각하는 것은?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `많이 피곤하면 오늘 쉴래?라고 물어본다.`
+                        content: `실제 경험을 토대로 나와 있는 결과 데이터`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `피곤하다는 얘기는 오늘 쉬고 싶다는 뜻인 걸까..? 고민한다.`
+                        content: `새로운 다양한 아이디어와 나에게 느껴지는 영감`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "카페에서 음료를 들고 계단을 오르고 있다. 이때 드는 내 생각은?",
+                question: "상황 설명할 때 나와 비슷한 스타일은?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "계단이 좀 많네 빨리 가서 마시고 싶다. "
+                        content: "오늘 늦잠 자서 급하게 택시 탔지만 차가 너무 밀리는 거야 그래도 늦지 않게 도착했어 휴.. 다행.."
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `계단을 올라가다가 대차게 넘어져서 음료를 쏟을 수도 있으니까 조심해야지`
+                        content: `오늘 늦잠 자는 바람에 택시를 탔는데 차들이 거북이처럼 느린 거 있지? 식은땀이 줄줄 나더라
+                        그래도 다행히 늦지 않게 세이프 했지~`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "연애 초기에 많이 하는 생각은?",
+                question: "친구가 갑자기 “만약 네가 1년만 살 수 있다면 어떻게 할 거야?”라는 질문을 했다면, 내 대답은?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `싸우지 말고 오래오래 만나자`
+                        content: `내가 왜 1년만 사는데?`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `앞으로 우린 어떻게 될까? 오래 만날 수 있을까?`
+                        content: `일단 하고 싶은 거 다 해야겠지? 근데 왜 1년이야? 무슨 병 걸린 거야?`
                     },
                 ]
             },
             {
                 which:"TF",
-                question: `오늘 되게 피곤했지만 네가 보고 싶어서 나왔어! 라고 한다면 내 대답은?`,
+                question: `친구가 기분 전환하러 쇼핑하러 갔다고 한다면 나의 대답은?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "굳이 왜 그랬어! 집에서 쉬어도 되는데! "
+                        content: "오 뭐 샀어? 사진 찍어서 보내 봐"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "정말..? (감동의 쓰나미) 많이 피곤하지.. 괜찮아?ㅜ"
+                        content: "무슨 일 있었어? 이따 한잔할까?"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "이성에게 관심을 표현하는 방법은?",
+                question: "친구가 약속에 늦었을 때 화나는 마음이 풀리는 이유는?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: `질문 폭탄, 물음표 살인마가 됨`
+                        content: `늦은 이유를 타당하게 잘 설명하고, 진중한 사과를 해서`
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "사소한 거에도 리액션 장인이 됨"
+                        content: "진중한 사과를 먼저 하고, 내 감정을 잘 달래주어서"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: `연인과 헤어졌다며 울고 있는 친구, 내 반응은 어떨까?`,
+                question: `친구가 슬픈 일이 있다며 내 앞에서 펑펑 운다면?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "왜 헤어졌어? 진정하고 얘기해 봐"
+                        content: "빨리 울음을 그치게 해주고 싶어, 해결 방법을 찾는다"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "많이 힘들구나.. 그래 울고 싶은 만큼 울어ㅜㅜ"
+                        content: "너무 감정 이입해서 순간 나도 눈물이 나올 것만 같다"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "나는 아무런 계획 없이 집에서 쉴 수 있을까?",
+                question: "나와 더 가까운 모습은?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: `대략이라도 뭘 하면서 쉴지 계획을 짜야 함`
+                        content: `무언가를 계획을 세워 완벽히 마무리하는 모습`
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: `계획을 짠다면 그날은 쉬는 날이 아님`
+                        content: `갑자기 생긴 돌발 상황을, 기지를 발휘해 재빠르게 수습하는 모습`
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "대화 중에 얘기가 딴 길로 새고 있다면 나는?",
+                question: "외출할 때 나는?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "주제랑 안 맞는 얘기하면 불편함"
+                        content: "미리 계획을 세워 놓고, 정해 놓은 대로 움직인다"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "딴 얘기 하더라도 재밌으면 오케이"
+                        content: "고민한다고 목적지가 명확해지는 건 아니니 일단 나간다"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: '보통 어떤 결정을 했을 때 나는?',
+                question: '내가 더 불편한 상황은?',
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "한번 정한 결정은 쉽게 바꾸지 않음"
+                        content: "내가 계획한 대로 되지 않는 상황"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "더 좋은 결정이 있다면 바로 바꿀 수 있음"
+                        content: "너무 지루한 상황"
                     },
                 ]
             },
