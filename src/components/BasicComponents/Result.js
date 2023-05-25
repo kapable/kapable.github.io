@@ -1219,7 +1219,7 @@ class Result extends Component {
                         ? (<>
                             <img src={img_src} className='result-img' alt={final_type} />
                             {_current_test_contents.info?.blogUrl ? (
-                                <Link to={`../../../blog/${_current_test_contents.info?.blogUrl}`} onClick={this._onGotoBlogClick}>
+                                <Link to={`../../../../blog/${_current_test_contents.info?.blogUrl}/`} onClick={this._onGotoBlogClick}>
                                     <img className='result-to-blog-banner' src={`https://images.ktestone.com/default/to-test-blog-banner.jpg`} alt='to-test-blog-banner'/></Link>
                             ) : null}
                         </>)
