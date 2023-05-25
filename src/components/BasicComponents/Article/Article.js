@@ -31,7 +31,7 @@ function Article(props) {
     };
 
     const _onBackToMainButtonClick = () => {
-        _eventSenderGA("Paging", "Click Back-to-main Button", "article page");
+        _eventSenderGA("Paging", "Click Blog-to-main Button", "article page");
     };
 
     const metaTagRenderer = () => {
