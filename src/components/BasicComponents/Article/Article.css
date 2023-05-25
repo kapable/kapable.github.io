@@ -41,12 +41,17 @@
 }
 
 .article-list-thumb {
-  width: 110%;
+  width: 115%;
   border-top-left-radius: 0.7rem;
   border-bottom-left-radius: 0.7rem;
 }
 
+.article-list-desc {
+  color: gray;
+}
+
 .article-list-date {
+  font-size: 0.7rem;
   color: gray;
 }
 
