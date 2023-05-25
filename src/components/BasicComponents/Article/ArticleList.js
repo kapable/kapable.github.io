@@ -32,7 +32,7 @@ function ArticleList() {
                 <meta property="twitter:image" content={'https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png'}/>
             </Helmet>
         )
-    }
+    };
 
     function _eventSenderGA(category, action, label){
         ReactGA.event({
@@ -56,15 +56,15 @@ function ArticleList() {
             article_list.push(
             <Link to={"/blog/" + article.mainUrl + '/'} className="article-list-link" onClick={_onArticleButtonClick} key={article.mainUrl}>
                 <Row align='middle' justify="center" className='article-list-row'>
-                    <Col span={6}>
+                    <Col span={9} style={{overflow: 'hidden'}}>
                         <img className='article-list-thumb' src={article.thumbImg} alt={article.mainTitle} />
                     </Col>
-                    <Col span={18}>
+                    <Col span={15}>
                         <Row align='middle' justify="center" style={{padding: '0.5rem 0 0'}}>
-                            <h3><b>{article.mainTitle}</b></h3>
+                            <p className="article-list-title"><b>{article.mainTitle}</b></p>
                         </Row>
                         <Row align='middle' justify="center" >
-                            <p className="article-list-desc">{article.metaTag}</p>
+                            <p className="article-list-desc">{article.desc}</p>
                         </Row>
                     </Col>
                 </Row>

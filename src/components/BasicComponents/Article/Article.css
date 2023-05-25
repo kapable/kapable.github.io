@@ -41,9 +41,13 @@
 }
 
 .article-list-thumb {
-  width: 145%;
+  width: 100%;
   border-top-left-radius: 0.7rem;
   border-bottom-left-radius: 0.7rem;
+}
+
+.article-list-title {
+  font-size: 1.1rem;
 }
 
 .article-list-desc {
