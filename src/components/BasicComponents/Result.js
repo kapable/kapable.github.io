@@ -56,7 +56,7 @@ class Result extends Component {
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: cookies.get('coupang') || null,
             isOpened: false,
-            originAdProb: 0.55 < Math.random(),
+            originAdProb: 0.6 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
             coupangCount: 5,
@@ -1219,8 +1219,8 @@ class Result extends Component {
                         ? (<>
                             <img src={img_src} className='result-img' alt={final_type} />
                             {_current_test_contents.info?.blogUrl ? (
-                                <Link to={`../../../../blog/${_current_test_contents.info?.blogUrl}/`} onClick={this._onGotoBlogClick}>
-                                    <img className='result-to-blog-banner' src={`https://images.ktestone.com/default/to-test-blog-banner.jpg`} alt='to-test-blog-banner'/></Link>
+                                <a rel="noopener noreferrer" href={`/kapable.github.io/blog/${_current_test_contents.info?.blogUrl}/`} onClick={this._onGotoBlogClick}>
+                                    <img className='result-to-blog-banner' src={`https://images.ktestone.com/default/to-test-blog-banner.jpg`} alt='to-test-blog-banner'/></a>
                             ) : null}
                         </>)
                         : (<>

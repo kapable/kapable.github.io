@@ -1663,7 +1663,8 @@ const TESTS = [
             thumbImage:"https://images.ktestone.com/main-thumbnail/DIY-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
             lang:"Kor",
-            category: "characteristic"
+            category: "characteristic",
+            blogUrl:"DIYblog"
         },
         questions:[
             {
