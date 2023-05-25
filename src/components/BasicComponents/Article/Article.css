@@ -33,7 +33,7 @@
 }
 
 .article-list-row {
-  width: 100%;
+  width: 90%;
   max-width: 450px;
   margin: 1rem auto;
   border: solid black 2px;
@@ -41,7 +41,7 @@
 }
 
 .article-list-thumb {
-  width: 115%;
+  width: 145%;
   border-top-left-radius: 0.7rem;
   border-bottom-left-radius: 0.7rem;
 }

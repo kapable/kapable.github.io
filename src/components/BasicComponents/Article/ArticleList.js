@@ -59,16 +59,13 @@ function ArticleList() {
                     <Col span={6}>
                         <img className='article-list-thumb' src={article.thumbImg} alt={article.mainTitle} />
                     </Col>
-                    <Col span={12}>
-                        <Row align='middle' justify="end" style={{padding: '0.5rem 2rem 0'}}>
+                    <Col span={18}>
+                        <Row align='middle' justify="center" style={{padding: '0.5rem 0 0'}}>
                             <h3><b>{article.mainTitle}</b></h3>
                         </Row>
-                        <Row align='middle' justify="end" style={{padding: '0 1rem'}}>
+                        <Row align='middle' justify="center" >
                             <p className="article-list-desc">{article.metaTag}</p>
                         </Row>
-                    </Col>
-                    <Col span={6}>
-                        <p className="article-list-date">{article.date}</p>
                     </Col>
                 </Row>
             </Link>);
