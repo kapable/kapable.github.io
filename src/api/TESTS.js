@@ -363,7 +363,8 @@ const TESTS = [
             thumbImage:"https://images.ktestone.com/main-thumbnail/flowerGarden-thumb.png",
             horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
             lang:"Kor",
-            category: "love"
+            category: "love",
+            blogUrl:"flowerGardenblog"
         },
         questions:[
             {

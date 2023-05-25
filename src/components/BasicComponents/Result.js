@@ -22,7 +22,6 @@ import '../TestTypes/FactPok/factPok.css';
 import ShareGroup from './ShareGroup';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CoupangDynamicBanner from '../SubComponents/CoupangDynamicBanner';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 class Result extends Component {
     static propTypes = {
