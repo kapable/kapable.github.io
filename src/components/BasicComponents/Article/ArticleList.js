@@ -61,7 +61,7 @@ function ArticleList() {
                     </Col>
                     <Col span={15}>
                         <Row align='middle' justify="center" style={{padding: '0.5rem 0 0'}}>
-                            <p className="article-list-title"><b>{article.mainTitle}</b></p>
+                            <p className="article-list-title"><b>{article.mainTitle}<br />MBTI 및 해석 결과</b></p>
                         </Row>
                         <Row align='middle' justify="center" >
                             <p className="article-list-desc">{article.desc}</p>

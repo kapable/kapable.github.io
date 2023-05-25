@@ -1,6 +1,6 @@
 const ARTICLES = [
     {
-        mainTitle: `DNA 테스트 MBTI 및 해석 결과`,
+        mainTitle: `DNA 테스트`,
         date:`2023-05-25`,
         mainUrl:`DNAblog`,
         thumbImg:"https://images.ktestone.com/blog/DNA/DNA-blog-thumb.jpg",
@@ -80,7 +80,7 @@ const ARTICLES = [
         category:"MBTI"
     },
     {
-        mainTitle: `DIY 테스트 MBTI 및 해석 결과`,
+        mainTitle: `DIY 테스트`,
         date:`2023-05-25`,
         mainUrl:`DIYblog`,
         thumbImg:"https://images.ktestone.com/blog/DIY/DIY-blog-thumb.jpg",
@@ -445,7 +445,7 @@ const ARTICLES = [
         category:"MBTI"
     },
     {
-        mainTitle: `연애 꽃밭 테스트 MBTI 및 해석 결과`,
+        mainTitle: `연애 꽃밭 테스트`,
         date:`2023-05-25`,
         mainUrl:`flowerGardenblog`,
         thumbImg:"https://images.ktestone.com/blog/flowerGarden/flowerGarden-blog-thumb.jpg",
