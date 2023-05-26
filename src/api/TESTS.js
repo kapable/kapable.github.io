@@ -23,6 +23,333 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // DIYEng
+    {
+        info : {
+            mainTitle:"DIY personality test",
+            subTitle:"If you assemble your personality?",
+            mainUrl:"DIYEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/DIYEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/DIYEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'When you go to a group gathering, which one is closest to you?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I am very active and lead the mood in the group.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I feel a little uncomfortable when someone im not very close with talks to me.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Which situation are you more uncomfortable with?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "A situation that many people are around me and there is an awkward silence."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "A situation that many people are all focused only on me"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What do you hate most about having a one-on-one conversation with someone?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `When I ask a question and the other person doesn't answer right away`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `When I am thinking and the other person urges me to answer quickly.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Which one do you feel more confident with?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Doing something meticulously`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Thinking about some creative ideas`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you do when you think it's time to go to bed?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I just focus on sleeping."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I try to force myself to sleep, but I tend to think about things.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you think about on the bus on the way to work?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `When can I arrive and when can I leave?`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I imagine teleporting to the office.`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What part are you more confident in when someone asks you for counseling?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I am confident in providing realistic advice and solutions"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I am confident in my ability to listen and empathize."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If you take a class in a field that interests you, what's your preference?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I prefer quick summaries and efficient lectures that point out the key points.`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Even if it is slow, I prefer friendly lectures that explain things step by step."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `When your friend really fails a test, what can be your reaction?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "What mistake did you make? Next time, don't make any mistakes."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "You must be upset. You can make mistakes."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When you're determined to do something, what do you do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I plan what to do first, then put it into action.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `If I am determined, I should start right away.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "How do you plan your trip?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I plan meticulously and perfectly including plan B."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I plan only the important parts roughly and think about it during the trip."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'Which day are you more satisfied with?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "The day things went smoothly as I expected"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "The day that I experience new things and changes."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/DIYEng/INFP.jpg'
+            },
+        ]
+    },
     // DNA
     {
         info : {

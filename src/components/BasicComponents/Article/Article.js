@@ -97,12 +97,14 @@ function Article(props) {
                 ))}
 
                 {/* Contents Tail */}
-                <h2><b>{`${props.source.mainTitle} MBTI 정리표`}</b></h2>
-                <img className='article-mainImg' src={`https://images.ktestone.com/blog/${props.source.testUrl}/${props.source.testUrl}-blog-table.jpg`} alt={`${props.source.testUrl}-blog-table`} /><br /><br />
+                <div className='article-tail'>
+                    <h2><b>{`${props.source.mainTitle} MBTI 정리표`}</b></h2>
+                    <img className='article-mainImg' src={`https://images.ktestone.com/blog/${props.source.testUrl}/${props.source.testUrl}-blog-table.jpg`} alt={`${props.source.testUrl}-blog-table`} /><br /><br />
 
-                <Link to='/' className="main-link-block" key="blog-to-ktest-banner" onClick={_onBackToMainButtonClick}>
-                    <img className="test-main-img" src={`https://images.ktestone.com/default/blog-to-ktest-button.jpg`} alt="blog-to-ktest" />
-                </Link>
+                    <Link to='/' className="main-link-block" key="blog-to-ktest-banner" onClick={_onBackToMainButtonClick}>
+                        <img className="test-main-img" src={`https://images.ktestone.com/default/blog-to-ktest-button.jpg`} alt="blog-to-ktest" />
+                    </Link>
+                </div>
                 <Link to={'/blog/'} className="article-go-back-link" onClick={_onBackToListButtonClick}>
                     <div className="go-to-back-btn-article">← 다른 글 보러가기</div></Link>
             </div>

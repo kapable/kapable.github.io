@@ -111,8 +111,11 @@
   text-align: start;
 }
 
-.article-body {
+.article-tail, .article-body {
   margin: 1rem 7%;
+}
+
+.article-body {
   text-align: left;
 }
 
