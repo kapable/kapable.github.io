@@ -92,7 +92,7 @@
 
 .article-title {
   text-align: left;
-  margin: 1rem 7%;
+  margin: 1rem 2rem;
   line-height: 150%;
   font-size: 1.5rem;
   align-items: center;
@@ -102,17 +102,17 @@
 .article-date {
   color: gray;
   text-align: left;
-  margin: 1rem 7%;
+  margin: 1rem 2rem;
   line-height: 150%;
 }
 
 .article-header {
-  margin: 1rem 7%;
+  margin: 1rem 2rem;
   text-align: start;
 }
 
 .article-tail, .article-body {
-  margin: 1rem 7%;
+  margin: 1rem 2rem;
 }
 
 .article-body {
@@ -154,7 +154,7 @@
   justify-content: center;
   align-items: center;
   text-align: left;
-  margin: 1rem 7% 0.5rem;
+  margin: 1rem 2rem 0.5rem;
   padding: 1.2rem 1.2rem 0.5rem 1.2rem;
   background-color: white;
   border-radius: 1.5%;
