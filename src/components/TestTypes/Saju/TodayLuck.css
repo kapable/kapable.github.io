@@ -1,6 +1,7 @@
 /* Today Luck Intro */
 .todayLuck-intro-img-div, .lifetime-saju-intro-img-div, .life-interpreting-intro-img-div {
     position: relative;
+    margin-top: 3.5rem;
 }
 
 .todayLuck-intro-bg, .lifetime-saju-intro-bg, .life-interpreting-intro-bg {
@@ -35,7 +36,11 @@
 .todayLuck-top-banner-sample {
     width: 100%;
     max-width: 25rem;
-    margin: 2rem auto;
+    margin: 0 auto 2rem;
+}
+
+.todayLuck-result-main-div {
+    margin-top: 3.5rem;
 }
 
 .todayLuck-result-main-div > p {

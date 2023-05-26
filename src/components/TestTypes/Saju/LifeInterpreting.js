@@ -13,6 +13,7 @@ import { Helmet } from 'react-helmet';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
 import BACKBTN from '../../../api/DefaultImg/result-to-home-btn.png';
+import NavigationBar from '../../BasicComponents/Navigation/NavigationBar';
 
 const defaultOptions = {
     loop: true,
@@ -92,6 +93,7 @@ const LifeInterpreting = (props) => {
                     <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/lifeInterpreting-thumb.png`}/>
                     <meta property="twitter:image:alt" content="인생 풀이 | 내 인생운은 어떨까? - 케이테스트 | 사주 테스트" />
                 </Helmet>
+                <NavigationBar />
                 <div className='life-interpreting-intro-img-div'>
                     <img className='life-interpreting-intro-bg' src="https://images.ktestone.com/meta/saju/lifeInterpreting-intro-input-bg.jpg" alt="life-interpreting-intro-input"/>
                     <div className='life-interpreting-intro-date-picker-div'>

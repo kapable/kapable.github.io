@@ -4,6 +4,8 @@ import ReactHtmlParser from 'react-html-parser';
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
 import './Article.css';
+import AdsenseAdvertiser from '../../SubComponents/AdsenseAdvertiser';
+import NavigationBar from '../Navigation/NavigationBar';
 
 function Article(props) {
 
@@ -64,6 +66,7 @@ function Article(props) {
 
     return (
         <Fragment >
+            <NavigationBar />
             {metaTagRenderer()}
             <div className="article-div">
                 <div className="article-title"><h2>{props.source.mainTitle}</h2></div>
@@ -76,11 +79,19 @@ function Article(props) {
                 </div>
 
                 {/* Contents Body */}
-                {props.source.contents.map((elem) => (
+                {props.source.contents.map((elem, idx) => (
                     <div className='article-body' key={`${elem.type}-body-key`}>
                         <h3><b>{elem.type} {elem.header}</b></h3>
                         <p>{ReactHtmlParser(elem.body)}</p>
                         <img className='article-mainImg' src={`https://images.ktestone.com/resultImages/${props.source.testUrl}/${elem.type}.jpg`} alt={elem.type} />
+                        {idx % 2 !== 0 ? (
+                            <AdsenseAdvertiser
+                                client="ca-pub-2382342018701919"
+                                slot="6452969262"
+                                format="auto"
+                                responsive="true"
+                            />
+                        ) : null}
                     </div>
                 ))}
 

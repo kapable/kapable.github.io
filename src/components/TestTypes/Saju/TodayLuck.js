@@ -13,6 +13,7 @@ import { Helmet } from 'react-helmet';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
 import BACKBTN from '../../../api/DefaultImg/result-to-home-btn.png';
+import NavigationBar from '../../BasicComponents/Navigation/NavigationBar';
 
 const defaultOptions = {
     loop: true,
@@ -95,6 +96,7 @@ const TodayLuck = (props) => {
                     <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`}/>
                     <meta property="twitter:image:alt" content="오늘의 총운 - 케이테스트 | 사주 테스트" />
                 </Helmet>
+                <NavigationBar />
                 <div className='todayLuck-intro-img-div'>
                     <img className='todayLuck-intro-bg' src="https://images.ktestone.com/meta/saju/todayLuck-intro-bg.jpg" alt="todayLuck-intro-input"/>
                     <div className='todayLuck-intro-date-picker-div'>

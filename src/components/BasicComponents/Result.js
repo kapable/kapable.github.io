@@ -22,6 +22,7 @@ import '../TestTypes/FactPok/factPok.css';
 import ShareGroup from './ShareGroup';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CoupangDynamicBanner from '../SubComponents/CoupangDynamicBanner';
+import NavigationBar from './Navigation/NavigationBar';
 
 class Result extends Component {
     static propTypes = {
@@ -1570,6 +1571,7 @@ class Result extends Component {
     render(){
         return(
             <div>
+                <NavigationBar />
                 {this.pageRenderer()}
             </div>
         );
