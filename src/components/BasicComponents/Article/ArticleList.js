@@ -76,7 +76,7 @@ function ArticleList() {
 
     return (
         <Fragment>
-            <NavigationBar />
+            <NavigationBar page="blog list"/>
             {metaTagRenderer()}
             <img className="main-header" style={{marginTop: '3.5rem'}} src={`https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png`} alt="KTEST-Blog" />
             <Link to='/' className="main-link-block" key="blog-to-ktest-banner" onClick={_onBackToMainButtonClick}>

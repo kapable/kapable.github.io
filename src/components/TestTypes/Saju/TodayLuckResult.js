@@ -92,7 +92,7 @@ const TodayLuckResult = (props) => {
 
     return (
         <>
-            <NavigationBar />
+            <NavigationBar page="SAJU result"/>
             <div className='todayLuck-result-main-div'>
                 <img className='todayLuck-top-banner-sample' src="https://images.ktestone.com/meta/saju/todayLuck-top-banner-sample.png" alt='todayLuck-top-banner-sample'/>
                 {isOpened || coupangCookies?.coupang ? 

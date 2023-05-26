@@ -18,7 +18,7 @@ function MainPage(props) {
     return (
         <Fragment>
             {/* Navigation Bar */}
-            <NavigationBar />
+            <NavigationBar page="main"/>
             
             {/* Language Converting */}
             <OhterLangIconsMain />

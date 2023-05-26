@@ -6,6 +6,7 @@ import ReactGA from 'react-ga';
 import './Article.css';
 import AdsenseAdvertiser from '../../SubComponents/AdsenseAdvertiser';
 import NavigationBar from '../Navigation/NavigationBar';
+import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
 
 function Article(props) {
 
@@ -66,7 +67,7 @@ function Article(props) {
 
     return (
         <Fragment >
-            <NavigationBar />
+            <NavigationBar page="blog"/>
             {metaTagRenderer()}
             <div className="article-div">
                 <div className="article-title"><h2>{props.source.mainTitle}</h2></div>
@@ -105,6 +106,7 @@ function Article(props) {
                 <Link to={'/blog/'} className="article-go-back-link" onClick={_onBackToListButtonClick}>
                     <div className="go-to-back-btn-article">← 다른 글 보러가기</div></Link>
             </div>
+            <GoToHomeBtn page="blog"/>
         </Fragment>
     );
 };

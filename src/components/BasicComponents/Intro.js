@@ -23,7 +23,6 @@ import ScriptTag from 'react-script-tag'
 import ReactGA from 'react-ga';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import NavigationBar from './Navigation/NavigationBar';
-// import sample from '../../api/sample.mp3'
 
 class Intro extends Component {
     constructor(props){
@@ -157,7 +156,7 @@ class Intro extends Component {
 
         return (
             <Fragment>
-                <NavigationBar />
+                <NavigationBar page="intro"/>
                 {/* for blocking Adfit banner with page refreshing for PPL */}
                 {this.reloadPage()}
                 <div className="intro container">

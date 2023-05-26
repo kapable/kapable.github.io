@@ -96,7 +96,7 @@ const TodayLuck = (props) => {
                     <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`}/>
                     <meta property="twitter:image:alt" content="오늘의 총운 - 케이테스트 | 사주 테스트" />
                 </Helmet>
-                <NavigationBar />
+                <NavigationBar page="SAJU"/>
                 <div className='todayLuck-intro-img-div'>
                     <img className='todayLuck-intro-bg' src="https://images.ktestone.com/meta/saju/todayLuck-intro-bg.jpg" alt="todayLuck-intro-input"/>
                     <div className='todayLuck-intro-date-picker-div'>

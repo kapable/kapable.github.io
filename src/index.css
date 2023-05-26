@@ -84,17 +84,18 @@ body {
   width: 100%;
 }
 
-.to-buymeacoffee-btn {
-  background-color: gold;
-  font-size: 1rem;
-  font-family: var(--title-font);
-  cursor: pointer;
-  border-color: transparent;
-  border-radius: 3px;
-  height: 4.5rem;
-  width: 19rem;
-  margin: 0.5rem auto 3rem;
-  display: block;
+.go-to-home-btn-container {
+  position: fixed;
+  bottom:20px;
+	right:20px;
+  font-size: 2rem;
+  background-color: white ;
+  border: #E71C83 solid 0.15rem;
+  border-radius: 100%;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  vertical-align: middle;
 }
 
 /* Each Lang Icons & Categories Icons */

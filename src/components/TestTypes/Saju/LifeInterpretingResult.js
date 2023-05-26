@@ -90,7 +90,7 @@ const LifetimeSajuResult = (props) => {
 
     return (
         <>
-            <NavigationBar />
+            <NavigationBar page="SAJU result"/>
             <div className='todayLuck-result-main-div'>
                 <img className='todayLuck-top-banner-sample' src="https://images.ktestone.com/meta/saju/lifeInterpreting-top-banner.jpg" alt='todayLuck-top-banner-sample'/>
                 {isOpened || coupangCookies?.coupang ? 

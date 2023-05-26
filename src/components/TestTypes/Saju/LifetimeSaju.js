@@ -93,7 +93,7 @@ const LifetimeSaju = (props) => {
                     <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/lifetimeSaju-thumb.png`}/>
                     <meta property="twitter:image:alt" content="사주 총평 당신의 사주는? - 케이테스트 | 사주 테스트" />
                 </Helmet>
-                <NavigationBar />
+                <NavigationBar page="SAJU"/>
                 <div className='lifetime-saju-intro-img-div'>
                     <img className='lifetime-saju-intro-bg' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-input-bg.jpg" alt="lifetime-saju-intro-input"/>
                     <div className='lifetime-saju-intro-date-picker-div'>

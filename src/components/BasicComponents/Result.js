@@ -23,6 +23,7 @@ import ShareGroup from './ShareGroup';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CoupangDynamicBanner from '../SubComponents/CoupangDynamicBanner';
 import NavigationBar from './Navigation/NavigationBar';
+import GoToHomeBtn from '../SubComponents/GoToHomeBtn';
 
 class Result extends Component {
     static propTypes = {
@@ -1552,6 +1553,7 @@ class Result extends Component {
 
                 {/* CPC Banner Result footer */}
                 {/* {this.cpcBannerResultFooterScriptor()} */}
+                <GoToHomeBtn page="result"/>
             </Fragment>
         );
     };
@@ -1571,7 +1573,7 @@ class Result extends Component {
     render(){
         return(
             <div>
-                <NavigationBar />
+                <NavigationBar page="result"/>
                 {this.pageRenderer()}
             </div>
         );
