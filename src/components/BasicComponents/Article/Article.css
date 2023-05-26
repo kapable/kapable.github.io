@@ -81,7 +81,6 @@
 
 /* Article page */
 .article-div {
-  display: grid;
   justify-content: center;
   align-items: center;
   width: 100%;
