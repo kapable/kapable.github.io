@@ -391,9 +391,9 @@ class App extends Component {
             {/* go to "Article" page */}
             {ARTICLES.map((item)=>(
               <Route
-                path={"/blog/" + item.mainUrl + '/'}
+                path={"/blog/" + item.testUrl + 'blog/'}
                 component={() => <Article source={item}/>}
-                key={item.mainUrl}
+                key={item.testUrl}
                 exact
               />
             ))}

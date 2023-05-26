@@ -54,17 +54,17 @@ function ArticleList() {
         let article_list = [];
         for (let article of li) {
             article_list.push(
-            <Link to={"/blog/" + article.mainUrl + '/'} className="article-list-link" onClick={_onArticleButtonClick} key={article.mainUrl}>
+            <Link to={"/blog/" + article.testUrl + 'blog/'} className="article-list-link" onClick={_onArticleButtonClick} key={article.testUrl}>
                 <Row align='middle' justify="center" className='article-list-row'>
                     <Col span={9} style={{overflow: 'hidden'}}>
-                        <img className='article-list-thumb' src={article.thumbImg} alt={article.mainTitle} />
+                        <img className='article-list-thumb' src={`https://images.ktestone.com/blog/${article.testUrl}/${article.testUrl}-blog-thumb.jpg`} alt={article.mainTitle} />
                     </Col>
-                    <Col span={15}>
-                        <Row align='middle' justify="center" style={{padding: '0.5rem 0 0'}}>
+                    <Col span={15} style={{lineHeight: 0}}>
+                        <Row align='middle' justify="center">
                             <p className="article-list-title"><b>{article.mainTitle}<br />MBTI 및 해석 결과</b></p>
                         </Row>
                         <Row align='middle' justify="center" >
-                            <p className="article-list-desc">{article.desc}</p>
+                            <p className="article-list-desc">{`케이테스트 x ${article.mainTitle}`}</p>
                         </Row>
                     </Col>
                 </Row>

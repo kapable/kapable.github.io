@@ -84,6 +84,10 @@
   display: grid;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  line-height: 200%;
 }
 
 .article-title {
@@ -102,11 +106,17 @@
   line-height: 150%;
 }
 
-.article-contents, .article-mainImg {
-  padding: 0 7%;
+.article-header {
+  margin: 1rem 7%;
+  text-align: start;
+}
+
+.article-body {
+  margin: 1rem 7%;
   text-align: left;
-  line-height: 200%;
-  font-size: 1rem;
+}
+
+.article-mainImg {
   width: 100%;
   max-width: 450px;
 }
