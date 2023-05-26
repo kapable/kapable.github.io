@@ -12,7 +12,7 @@ const GoToHomeBtn = ({ page }) => {
     };
 
     const _onButtonClick = useCallback(() => {
-        _eventSenderGA("Paging", "Click Nav to Home Logo", `${page} page`);
+        _eventSenderGA("Paging", "Click Bottom to Home Button", `${page} page`);
     }, [page]);
 
     return (
