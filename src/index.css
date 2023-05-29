@@ -105,7 +105,7 @@ body {
 }
 
 .go-to-each-language-main, .go-to-each-category-main {
-  margin: 4.5rem auto 2rem;
+  margin: 2rem auto;
   display: block;
   font-family: var(--title-font);
 }
@@ -121,7 +121,7 @@ body {
 }
 
 .intro-main-img {
-  margin: 3.5rem auto;
+  margin: 0 auto;
   max-width: 550px;
   width: 100%;
   height: auto;
@@ -169,7 +169,7 @@ body {
 /* question & answer start */
 
 .question {
-  margin: 4.5rem 3rem 2rem;
+  margin: 3rem 3rem 2rem;
   color: var(--font-color);
   font-family: var(--title-font);
 }

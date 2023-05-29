@@ -13,7 +13,6 @@ import { Helmet } from 'react-helmet';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
 import BACKBTN from '../../../api/DefaultImg/result-to-home-btn.png';
-import NavigationBar from '../../BasicComponents/Navigation/NavigationBar';
 
 const defaultOptions = {
     loop: true,
@@ -93,7 +92,6 @@ const LifetimeSaju = (props) => {
                     <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/lifetimeSaju-thumb.png`}/>
                     <meta property="twitter:image:alt" content="사주 총평 당신의 사주는? - 케이테스트 | 사주 테스트" />
                 </Helmet>
-                <NavigationBar page="SAJU"/>
                 <div className='lifetime-saju-intro-img-div'>
                     <img className='lifetime-saju-intro-bg' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-input-bg.jpg" alt="lifetime-saju-intro-input"/>
                     <div className='lifetime-saju-intro-date-picker-div'>

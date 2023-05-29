@@ -22,7 +22,6 @@ import BACKBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import ScriptTag from 'react-script-tag'
 import ReactGA from 'react-ga';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
-import NavigationBar from './Navigation/NavigationBar';
 
 class Intro extends Component {
     constructor(props){
@@ -156,7 +155,6 @@ class Intro extends Component {
 
         return (
             <Fragment>
-                <NavigationBar page="intro"/>
                 {/* for blocking Adfit banner with page refreshing for PPL */}
                 {this.reloadPage()}
                 <div className="intro container">

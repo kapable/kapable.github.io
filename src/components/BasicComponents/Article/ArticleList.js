@@ -5,7 +5,6 @@ import ReactGA from 'react-ga';
 import './Article.css';
 import { Helmet } from 'react-helmet';
 import { Col, Row } from 'antd';
-import NavigationBar from '../Navigation/NavigationBar';
 
 function ArticleList() {
 
@@ -76,7 +75,6 @@ function ArticleList() {
 
     return (
         <Fragment>
-            <NavigationBar page="blog list"/>
             {metaTagRenderer()}
             <img className="main-header" style={{marginTop: '3.5rem'}} src={`https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png`} alt="KTEST-Blog" />
             <Link to='/' className="main-link-block" key="blog-to-ktest-banner" onClick={_onBackToMainButtonClick}>

@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
 import './Article.css';
 import AdsenseAdvertiser from '../../SubComponents/AdsenseAdvertiser';
-import NavigationBar from '../Navigation/NavigationBar';
 import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
 
 function Article(props) {
@@ -67,7 +66,6 @@ function Article(props) {
 
     return (
         <Fragment >
-            <NavigationBar page="blog"/>
             {metaTagRenderer()}
             <div className="article-div">
                 <div className="article-title"><h2>{props.source.mainTitle}</h2></div>
