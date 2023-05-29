@@ -59,7 +59,7 @@ class DogSounds extends React.Component {
                                 }.bind(this)} className='dog-sounds-input' type="text"/>
                             </div>
                             <div>
-                            <img
+                            <img loading="lazy"
                             src="https://images.ktestone.com/bigDataTestImages/dogSounds/goToRecord.png"
                             alt="녹음 하러가기"
                             className="go-to-record-img"
@@ -80,7 +80,7 @@ class DogSounds extends React.Component {
         } else if (this.state.stage === 2) { // The second stage : recording sounds
             let _page = <Fragment>
                     <div className='dog-sound-record-title-div'>
-                        <img
+                        <img loading="lazy"
                             src="https://images.ktestone.com/bigDataTestImages/dogSounds/dogSounds-record-title.png"
                             alt="내 강아지의 숨소리, 짖는소리 등을 들려주세요."
                             className='dog-sound-record-title-img'
@@ -116,7 +116,7 @@ class DogSounds extends React.Component {
                     </div>
                     <p className="dog-sounds-guidance">* 녹음 시간은 최대 5초예요! *</p>
                     <div className="dog-sound-record-to-anlaysis">
-                        <img
+                        <img loading="lazy"
                         src="https://images.ktestone.com/bigDataTestImages/dogSounds/goToAnalysis.png"
                         alt="분석 하러가기"
                         className="go-to-analysis-img"

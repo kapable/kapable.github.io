@@ -83,7 +83,7 @@ const Acrostic = () => {
                 <meta property="twitter:image:alt" content="N행시의 달인 - 케이테스트" />
             </Helmet>
             <div className='acrostic-background-div'>
-                <img alt="acrostic-background-img" src="https://images.ktestone.com/Acrostic/Acrostic-background.png" className='acrostic-background-img'/>
+                <img loading="lazy" alt="acrostic-background-img" src="https://images.ktestone.com/Acrostic/Acrostic-background.png" className='acrostic-background-img'/>
                 <form className='acrostic-form' onSubmit={handleSubmit}>
                     <textarea className='acrostic-form-input'
                         type="textarea" minLength={1} maxLength={5}
@@ -95,11 +95,11 @@ const Acrostic = () => {
                 <div className='acrostic-button-container' style={isWriting || isLoading ? { display: 'none' } : null }>
                     <CopyToClipboard text={'https://ktestone.com/kapable.github.io/acrostic/'}>
                         <div style={{ width: '50%', float: 'left', cursor: 'pointer' }} onClick={() => alert("링크가 복사됐어요!\n결과 텍스트는 복사되지 않아요!\n이미지를 캡쳐해서 공유해주세요!")}>
-                            <img alt="acrostic-share-img" src="https://images.ktestone.com/Acrostic/Acrostic-share-button.png" className='acrostic-share-img'/>
+                            <img loading="lazy" alt="acrostic-share-img" src="https://images.ktestone.com/Acrostic/Acrostic-share-button.png" className='acrostic-share-img'/>
                         </div>
                     </CopyToClipboard>
                     <div style={{ width: '50%', float: 'right', cursor: 'pointer' }} onClick={handleReDo}>
-                        <img alt="acrostic-reDo-img" src="https://images.ktestone.com/Acrostic/Acrostic-reDo-button.png" className='acrostic-reDo-img'/>
+                        <img loading="lazy" alt="acrostic-reDo-img" src="https://images.ktestone.com/Acrostic/Acrostic-reDo-button.png" className='acrostic-reDo-img'/>
                     </div>
                 </div>
                 <p className='acrostic-form-p'>*출처: tunib</p>

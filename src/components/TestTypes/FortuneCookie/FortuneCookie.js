@@ -124,7 +124,7 @@ const FortuneCookie = () => {
                             rel="noopener noreferrer"
                             href={`https://ktestone.com/kapable.github.io/${test}/`}
                             className="to-ppl-banner-text"
-                            > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={test} onClick={_onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={test} onClick={_onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                         <AdsenseAdvertiser
                             client="ca-pub-2382342018701919"
                             slot="5663135072"
@@ -167,12 +167,12 @@ const FortuneCookie = () => {
                     <meta property="og:image:height" content="400"/>
                     <meta property="twitter:image:alt" content={'오늘의 포춘쿠키-케이테스트'} />
                 </Helmet>
-                <img className="intro-main-img" style={{cursor:'pointer'}} src={`https://images.ktestone.com/introImages/fortuneCookie-intro.png`} alt="FORTUNE-COOKIE" onClick={onFortuneClick} />
+                <img loading="lazy" className="intro-main-img" style={{cursor:'pointer'}} src={`https://images.ktestone.com/introImages/fortuneCookie-intro.png`} alt="FORTUNE-COOKIE" onClick={onFortuneClick} />
                 <p><b>*(추천) 사파리, 크롬 네이버 브라우저에서<br />조금 더 쾌적하게 이용 가능합니다!</b></p>
                 
                 <div className="test-intro-with-friend">
                     <CopyToClipboard text={'https://ktestone.com/kapable.github.io/fortuneCookie/'}>
-                        <img
+                        <img loading="lazy"
                             src={COPYBTN}
                             className="test-intro-with-friend-img"
                             onClick={_onShareButtonClick}
@@ -181,7 +181,7 @@ const FortuneCookie = () => {
                 </div>
                 <Link to='/' className="main-link-block" key="fortuneCookie-intro">
                     <div className="test-intro-to-main">
-                        <img
+                        <img loading="lazy"
                             className="test-intro-to-main-img"
                             src={BACKBTN}
                             alt="다른 테스트 하러 뒤로가기"/>
@@ -226,7 +226,7 @@ const FortuneCookie = () => {
                     <meta property="twitter:image:alt" content={'오늘의 포춘쿠키-케이테스트'} />
                 </Helmet>
                 <ResultDiv>
-                    <img src={`https://images.ktestone.com/meta/fortuneCookie/fortuneCookie-result.png`} className='result-img' alt="" />
+                    <img loading="lazy" src={`https://images.ktestone.com/meta/fortuneCookie/fortuneCookie-result.png`} className='result-img' alt="" />
                     <div className='fortune-cookie-quote-div'><p>{quote?.quote}</p></div>
                     <div className='fortune-cookie-person-div'>- {quote?.person}</div>
                 </ResultDiv>
@@ -238,7 +238,7 @@ const FortuneCookie = () => {
                         testTitle={"오늘의 포춘쿠키 | 오늘 나는 어떤 운이 있을까?"}/>
                     <div className="share">
                         <CopyToClipboard text={'https://ktestone.com/kapable.github.io/fortuneCookie/'}>
-                            <img
+                            <img loading="lazy"
                                 src={RESULTCOPYBTN}
                                 onClick={_onShareButtonClick}
                                 className="share-btn-img"
@@ -247,7 +247,7 @@ const FortuneCookie = () => {
                         </CopyToClipboard>
                     </div>
                     <div className="re-test-btn">
-                        <img
+                        <img loading="lazy"
                             src={AGAINBTN}
                             className="re-test-btn-img"
                             onClick={() => window.location.reload(false)}
@@ -256,7 +256,7 @@ const FortuneCookie = () => {
                 </div>
                 <Link to='/' className="main-link-block" key="fortuneCookie-intro">
                     <div className="back-to-main">
-                        <img
+                        <img loading="lazy"
                             src={TOHOMEBTN}
                             className="back-to-main-btn-img"
                             alt="다른 테스트 하러가기"

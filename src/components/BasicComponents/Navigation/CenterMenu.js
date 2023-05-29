@@ -19,7 +19,7 @@ function CenterMenu({ page }) {
     return (
         <Fragment>
             <a href="/" onClick={_onLogoClick}>
-                <img src={Logo} alt="ketst-logo" className="nav-logo"/>
+                <img loading="lazy" src={Logo} alt="ketst-logo" className="nav-logo"/>
             </a>
         </Fragment>
     );

@@ -113,7 +113,7 @@ class horizontalScrolling extends Component {
       ><a target="_blank"
       rel="noopener noreferrer"
       href={link}
-      ><img src={banner} alt={name} style={{width:'13rem'}} onClick={this._onPPLBannerClick} /></a></div>
+      ><img loading="lazy" src={banner} alt={name} style={{width:'13rem'}} onClick={this._onPPLBannerClick} /></a></div>
     });
 
   onLastItemVisible = () => {

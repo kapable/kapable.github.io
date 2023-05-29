@@ -82,7 +82,7 @@ function Article(props) {
                     <div className='article-body' key={`${elem.type}-body-key`}>
                         <h3><b>{elem.type} {elem.header}</b></h3>
                         <p>{ReactHtmlParser(elem.body)}</p>
-                        <img className='article-mainImg' src={`https://images.ktestone.com/resultImages/${props.source.testUrl}/${elem.type}.jpg`} alt={elem.type} />
+                        <img loading="lazy" className='article-mainImg' src={`https://images.ktestone.com/resultImages/${props.source.testUrl}/${elem.type}.jpg`} alt={elem.type} />
                         {idx % 2 !== 0 ? (
                             <AdsenseAdvertiser
                                 client="ca-pub-2382342018701919"
@@ -97,10 +97,10 @@ function Article(props) {
                 {/* Contents Tail */}
                 <div className='article-tail'>
                     <h2><b>{`${props.source.mainTitle} MBTI 정리표`}</b></h2>
-                    <img className='article-mainImg' src={`https://images.ktestone.com/blog/${props.source.testUrl}/${props.source.testUrl}-blog-table.jpg`} alt={`${props.source.testUrl}-blog-table`} /><br /><br />
+                    <img loading="lazy" className='article-mainImg' src={`https://images.ktestone.com/blog/${props.source.testUrl}/${props.source.testUrl}-blog-table.jpg`} alt={`${props.source.testUrl}-blog-table`} /><br /><br />
 
                     <Link to='/' className="main-link-block" key="blog-to-ktest-banner" onClick={_onBackToMainButtonClick}>
-                        <img className="test-main-img" src={`https://images.ktestone.com/default/blog-to-ktest-button.jpg`} alt="blog-to-ktest" />
+                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/default/blog-to-ktest-button.jpg`} alt="blog-to-ktest" />
                     </Link>
                 </div>
                 <Link to={'/blog/'} className="article-go-back-link" onClick={_onBackToListButtonClick}>

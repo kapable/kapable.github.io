@@ -57,7 +57,7 @@ function ArticleList() {
             <Link to={"/blog/" + article.testUrl + 'blog/'} className="article-list-link" onClick={_onArticleButtonClick} key={article.testUrl}>
                 <Row align='middle' justify="center" className='article-list-row'>
                     <Col span={9} style={{overflow: 'hidden'}}>
-                        <img className='article-list-thumb' src={`https://images.ktestone.com/blog/${article.testUrl}/${article.testUrl}-blog-thumb.jpg`} alt={article.mainTitle} />
+                        <img loading="lazy" className='article-list-thumb' src={`https://images.ktestone.com/blog/${article.testUrl}/${article.testUrl}-blog-thumb.jpg`} alt={article.mainTitle} />
                     </Col>
                     <Col span={15} style={{lineHeight: 0}}>
                         <Row align='middle' justify="center">
@@ -76,9 +76,9 @@ function ArticleList() {
     return (
         <Fragment>
             {metaTagRenderer()}
-            <img className="main-header" style={{marginTop: '3.5rem'}} src={`https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png`} alt="KTEST-Blog" />
+            <img loading="lazy" className="main-header" style={{marginTop: '3.5rem'}} src={`https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png`} alt="KTEST-Blog" />
             <Link to='/' className="main-link-block" key="blog-to-ktest-banner" onClick={_onBackToMainButtonClick}>
-                <img className="test-main-img" src={`https://images.ktestone.com/default/blog-to-ktest-button.jpg`} alt="blog-to-ktest" />
+                <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/default/blog-to-ktest-button.jpg`} alt="blog-to-ktest" />
             </Link>
             {articleRenderer(ARTICLES)}
         </Fragment>

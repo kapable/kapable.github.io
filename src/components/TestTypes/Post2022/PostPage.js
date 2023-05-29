@@ -105,7 +105,7 @@ const PostPage = (props) => {
                                 }
                             }}
                             >
-                            <img
+                            <img loading="lazy"
                                 src={`https://images.ktestone.com/PostImg2022/PostList/${letterOrder[ix]}Post.png`}
                                 alt={`Envelop${ix}`}
                                 key={`envelop-img-div-${mail.id}`}
@@ -146,7 +146,7 @@ const PostPage = (props) => {
 
     const eachMail = <div className="post2022-popup">
                         <div className="post2022-popup-inner">
-                            <img
+                            <img loading="lazy"
                                 src={popupImg}
                                 alt="letter"
                                 className='post2022-popup-letter-form' />
@@ -174,10 +174,10 @@ const PostPage = (props) => {
             <div className='post2022-page'>
                 {metaTagRenderer()}
                 {/* Background */}
-                <img src={postListBackgroundImg} alt="bg-img" className='post2022-long-bg-img'/>
+                <img loading="lazy" src={postListBackgroundImg} alt="bg-img" className='post2022-long-bg-img'/>
 
                 {/* Count Bell */}
-                <img src={alertBellImg} alt="alertBellImg" className='post2022-alert-bell-img' />
+                <img loading="lazy" src={alertBellImg} alt="alertBellImg" className='post2022-alert-bell-img' />
                 <p className='post2022-page-mailcount'>{mailCount}</p>
 
                 {/* User name */}
@@ -185,7 +185,7 @@ const PostPage = (props) => {
 
                 <div className='post2022-page-btn-div'>
                     <CopyToClipboard text={`https://ktestone.com/kapable.github.io/post2022/${props.match.params.username}/`}>
-                        <img src={shareMyBox} alt="Share My Post" onClick={onShareBtnClick} className='post2022-page-share-mypost-btn' />
+                        <img loading="lazy" src={shareMyBox} alt="Share My Post" onClick={onShareBtnClick} className='post2022-page-share-mypost-btn' />
                     </CopyToClipboard>
                 </div>             
                 {/* Contents */}
@@ -205,23 +205,23 @@ const PostPage = (props) => {
             <div className='post2022-page'>
                 {metaTagRenderer()}
                 {/* Background */}
-                <img src={postListBackgroundImg} alt="bg-img" className='post2022-long-bg-img'/>
+                <img loading="lazy" src={postListBackgroundImg} alt="bg-img" className='post2022-long-bg-img'/>
 
                 {/* Count Bell */}
-                <img src={alertBellImg} alt="alertBellImg" className='post2022-alert-bell-img' />
+                <img loading="lazy" src={alertBellImg} alt="alertBellImg" className='post2022-alert-bell-img' />
                 <p className='post2022-page-mailcount'>{mailCount}</p>
 
                 {/* User name */}
                 <p className='post2022-page-whosname'>{`${userNickname}`}님의</p>
 
                 <div className='post2022-page-btn-div'>
-                    <img src={sendButtonImg} alt="Send Mail" className="post2022-page-send-mail-btn" onClick={() => {
+                    <img loading="lazy" src={sendButtonImg} alt="Send Mail" className="post2022-page-send-mail-btn" onClick={() => {
                         _eventSenderGA("Paging", "Click Post-to-write Button", "post page");
                         props.history.push({
                             pathname:`/post2022/${props.match.params.username}/postwrite/`,
                         });
                     }} />
-                    <img src={createBoxButtonImg} alt="Go to My Post" onClick={() => {
+                    <img loading="lazy" src={createBoxButtonImg} alt="Go to My Post" onClick={() => {
                         _eventSenderGA("Paging", "Click Post-to-auth Button", "post page");
                         props.history.push({
                             pathname:`/postAuth2022/`,

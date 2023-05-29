@@ -49,21 +49,21 @@ const FactPok = () => {
             <Router basename='/kapable.github.io/' forceRefresh={true}>
                 <div className='factPok-intor-images-container'>
                     <div className='factPok-intro-top'>
-                        <img className='factPok-intro-top-img' src="https://images.ktestone.com/introImages/factPok-intro-top.jpg" alt="factPok-top"/>
+                        <img loading="lazy" className='factPok-intro-top-img' src="https://images.ktestone.com/introImages/factPok-intro-top.jpg" alt="factPok-top"/>
                     </div>
                     <Link to='/MyFactPok/'>
-                        <img className='factPok-intro-middle-left-img' src="https://images.ktestone.com/introImages/factPok-intro-middle-left.jpg" alt="MyfactPok"/>
+                        <img loading="lazy" className='factPok-intro-middle-left-img' src="https://images.ktestone.com/introImages/factPok-intro-middle-left.jpg" alt="MyfactPok"/>
                     </Link>
                     <Link to='/FriendFactPok/'>
-                        <img className='factPok-intro-middle-right-img' src="https://images.ktestone.com/introImages/factPok-intro-middle-right.jpg" alt="YourfactPok"/>
+                        <img loading="lazy" className='factPok-intro-middle-right-img' src="https://images.ktestone.com/introImages/factPok-intro-middle-right.jpg" alt="YourfactPok"/>
                     </Link>
                     <div className='factPok-intro-bottom'>
-                        <img className='factPok-intro-bottom-img' src="https://images.ktestone.com/introImages/factPok-intro-bottom.jpg" alt="factPok-bottom"/>
+                        <img loading="lazy" className='factPok-intro-bottom-img' src="https://images.ktestone.com/introImages/factPok-intro-bottom.jpg" alt="factPok-bottom"/>
                     </div>
                 </div>
             <div className="test-intro-with-friend">
                 <CopyToClipboard text="https://ktestone.com/kapable.github.io/factPok/">
-                    <img
+                    <img loading="lazy"
                         src={COPYBTN}
                         className="test-intro-with-friend-img"
                         onClick={_onShareButtonClick}
@@ -72,7 +72,7 @@ const FactPok = () => {
             </div>
             <Link to='/'>
                 <div className="test-intro-to-main">
-                    <img
+                    <img loading="lazy"
                         className="test-intro-to-main-img"
                         src={BACKBTN}
                         alt="다른 테스트 하러 뒤로가기"/>

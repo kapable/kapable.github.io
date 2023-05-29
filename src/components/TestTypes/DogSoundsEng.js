@@ -59,7 +59,7 @@ class DogSounds extends React.Component {
                                 }.bind(this)} className='dog-sounds-input' type="text"/>
                             </div>
                             <div>
-                            <img
+                            <img loading="lazy"
                             src="https://images.ktestone.com/bigDataTestImages/dogSoundsEng/goToRecord.png"
                             alt="Going to Record"
                             className="go-to-record-img"
@@ -80,7 +80,7 @@ class DogSounds extends React.Component {
         } else if (this.state.stage === 2) { // The second stage : recording sounds
             let _page = <Fragment>
                     <div className='dog-sound-record-title-div'>
-                        <img
+                        <img loading="lazy"
                             src="https://images.ktestone.com/bigDataTestImages/dogSoundsEng/dogSounds-record-title.png"
                             alt="Please let me hear your dog's breathing, barking, etc."
                             className='dog-sound-record-title-img'
@@ -116,7 +116,7 @@ class DogSounds extends React.Component {
                     </div>
                     <p className="dog-sounds-guidance">* The maximum recording time is 5 sec! *</p>
                     <div className="dog-sound-record-to-anlaysis">
-                        <img
+                        <img loading="lazy"
                         src="https://images.ktestone.com/bigDataTestImages/dogSoundsEng/goToAnalysis.png"
                         alt="Going to Analysis"
                         className="go-to-analysis-img"

@@ -257,7 +257,7 @@ class Result extends Component {
                         rel="noopener noreferrer"
                         href={new_test_link}
                         className="to-personalColorOut-test-banner-text"
-                    ><img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
+                    ><img loading="lazy" src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
                 </Fragment>
             )
         } else if(this.state.current_test === "personalColorJP") {
@@ -270,7 +270,7 @@ class Result extends Component {
                         rel="noopener noreferrer"
                         href={new_test_link}
                         className="to-personalColorOut-test-banner-text"
-                    ><img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
+                    ><img loading="lazy" src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
                 </Fragment>
             )
         } else if(this.state.current_test === "personalColorInd") {
@@ -283,7 +283,7 @@ class Result extends Component {
                         rel="noopener noreferrer"
                         href={new_test_link}
                         className="to-personalColorOut-test-banner-text"
-                    ><img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
+                    ><img loading="lazy" src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
                 </Fragment>
             )
         } else if(personalColorListGB.includes(this.state.current_test)) {
@@ -296,7 +296,7 @@ class Result extends Component {
                         rel="noopener noreferrer"
                         href={new_test_link}
                         className="to-personalColorOut-test-banner-text"
-                    ><img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
+                    ><img loading="lazy" src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} /></a>
                 </Fragment>
             )
         }
@@ -317,7 +317,7 @@ class Result extends Component {
                     rel="noopener noreferrer"
                     href={duft_outlink}
                     className="to-ppl-banner-text"
-                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
+                    > <img loading="lazy" src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                 </Fragment>
             )
         // duft & doft Kor
@@ -331,7 +331,7 @@ class Result extends Component {
                     rel="noopener noreferrer"
                     href={duft_outlink}
                     className="to-ppl-banner-text"
-                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
+                    > <img loading="lazy" src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                 </Fragment>
             )
         // Class 101
@@ -350,13 +350,13 @@ class Result extends Component {
                             rel="noopener noreferrer"
                             href={taro_outlink}
                             className="to-ppl-banner-text"
-                            > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
+                            > <img loading="lazy" src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                             <a
                             target="_blank"
                             rel="noopener noreferrer"
                             href={taro_outlink_2}
                             className="to-ppl-banner-text"
-                            > <img src={banner_img_src_2} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
+                            > <img loading="lazy" src={banner_img_src_2} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                         </Fragment>
                     )
                 }
@@ -373,7 +373,7 @@ class Result extends Component {
                     rel="noopener noreferrer"
                     href={hanbokBTI_outlink}
                     className="to-ppl-banner-text"
-                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
+                    > <img loading="lazy" src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                 </Fragment>
             )
         } else if (this.state.current_test === "hanbokBTIEng") {
@@ -386,7 +386,7 @@ class Result extends Component {
                     rel="noopener noreferrer"
                     href={hanbokBTI_outlink}
                     className="to-ppl-banner-text"
-                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
+                    > <img loading="lazy" src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                 </Fragment>
             )
         } else if (this.state.current_test === "hanbokBTIJP") {
@@ -399,7 +399,7 @@ class Result extends Component {
                     rel="noopener noreferrer"
                     href={hanbokBTI_outlink}
                     className="to-ppl-banner-text"
-                    > <img src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
+                    > <img loading="lazy" src={banner_img_src} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick} /> </a>
                 </Fragment>
             )
         }
@@ -430,19 +430,19 @@ class Result extends Component {
                     rel="noopener noreferrer"
                     href='https://ktestone.com/kapable.github.io/percentageMBTI2022/'
                     className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/main-thumbnail/percentageMBTI2022-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                    > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/percentageMBTI2022-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                     <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href='http://pf.kakao.com/_IxnRfb'
                     className="to-ppl-banner-text"
-                    > <img src={KAKAOPLUSFRIEND} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                    > <img loading="lazy" src={KAKAOPLUSFRIEND} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                     <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href={jelling_outlink}
                     className="to-ppl-banner-text"
-                    > <img src={JELLINGBANNERKOR} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                    > <img loading="lazy" src={JELLINGBANNERKOR} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
@@ -456,7 +456,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -480,7 +480,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -504,7 +504,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -528,7 +528,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -552,7 +552,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -576,7 +576,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -600,7 +600,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -624,7 +624,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -648,7 +648,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -672,7 +672,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -696,7 +696,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -720,7 +720,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -744,7 +744,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -770,7 +770,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
-                                > <img src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                             <AdsenseAdvertiser
                                 key={test+'-adsense'}
                                 client="ca-pub-2382342018701919"
@@ -904,7 +904,7 @@ class Result extends Component {
                             <meta property="og:image:height" content="400"/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        <img src={img_src} className='result-img' alt={final_type} />
+                        <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                     </Fragment>
                 )
             // meta tag for native test contents
@@ -937,7 +937,7 @@ class Result extends Component {
                         <a target="_blank" 
                         rel="noopener noreferrer"
                         href="http://unicontest.co.kr/g5/"
-                        ><img src={img_src} className='result-img' alt={final_type} /></a>
+                        ><img loading="lazy" src={img_src} className='result-img' alt={final_type} /></a>
                     </Fragment>
                 )
             } else if(jelling_list.includes(this.state.current_test)) {
@@ -967,29 +967,29 @@ class Result extends Component {
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
                         {this.state.isOpened || this.state.coupangCookies
-                        ? (<img src={img_src} className='result-img' alt={final_type} />)
+                        ? (<img loading="lazy" src={img_src} className='result-img' alt={final_type} />)
                         : (<>
                             <div className='article-adCover-div'>
-                                <img src={img_src} className='result-img' alt={final_type} />
+                                <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                             </div>
                             {this.affiliateRenderer()}
                         </>)}
                         <a target="_blank" 
                         rel="noopener noreferrer"
                         href="https://jellinggame.com/"
-                        ><img src="https://images.ktestone.com/jelling/comment-for-jelling.png" className='result-img' alt={final_type} /></a>
+                        ><img loading="lazy" src="https://images.ktestone.com/jelling/comment-for-jelling.png" className='result-img' alt={final_type} /></a>
                         <a target="_blank" 
                         rel="noopener noreferrer"
                         href="https://jellinggame.com/fruitboxrun/"
-                        ><img src="https://images.ktestone.com/jelling/fruitBoxRun-banner.png" className='result-img' alt={final_type} /></a>
+                        ><img loading="lazy" src="https://images.ktestone.com/jelling/fruitBoxRun-banner.png" className='result-img' alt={final_type} /></a>
                         <a target="_blank" 
                         rel="noopener noreferrer"
                         href="https://jellinggame.com/fruitsline/"
-                        ><img src="https://images.ktestone.com/jelling/fruitsLine-banner.png" className='result-img' alt={final_type} /></a>
+                        ><img loading="lazy" src="https://images.ktestone.com/jelling/fruitsLine-banner.png" className='result-img' alt={final_type} /></a>
                         <a target="_blank" 
                         rel="noopener noreferrer"
                         href="https://jellinggame.com/gotohome/"
-                        ><img src="https://images.ktestone.com/jelling/goToHome-banner.png" className='result-img' alt={final_type} /></a>
+                        ><img loading="lazy" src="https://images.ktestone.com/jelling/goToHome-banner.png" className='result-img' alt={final_type} /></a>
                     </Fragment>
                 )
             } else if(this.state.current_test === "driveTest") {
@@ -1051,7 +1051,7 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        <img src={img_src} className='result-img' alt={final_type} />
+                        <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                         <div className='result-factPok-bottom-banner'>
                             <a
                                 target='_blank'
@@ -1060,7 +1060,7 @@ class Result extends Component {
                                 className='to-tonymoly-kakao-banner'
                                 onClick={() => (this._eventSenderGA("Paging", "Click Go-to-Kakao Button", "tonymoly result page"))}
                             >
-                                <img src={`https://images.ktestone.com/meta/factPok/factPok-bottom-banner-left.jpg`} className='result-factPok-bottom-banner-left' alt='result-factPok-bottom-banner-left' />
+                                <img loading="lazy" src={`https://images.ktestone.com/meta/factPok/factPok-bottom-banner-left.jpg`} className='result-factPok-bottom-banner-left' alt='result-factPok-bottom-banner-left' />
                             </a>
                             <a
                                 target='_blank'
@@ -1069,7 +1069,7 @@ class Result extends Component {
                                 className='to-tonymoly-store-banner'
                                 onClick={() => (this._eventSenderGA("Paging", "Click Go-to-Store Button", "tonymoly result page"))}
                             >
-                                <img src={`https://images.ktestone.com/meta/factPok/factPok-bottom-banner-right.jpg`} className='result-factPok-bottom-banner-right' alt='result-factPok-bottom-banner-right' />
+                                <img loading="lazy" src={`https://images.ktestone.com/meta/factPok/factPok-bottom-banner-right.jpg`} className='result-factPok-bottom-banner-right' alt='result-factPok-bottom-banner-right' />
                             </a>
                         </div>
                     </Fragment>
@@ -1101,10 +1101,10 @@ class Result extends Component {
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
                         {this.state.isOpened || this.state.coupangCookies
-                        ? (<img src={img_src} className='result-img' alt={final_type} />)
+                        ? (<img loading="lazy" src={img_src} className='result-img' alt={final_type} />)
                         : (<>
                             <div className='article-adCover-div'>
-                                <img src={img_src} className='result-img' alt={final_type} />
+                                <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                             </div>
                             {this.affiliateRenderer()}
                         </>)}
@@ -1136,13 +1136,13 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        <img src={img_src} className='result-img' alt={final_type} />
+                        <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                         <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href={`https://PC5tOwFSxk6rMl5hMJ6LPA.adtouch.adbrix.io/api/v1/click/29kIDhdJm0WC7B1v4JrBBQ?cb_1={CUSTOM_PARAM}`}
                         className="to-ppl-banner-text"
-                        > <img src={`https://images.ktestone.com/meta/HmallTest.jpg`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                        > <img loading="lazy" src={`https://images.ktestone.com/meta/HmallTest.jpg`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                     </Fragment>
                 )
             } else if(this.state.current_test === "hmall") {
@@ -1184,7 +1184,7 @@ class Result extends Component {
                     <a target="_blank"
                         rel="noopener noreferrer"
                         href={hmall_type_link_obj[_current_test_result.type]}>
-                        <img style={{maxWidth:"16.5rem"}} src='https://images.ktestone.com/meta/hmall/hmall-go-to-result-btn.png' alt="Hmall로 결과 보러가기"
+                        <img loading="lazy" style={{maxWidth:"16.5rem"}} src='https://images.ktestone.com/meta/hmall/hmall-go-to-result-btn.png' alt="Hmall로 결과 보러가기"
                             onClick={this._eventSenderGA("Paging", "Click go-to-Hmall Button", "result page")}
                         />
                     </a>
@@ -1217,17 +1217,17 @@ class Result extends Component {
                         </Helmet>
                         {this.state.isOpened || this.state.coupangCookies
                         ? (<>
-                            <img src={img_src} className='result-img' alt={final_type} />
+                            <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                             {_current_test_contents.info?.blogUrl ? (
                                 <a rel="noopener noreferrer" href={`/kapable.github.io/blog/${_current_test_contents.info?.blogUrl}/`} onClick={this._onGotoBlogClick}>
-                                    <img className='result-to-blog-banner' src={`https://images.ktestone.com/default/to-test-blog-banner.jpg`} alt='to-test-blog-banner'/></a>
+                                    <img loading="lazy" className='result-to-blog-banner' src={`https://images.ktestone.com/default/to-test-blog-banner.jpg`} alt='to-test-blog-banner'/></a>
                             ) : null}
                         </>)
                         : (<>
                             <div className='article-adCover-div' oncontextmenu="return false" 
                                 ondragstart="return false" 
                                 onselectstart="return false">
-                                <img src={img_src} className='result-img crop-result-img' alt={final_type} />
+                                <img loading="lazy" src={img_src} className='result-img crop-result-img' alt={final_type} />
                             </div>
                             {this.affiliateRenderer()}
                         </>)}
@@ -1272,7 +1272,7 @@ class Result extends Component {
                         <meta property="twitter:image:alt" content={this.state.current_result} />
                     </Helmet>
                     <PCTMBTIBAR result_score={result_score} result_color={result_color} bg_img_src={bg_img_src} />
-                    <img src={img_src} className='result-img' alt={final_type} />
+                    <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                 </Fragment>
             )
         } else if(this.state.current_test === "dogSounds" || this.state.current_test === "dogSoundsEng") {
@@ -1302,7 +1302,7 @@ class Result extends Component {
                         <meta property="twitter:image:alt" content={this.state.current_result} />
                     </Helmet>
                     <h1>{this.props.dog_name}</h1>
-                    <img src={img_src} className='result-img' alt={final_type} />
+                    <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                 </Fragment>
             )
         } else if(this.state.current_test === "facialExpressionAnalyzer" || this.state.current_test === "facialExpressionAnalyzerEng" || this.state.current_test === "facialExpressionAnalyzerCN") {
@@ -1332,8 +1332,8 @@ class Result extends Component {
                         <meta property="twitter:image" content={img_src}/>
                         <meta property="twitter:image:alt" content={this.state.current_result} />
                     </Helmet>
-                    <img src={test_title_img_url} alt="Facial Expression Analyzer" className="facialExpressionAnalyzer-title-img"/>
-                    <img src={this.props.pics} alt="Face!" className="result-user-pic"/>
+                    <img loading="lazy" src={test_title_img_url} alt="Facial Expression Analyzer" className="facialExpressionAnalyzer-title-img"/>
+                    <img loading="lazy" src={this.props.pics} alt="Face!" className="result-user-pic"/>
                     <div className='result-ment'>{this.props.ment}</div>
                 </Fragment>
             )
@@ -1344,15 +1344,15 @@ class Result extends Component {
                 if(window.location.href.includes('sinjoer2022')){
                     return (
                         <Fragment>
-                            <img src={img_src} className='result-img' alt={final_type} />
-                            <img src={'https://images.ktestone.com/resultImages/sinjoer2022/sinjoer2022-wrong.png'} className='result-img' alt={final_type} />
+                            <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
+                            <img loading="lazy" src={'https://images.ktestone.com/resultImages/sinjoer2022/sinjoer2022-wrong.png'} className='result-img' alt={final_type} />
                         </Fragment>
     
                     )
                 } else {
                     return (
                         <Fragment>
-                            <img src={img_src} className='result-img' alt={final_type} />
+                            <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                         </Fragment>
     
                     )
@@ -1363,13 +1363,13 @@ class Result extends Component {
                         {this.state.adProb && (!this.state.isOpened || !this.state.coupangCookies)
                         ? (<>
                             <div className='article-adCover-div'>
-                                <img src={img_src} className='result-img' alt={final_type} />
+                                <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                             </div>
                             {this.affiliateRenderer()}
                         </>)
                         : (
                             <>
-                                <img src={img_src} className='result-img' alt={final_type} />
+                                <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                                 <Card className="result-card" bg="light">
                                     <Card.Body className="result-p">
                                         <Card.Text>{final_desc}</Card.Text>
@@ -1394,13 +1394,13 @@ class Result extends Component {
                         rel="noopener noreferrer"
                         href={`https://ktestone.com/kapable.github.io/labelStickerFriendship/`}
                         className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerFriendship-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerFriendship'} onClick={this._onPPLBannerClick}/> </a>
+                    > <img loading="lazy" src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerFriendship-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerFriendship'} onClick={this._onPPLBannerClick}/> </a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href={`https://ktestone.com/kapable.github.io/labelStickerLove/`}
                         className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerLove-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerLove'} onClick={this._onPPLBannerClick}/> </a>
+                    > <img loading="lazy" src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerLove-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerLove'} onClick={this._onPPLBannerClick}/> </a>
                 </Fragment>
             )
         } else if (this.state.current_test === 'labelStickerLove') {
@@ -1410,13 +1410,13 @@ class Result extends Component {
                     rel="noopener noreferrer"
                     href={`https://ktestone.com/kapable.github.io/labelStickerFriendship/`}
                     className="to-ppl-banner-text"
-                > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerFriendship-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerFriendship'} onClick={this._onPPLBannerClick}/> </a>
+                > <img loading="lazy" src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerFriendship-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerFriendship'} onClick={this._onPPLBannerClick}/> </a>
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href={`https://ktestone.com/kapable.github.io/labelSticker/`}
                     className="to-ppl-banner-text"
-                > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelSticker-banner.jpeg`} className='ppl-banner-img' alt={'labelSticker'} onClick={this._onPPLBannerClick}/> </a>
+                > <img loading="lazy" src={`https://images.ktestone.com/meta/labelSticker/toLabelSticker-banner.jpeg`} className='ppl-banner-img' alt={'labelSticker'} onClick={this._onPPLBannerClick}/> </a>
             </Fragment>)
         } else if (this.state.current_test === 'labelStickerFriendship') {
             return(
@@ -1426,13 +1426,13 @@ class Result extends Component {
                         rel="noopener noreferrer"
                         href={`https://ktestone.com/kapable.github.io/labelStickerLove/`}
                         className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerLove-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerLove'} onClick={this._onPPLBannerClick}/> </a>
+                    > <img loading="lazy" src={`https://images.ktestone.com/meta/labelSticker/toLabelStickerLove-banner.jpeg`} className='ppl-banner-img' alt={'labelStickerLove'} onClick={this._onPPLBannerClick}/> </a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href={`https://ktestone.com/kapable.github.io/labelSticker/`}
                         className="to-ppl-banner-text"
-                    > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelSticker-banner.jpeg`} className='ppl-banner-img' alt={'labelSticker'} onClick={this._onPPLBannerClick}/> </a>
+                    > <img loading="lazy" src={`https://images.ktestone.com/meta/labelSticker/toLabelSticker-banner.jpeg`} className='ppl-banner-img' alt={'labelSticker'} onClick={this._onPPLBannerClick}/> </a>
                 </Fragment>
             )
         }
@@ -1491,7 +1491,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href={`https://rootssolution.co.kr/76/?idx=333`}
                                 className="to-ppl-banner-text"
-                            > <img src={`https://images.ktestone.com/meta/labelSticker/toLabelSticker-goods-banner.jpg`} className='ppl-banner-img' alt={'toLabelSticker-goods'} onClick={this._onPPLBannerClick}/> </a>
+                            > <img loading="lazy" src={`https://images.ktestone.com/meta/labelSticker/toLabelSticker-goods-banner.jpg`} className='ppl-banner-img' alt={'toLabelSticker-goods'} onClick={this._onPPLBannerClick}/> </a>
                         )
                         : null
                     )}
@@ -1514,7 +1514,7 @@ class Result extends Component {
                         <div className="share">
                             {/* if facialExpAnalyzer, copy url is test home, other tests' urls are result urls */}
                             <CopyToClipboard text={this.state.current_test.includes("facialExpressionAnalyzer") ? "https://ktestone.com/kapable.github.io/" + this.state.current_test+'/' : this.state.sharable_url+'/'}>
-                                <img
+                                <img loading="lazy"
                                     src={COPYBTN}
                                     onClick={this._onShareButtonClick}
                                     className="share-btn-img"
@@ -1523,7 +1523,7 @@ class Result extends Component {
                             </CopyToClipboard>
                         </div>
                         <div className="re-test-btn">
-                            <img
+                            <img loading="lazy"
                                 src={AGAINBTN}
                                 className="re-test-btn-img"
                                 onClick={this._onBackToStartButtonClick}
@@ -1531,7 +1531,7 @@ class Result extends Component {
                         </div>
                     </div>
                     <div className="back-to-main">
-                        <img
+                        <img loading="lazy"
                             src={TOHOMEBTN}
                             onClick={function(e) {
                                 e.preventDefault();

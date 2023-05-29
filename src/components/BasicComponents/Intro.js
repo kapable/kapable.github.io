@@ -182,7 +182,7 @@ class Intro extends Component {
                         <meta property="twitter:image:alt" content={this.state.current_test.info.mainTitle} />
                     </Helmet>
                     {/* <div id="optadnpm ATB" style={{"minHeight": "220px"}}></div> */}
-                    <img
+                    <img loading="lazy"
                         className="intro-main-img"
                         onClick={this._onStartButtonClick}
                         src={_thumbImage}
@@ -203,7 +203,7 @@ class Intro extends Component {
 
                     <div className="test-intro-with-friend">
                         <CopyToClipboard text={this.state.quiz_url+'/'}>
-                            <img
+                            <img loading="lazy"
                                 src={COPYBTN}
                                 className="test-intro-with-friend-img"
                                 onClick={this._onShareButtonClick}
@@ -211,7 +211,7 @@ class Intro extends Component {
                         </CopyToClipboard>
                     </div>
                     <div className="test-intro-to-main">
-                        <img
+                        <img loading="lazy"
                             className="test-intro-to-main-img"
                             src={BACKBTN}
                             onClick={this._onMainButtonClick}

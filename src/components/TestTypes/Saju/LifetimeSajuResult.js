@@ -89,7 +89,7 @@ const LifetimeSajuResult = (props) => {
 
     return (
         <div className='todayLuck-result-main-div'>
-            <img className='todayLuck-top-banner-sample' src="https://images.ktestone.com/meta/saju/lifetimeSaju-top-banner.jpg" alt='todayLuck-top-banner-sample'/>
+            <img loading="lazy" className='todayLuck-top-banner-sample' src="https://images.ktestone.com/meta/saju/lifetimeSaju-top-banner.jpg" alt='todayLuck-top-banner-sample'/>
             {isOpened || coupangCookies?.coupang ? 
                 <Fragment>
                     <h3>사주총평</h3>
@@ -147,7 +147,7 @@ const LifetimeSajuResult = (props) => {
                     testTitle={"사주총평 - 케이테스트 | 사주 테스트"}/>
                 <div className="share">
                     <CopyToClipboard text={"https://ktestone.com/kapable.github.io/lifetimeSaju/" + props?.match?.params?.query +'/'}>
-                        <img
+                        <img loading="lazy"
                             src={COPYBTN}
                             onClick={onShareButtonClick}
                             className="share-btn-img"
@@ -156,7 +156,7 @@ const LifetimeSajuResult = (props) => {
                     </CopyToClipboard>
                 </div>
                 <div className="re-test-btn">
-                    <img
+                    <img loading="lazy"
                         src={AGAINBTN}
                         className="re-test-btn-img"
                         onClick={onRestartButtonClick}
@@ -164,7 +164,7 @@ const LifetimeSajuResult = (props) => {
                 </div>
             </div>
             <div className="back-to-main" style={{display:"block"}}>
-                <img
+                <img loading="lazy"
                     src={TOHOMEBTN}
                     onClick={onBacktoHomeButtonClick}
                     className="back-to-main-btn-img"

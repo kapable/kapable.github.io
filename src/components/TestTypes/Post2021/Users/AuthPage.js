@@ -19,11 +19,11 @@ function AuthPage(props) {
         return (
             <>  
                 {lang === `Eng`
-                ? <img src={"https://images.ktestone.com/PostImg/English/Button/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
-                : <img src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
+                ? <img loading="lazy" src={"https://images.ktestone.com/PostImg/English/Button/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
+                : <img loading="lazy" src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
                 }
                 <RegisterPage setMode={setMode} language={lang}/>
-                <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
+                <img loading="lazy" src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </>
             
         )
@@ -31,11 +31,11 @@ function AuthPage(props) {
         return (
             <>
                 {lang === `Eng`
-                ? <img src={"https://images.ktestone.com/PostImg/English/Button/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
-                : <img src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
+                ? <img loading="lazy" src={"https://images.ktestone.com/PostImg/English/Button/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
+                : <img loading="lazy" src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
                 }
                 <LoginPage setMode={setMode} language={lang}/>
-                <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
+                <img loading="lazy" src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </>
         )
     }

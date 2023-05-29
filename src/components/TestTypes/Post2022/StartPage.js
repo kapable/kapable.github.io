@@ -54,7 +54,7 @@ const Post2022 = ({ language }) => {
                         onClick={() => {
                             _eventSenderGA("Paging", "Click Start-to-auth Button", "post start page");
                         }}>
-                    <img src={introImgSrc} alt="intro-img" className='post2022-intro-img' />
+                    <img loading="lazy" src={introImgSrc} alt="intro-img" className='post2022-intro-img' />
                 </Link>
             </div>
         </Fragment>

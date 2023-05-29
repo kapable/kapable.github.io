@@ -71,7 +71,7 @@ class FacialExpressionAnalyzerEng extends React.Component {
                     <label htmlFor="human"className="face-image-option">Human</label>
                 </div>
                 <div className="face-image-to-anlaysis">
-                    <img
+                    <img loading="lazy"
                     src="https://images.ktestone.com/bigDataTestImages/facialExpressionAnalyzerEng/facial-go-to-analyze-eng.png"
                     alt="Go to Analize"
                     className="go-to-analysis-img"

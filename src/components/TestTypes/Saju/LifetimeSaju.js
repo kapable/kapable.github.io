@@ -93,7 +93,7 @@ const LifetimeSaju = (props) => {
                     <meta property="twitter:image:alt" content="사주 총평 당신의 사주는? - 케이테스트 | 사주 테스트" />
                 </Helmet>
                 <div className='lifetime-saju-intro-img-div'>
-                    <img className='lifetime-saju-intro-bg' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-input-bg.jpg" alt="lifetime-saju-intro-input"/>
+                    <img loading="lazy" className='lifetime-saju-intro-bg' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-input-bg.jpg" alt="lifetime-saju-intro-input"/>
                     <div className='lifetime-saju-intro-date-picker-div'>
                         <DatePicker className='lifetime-saju-intro-date-picker' onChange={onChange} allowClear locale={locale}/>
                     </div>
@@ -110,12 +110,12 @@ const LifetimeSaju = (props) => {
                         </Radio.Group>
                     </div>
                     <div className='lifetime-saju-intro-btn-div' onClick={onSubmitClick}>
-                        <img className='lifetime-saju-intro-btn' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-submit-btn.jpg" alt="lifetime-saju-intro-btn"/>
+                        <img loading="lazy" className='lifetime-saju-intro-btn' src="https://images.ktestone.com/meta/saju/lifetimeSaju-intro-submit-btn.jpg" alt="lifetime-saju-intro-btn"/>
                     </div>
                 </div>
                 <div className="test-intro-with-friend">
                     <CopyToClipboard text={'https://ktestone.com/kapable.github.io/lifetimeSaju/'}>
-                        <img
+                        <img loading="lazy"
                             src={COPYBTN}
                             className="test-intro-with-friend-img"
                             onClick={onShareButtonClick}
@@ -123,7 +123,7 @@ const LifetimeSaju = (props) => {
                     </CopyToClipboard>
                 </div>
                 <div className="test-intro-to-main">
-                    <img
+                    <img loading="lazy"
                         className="test-intro-to-main-img"
                         src={BACKBTN}
                         onClick={onBacktoHomeButtonClick}

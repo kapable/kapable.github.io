@@ -52,7 +52,7 @@ const LoginPage = (props) => {
 
     return (
         <div className="post2022-login-page-bg-div">
-            <img src={bgImgSrc} alt='register-bg' className="post2022-register-page-bg-img"/>
+            <img loading="lazy" src={bgImgSrc} alt='register-bg' className="post2022-register-page-bg-img"/>
             <div className='post2022-login-page-contents-div'>
                 <div className='post2022-register-page-btn-div'>
                     <button onClick={() => {props.setMode("register")}} className="post2022-login-page-rgbtn" >회원가입</button>
@@ -83,7 +83,7 @@ const LoginPage = (props) => {
                         required
                     />
                     <button type="submit" className="post2022-login-submit-btn">
-                        <img src={buttonImgSrc} alt="submit" />
+                        <img loading="lazy" src={buttonImgSrc} alt="submit" />
                     </button>
                 </form>
             </div>

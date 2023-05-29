@@ -96,17 +96,17 @@ const TodayLuck = (props) => {
                     <meta property="twitter:image:alt" content="오늘의 총운 - 케이테스트 | 사주 테스트" />
                 </Helmet>
                 <div className='todayLuck-intro-img-div'>
-                    <img className='todayLuck-intro-bg' src="https://images.ktestone.com/meta/saju/todayLuck-intro-bg.jpg" alt="todayLuck-intro-input"/>
+                    <img loading="lazy" className='todayLuck-intro-bg' src="https://images.ktestone.com/meta/saju/todayLuck-intro-bg.jpg" alt="todayLuck-intro-input"/>
                     <div className='todayLuck-intro-date-picker-div'>
                         <DatePicker className='todayLuck-intro-date-picker' onChange={onChange} allowClear locale={locale}/>
                     </div>
                     <div className='todayLuck-intro-btn-div' onClick={onSubmitClick}>
-                        <img className='todayLuck-intro-btn' src="https://images.ktestone.com/meta/saju/todayLuck-intro-submit-btn.jpg" alt="todayLuck-intro-btn"/>
+                        <img loading="lazy" className='todayLuck-intro-btn' src="https://images.ktestone.com/meta/saju/todayLuck-intro-submit-btn.jpg" alt="todayLuck-intro-btn"/>
                     </div>
                 </div>
                 <div className="test-intro-with-friend">
                     <CopyToClipboard text={'https://ktestone.com/kapable.github.io/lifetimeSaju/'}>
-                        <img
+                        <img loading="lazy"
                             src={COPYBTN}
                             className="test-intro-with-friend-img"
                             onClick={onShareButtonClick}
@@ -114,7 +114,7 @@ const TodayLuck = (props) => {
                     </CopyToClipboard>
                 </div>
                 <div className="test-intro-to-main">
-                    <img
+                    <img loading="lazy"
                         className="test-intro-to-main-img"
                         src={BACKBTN}
                         onClick={onBacktoHomeButtonClick}

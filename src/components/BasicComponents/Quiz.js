@@ -35,7 +35,7 @@ class Quiz extends Component {
         if(this.props.scoreType === "numberScoringImg" && qAndA.questionImage !== ''){
             return(
                 <div>
-                    <img src={qAndAImg} className='answer-option-img' alt={qAndA.question} />
+                    <img loading="lazy" src={qAndAImg} className='answer-option-img' alt={qAndA.question} />
                 </div>
             )
         }

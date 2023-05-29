@@ -12,7 +12,7 @@ class StoryTelling extends Component {
         let nextQuizNum = this.props.quizNum + 1;
         return(
             <Fragment>
-                <img
+                <img loading="lazy"
                     src={qAndA.answers[0].content}
                     alt={qAndA.answers.type}
                     className="storytelling-img"

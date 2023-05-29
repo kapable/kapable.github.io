@@ -86,8 +86,8 @@ function Post2021(props) {
         <Fragment>
             {metaTagRenderer()}
             <div className="start-page-bg-div">
-                <img src={upbarBtnImg} alt="UPBAR" className="start-page-upbar"/>
-                <img src={postBoxBtnImg} alt='MAINTITLE' className="start-page-postbox"/>
+                <img loading="lazy" src={upbarBtnImg} alt="UPBAR" className="start-page-upbar"/>
+                <img loading="lazy" src={postBoxBtnImg} alt='MAINTITLE' className="start-page-postbox"/>
                 <Link
                     to={{
                         pathname: `/auth/`,
@@ -98,8 +98,8 @@ function Post2021(props) {
                     onClick={() => {
                         _eventSenderGA("Paging", "Click Start-to-auth Button", "post start page");
                     }}
-                ><img src={startBtnImg} alt="Start-btn" className="start-page-startbtn" /></Link>
-                <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
+                ><img loading="lazy" src={startBtnImg} alt="Start-btn" className="start-page-startbtn" /></Link>
+                <img loading="lazy" src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
         </Fragment>
     )

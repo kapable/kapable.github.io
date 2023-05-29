@@ -91,7 +91,7 @@ const TodayLuckResult = (props) => {
 
     return (
         <div className='todayLuck-result-main-div'>
-            <img className='todayLuck-top-banner-sample' src="https://images.ktestone.com/meta/saju/todayLuck-top-banner-sample.png" alt='todayLuck-top-banner-sample'/>
+            <img loading="lazy" className='todayLuck-top-banner-sample' src="https://images.ktestone.com/meta/saju/todayLuck-top-banner-sample.png" alt='todayLuck-top-banner-sample'/>
             {isOpened || coupangCookies?.coupang ? 
                 <Fragment>
                     <h3>오늘의 총운</h3>
@@ -143,7 +143,7 @@ const TodayLuckResult = (props) => {
                     testTitle={"오늘의 총운 - 케이테스트 | 사주 테스트"}/>
                 <div className="share">
                     <CopyToClipboard text={"https://ktestone.com/kapable.github.io/todayLuck/" + props?.match?.params?.query +'/'}>
-                        <img
+                        <img loading="lazy"
                             src={COPYBTN}
                             onClick={onShareButtonClick}
                             className="share-btn-img"
@@ -152,7 +152,7 @@ const TodayLuckResult = (props) => {
                     </CopyToClipboard>
                 </div>
                 <div className="re-test-btn">
-                    <img
+                    <img loading="lazy"
                         src={AGAINBTN}
                         className="re-test-btn-img"
                         onClick={onRestartButtonClick}
@@ -160,7 +160,7 @@ const TodayLuckResult = (props) => {
                 </div>
             </div>
             <div className="back-to-main" style={{display:"block"}}>
-                <img
+                <img loading="lazy"
                     src={TOHOMEBTN}
                     onClick={onBacktoHomeButtonClick}
                     className="back-to-main-btn-img"

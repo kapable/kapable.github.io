@@ -20,7 +20,7 @@ function MainPage(props) {
             {/* Language Converting */}
             <OhterLangIconsMain />
             <div>
-                <img className='main-header' src={(props.lang === 'Eng' || props.lang === 'JP' || props.lang === 'CN') ? `https://images.ktestone.com/default/main-header-2023${props.lang}.png` : `https://images.ktestone.com/default/main-header-2023${(props.lang === 'Kor' || !props.lang) ? '' : 'Eng'}.png`} alt="K-test"/>
+                <img loading="lazy" className='main-header' src={(props.lang === 'Eng' || props.lang === 'JP' || props.lang === 'CN') ? `https://images.ktestone.com/default/main-header-2023${props.lang}.png` : `https://images.ktestone.com/default/main-header-2023${(props.lang === 'Kor' || !props.lang) ? '' : 'Eng'}.png`} alt="K-test"/>
             </div>
 
             {/* Category Converting */}
@@ -37,28 +37,28 @@ function MainPage(props) {
             {/* Life Interpreting Luck */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
                 <Link to='/lifeInterpreting/' className="main-link-block" key="lifeInterpreting-banner">
-                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/lifeInterpreting-thumb.png`} alt="lifeInterpreting" />
+                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/lifeInterpreting-thumb.png`} alt="lifeInterpreting" />
                 </Link>
             ) : null}
 
             {/* Lifetime SAJU */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
                 <Link to='/lifetimeSaju/' className="main-link-block" key="lifetimeSaju-banner">
-                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/lifetimeSaju-thumb.png`} alt="lifetimeSaju" />
+                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/lifetimeSaju-thumb.png`} alt="lifetimeSaju" />
                 </Link>
             ) : null}
 
             {/* TodayLuck */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
                 <Link to='/todayLuck/' className="main-link-block" key="todayLuck-banner">
-                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`} alt="todayLuck" />
+                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`} alt="todayLuck" />
                 </Link>
             ) : null}
 
             {/* CASPER SOCIAL CLUB Test */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
                 <a target='_blank' rel="noopener noreferrer" href="https://bit.ly/3OuqjhT" className="main-link-block" key="casper-social-club-thumb-banner" onClick={() => _eventSenderGA("Paging", "Click RRR Car Thumbnail", "main page")}>
-                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/casper-social-club-thumb.jpg`} alt="rrr-intro" />
+                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/casper-social-club-thumb.jpg`} alt="rrr-intro" />
                 </a>
             ) : null}
 
@@ -69,7 +69,7 @@ function MainPage(props) {
                         return(
                             <Fragment key={item[0].replaceAll('/','')+'fragment'}>
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                                    <img className="test-main-img" src={item[1]} alt={item[2]}/>
+                                    <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
                                 <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
@@ -84,7 +84,7 @@ function MainPage(props) {
                     } else {
                         return (
                             <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                                <img className="test-main-img" src={item[1]} alt={item[2]}/>
+                                <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                             </Link>
                         )
                     };
@@ -95,7 +95,7 @@ function MainPage(props) {
             {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
             ? (
                 <Link to={'/haGender/'} className="main-link-block" key="haGender-banner">
-                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/haGender-thumb.png`} alt='haGender' />
+                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/haGender-thumb.png`} alt='haGender' />
                 </Link>
             ) : (
                 null
@@ -105,12 +105,12 @@ function MainPage(props) {
             {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
             ? (
                 <Link to={'/coupleCharacter/'} className="main-link-block" key="coupleCharacter-banner">
-                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter-thumb.png`} alt='coupleCharacter' />
+                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter-thumb.png`} alt='coupleCharacter' />
                 </Link>
             ) : (
                 (props.lang === 'Eng' || props.lang === 'CN' || props.lang === 'JP')
                 ? <Link to={`/coupleCharacter${props.lang}`} className="main-link-block" key="coupleCharacter-banner">
-                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter${props.lang}-thumb.png`} alt='coupleCharacter' />
+                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter${props.lang}-thumb.png`} alt='coupleCharacter' />
                 </Link>:null
                 
             )}
@@ -119,12 +119,12 @@ function MainPage(props) {
             {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
             ? (
                 <Link to={'/loveCharacter/'} className="main-link-block" key="loveCharacter-banner">
-                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png`} alt='loveCharacter' />
+                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png`} alt='loveCharacter' />
                 </Link>
             ) : (
                 (props.lang === 'Eng' || props.lang === 'CN'|| props.lang === 'JP'|| props.lang === 'ES'|| props.lang === 'Ger')
                 ? <Link to={`/loveCharacter${props.lang}`} className="main-link-block" key="loveCharacter-banner">
-                    <img className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang}-thumb.png`} alt='loveCharacter' />
+                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang}-thumb.png`} alt='loveCharacter' />
                 </Link> : null
             )}
 
@@ -135,7 +135,7 @@ function MainPage(props) {
                         return(
                             <Fragment key={item[0].replaceAll('/','')+'fragment'}>
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                                    <img className="test-main-img" src={item[1]} alt={item[2]}/>
+                                    <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
                                 <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
@@ -150,7 +150,7 @@ function MainPage(props) {
                     } else {
                         return (
                             <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                                <img className="test-main-img" src={item[1]} alt={item[2]}/>
+                                <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                             </Link>
                         )
                     };
@@ -161,14 +161,14 @@ function MainPage(props) {
             {/* RRR Car Test */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
                 <a target='_blank' rel="noopener noreferrer" href="https://bit.ly/401a25W" className="main-link-block" key="rrr-intro-banner" onClick={() => _eventSenderGA("Paging", "Click RRR Car Thumbnail", "main page")}>
-                    <img className="test-main-img" src={`https://images.ktestone.com/introImages/RRR-intro.jpg`} alt="rrr-intro" />
+                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/introImages/RRR-intro.jpg`} alt="rrr-intro" />
                 </a>
             ) : null}
 
             {/* Fortune Cookie */}
             {props.lang === 'Kor' && (currentCategory === '' || currentCategory === "saju") ? (
                 <Link to='/fortuneCookie/' className="main-link-block" key="fortuneCookie-banner">
-                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fortuneCookie-thumb.png`} alt="fortuneCookie" />
+                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fortuneCookie-thumb.png`} alt="fortuneCookie" />
                 </Link>
             ) : null}
             
@@ -176,17 +176,17 @@ function MainPage(props) {
                 <>
                     {/* Go to FactPok */}
                     <Link to='/factPok/' className="main-link-block" key="factpok-banner">
-                        <img className='test-main-img' src={"https://images.ktestone.com/main-thumbnail/factPok-thumb.png"} alt='factPok' />
+                        <img loading="lazy" className='test-main-img' src={"https://images.ktestone.com/main-thumbnail/factPok-thumb.png"} alt='factPok' />
                     </Link>
 
                     {/* Go to Acrostic */}
                     <Link to='/acrostic/' className="main-link-block" key="acrostic-banner">
-                        <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/acrostic-thumb.png`} alt="Acrostic" />
+                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/acrostic-thumb.png`} alt="Acrostic" />
                     </Link>
 
                     {/* Go to POST 2021 */}
                     <Link to='/post2021/' className="main-link-block" key="post2021-banner">
-                        <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2021-thumb.png`} alt="POST-2021" />
+                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2021-thumb.png`} alt="POST-2021" />
                     </Link>
                 </>
             ) : null}
@@ -194,7 +194,7 @@ function MainPage(props) {
             {/* Go to POST 2022 */}
             {props.lang === 'Kor' ? (
                 <Link to='/post2022/' className="main-link-block" key="post2022-banner">
-                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022-thumb.png`} alt="POST-2022" />
+                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022-thumb.png`} alt="POST-2022" />
                 </Link>
             ) : null}
 
@@ -202,7 +202,7 @@ function MainPage(props) {
             {props.match.path !== '/Kor/' && (currentCategory === '' || currentCategory === "etc")
             ? (
                 <Link to='/post2022Eng/' className="main-link-block" key="post2022Eng-banner">
-                    <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022Eng-thumb.png`} alt="POST-2021" />
+                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022Eng-thumb.png`} alt="POST-2021" />
                 </Link>
             )
             : null}
@@ -214,7 +214,7 @@ function MainPage(props) {
                         return(
                             <Fragment key={item[0].replaceAll('/','')+'fragment'}>
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                                    <img className="test-main-img" src={item[1]} alt={item[2]}/>
+                                    <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
                                 <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
@@ -229,7 +229,7 @@ function MainPage(props) {
                     } else {
                         return (
                             <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                                <img className="test-main-img" src={item[1]} alt={item[2]}/>
+                                <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                             </Link>
                         )
                     };
@@ -238,7 +238,7 @@ function MainPage(props) {
             
             {/* Go to metapangapply 2021 */}
             {/* <Link to='/metapangapply/' className="main-link-block" key="metapangapply-banner">
-                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/metaPangApply-thumb.png`} alt="POST-2021" />
+                <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/metaPangApply-thumb.png`} alt="POST-2021" />
             </Link> */}
             {/* Go to Jelling Games Banner */}
             {props.lang === 'Kor' && (currentCategory === '' || currentCategory === "etc") ? (
@@ -247,18 +247,18 @@ function MainPage(props) {
                     rel="noopener noreferrer"
                     href='https://jellinggame.com/'
                     className='to-jelling-banner'
-                > <img src={JELLINGBANNERKOR} className='test-main-img' alt="go to Jelling games" /> </a>
+                > <img loading="lazy" src={JELLINGBANNERKOR} className='test-main-img' alt="go to Jelling games" /> </a>
             ) : null}
             <a
                 target='_blank'
                 rel="noopener noreferrer"
                 href='https://jellinggame.com/'
                 className='to-jelling-banner'
-            > <img src={JELLINGBANNERENG} className='test-main-img' alt="go to Jelling games" /> </a>
+            > <img loading="lazy" src={JELLINGBANNERENG} className='test-main-img' alt="go to Jelling games" /> </a>
 
             {/* Go to K-TEST blog articles */}
             <Link to='/blog/' className="main-link-block" key="article-banner">
-                <img className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png`} alt="KTEST-Blog" />
+                <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png`} alt="KTEST-Blog" />
             </Link>
 
             {/** Floating Button for KakaoPlusFriend */}

@@ -123,7 +123,7 @@ function PostPage(props) {
                                 }
                             }}
                             >
-                            <img
+                            <img loading="lazy"
                                 src={`https://images.ktestone.com/PostImg/Envelop/envelop-${letterOrder[ix]}.png`}
                                 alt={`Envelop${ix}`}
                                 key={`envelop-img-div-${mail.id}`}
@@ -176,13 +176,13 @@ function PostPage(props) {
     const eachMail = <div className="popup">
                         <div className="popup-inner">
                             <button onClick={() => setShowPopup(false)} className='popup-close-btn'>X</button>
-                            <img
+                            <img loading="lazy"
                                 src={`https://images.ktestone.com/PostImg/MailForm/letter-${letterOrder[mailNum]}.png`}
                                 alt="letter"
                                 className='popup-letter-form' />
                             <h4 className="popup-head">{`${userNickname}`}{lang === `Eng` ? '' : '에게'}</h4>
                             <p className="popup-message">{message}</p>
-                            <img src={nickNameInput} className='popup-nickname-input' alt="popup-nickname-input"/>
+                            <img loading="lazy" src={nickNameInput} className='popup-nickname-input' alt="popup-nickname-input"/>
                             <p className="popup-fromNickname">{`from ${fromNickname}`}</p>
                         </div>
                     </div>
@@ -251,11 +251,11 @@ function PostPage(props) {
             <div className='post-page'>
                 {metaTagRenderer()}
                 <GlobalStyle />
-                <img src={upbarBtnImg} alt="UPBAR" className="start-page-upbar"/>
+                <img loading="lazy" src={upbarBtnImg} alt="UPBAR" className="start-page-upbar"/>
                 <PageBackground className='post-page-bg-div' >
-                    <img src={mainTitleImg} alt="당신에게 나는 어떤 사람인가요?" className='post-page-maintitle' />
+                    <img loading="lazy" src={mainTitleImg} alt="당신에게 나는 어떤 사람인가요?" className='post-page-maintitle' />
                     <div className="post-page-postbox-div">
-                        <img src={postBoxImg} alt="POSTBOX" className="post-page-postbox"/>
+                        <img loading="lazy" src={postBoxImg} alt="POSTBOX" className="post-page-postbox"/>
                         <h4 className='post-page-whosname'>{`${userNickname}`} {lang === `Eng` ? `'s` : `님의`}<br></br>POST</h4>
                         <h4 className='post-page-mailcount'>{mailCount}{lang === `Eng` ? ` letters` : `개의 편지`}</h4>
                     </div>
@@ -264,7 +264,7 @@ function PostPage(props) {
                     ? affiliateRenderer('보기')
                     :<>
                         <div className='post-page-btn-div'>
-                            <img src={sendMailImg} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
+                            <img loading="lazy" src={sendMailImg} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
                                 _eventSenderGA("Paging", "Click Post-to-write Button", "post page");
                                 if(lang === `Eng`) {
                                     props.history.push({
@@ -277,7 +277,7 @@ function PostPage(props) {
                                 }
                             }} />
                             <CopyToClipboard text={`https://ktestone.com/kapable.github.io/post2021/${props.match.params.username}/`}>
-                                <img src={shareMyPostImg} alt="Share My Post" onClick={onShareBtnClick} className='post-page-share-mypost-btn' />
+                                <img loading="lazy" src={shareMyPostImg} alt="Share My Post" onClick={onShareBtnClick} className='post-page-share-mypost-btn' />
                             </CopyToClipboard>
                         </div>             
                         <div className='post-page-mails-div'>
@@ -298,8 +298,8 @@ function PostPage(props) {
                     rel="noopener noreferrer"
                     href={"https://ktestone.com/kapable.github.io/Kor/"}
                     onClick={onPostToKtestBtnClick}
-                ><img src={"https://images.ktestone.com/PostImg/Button/post-to-ktest-btn.jpeg"} alt="Go To Ktest >> " className="post-to-ktest-btn" /></a>
-                <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
+                ><img loading="lazy" src={"https://images.ktestone.com/PostImg/Button/post-to-ktest-btn.jpeg"} alt="Go To Ktest >> " className="post-to-ktest-btn" /></a>
+                <img loading="lazy" src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
         )
         //  when user is logout
@@ -308,11 +308,11 @@ function PostPage(props) {
             <div className='post-page'>
                 {metaTagRenderer()}
                 <GlobalStyle />
-                <img src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
+                <img loading="lazy" src={"https://images.ktestone.com/PostImg/Background/up_bg_bar.png"} alt="UPBAR" className="start-page-upbar"/>
                 <div className='post-page-bg-div'>
-                    <img src={"https://images.ktestone.com/PostImg/Background/main_title.png"} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
+                    <img loading="lazy" src={"https://images.ktestone.com/PostImg/Background/main_title.png"} alt="당신에게 나는 어떤 사람이었나요?" className='post-page-maintitle' />
                     <div className="post-page-postbox-div">
-                        <img src={postBoxImg} alt="POSTBOX" className="post-page-postbox"/>
+                        <img loading="lazy" src={postBoxImg} alt="POSTBOX" className="post-page-postbox"/>
                         <h4 className='post-page-whosname'>{`${userNickname}`} {lang === `Eng` ? `'s` : `님의`}<br></br>POST</h4>
                         <h4 className='post-page-mailcount'>{mailCount}{lang === `Eng` ? ` letters` : `개의 편지`}</h4>
                     </div>
@@ -321,7 +321,7 @@ function PostPage(props) {
                     ? affiliateRenderer('보내기')
                     :<>
                     <div className='post-page-btn-div'>
-                        <img src={sendMailImg} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
+                        <img loading="lazy" src={sendMailImg} alt="Send Mail" className="post-page-send-mail-btn" onClick={() => {
                             _eventSenderGA("Paging", "Click Post-to-write Button", "post page");
                             if(lang === `Eng`) {
                                 props.history.push({
@@ -333,7 +333,7 @@ function PostPage(props) {
                                 })
                             }
                         }} />
-                        <img src={goToMyPostImg} alt="Go to My Post" onClick={() => {
+                        <img loading="lazy" src={goToMyPostImg} alt="Go to My Post" onClick={() => {
                             _eventSenderGA("Paging", "Click Post-to-auth Button", "post page");
                             if(lang === `Eng`) {
                                 props.history.push({
@@ -366,8 +366,8 @@ function PostPage(props) {
                     rel="noopener noreferrer"
                     href={"https://ktestone.com/kapable.github.io/Kor/"}
                     onClick={onPostToKtestBtnClick}
-                ><img src={"https://images.ktestone.com/PostImg/Button/post-to-ktest-btn.jpeg"} alt="Go To Ktest >> " className="post-to-ktest-btn" /></a>
-                <img src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
+                ><img loading="lazy" src={"https://images.ktestone.com/PostImg/Button/post-to-ktest-btn.jpeg"} alt="Go To Ktest >> " className="post-to-ktest-btn" /></a>
+                <img loading="lazy" src={"https://images.ktestone.com/PostImg/Background/down_bg_bar.png"} alt="DOWNBAR" className="start-page-downbar"/>
             </div>
         )
     }

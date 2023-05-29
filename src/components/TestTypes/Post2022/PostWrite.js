@@ -62,8 +62,8 @@ const PostWrite = (props) => {
 
     const completePopup = <div className="post2022-popup">
                             <div className="post2022-popup-inner">
-                                <img src={completePopupBg} alt="메시지 보내기 완료!" className='post2022-postwrite-send-complete-postbox'/>
-                                <img
+                                <img loading="lazy" src={completePopupBg} alt="메시지 보내기 완료!" className='post2022-postwrite-send-complete-postbox'/>
+                                <img loading="lazy"
                                     src={completeToPostbox}
                                     alt="내 우편함 만들기"
                                     className='post2022-postwrite-complete-to-postbox'
@@ -78,7 +78,7 @@ const PostWrite = (props) => {
                                     }}
                                 />
                                 <Link to={`/post2022/${encodeURIComponent(key)}/`} state={localStorage.getItem("access_token")}>
-                                    <img
+                                    <img loading="lazy"
                                         src={completeToClose}
                                         alt="팝업 닫기"
                                         className='post2022-postwrite-complete-close'
@@ -114,7 +114,7 @@ const PostWrite = (props) => {
     return (
         <div className='post2022-write-page-div'>
                 <div className='post2022-write-page-postbox-div' >
-                    <img src={letterForm} alt="Writing a letter" className='post2022-write-page-letter-form-img' />
+                    <img loading="lazy" src={letterForm} alt="Writing a letter" className='post2022-write-page-letter-form-img' />
                     <form
                         className='post2022-write-page-submit-form'
                         onSubmit={onSubmitHandler}
@@ -138,7 +138,7 @@ const PostWrite = (props) => {
                             className='post2022-write-page-nickname-input'
                         />
                         <button type="submit" className='post2022-write-page-submit-btn'>
-                            <img src={sendMailBtnImg} alt="submit letter" className='post2022-write-page-submit-btn-img' />
+                            <img loading="lazy" src={sendMailBtnImg} alt="submit letter" className='post2022-write-page-submit-btn-img' />
                         </button>
                     </form>
                 </div>

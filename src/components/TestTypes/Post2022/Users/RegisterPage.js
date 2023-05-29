@@ -74,7 +74,7 @@ const RegisterPage = (props) => {
 
     return (
         <div className="post2022-register-page-bg-div">
-            <img src={bgImgSrc} alt='register-bg' className="post2022-register-page-bg-img"/>
+            <img loading="lazy" src={bgImgSrc} alt='register-bg' className="post2022-register-page-bg-img"/>
             <div className='post2022-register-page-contents-div'>
                 <div className='post2022-register-page-btn-div'>
                     <button className="post2022-register-page-rgbtn">회원가입</button>
@@ -123,7 +123,7 @@ const RegisterPage = (props) => {
                         required
                     />
                     <button type="submit" className="post2022-register-submit-btn">
-                        <img src={buttonImgSrc} alt="submit" />
+                        <img loading="lazy" src={buttonImgSrc} alt="submit" />
                     </button>
                 </form>
             </div>

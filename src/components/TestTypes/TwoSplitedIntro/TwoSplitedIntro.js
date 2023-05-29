@@ -58,16 +58,16 @@ const TwoSplitedIntro = ({ test, lang, info }) => {
             <Router basename='/kapable.github.io/' forceRefresh={true}>
                 <div className='loveCharacter-intro-images-container'>
                     <Link to={`/${test}Female${lang === 'Kor' ? '' : lang}/`}>
-                        <img className='loveCharacter-intro-left-img' src={`https://images.ktestone.com/introImages/${test}${lang === 'Kor' ? '' : lang}-intro-left.jpg`} alt={`${test}Female`}/>
+                        <img loading="lazy" className='loveCharacter-intro-left-img' src={`https://images.ktestone.com/introImages/${test}${lang === 'Kor' ? '' : lang}-intro-left.jpg`} alt={`${test}Female`}/>
                     </Link>
                     <Link to={`/${test}Male${lang === 'Kor' ? '' : lang}/`}>
-                        <img className='loveCharacter-intro-right-img' src={`https://images.ktestone.com/introImages/${test}${lang === 'Kor' ? '' : lang}-intro-right.jpg`} alt={`${test}Male`}/>
+                        <img loading="lazy" className='loveCharacter-intro-right-img' src={`https://images.ktestone.com/introImages/${test}${lang === 'Kor' ? '' : lang}-intro-right.jpg`} alt={`${test}Male`}/>
                     </Link>
                 </div>
             <OtherLangIcons currentTest={lang === 'Kor' ? test : `${test}${lang}`}/>
             <div className="test-intro-with-friend">
                 <CopyToClipboard text={`https://ktestone.com/kapable.github.io/${test}${lang === 'Kor' ? '' : lang}/`}>
-                    <img
+                    <img loading="lazy"
                         src={COPYBTN}
                         className="test-intro-with-friend-img"
                         onClick={_onShareButtonClick}
@@ -76,7 +76,7 @@ const TwoSplitedIntro = ({ test, lang, info }) => {
             </div>
             <Link to='/'>
                 <div className="test-intro-to-main">
-                    <img
+                    <img loading="lazy"
                         className="test-intro-to-main-img"
                         src={BACKBTN}
                         alt="다른 테스트 하러 뒤로가기"/>
