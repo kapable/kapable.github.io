@@ -23,6 +23,332 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // labelStickerEng
+    {
+        info : {
+            mainTitle:"Label Sticker Test",
+            subTitle:"Let's put a sticker on my heart",
+            mainUrl:"labelStickerEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/labelStickerEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/labelStickerEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'when you are having a good time with your friends and notice that it is very late in the evening, what can be your reaction?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I will look around people to find the right time to go home.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I'm going to claim no one can go home because we have to have a real good time tonight`
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "When you go home after a gathering with friends, which way do you prefer?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Going home with friends together"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Going home quietly alone"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "If an appointment was canceled on the weekend, what can be your reaction?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Damn, Is there anyone to meet? I should try to contact some friends.`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `It's unfortunate, but it is better. I can be free.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "After you make a decision, what can be your reaction?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I keep thinking about whether the decision I made is right or wrong.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I do not reconsider a decision once made`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When you cross the crosswalk, how do you do?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I just rush across without thinking"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `What if I had an accident here and it was a hit and run?  I would imagine this and that`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "When no one sits next to you on the subway, what can be your reaction?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I feel just happy the fact that I have a seat to sit comfortably.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Why? I would ask myself if I look like a weirdo.`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `When your close friends argue each other, what can be your reaction?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Why do they fight over something like that? I might be a little excited anyway. "
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Why do they fight? Should I stop them?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If your friend is crying sadly at the meeting place, how would you react?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Why are you crying? Perhaps it is not right time to talk so I will wait`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Why are you crying Just talk. You make me cry too"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `If your friend reads your KakaoTalk and doesn't reply, what can be your reaction?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I guess busy? and I don't really care"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I recheck the conversation to see if I typed something wrong"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you do when getting ready to go out?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I am always relaxed because I prepare in advance`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `I'm sure I prepare everything, but strangely, I barely make it`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "How do you organize your desk?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I take all out and arrange them neatly in a convenient order"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "It seems like things are everywhere, but I can find what I need anytime"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'If you are too tired to do housework, what can be your reaction?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Even if I'm tired, I tidy up first and then take a break"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I rest first and do housework later！"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/INFP.jpg'
+            },
+        ]
+    },
     // DIYEng
     {
         info : {
@@ -2305,8 +2631,7 @@ const TESTS = [
                 img_src:'https://images.ktestone.com/resultImages/DIY/INFP.jpg'
             },
         ]
-    },
-    // earthCharacteristicEng
+    },    // earthCharacteristicEng
     {
         info : {
             mainTitle:"Earth personality test",
@@ -10116,332 +10441,6 @@ const TESTS = [
                 query: "gkdis",
                 score_range:range(76, 101),
                 img_src:'https://images.ktestone.com/resultImages/cloudLoveCN/INFP.jpg'
-            },
-        ]
-    },
-    // labelStickerEng
-    {
-        info : {
-            mainTitle:"Label Sticker Test",
-            subTitle:"Let's put a sticker on my heart",
-            mainUrl:"labelStickerEng",
-            scoreType:"typeCountingMBTI",
-            mainImage:"https://images.ktestone.com/introImages/labelStickerEng-intro.jpg",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/labelStickerEng-thumb.png",
-            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
-            lang:"Eng",
-            category: "characteristic"
-        },
-        questions:[
-            {
-                which:"EI",
-                question: 'when you are having a good time with your friends and notice that it is very late in the evening, what can be your reaction?'
-                ,
-                answers:[
-                    {
-                        type: "E",
-                        score: 2,
-                        content: 'I will look around people to find the right time to go home.'
-                    },
-                    {
-                        type: "I",
-                        score: 5,
-                        content: `I'm going to claim no one can go home because we have to have a real good time tonight`
-                    },
-                ],
-            },
-            {
-                which:"EI",
-                question: "When you go home after a gathering with friends, which way do you prefer?",
-                answers:[
-                    {
-                        type: "E",
-                        score: 2,
-                        content: "Going home with friends together"
-                    },
-                    {
-                        type: "I",
-                        score: 5,
-                        content: "Going home quietly alone"
-                    },
-                ]
-            },
-            {
-                which:"EI",
-                question: "If an appointment was canceled on the weekend, what can be your reaction?",
-                answers:[
-                    {
-                        type: "E",
-                        score: 2,
-                        content: `Damn, Is there anyone to meet? I should try to contact some friends.`
-                    },
-                    {
-                        type: "I",
-                        score: 5,
-                        content: `It's unfortunate, but it is better. I can be free.`
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "After you make a decision, what can be your reaction?",
-                answers:[
-                    {
-                        type: "S",
-                        score: 2,
-                        content: `I keep thinking about whether the decision I made is right or wrong.`
-                    },
-                    {
-                        type: "N",
-                        score: 5,
-                        content: `I do not reconsider a decision once made`
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "When you cross the crosswalk, how do you do?",
-                answers:[
-                    {
-                        type: "S",
-                        score: 2,
-                        content: "I just rush across without thinking"
-                    },
-                    {
-                        type: "N",
-                        score: 5,
-                        content: `What if I had an accident here and it was a hit and run?  I would imagine this and that`
-                    },
-                ]
-            },
-            {
-                which:"SN",
-                question: "When no one sits next to you on the subway, what can be your reaction?",
-                answers:[
-                    {
-                        type: "S",
-                        score: 2,
-                        content: `I feel just happy the fact that I have a seat to sit comfortably.`
-                    },
-                    {
-                        type: "N",
-                        score: 5,
-                        content: `Why? I would ask myself if I look like a weirdo.`
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: `When your close friends argue each other, what can be your reaction?`,
-                answers:[
-                    {
-                        type: "T",
-                        score: 2,
-                        content: "Why do they fight over something like that? I might be a little excited anyway. "
-                    },
-                    {
-                        type: "F",
-                        score: 5,
-                        content: "Why do they fight? Should I stop them?"
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: "If your friend is crying sadly at the meeting place, how would you react?",
-                answers:[
-                    {
-                        type: "T",
-                        score: 2,
-                        content: `Why are you crying? Perhaps it is not right time to talk so I will wait`
-                    },
-                    {
-                        type: "F",
-                        score: 5,
-                        content: "Why are you crying Just talk. You make me cry too"
-                    },
-                ]
-            },
-            {
-                which:"TF",
-                question: `If your friend reads your KakaoTalk and doesn't reply, what can be your reaction?`,
-                answers:[
-                    {
-                        type: "T",
-                        score: 2,
-                        content: "I guess busy? and I don't really care"
-                    },
-                    {
-                        type: "F",
-                        score: 5,
-                        content: "I recheck the conversation to see if I typed something wrong"
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: "What do you do when getting ready to go out?",
-                answers:[
-                    {
-                        type: "J",
-                        score: 2,
-                        content: `I am always relaxed because I prepare in advance`
-                    },
-                    {
-                        type: "P",
-                        score: 5,
-                        content: `I'm sure I prepare everything, but strangely, I barely make it`
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: "How do you organize your desk?",
-                answers:[
-                    {
-                        type: "J",
-                        score: 2,
-                        content: "I take all out and arrange them neatly in a convenient order"
-                    },
-                    {
-                        type: "P",
-                        score: 5,
-                        content: "It seems like things are everywhere, but I can find what I need anytime"
-                    },
-                ]
-            },
-            {
-                which:"JP",
-                question: 'If you are too tired to do housework, what can be your reaction?',
-                answers:[
-                    {
-                        type: "J",
-                        score: 2,
-                        content: "Even if I'm tired, I tidy up first and then take a break"
-                    },
-                    {
-                        type: "P",
-                        score: 5,
-                        content: "I rest first and do housework later！"
-                    },
-                ]
-            },
-        ],
-        results:[
-            {
-                type: "ESTJ",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
-                `,
-                query: "chfhr",
-                score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ESTJ.jpg'
-            },
-            {
-                type: "ESTP",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "vkfks",
-                score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ESTP.jpg'
-            },
-            {
-                type: "ESFJ",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "gksmf",
-                score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ESFJ.jpg'
-            },
-            {
-                type: "ESFP",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "ghkfqkfgks",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ESFP.jpg'
-            },
-            {
-                type: "ENTJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "wlsghl",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ENTJ.jpg'
-            },
-            {
-                type: "ENTP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
-                `,
-                query: "Qkfrks",
-                score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ENTP.jpg'
-            },
-            {
-                type: "ENFJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "qhfk",
-                score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ENFJ.jpg'
-            },
-            {
-                type: "ENFP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "ska",
-                score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ENFP.jpg'
-            },
-            {
-                type: "ISTJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "ghl",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ISTJ.jpg'
-            },
-            {
-                type: "ISTP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "shfks",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ISTP.jpg'
-            },
-            {
-                type: "ISFJ",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "wnghkd",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ISFJ.jpg'
-            },
-            {
-                type: "ISFP",
-                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
-                `,
-                query: "qpdlwl",
-                score_range:range(26),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/ISFP.jpg'
-            },
-            {
-                type: "INTJ",
-                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
-                query: "cjdfhr",
-                score_range:range(26, 51),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/INTJ.jpg'
-            },
-            {
-                type: "INTP",
-                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
-                query: "dusqnsghd",
-                score_range:range(51, 75),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/INTP.jpg'
-            },
-            {
-                type: "INFJ",
-                desc: `친숙한 댕댕이 , 리트리버\n`,
-                query: "dusen",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/INFJ.jpg'
-            },
-            {
-                type: "INFP",
-                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
-                query: "gkdis",
-                score_range:range(76, 101),
-                img_src:'https://images.ktestone.com/resultImages/labelStickerEng/INFP.jpg'
             },
         ]
     },
