@@ -156,7 +156,7 @@ const TESTS = [
                     {
                         type: "T",
                         score: 2,
-                        content: `A는 말 그래도 A 지! 따로 숨은 뜻은 없음`
+                        content: `A는 말 그대로 A지! 따로 숨은 뜻은 없음`
                     },
                     {
                         type: "F",
