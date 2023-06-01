@@ -412,7 +412,7 @@ class Result extends Component {
         let JPTestList = ["readyToBoneJP", "earthCharacteristicJP", "cantWaitJP", "puzzleLoveJP", "coupleCharacterJP","coupleCharacterMaleJP","coupleCharacterFemaleJP", "mbtiFeaturesJP", "loveCellJP", "emotionGraphJP", "polaroidCharacteristicJP", "loveTicketJP", "loveCharacterMaleJP", "loveCharacterFemaleJP", "loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP", "personalColorJP"];
         let GerTestList = ["personalColorGer"];
         let ESTestList = ["loveWarningES", "personalColorES"];
-        let smileColorTestESList = ["smileColorTestES"];
+        let characteristicChracterESList = ["characteristicChracterES"];
         let loveCharacterGerList = ["loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer"];
         let labelStickerCNList = ["labelStickerCN"];
         let loveFlameJPList = ["loveFlameJP"];
@@ -614,7 +614,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (ESTestList.includes(this.state.current_test)) {
-            const rederTestList = ["smileColorTestES", "loveWarningES", "loveCharacterES"];
+            const rederTestList = ["characteristicChracterES", "smileColorTestES", "loveWarningES", "loveCharacterES"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -661,8 +661,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (smileColorTestESList.includes(this.state.current_test)) {
-            const rederTestList = ["loveWarningES", "loveCharacterES"];
+        } else if (characteristicChracterESList.includes(this.state.current_test)) {
+            const rederTestList = ["smileColorTestES", "loveWarningES", "loveCharacterES"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
