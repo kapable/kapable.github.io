@@ -28,7 +28,7 @@ class Quiz extends Component {
         }
         
         return array;
-    }
+    };
     renderImgAnswerOptions(){
         let qAndA = this.props.qAndA[this.props.quizNum];
         let qAndAImg = qAndA.questionImage
@@ -39,7 +39,7 @@ class Quiz extends Component {
                 </div>
             )
         }
-    }
+    };
     renderAnswerOptions(){
         let qAndA = this.props.qAndA[this.props.quizNum];
         var _questions = [];
@@ -118,19 +118,32 @@ class Quiz extends Component {
         return(
             _questions
         )
-    }
-    render(){
-        
-        return(
-            <Fragment>
-                {window.location.href.split('/').includes('hmall') ? null : (
-                    <AdsenseAdvertiser
+    };
+    pplTopbannerRenderer() {
+        if(window.location.href.split('/').includes('labelStickerSKT')){
+            return(
+                <div>
+                    <img loading="lazy" src={`https://images.ktestone.com/meta/labelStickerSKT/labelStickerSKT-question-img.jpg`} className='answer-option-img' alt={"labelStickerSKT"} />
+                </div>
+            )
+        } else if (window.location.href.split('/').includes('hmall')) {
+            return null;
+        } else {
+            return(
+                <AdsenseAdvertiser
                     client="ca-pub-2382342018701919"
                     slot="5663135072"
                     format="auto"
                     responsive="true"
                 />
-                )}
+            )
+        }
+    }
+    render(){
+        
+        return(
+            <Fragment>
+                {this.pplTopbannerRenderer()}
                 <Question question={this.props.qAndA[this.props.quizNum].question}></Question>
                 {/* In case of Quiz with Image Options */}
                 <Fragment>

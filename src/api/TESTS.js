@@ -685,198 +685,198 @@ const TESTS = [
             category: "characteristic"
         },
         questions:[
-    {
-        which:"EI",
-        question: '¿Cuál le queda más cerca?',
-        answers:[
             {
-                type: "E",
-                score: 2,
-                content: 'No soy tímido y me llevo bien con la gente fácilmente'
+                which:"EI",
+                question: '¿Cuál le queda más cerca?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'No soy tímido y me llevo bien con la gente fácilmente'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Tardo mucho en conocer a la gente'
+                    },
+                ],
             },
             {
-                type: "I",
-                score: 5,
-                content: 'Tardo mucho en conocer a la gente'
-            },
-        ],
-    },
-    {
-        which:"EI",
-        question: "¿Qué haces con tus amigos?",
-        answers:[
-            {
-                type: "E",
-                score: 2,
-                content: "Suelo contactar primero con"
-            },
-            {
-                type: "I",
-                score: 5,
-                content: "Suelo responder sólo a las llamadas entrantes"
-            },
-        ]
-    },
-    {
-        which:"EI",
-        question: "¿Qué haces cuando pasa algo malo?",
-        answers:[
-            {
-                type: "E",
-                score: 2,
-                content: `Trato de salir a conocer gente para calmarme`
+                which:"EI",
+                question: "¿Qué haces con tus amigos?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Suelo contactar primero con"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Suelo responder sólo a las llamadas entrantes"
+                    },
+                ]
             },
             {
-                type: "I",
-                score: 5,
-                content: `Organizo tranquilamente mis pensamientos en casa`
-            },
-        ]
-    },
-    {
-        which:"SN",
-        question: "Si estás a punto de salir y de repente llueve, ¿cuál puede ser tu reacción?",
-        answers:[
-            {
-                type: "S",
-                score: 2,
-                content: `Oh, está lloviendo. Necesito llevar un paraguas`
-            },
-            {
-                type: "N",
-                score: 5,
-                content: `Tengo miedo de caer en el camino resbaladizo`
-            },
-        ]
-    },
-    {
-        which:"SN",
-        question: "¿Cómo reaccionaría si el personal de un bar le sirviera cerveza en una bandeja diminuta por descuido?",
-        answers:[
-            {
-                type: "S",
-                score: 2,
-                content: "Oh, aquí viene la cerveza"
+                which:"EI",
+                question: "¿Qué haces cuando pasa algo malo?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Trato de salir a conocer gente para calmarme`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `Organizo tranquilamente mis pensamientos en casa`
+                    },
+                ]
             },
             {
-                type: "N",
-                score: 5,
-                content: `Me pongo ansioso pensando en derramar en nuestra mesa`
-            },
-        ]
-    },
-    {
-        which:"SN",
-        question: "¿Qué haces cuando te duchas?",
-        answers:[
-            {
-                type: "S",
-                score: 2,
-                content: `Me ducho sin pensar`
-            },
-            {
-                type: "N",
-                score: 5,
-                content: `Me ducho mientras tarareo una canción en el baño lleno de eco`
-            },
-        ]
-    },
-    {
-        which:"TF",
-        question: `¿Cuál puede ser tu reacción cuando tu amigo saca un objeto extraño en el que nunca habías estado?`,
-        answers:[
-            {
-                type: "T",
-                score: 2,
-                content: "¿Qué es esto?"
+                which:"SN",
+                question: "Si estás a punto de salir y de repente llueve, ¿cuál puede ser tu reacción?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Oh, está lloviendo. Necesito llevar un paraguas`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Tengo miedo de caer en el camino resbaladizo`
+                    },
+                ]
             },
             {
-                type: "F",
-                score: 5,
-                content: "Wow, eso se ve increíble"
-            },
-        ]
-    },
-    {
-        which:"TF",
-        question: "¿Cuál puede ser su reacción al comprar muebles nuevos para su nuevo hogar?",
-        answers:[
-            {
-                type: "T",
-                score: 2,
-                content: `Comprobaré detenidamente la comodidad, el precio, el tamaño, etc.`
-            },
-            {
-                type: "F",
-                score: 5,
-                content: "Oh, el diseño parece muy bonito y pensaré cómo encajará en mi nuevo hogar"
-            },
-        ]
-    },
-    {
-        which:"TF",
-        question: `¿Qué harías cuando tu amigo te pide consejo sobre su problema?`,
-        answers:[
-            {
-                type: "T",
-                score: 2,
-                content: "escucharía e intentaría resolverlo"
+                which:"SN",
+                question: "¿Cómo reaccionaría si el personal de un bar le sirviera cerveza en una bandeja diminuta por descuido?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Oh, aquí viene la cerveza"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Me pongo ansioso pensando en derramar en nuestra mesa`
+                    },
+                ]
             },
             {
-                type: "F",
-                score: 5,
-                content: "Yo escucharía y consolaría"
-            },
-        ]
-    },
-    {
-        which:"JP",
-        question: "¿Qué harías si tuvieras que pasar tiempo con amigos mientras tienes trabajo que hacer?",
-        answers:[
-            {
-                type: "J",
-                score: 2,
-                content: `No puedo disfrutar de mi tiempo por culpa de las preocupaciones laborales`
-            },
-            {
-                type: "P",
-                score: 5,
-                content: `De todos modos, disfruto del tiempo`
-            },
-        ]
-    },
-    {
-        which:"JP",
-        question: "¿Qué harías si un amigo cambiara repentinamente de planes?",
-        answers:[
-            {
-                type: "J",
-                score: 2,
-                content: "Sería confuso porque ya tenemos un plan"
+                which:"SN",
+                question: "¿Qué haces cuando te duchas?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Me ducho sin pensar`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Me ducho mientras tarareo una canción en el baño lleno de eco`
+                    },
+                ]
             },
             {
-                type: "P",
-                score: 5,
-                content: "Aunque sea repentino, estoy de acuerdo"
+                which:"TF",
+                question: `¿Cuál puede ser tu reacción cuando tu amigo saca un objeto extraño en el que nunca habías estado?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "¿Qué es esto?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Wow, eso se ve increíble"
+                    },
+                ]
             },
-        ]
-    },
-    {
-        which:"JP",
-        question: '¿Cuál prefiere?',
-        answers:[
             {
-                type: "J",
-                score: 2,
-                content: "Plan y Orden"
+                which:"TF",
+                question: "¿Cuál puede ser su reacción al comprar muebles nuevos para su nuevo hogar?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Comprobaré detenidamente la comodidad, el precio, el tamaño, etc.`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Oh, el diseño parece muy bonito y pensaré cómo encajará en mi nuevo hogar"
+                    },
+                ]
             },
             {
-                type: "P",
-                score: 5,
-                content: "Posibilidad y novedad"
+                which:"TF",
+                question: `¿Qué harías cuando tu amigo te pide consejo sobre su problema?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "escucharía e intentaría resolverlo"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Yo escucharía y consolaría"
+                    },
+                ]
             },
-        ]
-    },
+            {
+                which:"JP",
+                question: "¿Qué harías si tuvieras que pasar tiempo con amigos mientras tienes trabajo que hacer?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `No puedo disfrutar de mi tiempo por culpa de las preocupaciones laborales`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `De todos modos, disfruto del tiempo`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "¿Qué harías si un amigo cambiara repentinamente de planes?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Sería confuso porque ya tenemos un plan"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Aunque sea repentino, estoy de acuerdo"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '¿Cuál prefiere?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Plan y Orden"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Posibilidad y novedad"
+                    },
+                ]
+            },
         ],
         results:[
             {

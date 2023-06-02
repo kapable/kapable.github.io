@@ -242,8 +242,9 @@ body {
 }
 
 .answer-option-img {
-  margin: 0rem auto 2rem;
-  max-width: 414px;
+  margin: 0rem auto;
+  width: 100%;
+  max-width: 400px;
 }
 
 /* for DogSounds Test */
