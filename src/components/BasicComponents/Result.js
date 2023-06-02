@@ -412,6 +412,8 @@ class Result extends Component {
         let JPTestList = ["readyToBoneJP", "earthCharacteristicJP", "cantWaitJP", "puzzleLoveJP", "coupleCharacterJP","coupleCharacterMaleJP","coupleCharacterFemaleJP", "mbtiFeaturesJP", "loveCellJP", "emotionGraphJP", "polaroidCharacteristicJP", "loveTicketJP", "loveCharacterMaleJP", "loveCharacterFemaleJP", "loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP", "personalColorJP"];
         let GerTestList = ["personalColorGer"];
         let ESTestList = ["loveWarningES", "personalColorES"];
+        // let ITTestList = [];
+        let characteristicChracterITList = ["characteristicChracterIT"];
         let characteristicChracterESList = ["characteristicChracterES"];
         let characteristicChracterGerList = ["characteristicChracterGer",];
         let labelStickerCNList = ["labelStickerCN"];
@@ -640,6 +642,30 @@ class Result extends Component {
         } else if (GerTestList.includes(this.state.current_test)) {
             const rederTestList = ["characteristicChracterGer", "loveCharacterGer", "personalColorGer"];
             return(
+                <Fragment>
+                    {rederTestList.map((test) => (
+                        <Fragment key={test + '-test-key'}>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                            <AdsenseAdvertiser
+                                key={test+'-adsense'}
+                                client="ca-pub-2382342018701919"
+                                slot="6832785479"
+                                format="auto"
+                                responsive="true"
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+                            />
+                        </Fragment>
+                    ))}
+                </Fragment>
+            )
+        } else if (characteristicChracterITList.includes(this.state.current_test)) {
+            const rederTestList = ["labelStickerEng", "DIYEng", "earthCharacteristicEng", "puzzleLoveEng", "polaroidCharacteristicEng", "loveTicketEng",];
+            return (
                 <Fragment>
                     {rederTestList.map((test) => (
                         <Fragment key={test + '-test-key'}>

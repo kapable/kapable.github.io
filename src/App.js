@@ -82,7 +82,7 @@ class App extends Component {
       sharable_url:_sharable_url,
       pct_test: _pct_test,
       ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
-      lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'ES', 'Rus' ,'Others'],
+      lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'ES', 'IT', 'Rus' ,'Others'],
       category_list:['saju', 'characteristic', 'love', 'etc'],
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);

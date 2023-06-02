@@ -23,6 +23,333 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // characteristicChracterIT
+    {
+        info : {
+            mainTitle:"Test di personalità",
+            subTitle:"Qual è la sua personalità come personaggio?",
+            mainUrl:"characteristicChracterIT",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/characteristicChracterIT-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/characteristicChracterIT-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"IT",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'Qual è quello più vicino a voi?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Non sono timida e vado facilmente d accordo con le persone'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Ci metto molto tempo a conoscere le persone'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Come ti comporti con i tuoi amici?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Tendo a contattare prima"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Tendo a rispondere solo alle chiamate in entrata"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Cosa si fa quando succede qualcosa di brutto?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Cerco di uscire per incontrare le persone per tranquillizzarmi`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `Organizzo tranquillamente i miei pensieri a casa`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Se state per uscire e improvvisamente piove, quale può essere la vostra reazione?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Oh, sta piovendo. Devo portare un ombrello`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Ho paura di cadere sulla strada scivolosa`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Come reagireste se il personale di un bar vi servisse con noncuranza la birra su un vassoio minuscolo?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Oh, arriva la birra"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Mi viene l'ansia a pensare di rovesciarlo sul nostro tavolo`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Cosa fate quando fate la doccia?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Faccio la doccia senza pensarci`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Faccio la doccia canticchiando una canzone nel bagno pieno di eco`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Quale può essere la vostra reazione quando il vostro amico tira fuori un oggetto strano che non avete mai visto prima?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Wow, cosa c'è?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Wow, sembra incredibile"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Quale può essere la vostra reazione quando acquistate nuovi mobili per la vostra nuova casa?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Verificherò attentamente la convenienza, il prezzo, le dimensioni, ecc.`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Il design è molto bello e penserò a come inserirlo nella mia nuova casa"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Cosa fareste quando un vostro amico vi chiede un consiglio sul suo problema?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Ascolterei e cercherei di risolvere il problema"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Ascolto e conforto"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Cosa fareste se doveste passare del tempo con gli amici mentre avete del lavoro da fare?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `Non riesco a godermi il mio tempo a causa delle preoccupazioni del lavoro`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `In ogni caso mi godo il tempo`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Cosa fareste se il vostro amico cambiasse improvvisamente posto?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Sarebbe confuso perché abbiamo già un piano"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Anche se è improvviso, sono d'accordo"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'Quale preferisce?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Piano e ordine"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Possibilità e novità"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Rhseo",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qnsdnlrlapdlzj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "rkstjqdhkd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dlsTkdkTk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "rPghlrdhkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qksgkddk",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhalstkdekatk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "tkckdnjs",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "wjswktkwjs",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "akssmdwwnRns",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "vmfhdlfrTlqfj",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "thdnffltm",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rkawjdzjsxmfhffj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "vorvhrfj",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dosmfrdmsdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "dbflapsxkf",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/characteristicChracterIT/INFP.jpg'
+            },
+        ]
+    },
     // labelStickerSKT
     {
         info : {

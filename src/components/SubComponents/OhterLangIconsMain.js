@@ -36,6 +36,11 @@ export default function OhterLangIconsMain() {
                 className="to-other-lang-test-banner-text"
             ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/spain-icon.png' className='language-icon' alt="[ paso a la versión española ]" /></Link>
             <Link
+                to={"/IT/"}
+                key={"IT"}
+                className="to-other-lang-test-banner-text"
+            ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/italy-icon.png' className='language-icon' alt="[ Passiamo alla versione italiana ]" /></Link>
+            <Link
                 to={"/Rus/"}
                 key={"Rus"}
                 className="to-other-lang-test-banner-text"
