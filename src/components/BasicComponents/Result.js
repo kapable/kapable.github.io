@@ -413,7 +413,7 @@ class Result extends Component {
         let GerTestList = ["personalColorGer"];
         let ESTestList = ["loveWarningES", "personalColorES"];
         let characteristicChracterESList = ["characteristicChracterES"];
-        let loveCharacterGerList = ["loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer"];
+        let characteristicChracterGerList = ["characteristicChracterGer",];
         let labelStickerCNList = ["labelStickerCN"];
         let loveFlameJPList = ["loveFlameJP"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
@@ -638,7 +638,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (GerTestList.includes(this.state.current_test)) {
-            const rederTestList = ["loveCharacterGer"];
+            const rederTestList = ["characteristicChracterGer", "loveCharacterGer", "personalColorGer"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -709,8 +709,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (loveCharacterGerList.includes(this.state.current_test)) {
-            const rederTestList = ["personalColorGer"];
+        } else if (characteristicChracterGerList.includes(this.state.current_test)) {
+            const rederTestList = ["loveCharacterGer", "personalColorGer"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
