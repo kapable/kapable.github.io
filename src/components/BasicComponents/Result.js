@@ -420,7 +420,7 @@ class Result extends Component {
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let DIYEngList = ["DIYEng"];
         let colorLabelStickerList = ["colorLabelSticker"];
-        let hmallList = ['hmall'];
+        let hmallList = ['hmall', 'labelStickerSKT'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -1189,6 +1189,13 @@ class Result extends Component {
                         />
                     </a>
                 )
+            } else if(this.state.current_test === "labelStickerSKT") {
+                return(
+                    <Fragment>
+                        <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
+                        <img loading="lazy" src={`https://images.ktestone.com/meta/labelStickerSKT/labelStickerSKT-bottom-banner.jpg`} className='result-img' alt={"labelStickerSKT"} />
+                    </Fragment>
+                )
             } else {
                 return (
                     <Fragment>
@@ -1454,7 +1461,7 @@ class Result extends Component {
     };
 
     resultPageRender(){
-        let ppl_list = ["hmall", "factPok", "MyFactPok", "FriendFactPok"];
+        let ppl_list = ["labelStickerSKT", "hmall", "factPok", "MyFactPok", "FriendFactPok"];
         return(
             <Fragment>
                 <div className="result">
