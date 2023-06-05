@@ -359,7 +359,7 @@ const TESTS = [
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/labelStickerSKT-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/labelStickerSKT-thumb.png",
-            lang:"",
+            lang:"sample",
             category: "characteristic"
         },
         questions:[

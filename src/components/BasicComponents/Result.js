@@ -412,7 +412,6 @@ class Result extends Component {
         let JPTestList = ["readyToBoneJP", "earthCharacteristicJP", "cantWaitJP", "puzzleLoveJP", "coupleCharacterJP","coupleCharacterMaleJP","coupleCharacterFemaleJP", "mbtiFeaturesJP", "loveCellJP", "emotionGraphJP", "polaroidCharacteristicJP", "loveTicketJP", "loveCharacterMaleJP", "loveCharacterFemaleJP", "loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP", "personalColorJP"];
         let GerTestList = ["personalColorGer"];
         let ESTestList = ["loveWarningES", "personalColorES"];
-        // let ITTestList = [];
         let characteristicChracterITList = ["characteristicChracterIT"];
         let characteristicChracterESList = ["characteristicChracterES"];
         let characteristicChracterGerList = ["characteristicChracterGer",];
@@ -886,14 +885,14 @@ class Result extends Component {
     resultRender(){
         // searching the result content by current url path
         const _current_test_contents = TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0];
-        const foreignTest = TESTS.filter((test) => test.info.lang !== 'Kor').map((test) => test.info.mainUrl);
+        const foreignTest = TESTS.filter((test) => (test.info.lang !== 'Kor')).filter((test) => (test.info.lang !== 'sample')).map((test) => test.info.mainUrl);
         let _current_test_result = _current_test_contents.results.filter((res) => res.query === this.state.current_result)[0];
         let final_type = _current_test_result.type;
         let final_desc = _current_test_result.desc;
         let img_src = _current_test_result.img_src;
         let test_current = _current_test_contents.info.mainTitle;
         let desc_test_current = _current_test_contents.info.subTitle;
-
+        
         // return final result option
         if(_current_test_contents.info.scoreType === "storyTelling" || _current_test_contents.info.scoreType === "typeCountingMBTI" || _current_test_contents.info.scoreType === "dualMBTI" || _current_test_contents.info.scoreType === "numberScoring" ){
             // meta tag for PPL test contents
@@ -1218,8 +1217,18 @@ class Result extends Component {
             } else if(this.state.current_test === "labelStickerSKT") {
                 return(
                     <Fragment>
-                        <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
-                        <img loading="lazy" src={`https://images.ktestone.com/meta/labelStickerSKT/labelStickerSKT-bottom-banner.jpg`} className='result-img' alt={"labelStickerSKT"} />
+                        <div style={{overflowY:"hidden", height:"10rem"}} oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+                            <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
+                        </div>
+                        <div style={{position: "relative", backgroundColor: "rgba(255,255,255,0.8)", height: "4rem", top: "-4rem", width: "100%"}}>
+                            <div style={{position: "relative", width: "100%", height: "2rem", top: "0.5rem", margin: "0 auto"}}>
+                                <div style={{width: "fit-content", margin: "0 auto", position: "relative"}}>
+                                    <a rel="noopener noreferrer" target="_blank" href={`https://ktestone.com/kapable.github.io/labelStickerSKT/`} onClick={() => this._eventSenderGA("Outlinking", "Click SKT Go-to-Result Button", "result page")}>
+                                        <img src='https://images.ktestone.com/meta/labelStickerSKT/SKT-go-to-result-button.jpeg' alt='SKT-go-to-result' style={{ cursor: "pointer", width: '15rem' }}/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </Fragment>
                 )
             } else {
