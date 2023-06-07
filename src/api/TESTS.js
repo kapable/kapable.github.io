@@ -23,6 +23,660 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // colorLabelStickerEng
+    {
+        info : {
+            mainTitle:"Label Sticker Color Test",
+            subTitle:"What is your label sticker that is different for each color?",
+            mainUrl:"colorLabelStickerEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/colorLabelStickerEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/colorLabelStickerEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'If your friend asks to take a picture with you in a crowded tourist destination, what can be your reaction?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I don't care about the surroundings and take several shots until I get the best one"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I will be conscious of my surroundings so I will quickly take pictures'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "If you have an appointment this weekend, what do you think?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I hope the weekend comes soon! So, I can have fun."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "It can be annoying…? I think I shouldn't cancel my appointment..."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "When you say “bye” to your friend after spending time together, which one is closer to you?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I feel sorry and want to spend more time with my friend`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I'm happy that I can finally go home.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you think about when you come down after climbing?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I'm tired. .Gotta go down quickly and rest`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I wish I could slide all the way down the mountain`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you often say when arguing?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I'm just talking right now / I don't mean that?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I know you did before / I felt that way!!`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What would you think if there was a thunderstorm in rainy day?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Oh the thunder is so loud `
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `If I get struck by lightning and have superpowers, will I be able to teleport? oh i'm worried`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What compliment would you like to hear more?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Wow, you did really well! How did you do it? "
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "You've had a lot of trouble~ You've worked hard! You are the best!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What do you usually do when you have a conversation?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `When I say A, it is A. There is no hidden meaning`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I said A, but I believe you will know B, C, D, etc."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Why do you share your concerns?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I am talking about it to solve the concerns"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I don't need to solve the concerns but sympathize with my feeling"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What is your shopping style?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I have a set time for shopping, so I rush to buy only what I need`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `I look around many other stores slowly and enjoy shopping itself`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you think of when you see a schedule organized by hour?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "It seems stable and good plan. Gotta follow this schedule as much as possible"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Should it be like this? I can't breath…"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'What is your style of choosing the menu when you go to a restaurant?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I do research in advance and decide exactly what to eat"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I take a quick glance at the menu from internet and decide it at the restaurant."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/colorLabelStickerEng/INFP.jpg'
+            },
+        ]
+    },
+    // postCard
+    {
+        info : {
+            mainTitle:"엽서 성격 테스트",
+            subTitle:"나의 성격을 엽서로 꾸며보자!",
+            mainUrl:"postCard",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/postCard-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/postCard-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '친구들과 대화할 때 나는?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '쟤 말 끝나면 나는 이 말 해야지'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '친구들의 말에 따라 리액션이나, 대답한다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "친구와 약속이 취소되었을 때 나는?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "급하게 다른 친구들에게 연락을 돌려 본다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "은근히 좋아하면서 집에서 푹 쉰다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "일주일 동안 열심히 일하고 난 뒤 찾아온 주말에 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `일주일 내내 회사 안에만 있었으니, 밖에서 친구들 만나서 신나게 놀아야지`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `일주일 내내 회사에만 나갔으니, 주말엔 집에서 푹 쉬어야지`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 더 잘할 수 있는 일은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `꼼꼼하고 섬세한 작업을 필요로 하는 일`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `상상력과 창의력을 필요로 하는 일`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "“만약 초능력 1개를 가질 수 있다면?” 이라는 질문에 내 대답은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "그런 일은 일어나지 않아."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `초능력 1개?? 나는 음…(고민 중)`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "정말 재밌게 본 영화가 열린 결말로 끝이 났다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `재밌게 본 영화가 찝찝한 열린 결말이라 아쉽다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `결말 이후의 스토리를 내 마음대로 상상해 본다`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `내가 아는 지식을 상대방에게 설명할 때 나와 가까운 것은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "사전적 뜻과 의미를 명확하게 설명한다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "뜻과 의미를 상대방이 알아듣기 쉽게 비유해서 설명한다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구들과 여름휴가를 가는데 운전하는 친구가 졸려 한다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `휴게소 및 졸음 쉼터 위치를 찾아서 알려준다`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "옆에서 계속 말을 걸거나, 너무 힘들면 바꿔 가면서 하자고 말해준다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `호감이 있는 상대에게 내가 더 많이 하는 것은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "지속적인 관심과 질문"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "진심 담은 리액션과 공감"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "내가 더 불편함을 느끼는 사람은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `미리 세워 둔 계획 다 무시하고 자기 마음대로 하려는 사람`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `더 좋은 방법이 생겨도 계획대로만 하자고 강요하는 사람`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "목표를 이루어 나갈 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "한 가지 목표를 정해 놓고 꾸준히 한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "여러 가지 목표를 정하고 다양한 시도를 해본다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '대중교통을 이용할 때 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "목적지까지 최단 경로를 찾고, 언제 오는지 확인 후 맞춰서 나간다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 나가서 기다리다가, 안 오면 언제 오는지 찾아본다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/postCard/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/postCard/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/postCard/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCard/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCard/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/postCard/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/postCard/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/postCard/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCard/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCard/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCard/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/postCard/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/postCard/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/postCard/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCard/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCard/INFP.jpg'
+            },
+        ]
+    },
     // characteristicChracterIT
     {
         info : {
@@ -402,7 +1056,7 @@ const TESTS = [
                     {
                         type: "E",
                         score: 2,
-                        content: `밖에서 사람들을 만나며 에너지를 충전하는 활동적인 생활`
+                        content: `밖에서 사람들을 만나며 에너지를 충전하는\n활동적인 생활`
                     },
                     {
                         type: "I",
@@ -439,7 +1093,7 @@ const TESTS = [
                     {
                         type: "N",
                         score: 5,
-                        content: `재테크\n현생 사느라 바빠서 신경 잘 못 씀`
+                        content: `재테크?\n현생 사느라 바빠서 신경 잘 못 씀`
                     },
                 ]
             },
@@ -530,7 +1184,7 @@ const TESTS = [
                     {
                         type: "J",
                         score: 2,
-                        content: "아쉽지만, 그래도 이번 달 소비 계획이 있으니까. 언젠가 꼭 사고 만다 내가!"
+                        content: "아쉽지만, 그래도 이번 달 소비 계획이 있으니까.\n언젠가 꼭 사고 만다 내가!"
                     },
                     {
                         type: "P",
