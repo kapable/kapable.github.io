@@ -123,7 +123,9 @@ class Quiz extends Component {
         if(window.location.href.split('/').includes('labelStickerSKT')){
             return(
                 <div>
-                    <img loading="lazy" src={`https://images.ktestone.com/meta/labelStickerSKT/labelStickerSKT-question-img.jpg`} className='answer-option-img' alt={"labelStickerSKT"} />
+                    <a rel="noopener noreferrer" target="_blank" href={`https://m.shop.tworld.co.kr/exhibition/view?exhibitionId=P00000330`} >
+                        <img loading="lazy" src={`https://images.ktestone.com/meta/labelStickerSKT/labelStickerSKT-question-img.jpg`} className='answer-option-img' alt={"labelStickerSKT"} />
+                    </a>
                 </div>
             )
         } else if (window.location.href.split('/').includes('hmall')) {
