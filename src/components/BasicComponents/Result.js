@@ -420,7 +420,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let colorLabelStickerEngList = ["colorLabelStickerEng"];
-        let colorLabelStickerList = ["colorLabelSticker"];
+        let tapeCharacteristicList = ["tapeCharacteristic"];
         let hmallList = ['hmall', 'labelStickerSKT'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
@@ -542,8 +542,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (colorLabelStickerList.includes(this.state.current_test)) {
-            const rederTestList = ["DNA", "flowerGarden", "DIY", "puzzleLove", "labelSticker",];
+        } else if (tapeCharacteristicList.includes(this.state.current_test)) {
+            const rederTestList = ["postCard", "puzzleLove", "labelSticker",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -785,7 +785,7 @@ class Result extends Component {
         } else if (hmallList.includes(this.state.current_test)) {
             return null;
         } else {
-            const rederTestList = ["colorLabelSticker", "DNA", "DIY", "puzzleLove", "labelSticker",];
+            const rederTestList = ["tapeCharacteristic", "postCard", "colorLabelSticker", "puzzleLove", "labelSticker",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (

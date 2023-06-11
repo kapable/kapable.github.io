@@ -23,6 +23,333 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // tapeCharacteristic
+    {
+        info : {
+            mainTitle:"테이프 성격 테스트",
+            subTitle:"나의 성격을 테이프로 붙여보자!",
+            mainUrl:"tapeCharacteristic",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/tapeCharacteristic-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/tapeCharacteristic-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '친구들과 대화할 때 나는?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '쟤 말 끝나면 나는 이 말 해야지'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '친구들의 말에 따라 리액션이나, 대답한다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "친구와 약속이 취소되었을 때 나는?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "급하게 다른 친구들에게 연락을 돌려 본다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "은근히 좋아하면서 집에서 푹 쉰다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "일주일 동안 열심히 일하고 난 뒤 찾아온 주말에 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `일주일 내내 회사 안에만 있었으니, 밖에서 친구들 만나서 신나게 놀아야지`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `일주일 내내 회사에만 나갔으니, 주말엔 집에서 푹 쉬어야지`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 더 잘할 수 있는 일은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `꼼꼼하고 섬세한 작업을 필요로 하는 일`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `상상력과 창의력을 필요로 하는 일`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "“만약 초능력 1개를 가질 수 있다면?” 이라는 질문에 내 대답은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "그런 일은 일어나지 않아."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `초능력 1개?? 나는 음…(고민 중)`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "정말 재밌게 본 영화가 열린 결말로 끝이 났다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `재밌게 본 영화가 찝찝한 열린 결말이라 아쉽다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `결말 이후의 스토리를 내 마음대로 상상해 본다`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `내가 아는 지식을 상대방에게 설명할 때 나와 가까운 것은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "사전적 뜻과 의미를 명확하게 설명한다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "뜻과 의미를 상대방이 알아듣기 쉽게 비유해서 설명한다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구들과 여름휴가를 가는데 운전하는 친구가 졸려 한다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `휴게소 및 졸음 쉼터 위치를 찾아서 알려준다`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "옆에서 계속 말을 걸거나, 너무 힘들면 바꿔 가면서 하자고 말해준다."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `호감이 있는 상대에게 내가 더 많이 하는 것은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "지속적인 관심과 질문"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "진심 담은 리액션과 공감"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "내가 더 불편함을 느끼는 사람은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `미리 세워 둔 계획 다 무시하고 자기 마음대로 하려는 사람`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `더 좋은 방법이 생겨도 계획대로만 하자고 강요하는 사람`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "목표를 이루어 나갈 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "한 가지 목표를 정해 놓고 꾸준히 한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "여러 가지 목표를 정하고 다양한 시도를 해본다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '대중교통을 이용할 때 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "목적지까지 최단 경로를 찾고, 언제 오는지 확인 후 맞춰서 나간다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 나가서 기다리다가, 안 오면 언제 오는지 찾아본다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/tapeCharacteristic/INFP.jpg'
+            },
+        ]
+    },
     // colorLabelStickerEng
     {
         info : {
