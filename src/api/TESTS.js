@@ -39,195 +39,195 @@ const TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '친구들과 대화할 때 나는?'
+                question: '친구들과 대화 중 쉬지 않고, 떠드는 친구를 볼 때 내 생각은?'
                 ,
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: '쟤 말 끝나면 나는 이 말 해야지'
+                        content: '나도 할 말 많은데 쟤 자꾸 왜 나랑 오디오 겹치지?'
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '친구들의 말에 따라 리액션이나, 대답한다'
+                        content: '쟤는 지치지도 않나, 쉬지 않고 얘기하네 신기..'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "친구와 약속이 취소되었을 때 나는?"
+                question: "주말에 뭐 하냐고 묻는 친구에게 나는?"
                 ,
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "급하게 다른 친구들에게 연락을 돌려 본다"
+                        content: "딱히 뭐 없는데 왜? 만날래?"
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "은근히 좋아하면서 집에서 푹 쉰다"
+                        content: "아.. 나 약속 있어! (사실 약속 없음)"
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "일주일 동안 열심히 일하고 난 뒤 찾아온 주말에 나는?",
+                question: "친구들이 밤이 늦었는데, 날 안 보내주려고 한다면?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: `일주일 내내 회사 안에만 있었으니, 밖에서 친구들 만나서 신나게 놀아야지`
+                        content: `피할 수 없으면 즐겨! 지칠 때까지 신나게 논다!`
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: `일주일 내내 회사에만 나갔으니, 주말엔 집에서 푹 쉬어야지`
+                        content: `돔황챠~! 계속 집에 갈 타이밍을 노린다`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "내가 더 잘할 수 있는 일은?",
+                question: "여행을 가려고 비행기를 탔을 때 내 생각은?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `꼼꼼하고 섬세한 작업을 필요로 하는 일`
+                        content: `기내식 맛없다는데 뭐 라도 사올 걸 그랬나?`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `상상력과 창의력을 필요로 하는 일`
+                        content: `갑자기 바다에 떨어지면 어떡하지? 구명조끼 어디 있더라..`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "“만약 초능력 1개를 가질 수 있다면?” 이라는 질문에 내 대답은?",
+                question: "미술작품 전시회를 갔을 때, 내가 중점적으로 보는 것은?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "그런 일은 일어나지 않아."
+                        content: "작가의 그림 솜씨, 작품 설명"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `초능력 1개?? 나는 음…(고민 중)`
+                        content: `작품을 만든 작가의 의도, 숨겨진 의미 분석`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "정말 재밌게 본 영화가 열린 결말로 끝이 났다면?",
+                question: "멍하니 있는 나에게 “갑자기 무슨 생각해?” 친구의 말에 나는?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `재밌게 본 영화가 찝찝한 열린 결말이라 아쉽다`
+                        content: `아무 생각 없는데?`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `결말 이후의 스토리를 내 마음대로 상상해 본다`
+                        content: `아, 별거 아니야!! 설명하자면 길어서~`
                     },
                 ]
             },
             {
                 which:"TF",
-                question: `내가 아는 지식을 상대방에게 설명할 때 나와 가까운 것은?`,
+                question: `보고 있는 영화에서 주인공이 위험에 빠졌다면?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "사전적 뜻과 의미를 명확하게 설명한다"
+                        content: "오우.. 흥미진진한데?? 아니 근데 저걸 왜 저렇게 설정했지?"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "뜻과 의미를 상대방이 알아듣기 쉽게 비유해서 설명한다"
+                        content: "안돼!! 도망가! 아오 답답해!! ㅠㅠ"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "친구들과 여름휴가를 가는데 운전하는 친구가 졸려 한다면?",
+                question: "친구가 “나 차 사고 났어”라고 연락이 왔다면?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: `휴게소 및 졸음 쉼터 위치를 찾아서 알려준다`
+                        content: `헐 보험 들었어? 아니 뭐하다가??`
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "옆에서 계속 말을 걸거나, 너무 힘들면 바꿔 가면서 하자고 말해준다."
+                        content: "헉!.. 괜찮아?! 다치진 않았어??"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: `호감이 있는 상대에게 내가 더 많이 하는 것은?`,
+                question: `누군가 나를 싫어 한다고 전해 들었을 때 나는?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "지속적인 관심과 질문"
+                        content: "누구? 왜 나를 싫어하지? 뭐 그러든지 말든지~"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "진심 담은 리액션과 공감"
+                        content: "내가 뭐 기분 나쁘게 한적 있나..ㅠ(마상)"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "내가 더 불편함을 느끼는 사람은?",
+                question: "같이 여행을 가기로 한 친구가 시간, 분 단위로 짠 계획표를 보여준다면 나는?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: `미리 세워 둔 계획 다 무시하고 자기 마음대로 하려는 사람`
+                        content: `비슷하게 짠 나의 계획표을 보여주며, 합의 점을 찾아서 같이 계획을 수정한다`
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: `더 좋은 방법이 생겨도 계획대로만 하자고 강요하는 사람`
+                        content: `조금 숨 막히지만, 그래도 든든하다`
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "목표를 이루어 나갈 때 나는?",
+                question: "갑자기 만나자는 친구의 연락을 받았다면?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "한 가지 목표를 정해 놓고 꾸준히 한다"
+                        content: "아 갑자기는 안될 거 같아, 다음엔 늦어도 전날 알려줘!"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "여러 가지 목표를 정하고 다양한 시도를 해본다"
+                        content: "마침 뭐 없었는데, 오케이 콜. 나갈 게 좀만 기다려."
                     },
                 ]
             },
             {
                 which:"JP",
-                question: '대중교통을 이용할 때 나는?',
+                question: '세워 놓은 계획이 틀어졌을 때 나는?',
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "목적지까지 최단 경로를 찾고, 언제 오는지 확인 후 맞춰서 나간다."
+                        content: "매우 화가 나지만, 혹시 모를 상황을 대비한 플랜 B를 실행한다"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "일단 나가서 기다리다가, 안 오면 언제 오는지 찾아본다."
+                        content: "어차피 세워 놓은 계획도 미약했다. 임기응변으로 대처한다"
                     },
                 ]
             },

@@ -1223,7 +1223,7 @@ class Result extends Component {
                         <div style={{position: "relative", backgroundColor: "rgba(255,255,255,0.8)", height: "4rem", top: "-4rem", width: "100%"}}>
                             <div style={{position: "relative", width: "100%", height: "2rem", top: "0.5rem", margin: "0 auto"}}>
                                 <div style={{width: "fit-content", margin: "0 auto", position: "relative"}}>
-                                    <a rel="noopener noreferrer" target="_blank" href={`https://m.shop.tworld.co.kr/exhibition/view?exhibitionId=P00000330&mbti=${final_type}`} onClick={() => this._eventSenderGA("Outlinking", "Click SKT Go-to-Result Button", "result page")}>
+                                    <a rel="noopener noreferrer" target="_blank" href={`https://m.shop.tworld.co.kr/exhibition/view?exhibitionId=P00000337&mbti=${final_type}`} onClick={() => this._eventSenderGA("Outlinking", "Click SKT Go-to-Result Button", "result page")}>
                                         <img src='https://images.ktestone.com/meta/labelStickerSKT/SKT-go-to-result-button.jpeg' alt='SKT-go-to-result' style={{ cursor: "pointer", width: '15rem' }}/>
                                     </a>
                                 </div>
