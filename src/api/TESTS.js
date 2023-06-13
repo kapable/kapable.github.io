@@ -23,6 +23,333 @@ function range(start, stop, step) {
 
 const TESTS = [
     // order tests with newly date order
+    // loveFlameIT
+    {
+        info : {
+            mainTitle:"Test della fiamma dell'amore",
+            subTitle:"In effetti, quanto sarà calda la vostra storia d'amore?",
+            mainUrl:"loveFlameIT",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveFlameIT-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveFlameIT-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"IT",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: "Cosa fareste se all'improvviso incontraste qualcuno che vi piace a un evento?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Cercherei di conoscere attivamente la persona.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Lentamente cercherò di cogliere l'occasione per chiacchierare con la persona."
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Cosa si dice quando si è appena iniziato a frequentare qualcuno?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Dico tutto di me, esagerando con il TMI (too much information)."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Non parlo molto di me e rispondo solo alle domande che mi vengono poste."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Come reagireste se il vostro amante vi proponesse di uscire con i suoi amici all'inizio della relazione?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Anche se è un po' improvviso, voglio dire "Sì, perché no".`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `Rifiuterei perché è improvviso e un po' gravoso.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Come reagireste se il vostro amante parlasse improvvisamente di un futuro ideale?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Mi piacerebbe, ma penso che sia impossibile nella realtà.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Condividerei i miei pensieri ideali.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: 'Quale può essere la vostra reazione quando il vostro amante vi pone domande come "e se"?',
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: 'Dirò: "Non preoccuparti, non succederà".'
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Ci penserò seriamente e risponderò.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Se dovesse preparare il cibo per l'amante, come lo preparerebbe?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Cucinerei secondo la ricetta.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Cucinerei con tutto il cuore senza pesare.`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Se il vostro amante vi mentisse, quale sarebbe la vostra reazione?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Sarei così delusa, ma prima chiederei perché il mio amante ha mentito."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Sarei molto arrabbiata perché il mio amante mi ha mentito."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Cosa fareste se il vostro amante fosse molto arrabbiato con voi?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Mi scuserei per eventuali errori e spiegherei in seguito.`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Mi scuserei e cercherei di risolvere il problema."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Quali potrebbero essere le vostre intenzioni se chiedeste al vostro amore un po' di tempo da soli?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Avevo solo bisogno di tempo per risolvere la relazione, perché stavo pensando in modo troppo emotivo."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Avevo già risolto la relazione, ma cercavo di dare al mio amante la possibilità di riflettere."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Cosa farete subito dopo aver rotto con il mio amante?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `Farò di tutto per liberarmi del blues, ma alla fine mi tratterrò.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `Per liberarmi dal sentimento depressivo, cambio pettinatura o compro cose.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Cosa farete quando vi sentirete meglio dopo la rottura?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Cancello i miei piani con il mio ex e ne faccio uno nuovo."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Sarò pronto a incontrare qualcuno di nuovo."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'Cosa fareste il giorno prima di un appuntamento al buio con una persona nuova?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Penserei a cosa indossare, all'acconciatura, ecc."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Prima di tutto dormirei a sufficienza perché decido sempre in giornata."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveFlameIT/INFP.jpg'
+            },
+        ]
+    },
     // lettering
     {
         info : {
