@@ -344,6 +344,331 @@ const TESTS = [
             },
         ]
     },
+    // mazeHeart
+    {
+        info : {
+            mainTitle:"내 맘속 미로 테스트",
+            subTitle:"내 마음속을 미로로 확인해 보자",
+            mainUrl:"mazeHeart",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/mazeHeart-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/mazeHeart-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '누군가와 대화를 할 때 나는?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '나도 모르게 말이 저절로 나온다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '생각으로 정리한 후 조금 있다가 나온다'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "외출 후 집에 돌아와서 누워야 하는 이유는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "집에만 들어오면 기운이 없어져.. 누워야 해"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "밖에 나갔다 와서 기 다 빨렸어.. 누워야 해"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "일주일 동안 친구들과의 약속 횟수는 평균 몇 번일까?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `3~4번 이상, 5번 넘은 적도 있음`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `1~2번 미만, 평일엔 집에서 쉬어야 함`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "만약에 나 혼자 미로 속에 갇히게 된다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `내가 왜 미로 속에 갇히느냔 말이야..`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `일단 침착하고 벽을 따라가봐야지! 근데 너무 무섭겠다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "휴가 때 해외여행 가고 싶다는 친구에게 나의 대답은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "가면 되지~ 잘 알아봐바!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `만약에 같이 해외여행을 간다면 어디가 좋을까?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "천둥 번개가 심하게 치는 하늘을 보며 드는 나의 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `와 천둥 소리 뭐야 엄첨 크다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `와 저 번개 맞으면 난 어떻게 되는 걸까? ㄷㄷㄷ`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `요즘 잠을 못 잔다는 친구에게 내 대답은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "음 이렇게 저렇게 해봤어? 이런 방법이 좋데"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "아고 피곤하겠다.. 왜 잠을 못 자지ㅜ 무슨 일 있어?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "누군가 길에 귀여운 동물 인형을 버려 놨다면 드는 내 생각은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `저기다 저렇게 버리면 안 될 텐데`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "뭐야 인형 불쌍해.. 추워 보여.."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `내가 고민 상담을 하는 이유는 무엇일까?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "실질적인 해결책을 얻을 수 있을까 해서"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "위로와 격려, 응원을 듣고 싶어서"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "나의 일주일은 어떻게 흘러갈까?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `일주일 동안의 스케줄이 이미 다 정해져 있음`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `흘러가면 흘러가는 대로~ 내일은 내일의 내가~`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "갑자기 만나자는 친구에게 내 대답은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "몇 시에 만나서 뭐 할 건데? 일단 지금은 뭐 하고 있어서 안돼"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "지금?? 음 그럼 뭐 할지는 만나서 정할까?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '집 앞에 새로운 카페가 생겼다면 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "원래 가던 곳 보다 가깝네? 내일 이 시간에 한번 가봐야겠다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "여기 카페가 생겼네? 나중에 가봐야겠다"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeart/INFP.jpg'
+            },
+        ]
+    },
     // loveRecipe
     {
         info : {
