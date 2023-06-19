@@ -344,6 +344,333 @@ const TESTS = [
             },
         ]
     },
+    // speechHabitJP
+    {
+        info : {
+            mainTitle:"よく言う言葉のテスト",
+            subTitle:"私がよく言うことは？",
+            mainUrl:"speechHabitJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/speechHabitJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/speechHabitJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"JP",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'もし、あなたが友人と遊んでいて、友人が知人を誘いたいと言ってきたらどうしますか？'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '問題ないです。一緒に楽しもうよ！'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'いきなりですか、それはちょっと違和感がありますね...'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "甘い休日に友達から出勤の連絡が来たらどうする？"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "そうですか！今は特に何もないんです！支度して行きます！"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "いきなりですか？すみません、今日は仕事なんです"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "大勢の人が集まる場に行くと、もっと嫌なことがあるのでは？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `気まずい沈黙がある状況`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `多くの質問を通して、みんなが注目している状況`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "眠りにつく直前にすることは？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `何も考えずにただ眠ることに集中する`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `あれこれ考えているうちに、ついつい遅くまで寝てしまう`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "久しぶりに楽しく観た映画がオープンエンドで終わってしまったら、あなたはどうしますか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "それでも楽しめそうだが、エンディングがオープンなのが残念"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `気ままにオープンエンディングを想像してしまう`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "友達に「新しい人と別れたほうがいいのか、連絡を絶って別れたほうがいいのか」と聞かれたら、どうしますか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `私なら、「私ではなく、あなたが選んでください」と言うでしょうし、なぜ友人がそんな無駄なことを聞くのか不思議に思います。`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `私なら「あぁ、どっちも最悪だなぁ」くらいで、真剣に考えますね`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `もし、あなたの友人が約束の時間に遅れて言い訳をしたら、どうしますか？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "理解できる と言いたいところですが(大丈夫です、ご安心ください！)"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "私なら、まずは謝ってください と言いますね。(怒るかも)"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "自分の知っていることを、他の人にどう説明する？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `辞書的意味と意味を正確に説明してくれる`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "他の人に分かりやすく説明する"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `悩みを打ち明けるとき、どんなことを期待しますか？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "共感と解決に期待します"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "自分の言葉に共感と安らぎを求める"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "どんなことに自信があるのでしょうか？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `一つのことをやり遂げる`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `マルチタスクをこなす`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "もし、1ヶ月という期限付きのタスクや課題を与えられたら、あなたはどうしますか？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "後から追加があるかもしれないので、事前に終わらせておくと"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "まだ時間はたっぷりあるので、一歩一歩ゆっくりやっていこうと思います"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'やることがある中で遊びに来たら、どうするんでしょう？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "やるべきことがどんどん思い浮かんで気になる"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "とにかくもう決めたことなので、楽しもうと思います"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/speechHabitJP/INFP.jpg'
+            },
+        ]
+    },
     // mazeHeart
     {
         info : {
