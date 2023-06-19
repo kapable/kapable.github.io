@@ -412,8 +412,8 @@ class Result extends Component {
         let JPTestList = ["loveFlameJP", "readyToBoneJP", "earthCharacteristicJP", "cantWaitJP", "puzzleLoveJP", "coupleCharacterJP","coupleCharacterMaleJP","coupleCharacterFemaleJP", "mbtiFeaturesJP", "loveCellJP", "emotionGraphJP", "polaroidCharacteristicJP", "loveTicketJP", "loveCharacterMaleJP", "loveCharacterFemaleJP", "loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP", "personalColorJP"];
         let GerTestList = ["personalColorGer"];
         let ESTestList = ["loveWarningES", "personalColorES"];
-        let ITTestList = ["characteristicChracterIT"];
-        let loveFlameITList = ["loveFlameIT"];
+        let ITTestList = ["loveFlameIT", "characteristicChracterIT"];
+        let readyToBoneITList = ["readyToBoneIT"];
         let characteristicChracterESList = ["characteristicChracterES"];
         let characteristicChracterGerList = ["characteristicChracterGer",];
         let labelStickerCNList = ["labelStickerCN"];
@@ -664,7 +664,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (ITTestList.includes(this.state.current_test)) {
-            const rederTestList = ["loveFlameIT",];
+            const rederTestList = ["readyToBoneIT", "loveFlameIT", "characteristicChracterIT"];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -687,8 +687,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (loveFlameITList.includes(this.state.current_test)) {
-            const rederTestList = ["characteristicChracterIT",];
+        } else if (readyToBoneITList.includes(this.state.current_test)) {
+            const rederTestList = ["loveFlameIT", "characteristicChracterIT",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -711,7 +711,7 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        }else if (characteristicChracterESList.includes(this.state.current_test)) {
+        } else if (characteristicChracterESList.includes(this.state.current_test)) {
             const rederTestList = ["smileColorTestES", "loveWarningES", "loveCharacterES"];
             return (
                 <Fragment>

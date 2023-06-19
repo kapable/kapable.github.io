@@ -2501,6 +2501,12 @@ export default function OtherLangIcons(props) {
                         href="https://ktestone.com/kapable.github.io/readyToBoneJP/"
                         className="to-personalColorOut-test-banner-text"
                     ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/readyToBoneIT/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/italy-icon.png' className='language-icon' alt="[ Passiamo alla versione italiana ]" /></a>
                 </div>
             )
         } else if(props.currentTest === "readyToBoneCN") {
@@ -2525,6 +2531,12 @@ export default function OtherLangIcons(props) {
                         href="https://ktestone.com/kapable.github.io/readyToBoneJP/"
                         className="to-personalColorOut-test-banner-text"
                     ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/readyToBoneIT/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/italy-icon.png' className='language-icon' alt="[ Passiamo alla versione italiana ]" /></a>
                 </div>
             )
         } else if(props.currentTest === "readyToBoneEng") {
@@ -2549,6 +2561,12 @@ export default function OtherLangIcons(props) {
                         href="https://ktestone.com/kapable.github.io/readyToBoneJP/"
                         className="to-personalColorOut-test-banner-text"
                     ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/readyToBoneIT/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/italy-icon.png' className='language-icon' alt="[ Passiamo alla versione italiana ]" /></a>
                 </div>
             )
         } else if(props.currentTest === "readyToBoneJP") {
@@ -2558,9 +2576,9 @@ export default function OtherLangIcons(props) {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://ktestone.com/kapable.github.io/readyToBoneEng/"
+                        href="https://ktestone.com/kapable.github.io/readyToBone/"
                         className="to-personalColorOut-test-banner-text"
-                    ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
+                    ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -2573,6 +2591,42 @@ export default function OtherLangIcons(props) {
                         href="https://ktestone.com/kapable.github.io/readyToBoneCN/"
                         className="to-personalColorOut-test-banner-text"
                     ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/readyToBoneIT/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/italy-icon.png' className='language-icon' alt="[ Passiamo alla versione italiana ]" /></a>
+                </div>
+            )
+        } else if(props.currentTest === "readyToBoneIT") {
+            return(
+                <div className="go-to-each-language">
+                    <h3>▼OTHER LANGUAGES▼</h3>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/readyToBone/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/kor-icon.png' className='language-icon' alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/readyToBoneEng/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/usa-icon.png' className='language-icon' alt="[ Go to the English version ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/readyToBoneCN/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/china-icon.png' className='language-icon' alt="[ 汉语版本试 ]" /></a>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://ktestone.com/kapable.github.io/readyToBoneJP/"
+                        className="to-personalColorOut-test-banner-text"
+                    ><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/japan-icon.png' className='language-icon' alt="[ 日本語バージョンをやりに行く。 ]" /></a>
                 </div>
             )
         }

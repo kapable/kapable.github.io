@@ -344,6 +344,333 @@ const TESTS = [
             },
         ]
     },
+    // readyToBoneIT
+    {
+        info : {
+            mainTitle:"Siete pronti per l'amaro rimpianto?",
+            subTitle:"Siete pronti ad avere dolorosi rimpianti?",
+            mainUrl:"readyToBoneIT",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/readyToBoneIT-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/readyToBoneIT-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"IT",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'Cosa fareste se un appuntamento del fine settimana venisse cancellato all improvviso?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Prendo subito un altro appuntamento per il fine settimana'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Potrebbe piacermi e riposare a casa'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Come reagirebbe se ricevesse un'ottima accoglienza dal club in cui si è appena iscritto?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Sarei molto felice e andrei d'accordo con le persone"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Sarà un peso per troppe accoglienze, ma sto cercando di adattarmi lentamente e con attenzione"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Cosa fareste quando vi sentite in imbarazzo a un evento?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Non sopporto l'imbarazzo e cercherei di parlare con qualcuno che non è in grado di farlo`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `Potrebbe essere molto imbarazzante, ma aspetterei che qualcuno parli con me`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Qual è l'amore che preferisco?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Una data pratica che mi permette di pensare al future`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Un appuntamento ideale che sognavo da tempo`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Se lei fosse il protagonista di un dramma, che tipo di protagonista vorrebbe essere?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Uomo ricco, bello e popolare"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Un eroe in un mondo fantastico che usa superpoteri`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Quale può essere la vostra reazione se il vostro amico cambia improvvisamente argomento nel bel mezzo di una conversazione?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Non riesco a capire perché`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Continuo la conversazione`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Cosa fareste se un amico fidato vi imprecasse alle spalle?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Mi arrabbiavo e mi chiedevo perché"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Ti sentiresti tradito e arrabbiato per il fatto che non ci vediamo più"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Cosa fareste se un vostro amico dicesse qualcosa di inappropriato?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Parlerei direttamente`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Lo direi indirettamente per paura di ferire l'altra persona"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Cosa fareste se un vostro amico fosse molto malato?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Che cosa è successo? Dovresti andare in ospedale"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Stai bene? Deve farti molto male, anche se il tempo è così freddo"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Quando siete stressati?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `Mi stresso quando le cose non vanno come programmato`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `Mi stresso quando devo continuare a fare cose ripetitive`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Qual è quello più vicino a voi?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Finisco le cose che devo fare e basta"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Spesso rimando le cose che devo fare"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'Con quale tipo di persona si sente frustrato?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Una persona che inizia a lavorare poco prima della scadenza"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Pianificatore meticoloso"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/readyToBoneIT/INFP.jpg'
+            },
+        ]
+    },
     // speechHabitJP
     {
         info : {
