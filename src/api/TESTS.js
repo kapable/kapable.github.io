@@ -344,6 +344,333 @@ const TESTS = [
             },
         ]
     },
+    // mazeHeartEng
+    {
+        info : {
+            mainTitle:"Maze test in my heart",
+            subTitle:"Let's check my heart through a maze",
+            mainUrl:"mazeHeartEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/mazeHeartEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/mazeHeartEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'When you are talking to someone, how do you do?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I just say what comes out of my mouth'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'After organizing my thoughts, I say things'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Why do you have to lie down at home after going out?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Because I lose my energy suddenly when I get home.. I need to lie down"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I'm tired from going out.. I have to lie down"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "On average, how many times do you make appointments with your friends in a week?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I have more than 3-4 appointments, sometimes 5 or more`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I have one or two appointments, so I have to rest at home on weekdays`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What if I get stuck in a maze alone?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Why am I stuck in a maze?`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `For now, I will stay calm and follow the wall! But, it must be so scary`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What can be your answer to a friend who wants to go abroad on vacation?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Why not? search for some good information!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `If we were to travel abroad together, where would be the best place to go?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you think of when you look at the sky with heavy thunder and lightning?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Wow the thunder is so loud`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Wow, what if you get hit by that lightning?`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What is your answer to a friend who has been unable to sleep lately?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Um, have you tried this? It works for me"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Oh you must be tired.. Why can't you sleep? What's going on?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "How would you feel if someone left a cute doll on the road?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `It should not be thrown away like that`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Pity doll. I think it looks cold"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What motivated you to seek counseling?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I am just wondering if I can get a practical solution"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I want to hear comfort, encouragement, and support"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "How will your week go?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `My schedule for the week is already set`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `As the water flows, Tomorrow is tomorrow~`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What can be your answer to a friend who suddenly asks to meet you?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "What time will we meet? But I think I can't because I'm doing something right now"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Now? Well then, shall we meet first and decide what to do later?"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'What would you do if a new cafe opened in front of your house?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "It is closer than the place I used to go. I will try there around this time tomorrow"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Oh, there is a café here, I will check it out later"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/mazeHeartEng/INFP.jpg'
+            },
+        ]
+    },
     // readyToBoneIT
     {
         info : {
