@@ -154,6 +154,7 @@ class Result extends Component {
         let loveCharacterEngQueries = ["loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng"];
         let loveCharacterGerQueries = ["loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer"];
         let loveCharacterESQueries = ["loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES"];
+        let loveCharacterITQueries = ["loveCharacterIT", "loveCharacterFemaleIT", "loveCharacterMaleIT"];
         let haGenderQueries = ["haGender", "haGenderFemale", "haGenderMale"];
         if(factPokQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/factPok/";
@@ -184,6 +185,9 @@ class Result extends Component {
         };
         if(loveCharacterESQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/loveCharacterES/";
+        };
+        if(loveCharacterITQueries.some(el => this.state.current_url.includes(el))) {
+            window.location.href = window.location.origin + "/kapable.github.io/loveCharacterIT/";
         };
         if(haGenderQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/haGender/";
@@ -410,9 +414,9 @@ class Result extends Component {
         let EngTestList = ["colorLabelStickerEng", "DIYEng", "labelStickerEng", "earthCharacteristicEng", "polaroidCharacteristicEng", "labelStickerLoveEng", "loveMagazineEng", "loveInMyHeadEng", "loveSpicyEng", "loveSpringFlowerEng", "coupleCharacterEng", "loveSpeedEng", "loveCellEng", "speechHabitEng", "mbtiFeaturesEng", "bondeeEng", "loveWarningEng", "characteristicChracterEng", "meGuideEng", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
         let CNTestList = ["emotionGraphCN", "loveInMyHeadCN", "loveSpicyCN", "cantWaitCN", "loveSpringFlowerCN", "coupleCharacterMaleCN", "coupleCharacterFemaleCN", "loveCellCN", "speechHabitCN", "bondeeCN", "loveFlameCN", "characteristicChracterCN", "loveWarningCN", "loveCharacterCN", "smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
         let JPTestList = ["loveFlameJP", "readyToBoneJP", "earthCharacteristicJP", "cantWaitJP", "puzzleLoveJP", "coupleCharacterJP","coupleCharacterMaleJP","coupleCharacterFemaleJP", "mbtiFeaturesJP", "loveCellJP", "emotionGraphJP", "polaroidCharacteristicJP", "loveTicketJP", "loveCharacterMaleJP", "loveCharacterFemaleJP", "loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP", "personalColorJP"];
-        let GerTestList = ["personalColorGer"];
+        let GerTestList = ["loveCharacterGer", "personalColorGer"];
         let ESTestList = ["loveWarningES", "personalColorES"];
-        let ITTestList = ["loveFlameIT", "characteristicChracterIT"];
+        let ITTestList = ["loveCharacterMaleIT", "loveCharacterFemaleIT", "loveFlameIT", "characteristicChracterIT"];
         let readyToBoneITList = ["readyToBoneIT"];
         let characteristicChracterESList = ["characteristicChracterES"];
         let characteristicChracterGerList = ["characteristicChracterGer",];
@@ -688,7 +692,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (readyToBoneITList.includes(this.state.current_test)) {
-            const rederTestList = ["loveFlameIT", "characteristicChracterIT",];
+            const rederTestList = ["loveCharacterIT", "loveFlameIT", "characteristicChracterIT",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (

@@ -122,7 +122,7 @@ function MainPage(props) {
                     <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png`} alt='loveCharacter' />
                 </Link>
             ) : (
-                (props.lang === 'Eng' || props.lang === 'CN'|| props.lang === 'JP'|| props.lang === 'ES'|| props.lang === 'Ger')
+                (props.lang === 'Eng' || props.lang === 'CN'|| props.lang === 'JP'|| props.lang === 'ES'|| props.lang === 'Ger' || props.lang === 'IT')
                 ? <Link to={`/loveCharacter${props.lang}`} className="main-link-block" key="loveCharacter-banner">
                     <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang}-thumb.png`} alt='loveCharacter' />
                 </Link> : null

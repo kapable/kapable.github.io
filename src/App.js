@@ -279,6 +279,7 @@ class App extends Component {
             <Route path="/loveCharacterGer/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'Ger'} info={{ title: "Beziehungstypen Test - KTEST", subTitle: "Was für ein Charakter ist mein Liebescharakter? | BeziehungstypenTest - Freund, Freundin - KTEST" }} />} />
             <Route path="/loveCharacterES/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'ES'} info={{ title: "Test de Personalidad en noviazgo. - KTEST", subTitle: "¿Cuál es mi inclinación a enamorarme como personaje? | para hombres, para mujeres - KTEST" }} />} />
             <Route path="/loveCharacterJP/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'JP'} info={{ title: "恋愛キャラクターテスト - KTEST", subTitle: "私の恋愛キャラクターはどんなキャラクターかな? - KTEST" }} />} />
+            <Route path="/loveCharacterIT/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'IT'} info={{ title: "Test sul carattere dell'amore - KTEST", subTitle: "Quali sono le mie tendenze romantiche come personaggio? - KTEST" }} />} />
 
             {/* go to "lifeInterpreting" page */}
             <Route path="/lifeInterpreting/" component={() => <LifeInterpreting />} exact/>

@@ -87482,6 +87482,660 @@ const TESTS = [
             },
         ]
     },
+    // loveCharacterFemaleIT
+    {
+        info : {
+            mainTitle:"Test sul carattere dell'amore",
+            subTitle:"Quali sono le mie tendenze romantiche come personaggio?",
+            mainUrl:"loveCharacterFemaleIT",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'Quando si va ad un appuntamento al buio, come ci si comporta?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Non riesco a sopportare l imbarazzo e cerco di dire qualcosa o di fare qualche domanda'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Odio l imbarazzo, ma aspetterò fino a quando l altra persona non dirà qualcosa'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Quando un amico vi chiede di uscire in coppia, quale può essere la vostra reazione?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Sarà divertente, naturalmente, andremo a un appuntamento di coppia insieme. Chiederò subito al mio amante"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "All'improvviso? Chiederò prima al mio amante e ci penserò (Dovrei dire che non vado...)"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Cosa si fa all'inizio di una relazione?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Tendo a fare molte domande`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `Tendo ad essere reattivo e ad empatizzare per primo`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Come reagirebbe se, sfogliando le foto della sua infanzia, trovasse una foto di voi due insieme?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Wow, il mondo è davvero piccolo Miracoloso! Come è potuto accadere?`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Wow, sembra un film. Deve essere il nostro destino! Forse ci siamo incontrati in una vita passata`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Cosa fate se vi svegliate da un brutto sogno?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Sembra così reale! Comunque, devo tornare a dormire"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Perché faccio un sogno così strano? Devo preoccuparmi di qualcosa?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Quando si va in un ristorante imperdibile, quale strada si vuole percorrere?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Non mi interessano le visite turistiche lungo il percorso, quindi preferisco prendere delle scorciatoie`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Anche se ci vuole un po' di tempo in più, se è possibile, prenderò la strada panoramica`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Se fate ascoltare al vostro amante una canzone che vi piace e a lui non piace, quale può essere la vostra reazione?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Potrei chiedermi perché al mio amante non piace questo capolavoro"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Capisco che ogni persona abbia gusti musicali diversi, ma io potrei sentirmi triste per niente"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Quando ricevete una telefonata in cui il vostro amante litiga con il suo amico, cosa fareste?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Perché? Quali sono i motivi?`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Stai bene? Devi esserti arrabbiato, il tuo amico deve aver fatto qualcosa di sbagliato, giusto?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Come reagireste se il vostro amante non potesse venire al vostro anniversario?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Chiederò una buona ragione, ma in ogni caso è così triste"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Sono arrabbiata e dispiaciuta di non aver potuto incontrare il mio amante nel giorno dell'anniversario che avevo anticipato"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Che cosa fareste se il vostro amante vi chiedesse di vedere un film mentre voi dovete lavorare?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `Oggi ho qualcosa da fare. Che ne dici di domani alle 15?`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `Ho del lavoro da fare, ma credo di avere molto tempo a disposizione, ok andiamo a vederlo!`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Quando avete un conflitto con il vostro amante, cosa fate?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Devo prima definirlo chiaramente e poi risolverlo"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Osservo prima la situazione e decido se risolverla subito o meno a seconda dell'umore"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'Cosa fate dopo aver fatto un viaggio divertente con il vostro amante?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Disfo i bagagli, faccio una doccia e mi riposo"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Mi riposerò dopo la doccia e sistemerò le cose più tardi"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wksthfleoakdhkd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhlrkdsodb",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekwjdekrka",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dyffhfkdlvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmdqntk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dkfEMftlswkq",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhfemsflxmflqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fldortusaksfpq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "Rhseo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wkdrldusdo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Whfqh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gjekd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dnjzjghfflr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ajdEoflsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterFemaleIT/INFP.jpg'
+            },
+        ]
+    },
+    // loveCharacterMaleIT
+    {
+        info : {
+            mainTitle:"Test sul carattere dell'amore",
+            subTitle:"Quali sono le mie tendenze romantiche come personaggio?",
+            mainUrl:"loveCharacterMaleIT",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'Quando si va ad un appuntamento al buio, come ci si comporta?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Non riesco a sopportare l imbarazzo e cerco di dire qualcosa o di fare qualche domanda'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'Odio l imbarazzo, ma aspetterò fino a quando l altra persona non dirà qualcosa'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Quando un amico vi chiede di uscire in coppia, quale può essere la vostra reazione?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Sarà divertente, naturalmente, andremo a un appuntamento di coppia insieme. Chiederò subito al mio amante"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "All'improvviso? Chiederò prima al mio amante e ci penserò (Dovrei dire che non vado...)"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Cosa si fa all'inizio di una relazione?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Tendo a fare molte domande`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `Tendo ad essere reattivo e ad empatizzare per primo`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Come reagirebbe se, sfogliando le foto della sua infanzia, trovasse una foto di voi due insieme?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Wow, il mondo è davvero piccolo Miracoloso! Come è potuto accadere?`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Wow, sembra un film. Deve essere il nostro destino! Forse ci siamo incontrati in una vita passata`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Cosa fate se vi svegliate da un brutto sogno?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Sembra così reale! Comunque, devo tornare a dormire"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Perché faccio un sogno così strano? Devo preoccuparmi di qualcosa?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Quando si va in un ristorante imperdibile, quale strada si vuole percorrere?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Non mi interessano le visite turistiche lungo il percorso, quindi preferisco prendere delle scorciatoie`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Anche se ci vuole un po' di tempo in più, se è possibile, prenderò la strada panoramica`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Se fate ascoltare al vostro amante una canzone che vi piace e a lui non piace, quale può essere la vostra reazione?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Potrei chiedermi perché al mio amante non piace questo capolavoro"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Capisco che ogni persona abbia gusti musicali diversi, ma io potrei sentirmi triste per niente"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Quando ricevete una telefonata in cui il vostro amante litiga con il suo amico, cosa fareste?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Perché? Quali sono i motivi?`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Stai bene? Devi esserti arrabbiato, il tuo amico deve aver fatto qualcosa di sbagliato, giusto?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Come reagireste se il vostro amante non potesse venire al vostro anniversario?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Chiederò una buona ragione, ma in ogni caso è così triste"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Sono arrabbiata e dispiaciuta di non aver potuto incontrare il mio amante nel giorno dell'anniversario che avevo anticipato"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Che cosa fareste se il vostro amante vi chiedesse di vedere un film mentre voi dovete lavorare?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `Oggi ho qualcosa da fare. Che ne dici di domani alle 15?`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `Ho del lavoro da fare, ma credo di avere molto tempo a disposizione, ok andiamo a vederlo!`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Quando avete un conflitto con il vostro amante, cosa fate?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Devo prima definirlo chiaramente e poi risolverlo"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Osservo prima la situazione e decido se risolverla subito o meno a seconda dell'umore"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'Cosa fate dopo aver fatto un viaggio divertente con il vostro amante?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Disfo i bagagli, faccio una doccia e mi riposo"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Mi riposerò dopo la doccia e sistemerò le cose più tardi"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wksthfleoakdhkd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhlrkdsodb",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekwjdekrka",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dyffhfkdlvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmdqntk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dkfEMftlswkq",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhfemsflxmflqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fldortusaksfpq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "Rhseo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wkdrldusdo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Whfqh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gjekd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dnjzjghfflr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ajdEoflsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveCharacterMaleIT/INFP.jpg'
+            },
+        ]
+    },
     // loveCharacterFemaleJP
     {
         info : {
