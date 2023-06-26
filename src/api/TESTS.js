@@ -344,6 +344,331 @@ const TESTS = [
             },
         ]
     },
+    // hologramLove
+    {
+        info : {
+            mainTitle:"홀로그램 연애 테스트",
+            subTitle:"홀로그램으로 내 연애 스타일을 알아보자!",
+            mainUrl:"hologramLove",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/hologramLove-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/hologramLove-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "love",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '하루 종일 데이트를 하고 왔다! 집에 와서 드는 나의 생각은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '너무 재밌었다! 내일은 친구들 만나는 날~ 신난다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '즐거웠지만 배터리 방전… 내일은 꼭 쉬어야지..ㅎㅎ'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "연인에게 하고싶은 말이 있다면 전달하기 더 편한 방법은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "직접 대화를 통해서 전달"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "메시지에 하고 싶은 말을 적어서 전달"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "연인, 친구들과의 약속이 일주일 내내 잡혀있다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `좀 피곤하겠지만 일주일 내내 집에 있는 것보단 낫지!`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `생각만 해도 벌써 집에 가고 싶어.. 나에겐 있을 수 없는 일`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연애 초기에 내가 많이 하는 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `싸우지 말고 오래오래 만나자!`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `앞으로 오래 만날 수 있겠지? 미래에 우린 어떤 모습일까?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "애인이 내가 모르는 이성과 함께 있는 모습을 본다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "그 사람은 누군지 바로 물어봄"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `물어보기 전 짧은 순간에 바람 피는 온갖 상상을 다 해봄`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인에게 선물을 받으면 드는 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `필요한 선물을 사줘서 감동`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `선물을 사기까지의 과정을 상상하며 감동`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `스트레스 받아서 입맛이 없다는 애인에게 내 대답은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "그래도 밥은 먹어야지! 이따 배고플 텐데"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "무슨 힘든 일 있어..? 이따 맛난 거 먹으러 갈까?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "연인에게 내 관심을 표현하는 방법은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `질문이 많아져 물음표 살인마가 됨`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "사소한 일에도 리액션 장인이 됨"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `친구가 연인의 연락 문제에 대한 고민을 상담한다! 내 대답은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "뭐 일이 바쁘거나 사정이 있겠지~"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "연락이 너무 느리면 나 같아도 서운하지ㅜ"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인이 갑자기 오늘 볼래?라고 한다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `지금은 일정이 있어서.. 이때 여기서 몇 시 어때??`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `지금? 보면 되지 나올래?`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인과의 기념일까지 2주가 남았다! 내 생각은?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "2주 밖에 안 남았어..? 빨리 준비해야겠다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "2주나 남았네~ 담 주부터 준비해야지"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '연인과의 약속을 정할 때 주로 내 모습은?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "일정을 미리 짜놓고 만남"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "대략적으로 뭐 할지만 정해두고 만남"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLove/INFP.jpg'
+            },
+        ]
+    },
     // loveProfile
     {
         info : {
