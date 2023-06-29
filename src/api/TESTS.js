@@ -344,6 +344,333 @@ const TESTS = [
             },
         ]
     },
+    // loveLottery
+    {
+        info : {
+            mainTitle:"연애 복권 테스트",
+            subTitle:"나는 긁지 않은 복권! 행운의 주인공은 과연 누구?!",
+            mainUrl:"loveLottery",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveLottery-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveLottery-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "love",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '내가 선호하는 데이트는?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '신나고 즐거운 실외 데이트'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '조용하고 차분한 실내 데이트'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "주말 동안 연인과 데이트 후 집에 도착했을 때 나는?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "이번 주말도 행복한 데이트였다! 에너지 충전 완료!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "이번 주말도 행복한 데이트였다~ 이제 쉬어야지~"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "데이트 중 연인이 갑자기 친구 커플과 더블데이트를 제안한다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `그래! 같이 놀자! 재밌겠다!`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `아 그건 좀.. 나중에 만나자고 하자`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연애 초기에 내가 하는 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `너무 행복하다ㅎㅎ 행복하게 잘 사귀어야지~`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `너무 행복하긴 한데, 연인이랑 안 싸우고 오래 행복할 수 있을까?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인과 한강 피크닉 데이트를 즐기고 있을 때 내 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "날씨도 좋고, 음식도 맛있고, 기분 좋다~"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `날씨 좋다~ 근데 혹시 저 비둘기가 이쪽으로 와서 우리 음식을 쪼아 먹지는 않겠지?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인과 점심을 먹으려고 식당에 들어왔을 때 내 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `뭐 먹지? 메뉴가 다 맛있어 보이는데..`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `이따 저녁은 또 뭐 먹지?? 저녁도 맛있는 거 먹고 싶은데`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `연인이 나를 위해서 손수 선물을 만들어 줬다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "어떻게 이런 걸 만들 생각을 했어? 진짜 대박이다!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "세상에!! 이거 만드느라 너무 수고 많았겠다ㅠ 감동이야ㅠ"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "연인이 휴대폰을 떨어뜨렸다고 한다면 나의 반응은?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `헉 뭐 하다가? 액정 깨진 거 아니야? 보험은 들었었어?`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "헉 괜찮아?? 혹시 액정 깨진 건 아니지..?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `연인과 갈등 상황에 연인이 논리적으로 따져 묻는다면 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "질 수 없지! 나도 논리적인 반박을 준비한다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "맞는 말이긴 하지만, 나도 할 말 있고 너무 서운하다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인과 여행을 간다면 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `분 단위로 쪼갠 디테일한 계획을 짜서 연인에게 공유한다`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `큰 계획만 같이 세우고, 연인에 계획에 따라간다`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인과 여행 중 목적지로 이동하던 중에 처음 보는 새로운 관광지를 발견했다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "나중에 가봐 야지 하고, 일단 계획된 목적지로 간다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "궁금해서 연인에게 저기 가보자고 해본다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '평소 연인과 하는 데이트는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "하루 일정이 세세하게 정해져 있는 계획적인 데이트"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "하루 일정이 정해져 있지 않은 즉흥적인 데이트"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLottery/INFP.jpg'
+            },
+        ]
+    },
     // hologramLove
     {
         info : {
