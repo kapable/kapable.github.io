@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import ReactGA from 'react-ga';
+import ReactGA4 from 'react-ga4';
 
 const LoginPage = (props) => {
     const [id, setID] = useState("");
@@ -12,6 +13,11 @@ const LoginPage = (props) => {
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
+            category: category,
+            action: action,
+            label: label,
+        });
+        ReactGA4.event({
             category: category,
             action: action,
             label: label,

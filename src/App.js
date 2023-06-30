@@ -18,6 +18,7 @@ import Result from './components/BasicComponents/Result';
 import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import ReactGA from 'react-ga';
+import ReactGA4 from "react-ga4";
 import AuthPage from './components/TestTypes/Post2021/Users/AuthPage';
 import LoginPage from './components/TestTypes/Post2021/Users/LoginPage';
 import RegisterPage from './components/TestTypes/Post2021/Users/RegisterPage';
@@ -91,6 +92,16 @@ class App extends Component {
     this.mainMetaTagRenderer = this.mainMetaTagRenderer.bind(this);
   }
   componentDidMount(){
+    ReactGA.initialize([
+      {
+        trackingId: "G-CYC3X9T6NV",
+        gaOptions: {
+          siteSpeedSampleRate: 100
+        }
+      }
+    ]);
+    ReactGA4.send({ hitType: "pageview", page:window.location.pathname+window.location.search, title: "App Main" });
+
     ReactGA.initialize('UA-186793588-1', {
       debug: false,
       gaOptions:{

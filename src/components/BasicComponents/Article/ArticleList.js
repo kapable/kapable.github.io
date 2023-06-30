@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import ARTICLES from '../../../api/ARTICLES';
 import ReactGA from 'react-ga';
+import ReactGA4 from 'react-ga4';
 import './Article.css';
 import { Helmet } from 'react-helmet';
 import { Col, Row } from 'antd';
@@ -36,6 +37,11 @@ function ArticleList() {
 
     function _eventSenderGA(category, action, label){
         ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+        ReactGA4.event({
             category: category,
             action: action,
             label: label

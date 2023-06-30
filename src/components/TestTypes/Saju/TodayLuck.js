@@ -4,6 +4,7 @@ import moment from 'moment';
 import 'moment/locale/ko';
 import locale from 'antd/es/date-picker/locale/ko_KR';
 import ReactGA from 'react-ga';
+import ReactGA4 from 'react-ga4';
 import { withRouter } from 'react-router';
 import crypto from 'crypto-js';
 import Lottie from 'react-lottie';
@@ -30,6 +31,11 @@ const TodayLuck = (props) => {
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+        ReactGA4.event({
             category: category,
             action: action,
             label: label

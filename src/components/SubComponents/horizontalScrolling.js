@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 import TEST from '../../api/TESTS';
 import ReactGA from 'react-ga';
+import ReactGA4 from 'react-ga4';
 
 // const Arrow = ({ text, className }) => {
 //   return (
@@ -92,6 +93,11 @@ class horizontalScrolling extends Component {
   }
   _eventSenderGA(category, action, label){
     ReactGA.event({
+        category: category,
+        action: action,
+        label: label
+      });
+    ReactGA4.event({
         category: category,
         action: action,
         label: label

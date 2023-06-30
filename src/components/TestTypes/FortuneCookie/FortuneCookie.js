@@ -2,6 +2,7 @@ import React, { Fragment, useCallback, useEffect, useState } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga';
+import ReactGA4 from 'react-ga4';
 import { withRouter } from 'react-router-dom';
 import COPYBTN from '../../../api/DefaultImg/test-intro-copy-link-btn.png';
 import BACKBTN from '../../../api/DefaultImg/test-intro-other-tests-btn.png';
@@ -80,6 +81,11 @@ const FortuneCookie = () => {
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
+            category: category,
+            action: action,
+            label: label,
+        });
+        ReactGA4.event({
             category: category,
             action: action,
             label: label,

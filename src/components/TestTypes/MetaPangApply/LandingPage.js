@@ -2,6 +2,7 @@ import React, { useState, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import ReactGA from 'react-ga';
+import ReactGA4 from 'react-ga4';
 import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import RegisterPage from './RegisterPage';
@@ -43,6 +44,11 @@ function LandingPage(props) {
 
     function _eventSenderGA(category, action, label){
         ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+        ReactGA4.event({
             category: category,
             action: action,
             label: label

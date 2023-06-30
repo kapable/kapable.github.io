@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Divider } from 'antd';
 import { useCookies } from 'react-cookie';
 import ReactGA from 'react-ga';
+import ReactGA4 from 'react-ga4';
 import AGAINBTN from '../../../api/DefaultImg/result-to-again-btn.png';
 import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
 import TOHOMEBTN from '../../../api/DefaultImg/result-to-home-btn.png';
@@ -24,6 +25,11 @@ const TodayLuckResult = (props) => {
 
     const _eventSenderGA = (category, action, label) => {
         ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+        ReactGA4.event({
             category: category,
             action: action,
             label: label

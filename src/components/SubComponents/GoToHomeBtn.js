@@ -1,10 +1,16 @@
 import React, { Fragment, useCallback } from 'react';
 import { HomeOutlined } from '@ant-design/icons';
 import ReactGA from 'react-ga';
+import ReactGA4 from 'react-ga4';
 
 const GoToHomeBtn = ({ page }) => {
     function _eventSenderGA(category, action, label){
         ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+        ReactGA4.event({
             category: category,
             action: action,
             label: label

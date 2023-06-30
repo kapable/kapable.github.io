@@ -2,10 +2,16 @@ import React, { Fragment, useCallback } from 'react';
 import { withRouter } from 'react-router-dom';
 import Logo from '../../../api/DefaultImg/ktest-nav-logo.png';
 import ReactGA from 'react-ga';
+import ReactGA4 from 'react-ga4';
 
 function CenterMenu({ page }) {
     function _eventSenderGA(category, action, label){
         ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+        ReactGA4.event({
             category: category,
             action: action,
             label: label

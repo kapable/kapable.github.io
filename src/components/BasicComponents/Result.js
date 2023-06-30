@@ -11,6 +11,7 @@ import COPYBTN from '../../api/DefaultImg/result-copy-link-btn.png';
 import AGAINBTN from '../../api/DefaultImg/result-to-again-btn.png';
 import TOHOMEBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import ReactGA from 'react-ga';
+import ReactGA4 from 'react-ga4';
 import { Helmet } from 'react-helmet';
 import ScriptTag from 'react-script-tag';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
@@ -137,6 +138,11 @@ class Result extends Component {
     
     _eventSenderGA(category, action, label){
         ReactGA.event({
+            category: category,
+            action: action,
+            label: label
+        });
+        ReactGA4.event({
             category: category,
             action: action,
             label: label
@@ -425,7 +431,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let mazeHeartEngList = ["mazeHeartEng"];
-        let loveLotteryList = ["loveLottery"];
+        let expressionCharList = ["expressionChar"];
         let hmallList = ['hmall', 'labelStickerSKT'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
@@ -547,8 +553,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (loveLotteryList.includes(this.state.current_test)) {
-            const rederTestList = ["hologramLove", "loveProfile", "mazeHeart", "loveRecipe", "lettering",];
+        } else if (expressionCharList.includes(this.state.current_test)) {
+            const rederTestList = ["loveLottery", "hologramLove", "loveProfile", "mazeHeart", "loveRecipe", "lettering",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -814,7 +820,7 @@ class Result extends Component {
         } else if (hmallList.includes(this.state.current_test)) {
             return null;
         } else {
-            const rederTestList = ["loveLottery", "hologramLove", "loveProfile", "mazeHeart", "loveRecipe",];
+            const rederTestList = ["expressionChar", "loveLottery", "hologramLove", "loveProfile", "mazeHeart", "loveRecipe",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
