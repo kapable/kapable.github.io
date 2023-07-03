@@ -9,7 +9,7 @@ import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
-import { _eventSenderGA } from './ShareGroup';
+import { _eventSenderGA } from '../../tools/tools';
 
 function MainPage(props) {
     const { state } = useLocation();
