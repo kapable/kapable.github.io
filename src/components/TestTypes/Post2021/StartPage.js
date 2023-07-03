@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 
 function Post2021(props) {
@@ -22,11 +21,6 @@ function Post2021(props) {
     }, [props])
 
     function _eventSenderGA(category, action, label){
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label
-        });
         ReactGA4.event({
             category: category,
             action: action,

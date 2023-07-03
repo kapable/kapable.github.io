@@ -17,7 +17,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Result from './components/BasicComponents/Result';
 import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
-import ReactGA from 'react-ga';
 import ReactGA4 from "react-ga4";
 import AuthPage from './components/TestTypes/Post2021/Users/AuthPage';
 import LoginPage from './components/TestTypes/Post2021/Users/LoginPage';
@@ -92,7 +91,7 @@ class App extends Component {
     this.mainMetaTagRenderer = this.mainMetaTagRenderer.bind(this);
   }
   componentDidMount(){
-    ReactGA.initialize([
+    ReactGA4.initialize([
       {
         trackingId: "G-CYC3X9T6NV",
         gaOptions: {
@@ -101,15 +100,6 @@ class App extends Component {
       }
     ]);
     ReactGA4.send({ hitType: "pageview", page:window.location.pathname+window.location.search, title: "App Main" });
-
-    ReactGA.initialize('UA-186793588-1', {
-      debug: false,
-      gaOptions:{
-        siteSpeedSampleRate: 100
-      }
-    });
-    ReactGA.set({page:window.location.pathname+window.location.search})
-    ReactGA.pageview(window.location.pathname+window.location.search);
   }
   all_lang_renderer(){
     let i = 0;

@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 
 const LoginPage = (props) => {
@@ -12,11 +11,6 @@ const LoginPage = (props) => {
     const buttonImgSrc = "https://images.ktestone.com/PostImg2022/Sign/signIn_button.png"
 
     const _eventSenderGA = (category, action, label) => {
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label,
-        });
         ReactGA4.event({
             category: category,
             action: action,

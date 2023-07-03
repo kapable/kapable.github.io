@@ -3,7 +3,6 @@ import { withRouter } from 'react-router';
 import axios from 'axios';
 import { Divider } from 'antd';
 import { useCookies } from 'react-cookie';
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 import AGAINBTN from '../../../api/DefaultImg/result-to-again-btn.png';
 import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
@@ -22,11 +21,6 @@ const LifetimeSajuResult = (props) => {
     const [startTimer, setStartTimer] = useState(false);
 
     const _eventSenderGA = (category, action, label) => {
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label
-        });
         ReactGA4.event({
             category: category,
             action: action,

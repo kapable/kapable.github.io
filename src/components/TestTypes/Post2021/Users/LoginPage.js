@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 
 function LoginPage(props) {
@@ -11,11 +10,6 @@ function LoginPage(props) {
     const api_url = 'https://api.ktestone.com';
 
     function _eventSenderGA(category, action, label){
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label
-        });
         ReactGA4.event({
             category: category,
             action: action,

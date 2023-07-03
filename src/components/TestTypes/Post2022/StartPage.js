@@ -1,18 +1,12 @@
 import React, { Fragment } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 
 const Post2022 = ({ language }) => {
     const introImgSrc = "https://images.ktestone.com/PostImg2022/Intro/Intro.png"
 
     const _eventSenderGA = (category, action, label) => {
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label,
-        });
         ReactGA4.event({
             category: category,
             action: action,

@@ -5,7 +5,6 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import styled, { createGlobalStyle } from 'styled-components';
 import ScriptTag from 'react-script-tag'
 import Pagination from "react-js-pagination";
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 import { Helmet } from 'react-helmet';
 import { useCookies } from 'react-cookie';
@@ -59,11 +58,6 @@ function PostPage(props) {
     )
     
     function _eventSenderGA(category, action, label){
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label
-        });
         ReactGA4.event({
             category: category,
             action: action,

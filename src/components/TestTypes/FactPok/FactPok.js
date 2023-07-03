@@ -4,17 +4,11 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { BrowserRouter as Router, Link, withRouter } from 'react-router-dom';
 import COPYBTN from '../../../api/DefaultImg/test-intro-copy-link-btn.png';
 import BACKBTN from '../../../api/DefaultImg/test-intro-other-tests-btn.png';
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 import { Helmet } from 'react-helmet';
 
 const FactPok = () => {
     const _eventSenderGA = (category, action, label) => {
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label
-        });
         ReactGA4.event({
             category: category,
             action: action,

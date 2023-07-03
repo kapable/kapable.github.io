@@ -3,7 +3,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import Pagination from "react-js-pagination";
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 import { Helmet } from 'react-helmet';
 
@@ -28,11 +27,6 @@ const PostPage = (props) => {
     const [shareMyBox, setShareMyBox] = useState("");
 
     const _eventSenderGA = (category, action, label) => {
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label,
-        });
         ReactGA4.event({
             category: category,
             action: action,

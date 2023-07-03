@@ -2,7 +2,6 @@ import React from 'react'
 import AudioReactRecorder, { RecordState } from 'audio-react-recorder'
 import 'audio-react-recorder/dist/index.css'
 import { Fragment } from 'react'
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 
 class DogSounds extends React.Component {
@@ -40,11 +39,6 @@ class DogSounds extends React.Component {
     }
 
     _eventSenderGA(category, action, label){
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label
-        });
         ReactGA4.event({
             category: category,
             action: action,

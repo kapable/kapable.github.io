@@ -2,7 +2,6 @@ import React, { Fragment, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser';
 import { Helmet } from 'react-helmet';
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 import './Article.css';
 import AdsenseAdvertiser from '../../SubComponents/AdsenseAdvertiser';
@@ -22,11 +21,6 @@ function Article(props) {
     }, []);
 
     function _eventSenderGA(category, action, label){
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label
-        });
         ReactGA4.event({
             category: category,
             action: action,

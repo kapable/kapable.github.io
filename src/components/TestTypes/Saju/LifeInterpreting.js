@@ -1,7 +1,6 @@
 import React, { Fragment, useCallback, useState } from 'react';
 import { DatePicker, Select, Radio } from 'antd';
 import moment from 'moment';
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 import 'moment/locale/ko';
 import locale from 'antd/es/date-picker/locale/ko_KR';
@@ -30,11 +29,6 @@ const LifeInterpreting = (props) => {
     const [isLoading, setIsLoading] = useState(false);
 
     const _eventSenderGA = (category, action, label) => {
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label
-        });
         ReactGA4.event({
             category: category,
             action: action,

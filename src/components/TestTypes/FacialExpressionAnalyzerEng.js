@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import ImageUploader from "react-images-upload";
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 
 class FacialExpressionAnalyzerEng extends React.Component {
@@ -22,11 +21,6 @@ class FacialExpressionAnalyzerEng extends React.Component {
     }
 
     _eventSenderGA(category, action, label){
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label
-        });
         ReactGA4.event({
             category: category,
             action: action,

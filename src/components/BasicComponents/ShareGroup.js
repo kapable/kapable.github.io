@@ -6,7 +6,6 @@ import {
     TwitterShareButton, TwitterIcon,
 } from "react-share";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 
 const ShareGroupDiv = styled.div`
@@ -32,11 +31,6 @@ const URLShareButton = styled.button`
     `;
 
 export const _eventSenderGA = (category, action, label) => {
-    ReactGA.event({
-        category: category,
-        action: action,
-        label: label
-    });
     ReactGA4.event({
         category: category,
         action: action,

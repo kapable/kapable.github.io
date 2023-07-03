@@ -20,7 +20,6 @@ import { Helmet } from 'react-helmet';
 import COPYBTN from '../../api/DefaultImg/result-copy-link-btn.png';
 import BACKBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import ScriptTag from 'react-script-tag'
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 
@@ -95,11 +94,6 @@ class Intro extends Component {
     };
     
     _eventSenderGA(category, action, label){
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label
-        });
         ReactGA4.event({
             category: category,
             action: action,

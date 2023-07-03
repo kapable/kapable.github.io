@@ -4,7 +4,6 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { BrowserRouter as Router, Link, withRouter } from 'react-router-dom';
 import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
 import BACKBTN from '../../../api/DefaultImg/result-to-home-btn.png';
-import ReactGA from 'react-ga';
 import ReactGA4 from 'react-ga4';
 import { Helmet } from 'react-helmet';
 import OtherLangIcons from '../../SubComponents/OtherLangIcons';
@@ -12,11 +11,6 @@ import OtherLangIcons from '../../SubComponents/OtherLangIcons';
 const TwoSplitedIntro = ({ test, lang, info }) => {
 
     const _eventSenderGA = (category, action, label) => {
-        ReactGA.event({
-            category: category,
-            action: action,
-            label: label
-        });
         ReactGA4.event({
             category: category,
             action: action,
