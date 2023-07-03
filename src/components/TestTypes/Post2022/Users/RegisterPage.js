@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../../tools/tools';
 
 const RegisterPage = (props) => {
     const [nickname, setNickname] = useState("");
@@ -10,15 +10,7 @@ const RegisterPage = (props) => {
     const [confirmPassword, setConfirmPassword] = useState("");
     const api_url = 'https://api.ktestone.com';
     const bgImgSrc = "https://images.ktestone.com/PostImg2022/Sign/sign_background.png";
-    const buttonImgSrc = "https://images.ktestone.com/PostImg2022/Sign/signUp_button.png"
-
-    const _eventSenderGA = (category, action, label) => {
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label,
-        });
-    };
+    const buttonImgSrc = "https://images.ktestone.com/PostImg2022/Sign/signUp_button.png";
 
     const onNicknameHandler = useCallback((e) => {
         setNickname(e.target.value);

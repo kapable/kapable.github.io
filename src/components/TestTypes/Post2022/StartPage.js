@@ -1,18 +1,10 @@
 import React, { Fragment } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 
 const Post2022 = ({ language }) => {
-    const introImgSrc = "https://images.ktestone.com/PostImg2022/Intro/Intro.png"
-
-    const _eventSenderGA = (category, action, label) => {
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label,
-        });
-    };
+    const introImgSrc = "https://images.ktestone.com/PostImg2022/Intro/Intro.png";
 
     const metaTagRenderer = () => {
         let _PostMetaTag = <Helmet>

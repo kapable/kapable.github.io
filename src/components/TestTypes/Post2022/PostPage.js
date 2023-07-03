@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import Pagination from "react-js-pagination";
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 import { Helmet } from 'react-helmet';
 
 const PostPage = (props) => {
@@ -25,14 +25,6 @@ const PostPage = (props) => {
     const [createBoxButtonImg, setCreateBoxButtonImg] = useState("");
     const [popupImg, setPopupImg] = useState("");
     const [shareMyBox, setShareMyBox] = useState("");
-
-    const _eventSenderGA = (category, action, label) => {
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label,
-        });
-    };
 
     const onShareBtnClick = () => {
         _eventSenderGA("Sharing", "Click Copy-link Button", "post page");

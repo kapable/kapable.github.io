@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 
 function Post2021(props) {
     const [upbarBtnImg, setUpbarBtnImg] = useState(``);
@@ -18,15 +18,7 @@ function Post2021(props) {
             setPostBoxBtnImg("https://images.ktestone.com/PostImg/English/Object/Postbox_startpg.png");
             setStartBtnImg("https://images.ktestone.com/PostImg/English/Button/Start_btn.png");
         }
-    }, [props])
-
-    function _eventSenderGA(category, action, label){
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    }
+    }, [props]);
 
     const metaTagRenderer = () => {
         if(props.language === `Kor`) {

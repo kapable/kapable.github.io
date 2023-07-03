@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 import ScriptTag from 'react-script-tag'
 import styled from 'styled-components';
 
@@ -39,14 +39,6 @@ function CompletedPage(props) {
         margin: 0 auto;
         max-width: 100%;
     `
-
-    function _eventSenderGA(category, action, label){
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    }
 
     return (
         <div>

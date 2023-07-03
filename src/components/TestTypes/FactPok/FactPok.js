@@ -4,18 +4,10 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { BrowserRouter as Router, Link, withRouter } from 'react-router-dom';
 import COPYBTN from '../../../api/DefaultImg/test-intro-copy-link-btn.png';
 import BACKBTN from '../../../api/DefaultImg/test-intro-other-tests-btn.png';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 import { Helmet } from 'react-helmet';
 
 const FactPok = () => {
-    const _eventSenderGA = (category, action, label) => {
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    };
-
     const _onShareButtonClick = () => {
         _eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
         return alert("링크가 복사됐어요!");

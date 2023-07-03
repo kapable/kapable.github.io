@@ -5,7 +5,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import styled, { createGlobalStyle } from 'styled-components';
 import ScriptTag from 'react-script-tag'
 import Pagination from "react-js-pagination";
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 import { Helmet } from 'react-helmet';
 import { useCookies } from 'react-cookie';
 
@@ -55,15 +55,7 @@ function PostPage(props) {
                 <p className='post-result-coupang-comment'>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
             </div>
         </div>
-    )
-    
-    function _eventSenderGA(category, action, label){
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    }
+    );
 
     const PageBackground = styled.div` 
         background-image: url("https://images.ktestone.com/PostImg/Background/background.png");

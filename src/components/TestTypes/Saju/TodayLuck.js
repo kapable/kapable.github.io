@@ -3,7 +3,7 @@ import { DatePicker } from 'antd';
 import moment from 'moment';
 import 'moment/locale/ko';
 import locale from 'antd/es/date-picker/locale/ko_KR';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 import { withRouter } from 'react-router';
 import crypto from 'crypto-js';
 import Lottie from 'react-lottie';
@@ -27,14 +27,6 @@ const TodayLuck = (props) => {
     const dateFormat = 'YYYYMMDD';
     const [day, setDay] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-
-    const _eventSenderGA = (category, action, label) => {
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    };
 
     const onSubmitClick = useCallback(async () => {
         if(!day) {

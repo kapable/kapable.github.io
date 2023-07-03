@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 import axios from 'axios';
 import { Divider } from 'antd';
 import { useCookies } from 'react-cookie';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 import AGAINBTN from '../../../api/DefaultImg/result-to-again-btn.png';
 import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
 import TOHOMEBTN from '../../../api/DefaultImg/result-to-home-btn.png';
@@ -19,14 +19,6 @@ const LifetimeSajuResult = (props) => {
     const coupangLink = originAdProb ? "https://link.coupang.com/a/PqWGr" : "https://link.coupang.com/a/PC8eL" ;
     const [coupangCount, setCoupangCount] = useState(5);
     const [startTimer, setStartTimer] = useState(false);
-
-    const _eventSenderGA = (category, action, label) => {
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    };
 
     const onCoupangButtonClick = useCallback(() => {
         const cookieAges = 60*60*12;

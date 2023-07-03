@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import axios from 'axios';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 import { Input } from 'antd';
 
 const PostWrite = (props) => {
@@ -21,14 +21,6 @@ const PostWrite = (props) => {
         'access-control-allow-origin': '*',
         'x-powered-by': 'Express' 
     },});
-
-    const _eventSenderGA = (category, action, label) => {
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label,
-        });
-    };
 
     function onMessageHandler(e) {
         e.preventDefault();

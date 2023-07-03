@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../../tools/tools';
 
 function RegisterPage(props) {
     const lang = props.language;
@@ -10,14 +10,6 @@ function RegisterPage(props) {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const api_url = 'https://api.ktestone.com';
-
-    function _eventSenderGA(category, action, label){
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    }
 
     function onNicknameHandler(e) {
         e.preventDefault();

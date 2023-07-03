@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser';
 import { Helmet } from 'react-helmet';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 import './Article.css';
 import AdsenseAdvertiser from '../../SubComponents/AdsenseAdvertiser';
 import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
@@ -19,14 +19,6 @@ function Article(props) {
             im.style.width = '95%'
         ))
     }, []);
-
-    function _eventSenderGA(category, action, label){
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    };
 
     const _onBackToListButtonClick = () => {
         _eventSenderGA("Paging", "Click Re-test Button", "article page");

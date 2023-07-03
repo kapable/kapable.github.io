@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import ARTICLES from '../../../api/ARTICLES';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 import './Article.css';
 import { Helmet } from 'react-helmet';
 import { Col, Row } from 'antd';
@@ -32,14 +32,6 @@ function ArticleList() {
                 <meta property="twitter:image" content={'https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png'}/>
             </Helmet>
         )
-    };
-
-    function _eventSenderGA(category, action, label){
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
     };
 
     const _onArticleButtonClick = () => {

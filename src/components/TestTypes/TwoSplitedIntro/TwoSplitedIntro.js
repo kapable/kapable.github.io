@@ -4,20 +4,11 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { BrowserRouter as Router, Link, withRouter } from 'react-router-dom';
 import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
 import BACKBTN from '../../../api/DefaultImg/result-to-home-btn.png';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 import { Helmet } from 'react-helmet';
 import OtherLangIcons from '../../SubComponents/OtherLangIcons';
 
 const TwoSplitedIntro = ({ test, lang, info }) => {
-
-    const _eventSenderGA = (category, action, label) => {
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    };
-
     const _onShareButtonClick = () => {
         const alertMsg = lang === 'Kor' ? '"링크가 복사됐어요!"' : 'the link copied!'
         _eventSenderGA("Sharing", "Click Copy-link Button", "intro page");

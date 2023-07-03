@@ -1,17 +1,9 @@
 import React, { Fragment, useCallback } from 'react';
 import { withRouter } from 'react-router-dom';
 import Logo from '../../../api/DefaultImg/ktest-nav-logo.png';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 
 function CenterMenu({ page }) {
-    function _eventSenderGA(category, action, label){
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    };
-
     const _onLogoClick = useCallback(() => {
         _eventSenderGA("Paging", "Click Nav to Home Logo", `${page} page`);
     }, [page]);

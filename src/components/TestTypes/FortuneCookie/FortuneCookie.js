@@ -1,7 +1,7 @@
 import React, { Fragment, useCallback, useEffect, useState } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { Link } from 'react-router-dom';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 import { withRouter } from 'react-router-dom';
 import COPYBTN from '../../../api/DefaultImg/test-intro-copy-link-btn.png';
 import BACKBTN from '../../../api/DefaultImg/test-intro-other-tests-btn.png';
@@ -77,14 +77,6 @@ const FortuneCookie = () => {
     
     const [mode, setMode] = useState('intro');
     const [quote, setQuote] = useState({});
-
-    const _eventSenderGA = (category, action, label) => {
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label,
-        });
-    };
 
     const _onShareButtonClick = () => {
         _eventSenderGA("Sharing", "Click Copy-link Button", "intro page");

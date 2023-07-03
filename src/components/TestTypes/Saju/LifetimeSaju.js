@@ -1,7 +1,7 @@
 import React, { Fragment, useCallback, useState } from 'react';
 import { DatePicker, Select, Radio } from 'antd';
 import moment from 'moment';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 import 'moment/locale/ko';
 import locale from 'antd/es/date-picker/locale/ko_KR';
 import { withRouter } from 'react-router';
@@ -27,14 +27,6 @@ const LifetimeSaju = (props) => {
     const dateFormat = 'YYYYMMDD';
     const [day, setDay] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-
-    const _eventSenderGA = (category, action, label) => {
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    };
 
     const onSubmitClick = useCallback(async () => {
         if(!day) {

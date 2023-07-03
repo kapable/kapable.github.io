@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../../tools/tools';
 import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import RegisterPage from './RegisterPage';
@@ -39,14 +39,6 @@ function LandingPage(props) {
                     </ScriptTag>
             </Fragment>
         )
-    }
-
-    function _eventSenderGA(category, action, label){
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
     }
 
     const applyBtnHandler = () => {
