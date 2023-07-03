@@ -10,7 +10,7 @@ import HorizontalScrolling from '../SubComponents/horizontalScrolling'
 import COPYBTN from '../../api/DefaultImg/result-copy-link-btn.png';
 import AGAINBTN from '../../api/DefaultImg/result-to-again-btn.png';
 import TOHOMEBTN from '../../api/DefaultImg/result-to-home-btn.png';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../tools/tools';
 import { Helmet } from 'react-helmet';
 import ScriptTag from 'react-script-tag';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
@@ -62,7 +62,6 @@ class Result extends Component {
             coupangCount: 5,
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
-        this._eventSenderGA = this._eventSenderGA.bind(this);
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
         this._onPPLBannerClick = this._onPPLBannerClick.bind(this);
         this._onGotoBlogClick = this._onGotoBlogClick.bind(this);
@@ -107,8 +106,8 @@ class Result extends Component {
             isOpened: true,
         });
         if(this.state.originAdProb) {
-            this._eventSenderGA("Paging", `Click go-to-Coupang Button(${test})`, "result page");
-            this._eventSenderGA("Paging", `Click go-to-Coupang Button`, "result page");
+            _eventSenderGA("Paging", `Click go-to-Coupang Button(${test})`, "result page");
+            _eventSenderGA("Paging", `Click go-to-Coupang Button`, "result page");
         }
     };
 
@@ -121,7 +120,7 @@ class Result extends Component {
             coupangCookies: cookies.get('coupang'),
             isOpened: true,
         });
-        this._eventSenderGA("Closing", "Click Close-Coupang Button", "result page");
+        _eventSenderGA("Closing", "Click Close-Coupang Button", "result page");
     }
 
     onOtherCoupangButtonClick(){
@@ -132,17 +131,8 @@ class Result extends Component {
             coupangCookies: cookies.get('coupang'),
             isOpened: true,
         });
-        this._eventSenderGA("Paging", "Click go-to-Other-Coupang Button", "result page");
+        _eventSenderGA("Paging", "Click go-to-Other-Coupang Button", "result page");
     };
-    
-    _eventSenderGA(category, action, label){
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    };
-
     _onBackToStartButtonClick(){
         let factPokQueries = ["factPok", "MyFactPok", "FriendFactPok"];
         let coupleCharacterQueries = ["coupleCharacter", "coupleCharacterFemale", "coupleCharacterMale"];
@@ -192,7 +182,7 @@ class Result extends Component {
         if(haGenderQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/haGender/";
         };
-        this._eventSenderGA("Paging", "Click Re-test Button", "result page");
+        _eventSenderGA("Paging", "Click Re-test Button", "result page");
         this.setState({
             mode:"intro"
         })
@@ -202,16 +192,16 @@ class Result extends Component {
         this.setState({
             num_shares_count:this.state.num_shares_count+1
         })
-        this._eventSenderGA("Sharing", "Click Copy-link Button", "result page");
+        _eventSenderGA("Sharing", "Click Copy-link Button", "result page");
         alert("링크가 복사됐어요!");
     };
 
     _onPPLBannerClick(){
-        this._eventSenderGA("Outlinking", "Click PPL-Banner Button", "result page");
+        _eventSenderGA("Outlinking", "Click PPL-Banner Button", "result page");
     };
 
     _onGotoBlogClick(){
-        this._eventSenderGA("Outlinking", "Click Go-to-Blog Button", "result page");
+        _eventSenderGA("Outlinking", "Click Go-to-Blog Button", "result page");
     };
 
     cpcBannerResultFooterScriptor(){
@@ -1112,7 +1102,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href='https://gift.kakao.com/product/5582623'
                                 className='to-tonymoly-kakao-banner'
-                                onClick={() => (this._eventSenderGA("Paging", "Click Go-to-Kakao Button", "tonymoly result page"))}
+                                onClick={() => (_eventSenderGA("Paging", "Click Go-to-Kakao Button", "tonymoly result page"))}
                             >
                                 <img loading="lazy" src={`https://images.ktestone.com/meta/factPok/factPok-bottom-banner-left.jpg`} className='result-factPok-bottom-banner-left' alt='result-factPok-bottom-banner-left' />
                             </a>
@@ -1121,7 +1111,7 @@ class Result extends Component {
                                 rel="noopener noreferrer"
                                 href='https://smartstore.naver.com/tonymolyofficial/products/7216276892'
                                 className='to-tonymoly-store-banner'
-                                onClick={() => (this._eventSenderGA("Paging", "Click Go-to-Store Button", "tonymoly result page"))}
+                                onClick={() => (_eventSenderGA("Paging", "Click Go-to-Store Button", "tonymoly result page"))}
                             >
                                 <img loading="lazy" src={`https://images.ktestone.com/meta/factPok/factPok-bottom-banner-right.jpg`} className='result-factPok-bottom-banner-right' alt='result-factPok-bottom-banner-right' />
                             </a>
@@ -1239,7 +1229,7 @@ class Result extends Component {
                         rel="noopener noreferrer"
                         href={hmall_type_link_obj[_current_test_result.type]}>
                         <img loading="lazy" style={{maxWidth:"16.5rem"}} src='https://images.ktestone.com/meta/hmall/hmall-go-to-result-btn.png' alt="Hmall로 결과 보러가기"
-                            onClick={this._eventSenderGA("Paging", "Click go-to-Hmall Button", "result page")}
+                            onClick={_eventSenderGA("Paging", "Click go-to-Hmall Button", "result page")}
                         />
                     </a>
                 )
@@ -1252,7 +1242,7 @@ class Result extends Component {
                         <div style={{position: "relative", backgroundColor: "rgba(255,255,255,0.8)", height: "4rem", top: "-4rem", width: "100%"}}>
                             <div style={{position: "relative", width: "100%", height: "2rem", top: "0.5rem", margin: "0 auto"}}>
                                 <div style={{width: "fit-content", margin: "0 auto", position: "relative"}}>
-                                    <a rel="noopener noreferrer" target="_blank" href={`https://m.shop.tworld.co.kr/exhibition/view?exhibitionId=P00000337&mbti=${final_type}&utm_source=ktest&utm_medium=result&utm_campaign=0directplanktest`} onClick={() => this._eventSenderGA("Outlinking", "Click SKT Go-to-Result Button", "result page")}>
+                                    <a rel="noopener noreferrer" target="_blank" href={`https://m.shop.tworld.co.kr/exhibition/view?exhibitionId=P00000337&mbti=${final_type}&utm_source=ktest&utm_medium=result&utm_campaign=0directplanktest`} onClick={() => _eventSenderGA("Outlinking", "Click SKT Go-to-Result Button", "result page")}>
                                         <img src='https://images.ktestone.com/meta/labelStickerSKT/SKT-go-to-result-button.jpeg' alt='SKT-go-to-result' style={{ cursor: "pointer", width: '15rem' }}/>
                                     </a>
                                 </div>
@@ -1606,7 +1596,7 @@ class Result extends Component {
                             src={TOHOMEBTN}
                             onClick={function(e) {
                                 e.preventDefault();
-                                this._eventSenderGA("Paging", "Click Back-to-main Button", "result page");
+                                _eventSenderGA("Paging", "Click Back-to-main Button", "result page");
                                 this.setState({
                                     mode:"main"
                                 })

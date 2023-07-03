@@ -99,7 +99,6 @@ class App extends Component {
         }
       }
     ]);
-    ReactGA4.send({ hitType: "pageview", page:window.location.pathname+window.location.search, title: "App Main" });
   }
   all_lang_renderer(){
     let i = 0;

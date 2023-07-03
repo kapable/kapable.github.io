@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
 import TEST from '../../api/TESTS';
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../tools/tools';
 
 // const Arrow = ({ text, className }) => {
 //   return (
@@ -90,15 +90,8 @@ class horizontalScrolling extends Component {
     this.menuItems = this.Menu(this.state.list.slice(0, this.state.list.length), this.state.selected);
     
   }
-  _eventSenderGA(category, action, label){
-    ReactGA4.event({
-        category: category,
-        action: action,
-        label: label
-      });
-  }
   _onPPLBannerClick(){
-    this._eventSenderGA("Outlinking", "Click NewTest-Banner Button", "result page");
+    _eventSenderGA("Outlinking", "Click NewTest-Banner Button", "result page");
   }
   // // All items component
   // // Important! add unique key

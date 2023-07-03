@@ -2,7 +2,7 @@ import React from 'react'
 import AudioReactRecorder, { RecordState } from 'audio-react-recorder'
 import 'audio-react-recorder/dist/index.css'
 import { Fragment } from 'react'
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../tools/tools'
 
 class DogSounds extends React.Component {
     constructor(props) {
@@ -17,7 +17,6 @@ class DogSounds extends React.Component {
             resultNum:Math.floor(Math.random() * 183) + 1
         }
     this.pageRenderer = this.pageRenderer.bind(this);
-    this._eventSenderGA = this._eventSenderGA.bind(this);
     }
 
     start = () => {
@@ -36,15 +35,7 @@ class DogSounds extends React.Component {
     this.setState({
         audioData: data
         })
-    }
-
-    _eventSenderGA(category, action, label){
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    }
+    };
 
     pageRenderer = () => {
         if(this.state.stage === 1) { // The first stage : input dog's name
@@ -123,7 +114,7 @@ class DogSounds extends React.Component {
                         onClick={function(e){
                             e.preventDefault()
                             if(this.state.audioData) {
-                                this._eventSenderGA("Paging", "Click Go-to-Analyze Button", "upload page");
+                                _eventSenderGA("Paging", "Click Go-to-Analyze Button", "upload page");
                                 this.props.onChangeMode(this.state.dogName, this.state.resultNum, "loading") // go to loading page
                             } else {
                                 alert("Please let me hear your dog's breathing, barking, etc.")

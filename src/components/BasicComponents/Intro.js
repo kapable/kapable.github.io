@@ -20,7 +20,7 @@ import { Helmet } from 'react-helmet';
 import COPYBTN from '../../api/DefaultImg/result-copy-link-btn.png';
 import BACKBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import ScriptTag from 'react-script-tag'
-import ReactGA4 from 'react-ga4';
+import { _eventSenderGA } from '../../tools/tools';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 
 class Intro extends Component {
@@ -70,7 +70,6 @@ class Intro extends Component {
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
         this._onMainButtonClick = this._onMainButtonClick.bind(this);
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
-        this._eventSenderGA = this._eventSenderGA.bind(this);
     }
     reloadPage() {
         // for blocking Adfit banner with page refreshing for PPL
@@ -92,16 +91,8 @@ class Intro extends Component {
             });
         };
     };
-    
-    _eventSenderGA(category, action, label){
-        ReactGA4.event({
-            category: category,
-            action: action,
-            label: label
-        });
-    }
     _onStartButtonClick(){
-        this._eventSenderGA("Paging", `Click ${this.state.current_test.info.mainUrl === 'hmall' ? 'hmall' : ''}Start-test Button`, "intro page");
+        _eventSenderGA("Paging", `Click ${this.state.current_test.info.mainUrl === 'hmall' ? 'hmall' : ''}Start-test Button`, "intro page");
         this.setState({
             mode:'quiz'
         })
@@ -113,14 +104,14 @@ class Intro extends Component {
         this.setState({
             mode:'main'
         })
-        this._eventSenderGA("Paging", "Click Back-to-main Button", "intro page");
+        _eventSenderGA("Paging", "Click Back-to-main Button", "intro page");
     }
 
     _onShareButtonClick(){
         this.setState({
             num_shares_count:this.state.num_shares_count+1
         })
-        this._eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
+        _eventSenderGA("Sharing", "Click Copy-link Button", "intro page");
         alert("링크가 복사됐어요!");
     }
     cpcBannerIntroFooterScriptor(){
