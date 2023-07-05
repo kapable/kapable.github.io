@@ -5,8 +5,8 @@ import OtherLangIcons from '../SubComponents/OtherLangIcons';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import App from '../../App'
 import { Card } from 'react-bootstrap';
-import { CopyToClipboard } from 'react-copy-to-clipboard'
-import HorizontalScrolling from '../SubComponents/horizontalScrolling'
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import HorizontalScrolling from '../SubComponents/horizontalScrolling';
 import COPYBTN from '../../api/DefaultImg/result-copy-link-btn.png';
 import AGAINBTN from '../../api/DefaultImg/result-to-again-btn.png';
 import TOHOMEBTN from '../../api/DefaultImg/result-to-home-btn.png';
@@ -415,7 +415,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let mazeHeartEngList = ["mazeHeartEng"];
-        let scrapBookCharList = ["scrapBookChar"];
+        let blackboardCharList = ["blackboardChar"];
         let hmallList = ['hmall', 'labelStickerSKT'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
@@ -537,8 +537,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (scrapBookCharList.includes(this.state.current_test)) {
-            const rederTestList = ["expressionChar", "loveLottery", "hologramLove", "loveProfile", "mazeHeart", "loveRecipe"];
+        } else if (blackboardCharList.includes(this.state.current_test)) {
+            const rederTestList = ["scrapBookChar", "expressionChar", "loveLottery", "hologramLove", "loveProfile",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -804,7 +804,7 @@ class Result extends Component {
         } else if (hmallList.includes(this.state.current_test)) {
             return null;
         } else {
-            const rederTestList = ["scrapBookChar", "expressionChar", "loveLottery", "hologramLove", "loveProfile",];
+            const rederTestList = ["blackboardChar", "scrapBookChar", "expressionChar", "loveLottery",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
