@@ -93,7 +93,7 @@ class App extends Component {
   componentDidMount(){
     ReactGA4.initialize([
       {
-        trackingId: "G-CYC3X9T6NV",
+        trackingId: "G-W3LQWJVJLX",
         gaOptions: {
           siteSpeedSampleRate: 100
         }
