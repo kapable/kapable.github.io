@@ -344,6 +344,333 @@ const TESTS = [
             },
         ]
     },
+    // postCardEng
+    {
+        info : {
+            mainTitle:"Postcard personality test",
+            subTitle:"Let's decorate my personality with postcards",
+            mainUrl:"postCardEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/postCardEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/postCardEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'How do you talk when you talk to your friend?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I should speak after my friend has spoken'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I response based on what my friend says'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What can be your reaction when an appointment with a friend is canceled?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I urgently contact other friends"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I secretly like it and rest well at home"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "On the weekend after working hard for a week, what do you do?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I've only been inside the company all week, so I should go outside and have fun with my friends`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I have been working all week, so I should rest at home on the weekend`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What can you do better?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I can do things that require meticulousness and delicacy`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I can do things that requires imagination and creativity`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "“What if you could have one superpower?” what can be your response?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I don’t think it could happen"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Only one superpower? Hmmm (thinking..)`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What if the movie you really enjoyed had an open ending?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `It's a pity that the movie I enjoyed had an unpleasant open ending`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I can freely imagine the story after the ending`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Which one is closer to you when it comes to explaining what you know to the other person?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I even clearly explain the dictionary meaning"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I explain with an example so that the other person can easily understand"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What if your friend who is driving is sleepy while on summer vacation?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I try to find next resting area and inform the location`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I keep trying to talk to my friend and say I should drive instead"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What do you do more to someone who you like?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I am constantly expressing interest and asking questions"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I sincerely sympathize with the reaction"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Who do you feel more uncomfortable with?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `A person who ignores all the original plans and does things their own way`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `A person who forces me to stick to the plan even if there is a better way`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "When you try to reach your goal, how do you do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I set a goal and stick to it"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I set several goals and try different things"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'When using public transportation, how do you do?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I find the shortest route to my destination, check when it arrives, and then go out on time"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I just go to bus stop and wait, and if it doesn't come, I look for when it will arrives"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/postCardEng/INFP.jpg'
+            },
+        ]
+    },
     // blackboardChar
     {
         info : {
