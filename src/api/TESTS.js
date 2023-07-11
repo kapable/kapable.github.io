@@ -344,6 +344,331 @@ const TESTS = [
             },
         ]
     },
+    // flowerGardenJP
+    {
+        info : {
+            mainTitle:"恋愛花畑テスト",
+            subTitle:"花畑で見る私の恋愛スタイルは？",
+            mainUrl:"flowerGardenJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/flowerGardenJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/flowerGardenJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"JP",
+            category: "love",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '約束があって外に出たときの私の姿は？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'もう行くって？ まだ始まったばかりなのに何言ってるの？'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'そろそろ家に帰りたいけど...ベッドが恋しいよ'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "恋人に怒られた時の私は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "なぜ怒っているのかをすぐに話しながら解決する"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "とりあえず考えを整理する時間が必要（沈黙）"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "会話中に静寂が流れると？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `この静寂、私は我慢できない··· 何でも言い出す`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `目配せしながら誰かが言うのを待ってみる`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "待ち合わせた恋人が今日疲れていると言ったら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `疲れたら今日休む？と聞く`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `疲れたというのは、今日は休みたいってことなのかな...？と悩む`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "カフェで飲み物を持って階段を登っている。この時、私の思いは？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "階段が多いな、早く行って飲みたい"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `階段を登るときは、転倒して飲み物をこぼすこともあるので注意が必要です`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋愛初期によく考えることは？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `喧嘩しないで長く会いましょう`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `これから私たちはどうなるのかな？長く会えるかな？`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `今日はすごく疲れたけど、君が見たくて出てきた！」と言われたら、私の答えは？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "家で休んでもいいのに、なんでそんなことしたの！？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "本当に...？(感動)すごく疲れそうだけど.... 大丈夫...？"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "異性に興味を示す方法は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `質問爆弾、疑問符キラーになる`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "些細なことでもリアクション職人になる"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `恋人と別れたと泣いている友達、私の反応は？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "なぜ別れたの？ 落ち着いて話せよ."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "大変だね...うん、泣きたいくらい泣くよ"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "私は何の予定もなく家で休むことができるのだろうか？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `大まかにでも何をしながら休むか計画を立てなければならない`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `計画を立てるならその日は休みの日ではない`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "会話中に話がそれてしまったら、私は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "テーマに合わない話をすると不愉快"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "他の話をしても面白ければOK"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '通常、どんな決断をしたとき私は？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "一度決めたことは簡単に変えない"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "より良い決定があればすぐに変更可能"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/flowerGardenJP/INFP.jpg'
+            },
+        ]
+    },
     // digitalChar
     {
         info : {
