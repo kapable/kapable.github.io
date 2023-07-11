@@ -108,7 +108,7 @@ function MainPage(props) {
                     <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter-thumb.png`} alt='coupleCharacter' />
                 </Link>
             ) : (
-                (props.lang === 'Eng' || props.lang === 'CN' || props.lang === 'JP')
+                (props.lang === 'Eng' || props.lang === 'CN' || props.lang === 'JP' || props.lang === 'IT')
                 ? <Link to={`/coupleCharacter${props.lang}`} className="main-link-block" key="coupleCharacter-banner">
                     <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter${props.lang}-thumb.png`} alt='coupleCharacter' />
                 </Link>:null

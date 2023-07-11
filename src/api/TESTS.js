@@ -94973,6 +94973,656 @@ const TESTS = [
             },
         ]
     },
+    // coupleCharacterFemaleIT
+    {
+        info : {
+            mainTitle:"Test del carattere della coppia",
+            subTitle:"Quali sono le mie tendenze romantiche come personaggio di coppia?",
+            mainUrl:"coupleCharacterFemaleIT",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'Quando devo decidere quale appuntamento avere con il mio partner, lo faccio?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Iniziativa e proattività'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Reagisco e sono d'accordo con le decisioni del mio amante"
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Qual è il più vicino a voi?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Parlo molto quando sono con le persone e ancora di più quando sono con il mio amante"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Parlo molto quando sono con il mio amante, ma non quando sono con qualcun altro"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Come reagireste se, all'inizio della vostra relazione, voi e il vostro partner vi frequentaste ininterrottamente nei fine settimana?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `È stato un appuntamento molto soddisfacente e felice. Mi ha guarito completamente!`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `È stato un appuntamento divertente, ma dovrei prendere uno dei due giorni liberi della prossima settimana...?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: 'Se mentre parlavate al telefono il vostro amante vi dicesse: "È ora di dormire", come reagireste?',
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `È vero, è tardi, quindi andiamo a letto.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Mi domanderei perché all'improvviso vuoi dormire? Sei annoiato di me?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Come reagireste se mangiaste un cibo molto delizioso in un ristorante?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "È così delizioso che voglio tornare la prossima volta."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `E 'così delizioso, vorrei provare a immaginare come fare questo cibo`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Quando cucinate per il vostro amante, cosa rispondereste se vi chiedessero come avete fatto a renderlo così delizioso?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Rispondevo: "Ho seguito la ricetta."`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Io risponderei: "L'ho fatto con il mio gusto"`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `E se un ragazzo per strada vi dicesse che siete il suo compagno ideale e vi chiedesse il numero?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Ne sono felice e mi chiedo cosa gli piaccia di me."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Mi sento bene e immagino come sarebbe uscire con questa persona"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Com'ero quando ho iniziato a frequentare qualcuno?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Ho molte domande e interesse`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Ho molta empatia e reazioni"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Se il tuo amante mi dà da mangiare, cosa mi impressiona?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Sarei impressionato dalla qualità e dal gusto del cibo"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Mi commuoveva il fatto che il mio amante cucinasse per me"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Cosa comprereste se vi fermaste in un supermercato mentre andate in campeggio con il vostro amante?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `Deciderei in anticipo cosa comprare e comprerei solo ciò di cui abbiamo bisogno.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `Penserei a cosa comprare mentre mi guardo intorno al negozio`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Dopo aver mangiato cibo consegnato in casa, come si pulisce?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Devo pulire subito."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Faccio una pausa, parlo e pulisco lentamente più tardi"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'Cosa fate quando andate in un ristorante famoso con il vostro amante?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Preparo e verifico in anticipo il modo più semplice per arrivarci"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "All'ultimo minuto, di solito mi sono affrettato a trovare un modo per arrivare lì"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wksthfleoakdhkd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhlrkdsodb",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekwjdekrka",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dyffhfkdlvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmdqntk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dkfEMftlswkq",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhfemsflxmflqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fldortusaksfpq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "Rhseo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wkdrldusdo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Whfqh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gjekd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dnjzjghfflr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ajdEoflsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterFemaleIT/INFP.jpg'
+            },
+        ]
+    },
+    // coupleCharacterMaleIT
+    {
+        info : {
+            mainTitle:"Test del carattere della coppia",
+            subTitle:"Quali sono le mie tendenze romantiche come personaggio di coppia?",
+            mainUrl:"coupleCharacterMaleIT",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/kbmti-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/personalColor.png",
+            lang:"",
+            category: "love"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'Quando devo decidere quale appuntamento avere con il mio partner, lo faccio?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'Iniziativa e proattività'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Reagisco e sono d'accordo con le decisioni del mio amante"
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "Qual è il più vicino a voi?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "Parlo molto quando sono con le persone e ancora di più quando sono con il mio amante"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "Parlo molto quando sono con il mio amante, ma non quando sono con qualcun altro"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Come reagireste se, all'inizio della vostra relazione, voi e il vostro partner vi frequentaste ininterrottamente nei fine settimana?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `È stato un appuntamento molto soddisfacente e felice. Mi ha guarito completamente!`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `È stato un appuntamento divertente, ma dovrei prendere uno dei due giorni liberi della prossima settimana...?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: 'Se mentre parlavate al telefono il vostro amante vi dicesse: "È ora di dormire", come reagireste?',
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `È vero, è tardi, quindi andiamo a letto.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Mi domanderei perché all'improvviso vuoi dormire? Sei annoiato di me?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Come reagireste se mangiaste un cibo molto delizioso in un ristorante?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "È così delizioso che voglio tornare la prossima volta."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `E 'così delizioso, vorrei provare a immaginare come fare questo cibo`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Quando cucinate per il vostro amante, cosa rispondereste se vi chiedessero come avete fatto a renderlo così delizioso?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Rispondevo: "Ho seguito la ricetta."`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Io risponderei: "L'ho fatto con il mio gusto"`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `E se un ragazzo per strada vi dicesse che siete il suo compagno ideale e vi chiedesse il numero?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Ne sono felice e mi chiedo cosa gli piaccia di me."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Mi sento bene e immagino come sarebbe uscire con questa persona"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "Com'ero quando ho iniziato a frequentare qualcuno?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Ho molte domande e interesse`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Ho molta empatia e reazioni"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `Se il tuo amante mi dà da mangiare, cosa mi impressiona?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Sarei impressionato dalla qualità e dal gusto del cibo"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Mi commuoveva il fatto che il mio amante cucinasse per me"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Cosa comprereste se vi fermaste in un supermercato mentre andate in campeggio con il vostro amante?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `Deciderei in anticipo cosa comprare e comprerei solo ciò di cui abbiamo bisogno.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `Penserei a cosa comprare mentre mi guardo intorno al negozio`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "Dopo aver mangiato cibo consegnato in casa, come si pulisce?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Devo pulire subito."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Faccio una pausa, parlo e pulisco lentamente più tardi"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'Cosa fate quando andate in un ristorante famoso con il vostro amante?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Preparo e verifico in anticipo il modo più semplice per arrivarci"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "All'ultimo minuto, di solito mi sono affrettato a trovare un modo per arrivare lì"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "wksthfleoakdhkd",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "dhlrkdsodb",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ekwjdekrka",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dyffhfkdlvm",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "tmdqntk",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "dkfEMftlswkq",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "rhfemsflxmflqj",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "fldortusaksfpq",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "Rhseo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlqehfdl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wkdrldusdo",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Whfqh",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "gjekd",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dnjzjghfflr",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ajdEoflsms",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "sowjrrhkswhd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/coupleCharacterMaleIT/INFP.jpg'
+            },
+        ]
+    },
     // coupleCharacterFemaleJP
     {
         info : {

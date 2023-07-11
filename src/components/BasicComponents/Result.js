@@ -139,6 +139,7 @@ class Result extends Component {
         let coupleCharacterEngQueries = ["coupleCharacterEng", "coupleCharacterFemaleEng", "coupleCharacterMaleEng"];
         let coupleCharacterCNQueries = ["coupleCharacterCN", "coupleCharacterFemaleCN", "coupleCharacterMaleCN"];
         let coupleCharacterJPQueries = ["coupleCharacterJP", "coupleCharacterFemaleJP", "coupleCharacterMaleJP"];
+        let coupleCharacterITQueries = ["coupleCharacterIT", "coupleCharacterFemaleIT", "coupleCharacterMaleIT"];
         let loveCharacterQueries = ["loveCharacter", "loveCharacterFemale", "loveCharacterMale"];
         let loveCharacterCNQueries = ["loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN"];
         let loveCharacterEngQueries = ["loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng"];
@@ -160,6 +161,9 @@ class Result extends Component {
         };
         if(coupleCharacterJPQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/coupleCharacterJP/";
+        };
+        if(coupleCharacterITQueries.some(el => this.state.current_url.includes(el))) {
+            window.location.href = window.location.origin + "/kapable.github.io/coupleCharacterIT/";
         };
         if(loveCharacterQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/loveCharacter/";
@@ -406,7 +410,7 @@ class Result extends Component {
         let JPTestList = ["speechHabitJP", "loveFlameJP", "readyToBoneJP", "earthCharacteristicJP", "cantWaitJP", "puzzleLoveJP", "coupleCharacterJP","coupleCharacterMaleJP","coupleCharacterFemaleJP", "mbtiFeaturesJP", "loveCellJP", "emotionGraphJP", "polaroidCharacteristicJP", "loveTicketJP", "loveCharacterMaleJP", "loveCharacterFemaleJP", "loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP", "personalColorJP"];
         let GerTestList = ["loveCharacterGer", "personalColorGer"];
         let ESTestList = ["loveWarningES", "personalColorES"];
-        let ITTestList = ["loveCharacterMaleIT", "loveCharacterFemaleIT", "loveFlameIT", "characteristicChracterIT"];
+        let ITTestList = ["coupleCharacterIT","coupleCharacterMaleIT","coupleCharacterFemaleIT", "loveCharacterMaleIT", "loveCharacterFemaleIT", "loveFlameIT", "characteristicChracterIT"];
         let readyToBoneITList = ["readyToBoneIT"];
         let characteristicChracterESList = ["characteristicChracterES"];
         let characteristicChracterGerList = ["characteristicChracterGer",];

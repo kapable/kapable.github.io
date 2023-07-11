@@ -271,6 +271,7 @@ class App extends Component {
             <Route path="/coupleCharacterEng/" component={() => <TwoSplitedIntro test={"coupleCharacter"} lang={'Eng'} info={{ title: "Couple character test - Male | Female - KTEST", subTitle: "Your dating personality as couple character? - Male | Female - KTEST" }} />} />
             <Route path="/coupleCharacterCN/" component={() => <TwoSplitedIntro test={"coupleCharacter"} lang={'CN'} info={{ title: "情侣性格测试 - 女方,男方 - KTEST", subTitle: "以情侣类型看我在恋爱中的性格是？ - 女方,男方 - KTEST" }} />} />
             <Route path="/coupleCharacterJP/" component={() => <TwoSplitedIntro test={"coupleCharacter"} lang={'JP'} info={{ title: "カップルキャラクターテスト - 女方,男方 - KTEST", subTitle: "私が花びらだったら、果たしてどんな花びらだろう？ - 女方,男方 - KTEST" }} />} />
+            <Route path="/coupleCharacterIT/" component={() => <TwoSplitedIntro test={"coupleCharacter"} lang={'IT'} info={{ title: "Test del carattere della coppia - KTEST", subTitle: "Quali sono le mie tendenze romantiche come personaggio di coppia? - KTEST" }} />} />
 
             {/* go to "LoveCharacter" page */}
             <Route path="/loveCharacter/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'Kor'} info={{ title: "연애 캐릭터 테스트 - 케이테스트", subTitle: "캐릭터로 보는 나의 연애 성향은? - 연애 캐릭터 테스트 남자편 여자편 - 케이테스트" }} />} />
