@@ -344,6 +344,331 @@ const TESTS = [
             },
         ]
     },
+    // rainDrop
+    {
+        info : {
+            mainTitle:"빗 방울 성격 테스트",
+            subTitle:"떨어지는 빗 방울로 알아보는 나의 성격은?",
+            mainUrl:"rainDrop",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/rainDrop-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/rainDrop-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '장마가 시작되어 비가 많이 내리는 주말, 친구와 미리 잡은 약속이 있다면?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '비가 많이 오네? 아쉽지만, 실내에서 놀자고 해야겠다'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '비가 많이 오네.. 혹시 나중에 만나자고 약속 취소 연락 오지 않을까??'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "내가 선호하는 의사소통 방식은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "직접 만나서 말로 소통하는 것"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "문자나, 톡 등 글로 소통하는 것"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "드디어 찾아온 주말! 나의 선택은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `밖에서 친구들을 만나 신나게 놀기`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `집에서 힐링 하며, 푹 쉬기`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "비가 많이 내리는 장마철 퇴근길, 내 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `비 엄청 많이 오네.. 빨리 가야지!`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `혹시 길 가다가 벼락 맞는 건 아니겠지?..`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "집에 누워 있는데, 밖에 갑자기 비가 쏟아진다면 내 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "갑자기 비가 내리네.. 오늘 같은 날 약속 안 잡아서 다행이다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `갑자기 들려오는 빗소리에 파전 먹는 상상이 저절로 떠올랐다`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "배달을 시켰는데, 예상 시간보다 너무 늦는다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `어떻게 된 건지 궁금해서 전화한다`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `혹시 배달기사님에게 무슨 일이 생긴 것은 아닌지 걱정한다`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `연인이 빗 길에 넘어졌다고 연락이 온다면 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "헉 괜찮아? 뭐 하다가 넘어졌어?!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "헉 괜찮아? 어디 다친 곳은 없어?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구가 속 깊은 이야기를 털어놨을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `친구의 말을 끝까지 듣고, 조언해준다`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "친구의 말에 감정이입 하며, 리액션을 한다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `친구가 길에서 누군가와 싸우고 있다, 들어보니 친구의 잘 못 일 때 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "솔직하게 친구의 잘 못이라고 확실하게 말해준다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "시간을 두고, 상황이 마무리 된 후 친구에게 잘 못을 알려준다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "장맛비 내리는 날, 밖에서 해야 할 일이 있다면 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `비가 많이 오긴 해도.. 오늘 하기로 한 일이니까 해야지!`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `비가 너무 많이 오는데.. 그냥 나중에 날씨 풀리면 해야겠다.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구들이 갑자기 모이자고 한다면 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "이렇게 갑자기 만나는 것은 어렵다고 말한다"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "뭐 할 건지 물어보고, 끌리면 나간다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '길을 걷다 갑자기 소나기가 내린다, 눈앞에 우산이 보이는 상황, 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "이런 갑작스러운 소나기에 우산을 살 수는 없지!! 잠깐 피해 있다 가야지!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "비 맞는 것 보다 낫지! 우산을 바로 구매한다"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDrop/INFP.jpg'
+            },
+        ]
+    },
     // flowerGardenJP
     {
         info : {
