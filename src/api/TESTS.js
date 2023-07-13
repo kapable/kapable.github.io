@@ -498,7 +498,7 @@ const TESTS = [
                     {
                         type: "F",
                         score: 5,
-                        content: "연진정성 있는 사과에 마음이 누그러짐"
+                        content: "진정성 있는 사과에 마음이 누그러짐"
                     },
                 ]
             },
