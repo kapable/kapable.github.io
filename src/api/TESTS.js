@@ -472,7 +472,7 @@ const TESTS = [
             },
             {
                 which:"TF",
-                question: "친구가 오래 사귄 연인이랑 헤어졌다고 한다면?",
+                question: "친구가 나에게 “힘내”하고 선물을 준다면?",
                 answers:[
                     {
                         type: "T",
