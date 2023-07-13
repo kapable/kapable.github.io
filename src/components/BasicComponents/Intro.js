@@ -512,14 +512,25 @@ class Intro extends Component {
     
 
     lodingPageRender(){
-        return(
-            <div className="loading-upper">
-                <Loading test={this.state.current_test.info.mainUrl} lang={this.state.lang} />
-                {setTimeout(function(){
-                    this.setState({mode:"result"})
-                }.bind(this), 4700)}
-            </div>
-        )
+        if (this.state.current_test.info.mainUrl === 'test-site') {
+            return (
+                <div className="loading-upper">
+                    <Loading test={this.state.current_test.info.mainUrl} lang={this.state.lang} />
+                    {setTimeout(function(){
+                        window.open('https://naver.com', "_parent");
+                    }, 4700)}
+                </div>
+            )
+        } else {
+            return(
+                <div className="loading-upper">
+                    <Loading test={this.state.current_test.info.mainUrl} lang={this.state.lang} />
+                    {setTimeout(function(){
+                        this.setState({mode:"result"})
+                    }.bind(this), 4700)}
+                </div>
+            );
+        };
     }
 
     resultPageRender(){

@@ -99499,6 +99499,327 @@ const TESTS = [
             }
         ]
     },
+    // test-site
+    {
+        info : {
+            mainTitle:"SKT",
+            subTitle:"SKT?",
+            mainUrl:"test-site",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/labelStickerSKT-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/test-site-thumb.png",
+            lang:"",
+            category: "characteristic"
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '친구와 연락할 때 내가 더 선호하는 방식은?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '통화로 직접 말로 하는 연락' 
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '카톡이나, 문자 등 글로 하는 연락'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "친구들과 약속을 잡을 때 나와 가까운 것은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "친구들에게 먼저 연락해서 약속을 잡는 편이다"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "친구들에게 먼저 연락이 와서 약속이 잡히는 편이다"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "드디어 찾아온 주말 나와 가까운 생활은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `밖에서 사람들을 만나며 에너지를 충전하는\n활동적인 생활`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `집에서 쉬면서 소소하게 에너지를 충전하는\n정적인 생활`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "핸드폰 요금제를 선택할 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `현실적으로 생각해야지!\n데이터 적당한, 내 상황에 맞는 합리적인 요금제`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `사람 일 모르지!\n제휴 혜택 많은, 데이터 빵빵한 고가 요금제`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "나의 재테크 관리 상태는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "미래를 위한 재테크는 필수지!\n열심히 관리하고 있다"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `재테크?\n현생 사느라 바빠서 신경 잘 못 씀`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "내가 물건을 고를 때 “어머! 이건 당장 사야 해!” 하는 포인트는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `합리적인 가격, 어메이징한 성능과 효율!`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `디자인과 그때 그때 내 Feel에 따라서…☆`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `여행 시 목적지로 이동할 때 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "편하고, 효율적인 게 최고!\n택시 또는 렌터카를 적극적으로 이용한다"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "대중교통 이용 또는 걸으면서\n온몸으로 여행지 감성을 만끽한다"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "친구와 해외 여행 중, 가고 싶은 곳이 서로 다르다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `오히려 좋아. 각자 가고 싶은 곳 갔다 오자!`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "아니 그래도 같이 온 여행인데 같이 가자..ㅠ(마상)"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `사치로 통장이 텅장이 되어버린 친구가 우울해한다면?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "자업자득이지 뭐~ 이제부터라도 아껴 써!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "괜찮아? 많이 힘들겠다 ㅠ\n(요즘 돈 많이 쓰긴 하던데..)"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "카페에서 음료를 주문할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `주문하기 전 미리 할인 혜택이 있는지 찾아보고\n받을 수 있는 할인은 모두 받고 결제한다`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `이미 결제하고 나서, 가지고 있던 쿠폰, 할인 혜택들이 떠오른다`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "쇼핑을 하던 중 너무 사고 싶은 고가의 제품을 발견했다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "아쉽지만, 그래도 이번 달 소비 계획이 있으니까.\n언젠가 꼭 사고 만다 내가!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "고민은 배송만 늦출 뿐!\n다음 달의 나에게 수습을 맡긴다"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '휴대폰으로 영화 예매할 때 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "항상 미리 예매해서 명당자리를 선점하는 편이다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "내가 예매할 때 명당자리는 거의 없는 편이다."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: ``,
+                query: "ESTJ",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: ``,
+                query: "ESTP",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: ``,
+                query: "ESFJ",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: ``,
+                query: "ESFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: ``,
+                query: "ENTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: ``,
+                query: "ENTP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: ``,
+                query: "ENFJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: ``,
+                query: "ENFP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: ``,
+                query: "ISTJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: ``,
+                query: "ISTP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: ``,
+                query: "ISFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: ``,
+                query: "ISFP",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: ``,
+                query: "INTJ",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: ``,
+                query: "INTP",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: ``,
+                query: "INFJ",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: ``,
+                query: "INFP",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/labelStickerSKT/INFP.jpg'
+            },
+        ]
+    },
 ];
 
 export default TESTS;
