@@ -1646,6 +1646,333 @@ const TESTS = [
             },
         ]
     },
+    // digitalCharEng
+    {
+        info : {
+            mainTitle:"Digital Personality Test",
+            subTitle:"Your personality type through Big Data!",
+            mainUrl:"digitalCharEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/digitalCharEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/digitalCharEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'On the way home after hanging out with friends, what do you think?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I had fun! I got my energy back!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I'm tired and want to go home and rest."
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What if you get all the attention at a crowded gathering?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I don't really care and keep talking."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "My heart races because I feel burdened by the attention."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "Which of the two situations is more difficult for you to endure?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Extremely awkward situations.`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `A situation where many people talk to me at a gathering.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you think about when riding roller coaster at amusement park?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I'll have fun! It's been a long time since I rode it, so I think I'm a bit nervous~`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I think I'm scared. Wouldn't the seat belt come loose in the middle of riding?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you focus on when watching a movie or a drama?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I focus on the actor's performance and story."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I focus on touching or stimulating parts.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you do when you study?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I recklessly memorize while writing.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I take notes and read until I understand.`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What if your friend cries?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I don't talk, but I just cheer."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Are you okay? Why are you crying? What's going on?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "If you ask your friends what they are doing today, what are your intentions?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I am really curious what they are doing today.`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I wonder if there is an appointment today and if we can meet today."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What would you do if two of your friends were arguing?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I would ask the reason for the argument and think who is wrong."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I would try to stop argument and listen to the story."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What do you do first when you want to do something?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I make a plan first.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `I just start and think later.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What if you were at home together with your friend and suddenly your friend asked you to go out?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "Where do you want to go? Let's go out after deciding where we go first and go."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Okay, let's go."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'What do you do when you decide to have a meal with a friend?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I looked it up. How about here (while showing the search screen)?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "Hey, it looks delicious just over there. How about there?"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/digitalCharEng/INFP.jpg'
+            },
+        ]
+    },
     // digitalChar
     {
         info : {
