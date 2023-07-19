@@ -344,6 +344,332 @@ const TESTS = [
             },
         ]
     },
+    // rainDropEng
+    {
+        info : {
+            mainTitle:"Raindrop personality Test",
+            subTitle:"What is my personality as revealed by falling raindrops?",
+            mainUrl:"rainDropEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/rainDropEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/rainDropEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What if you have an appointment in a rainy weekend?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'It rains a lot. Sorry but I think we should play indoors'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'It rains a lot.. Perhaps, it will be cancelled?'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What kind of communication method do you prefer?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I like meeting in person to communicate"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I prefer text message to communicate"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What do you want to do on weekend?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `I would like to go out with my friends to have fun`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I want to heal and rest at home`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you think on the way home from work during the rainy season?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `It's raining a lot... I have to go quickly!`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Could it be that I was struck by lightning?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If it suddenly rains outside while you are lying at home, what do you think?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "It is raining suddenly…. I'm glad I didn't make an appointment on a day like today"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I just imagining easting Korean pan cake at the sudden sound of rain The sudden sound of rain makes me think of pizza. 
+                        `
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What if the delivery food doesn't arrive?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I will call and ask what is happening as I am curious.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I'm just worried that something happened to the delivery driver.`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `If you get a call that your lover fell on the road in the rain, what would you do?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Hey are you okay? What did you do when you fell?!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Hey are you okay ? Did you get hurt?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "When your friend tells you a deep story, how do you feel?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I will listen to my friend and give them advice`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I will sympathize with and respond to my friend's words."
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What if your friend gets into a fight with someone and it turns out to be your friend's fault?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "Honestly, I would talk to my friend about it clearly"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "After the situation is over, I would explain the fact that it is my friend’s fault"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "On a rainy day, If you have something to do outside, what would you do?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `Even though it rains a lot. I have to do it because that's what I was supposed to do today!`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `It's raining too much.. I'll just do it later when the weather gets better`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What would you do if your friends suddenly asked you to get together?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "It's hard for me to meet so suddenly"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I would ask what's going on first, and if I like it, I would go out"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'What would you do if you saw an umbrella store in front of you on a rainy day?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I can't buy an umbrella this way! I'll find a place to shelter from the rain and leave later!"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "It's better than getting rained on, so I would buy an umbrella."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropEng/INFP.jpg'
+            },
+        ]
+    },
     // charRoad
     {
         info : {
