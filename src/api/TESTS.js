@@ -100819,193 +100819,193 @@ const TESTS = [
         questions:[
             {
                 which:"EI",
-                question: '친구와 연락할 때 내가 더 선호하는 방식은?',
+                question: '하반기에 수많은 약속이 잡혔다. 나는?',
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: '통화로 직접 말로 하는 연락' 
+                        content: '너무 재밌겠다 빨리 와라 미래의 약속들!' 
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: '카톡이나, 문자 등 글로 하는 연락'
+                        content: '피곤할 미래의 나 자신에게.. 정말 미안..'
                     },
                 ],
             },
             {
                 which:"EI",
-                question: "친구들과 약속을 잡을 때 나와 가까운 것은?",
+                question: "나에게 더 소중한 시간을 고르라면?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: "친구들에게 먼저 연락해서 약속을 잡는 편이다"
+                        content: "밖에서 친구들을 만나 하루 종일 떠드는 수다 타임"
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: "친구들에게 먼저 연락이 와서 약속이 잡히는 편이다"
+                        content: "하루 종일 침대에 누워서 가지는 유~하 타임"
                     },
                 ]
             },
             {
                 which:"EI",
-                question: "드디어 찾아온 주말 나와 가까운 생활은?",
+                question: "내가 생각하는 나와 가까운 것은?",
                 answers:[
                     {
                         type: "E",
                         score: 2,
-                        content: `밖에서 사람들을 만나며 에너지를 충전하는\n활동적인 생활`
+                        content: `시끌시끌 활발한 인싸`
                     },
                     {
                         type: "I",
                         score: 5,
-                        content: `집에서 쉬면서 소소하게 에너지를 충전하는\n정적인 생활`
+                        content: `차분하고 조용한 집돌이, 집순이`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "핸드폰 요금제를 선택할 때 나는?",
+                question: "내가 받고 싶은 선물을 고르라면?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `현실적으로 생각해야지!\n데이터 적당한, 내 상황에 맞는 합리적인 요금제`
+                        content: `실용적으로 쓸 수 있는 기프티콘`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `사람 일 모르지!\n제휴 혜택 많은, 데이터 빵빵한 고가 요금제`
+                        content: `고민해서 샀다는 깜짝 선물`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "나의 재테크 관리 상태는?",
+                question: "처음 가는 길을 걸을 때 나는?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: "미래를 위한 재테크는 필수지!\n열심히 관리하고 있다"
+                        content: "가장 빠르게 갈 수 있는 길을 폭풍검색"
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `재테크?\n현생 사느라 바빠서 신경 잘 못 씀`
+                        content: `이것 또한 데스티니..★ 발길이 닿는 대로 걷는다`
                     },
                 ]
             },
             {
                 which:"SN",
-                question: "내가 물건을 고를 때 “어머! 이건 당장 사야 해!” 하는 포인트는?",
+                question: "‘만약에~’ 질문에 대한 내 생각은?",
                 answers:[
                     {
                         type: "S",
                         score: 2,
-                        content: `합리적인 가격, 어메이징한 성능과 효율!`
+                        content: `만약에 공격 또 시작.. 제발 멈춰..`
                     },
                     {
                         type: "N",
                         score: 5,
-                        content: `디자인과 그때 그때 내 Feel에 따라서…☆`
+                        content: `만약 나라면 이렇게 저렇게 할 듯!! 재밌다ㅎㅎ`
                     },
                 ]
             },
             {
                 which:"TF",
-                question: `여행 시 목적지로 이동할 때 나는?`,
+                question: `내가 누군가에게 고민을 털어놓는 이유는?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "편하고, 효율적인 게 최고!\n택시 또는 렌터카를 적극적으로 이용한다"
+                        content: "실직적인 해결책을 얻을 수 있을까 해서"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "대중교통 이용 또는 걸으면서\n온몸으로 여행지 감성을 만끽한다"
+                        content: "위로와 격려, 응원을 듣고 싶어서"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: "친구와 해외 여행 중, 가고 싶은 곳이 서로 다르다면?",
+                question: "친구가 갑자기 멀리 여행을 떠난다고 한다면 내 반응은?",
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: `오히려 좋아. 각자 가고 싶은 곳 갔다 오자!`
+                        content: `어디로? 언제 가는데?`
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "아니 그래도 같이 온 여행인데 같이 가자..ㅠ(마상)"
+                        content: "엥 갑자기? 무슨 일 있어…?"
                     },
                 ]
             },
             {
                 which:"TF",
-                question: `사치로 통장이 텅장이 되어버린 친구가 우울해한다면?`,
+                question: `오늘의 운세를 봤는데 결과가 좋지 않다면 나는?`,
                 answers:[
                     {
                         type: "T",
                         score: 2,
-                        content: "자업자득이지 뭐~ 이제부터라도 아껴 써!"
+                        content: "운세는 운세일 뿐! 신경 1도 안 쓰임"
                     },
                     {
                         type: "F",
                         score: 5,
-                        content: "괜찮아? 많이 힘들겠다 ㅠ\n(요즘 돈 많이 쓰긴 하던데..)"
+                        content: "괜찮은 척하지만 속으로는 계속 걱정함"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "카페에서 음료를 주문할 때 나는?",
+                question: "새로운 휴대폰이 출시되어 구매하려고 한다면 나는?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: `주문하기 전 미리 할인 혜택이 있는지 찾아보고\n받을 수 있는 할인은 모두 받고 결제한다`
+                        content: `미리 사전 예약 알림 신청을 하고, 꼼꼼히 알아본 후 사전 예약 날짜에 맞춰 예약!`
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: `이미 결제하고 나서, 가지고 있던 쿠폰, 할인 혜택들이 떠오른다`
+                        content: `색상 미쳤는데? 당장 사전예약 고`
                     },
                 ]
             },
             {
                 which:"JP",
-                question: "쇼핑을 하던 중 너무 사고 싶은 고가의 제품을 발견했다면?",
+                question: "구매할 휴대폰의 컬러를 결정할 때 나는?",
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "아쉽지만, 그래도 이번 달 소비 계획이 있으니까.\n언젠가 꼭 사고 만다 내가!"
+                        content: "기본 컬러가 안 질리고 좋지~ 무난한 블랙!"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "고민은 배송만 늦출 뿐!\n다음 달의 나에게 수습을 맡긴다"
+                        content: "남들이 안 하는 독보적인 컬러가 좋아! 민트 컬러 사볼까?"
                     },
                 ]
             },
             {
                 which:"JP",
-                question: '휴대폰으로 영화 예매할 때 나는?',
+                question: '내가 만족하는 나의 하루는?',
                 answers:[
                     {
                         type: "J",
                         score: 2,
-                        content: "항상 미리 예매해서 명당자리를 선점하는 편이다."
+                        content: "내가 짠 일정대로 흘러간 하루"
                     },
                     {
                         type: "P",
                         score: 5,
-                        content: "내가 예매할 때 명당자리는 거의 없는 편이다."
+                        content: "변수가 가득한 새로운 하루"
                     },
                 ]
             },
