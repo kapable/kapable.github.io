@@ -101129,15 +101129,15 @@ const TESTS = [
             }
         ]
     },
-    // test-site
+    // fatecharmtest
     {
         info : {
             mainTitle:"SKT",
             subTitle:"SKT?",
-            mainUrl:"test-site",
+            mainUrl:"fatecharmtest",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/labelStickerSKT-intro.jpg",
-            thumbImage:"https://images.ktestone.com/main-thumbnail/test-site-thumb.png",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/fatecharmtest-thumb.png",
             lang:"",
             category: "characteristic"
         },
