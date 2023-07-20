@@ -101132,8 +101132,8 @@ const TESTS = [
     // fatecharmtest
     {
         info : {
-            mainTitle:"SKT",
-            subTitle:"SKT?",
+            mainTitle:"운명 부적 테스트",
+            subTitle:"운명 부적 펼처보기 테스트",
             mainUrl:"fatecharmtest",
             scoreType:"typeCountingMBTI",
             mainImage:"https://images.ktestone.com/introImages/labelStickerSKT-intro.jpg",
