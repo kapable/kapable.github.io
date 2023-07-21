@@ -101,7 +101,8 @@ const LifetimeSajuResult = (props) => {
                         <div className='article-adCover-div-2'>
                             <div className='article-adCover-div-3'>
                                 <p><b><span style={{color:"#4185F4"}}>콘텐츠를 보기 전</span> 쿠팡 쇼핑을 해보세요</b></p>
-                                <p style={{ fontSize: "0.7rem", width: "0.7rem", color: "white", backgroundColor: "#83b4de", position:"absolute", right:"1rem", top: "2.5rem" }}>
+                                <div><p style={{ fontSize: '0.7rem' }}>쿠팡 방문은 케이테스트가 항상 질좋은 콘텐츠를 제공 할 수 있는 힘이 됩니다.<br />항상 케이테스트 콘텐츠를 사랑해주셔서 감사합니다.</p></div>
+                                <p style={{ fontSize: "0.7rem", width: "0.7rem", color: "white", backgroundColor: "#83b4de", position:"absolute", right:"4rem", top: "5.2rem" }}>
                                     {startTimer ? (
                                             coupangCount === 0 ? <span style={{color:'white', cursor:'pointer'}} onClick={coupangCount === 0 ? onCoupangCloseButtonClick : null}><b>X</b></span> : coupangCount
                                     ) :null}

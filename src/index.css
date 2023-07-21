@@ -572,6 +572,7 @@ body {
 .result-coupang-comment {
   font-size: 0.6rem;
   color: #000000;
+  margin-top: 2rem;
 }
 
 /* in Result Page for PPL banner */
@@ -603,7 +604,7 @@ body {
 }
 
 .share-title-saju {
-  margin-top: 4.5rem;
+  margin-top: 7rem;
 }
 
 .share {

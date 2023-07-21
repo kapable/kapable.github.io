@@ -889,7 +889,8 @@ class Result extends Component {
                 <div className='article-adCover-div-2'>
                     <div className='article-adCover-div-3'>
                         <p><b><span style={{color:"#4185F4"}}>콘텐츠를 보기 전</span> 쿠팡 쇼핑을 해보세요</b></p>
-                        <p style={{ fontSize: "0.7rem", width: "0.7rem", color: "white", backgroundColor: "#83b4de", position:"absolute", right:"1rem", top: "2.5rem" }}>
+                        <div><p style={{ fontSize: '0.7rem' }}>쿠팡 방문은 케이테스트가 항상 질좋은 콘텐츠를 제공 할 수 있는 힘이 됩니다.<br />항상 케이테스트 콘텐츠를 사랑해주셔서 감사합니다.</p></div>
+                        <p style={{ fontSize: "0.7rem", width: "0.7rem", color: "white", backgroundColor: "#83b4de", position:"absolute", right:"4rem", top: "5.2rem" }}>
                             {this.state.startTimer ? (
                                     this.state.coupangCount === 0 ? <span style={{color:'white', cursor:'pointer'}} onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}><b>X</b></span> : this.state.coupangCount
                             ) :null}
@@ -899,7 +900,7 @@ class Result extends Component {
                                 버튼 누르고 결과 보기
                             </button>
                         </a>
-                        <p style={{ fontSize: '10px', color: 'grey', marginTop: "1em" }}>원치 않을 경우 뒤로 가기를 눌러주세요.</p>
+                        <p style={{ fontSize: '10px', color: 'grey', marginTop: "0.5rem" }}>원치 않을 경우 뒤로 가기를 눌러주세요.</p>
                     </div>
                 </div>
             </div>
