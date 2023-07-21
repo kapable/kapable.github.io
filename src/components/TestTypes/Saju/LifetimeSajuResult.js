@@ -116,16 +116,17 @@ const LifetimeSajuResult = (props) => {
                         <div className='article-adCover-div-2'>
                             <div className='article-adCover-div-3'>
                                 <p><b><span style={{color:"#4185F4"}}>콘텐츠를 보기 전</span> 쿠팡 쇼핑을 해보세요</b></p>
+                                <p style={{ width: "1rem", color: "white", backgroundColor: "#83b4de", position:"absolute", right:"1rem", top: "2.5rem" }}>
+                                    {startTimer ? (
+                                            coupangCount === 0 ? <span style={{color:'white', cursor:'pointer'}} onClick={coupangCount === 0 ? onCoupangCloseButtonClick : null}><b>X</b></span> : coupangCount
+                                    ) :null}
+                                </p>
                                 <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
                                     <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={onCoupangButtonClick}>
                                         버튼 누르고 결과 보기
                                     </button>
                                 </a>
-                                {startTimer ? (
-                                    <p style={{ fontSize: '10px', color: 'grey', marginTop: "1em" }}>원치 않을 경우 {  
-                                        coupangCount === 0 ? <span style={{color:'red', cursor:'pointer', fontSize: '13px'}} onClick={coupangCount === 0 ? onCoupangCloseButtonClick : null}><b>X</b></span> : coupangCount
-                                        }를 눌러주세요</p>
-                                ) : null}
+                                <p style={{ fontSize: '10px', color: 'grey', marginTop: "1em" }}>원치 않을 경우 뒤로 가기를 눌러주세요.</p>
                             </div>
                             <p className='result-coupang-comment' style={{marginTop: "1rem"}}>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
                         </div>

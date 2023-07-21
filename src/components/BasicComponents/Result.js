@@ -89,7 +89,7 @@ class Result extends Component {
                     this.setState((prevState) => ({coupangCount: prevState.coupangCount - 1})); 
                 }
             }, 1000);
-        }.bind(this), 1800);
+        }.bind(this), 800);
     }
 
     componentWillUnmount() {
@@ -889,16 +889,17 @@ class Result extends Component {
                 <div className='article-adCover-div-2'>
                     <div className='article-adCover-div-3'>
                         <p><b><span style={{color:"#4185F4"}}>콘텐츠를 보기 전</span> 쿠팡 쇼핑을 해보세요</b></p>
+                        <p style={{ width: "1rem", color: "white", backgroundColor: "#83b4de", position:"absolute", right:"1rem", top: "2.5rem" }}>
+                            {this.state.startTimer ? (
+                                    this.state.coupangCount === 0 ? <span style={{color:'white', cursor:'pointer'}} onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}><b>X</b></span> : this.state.coupangCount
+                            ) :null}
+                        </p>
                         <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
                             <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : () => this.onCoupangButtonClick(this.state.current_test)}>
                                 버튼 누르고 결과 보기
                             </button>
                         </a>
-                        {this.state.startTimer ? (
-                            <p style={{ fontSize: '10px', color: 'grey', marginTop: "1em" }}>원치 않을 경우 {  
-                                this.state.coupangCount === 0 ? <span style={{color:'red', cursor:'pointer', fontSize: '13px'}} onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}><b>X</b></span> : this.state.coupangCount
-                                }를 눌러주세요</p>
-                        ) : null}
+                        <p style={{ fontSize: '10px', color: 'grey', marginTop: "1em" }}>원치 않을 경우 뒤로 가기를 눌러주세요.</p>
                     </div>
                 </div>
             </div>
