@@ -889,7 +889,7 @@ class Result extends Component {
                 <div className='article-adCover-div-2'>
                     <div className='article-adCover-div-3'>
                         <p><b><span style={{color:"#4185F4"}}>콘텐츠를 보기 전</span> 쿠팡 쇼핑을 해보세요</b></p>
-                        <p style={{ width: "1rem", color: "white", backgroundColor: "#83b4de", position:"absolute", right:"1rem", top: "2.5rem" }}>
+                        <p style={{ fontSize: "0.7rem", width: "0.7rem", color: "white", backgroundColor: "#83b4de", position:"absolute", right:"1rem", top: "2.5rem" }}>
                             {this.state.startTimer ? (
                                     this.state.coupangCount === 0 ? <span style={{color:'white', cursor:'pointer'}} onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}><b>X</b></span> : this.state.coupangCount
                             ) :null}
