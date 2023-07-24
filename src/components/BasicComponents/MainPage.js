@@ -10,30 +10,30 @@ import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
 import { _eventSenderGA } from '../../tools/tools';
-// import jwt from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 
 function MainPage(props) {
     const { state } = useLocation();
     const [currentCategory, setCurrentCategory] = useState(state?.currentCategory);
 
-    // const [loggedData, setLoggedData] = useState();
-    // const onClickLogin = async () => {
-    //     // 프로젝트 아이디로 수정하세요.
-    //     const projectId = "7a4499ca-4644-45ee-9b3f-f63ea3d19e64";
-    //     const redirectUri = window.location.protocol + "//" + window.location.host;
+    const [loggedData, setLoggedData] = useState();
+    const onClickLogin = async () => {
+        // 프로젝트 아이디로 수정하세요.
+        const projectId = "7a4499ca-4644-45ee-9b3f-f63ea3d19e64";
+        const redirectUri = window.location.protocol + "//" + window.location.host;
     
-    //     const queryString = new URLSearchParams({
-    //         client_id: projectId,
-    //         redirect_uri: redirectUri,
-    //     }).toString();
+        const queryString = new URLSearchParams({
+            client_id: projectId,
+            redirect_uri: redirectUri,
+        }).toString();
     
-    //     const loginUrl = `https://bouns.io/login?${queryString}`;
+        const loginUrl = `https://bouns.io/login?${queryString}`;
     
-    //     // provider 를 지정하면 원하는 소셜로그인 화면을 다이렉트로 표시할 수 있습니다.
-    //     // const loginUrl = `https://mrlogin.io/auth/${provider}/login?${queryString}`;
+        // provider 를 지정하면 원하는 소셜로그인 화면을 다이렉트로 표시할 수 있습니다.
+        // const loginUrl = `https://mrlogin.io/auth/${provider}/login?${queryString}`;
     
-    //     window.location.href = loginUrl;
-    // };
+        window.location.href = loginUrl;
+    };
     // useEffect(() => {
     //     let parsedUrl = new URL(window.location.href);
     //     const accessToken = parsedUrl.searchParams.get("access_token");
@@ -290,10 +290,10 @@ function MainPage(props) {
             </Link>
             
             {/* LOGIN */}
-            {/* <button className="loginButton" onClick={onClickLogin}>
+            <button className="loginButton" onClick={onClickLogin}>
                 로그인 버튼
             </button>
-            {console.log(loggedData ? loggedData : null)} */}
+            {console.log(loggedData ? loggedData : null)}
 
             {/** Floating Button for KakaoPlusFriend */}
             <KakaoPlusFriendBtn />
