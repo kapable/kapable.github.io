@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Link, useLocation, withRouter } from 'react-router-dom';
 import OhterLangIconsMain from '../SubComponents/OhterLangIconsMain';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
@@ -15,6 +15,37 @@ import jwt from 'jsonwebtoken';
 function MainPage(props) {
     const { state } = useLocation();
     const [currentCategory, setCurrentCategory] = useState(state?.currentCategory);
+
+    const [loggedData, setLoggedData] = useState();
+    const onClickLogin = async () => {
+        // 프로젝트 아이디로 수정하세요.
+        const projectId = "7a4499ca-4644-45ee-9b3f-f63ea3d19e64";
+        const redirectUri = window.location.protocol + "//" + window.location.host;
+    
+        const queryString = new URLSearchParams({
+            client_id: projectId,
+            redirect_uri: redirectUri,
+        }).toString();
+    
+        const loginUrl = `https://bouns.io/login?${queryString}`;
+    
+        // provider 를 지정하면 원하는 소셜로그인 화면을 다이렉트로 표시할 수 있습니다.
+        // const loginUrl = `https://mrlogin.io/auth/${provider}/login?${queryString}`;
+    
+        window.location.href = loginUrl;
+    };
+    useEffect(() => {
+        let parsedUrl = new URL(window.location.href);
+        const accessToken = parsedUrl.searchParams.get("access_token");
+        const refreshToken = parsedUrl.searchParams.get("refresh_token");
+    
+        if (accessToken || refreshToken) {
+            setLoggedData({
+                accessToken: jwt.decode(accessToken),
+                refreshToken: refreshToken,
+            });
+        }
+    }, []);
     return (
         <Fragment>
             
@@ -237,10 +268,6 @@ function MainPage(props) {
                 })}
             </div>
             
-            {/* Go to metapangapply 2021 */}
-            {/* <Link to='/metapangapply/' className="main-link-block" key="metapangapply-banner">
-                <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/metaPangApply-thumb.png`} alt="POST-2021" />
-            </Link> */}
             {/* Go to Jelling Games Banner */}
             {props.lang === 'Kor' && (currentCategory === '' || currentCategory === "etc") ? (
                 <a
@@ -261,6 +288,12 @@ function MainPage(props) {
             <Link to='/blog/' className="main-link-block" key="article-banner">
                 <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png`} alt="KTEST-Blog" />
             </Link>
+            
+            {/* LOGIN */}
+            {/* <button className="loginButton" onClick={onClickLogin}>
+                로그인 버튼
+            </button>
+            {console.log(loggedData ? loggedData : null)} */}
 
             {/** Floating Button for KakaoPlusFriend */}
             <KakaoPlusFriendBtn />
