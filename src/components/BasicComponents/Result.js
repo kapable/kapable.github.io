@@ -1541,7 +1541,6 @@ class Result extends Component {
                     />
                     
                     <div className="result-header">
-                    {/* <div id="optadnpm ATB" style={{"minHeight": "220px"}}></div> */}
                         <h5 className="result-title">결과는...</h5>
                         <div className="result-value">
                             {this.resultRender()}

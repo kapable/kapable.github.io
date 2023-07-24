@@ -512,7 +512,7 @@ class Intro extends Component {
     
 
     lodingPageRender(){
-        if (this.state.current_test.info.mainUrl === 'test-site') {
+        if (this.state.current_test.info.mainUrl === 'fatecharmtest') {
             let result_contents = this.resultCaculator();
             return (
                 <div className="loading-upper">
