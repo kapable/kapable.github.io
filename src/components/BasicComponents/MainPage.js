@@ -10,6 +10,7 @@ import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
 import { _eventSenderGA } from '../../tools/tools';
+import jwt from 'jsonwebtoken';
 
 function MainPage(props) {
     const { state } = useLocation();

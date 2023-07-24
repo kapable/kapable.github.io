@@ -101136,7 +101136,7 @@ const TESTS = [
             subTitle:"운명 부적 펼처보기 테스트",
             mainUrl:"fatecharmtest",
             scoreType:"typeCountingMBTI",
-            mainImage:"https://images.ktestone.com/introImages/labelStickerSKT-intro.jpg",
+            mainImage:"https://images.ktestone.com/introImages/fatecharmtest-intro.jpg",
             thumbImage:"https://images.ktestone.com/main-thumbnail/fatecharmtest-thumb.png",
             lang:"",
             category: "characteristic"
