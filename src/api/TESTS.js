@@ -994,6 +994,331 @@ const TESTS = [
             },
         ]
     },
+    // rainDropJP
+    {
+        info : {
+            mainTitle:"雨滴性格テスト",
+            subTitle:"落ちる雨粒で見抜く私の性格は？",
+            mainUrl:"rainDropJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/rainDropJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/rainDropJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"JP",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '梅雨の始まりで雨が多い週末、友達と事前に約束がある場合は？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '雨が多いな、残念だけど、室内で遊ぼう'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '雨が多いな...もしかして後で会おうという\n約束のキャンセル連絡が来ないかな？'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "私の好みのコミュニケーション方法は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "直接会って言葉でコミュニケーションすること"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "メールやトークなど文章でコミュニケーションすること"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "ついにやってきた週末！私の選択は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `外で友達と会って楽しく遊ぶ`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `自宅で癒されながら、ゆっくり休む`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "雨の多い梅雨時の退勤道、私の考えは？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `めっちゃ雨降ってるね...早く行かないと!`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `もしかして、途中で落雷に見舞われたりしないよね？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "家に寝ていて、外で突然雨が降ってきたらどう思う？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "急に雨が降ってきた。今日のような日に予定がなくてよかった"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `突然聞こえてくる雨音に、パジョン食べる想像が自然と浮かんできた`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "配達を頼んだら、予想時間より遅かったら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `どうしたのか気になって電話する`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `もしかして配達員さんに何かあったのではと心配になる`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `恋人が雨の道で転んだと連絡が来たら私は？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "えっ、大丈夫か？ 何してて転んだの？"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "はっ、大丈夫？ どこか怪我はないの？"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "友人が本音を打ち明けたとき、私は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `友達の話を最後まで聞いて、アドバイスしてくれる`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "友達の言葉に感情移入し、リアクションをとる"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `友達が道で誰かと喧嘩している、聞いてみると友達の不手際だった時、私は？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "素直に友達のダメなところをしっかり教えてくれる"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "時間を置いて状況が安定した後、友人に間違ったことを知らせる"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "梅雨の雨の日、外でやるべきことがあったら私は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `雨がたくさん降っても.. 今日やることにしたことだからやらないと！`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `雨がたくさん降ってますが.. 後で天気がよくなったらやらないと`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "友達が急に集まろうとしたら、私は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "こんな急に会うのは難しいと言う"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "何をするか聞いて、引かれたら出る"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '道を歩いていて急に夕立が降る、目の前に傘が見える状況、私は？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "こんな急な夕立に傘を買うわけにはいかない！！ ちょっと避けてから行かないと！"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "雨に降られるよりましだよ！ 傘をすぐに買う"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/rainDropJP/INFP.jpg'
+            },
+        ]
+    },
     // rainDropEng
     {
         info : {
