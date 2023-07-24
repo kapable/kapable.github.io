@@ -101570,7 +101570,7 @@ const TESTS = [
                     {
                         type: "T",
                         score: 2,
-                        content: "실직적인 해결책을 얻을 수 있을까 해서"
+                        content: "실질적인 해결책을 얻을 수 있을까 해서"
                     },
                     {
                         type: "F",
