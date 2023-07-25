@@ -128,7 +128,7 @@ class Quiz extends Component {
                     </a>
                 </div>
             )
-        } else if (window.location.href.split('/').includes('hmall')) {
+        } else if (window.location.href.split('/').includes('hmall') || window.location.href.split('/').includes('fatecharmtest')) {
             return null;
         } else {
             return(

@@ -180,7 +180,7 @@ class Intro extends Component {
                         alt={_mainTitle + '|' + _subTitle}/>
                     <OtherLangIcons currentTest={this.state.current_test.info.mainUrl}/>
                     
-                    {this.state.current_test.info.mainUrl === 'hmall' || this.state.current_test.info.mainUrl === 'labelStickerSKT' ? null : (
+                    {this.state.current_test.info.mainUrl === 'hmall' || this.state.current_test.info.mainUrl === 'labelStickerSKT' || this.state.current_test.info.mainUrl === 'fatecharmtest' ? null : (
                         <AdsenseAdvertiser
                         client="ca-pub-2382342018701919"
                         slot="5663135072"
