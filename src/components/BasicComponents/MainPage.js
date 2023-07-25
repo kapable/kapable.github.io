@@ -18,7 +18,6 @@ function MainPage(props) {
 
     const [loggedData, setLoggedData] = useState();
     const onClickLogin = async () => {
-        // 프로젝트 아이디로 수정하세요.
         const projectId = "7a4499ca-4644-45ee-9b3f-f63ea3d19e64";
         const redirectUri = window.location.protocol + "//" + window.location.host;
     

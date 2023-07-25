@@ -344,6 +344,333 @@ const TESTS = [
             },
         ]
     },
+    // playlist
+    {
+        info : {
+            mainTitle:"성격 플레이 리스트 테스트",
+            subTitle:"나에게 어울리는 플레이 리스트는?",
+            mainUrl:"playlist",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/playlist-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/playlist-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '쉬고 있는데 나오라는 친구의 전화를 받았다! 내 대답은?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '귀찮지만 내가 빠질 순 없지! 빨리 갈게~'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '귀찮아.. 담에 보자 난 오늘 쉴 거야'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "내게 어울리는 키워드는 무엇일까?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "#밝은 #활기찬 #밖이 좋아"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "#조용한 #신중한 #침대 좋아"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "몇 시간 동안 수다를 떤 뒤 내 모습은?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `아직 모자라! 내 얘기 좀 더 들어줘`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `이제.. 말 그만하고 싶다.. 피곤.. `
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "비가 많이 내려 호우 경보 알람이 울린다! 난 어떤 생각을 할까?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `비가 많이 오나 보네.. 아 근데 알람 그만 좀 `
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `집에 물이 다 새서 바가지로 물 푸고 있는 내가 상상됨`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "평소 연락하지 않던 친구가 갑자기 만나자고 한다면?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "아무 생각 없이 무슨 일 때문인지 물어봄"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `갑자기 왜 만나자는 거지..? 돈 빌리러..? 고민하다 물어봄 `
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "누군가에게 지시 혹은 부탁을 할 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `자세하고 구체적으로 지시`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `전체적인 느낌과 방향성만 지시`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `우산이 없어 내리는 비를 쫄딱 맞고 온 친구에게 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "편의점에서 우산 하나 사지 그랬어! "
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "에고 감기 걸리겠다ㅜ 우산 없었어?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "갑자기 읽씹을 당한다면 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `바쁜가.. 나중에 보내겠지 뭐 `
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "뭐지.. 내가 기분 나쁘게 했나..?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `대화를 할 때 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "관심 없는 대화는 들리지도 않음"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "관심 없더라도 리액션 해주고 대답해 줌"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "친구와 식사 메뉴를 고를 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `(찾아 놓은 리스트를 보며) 여기는 어때? `
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `(길을 돌아다니며) 맛있어 보이는데 여기는 어때?`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "내가 세운 계획이 틀어졌다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "불안.. 10초 안에 새로운 계획을 다시 세워야만 해"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "그럴 수 있지 뭐~ 가다가 다른 거 찾아보자!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '해야 할 일이 있을 때 나는 어떨까?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "해야 할 일 먼저 끝내고 지금을 즐김"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "일단 지금을 즐겨! 나중에 하면 되지 "
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/playlist/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/playlist/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/playlist/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/playlist/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/playlist/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/playlist/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/playlist/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/playlist/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/playlist/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/playlist/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/playlist/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/playlist/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/playlist/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/playlist/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/playlist/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/playlist/INFP.jpg'
+            },
+        ]
+    },
     // loveTV
     {
         info : {
