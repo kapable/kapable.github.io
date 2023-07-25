@@ -344,6 +344,331 @@ const TESTS = [
             },
         ]
     },
+    // hologramLoveJP
+    {
+        info : {
+            mainTitle:"ホログラム恋愛テスト",
+            subTitle:"ホログラムで私の恋愛スタイルを調べてみよう！",
+            mainUrl:"hologramLoveJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/hologramLoveJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/hologramLoveJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"JP",
+            category: "love",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '一日中デートをしてきた！ 家に帰ってきて思った私の考えは？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'とても面白かった！ 明日は友達に会う日~楽しい'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '楽しかったけどバッテリー切れ··· 明日は必ず休まないと..'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "恋人に言いたいことがあれば伝えるのにもっと楽な方法は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "直接対話を通じて伝達"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "メッセージに言いたいことを書いて伝達"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "恋人、友達との約束が一週間ずっと決まっていたら？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `ちょっと疲れるだろうけど、一週間ずっと家にいるよりはましだよ！`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `考えただけでももう家に帰りたい.. 私にはありえないこと`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋愛初期に私がよく考えることは？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `喧嘩しないで末永く会おう！`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `これから長く会えるよね？ 未来に私たちはどんな姿だろうか？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋人が私の知らない異性と一緒にいる姿を見たら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "その人は誰かすぐ聞く"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `聞く前に短い瞬間に不倫する想像をつくしてみる`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "恋人からプレゼントをもらったらどんなことを思い浮かべますか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `必要なプレゼントを買ってくれて感動`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `プレゼントを買うまでの過程を想像して感動`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `ストレスで食欲がないという恋人に私の答えは？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "でもご飯は食べなきゃ！ 後でお腹が空くだろうし"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "何か大変なことでもあったのか...後で美味しいもの食べに行こうか？"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "恋人に自分の気持ちを伝えるには？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `質問が多くなり疑問符キラーになる`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "些細なことでもリアクション職人になる"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `友達が恋人の連絡トラブルの悩みを相談する! 私の答えは？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "何か仕事が忙しいとか、事情があるんだろうな～"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "連絡が遅いと、私でも残念です"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "もし、恋人が突然「今日会わない？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `今は予定があるので...この時、ここで何時？`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `今？見ればいいんだよ。出てくる？`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "恋人との記念日まであと2週間！ 私の考えは？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "2週間しか残ってないの？ 早く準備しないと"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "あと2週間だね~来週から準備しないと"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '恋人との約束を決める時、主に私の姿は？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "日程を前もって決めておいて出会い"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "大まかに何をするかだけ決めておいて出会い"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/hologramLoveJP/INFP.jpg'
+            },
+        ]
+    },
     // playlist
     {
         info : {
