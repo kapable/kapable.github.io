@@ -415,7 +415,7 @@ class Result extends Component {
         let characteristicChracterESList = ["characteristicChracterES"];
         let characteristicChracterGerList = ["characteristicChracterGer",];
         let labelStickerCNList = ["labelStickerCN"];
-        let hologramLoveJPList = ["hologramLoveJP"];
+        let scrapBookCharJPList = ["scrapBookCharJP"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let rainDropEngList = ["rainDropEng"];
@@ -590,7 +590,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (JPTestList.includes(this.state.current_test)) {
-            const rederTestList = ["hologramLoveJP", "rainDropJP", "flowerGardenJP", "speechHabitJP", "loveFlameJP",];
+            const rederTestList = ["scrapBookCharJP", "hologramLoveJP", "rainDropJP", "flowerGardenJP",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -781,8 +781,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (hologramLoveJPList.includes(this.state.current_test)) {
-            const rederTestList = ["rainDropJP", "flowerGardenJP", "speechHabitJP", "loveFlameJP",];
+        } else if (scrapBookCharJPList.includes(this.state.current_test)) {
+            const rederTestList = ["hologramLoveJP", "rainDropJP", "flowerGardenJP", "speechHabitJP", "loveFlameJP",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
