@@ -996,6 +996,333 @@ const TESTS = [
             },
         ]
     },
+    // alienChar
+    {
+        info : {
+            mainTitle:"외계인 성격 테스트",
+            subTitle:"MBT로 알아보는 나의 외계인 캐릭터는?",
+            mainUrl:"alienChar",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/alienChar-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/alienChar-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '친구와 시간을 보내고 온 후의 나의 모습은?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '맨날 피곤하지만 친구만 보면 피로가 싹 사라진다.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '잘 놀다 들어왔지만 침대에 바로 앓아눕기 시작한다.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "집에 있다가 갑자기 친구가 연락도 없이 왔다면?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "무슨 일이냐며 일단 들어오라고 한다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "무슨 일이냐며 은근 슬쩍 겉옷 챙긴 후 나가서 이야기한다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "황금 같은 주말에 나는?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `나가서 친구들이랑 전시회도 가고, 맛집도 가고, 마무리는 카페 가서 카페인으로!`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `집에서 요리도 하고, 청소도 하고, 화분 물도 주고, 베이킹도 하고 마무리는 영화로!`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "티셔츠를 사러 갔을 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `뭐 사지? 디자인 비슷하니 그냥 제일 가까운 거 짚어야겠다.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `우와 너무 예쁘다! 색감이랑 여기 로고가 힙합 전사가 생각나는 디자인이야!`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "지나가다 매장에서 좋은 향이 날 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "향기 좋네~ 들어가서 제대로 시향이나 해볼까?"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `순정만화에 나올 것 같은 그런 향이야!!! 마치 주인공이 된 것만 같아!`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "버스에 앉아 창가를 바라볼 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `날씨가 좋다고 생각하며 언제쯤 도착하는지 생각한다.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `기사분은 컨디션 조절은 어떻게 하는 건지, 화장실은 어떻게 가시는지 생각한다.`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `친구가 갑자기 “난 네가 그냥 좋아”라고 했을 때 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "나를? 왜? (어떤 이유에서 인지라는 생각이 든다.)"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "어머.. (감동받는다.)"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "나 배가 아픈 거 같아라고 했을 때?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `뭐 먹었는데? 뭐 잘못 먹었어?`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "괜찮아? 왜 아프지? 화장실배야? 배탈난거야?ㅠㅠ"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `나 세 달 월급 모아서 맥북 샀어!!라고 했을 때?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "오! 대박! 어떤 모델 산 거야?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "아 진짜?! 세 달 모은 거면 진짜 힘들었겠다ㅠㅠ 고생 많았어!!"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "주말에 놀러 갈 곳을 정할 때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `몇 시까지 만나서 몇 시에 밥을 먹고 다음 일정까지 생각해 놓는다.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `뭐 할지는 일단 만나서 정한다.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "갑자기 여행 가자고 제안했을 때?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "즉흥 속에 계획이 다 있어야 해서 어디 가자~ 듣는 순간 머리에서 대충의 계획이라도 짜기 시작한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "갑자기 가는 것에 대해서 걱정은 되지만 어디 갈지 생각에 금세 설렘으로 가득 차 있다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '친구가 “너 오늘 뭐 해?”라고 물었을 때 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "오늘 4시에 코인 빨래방 가서 빨래하고 청소 좀 하고 이따 저녁 7시에 치킨 포장해서 올 예정이야."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "빨래하고 방 청소 끝나고 뭐 하지? 뭔가 먹고 싶긴 한데 일단.. 쉬고 생각해 볼래."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/alienChar/INFP.jpg'
+            },
+        ]
+    },
     // loveTV
     {
         info : {
