@@ -128,6 +128,14 @@ class Quiz extends Component {
                     </a>
                 </div>
             )
+        } else if (window.location.href.split('/').includes('fatecharmtest')) {
+            return(
+                <div>
+                    <a rel="noopener noreferrer" target="_blank" href={`https://m.shop.tworld.co.kr/nf/index_nf_yp_plan.html?exhibitionId=P00000346&utm_source=ktest&utm_medium=banner&utm_campaign=foldable5ktest`} >
+                        <img loading="lazy" src={`https://images.ktestone.com/meta/fatecharmtest/fatecharmtest-question-img.jpg`} className='answer-option-img' alt={"labelStickerSKT"} />
+                    </a>
+                </div>
+            )
         } else if (window.location.href.split('/').includes('hmall') || window.location.href.split('/').includes('fatecharmtest')) {
             return null;
         } else {
