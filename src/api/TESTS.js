@@ -731,7 +731,7 @@ const TESTS = [
             },
             {
                 which:"SN",
-                question: "폭우가 쏟아지는 날 비를 쫄딱 맞으면 걷는 사람을 본다면?",
+                question: "폭우가 쏟아지는 날 비를 쫄딱 맞으며 걷는 사람을 본다면?",
                 answers:[
                     {
                         type: "S",
