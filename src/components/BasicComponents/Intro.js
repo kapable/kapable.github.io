@@ -518,6 +518,7 @@ class Intro extends Component {
                 <div className="loading-upper">
                     <Loading test={this.state.current_test.info.mainUrl} lang={this.state.lang} />
                     {setTimeout(function(){
+                        _eventSenderGA("Out-paging", `Go-to-Tworld(fatecharm)`, "loading page");
                         window.open(`https://m.shop.tworld.co.kr/exhibition/view?exhibitionId=P00000348&mbti=${result_contents.type}&utm_source=ktest&utm_medium=result&utm_campaign=foldable5ktest`
                         , "_parent");
                     }, 3700)}
