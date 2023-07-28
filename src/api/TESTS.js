@@ -2296,6 +2296,331 @@ const TESTS = [
             },
         ]
     },
+    // loveTVEng
+    {
+        info : {
+            mainTitle:"Love TV Test",
+            subTitle:"What is your relationship tendency on TV?",
+            mainUrl:"loveTVEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveTVEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveTVEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "love",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'When you have someone you like, what do you do?',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I don't hesitate to send text message and try to make an appointment quickly to meet"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I try to hang around, find a way to contact and slowly get to know the person'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What if you don't have any appointment on the weekend?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I contact my friends to make an appointment."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I just relax and heal at home."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "If you have to decide where to go on a trip with your lover, what would be your choice?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Even if it is crowded, I definitely want to visit famous and hot places`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `I prefer a nice and quiet healing place even if it is not famous`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "Just before starting a relationship, how do you do?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I feel excited and happy.`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I imagine our relationship in advance.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What if the person you care about suddenly responds slowly to you?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "Maybe too busy? Well, it can be~"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `Perhaps yesterday date wasn’t that good? Am I dumped? Haha`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "If you were to receive a surprise gift from your lover, what gift would you like to receive?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `Even if the gift lacks meaning, I want to receive a practical gift that I need these days`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I want to receive a pretty gift with sincerity even if it is less practical`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What do you do when you have someone you like?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I ask a lot of questions"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I react a lot"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "What if you are late for an appointment with your lover?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `I explain the specific circumstances and reasons for being late`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I apologize first and find out how my lover feels"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What if you plan a date and get into an argument with your lover?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I elaborate on why my idea is better"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I have a lot to say, but I'm disappointed"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What if your lover suddenly asks to meet you while you are enjoying your alone time?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `Anyway, it's hard to meet suddenly`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `It's embarrassing, but I'm going to meet my lover`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "How do you prepare for your anniversary with your lover?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I prepare months or weeks in advance"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I think one week is enough to prepare"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'What if you are traveling with your lover?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I organize the travel plan in 3 sheets of A4 paper and hands it over to my lover"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I just pick a place and then we can decide where we want to be"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveTVEng/INFP.jpg'
+            },
+        ]
+    },
     // loveTV
     {
         info : {

@@ -510,7 +510,6 @@ class Intro extends Component {
             return this._page
     }
     
-
     lodingPageRender(){
         if (this.state.current_test.info.mainUrl === 'fatecharmtest') {
             let result_contents = this.resultCaculator();
