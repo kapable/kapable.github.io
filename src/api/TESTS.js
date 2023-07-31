@@ -665,6 +665,331 @@ const TESTS = [
             },
         ]
     },
+    // charRoadJP
+    {
+        info : {
+            mainTitle:"性格道路テスト",
+            subTitle:"道で調べる私の性格は？",
+            mainUrl:"charRoadJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/charRoadJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/charRoadJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"JP",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '私が好む人間関係は？',
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '浅いけど、多くの人と親しくなること'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '少数の人と深く親しくなること'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "私は初めて会う人の前で？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "初めに人見知りをするが、たちまち思いっきり会話を引っ張っていく"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "人見知りをし、人の言うことを傾聴する"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "友達と歩いていて道で偶然友達の知人に会った時、私は？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `まず挨拶して、自然に会話に参加する`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `友達が会話が終わるまでそばでじっと待っている`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "連絡中に友達が見て無視したら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `まあまあだと思う`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `もしかして私が何か失言したのかな？ と会話をさかのぼってみる`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "悪い夢を見て冷や汗を流しながら起きた。 私の考えは？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "ふぅ、夢だね··· 現実かと.."
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `何の夢がこうなの？ ひょっとして悪いことが起きるんじゃないよね？`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "過去に戻ったら何がしたいかという友達の言葉に私は？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `意味がない~そんなことは起こらない~`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `当然ロトの番号をいっぱい覚えていくべきではない？`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `相手と大きな葛藤が生じた時、私は？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "最大限理性的で論理的に話す"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "私も言いたいことはたくさんあるけど、整理がうまくいかなくて涙から出そうだ"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "長い間就職を準備していた友達が望んでいた会社に就職に成功したら、私は？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `おめでとう！就職した感想はどう？ どんな会社なの？`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "おめでとう！長い間準備したのに、一生懸命努力した甲斐があるだろうね！"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `相手と会話する時、私がもっと気にすることは？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "会話のテーマとファクト"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "話し方と表情"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "家の近くに私の好きな料理をする食堂が新しくできたら？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `お、私の好きな食べ物！日程に合わせて事前に予約しておかないと！`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `お、私の一番好きな食べ物！近いうちに一度行ってみないと~`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "友達と約束がある日、私は？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "約束時間の数時間前から準備を終えても時間が少し残っている"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "約束時間の何分前から急いで準備する"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '私がもっと嫌な状況は？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "私の立てた計画が狂っている状況"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "退屈な空間に長くいなければならない状況"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/charRoadJP/INFP.jpg'
+            },
+        ]
+    },
     // tetrisChar
     {
         info : {
