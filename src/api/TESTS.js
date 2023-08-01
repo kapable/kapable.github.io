@@ -665,6 +665,333 @@ const TESTS = [
             },
         ]
     },
+    // ferrisWheel
+    {
+        info : {
+            mainTitle:"관람차 성격 테스트",
+            subTitle:"관람차로 알아보는 나의 성격은?",
+            mainUrl:"ferrisWheel",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/ferrisWheel-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/ferrisWheel-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "characteristic",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '친구가 이번주 주말에 놀이공원가자고 할 때 나는?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '이번 주? 오~ 좋아 좋아~ 잠시만 나 스케줄 확인 한 번만 하고 말해 줄게!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '이번 주? 아.. 미안 나 일정 있어! 다음에 같이 가자! (사실은 일정 없음)'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "오픈전인데도 불구하고 입구에 사람들이 줄 서 있는 모습을 본 나는?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "놀이 기구 탈 생각과 간식 먹을 생각에 잔뜩 기대가 된다."
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "많은 인파에 벌써부터 기 빨리는 느낌이라 집 생각이 스멀스멀 올라온다."
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "모르는 사람과 기구를 타게 된다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `오! 재밌겠다! 혼자 오셨어요? 짝수가 안 맞아서 혼자 탔어요ㅠㅠ`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `차라리 그냥 혼자 타고 싶은데.. 옆 사람이 말 안 걸어 줬으면 좋겠다.`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "롤러코스터를 탄 후에 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `진짜 타보고 싶었던 건데 재밌겠다! 이따가 또 타야지!!!`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `안전바 이거 왜 덜컹거리는 거 같지.. 타다가 떨어져서 나 뉴스에 나오는 거 아냐?!`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "귀신의 집 투어 후 만약에 진짜 귀신이 붙어서 나오면 어떡하지?라고 했을 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "음.. 귀신의 집 안에 진짜 귀신이 있을 리가 없잖아. 밥이나 먹으러 가자!"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `혹시나 빙의 되거나 그러면 어떡하지.. 귀신 보이는거 아냐?! 잠시만 그러면은 소금이나 팥을 가지고 다녀야 하나..`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "놀이공원 안에 귀여운 고양이가 쓱 지나간다 이때 드는 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `오호 이 동네 사니? 나도 고양이 키우고 싶다!!! 너무 귀여워..!!!`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `야옹~ 이러면 내 말 알아듣고 오려나? 고양이 키우려면 돈 많이 든다던데..ㅠㅠ`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `밥 먹으러 가서 메뉴 선정 할 때 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "무슨 음식 좋아해? 매운 거는 잘 먹어? 좋아해?"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "아 진짜?! 오오 나도 그 음식 진짜 좋아해! 음식 취향 비슷해서 진짜 신기하다!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "시킨 메뉴가 생각보다 맛도 별로고 가격 대비 양도 아쉬웠을 때 나는?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `아 맛 별론데? 그냥 담엔 딴 데 가자.`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "여기 리뷰 좋다고 해서 왔는데 리뷰 조작이네 이거 ㅂㄷㅂㄷ 조만간에 망할 듯!!!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `2시간 대기해야 탈 수 있다는 말에 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "다른 줄 적은 거 타는게 맞지. 다른 거 타자!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "다른 거도 줄 대부분 다 길 텐데 오히려 더 기다리게 될 수도 있어~"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "이동 중 예쁜 공원을 발견했다 이때 나는?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `이제 이쪽으로 이동해서 여기로 가야 할 거 같아!`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `우와~ 여기에 이런 데가 있었어?! 저기도 가볼까?!`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "집으로 가는 길 차가 끊긴 상황이라면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "재빠르게 지도 앱을 켜서 새로운 경로를 확인한다."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "잠시 당황하다 택시 탈까? 하는 생각을 한다."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '놀이공원에서 신나게 놀고 집으로 돌아온 나는?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "머리띠랑 기념품 산 거 정리하고 10분 정도 쉬다가 씻고 나와서 사진 정리해야지"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "나갔다 왔으니 일단 손 씻고 나머지는 일단 누워서 쉬고 생각해 볼까?!"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/ferrisWheel/INFP.jpg'
+            },
+        ]
+    },
     // charRoadJP
     {
         info : {
