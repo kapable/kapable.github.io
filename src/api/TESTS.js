@@ -665,6 +665,333 @@ const TESTS = [
             },
         ]
     },
+    // catFootLove
+    {
+        info : {
+            mainTitle:"냥 발바닥 연애 테스트",
+            subTitle:"냥 발바닥으로 알아보는 나의 연애 스타일은?",
+            mainUrl:"catFootLove",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/catFootLove-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/catFootLove-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Kor",
+            category: "love",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '자기 친구들을 소개해 준다는 애인! 내 대답은?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '오 너무 좋지!! 궁금했는데 재밌겠다!'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '좀 불편한데.. 나중에 천천히 해주라'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "식당에서 메뉴를 추가 주문할 때 내 모습은?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "바로 사장님을 불러서 주문함"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "주문해달라고 애인에게 슬쩍 부탁함"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "연인과의 데이트가 생각보다 일찍 끝났다면?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `친구들한테 만나자고 연락해 봐야지`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `오히려 좋아~ 얼른 집 가서 쉬어야지 `
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "갑자기 카톡 프사를 다 내린 애인! 난 어떤 생각을 할까?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `(아무 생각 없이 바로 물어봄) 엥 프사 내렸네? `
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `프사 왜 내렸지..? 무슨 심경의 변화일까..? `
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "애인과 놀러 갔던 여행지에 대해 얘기할 때 나는?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "거기 거리도 깨끗하고 음식도 맛있더라! "
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `거기 분위기 너무 좋았어 또 가면 얼마나 좋을까? `
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "연인에게 선물을 받으면 드는 생각은?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `내게 필요한 선물을 사줘서 감동`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `선물을 사기까지의 과정이 상상되며 감동 `
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `연애를 할 때 주로 내 모습은?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "서운하다는 얘기를 자주 들음"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "서운하다는 얘기를 자주 함 "
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "애인이 나에게 ‘난 그냥 네가 좋아!’라고 한다면?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `나도 좋지~! 근데 어떤 부분이 제일 좋아?`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "나도 나도!! (감동) 역시 우린 통하나 봐!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `기분이 안 좋아 보이는 애인에게 나는?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "기프티콘을 보내거나 좋아하는 걸 주려고 함"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "전화나 카톡으로 기분을 풀어주려고 노력함"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "데이트 중 예쁜 카페를 발견했다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `메모해 뒀다가 다음 데이트 일정에 추가함 `
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `저기 다음에 꼭 가보자! (나중에 까먹음) `
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "연인과 대화 중 얘기가 딴 길로 새고 있다면?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "주제랑 안 맞는 얘기 불편함"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "재미있는 얘기라면 같이 딴 길로 샘"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: '갑자기 너무 보고 싶다는 애인에게 내 대답은?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "일단 이건 해야 해서 저녁 8시에 잠깐 볼까?"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "이거 나중에 하면 돼! 지금 만날래?"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/catFootLove/INFP.jpg'
+            },
+        ]
+    },
     // whyLoveJP
     {
         info : {
