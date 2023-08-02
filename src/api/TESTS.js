@@ -8815,6 +8815,333 @@ const TESTS = [
             },
         ]
     },
+    // loveLotteryEng
+    {
+        info : {
+            mainTitle:"Love Lottery Test",
+            subTitle:"lam a not scratched lottery ticket! Who is the lucky one?",
+            mainUrl:"loveLotteryEng",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/loveLotteryEng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveLotteryEng-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"Eng",
+            category: "love",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: 'What kind of date do you prefer?'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: 'I like exciting and fun outdoor dates.'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: 'I like a quiet and calm indoor date.'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "What if you get home after a date with your lover over the weekend?"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "I had a happy date this weekend too! I am totally refreshed!"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "I had good weekend again~ now, I need to rest now~"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "What if your lover suddenly propose a double date?",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `Okay! Let’s have fun! It will be fun!`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `Oh, it is kinda… We can try it next time`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What are your thoughts at the beginning of a relationship?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `I'm so happy haha. I will keep this relationship happily~`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `I am so happy, but can I be happy for a long time without fighting?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What if you are enjoying a picnic with your lover by the Han River?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "I like the weather, the food is delicious, and I feel good~"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `The weather is nice~ But should we be worried that pigeons will come all the way here and eat our food?`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "What do you think when you go out to eat lunch together with your lover?",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `What should I eat? Everything on the menu looks delicious...`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `What should I have for dinner later? I want to eat something delicious for dinner as well.`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What if your lover made a gift for you by hand?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "How did I get the idea to make something like this? It's really great!"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Oh my god! It must have taken a lot of effort to make this. I am impressed!"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "How would you react if your lover dropped their cell phone?",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `Well, what were you doing? Is the screen okay? Do you have insurance on it?`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "Well, are you okay? You didn’t break the screen, did you?"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `What if your lover is too logical in an argument?`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "I can't lose! I also prepare to be logical."
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "I can agree, but I am also have things to say and I feel sorry."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What if you go on a trip with your lover?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `I will share all the detailed plan with my lover.`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `I only make rough plans and follow my lover’s plans.`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "What if you found a new tourist spot on the way to your destination on a trip with your lover?",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I just follow my original plan and plan to visit this new spot next time."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I’m too curious to pass by, so I ask my lover to stop by."
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'What do you do when you go on a date with your lover?',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "I go on a date with detail plans."
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "I go on an impromptu date without detail plans."
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/loveLotteryEng/INFP.jpg'
+            },
+        ]
+    },
     // loveLottery
     {
         info : {
