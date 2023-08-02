@@ -86,6 +86,7 @@ class App extends Component {
       ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
       lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'ES', 'IT', 'Rus' ,'Others'],
       category_list:['saju', 'characteristic', 'love', 'etc'],
+      isLoggedIn: false,
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);
     this.lang_category_renderer = this.lang_category_renderer.bind(this);
@@ -106,13 +107,27 @@ class App extends Component {
     let parsedUrl = new URL(window.location.href);
     const accessToken = parsedUrl.searchParams.get("access_token");
     const refreshToken = parsedUrl.searchParams.get("refresh_token");
+    const { cookies } = this.props;
 
     if (accessToken || refreshToken) {
-      const { cookies } = this.props;
       const accessTokenCookieAges = 60*60*2; // 2 Hours
       cookies.set('accessToken', accessToken, { path: '/', maxAge: accessTokenCookieAges, secure: true });
       const refreshTokenCookieAges = 60*60*2; // 2 Hours
       cookies.set('refreshToken', refreshToken, { path: '/', maxAge: refreshTokenCookieAges, secure: true });
+
+      this.setState({
+        isLoggedIn: true,
+      });
+    } else if (cookies.get('accessToken')) {
+      // accessToken validation related to Expiration
+      // if valid -> isLoggedIn : true
+      this.setState({
+        isLoggedIn: true,
+      });
+      // else if expired -> refreshToken validation
+        // if cookies.get('refreshToken')
+          // if valid -> isLoggedIn : true
+      
     }
   }
   all_lang_renderer(){
@@ -269,7 +284,7 @@ class App extends Component {
     <Fragment>
       {/* <button onClick={() => onClickLogin(window.location)}>LOGIN</button>
       <button onClick={() => verifyAccessToken(this.state.accessToken)}>VERIFY</button>
-      {console.log(this.props.cookies.get('accessToken') ? this.props.cookies.get('accessToken') : null)} */}
+      {this.state.isLoggedIn ? <img src='https://images.ktestone.com/default/logged-in-btn.png' alt='logged-in-btn'/> : <img src='https://images.ktestone.com/default/log-in-btn.png' alt='log-in-btn'/>} */}
 
       {this.reloadPage()}
 
