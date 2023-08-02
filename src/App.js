@@ -34,6 +34,8 @@ import LifetimeSajuResult from './components/TestTypes/Saju/LifetimeSajuResult';
 import LifeInterpreting from './components/TestTypes/Saju/LifeInterpreting';
 import LifeInterpretingResult from './components/TestTypes/Saju/LifeInterpretingResult';
 import Privacy from './components/BasicComponents/Privacy';
+import { withCookies } from 'react-cookie';
+// import { onClickLogin, verifyAccessToken } from './tools/tools';
 
 
 class App extends Component {
@@ -90,7 +92,7 @@ class App extends Component {
     this.all_lang_renderer = this.all_lang_renderer.bind(this);
     this.mainMetaTagRenderer = this.mainMetaTagRenderer.bind(this);
   }
-  componentDidMount(){
+  componentDidMount (){
     ReactGA4.initialize([
       {
         trackingId: "G-W3LQWJVJLX",
@@ -99,6 +101,19 @@ class App extends Component {
         }
       }
     ]);
+
+    // about Logged-In
+    let parsedUrl = new URL(window.location.href);
+    const accessToken = parsedUrl.searchParams.get("access_token");
+    const refreshToken = parsedUrl.searchParams.get("refresh_token");
+
+    if (accessToken || refreshToken) {
+      const { cookies } = this.props;
+      const accessTokenCookieAges = 60*60*2; // 2 Hours
+      cookies.set('accessToken', accessToken, { path: '/', maxAge: accessTokenCookieAges, secure: true });
+      const refreshTokenCookieAges = 60*60*2; // 2 Hours
+      cookies.set('refreshToken', refreshToken, { path: '/', maxAge: refreshTokenCookieAges, secure: true });
+    }
   }
   all_lang_renderer(){
     let i = 0;
@@ -252,6 +267,9 @@ class App extends Component {
     return(
     <Router>
     <Fragment>
+      {/* <button onClick={() => onClickLogin(window.location)}>LOGIN</button>
+      <button onClick={() => verifyAccessToken(this.state.accessToken)}>VERIFY</button>
+      {console.log(this.props.cookies.get('accessToken') ? this.props.cookies.get('accessToken') : null)} */}
 
       {this.reloadPage()}
 
@@ -435,4 +453,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default withCookies(App);

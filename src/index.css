@@ -63,8 +63,8 @@ body {
 .kakao-plusfriend-comment-container {
   position: fixed;
   width: 15rem;
-  bottom: 100px;
-	right: 45px;
+  bottom: 95px;
+	right: 27px;
 }
 
 .kakao-plusfriend-comment-image {
@@ -75,7 +75,7 @@ body {
 
 .kakao-plusfriend-btn-container {
   position: fixed;
-  width: 8rem;
+  width: 5rem;
   bottom:20px;
 	right:20px;
 }
