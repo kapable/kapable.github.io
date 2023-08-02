@@ -665,6 +665,333 @@ const TESTS = [
             },
         ]
     },
+    // whyLoveJP
+    {
+        info : {
+            mainTitle:"あなたを愛する11の理由テスト",
+            subTitle:"私を愛する理由が知りたいなら？",
+            mainUrl:"whyLoveJP",
+            scoreType:"typeCountingMBTI",
+            mainImage:"https://images.ktestone.com/introImages/whyLoveJP-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/whyLoveJP-thumb.png",
+            horizontalBanner: "https://images.ktestone.com/horizontalNewTest/Korea/dotori.png",
+            lang:"JP",
+            category: "love",
+        },
+        questions:[
+            {
+                which:"EI",
+                question: '週末は何をしていますか？'
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: '平日しか働いていないので、週末は自分を癒しに出かけなければならない。'
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: '平日しか働いていないので、週末は家で休まなければならない。'
+                    },
+                ],
+            },
+            {
+                which:"EI",
+                question: "もしあなたの友人が卒業制作を台無しにしてしまったら？"
+                ,
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: "私なら、気分転換に他の友人と出かけるよう友人に誘うだろう。"
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: "私なら、友人が大丈夫かどうか尋ねて、デッサン喫茶に行って練習できないか提案する。"
+                    },
+                ]
+            },
+            {
+                which:"EI",
+                question: "もしあなたの友人が、しばらくの間、あなたの家の近くで会いたいと言ったら？",
+                answers:[
+                    {
+                        type: "E",
+                        score: 2,
+                        content: `友人に会って、家の近くのマートに寄るつもりだ。`
+                    },
+                    {
+                        type: "I",
+                        score: 5,
+                        content: `友人に会って、まっすぐ家に帰って一人で休むよ。`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "ラーメンはどのように調理するのですか？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `おいしいラーメンの作り方を検索して、そのレシピに従う。`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `何千回もラーメンを作っているから、感覚で料理するんだ。`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "街で工事現場を見かけたらどうする？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: "不便でうるさいので、早く終わってほしい。"
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `突然何かが落ちてくるのが怖くて、さっさと通り過ぎてしまう。`
+                    },
+                ]
+            },
+            {
+                which:"SN",
+                question: "傘立てにたくさんの傘が並んでいたら？",
+                answers:[
+                    {
+                        type: "S",
+                        score: 2,
+                        content: `たくさんの人が来たんだなと思います。`
+                    },
+                    {
+                        type: "N",
+                        score: 5,
+                        content: `似たようなデザインはたくさんあると思うので、他の人の傘を取ることもできる。`
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `もし、あなたが作った製品を宣伝するとしたら？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "既存製品との性能向上を比較することで、数字の信頼性を強調している。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "私は商品の情緒を刺激するストーリーテリングを作り、デザインをすっきりときれいに仕上げる。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: "友達が重い鍋を持っているのを見つけたらどうする？",
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: `重い鉄鍋なのだろうか。`
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "重くないのかと心配になる。"
+                    },
+                ]
+            },
+            {
+                which:"TF",
+                question: `友達が機嫌が悪くて散歩に出かけたとしたら？`,
+                answers:[
+                    {
+                        type: "T",
+                        score: 2,
+                        content: "いきなり散歩ですか？どこに行くのか聞いてみる。"
+                    },
+                    {
+                        type: "F",
+                        score: 5,
+                        content: "今日は何があった？どうして機嫌が悪いの？"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "プロジェクトの業績が思わしくなかったら？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: `私の計画に何か問題があったのだろうかと考える。`
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: `実は、最初から少し悪かったのかもしれない。`
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: "企画書を書くときはどうするのですか？",
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "できるだけ計画通りに仕事をする。"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "まずは試してみて、後で修正する。"
+                    },
+                ]
+            },
+            {
+                which:"JP",
+                question: 'まもなく飛行機が離陸するという案内放送が聞こえる時か？',
+                answers:[
+                    {
+                        type: "J",
+                        score: 2,
+                        content: "事前にスケジュールを決めておいたから、心配しないで、信じてついてきてね！"
+                    },
+                    {
+                        type: "P",
+                        score: 5,
+                        content: "とても興奮している！初めてだから心配だけど、すごく楽しいと思う！"
+                    },
+                ]
+            },
+        ],
+        results:[
+            {
+                type: "ESTJ",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "chfhr",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/ESTJ.jpg'
+            },
+            {
+                type: "ESTP",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "vkfks",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/ESTP.jpg'
+            },
+            {
+                type: "ESFJ",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "gksmf",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/ESFJ.jpg'
+            },
+            {
+                type: "ESFP",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghkfqkfgks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/ESFP.jpg'
+            },
+            {
+                type: "ENTJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wlsghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/ENTJ.jpg'
+            },
+            {
+                type: "ENTP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "Qkfrks",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/ENTP.jpg'
+            },
+            {
+                type: "ENFJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "qhfk",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/ENFJ.jpg'
+            },
+            {
+                type: "ENFP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "ska",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/ENFP.jpg'
+            },
+            {
+                type: "ISTJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "ghl",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/ISTJ.jpg'
+            },
+            {
+                type: "ISTP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "shfks",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/ISTP.jpg'
+            },
+            {
+                type: "ISFJ",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "wnghkd",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/ISFJ.jpg'
+            },
+            {
+                type: "ISFP",
+                desc: `세상 제일 귀엽지만 세상 제일 지랄견인 나는 ‘포메라니안’ \n
+                `,
+                query: "qpdlwl",
+                score_range:range(26),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/ISFP.jpg'
+            },
+            {
+                type: "INTJ",
+                desc: `작지만 용감한 난 질투쟁이 치와와~ 난 참지 않Z…!\n`,
+                query: "cjdfhr",
+                score_range:range(26, 51),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/INTJ.jpg'
+            },
+            {
+                type: "INTP",
+                desc: `도비가 부러운 자유로운 영혼인, 웰시코기\n`,
+                query: "dusqnsghd",
+                score_range:range(51, 75),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/INTP.jpg'
+            },
+            {
+                type: "INFJ",
+                desc: `친숙한 댕댕이 , 리트리버\n`,
+                query: "dusen",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/INFJ.jpg'
+            },
+            {
+                type: "INFP",
+                desc: `지치는 게 뭐야? ~~세상 미친 텐션 비글!\n`,
+                query: "gkdis",
+                score_range:range(76, 101),
+                img_src:'https://images.ktestone.com/resultImages/whyLoveJP/INFP.jpg'
+            },
+        ]
+    },
     // ferrisWheel
     {
         info : {
