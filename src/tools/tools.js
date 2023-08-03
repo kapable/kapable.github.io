@@ -1,5 +1,4 @@
 import ReactGA4 from 'react-ga4';
-import axios from 'axios';
 
 const projectId = "7a4499ca-4644-45ee-9b3f-f63ea3d19e64";
 
@@ -25,32 +24,36 @@ export const onClickLogin = async (windowLocation) => {
 };
 
 export const verifyAccessToken = async (accessToken) => {
-    // await fetch(
-    //     `https://bouns.io/api/jwt-verify?`,
-    // {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-	// 	body: JSON.stringify({
-    //         token: accessToken,
-    //         projectId: projectId,
-    //     })
-    // }
-    // ).then(async (res) => {
-    //     console.log(res);
-    // });
-
-    axios.post(`https://bouns.io/api/jwt-verify?`, {
-        token: accessToken,
-        projectId: projectId,
-    }, {
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    })
-    .then(async (res) => {
-        console.log(res);
-    });
+    return await fetch(
+        `https://bouns.io/api/jwt-verify?`,
+        {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                token: accessToken,
+                projectId: projectId,
+            })
+        }
+    ).then((res) => res.json())
 }
 
+export const getRefreshedToken = async (refreshToken) => {
+    return await fetch(
+        `https://bouns.io/api/refresh-token?`,
+        {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            refreshToken: refreshToken,
+        })
+        }
+    ).then(async (res) => {
+        const result = await res.json();
+        const accessToken = result?.accessToken;
+        return accessToken;
+    });
+}

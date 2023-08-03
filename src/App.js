@@ -35,7 +35,7 @@ import LifeInterpreting from './components/TestTypes/Saju/LifeInterpreting';
 import LifeInterpretingResult from './components/TestTypes/Saju/LifeInterpretingResult';
 import Privacy from './components/BasicComponents/Privacy';
 import { withCookies } from 'react-cookie';
-// import { onClickLogin, verifyAccessToken } from './tools/tools';
+import { onClickLogin, verifyAccessToken, getRefreshedToken } from './tools/tools';
 
 
 class App extends Component {
@@ -92,8 +92,9 @@ class App extends Component {
     this.lang_category_renderer = this.lang_category_renderer.bind(this);
     this.all_lang_renderer = this.all_lang_renderer.bind(this);
     this.mainMetaTagRenderer = this.mainMetaTagRenderer.bind(this);
+    this.onClickLogout = this.onClickLogout.bind(this);
   }
-  componentDidMount (){
+  async componentDidMount (){
     ReactGA4.initialize([
       {
         trackingId: "G-W3LQWJVJLX",
@@ -109,6 +110,7 @@ class App extends Component {
     const refreshToken = parsedUrl.searchParams.get("refresh_token");
     const { cookies } = this.props;
 
+    try {
     if (accessToken || refreshToken) {
       const accessTokenCookieAges = 60*60*2; // 2 Hours
       cookies.set('accessToken', accessToken, { path: '/', maxAge: accessTokenCookieAges, secure: true });
@@ -119,15 +121,37 @@ class App extends Component {
         isLoggedIn: true,
       });
     } else if (cookies.get('accessToken')) {
-      // accessToken validation related to Expiration
-      // if valid -> isLoggedIn : true
-      this.setState({
-        isLoggedIn: true,
+      // accessToken validation (related to Expiration)
+      verifyAccessToken(cookies.get('accessToken'))
+      .then(res => {
+        if(res) { // if valid -> isLoggedIn : true
+          this.setState({
+            isLoggedIn: true,
+          });
+        } else { // else if expired -> refreshToken for new accessToken
+          getRefreshedToken(cookies.get('refreshToken'))
+          .then(res => {
+            const accessTokenCookieAges = 60*60*2; // 2 Hours
+            cookies.set('accessToken', res, { path: '/', maxAge: accessTokenCookieAges, secure: true });
+            this.setState({
+              isLoggedIn: true,
+            });
+          })
+        }
       });
-      // else if expired -> refreshToken validation
-        // if cookies.get('refreshToken')
-          // if valid -> isLoggedIn : true
-      
+    } else if (cookies.get('refreshToken')) { // if only the refreshToken exist -> refreshToken for new accessToken
+      getRefreshedToken(cookies.get('refreshToken'))
+      .then(res => {
+        const accessTokenCookieAges = 60*60*2; // 2 Hours
+        cookies.set('accessToken', res, { path: '/', maxAge: accessTokenCookieAges, secure: true });
+        this.setState({
+          isLoggedIn: true,
+        });
+      })
+    }
+    } catch {
+      alert("에러가 발생했습니다 ㅠㅠ");
+      window.location.href = window.location.protocol + "//" + window.location.host;
     }
   }
   all_lang_renderer(){
@@ -278,13 +302,27 @@ class App extends Component {
     return _metaTag
   }
 
+  onClickLogout(){
+    try {
+      if(window.confirm('현재 마이 페이지 준비중입니다!\n곧 새로운 케이테스트로 찾아뵙겠습니다 : )\n확인 버튼을 누르시면 자동으로 로그아웃됩니다.')) {
+        const { cookies } = this.props;
+        cookies.remove('accessToken', { path: '/' });
+        cookies.remove('refreshToken', { path: '/' });
+        this.setState({
+            isLoggedIn: false
+        })
+        window.location.href = window.location.protocol + "//" + window.location.host;
+      }
+    } catch {
+      alert("에러가 발생했습니다 ㅠㅠ");
+      window.location.href = window.location.protocol + "//" + window.location.host;
+    }
+  }
+
   render() {
     return(
     <Router>
     <Fragment>
-      {/* <button onClick={() => onClickLogin(window.location)}>LOGIN</button>
-      <button onClick={() => verifyAccessToken(this.state.accessToken)}>VERIFY</button>
-      {this.state.isLoggedIn ? <img src='https://images.ktestone.com/default/logged-in-btn.png' alt='logged-in-btn'/> : <img src='https://images.ktestone.com/default/log-in-btn.png' alt='log-in-btn'/>} */}
 
       {this.reloadPage()}
 
@@ -459,7 +497,13 @@ class App extends Component {
             rel="noopener noreferrer"
             href={'https://ktestone.com/privacy'}
         >개인정보 처리방침</a></p>
+        {this.state.isLoggedIn ?
+      <p style={{cursor: "pointer"}} onClick={() => this.onClickLogout()}>out</p> :
+      <p style={{cursor: "pointer"}} onClick={() => onClickLogin(window.location)}>in</p>}
       </div>
+      {/* {this.state.isLoggedIn ?
+      <img style={{cursor: "pointer"}} onClick={() => this.onClickLogout()} src='https://images.ktestone.com/default/logged-in-btn.png' alt='logged-in-btn'/> :
+      <img style={{cursor: "pointer"}} onClick={() => onClickLogin(window.location)} src='https://images.ktestone.com/default/log-in-btn.png' alt='log-in-btn'/>} */}
     </Fragment>
     </Router>
     )
