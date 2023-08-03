@@ -112,7 +112,7 @@ class App extends Component {
     if (accessToken || refreshToken) {
       const accessTokenCookieAges = 60*60*2; // 2 Hours
       cookies.set('accessToken', accessToken, { path: '/', maxAge: accessTokenCookieAges, secure: true });
-      const refreshTokenCookieAges = 60*60*2; // 2 Hours
+      const refreshTokenCookieAges = 60*60*24*60; // 60 Days
       cookies.set('refreshToken', refreshToken, { path: '/', maxAge: refreshTokenCookieAges, secure: true });
 
       this.setState({
