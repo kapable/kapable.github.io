@@ -311,11 +311,11 @@ class App extends Component {
         this.setState({
             isLoggedIn: false
         })
-        window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname;
+        window.location.href = window.location.protocol + "//" + window.location.host;
       }
     } catch {
       alert("에러가 발생했습니다 ㅠㅠ");
-      window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname;
+      window.location.href = window.location.protocol + "//" + window.location.host;
     }
   }
 
