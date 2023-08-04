@@ -94,7 +94,7 @@ class App extends Component {
     this.mainMetaTagRenderer = this.mainMetaTagRenderer.bind(this);
     this.onClickLogout = this.onClickLogout.bind(this);
   }
-  async componentDidMount (){
+  componentDidMount (){
     ReactGA4.initialize([
       {
         trackingId: "G-W3LQWJVJLX",
@@ -151,7 +151,7 @@ class App extends Component {
     }
     } catch {
       alert("에러가 발생했습니다 ㅠㅠ");
-      window.location.href = window.location.protocol + "//" + window.location.host;
+      window.location.href = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
     }
   }
   all_lang_renderer(){
@@ -311,11 +311,11 @@ class App extends Component {
         this.setState({
             isLoggedIn: false
         })
-        window.location.href = window.location.protocol + "//" + window.location.host;
+        window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname;
       }
     } catch {
       alert("에러가 발생했습니다 ㅠㅠ");
-      window.location.href = window.location.protocol + "//" + window.location.host;
+      window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname;
     }
   }
 
@@ -497,13 +497,13 @@ class App extends Component {
             rel="noopener noreferrer"
             href={'https://ktestone.com/privacy'}
         >개인정보 처리방침</a></p>
-        {this.state.isLoggedIn ?
+        {/* {this.state.isLoggedIn ?
       <p style={{cursor: "pointer"}} onClick={() => this.onClickLogout()}>out</p> :
-      <p style={{cursor: "pointer"}} onClick={() => onClickLogin(window.location)}>in</p>}
+      <p style={{cursor: "pointer"}} onClick={() => onClickLogin(window.location)}>in</p>} */}
       </div>
-      {/* {this.state.isLoggedIn ?
-      <img style={{cursor: "pointer"}} onClick={() => this.onClickLogout()} src='https://images.ktestone.com/default/logged-in-btn.png' alt='logged-in-btn'/> :
-      <img style={{cursor: "pointer"}} onClick={() => onClickLogin(window.location)} src='https://images.ktestone.com/default/log-in-btn.png' alt='log-in-btn'/>} */}
+      {this.state.isLoggedIn ?
+      <img style={{cursor: "pointer", position: 'fixed', bottom: '20px', right: '20px'}} onClick={() => this.onClickLogout()} src='https://images.ktestone.com/default/logged-in-btn.png' alt='logged-in-btn'/> :
+      <img style={{cursor: "pointer", position: 'fixed', bottom: '20px', right: '20px'}} onClick={() => onClickLogin(window.location)} src='https://images.ktestone.com/default/log-in-btn.png' alt='log-in-btn'/>}
     </Fragment>
     </Router>
     )

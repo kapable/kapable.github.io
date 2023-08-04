@@ -76,7 +76,7 @@ body {
 .kakao-plusfriend-btn-container {
   position: fixed;
   width: 5rem;
-  bottom:20px;
+  bottom:90px;
 	right:20px;
 }
 
@@ -86,8 +86,8 @@ body {
 
 .go-to-home-btn-container {
   position: fixed;
-  bottom:20px;
-	right:20px;
+  bottom:30px;
+	left:20px;
   font-size: 2rem;
   background-color: white ;
   border: #E71C83 solid 0.15rem;
