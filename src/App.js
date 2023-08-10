@@ -111,44 +111,44 @@ class App extends Component {
     const { cookies } = this.props;
 
     try {
-    if (accessToken || refreshToken) {
-      const accessTokenCookieAges = 60*60*2; // 2 Hours
-      cookies.set('accessToken', accessToken, { path: '/', maxAge: accessTokenCookieAges, secure: true });
-      const refreshTokenCookieAges = 60*60*24*60; // 60 Days
-      cookies.set('refreshToken', refreshToken, { path: '/', maxAge: refreshTokenCookieAges, secure: true });
-
-      this.setState({
-        isLoggedIn: true,
-      });
-    } else if (cookies.get('accessToken')) {
-      // accessToken validation (related to Expiration)
-      verifyAccessToken(cookies.get('accessToken'))
-      .then(res => {
-        if(res) { // if valid -> isLoggedIn : true
-          this.setState({
-            isLoggedIn: true,
-          });
-        } else { // else if expired -> refreshToken for new accessToken
-          getRefreshedToken(cookies.get('refreshToken'))
-          .then(res => {
-            const accessTokenCookieAges = 60*60*2; // 2 Hours
-            cookies.set('accessToken', res, { path: '/', maxAge: accessTokenCookieAges, secure: true });
-            this.setState({
-              isLoggedIn: true,
-            });
-          })
-        }
-      });
-    } else if (cookies.get('refreshToken')) { // if only the refreshToken exist -> refreshToken for new accessToken
-      getRefreshedToken(cookies.get('refreshToken'))
-      .then(res => {
+      if (accessToken || refreshToken) {
         const accessTokenCookieAges = 60*60*2; // 2 Hours
-        cookies.set('accessToken', res, { path: '/', maxAge: accessTokenCookieAges, secure: true });
+        cookies.set('accessToken', accessToken, { path: '/', maxAge: accessTokenCookieAges, secure: true });
+        const refreshTokenCookieAges = 60*60*24*60; // 60 Days
+        cookies.set('refreshToken', refreshToken, { path: '/', maxAge: refreshTokenCookieAges, secure: true });
+
         this.setState({
           isLoggedIn: true,
         });
-      })
-    }
+      } else if (cookies.get('accessToken')) {
+        // accessToken validation (related to Expiration)
+        verifyAccessToken(cookies.get('accessToken'))
+        .then(res => {
+          if(res) { // if valid -> isLoggedIn : true
+            this.setState({
+              isLoggedIn: true,
+            });
+          } else { // else if expired -> refreshToken for new accessToken
+            getRefreshedToken(cookies.get('refreshToken'))
+            .then(res => {
+              const accessTokenCookieAges = 60*60*2; // 2 Hours
+              cookies.set('accessToken', res, { path: '/', maxAge: accessTokenCookieAges, secure: true });
+              this.setState({
+                isLoggedIn: true,
+              });
+            })
+          }
+        });
+      } else if (cookies.get('refreshToken')) { // if only the refreshToken exist -> refreshToken for new accessToken
+        getRefreshedToken(cookies.get('refreshToken'))
+        .then(res => {
+          const accessTokenCookieAges = 60*60*2; // 2 Hours
+          cookies.set('accessToken', res, { path: '/', maxAge: accessTokenCookieAges, secure: true });
+          this.setState({
+            isLoggedIn: true,
+          });
+        })
+      }
     } catch {
       alert("에러가 발생했습니다 ㅠㅠ");
       window.location.href = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
