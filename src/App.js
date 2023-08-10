@@ -324,7 +324,7 @@ class App extends Component {
     <Router>
     <Fragment>
 
-      {this.reloadPage()}
+      {/* {this.reloadPage()} */}
 
       {/* CPC Banner Upper */}
       {/* {this.cpcBannerUpperScriptor()} */}
