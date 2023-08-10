@@ -196,14 +196,6 @@ class App extends Component {
     return lang_category_route_list;
   }
 
-  reloadPage() {
-    var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
-    var now = Date.now();
-    var tenSec = 10 * 1000;
-    var plusTenSec = currentDocumentTimestamp + tenSec;
-    if (now > plusTenSec) { window.location.reload(); } else {}
-  }
-
   cpcBannerUpperScriptor(){
     if((this.state.sharable_url.includes("ktestone.com") || this.state.sharable_url.includes("localhost")) && !window.location.href.split('/').some(que => this.state.ppl_list.includes(que))) { // for blocking Adfit banner with page refreshing for PPL
       return(
@@ -323,8 +315,6 @@ class App extends Component {
     return(
     <Router>
     <Fragment>
-
-      {/* {this.reloadPage()} */}
 
       {/* CPC Banner Upper */}
       {/* {this.cpcBannerUpperScriptor()} */}

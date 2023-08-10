@@ -57,3 +57,11 @@ export const getRefreshedToken = async (refreshToken) => {
         return accessToken;
     });
 }
+
+export const reloadPage = () => {
+    const currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
+    const now = Date.now();
+    const tenSec = 10 * 1000;
+    const plusTenSec = currentDocumentTimestamp + tenSec;
+    if (now > plusTenSec) { window.location.reload(); } else {}
+}
