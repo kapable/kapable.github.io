@@ -128,7 +128,7 @@ class App extends Component {
             this.setState({
               isLoggedIn: true,
             });
-          } else { // else if expired -> refreshToken for new accessToken
+          } else if (cookies.get('refreshToken')) { // else if expired & refreshToken exist -> refreshToken for new accessToken
             getRefreshedToken(cookies.get('refreshToken'))
             .then(res => {
               const accessTokenCookieAges = 60*60*2; // 2 Hours
