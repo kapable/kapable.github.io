@@ -10,14 +10,13 @@ import HorizontalScrolling from '../SubComponents/horizontalScrolling';
 import COPYBTN from '../../api/DefaultImg/result-copy-link-btn.png';
 import AGAINBTN from '../../api/DefaultImg/result-to-again-btn.png';
 import TOHOMEBTN from '../../api/DefaultImg/result-to-home-btn.png';
-import { _eventSenderGA, reloadPage } from '../../tools/tools';
+import { _eventSenderGA } from '../../tools/tools';
 import { Helmet } from 'react-helmet';
 import ScriptTag from 'react-script-tag';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 import KAKAOPLUSFRIEND from '../../api/DefaultImg/go-to-kakao-plusfriend.png';
 import PCTMBTIBAR from '../SubComponents/PctMBTIBar';
-import { instanceOf } from 'prop-types';
-import { withCookies, Cookies } from 'react-cookie';
+import Cookies from 'js-cookie';
 import '../TestTypes/FactPok/factPok.css';
 import ShareGroup from './ShareGroup';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
@@ -25,9 +24,6 @@ import CoupangDynamicBanner from '../SubComponents/CoupangDynamicBanner';
 import GoToHomeBtn from '../SubComponents/GoToHomeBtn';
 
 class Result extends Component {
-    static propTypes = {
-        cookies: instanceOf(Cookies).isRequired
-    };
 
     constructor(props){
         super(props)
@@ -43,7 +39,6 @@ class Result extends Component {
         const _current_url = _sharable_url.split(/[?/]/).filter(function(t) {return t !== ""});
         const _current_test = _current_url[3];
         const _current_result = _current_url[5];
-        const { cookies } = this.props;
 
         this.state = {
             mode:"result",
@@ -54,12 +49,13 @@ class Result extends Component {
             current_test_contents: null,
             num_shares_count:0,
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
-            coupangCookies: cookies.get('coupang') || null,
+            coupangCookies: Cookies.get('coupang') || null,
             isOpened: false,
             originAdProb: 0.6 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
             coupangCount: 5,
+            cookieAges: 1/24*2,
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
@@ -97,40 +93,30 @@ class Result extends Component {
     }
 
     onCoupangButtonClick(test){
-        const { cookies } = this.props;
-        // const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
-        const cookieAges = 60*60*2;
-        cookies.set('coupang', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        Cookies.set('coupang', true, { path: '', expires: this.state.cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
         this.setState({
-            coupangCookies: cookies.get('coupang'),
+            coupangCookies: Cookies.get('coupang'),
             isOpened: true,
         });
         if(this.state.originAdProb) {
             _eventSenderGA("Paging", `Click go-to-Coupang Button(${test})`, "result page");
             _eventSenderGA("Paging", `Click go-to-Coupang Button`, "result page");
         }
-        // setTimeout(reloadPage(), 1000);
     };
 
     onCoupangCloseButtonClick() {
-        const { cookies } = this.props;
-        // const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
-        const cookieAges = 60*60*2;
-        cookies.set('coupang', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        Cookies.set('coupang', true, { path: '', expires: this.state.cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
         this.setState({
-            coupangCookies: cookies.get('coupang'),
+            coupangCookies: Cookies.get('coupang'),
             isOpened: true,
         });
         _eventSenderGA("Closing", "Click Close-Coupang Button", "result page");
-        // setTimeout(reloadPage(), 1000);
     }
 
     onOtherCoupangButtonClick(){
-        const { cookies } = this.props;
-        const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
-        cookies.set('coupang', true, { path: '/', maxAge: cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        Cookies.set('coupang', true, { path: '', maxAge: this.state.cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
         this.setState({
-            coupangCookies: cookies.get('coupang'),
+            coupangCookies: Cookies.get('coupang'),
             isOpened: true,
         });
         _eventSenderGA("Paging", "Click go-to-Other-Coupang Button", "result page");
@@ -1642,4 +1628,4 @@ class Result extends Component {
     };
 };
 
-export default withCookies(Result);
+export default Result;
