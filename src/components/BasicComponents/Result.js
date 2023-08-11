@@ -109,7 +109,7 @@ class Result extends Component {
             _eventSenderGA("Paging", `Click go-to-Coupang Button(${test})`, "result page");
             _eventSenderGA("Paging", `Click go-to-Coupang Button`, "result page");
         }
-        setTimeout(reloadPage(), 500);
+        // setTimeout(reloadPage(), 1000);
     };
 
     onCoupangCloseButtonClick() {
@@ -122,7 +122,7 @@ class Result extends Component {
             isOpened: true,
         });
         _eventSenderGA("Closing", "Click Close-Coupang Button", "result page");
-        setTimeout(reloadPage(), 500);
+        // setTimeout(reloadPage(), 1000);
     }
 
     onOtherCoupangButtonClick(){
