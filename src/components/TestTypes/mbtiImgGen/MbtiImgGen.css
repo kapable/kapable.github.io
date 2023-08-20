@@ -20,10 +20,15 @@
     width: 22rem;
 }
 
+.mbtiImgGen-intro-btn {
+    bottom: 7.5%;
+}
+
 .mbtiImgGen-complete-btn {
     width: 100%;
     max-width: 30rem;
     margin: 0 auto;
+    display: block;
 }
 
 .mbtiImgGen-guide-btn {

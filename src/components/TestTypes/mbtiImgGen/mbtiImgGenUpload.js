@@ -64,7 +64,7 @@ const MbtiImgGenUpload = () => {
                     fileTypeError="지원하지 않는 파일입니다."
                     singleImage={false}
                     fileContainerStyle={{"position":"inline-block"}}
-                    buttonStyles={{"height":"4rem","width":"4rem","borderRadius":"5%","fontSize":"2rem","color":"#606060", "background": "#E8E8E8","border":"none", "boxShadow":"none", "overflow":"visible", "cursor":"pointer"}}
+                    buttonStyles={{"marginTop":"5rem", "height":"4rem","width":"4rem","borderRadius":"5%","fontSize":"2rem","color":"#606060", "background": "#E8E8E8","border":"none", "boxShadow":"none", "overflow":"visible", "cursor":"pointer"}}
                 />
             </>
         );
