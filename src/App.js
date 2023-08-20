@@ -36,6 +36,9 @@ import LifeInterpretingResult from './components/TestTypes/Saju/LifeInterpreting
 import Privacy from './components/BasicComponents/Privacy';
 import { withCookies } from 'react-cookie';
 import { onClickLogin, verifyAccessToken, getRefreshedToken } from './tools/tools';
+import MbtiImgGen from './components/TestTypes/mbtiImgGen/mbtiImgGen';
+import MbtiImgGenUpload from './components/TestTypes/mbtiImgGen/mbtiImgGenUpload';
+import MbtiImgGenComplete from './components/TestTypes/mbtiImgGen/mbtiImgGenComplete';
 
 
 class App extends Component {
@@ -378,6 +381,11 @@ class App extends Component {
             <Route path='/post2022Eng/:username/postwrite/' component={() => <POSTWRITE language={`Eng`}/>} />
             <Route path='/post2022Eng/:username/' component={() => <POSTPOST language={`Eng`}/>} />
             <Route path ='/post2022Eng/' component={() => <POSTSTART language={`Eng`}/>}/>
+
+            {/* AI Image Gen page */}
+            <Route path='/mbtiImgGen' component={() => <MbtiImgGen />} exact/>
+            <Route path='/mbtiImgGen/upload' component={() => <MbtiImgGenUpload />} exact/>
+            <Route path='/mbtiImgGen/complete' component={() => <MbtiImgGenComplete />} exact/>
 
             {/* "Main" page */}
             <Route path='/' exact>

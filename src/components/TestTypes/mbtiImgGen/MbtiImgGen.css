@@ -1,0 +1,45 @@
+.mbtiImgGen-intro-div, .mbtiImgGen-guide-div, .mbtiImgGen-upload-div, .mbtiImgGen-email-div, .mbtiImgGen-email-logo-div {
+    position: relative;
+}
+
+.mbtiImgGen-intro, .mbtiImgGen-guide, .mbtiImgGen-upload, .mbtiImgGen-email, .mbtiImgGen-complete {
+    width: 100%;
+    max-width: 33rem;
+    margin: 0 auto;
+}
+
+.mbtiImgGen-intro-btn-div, .mbtiImgGen-guide-btn-div, .mbtiImgGen-upload-btn-div, .mbtiImgGen-email-btn-div {
+    cursor: pointer;
+}
+
+.mbtiImgGen-intro-btn, .mbtiImgGen-guide-btn, .mbtiImgGen-upload-btn, .mbtiImgGen-upload-upper-banner, .mbtiImgGen-email-logo, .mbtiImgGen-email-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%);
+    width: 22rem;
+}
+
+.mbtiImgGen-complete-btn {
+    width: 100%;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+.mbtiImgGen-guide-btn {
+    bottom: 5%;
+}
+
+.mbtiImgGen-upload-btn {
+    bottom: 10%;
+}
+
+.mbtiImgGen-upload-upper-banner, .mbtiImgGen-email-logo {
+    top: 1%;
+    width: 100%;
+    max-width: 30rem;
+}
+
+.mbtiImgGen-email-btn {
+    bottom: 17%;
+}
