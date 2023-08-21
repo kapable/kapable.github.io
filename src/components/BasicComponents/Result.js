@@ -51,7 +51,7 @@ class Result extends Component {
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: Cookies.get('coupang') || null,
             isOpened: false,
-            originAdProb: 0.6 < Math.random(),
+            originAdProb: -0.6 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
             coupangCount: 5,
