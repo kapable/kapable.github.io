@@ -51,7 +51,7 @@ class Result extends Component {
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: Cookies.get('coupang') || null,
             isOpened: false,
-            originAdProb: -0.6 < Math.random(),
+            originAdProb: 0.6 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
             coupangCount: 5,
@@ -851,7 +851,7 @@ class Result extends Component {
     };
 
     affiliateRenderer(){
-        const cookieRocketCoupangLink = this.state.originAdProb ? "https://link.coupang.com/a/X2X8X" : "https://link.coupang.com/a/X2Zw2";
+        const cookieRocketCoupangLink = this.state.originAdProb ? "https://link.coupang.com/a/X2X8X" : "https://link.coupang.com/a/7pXoL";
         let otherAdProb = 0.1 > Math.random();
         const othersLink = [
             { test: "personalScentBTI", coupangLink: "https://link.coupang.com/a/FFVJ2" },
