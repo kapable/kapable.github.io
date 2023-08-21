@@ -15,9 +15,16 @@
 .mbtiImgGen-intro-btn, .mbtiImgGen-guide-btn, .mbtiImgGen-upload-btn, .mbtiImgGen-upload-upper-banner, .mbtiImgGen-email-logo, .mbtiImgGen-email-btn {
     position: absolute;
     left: 50%;
-    bottom: 20%;
+    bottom: 5%;
     transform: translateX(-50%);
     width: 22rem;
+}
+
+.mbtiImgGen-intro-biz-info-p {
+    width: 80%;
+    margin: 3rem auto 0;
+    font-size: 0.1rem;
+    color: grey;
 }
 
 .mbtiImgGen-complete-btn {

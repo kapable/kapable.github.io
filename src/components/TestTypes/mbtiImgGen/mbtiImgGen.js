@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import './MbtiImgGen.css';
 import { Helmet } from 'react-helmet';
+import { Modal, Button } from 'antd';
 
 const MbtiImgGen = () => {
     const [mode, setMode] = useState('intro');
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const metaTagRenderer = () => {
         return (
@@ -32,6 +34,10 @@ const MbtiImgGen = () => {
                 <meta property="twitter:image:alt" content="내가 다른 MBTI 였다면?" />
             </Helmet>
         )
+    };
+
+    const handleOkOrCancel = () => {
+        setIsModalOpen(false);
     }
 
     if(mode === 'intro') {
@@ -44,18 +50,37 @@ const MbtiImgGen = () => {
                         <img className='mbtiImgGen-intro-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-intro-btn.png' alt='mbtiImgGen-intro-btn' />
                     </div>
                 </div>
+                <p style={{ color: "grey", fontWeight: "bolder" }}>*위 상품의 최대 이용 기간은 6개월입니다.</p>
+                <p onClick={() => setIsModalOpen(true)} style={{ color: "grey", fontWeight: "bolder" }}>환불 규정 안내</p>
+                <p className='mbtiImgGen-intro-biz-info-p'>
+                    주식회사 쿠키로켓 | 사업자등록번호 : 582-88-01697 | 대표 김정빈<br />
+                    주소 : 서울특별시 송파구 송파대로 409 4층<br />호스팅 서비스 : AWS | 통신판매업<br />
+                    신고번호 2020-경기하남-0706호
+                </p>
+                <Modal title="규정" open={isModalOpen} onOk={handleOkOrCancel} onCancel={handleOkOrCancel} footer={[
+                    <Button onClick={handleOkOrCancel}>확인</Button>
+                ]}>
+                    <p>규정이닷!</p>
+                </Modal>
             </>
         );
     } else if (mode === 'guide') {
         return (
-            <div className='mbtiImgGen-guide-div'>
-                <img className='mbtiImgGen-guide' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-guide.jpg' alt='mbtiImgGen-guide' />
-                <Link to='/mbtiImgGen/upload'>
-                    <div className='mbtiImgGen-guide-btn-div' onClick={() => setMode('intro')}>
-                        <img className='mbtiImgGen-guide-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-guide-btn.png' alt='mbtiImgGen-guide-btn' />
-                    </div>
-                </Link>
-            </div>
+            <>
+                <div className='mbtiImgGen-guide-div'>
+                    <img className='mbtiImgGen-guide' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-guide.jpg' alt='mbtiImgGen-guide' />
+                    <Link to='/mbtiImgGen/upload'>
+                        <div className='mbtiImgGen-guide-btn-div' onClick={() => setMode('intro')}>
+                            <img className='mbtiImgGen-guide-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-guide-btn.png' alt='mbtiImgGen-guide-btn' />
+                        </div>
+                    </Link>
+                </div>
+                <p className='mbtiImgGen-intro-biz-info-p'>
+                    주식회사 쿠키로켓 | 사업자등록번호 : 582-88-01697 | 대표 김정빈<br />
+                    주소 : 서울특별시 송파구 송파대로 409 4층<br />호스팅 서비스 : AWS | 통신판매업<br />
+                    신고번호 2020-경기하남-0706호
+                </p>
+            </>
         );
     };
 };
