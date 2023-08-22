@@ -1,18 +1,19 @@
 import React, { useCallback, useState } from 'react';
 import { Link, withRouter, useHistory } from 'react-router-dom';
 import ImageUploader from "react-images-upload";
+import ProgressBar from "@ramonak/react-progress-bar";
 import './MbtiImgGen.css';
 
 const MbtiImgGenUpload = () => {
     let history = useHistory();
-    const [mode, setMode] =useState('upload');
+    const [mode, setMode] =useState('email');
     const [pictures, setPictures] =useState([]);
     const [email, setEmail] = useState("");
     const minimunImgNumber = 10;
 
     const onClickUpload = useCallback(() => {
         if(pictures?.length < 1) {
-            return alert(`${minimunImgNumber}장 이상 업로드 해!`)
+            return alert(`${minimunImgNumber}장 이상 업로드 해주세요!`)
         }
         setMode('email');
     }, [pictures.length, minimunImgNumber]);
@@ -40,16 +41,20 @@ const MbtiImgGenUpload = () => {
     if(mode === 'upload') {
         return (
             <>
-                <div className='mbtiImgGen-upload-div'>
-                    <div className='mbtiImgGen-upload-upper-banner-div'>
-                        <img className='mbtiImgGen-upload-upper-banner' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-upload-upper-banner.png' alt='mbtiImgGen-upload-upper-banner' />
-                    </div>
-                    <img className='mbtiImgGen-upload' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-upload.jpg' alt='mbtiImgGen-upload' />
-                    <div className='mbtiImgGen-upload-btn-div' onClick={() => onClickUpload()}>
-                        <img className='mbtiImgGen-upload-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-upload-btn.png' alt='mbtiImgGen-upload-btn' />
-                    </div>
+                <img className='mbtiImgGen-upload-upper-banner' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-upload-upper-banner.png' alt='mbtiImgGen-upload-upper-banner' />
+                <div className='mbtiImgGen-upload-btn-div' onClick={() => onClickUpload()}>
+                    <img className='mbtiImgGen-upload-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-upload-btn.png' alt='mbtiImgGen-upload-btn' />
                 </div>
-                <ImageUploader
+                <div style={{ maxWidth: "30rem"}}>
+                    <ProgressBar
+                            completed={pictures?.length / 20 * 100}
+                            isLabelVisible={false} baseBgColor='#fbf7f2' bgColor='#E62381'
+                            height='10px' width='70%' transitionDuration='.3s' margin='1rem auto 1rem'/>
+                </div>
+                <p>{pictures?.length}/{20}</p>
+                {pictures?.length > 20 ? <p>20장의 사진을 넘어섰습니다.</p> : null}
+                {pictures?.length < 20 ? (
+                    <ImageUploader
                     className="mbtiImgGen-image-uploader"
                     withIcon={false}
                     withPreview={true}
@@ -57,15 +62,14 @@ const MbtiImgGenUpload = () => {
                     imgExtension={[".jpg", ".gif", ".png", ".gif", ".jpeg"]}
                     maxFileSize={5242880}
                     buttonText="+"
-                    withLabel={true}
-                    label={null}
-                    labelStyles={{"fontSize":"1.3rem", "margin":"1.5rem auto", "color":"grey"}}
+                    withLabel={false}
                     fileSizeError="사진 용량이 너무 커요."
                     fileTypeError="지원하지 않는 파일입니다."
                     singleImage={false}
-                    fileContainerStyle={{"position":"inline-block"}}
-                    buttonStyles={{"marginTop":"5rem", "height":"4rem","width":"4rem","borderRadius":"5%","fontSize":"2rem","color":"#606060", "background": "#E8E8E8","border":"none", "boxShadow":"none", "overflow":"visible", "cursor":"pointer"}}
+                    fileContainerStyle={{"position":"block", padding: "0"}}
+                    buttonStyles={{"height":"4rem","width":"4rem","borderRadius":"5%","fontSize":"2rem","color":"#606060", "background": "#E8E8E8","border":"none", "boxShadow":"none", "overflow":"visible", "cursor":"pointer"}}
                 />
+                ) : (null)}
             </>
         );
     } else if (mode === 'email') {
