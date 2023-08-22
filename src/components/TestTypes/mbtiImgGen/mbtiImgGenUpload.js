@@ -6,7 +6,7 @@ import './MbtiImgGen.css';
 
 const MbtiImgGenUpload = () => {
     let history = useHistory();
-    const [mode, setMode] =useState('email');
+    const [mode, setMode] =useState('upload');
     const [pictures, setPictures] =useState([]);
     const [email, setEmail] = useState("");
     const minimunImgNumber = 10;
