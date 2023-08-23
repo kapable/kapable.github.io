@@ -67,9 +67,11 @@ const MbtiImgGen = () => {
                 {metaTagRenderer()}
                 <div className='mbtiImgGen-intro-div'>
                     <img className='mbtiImgGen-intro' src='https://images.ktestone.com/introImages/mbtiImgGen-intro.jpg' alt='mbtiImgGen-intro' />
-                    <div className='mbtiImgGen-intro-btn-div' onClick={() => setMode('guide')}>
+                    <a href='https://bouns.io/app/7a4499ca-4644-45ee-9b3f-f63ea3d19e64/_pay/ktest-ai/?name=MBTI%20%ED%85%8C%EB%A7%88&price=6900'><div className='mbtiImgGen-intro-btn-div'
+                        // onClick={() => setMode('guide')}
+                    >
                         <img className='mbtiImgGen-intro-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-intro-btn.png' alt='mbtiImgGen-intro-btn' />
-                    </div>
+                    </div></a>
                 </div>
                 <p style={{ color: "grey", fontWeight: "bolder" }}>*위 상품의 최대 이용 기간은 6개월입니다.</p>
                 <p onClick={() => setIsModalOpen(true)} style={{ color: "grey", fontWeight: "bolder", cursor: "pointer", textDecoration: "underline" }}>환불 규정 안내</p>
