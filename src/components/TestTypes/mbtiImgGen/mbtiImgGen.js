@@ -54,6 +54,13 @@ const MbtiImgGen = () => {
             고객센터 운영 시간: 평일 오전 11:00 ~ 오후 5:00 (주말 및 공휴일 제외)
         </p>
 
+    const bizInfo = <p className='mbtiImgGen-intro-biz-info-p'>
+            주식회사 쿠키로켓 | 사업자등록번호 : 582-88-01697 | 대표 김정빈<br />
+            주소 : 서울특별시 송파구 송파대로 409 4층<br />호스팅 서비스 : AWS | 통신판매업<br />
+            유선번호 : 01084542518<br />
+            신고번호 2020-경기하남-0706호
+        </p>
+
     if(mode === 'intro') {
         return (
             <>
@@ -66,12 +73,7 @@ const MbtiImgGen = () => {
                 </div>
                 <p style={{ color: "grey", fontWeight: "bolder" }}>*위 상품의 최대 이용 기간은 6개월입니다.</p>
                 <p onClick={() => setIsModalOpen(true)} style={{ color: "grey", fontWeight: "bolder", cursor: "pointer", textDecoration: "underline" }}>환불 규정 안내</p>
-                <p className='mbtiImgGen-intro-biz-info-p'>
-                    주식회사 쿠키로켓 | 사업자등록번호 : 582-88-01697 | 대표 김정빈<br />
-                    주소 : 서울특별시 송파구 송파대로 409 4층<br />호스팅 서비스 : AWS | 통신판매업<br />
-                    유선번호 : 01084542518<br />
-                    신고번호 2020-경기하남-0706호
-                </p>
+                {bizInfo}
                 <Modal title="환불 규정" open={isModalOpen} onOk={handleOkOrCancel} onCancel={handleOkOrCancel} footer={[
                     <Button onClick={handleOkOrCancel}>확인</Button>
                 ]}>
@@ -90,12 +92,7 @@ const MbtiImgGen = () => {
                         </div>
                     </Link>
                 </div>
-                <p className='mbtiImgGen-intro-biz-info-p'>
-                    주식회사 쿠키로켓 | 사업자등록번호 : 582-88-01697 | 대표 김정빈<br />
-                    주소 : 서울특별시 송파구 송파대로 409 4층<br />호스팅 서비스 : AWS | 통신판매업<br />
-                    유선번호 : 01084542518<br />
-                    신고번호 2020-경기하남-0706호
-                </p>
+                {bizInfo}
             </>
         );
     };
