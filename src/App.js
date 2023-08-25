@@ -39,6 +39,9 @@ import { onClickLogin, verifyAccessToken, getRefreshedToken } from './tools/tool
 import MbtiImgGen from './components/TestTypes/mbtiImgGen/mbtiImgGen';
 import MbtiImgGenUpload from './components/TestTypes/mbtiImgGen/mbtiImgGenUpload';
 import MbtiImgGenComplete from './components/TestTypes/mbtiImgGen/mbtiImgGenComplete';
+import MbtiImgGenT from './components/TestTypes/mbtiImgGen/mbtiImgGenT';
+import MbtiImgGenUploadT from './components/TestTypes/mbtiImgGen/mbtiImgGenUploadT';
+import MbtiImgGenCompleteT from './components/TestTypes/mbtiImgGen/mbtiImgGenCompleteT';
 
 
 class App extends Component {
@@ -386,6 +389,9 @@ class App extends Component {
             <Route path='/mbtiImgGen' component={() => <MbtiImgGen />} exact/>
             <Route path='/mbtiImgGen/upload' component={() => <MbtiImgGenUpload />} exact/>
             <Route path='/mbtiImgGen/complete' component={() => <MbtiImgGenComplete />} exact/>
+            <Route path='/mbtiImgGenT' component={() => <MbtiImgGenT />} exact/>
+            <Route path='/mbtiImgGenT/upload' component={() => <MbtiImgGenUploadT />} exact/>
+            <Route path='/mbtiImgGenT/complete' component={() => <MbtiImgGenCompleteT />} exact/>
 
             {/* "Main" page */}
             <Route path='/' exact>
