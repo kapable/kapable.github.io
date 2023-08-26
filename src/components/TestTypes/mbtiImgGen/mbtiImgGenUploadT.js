@@ -55,20 +55,20 @@ const MbtiImgGenUpload = () => {
                 {pictures?.length > 20 ? <p>20장의 사진을 넘어섰습니다.</p> : null}
                 {pictures?.length < 20 ? (
                     <ImageUploader
-                    className="mbtiImgGen-image-uploader"
-                    withIcon={false}
-                    withPreview={true}
-                    onChange={onDrop}
-                    imgExtension={[".jpg", ".gif", ".png", ".gif", ".jpeg"]}
-                    maxFileSize={5242880}
-                    buttonText="+"
-                    withLabel={false}
-                    fileSizeError="사진 용량이 너무 커요."
-                    fileTypeError="지원하지 않는 파일입니다."
-                    singleImage={false}
-                    fileContainerStyle={{"position":"block", padding: "0"}}
-                    buttonStyles={{"height":"4rem","width":"4rem","borderRadius":"5%","fontSize":"2rem","color":"#606060", "background": "#E8E8E8","border":"none", "boxShadow":"none", "overflow":"visible", "cursor":"pointer"}}
-                />
+                        className="mbtiImgGen-image-uploader"
+                        withIcon={false}
+                        withPreview={true}
+                        onChange={onDrop}
+                        imgExtension={[".jpg", ".gif", ".png", ".gif", ".jpeg"]}
+                        maxFileSize={5242880}
+                        buttonText="+"
+                        withLabel={false}
+                        fileSizeError="사진 용량이 너무 커요."
+                        fileTypeError="지원하지 않는 파일입니다."
+                        singleImage={false}
+                        fileContainerStyle={{"position":"block", padding: "0"}}
+                        buttonStyles={{"height":"4rem","width":"4rem","borderRadius":"5%","fontSize":"2rem","color":"#606060", "background": "#E8E8E8","border":"none", "boxShadow":"none", "overflow":"visible", "cursor":"pointer"}}
+                    />
                 ) : (null)}
             </>
         );
