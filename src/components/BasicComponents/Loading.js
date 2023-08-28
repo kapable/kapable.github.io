@@ -17,7 +17,7 @@ const defaultOptions = {
 
 class Loading extends Component {
   render(){
-      let ppl_list = ["fatecharmtest", "labelStickerSKT", "hmall", "factPok", "MyFactPok", "FriendFactPok"];
+      let ppl_list = ["gardenflower", "fatecharmtest", "labelStickerSKT", "hmall", "factPok", "MyFactPok", "FriendFactPok"];
       if((window.location.href.includes("localhost") || window.location.href.includes("ktestone.com")) && (!ppl_list.includes(this.props.test))) {
           return(
             <Fragment>

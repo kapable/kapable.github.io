@@ -1245,6 +1245,7 @@ class Result extends Component {
                         </Helmet>
                         <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                         <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-${gardenflower_type_obj[_current_test_result.type]}-banner.jpg`} className='result-img' alt={`${gardenflower_type_obj[_current_test_result.type]}-banner`} />
+                        <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-popup-banner.jpg`} className='result-img' alt={`gardenflower-popup-banner`} />
                         <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-SIVILLAGE-banner.jpg`} className='result-img' alt={'SIVILLAGE'} />
                     </Fragment>
                 )
