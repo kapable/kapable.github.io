@@ -408,7 +408,7 @@ class Result extends Component {
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let bubbleCharEngList = ["bubbleCharEng"];
         let tanghuluList = ["tanghulu"];
-        let hmallList = ['hmall', 'labelStickerSKT'];
+        let hmallList = ['gardenflower', 'hmall', 'labelStickerSKT'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -1183,6 +1183,71 @@ class Result extends Component {
                         > <img loading="lazy" src={`https://images.ktestone.com/meta/HmallTest.jpg`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
                     </Fragment>
                 )
+            } else if(this.state.current_test === "gardenflower") {
+                const gardenflower_type_obj = {
+                    "ESTP":    
+                    "iris",
+                    "ESFP":    
+                    "magnolia",
+                    "ENFP":    
+                    "magnolia",
+                    "INFP":    
+                    "gensomino",
+                    "ENTJ":    
+                    "iris",
+                    "INFJ":    
+                    "gensomino",
+                    "INTJ":    
+                    "bizzarria",
+                    "ESTJ":    
+                    "iris",
+                    "INTP":    
+                    "bizzarria",
+                    "ENFJ":    
+                    "magnolia",
+                    "ISFJ":    
+                    "gensomino",
+                    "ENTP":    
+                    "iris",
+                    "ISTJ":    
+                    "bizzarria",
+                    "ISTP":     
+                    "bizzarria",
+                    "ISFP":    
+                    "gensomino",
+                    "ESFJ":    
+                    "magnolia",
+                }
+                return (
+                    <Fragment>
+                        <Helmet>
+                            {/* <!-- Primary Meta Tags --> */}
+                            <title>{test_current + ' ' + this.state.current_result + ' - 케이테스트'} </title>
+                            <meta name="title" content={test_current + ' ' + this.state.current_result + ' - 케이테스트'} />
+                            <meta name="description" content={this.state.current_result + ':' + desc_test_current} data-react-helmet="true"/>
+                            <link rel="main-url" href={this.state.sharable_url}/>
+    
+                            {/* <!-- Open Graph / Facebook --> */}
+                            <meta property="og:type" content="website"/>
+                            <meta property="og:url" content={this.state.sharable_url}/>
+                            <meta property="og:title" content={test_current + ' ' + this.state.current_result + ' - 케이테스트'} />
+                            <meta property="og:description" content={this.state.current_result + ':' + desc_test_current}/>
+                            <meta property="og:image" content={img_src}/>
+                            <meta property="og:image:alt" content={this.state.current_result} />
+    
+                            {/* <!-- Twitter --> */}
+                            <meta property="twitter:card" content="summary_large_image"/>
+                            <meta property="twitter:url" content={this.state.sharable_url}/>
+                            <meta property="twitter:title" content={test_current + ' ' + this.state.current_result + ' - 케이테스트'} />
+                            <meta property="twitter:description" content={this.state.current_result + ':' + desc_test_current}/>
+                            <meta property="twitter:image" content={img_src}/>
+                            <meta property="twitter:image:alt" content={this.state.current_result} />
+                        </Helmet>
+                        <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
+                        <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-${gardenflower_type_obj[_current_test_result.type]}-banner.jpg`} className='result-img' alt={`${gardenflower_type_obj[_current_test_result.type]}-banner`} />
+                        <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-SIVILLAGE-banner.jpg`} className='result-img' alt={'SIVILLAGE'} />
+                    </Fragment>
+                )
             } else if(this.state.current_test === "hmall") {
                 const hmall_type_link_obj = {
                     "ESTP":    
@@ -1437,7 +1502,6 @@ class Result extends Component {
                 )
             }
         };
-
     };
 
     labelTestUpperBannerRenderer() {
@@ -1505,7 +1569,7 @@ class Result extends Component {
     };
 
     resultPageRender(){
-        let ppl_list = ["labelStickerSKT", "hmall", "factPok", "MyFactPok", "FriendFactPok"];
+        let ppl_list = ["gardenflower","labelStickerSKT", "hmall", "factPok", "MyFactPok", "FriendFactPok"];
         return(
             <Fragment>
                 <div className="result">
