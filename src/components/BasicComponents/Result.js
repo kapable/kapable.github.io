@@ -407,7 +407,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let bubbleCharEngList = ["bubbleCharEng"];
-        let tanghuluList = ["tanghulu"];
+        let colorPaletteList = ["colorPalette"];
         let hmallList = ['gardenflower', 'hmall', 'labelStickerSKT'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
@@ -529,8 +529,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (tanghuluList.includes(this.state.current_test)) {
-            const rederTestList = ["bloodTransfusion", "unlockMyHeart", "beachChar", "lovePill", "charDegree",];
+        } else if (colorPaletteList.includes(this.state.current_test)) {
+            const rederTestList = ["tanghulu", "bloodTransfusion", "unlockMyHeart", "beachChar", "lovePill", "charDegree",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -796,7 +796,7 @@ class Result extends Component {
         } else if (hmallList.includes(this.state.current_test)) {
             return null;
         } else {
-            const rederTestList = ["tanghulu", "bloodTransfusion", "unlockMyHeart", "beachChar", "lovePill",];
+            const rederTestList = ["colorPalette", "tanghulu", "bloodTransfusion", "unlockMyHeart", "beachChar", "lovePill",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
