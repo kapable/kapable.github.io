@@ -51,6 +51,8 @@ class Result extends Component {
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: Cookies.get('coupang') || null,
             isOpened: false,
+            gardenflowerCookies: Cookies.get('gardenflower') || null,
+            gardenflowerIsOpened: false,
             originAdProb: 0.6 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
@@ -68,6 +70,7 @@ class Result extends Component {
         this.onCoupangCloseButtonClick = this.onCoupangCloseButtonClick.bind(this)
         this.onOtherCoupangButtonClick = this.onOtherCoupangButtonClick.bind(this);
         this.labelTestUpperBannerRenderer = this.labelTestUpperBannerRenderer.bind(this);
+        this.onGardenflowerButtonClick = this.onGardenflowerButtonClick.bind(this);
     };
 
     componentDidMount() {
@@ -103,6 +106,15 @@ class Result extends Component {
             _eventSenderGA("Paging", `Click go-to-Coupang Button`, "result page");
         }
     };
+
+    onGardenflowerButtonClick(){
+        Cookies.set('gardenflower', true, { path: '', expires: this.state.cookieAges, secure: true });
+        this.setState({
+            gardenflowerCookies: Cookies.get('gardenflower'),
+            gardenflowerIsOpened: true,
+        });
+        _eventSenderGA("Closing", "Click gardenflower visit Button", "result page");
+    }
 
     onCoupangCloseButtonClick() {
         Cookies.set('coupang', true, { path: '', expires: this.state.cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
@@ -883,12 +895,27 @@ class Result extends Component {
                                     this.state.coupangCount === 0 ? <span style={{color:'white', cursor:'pointer'}} onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}><b>X</b></span> : this.state.coupangCount
                             ) :null}
                         </p>
-                        <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'> {/* target="_blank" */}
+                        <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
                             <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={testsArray.includes(this.state.current_test) && otherAdProb ? this.onOtherCoupangButtonClick : () => this.onCoupangButtonClick(this.state.current_test)}>
                                 버튼 누르고 결과 보기
                             </button>
                         </a>
                         <p style={{ fontSize: '10px', color: 'grey', marginTop: "0.5rem" }}>원치 않을 경우 뒤로 가기를 눌러주세요.</p>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
+    pplAffiliateRenderer(){
+        const cookieRocketCoupangLink = "https://www.sivillage.com/shop/initPlanShop.siv?disp_ctg_no=2308100713";
+        return (
+            <div className='article-adCover-div-1'>
+                <div className='article-adCover-div-2'>
+                    <div className='article-adCover-div-3'>
+                        <a href={cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
+                            <img style={{ width: '15rem' }} onClick={() => this.onGardenflowerButtonClick()} src='https://images.ktestone.com/meta/gardenflower/gardenflower-visit-banner.jpg' alt='gardenflower-visit-banner' />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1243,10 +1270,22 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
-                        <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-${gardenflower_type_obj[_current_test_result.type]}-banner.jpg`} className='result-img' alt={`${gardenflower_type_obj[_current_test_result.type]}-banner`} />
-                        <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-popup-banner.jpg`} className='result-img' alt={`gardenflower-popup-banner`} />
-                        <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-SIVILLAGE-banner.jpg`} className='result-img' alt={'SIVILLAGE'} />
+                        {this.state.gardenflowerCookies || this.state.gardenflowerIsOpened
+                        ? (
+                            <>
+                                <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
+                                <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-${gardenflower_type_obj[_current_test_result.type]}-banner.jpg`} className='result-img' alt={`${gardenflower_type_obj[_current_test_result.type]}-banner`} />
+                                <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-popup-banner.jpg`} className='result-img' alt={`gardenflower-popup-banner`} />
+                                <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-SIVILLAGE-banner.jpg`} className='result-img' alt={'SIVILLAGE'} />
+                            </>
+                        )
+                        : (<>
+                            <div className='article-adCover-div'>
+                                <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
+                            </div>
+                            {this.pplAffiliateRenderer()}
+                        </>)
+                        }
                     </Fragment>
                 )
             } else if(this.state.current_test === "hmall") {
