@@ -415,7 +415,7 @@ class Result extends Component {
         let characteristicChracterESList = ["characteristicChracterES"];
         let characteristicChracterGerList = ["characteristicChracterGer",];
         let labelStickerCNList = ["labelStickerCN"];
-        let bubbleCharJPList = ["bubbleCharJP"];
+        let loveTVJPList = ["loveTVJP"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let bubbleCharEngList = ["bubbleCharEng"];
@@ -590,7 +590,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (JPTestList.includes(this.state.current_test)) {
-            const rederTestList = ["bubbleCharJP", "alienCharJP", "whyLoveJP", "charRoadJP", "scrapBookCharJP",];
+            const rederTestList = ["loveTVJP", "bubbleCharJP", "alienCharJP", "whyLoveJP", "charRoadJP",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -781,8 +781,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (bubbleCharJPList.includes(this.state.current_test)) {
-            const rederTestList = ["alienCharJP", "whyLoveJP", "charRoadJP", "scrapBookCharJP",];
+        } else if (loveTVJPList.includes(this.state.current_test)) {
+            const rederTestList = ["bubbleCharJP", "alienCharJP", "whyLoveJP", "charRoadJP", "scrapBookCharJP",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
