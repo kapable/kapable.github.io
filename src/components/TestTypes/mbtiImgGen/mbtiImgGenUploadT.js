@@ -3,6 +3,7 @@ import { Link, withRouter, useHistory } from 'react-router-dom';
 import ImageUploader from "react-images-upload";
 import ProgressBar from "@ramonak/react-progress-bar";
 import './MbtiImgGen.css';
+import { onAiUpload } from '../../../tools/aiImgTools';
 
 const MbtiImgGenUpload = () => {
     let history = useHistory();
@@ -34,9 +35,10 @@ const MbtiImgGenUpload = () => {
         if(!email) {
             return alert('이메일을 입력해주세요!');
         }
+        onAiUpload(pictures);
         alert('사진이 정상적으로 업로드 되었습니다!');
         history.replace("/mbtiImgGenT/complete");
-    }, [email, history]);
+    }, [email, history, pictures]);
 
     if(mode === 'upload') {
         return (
@@ -66,7 +68,7 @@ const MbtiImgGenUpload = () => {
                         fileSizeError="사진 용량이 너무 커요."
                         fileTypeError="지원하지 않는 파일입니다."
                         singleImage={false}
-                        fileContainerStyle={{"position":"block", padding: "0"}}
+                        fileContainerStyle={{"position":"block", padding: "0", height: '50rem'}}
                         buttonStyles={{"height":"4rem","width":"4rem","borderRadius":"5%","fontSize":"2rem","color":"#606060", "background": "#E8E8E8","border":"none", "boxShadow":"none", "overflow":"visible", "cursor":"pointer"}}
                     />
                 ) : (null)}
@@ -86,17 +88,15 @@ const MbtiImgGenUpload = () => {
                     </div>
                 </Link>
             </div>
-            <form onSubmit={onSubmitHandler}>
-                <input
-                    onChange={onEmailHandler}
-                    type="email"
-                    id="email"
-                    placeholder="이메일을 입력해 주세요."
-                    required />
-                <button type="submit">
-                    확인
-                </button>
-            </form>
+            <input
+                onChange={onEmailHandler}
+                type="email"
+                id="email"
+                placeholder="이메일을 입력해 주세요."
+                required />
+            <button type="button" onClick={onSubmitHandler}>
+                확인
+            </button>
         </>
         )
     }
