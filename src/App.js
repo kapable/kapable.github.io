@@ -42,7 +42,6 @@ import MbtiImgGenComplete from './components/TestTypes/mbtiImgGen/mbtiImgGenComp
 import MbtiImgGenT from './components/TestTypes/mbtiImgGen/mbtiImgGenT';
 import MbtiImgGenUploadT from './components/TestTypes/mbtiImgGen/mbtiImgGenUploadT';
 import MbtiImgGenCompleteT from './components/TestTypes/mbtiImgGen/mbtiImgGenCompleteT';
-import dotenv from 'dotenv';
 
 class App extends Component {
   constructor(props){
@@ -101,7 +100,6 @@ class App extends Component {
     this.onClickLogout = this.onClickLogout.bind(this);
   }
   componentDidMount (){
-    dotenv.config();
     ReactGA4.initialize([
       {
         trackingId: "G-W3LQWJVJLX",

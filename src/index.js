@@ -13,6 +13,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CookiesProvider } from 'react-cookie';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {

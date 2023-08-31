@@ -31,13 +31,14 @@ const MbtiImgGenUpload = () => {
         setEmail(e.target.value);
     }, []);
 
-    const onSubmitHandler = useCallback(() => {
+    const onSubmitHandler = useCallback(async () => {
         if(!email) {
             return alert('이메일을 입력해주세요!');
         }
-        onAiUpload(pictures);
-        alert('사진이 정상적으로 업로드 되었습니다!');
-        history.replace("/mbtiImgGenT/complete");
+        const aiUrl = await onAiUpload(pictures);
+        if(aiUrl) {
+            history.replace("/mbtiImgGenT/complete");
+        }
     }, [email, history, pictures]);
 
     if(mode === 'upload') {

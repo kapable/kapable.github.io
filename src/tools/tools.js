@@ -1,6 +1,6 @@
 import ReactGA4 from 'react-ga4';
 
-const projectId = "7a4499ca-4644-45ee-9b3f-f63ea3d19e64";
+const projectId = process.env.REACT_APP_BOUNCE_PROJECT_ID;
 
 export const _eventSenderGA = (category, action, label) => {
     ReactGA4.event({
