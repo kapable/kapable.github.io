@@ -51,8 +51,6 @@ class Result extends Component {
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: Cookies.get('coupang') || null,
             isOpened: false,
-            gardenflowerCookies: Cookies.get('gardenflower') || null,
-            gardenflowerIsOpened: false,
             originAdProb: 0.6 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
@@ -907,21 +905,6 @@ class Result extends Component {
         );
     };
 
-    pplAffiliateRenderer(){
-        const cookieRocketCoupangLink = "https://www.sivillage.com/shop/initPlanShop.siv?disp_ctg_no=2308100713";
-        return (
-            <div className='article-adCover-div-1'>
-                <div className='article-adCover-div-2'>
-                    <div className='article-adCover-div-3'>
-                        <a href={cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
-                            <img style={{ width: '15rem' }} onClick={() => this.onGardenflowerButtonClick()} src='https://images.ktestone.com/meta/gardenflower/gardenflower-visit-banner.jpg' alt='gardenflower-visit-banner' />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        );
-    };
-
     resultRender(){
         // searching the result content by current url path
         const _current_test_contents = TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0];
@@ -1270,22 +1253,10 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        {this.state.gardenflowerCookies || this.state.gardenflowerIsOpened
-                        ? (
-                            <>
-                                <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
-                                <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-${gardenflower_type_obj[_current_test_result.type]}-banner.jpg`} className='result-img' alt={`${gardenflower_type_obj[_current_test_result.type]}-banner`} />
-                                <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-popup-banner.jpg`} className='result-img' alt={`gardenflower-popup-banner`} />
-                                <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-SIVILLAGE-banner.jpg`} className='result-img' alt={'SIVILLAGE'} />
-                            </>
-                        )
-                        : (<>
-                            <div className='article-adCover-div'>
-                                <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
-                            </div>
-                            {this.pplAffiliateRenderer()}
-                        </>)
-                        }
+                        <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
+                        <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-${gardenflower_type_obj[_current_test_result.type]}-banner.jpg`} className='result-img' alt={`${gardenflower_type_obj[_current_test_result.type]}-banner`} />
+                        <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-popup-banner.jpg`} className='result-img' alt={`gardenflower-popup-banner`} />
+                        <img loading="lazy" src={`https://images.ktestone.com/meta/gardenflower/gardenflower-SIVILLAGE-banner.jpg`} className='result-img' alt={'SIVILLAGE'} />
                     </Fragment>
                 )
             } else if(this.state.current_test === "hmall") {
