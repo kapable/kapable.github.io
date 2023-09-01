@@ -413,7 +413,7 @@ class Result extends Component {
         let characteristicChracterESList = ["characteristicChracterES"];
         let characteristicChracterGerList = ["characteristicChracterGer",];
         let labelStickerCNList = ["labelStickerCN"];
-        let colorPaletteJPList = ["colorPaletteJP"];
+        let bloodTransfusionJPList = ["bloodTransfusionJP"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let colorPaletteEngList = ["colorPaletteEng"];
@@ -588,7 +588,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (JPTestList.includes(this.state.current_test)) {
-            const rederTestList = ["colorPaletteJP", "unlockMyHeartJP", "loveTVJP", "bubbleCharJP", "alienCharJP",];
+            const rederTestList = ["bloodTransfusionJP", "colorPaletteJP", "unlockMyHeartJP", "loveTVJP",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -779,8 +779,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (colorPaletteJPList.includes(this.state.current_test)) {
-            const rederTestList = ["unlockMyHeartJP", "bubbleCharJP", "alienCharJP", "whyLoveJP", "charRoadJP",];
+        } else if (bloodTransfusionJPList.includes(this.state.current_test)) {
+            const rederTestList = ["colorPaletteJP", "unlockMyHeartJP", "bubbleCharJP", "alienCharJP", "whyLoveJP", "charRoadJP",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (

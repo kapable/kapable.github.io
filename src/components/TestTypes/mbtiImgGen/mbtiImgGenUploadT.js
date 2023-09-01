@@ -9,6 +9,7 @@ const MbtiImgGenUpload = () => {
     let history = useHistory();
     const [mode, setMode] =useState('upload');
     const [pictures, setPictures] =useState([]);
+    const [uploadedCount, setUploadedCount] = useState([]);
     const [email, setEmail] = useState("");
     const minimunImgNumber = 10;
 
@@ -35,11 +36,17 @@ const MbtiImgGenUpload = () => {
         if(!email) {
             return alert('이메일을 입력해주세요!');
         }
-        const aiUrl = await onAiUpload(pictures);
-        if(aiUrl) {
-            history.replace("/mbtiImgGenT/complete");
-        }
-    }, [email, history, pictures]);
+        let aiUrlsCount = 0;
+        pictures.map(async (pic, idx) => {
+            console.log(idx);
+            const aiUrl = await onAiUpload(pic);
+            if(aiUrl) {
+                console.log(aiUrl);
+                setUploadedCount(aiUrlsCount += 1)
+            }
+        });
+        // go to complete page with using history
+    }, [email, pictures]);
 
     if(mode === 'upload') {
         return (
@@ -78,6 +85,8 @@ const MbtiImgGenUpload = () => {
     } else if (mode === 'email') {
         return (
             <>
+            {/* upload count progress bar */}
+            {console.log(uploadedCount)}
             <div className='mbtiImgGen-email-div'>
                 <div className='mbtiImgGen-email-logo-div'>
                     <img className='mbtiImgGen-email-logo' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-email-logo.png' alt='mbtiImgGen-email-logo' />

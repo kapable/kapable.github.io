@@ -20,7 +20,7 @@ export const onAiUpload = async (file) => {
     try {
         await fetch(presignedPutUrl, {
             method: "PUT",
-            body: file[0],
+            body: file,
         });
     } catch (error) {
         return alert("업로드 과정 중 문제가 발생했습니다.");
@@ -45,7 +45,6 @@ export const onAiUpload = async (file) => {
             }
         ).then((res) => res.json());
         if(presignedGetUrl) {
-            alert('사진이 정상정으로 업로드 되었습니다!');
             return presignedGetUrl;
         }
     } catch (error) {
