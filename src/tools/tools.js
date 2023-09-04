@@ -65,3 +65,21 @@ export const reloadPage = () => {
     const plusTenSec = currentDocumentTimestamp + tenSec;
     if (now > plusTenSec) { window.location.reload(); } else {}
 }
+
+export const nowFormatter = (now) => {
+    function pad(number, length) {
+        let str = '' + number;
+        while (str.length < length) {
+            str = '0' + str;
+        }
+        return str;
+    }
+    const yyyy = now.getFullYear().toLocaleString().replace(',','');
+    const MM = pad(now.getMonth() + 1, 2);
+    const dd = pad(now.getDate(), 2);
+    const hh = pad(now.getHours(), 2);
+    const mm = pad(now.getMinutes(), 2)
+    const ss = pad(now.getSeconds(), 2)
+
+    return yyyy + MM + dd+  hh + mm + ss;
+}

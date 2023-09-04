@@ -99,6 +99,18 @@ class App extends Component {
     this.mainMetaTagRenderer = this.mainMetaTagRenderer.bind(this);
     this.onClickLogout = this.onClickLogout.bind(this);
   }
+  
+  componentDidUpdate() {
+    // if only logged-In case -> USER DB check
+    let parsedUrl = new URL(window.location.href);
+    const accessToken = parsedUrl.searchParams.get("access_token");
+    if(accessToken) {
+      verifyAccessToken(accessToken)
+      // .then(res => console.log(res))
+      // create user in KTEST USER DB
+    }
+  }
+
   componentDidMount (){
     ReactGA4.initialize([
       {
@@ -158,6 +170,7 @@ class App extends Component {
       alert("에러가 발생했습니다 ㅠㅠ");
       window.location.href = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
     }
+
   }
   all_lang_renderer(){
     let i = 0;

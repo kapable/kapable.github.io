@@ -1,4 +1,4 @@
-export const onAiUpload = async (file) => {
+export const onAiUpload = async (file, fileName) => {
     const presignedPutUrl = await fetch(
         "https://bouns.io/api/file-manager-rpc",
         {
@@ -7,7 +7,7 @@ export const onAiUpload = async (file) => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-            args: ["bouns-test", "/test/1"],
+            args: ["bouns-test", fileName],
             operation: "presignedPutObject",
             where: {
                     projectId: process.env.REACT_APP_BOUNCE_PROJECT_ID,
@@ -35,7 +35,7 @@ export const onAiUpload = async (file) => {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    args: ["bouns-test", "/test/1"],
+                    args: ["bouns-test", fileName],
                     operation: "presignedGetObject",
                     where: {
                         projectId: process.env.REACT_APP_BOUNCE_PROJECT_ID,
