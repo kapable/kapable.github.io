@@ -42,7 +42,6 @@ import MbtiImgGenComplete from './components/TestTypes/mbtiImgGen/mbtiImgGenComp
 import MbtiImgGenT from './components/TestTypes/mbtiImgGen/mbtiImgGenT';
 import MbtiImgGenUploadT from './components/TestTypes/mbtiImgGen/mbtiImgGenUploadT';
 import MbtiImgGenCompleteT from './components/TestTypes/mbtiImgGen/mbtiImgGenCompleteT';
-import { Button, Modal } from 'antd';
 
 class App extends Component {
   constructor(props){
@@ -92,28 +91,13 @@ class App extends Component {
       ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
       lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'ES', 'IT', 'Rus' ,'Others'],
       category_list:['saju', 'characteristic', 'love', 'etc'],
-      isLoggedIn: false,
-      isModalOpen: false,
-      refundPolicy: <p style={{ textAlign:"left" }}>
-                      (주)쿠키로켓 (이하 회사)에서는 다음과 같은 기간 및 내용으로 환불 및 청약철회를 보장하고 있습니다. 상품 설명에 환불 관련 안내가 기재된 경우 다음 안내사항보다 우선 적용됩니다.<br /><br />
-                      1.본 상품은 회원의 구매 결제 완료 후 사진 업로드 즉시 변환이 이루어지는 상품으로, 회원의 사진 업로드가 완료되면 전자상거래법 시행령 제21조(소비자의 주문에 따라 개 별적으로 생산되는 재화)에 따라 청약 철회 및 해제('청약철회 등)가 불가합니다.<br />
-                      2. 컨셉 화보는 Al에 의하여 임의로 생성되므로 회사는 컨셉 화보의 품질에 보증할 수 없
-                      으며 이를 이유로 한 환불도 불가합니다.<br />
-                      3. 단, 구매한 상품이 회사가 표시 또는 광고한 내용과 다르거나 계약 내용과 다르게 이 행된 경우에는 구매한 날로부터 3개월 이내. 그 사실을 안 날 또는 알 수 있었던 날로부 터 30일 이내에 청약철회 등을 할 수 있습니다.<br />
-                      4. 청약절회 등을 한 경우 본 상품은 즉시 회사로 반환되며, 회사는 7 영업일 이내에 회원 이 지불한 금액을 회원에게 반환합니다.<br />
-                      5. 회사의 고의 또는 과실로 인해 회원이 구매한 유료서비스를 정상적으로 이용할 수 없 는 등 회원에게 피해가 발생한 경우, 회사는 그에 대한 해결을 위해서 최선의 노력을 하 며 그와 더불어 해당 피해에 대한 적절한 보상을 합니다.<br />
-                      6. 회사는 소비자의 피해보상, 불만 처리 및 분쟁 처리에 관한 사항, 환물에 대한 사항 등 소비자의 문제 제기에 대해서 해결하기 위해서 다음과 같은 창구를 운영합니다.<br />
-                      카카오톡 상담(고객센터): https://pf.kakao.com/_IxnRfb/99696114<br /><br />
-                      유선 고객센터: 01084542518<br />
-                      고객센터 운영 시간: 평일 오전 11:00 ~ 오후 5:00 (주말 및 공휴일 제외)
-                    </p>
+      isLoggedIn: false
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);
     this.lang_category_renderer = this.lang_category_renderer.bind(this);
     this.all_lang_renderer = this.all_lang_renderer.bind(this);
     this.mainMetaTagRenderer = this.mainMetaTagRenderer.bind(this);
     this.onClickLogout = this.onClickLogout.bind(this);
-    this.handleOkOrCancel = this.handleOkOrCancel.bind(this);
   }
   
   componentDidUpdate() {
@@ -345,12 +329,6 @@ class App extends Component {
     }
   }
 
-  handleOkOrCancel() {
-    this.setState({
-      isModalOpen: false
-    });
-}
-
   render() {
     return(
     <Router>
@@ -528,6 +506,12 @@ class App extends Component {
       <div className="intro-footer">
           <h5>광고 및 후원 문의<br></br>Advertising and Sponsorship Contact</h5>
           <p>soumy21@naver.com</p>
+          <p className='mbtiImgGen-intro-biz-info-p'>
+            주식회사 쿠키로켓 | 사업자등록번호 : 582-88-01697 | 대표 김정빈<br />
+            주소 : 서울특별시 송파구 송파대로 409 4층<br />호스팅 서비스 : AWS | 통신판매업<br />
+            유선번호 : 01084542518<br />
+            신고번호 2020-경기하남-0706호
+          </p>
           <p>Disclaimer:<br></br>All content is provided for fun and entertainment purposes only</p>
           <p>©주식회사 쿠키로켓 All Rights Reserved. 2023.</p>
           <p><a
@@ -536,16 +520,6 @@ class App extends Component {
             rel="noopener noreferrer"
             href={'https://ktestone.com/privacy'}
         >개인정보 처리방침</a></p>
-
-        {/* REFUND POLICY */}
-        <p onClick={function () {
-          this.setState({ isModalOpen: true })
-        }.bind(this)} style={{ color: "grey", fontWeight: "bolder", cursor: "pointer", textDecoration: "underline" }}>환불 규정 안내</p>
-        <Modal title="환불 규정" open={this.state.isModalOpen} onOk={this.handleOkOrCancel} onCancel={this.handleOkOrCancel} footer={[
-            <Button onClick={this.handleOkOrCancel}>확인</Button>
-        ]}>
-            {this.state.refundPolicy}
-        </Modal>
         {/* {this.state.isLoggedIn ?
       <p style={{cursor: "pointer"}} onClick={() => this.onClickLogout()}>out</p> :
       <p style={{cursor: "pointer"}} onClick={() => onClickLogin(window.location)}>in</p>} */}
