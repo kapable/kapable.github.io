@@ -1,4 +1,5 @@
 import axios from 'axios';
+axios.defaults.withCredentials = true;
 
 let server_endpoint = '';
 if(process.env.NODE_ENV === 'production') {
@@ -66,7 +67,7 @@ export const onCreateUser = async (hashId, email) => {
         console.log();
         axios.post(server_endpoint + "/user", {
             hashId, email
-        })
+        }, { withCredentials: true })
         .then((res) => console.log(res));
     } catch (error) {
         return alert("생성 과정 중 문제가 발생했습니다.");
