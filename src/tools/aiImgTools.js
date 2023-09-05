@@ -1,3 +1,12 @@
+import axios from 'axios';
+
+let server_endpoint = '';
+if(process.env.NODE_ENV === 'production') {
+    server_endpoint = process.env.REACT_APP_SERVER_URL;
+} else {
+    server_endpoint = "http://localhost:3065";
+}
+
 export const onAiUpload = async (file, fileName) => {
     const presignedPutUrl = await fetch(
         "https://bouns.io/api/file-manager-rpc",
@@ -50,4 +59,16 @@ export const onAiUpload = async (file, fileName) => {
     } catch (error) {
         return alert("업로드 과정 중 문제가 발생했습니다.");
     }
+};
+
+export const onCreateUser = async (hashId, email) => {
+    try {
+        console.log();
+        axios.post(server_endpoint + "/user", {
+            hashId, email
+        })
+        .then((res) => console.log(res));
+    } catch (error) {
+        return alert("생성 과정 중 문제가 발생했습니다.");
+    };
 };

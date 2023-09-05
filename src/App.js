@@ -42,6 +42,7 @@ import MbtiImgGenComplete from './components/TestTypes/mbtiImgGen/mbtiImgGenComp
 import MbtiImgGenT from './components/TestTypes/mbtiImgGen/mbtiImgGenT';
 import MbtiImgGenUploadT from './components/TestTypes/mbtiImgGen/mbtiImgGenUploadT';
 import MbtiImgGenCompleteT from './components/TestTypes/mbtiImgGen/mbtiImgGenCompleteT';
+import { onCreateUser } from './tools/aiImgTools';
 
 class App extends Component {
   constructor(props){
@@ -106,10 +107,12 @@ class App extends Component {
     const accessToken = parsedUrl.searchParams.get("access_token");
     if(accessToken) {
       verifyAccessToken(accessToken)
-      // .then(res => console.log(res))
-      // create user in KTEST USER DB
-    }
-  }
+      .then(res => {        
+        // create user in KTEST USER DB
+        onCreateUser(res.userId, res.email);
+      });
+    };
+  };
 
   componentDidMount (){
     ReactGA4.initialize([
