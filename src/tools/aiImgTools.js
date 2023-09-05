@@ -2,7 +2,7 @@ import axios from 'axios';
 
 let server_endpoint = '';
 if(process.env.NODE_ENV === 'production') {
-    server_endpoint = process.env.REACT_APP_SERVER_URL;
+    server_endpoint = "https://server.ktestone.com";
 } else {
     server_endpoint = "http://localhost:3065";
 }
@@ -19,7 +19,7 @@ export const onAiUpload = async (file, fileName) => {
             args: ["bouns-test", fileName],
             operation: "presignedPutObject",
             where: {
-                    projectId: process.env.REACT_APP_BOUNCE_PROJECT_ID,
+                    projectId: "7a4499ca-4644-45ee-9b3f-f63ea3d19e64",
                     name: "bouns-test",
                 },
             }),
@@ -47,7 +47,7 @@ export const onAiUpload = async (file, fileName) => {
                     args: ["bouns-test", fileName],
                     operation: "presignedGetObject",
                     where: {
-                        projectId: process.env.REACT_APP_BOUNCE_PROJECT_ID,
+                        projectId: "7a4499ca-4644-45ee-9b3f-f63ea3d19e64",
                         name: "bouns-test",
                     },
                 }),
