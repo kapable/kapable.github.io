@@ -92,7 +92,13 @@ class Intro extends Component {
         };
     };
     _onStartButtonClick(){
-        _eventSenderGA("Paging", `Click ${this.state.current_test.info.mainUrl === 'hmall' ? 'hmall' : ''}Start-test Button`, "intro page");
+        let testQuery = '';
+        if(this.state.current_test.info.mainUrl === 'hmall') {
+            testQuery = 'hmall';
+        } else if(this.state.current_test.info.mainUrl === 'gardenflower') {
+            testQuery = 'gardenflower';
+        };
+        _eventSenderGA("Paging", `Click ${testQuery}Start-test Button`, "intro page");
         this.setState({
             mode:'quiz'
         })
