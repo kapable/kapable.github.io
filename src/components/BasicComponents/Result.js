@@ -416,7 +416,7 @@ class Result extends Component {
         let bloodTransfusionJPList = ["bloodTransfusionJP"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
-        let iPhoneMemoEngList = ["iPhoneMemoEng"];
+        let egoProfileEngList = ["egoProfileEng"];
         let guestbookCharList = ["guestbookChar"];
         let hmallList = ['gardenflower', 'hmall', 'labelStickerSKT'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
@@ -444,7 +444,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
-            const rederTestList = ["iPhoneMemoEng", "colorPaletteEng", "bubbleCharEng", "alienCharEng",];
+            const rederTestList = ["egoProfileEng", "iPhoneMemoEng", "colorPaletteEng", "bubbleCharEng", "alienCharEng",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -515,8 +515,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (iPhoneMemoEngList.includes(this.state.current_test)) {
-            const rederTestList = ["colorPaletteEng", "alienCharEng", "loveLotteryEng", "loveTVEng",];
+        } else if (egoProfileEngList.includes(this.state.current_test)) {
+            const rederTestList = ["iPhoneMemoEng", "colorPaletteEng", "alienCharEng", "loveLotteryEng", "loveTVEng",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
