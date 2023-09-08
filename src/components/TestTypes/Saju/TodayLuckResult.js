@@ -11,6 +11,8 @@ import './TodayLuck.css';
 import ShareGroup from '../../BasicComponents/ShareGroup';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
+axios.defaults.withCredentials = true;
+
 const TodayLuckResult = (props) => {
     const saju_url = 'https://saju.ktestone.com';
     // const saju_url = 'http://localhost:3065';
@@ -40,7 +42,8 @@ const TodayLuckResult = (props) => {
         const getToday = async(source) => {
             try {
                 await axios.get(
-                    saju_url + '/today/total/' + source
+                    saju_url + '/today/total/' + source,
+                    { withCredentials: true }
                 )
                 .then((res) => {
                     setResult(res?.data)

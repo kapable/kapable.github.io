@@ -10,6 +10,8 @@ import TOHOMEBTN from '../../../api/DefaultImg/result-to-home-btn.png';
 import ShareGroup from '../../BasicComponents/ShareGroup';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
+axios.defaults.withCredentials = true;
+
 const LifetimeSajuResult = (props) => {
     const saju_url = 'https://saju.ktestone.com';
     const [result, setResult] = useState({});
@@ -38,7 +40,8 @@ const LifetimeSajuResult = (props) => {
         const getToday = async(source) => {
             try {
                 await axios.get(
-                    saju_url + '/lifeInterpreting/total/' + source
+                    saju_url + '/lifeInterpreting/total/' + source,
+                    { withCredentials: true }
                 )
                 .then((res) => {
                     setResult(res?.data)
