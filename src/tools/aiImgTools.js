@@ -92,12 +92,34 @@ export const onAiUpload = async (file, fileName) => {
 
 export const onCreateUser = async (hashId, email) => {
     try {
-        console.log();
         axios.post(server_endpoint + "/user", {
             hashId, email
         }, { withCredentials: true })
         .then((res) => console.log(res));
     } catch (error) {
         return alert("생성 과정 중 문제가 발생했습니다.");
+    };
+};
+
+export const onCreateOrder = async (hashId, worktableId, productName) => {
+    try {
+        axios.post(server_endpoint + "/order", {
+            hashId, worktableId, productName
+        })
+        .then(res => console.log(res));
+    } catch (error) {
+        return alert("에러가 발생했습니다.");
+    };
+};
+
+export const getOrdertList = async (hashId, productCategoryName) => {
+    try {
+        return await axios.get(server_endpoint + "/order/get-orders", {
+            params: {
+                hashId, productCategoryName
+            },
+        });
+    } catch (error) {
+        return alert("에러가 발생했습니다.");
     };
 };

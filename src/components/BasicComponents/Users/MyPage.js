@@ -1,38 +1,51 @@
-import axios from 'axios';
-import React, {  Fragment, useEffect, useState } from 'react';
-import { withRouter } from 'react-router';
+import React, { useEffect, useState } from 'react';
+import { withRouter, useHistory } from 'react-router';
+import { Cookies } from 'react-cookie';
+import { verifyAccessToken } from '../../../tools/tools';
+import { getOrdertList } from '../../../tools/aiImgTools';
+const cookies = new Cookies();
 
-function MyPage(props) {
-
-    const [UserInfo, setUserInfo] = useState([]);
+function MyPage({ onClickLogout }) {
+    let history = useHistory();
+    const [userInfo, setUserInfo] = useState();
+    const [aiOrderList, setAiOrderList] = useState([]);
 
     useEffect(() => {
-        const userId = props.match.params.userId
-        const variable = { userId: userId }
+        // Only logged-In user can access this page
+        if(cookies.get('accessToken')) {
+            verifyAccessToken(cookies.get('accessToken'))
+            .then(res => setUserInfo(res))
+        } else {
+            history.replace("/");
+        };
+    }, [history])
 
-        axios.post('/api/users/getUserInfo', variable)
-        .then(response => {
-            if (response.data.success) {
-                setUserInfo(response.data.userInfo)
-            } else {
-                alert("유저 정보를 가져오지 못했습니다.")
-            }
-        })
-    }, [props])
-
+    useEffect(() => {
+        if(userInfo) {
+            getOrdertList(userInfo?.userId, "AIIMAGEGEN")
+            .then(res => setAiOrderList(res.data));
+        }
+    }, [userInfo]);
+    
     return (
-        <Fragment >
-            <div style={{ display: "block", margin: "15rem auto 0", justifyContent: "center", textAlign: "center"
-    }}>
-                <h1>마이페이지</h1>
+        <div>
+            {console.log(aiOrderList)}
+            <div>{userInfo?.email}</div>
+            <div>
+                <div>AI 이용내역</div>
+                <div style={{ maxWidth: "30rem" , width: "100%", margin: "0 auto"}}>
+                    {aiOrderList.length === 0 ? null : (
+                        aiOrderList.map((order) => (
+                            <img
+                                style={{ width: "100%" }}
+                                src={`https://images.ktestone.com/main-thumbnail/${order.Product.productName}-thumb.png`} key={`${order.Product.productName}-${order.id}`} alt={`${order.Product.productName}-${order.id}`}/>
+                        ))
+                    )}
+                </div>
             </div>
-            <div style={{ display: "block", margin: "3rem auto 0", justifyContent: "center", textAlign: "center"
-    }}>
-                <h3>User Name: {`${UserInfo.name}`}</h3>
-                <h3>Email: {`${UserInfo.email}`}</h3>
-            </div>
-        </Fragment>
+            <button onClick={() => onClickLogout()}>로그아웃</button>
+        </div>
     )
 }
 
-export default withRouter(MyPage)
+export default withRouter(MyPage);

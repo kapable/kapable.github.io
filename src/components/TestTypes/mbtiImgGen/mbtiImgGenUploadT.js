@@ -1,15 +1,19 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { withRouter, useHistory } from 'react-router-dom';
 import ImageUploader from "react-images-upload";
 import ProgressBar from "@ramonak/react-progress-bar";
 import './MbtiImgGen.css';
-import { favaActionUpload, onAiUpload } from '../../../tools/aiImgTools';
-import { nowFormatter } from '../../../tools/tools';
+import { favaActionUpload, onAiUpload, onCreateOrder } from '../../../tools/aiImgTools';
+import { nowFormatter, verifyAccessToken } from '../../../tools/tools';
 import { Button, Modal, Progress } from 'antd';
+import { Cookies } from 'react-cookie';
+
+const cookies = new Cookies();
 
 const MbtiImgGenUpload = () => {
     let history = useHistory();
     const [mode, setMode] =useState('upload');
+    const [currentUser, setCurrentUser] = useState({});
     const [pictures, setPictures] =useState([]);
     const [uploadedCount, setUploadedCount] = useState(0);
     const [uploadedUrl, setUploadedUrl] = useState([]);
@@ -18,6 +22,17 @@ const MbtiImgGenUpload = () => {
     const [isPurchased, setIsPurchased] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const minimunImgNumber = 10;
+
+    useEffect(() => {
+        // Only logged-In user can access this page
+        if(cookies.get('accessToken')) {
+            verifyAccessToken(cookies.get('accessToken'))
+            .then(res => setCurrentUser(res));
+        } else {
+            alert('로그인이 필요합니다!');
+            history.replace("/");
+        };
+    }, [history]);
 
     const onClickUpload = useCallback(() => {
         if(pictures?.length < 1) {
@@ -32,7 +47,6 @@ const MbtiImgGenUpload = () => {
             // ADD FILE NAME WITH USER ID
             const aiUrl = await onAiUpload(pic, nowFormat + '_' + idx);
             if(aiUrl) {
-                console.log(aiUrl);
                 aiUlrs.push(aiUrl);
                 setUploadedCount(aiUrlsCount += 1);
             }
@@ -75,9 +89,11 @@ const MbtiImgGenUpload = () => {
         setIsModalOpen(false);
         await favaActionUpload(
             uploadedUrl
-        ).then((res) => console.log(res));
+        ).then(async (res) => await onCreateOrder(
+            currentUser.userId, res.id, "fifteenAiTheme"
+        ));
         setMode('email');
-    }, [uploadedUrl]);
+    }, [uploadedUrl, currentUser]);
 
     if(mode === 'upload') {
         return (

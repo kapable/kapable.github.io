@@ -43,6 +43,7 @@ import MbtiImgGenT from './components/TestTypes/mbtiImgGen/mbtiImgGenT';
 import MbtiImgGenUploadT from './components/TestTypes/mbtiImgGen/mbtiImgGenUploadT';
 import MbtiImgGenCompleteT from './components/TestTypes/mbtiImgGen/mbtiImgGenCompleteT';
 import { onCreateUser } from './tools/aiImgTools';
+import MyPage from './components/BasicComponents/Users/MyPage';
 
 class App extends Component {
   constructor(props){
@@ -317,15 +318,13 @@ class App extends Component {
 
   onClickLogout(){
     try {
-      if(window.confirm('현재 마이 페이지 준비중입니다!\n곧 새로운 케이테스트로 찾아뵙겠습니다 : )\n확인 버튼을 누르시면 자동으로 로그아웃됩니다.')) {
-        const { cookies } = this.props;
-        cookies.remove('accessToken', { path: '/' });
-        cookies.remove('refreshToken', { path: '/' });
-        this.setState({
-            isLoggedIn: false
-        })
-        window.location.href = window.location.protocol + "//" + window.location.host;
-      }
+      const { cookies } = this.props;
+      cookies.remove('accessToken', { path: '/' });
+      cookies.remove('refreshToken', { path: '/' });
+      this.setState({
+          isLoggedIn: false
+      })
+      window.location.href = window.location.protocol + "//" + window.location.host;
     } catch {
       alert("에러가 발생했습니다 ㅠㅠ");
       window.location.href = window.location.protocol + "//" + window.location.host;
@@ -345,6 +344,8 @@ class App extends Component {
       <Router basename='/kapable.github.io/'>
         <ScrollToTop>
           <Switch>
+            <Route exact path="/myPage" component={() => <MyPage onClickLogout={this.onClickLogout} />} />
+
             {/* go to "HaGender" page */}
             <Route path="/haGender/" component={() => <TwoSplitedIntro test={"haGender"} lang={'Kor'} info={{ title: "하남자 하여자 테스트 - 남자편 | 여자편 - 케이테스트", subTitle: "나는 과연 몇% 확률로 하남자/하여자 일까? - 남자편 | 여자편 - 케이테스트" }} />} />
 
@@ -494,7 +495,6 @@ class App extends Component {
             <Route exact path="/privacy" component={Privacy} />
             <Route exact path="/login" component={Auth(LoginPage, false)} />
             <Route exact path="/register" component={Auth(RegisterPage, false)} />
-            {/* <Route exact path="/MyPage/:userId" component={Auth(MyPage, true)} /> */}
             <Route exact path={`${"/auth/" || "/auth"}`} component={() => <AuthPage language={`Kor`}/>} />
             <Route exact path={`${"/postAuth2022/" || "/postAuth2022"}`} component={() => <AuthPage2022 />} />
           </Switch>
@@ -523,13 +523,10 @@ class App extends Component {
             rel="noopener noreferrer"
             href={'https://ktestone.com/privacy'}
         >개인정보 처리방침</a></p>
-        {/* {this.state.isLoggedIn ?
-      <p style={{cursor: "pointer"}} onClick={() => this.onClickLogout()}>out</p> :
-      <p style={{cursor: "pointer"}} onClick={() => onClickLogin(window.location)}>in</p>} */}
       </div>
       {this.state.isLoggedIn ?
-      <img style={{cursor: "pointer", position: 'fixed', bottom: '20px', right: '20px'}} onClick={() => this.onClickLogout()} src='https://images.ktestone.com/default/logged-in-btn.png' alt='logged-in-btn'/> :
-      <img style={{cursor: "pointer", position: 'fixed', bottom: '20px', right: '20px'}} onClick={() => onClickLogin(window.location)} src='https://images.ktestone.com/default/log-in-btn.png' alt='log-in-btn'/>}
+        <img onClick={() => {window.location.href = window.origin + '/myPage/'}} style={{cursor: "pointer", position: 'fixed', bottom: '20px', right: '20px'}} src='https://images.ktestone.com/default/logged-in-btn.png' alt='logged-in-btn'/> :
+        <img style={{cursor: "pointer", position: 'fixed', bottom: '20px', right: '20px'}} onClick={() => onClickLogin(window.location)} src='https://images.ktestone.com/default/log-in-btn.png' alt='log-in-btn'/>}
     </Fragment>
     </Router>
     )
