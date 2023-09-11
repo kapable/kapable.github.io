@@ -21,6 +21,7 @@ const MbtiImgGenUpload = () => {
     const [isEmailConfirmed, setIsEmailConfirmed] = useState(false);
     const [isPurchased, setIsPurchased] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isUploading, setIsUploading] = useState(false);
     const minimunImgNumber = 10;
 
     useEffect(() => {
@@ -43,12 +44,16 @@ const MbtiImgGenUpload = () => {
         let aiUrlsCount = 0;
         let aiUlrs = [];
         setIsModalOpen(true);
+        setIsUploading(true);
         pictures.map(async (pic, idx) => {
             // ADD FILE NAME WITH USER ID
             const aiUrl = await onAiUpload(pic, nowFormat + '_' + idx);
             if(aiUrl) {
                 aiUlrs.push(aiUrl);
                 setUploadedCount(aiUrlsCount += 1);
+            }
+            if(pictures.length === idx + 1) {
+                setIsUploading(false);
             }
         });
         setUploadedUrl(aiUlrs);
@@ -127,7 +132,7 @@ const MbtiImgGenUpload = () => {
                         buttonStyles={{"height":"4rem","width":"4rem","borderRadius":"5%","fontSize":"2rem","color":"#606060", "background": "#E8E8E8","border":"none", "boxShadow":"none", "overflow":"visible", "cursor":"pointer"}}
                     />
                 ) : (null)}
-                <Modal title="사진 업로드" open={isModalOpen} onOk={handleOkOrCancel} onCancel={handleOkOrCancel} footer={[
+                <Modal title="사진 업로드" open={isModalOpen} onOk={handleOkOrCancel} onCancel={handleOkOrCancel} footer={isUploading ? null : [
                     <Button onClick={handleOkOrCancel}>확인</Button>
                 ]}>
                     <Progress type='circle' percent={uploadedCount / pictures?.length * 100} />
@@ -165,11 +170,6 @@ const MbtiImgGenUpload = () => {
                     </button>
                 ) : null
             )}
-            <Modal title="사진 업로드" open={isModalOpen} onOk={handleOkOrCancel} onCancel={handleOkOrCancel} footer={[
-                <Button onClick={handleOkOrCancel}>확인</Button>
-            ]}>
-                <Progress type='circle' percent={uploadedCount / pictures?.length * 100} />
-            </Modal>
         </>
         )
     }
