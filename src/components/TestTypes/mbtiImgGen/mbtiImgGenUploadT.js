@@ -3,7 +3,7 @@ import { withRouter, useHistory } from 'react-router-dom';
 import ImageUploader from "react-images-upload";
 import ProgressBar from "@ramonak/react-progress-bar";
 import './MbtiImgGen.css';
-import { onAiUpload } from '../../../tools/aiImgTools';
+import { favaActionUpload, onAiUpload } from '../../../tools/aiImgTools';
 import { nowFormatter } from '../../../tools/tools';
 import { Button, Modal, Progress } from 'antd';
 
@@ -12,6 +12,7 @@ const MbtiImgGenUpload = () => {
     const [mode, setMode] =useState('upload');
     const [pictures, setPictures] =useState([]);
     const [uploadedCount, setUploadedCount] = useState(0);
+    const [uploadedUrl, setUploadedUrl] = useState([]);
     const [email, setEmail] = useState("");
     const [isEmailConfirmed, setIsEmailConfirmed] = useState(false);
     const [isPurchased, setIsPurchased] = useState(false);
@@ -20,10 +21,24 @@ const MbtiImgGenUpload = () => {
 
     const onClickUpload = useCallback(() => {
         if(pictures?.length < 1) {
-            return alert(`${minimunImgNumber}장 이상 업로드 해주세요!`)
-        }
-        setMode('email');
-    }, [pictures.length, minimunImgNumber]);
+            return alert(`${minimunImgNumber}장 이상 업로드 해주세요!`);
+        };
+        const now = new Date();
+        const nowFormat = nowFormatter(now);
+        let aiUrlsCount = 0;
+        let aiUlrs = [];
+        setIsModalOpen(true);
+        pictures.map(async (pic, idx) => {
+            // ADD FILE NAME WITH USER ID
+            const aiUrl = await onAiUpload(pic, nowFormat + '_' + idx);
+            if(aiUrl) {
+                console.log(aiUrl);
+                aiUlrs.push(aiUrl);
+                setUploadedCount(aiUrlsCount += 1);
+            }
+        });
+        setUploadedUrl(aiUlrs);
+    }, [pictures, minimunImgNumber]);
 
     const onDrop = (pictureFiles) => {
         setPictures(pictureFiles);
@@ -53,23 +68,16 @@ const MbtiImgGenUpload = () => {
         if(!isPurchased) {
             return alert('구매 이후 이용해주세요!');
         };
-        const now = new Date()
-        const nowFormat = nowFormatter(now);
-        let aiUrlsCount = 0;
-        setIsModalOpen(true);
-        pictures.map(async (pic, idx) => {
-            // ADD FILE NAME WITH USER ID
-            const aiUrl = await onAiUpload(pic, nowFormat + '_' + idx);
-            if(aiUrl) {
-                setUploadedCount(aiUrlsCount += 1)
-            }
-        });
-    }, [email, isPurchased, pictures]);
-
-    const handleOkOrCancel = () => {
-        setIsModalOpen(false);
         history.replace("/mbtiImgGenT/complete");
-    }
+    }, [email, isPurchased, history]);
+
+    const handleOkOrCancel = useCallback(async () => {
+        setIsModalOpen(false);
+        await favaActionUpload(
+            uploadedUrl
+        ).then((res) => console.log(res));
+        setMode('email');
+    }, [uploadedUrl]);
 
     if(mode === 'upload') {
         return (
@@ -103,6 +111,11 @@ const MbtiImgGenUpload = () => {
                         buttonStyles={{"height":"4rem","width":"4rem","borderRadius":"5%","fontSize":"2rem","color":"#606060", "background": "#E8E8E8","border":"none", "boxShadow":"none", "overflow":"visible", "cursor":"pointer"}}
                     />
                 ) : (null)}
+                <Modal title="사진 업로드" open={isModalOpen} onOk={handleOkOrCancel} onCancel={handleOkOrCancel} footer={[
+                    <Button onClick={handleOkOrCancel}>확인</Button>
+                ]}>
+                    <Progress type='circle' percent={uploadedCount / pictures?.length * 100} />
+                </Modal>
             </>
         );
     } else if (mode === 'email') {
@@ -132,7 +145,7 @@ const MbtiImgGenUpload = () => {
             ) : (
                 isPurchased ? (
                     <button type="button" onClick={onSubmitHandler} className='mbtiImgGen-email-purchase-button'>
-                        사진 전송
+                        최종 생성 요청
                     </button>
                 ) : null
             )}

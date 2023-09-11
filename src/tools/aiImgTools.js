@@ -6,7 +6,35 @@ if(process.env.NODE_ENV === 'production') {
     server_endpoint = "https://server.ktestone.com";
 } else {
     server_endpoint = "http://localhost:3065";
-}
+};
+const projectId = "7a4499ca-4644-45ee-9b3f-f63ea3d19e64";
+
+export const favaActionUpload = async (uploadedUrl) => {
+    try {
+        const favaActionUploadRes = await fetch(
+            "https://bouns.io/api/action-rpc",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    args: {
+                        gender: "woman",
+                        userImageDownUrls: uploadedUrl
+                    },
+                    where: {
+                        projectId: projectId,
+                        name: "ktest-fava-create"
+                    }
+                })
+            }
+        ).then(res => res.json());
+        return favaActionUploadRes;
+    } catch (error) {
+        return alert("업로드 과정 중 문제가 발생했습니다.");
+    };
+};
 
 export const onAiUpload = async (file, fileName) => {
     const presignedPutUrl = await fetch(
@@ -17,12 +45,12 @@ export const onAiUpload = async (file, fileName) => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-            args: ["bouns-test", fileName],
-            operation: "presignedPutObject",
-            where: {
-                    projectId: "7a4499ca-4644-45ee-9b3f-f63ea3d19e64",
-                    name: "bouns-test",
-                },
+                args: ["bouns-test", fileName],
+                operation: "presignedPutObject",
+                where: {
+                        projectId: projectId,
+                        name: "bouns-test",
+                    },
             }),
         }
     ).then((res) => res.json());
@@ -48,7 +76,7 @@ export const onAiUpload = async (file, fileName) => {
                     args: ["bouns-test", fileName],
                     operation: "presignedGetObject",
                     where: {
-                        projectId: "7a4499ca-4644-45ee-9b3f-f63ea3d19e64",
+                        projectId: projectId,
                         name: "bouns-test",
                     },
                 }),
