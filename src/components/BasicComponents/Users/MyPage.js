@@ -34,7 +34,6 @@ function MyPage({ onClickLogout }) {
 
     return (
         <div>
-            {console.log(aiOrderList)}
             <div className='mypage-top-navbar'>마이페이지</div>
             <div className='mypage-profile-div'>
                 <Avatar size={64} icon={<UserOutlined />} />

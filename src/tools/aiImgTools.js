@@ -106,7 +106,6 @@ export const onCreateOrder = async (hashId, worktableId, productName) => {
         axios.post(server_endpoint + "/order", {
             hashId, worktableId, productName
         })
-        .then(res => console.log(res));
     } catch (error) {
         return alert("에러가 발생했습니다.");
     };
@@ -129,7 +128,6 @@ export const setSendingEmail = async (worktableId, sendingEmail) => {
         return await axios.post(server_endpoint + "/order/set-sendingEmail", {
             worktableId, sendingEmail
         })
-        // .then(res => console.log(res));
     } catch (error) {
         return alert("에러가 발생했습니다.");
     }
@@ -140,7 +138,6 @@ export const setOrderPurchased = async (worktableId) => {
         return await axios.post(server_endpoint + "/order/set-purchased", {
             worktableId
         })
-        // .then(res => console.log(res));
     } catch (error) {
         return alert("에러가 발생했습니다.");
     }
