@@ -11,7 +11,7 @@
     font-size: larger;
 }
 
-.mypage-section-title-div {
+.mypage-section-title-div, .mypage-section-logout-button {
     background-color: #E31982;
     width: 10rem;
     height: 2rem;
@@ -19,4 +19,38 @@
     margin: 0 auto 1rem;
     color: white;
     border-radius: 1rem;
+}
+
+.mypage-section-logout-button {
+    border: none;
+}
+
+/* ORDER LIST CARD */
+.mypage-order-list-div {
+    width: 90%;
+    max-width: 35rem;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border: black solid 2px;
+}
+
+.mypage-order-list-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mypage-order-list-top-left {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mypage-order-list-top-left-product-thumb {
+    width: 70%;
+}
+
+.mypage-order-list-top-right {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
 }

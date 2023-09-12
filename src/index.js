@@ -15,6 +15,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CookiesProvider } from 'react-cookie';
 import dotenv from 'dotenv';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import 'dayjs/locale/ko';
+dayjs.extend(relativeTime);
+dayjs.locale('ko');
 
 dotenv.config();
 

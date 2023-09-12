@@ -525,7 +525,10 @@ class App extends Component {
         >개인정보 처리방침</a></p>
       </div>
       {this.state.isLoggedIn ?
-        <img onClick={() => {window.location.href = window.origin + '/myPage/'}} style={{cursor: "pointer", position: 'fixed', bottom: '20px', right: '20px'}} src='https://images.ktestone.com/default/logged-in-btn.png' alt='logged-in-btn'/> :
+        <img onClick={() =>
+          this.onClickLogout()}
+          // {window.location.href = window.origin + '/myPage/'}}
+          style={{cursor: "pointer", position: 'fixed', bottom: '20px', right: '20px'}} src='https://images.ktestone.com/default/logged-in-btn.png' alt='logged-in-btn'/> :
         <img style={{cursor: "pointer", position: 'fixed', bottom: '20px', right: '20px'}} onClick={() => onClickLogin(window.location)} src='https://images.ktestone.com/default/log-in-btn.png' alt='log-in-btn'/>}
     </Fragment>
     </Router>

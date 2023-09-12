@@ -3,6 +3,8 @@ import { withRouter, useHistory } from 'react-router';
 import { Cookies } from 'react-cookie';
 import { verifyAccessToken } from '../../../tools/tools';
 import { getOrdertList } from '../../../tools/aiImgTools';
+import OrderList from './Orders/OrderList';
+
 const cookies = new Cookies();
 
 function MyPage({ onClickLogout }) {
@@ -14,7 +16,7 @@ function MyPage({ onClickLogout }) {
         // Only logged-In user can access this page
         if(cookies.get('accessToken')) {
             verifyAccessToken(cookies.get('accessToken'))
-            .then(res => setUserInfo(res))
+                .then(res => setUserInfo(res))
         } else {
             history.replace("/");
         };
@@ -26,7 +28,7 @@ function MyPage({ onClickLogout }) {
             .then(res => setAiOrderList(res.data));
         }
     }, [userInfo]);
-    
+
     return (
         <div>
             {console.log(aiOrderList)}
@@ -34,17 +36,14 @@ function MyPage({ onClickLogout }) {
             <div className='mypage-profile-div'>{userInfo?.email}</div>
             <div>
                 <div className='mypage-section-title-div'>AI 이용내역</div>
-                <div style={{ maxWidth: "30rem" , width: "100%", margin: "0 auto" }}>
-                    {aiOrderList.length === 0 ? null : (
+                {aiOrderList.length === 0 ? null : (
                         aiOrderList.map((order) => (
-                            <img
-                                style={{ width: "100%" }}
-                                src={`https://images.ktestone.com/main-thumbnail/${order.Product.productName}-thumb.png`} key={`${order.Product.productName}-${order.id}`} alt={`${order.Product.productName}-${order.id}`}/>
+                            <OrderList order={order} key={`${order.id}-order-list-key`}/>
                         ))
                     )}
-                </div>
+                
             </div>
-            <button onClick={() => onClickLogout()}>로그아웃</button>
+            <button className='mypage-section-logout-button' onClick={() => onClickLogout()}>로그아웃</button>
         </div>
     )
 }
