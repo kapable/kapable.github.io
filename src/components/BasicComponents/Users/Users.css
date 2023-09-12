@@ -7,7 +7,7 @@
 }
 
 .mypage-profile-div {
-    margin: 3rem auto;
+    margin: 2rem auto;
     font-size: larger;
 }
 
@@ -53,4 +53,19 @@
     text-align: center;
     width: 100%;
     margin: 0 auto;
+    font-size: larger;
+}
+
+.mypage-order-list-bottom {
+    height: 100%;
+    line-height: 100%;
+    vertical-align: middle;
+}
+
+.mypage-order-list-go-to-pay-button {
+    background-color: #E31982;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    cursor: pointer;
 }

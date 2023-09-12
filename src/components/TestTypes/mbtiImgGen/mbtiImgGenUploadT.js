@@ -7,12 +7,14 @@ import { favaActionUpload, onAiUpload, onCreateOrder } from '../../../tools/aiIm
 import { nowFormatter, verifyAccessToken } from '../../../tools/tools';
 import { Button, Modal, Progress } from 'antd';
 import { Cookies } from 'react-cookie';
+import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 
 const cookies = new Cookies();
 
 const MbtiImgGenUpload = () => {
+    const { query } = useLocation(); // from MyPage yet-purchased order
     let history = useHistory();
-    const [mode, setMode] =useState('upload');
+    const [mode, setMode] = useState(query ? query.premode : 'upload');
     const [currentUser, setCurrentUser] = useState({});
     const [pictures, setPictures] =useState([]);
     const [uploadedCount, setUploadedCount] = useState(0);
@@ -142,6 +144,7 @@ const MbtiImgGenUpload = () => {
     } else if (mode === 'email') {
         return (
             <>
+            {console.log(query.preWorktableId)}
             {/* upload count progress bar */}
             <div className='mbtiImgGen-email-logo-div'>
                 <img className='mbtiImgGen-email-logo' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-email-logo.png' alt='mbtiImgGen-email-logo' />
