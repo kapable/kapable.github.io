@@ -123,3 +123,25 @@ export const getOrdertList = async (hashId, productCategoryName) => {
         return alert("에러가 발생했습니다.");
     };
 };
+
+export const setSendingEmail = async (worktableId, sendingEmail) => {
+    try {
+        return await axios.post(server_endpoint + "/order/set-sendingEmail", {
+            worktableId, sendingEmail
+        })
+        // .then(res => console.log(res));
+    } catch (error) {
+        return alert("에러가 발생했습니다.");
+    }
+}
+
+export const setOrderPurchased = async (worktableId) => {
+    try {
+        return await axios.post(server_endpoint + "/order/set-purchased", {
+            worktableId
+        })
+        // .then(res => console.log(res));
+    } catch (error) {
+        return alert("에러가 발생했습니다.");
+    }
+}

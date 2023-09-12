@@ -3,7 +3,7 @@ import { withRouter, useHistory } from 'react-router-dom';
 import ImageUploader from "react-images-upload";
 import ProgressBar from "@ramonak/react-progress-bar";
 import './MbtiImgGen.css';
-import { favaActionUpload, onAiUpload, onCreateOrder } from '../../../tools/aiImgTools';
+import { favaActionUpload, onAiUpload, onCreateOrder, setOrderPurchased, setSendingEmail } from '../../../tools/aiImgTools';
 import { nowFormatter, verifyAccessToken } from '../../../tools/tools';
 import { Button, Modal, Progress } from 'antd';
 import { Cookies } from 'react-cookie';
@@ -15,6 +15,7 @@ const MbtiImgGenUpload = () => {
     const { query } = useLocation(); // from MyPage yet-purchased order
     let history = useHistory();
     const [mode, setMode] = useState(query ? query.premode : 'upload');
+    const [orderId, setOrderId] = useState(query ? query.preWorktableId : '');
     const [currentUser, setCurrentUser] = useState({});
     const [pictures, setPictures] =useState([]);
     const [uploadedCount, setUploadedCount] = useState(0);
@@ -69,18 +70,26 @@ const MbtiImgGenUpload = () => {
         setEmail(e.target.value);
     }, []);
 
-    const onEmailSubmit = useCallback(() => {
+    const onEmailSubmit = useCallback(async () => {
         if(!email) {
             return alert('이메일을 입력해주세요!');
         };
         if(window.confirm(`${email}\n입력하신 이메일이 정확한가요?`)) {
-            setIsEmailConfirmed(true);
+            await setSendingEmail(orderId, email)
+            .then(res => {
+                console.log(res)
+                setIsEmailConfirmed(true);
+            })
         }
-    }, [email]);
+    }, [orderId, email]);
 
-    const onClickPurchase = useCallback(() => {
-        setIsPurchased(true);
-    }, []);
+    const onClickPurchase = useCallback(async () => {
+        await setOrderPurchased(orderId)
+        .then(res => {
+            console.log(res)
+            setIsPurchased(true);
+        })
+    }, [orderId]);
 
     const onSubmitHandler = useCallback(async () => {
         if(!email) {
@@ -96,9 +105,12 @@ const MbtiImgGenUpload = () => {
         setIsModalOpen(false);
         await favaActionUpload(
             uploadedUrl
-        ).then(async (res) => await onCreateOrder(
-            currentUser.userId, res.id, "fifteenAiTheme"
-        ));
+        ).then(async (res) => {
+            setOrderId(res.id);
+            await onCreateOrder(
+                currentUser.userId, res.id, "fifteenAiTheme"
+            )}
+        );
         setMode('email');
     }, [uploadedUrl, currentUser]);
 
@@ -144,7 +156,7 @@ const MbtiImgGenUpload = () => {
     } else if (mode === 'email') {
         return (
             <>
-            {console.log(query.preWorktableId)}
+            {console.log(orderId)}
             {/* upload count progress bar */}
             <div className='mbtiImgGen-email-logo-div'>
                 <img className='mbtiImgGen-email-logo' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-email-logo.png' alt='mbtiImgGen-email-logo' />
@@ -163,9 +175,12 @@ const MbtiImgGenUpload = () => {
                 이메일이 다르거나 전송이 불가한<br />이메일의 경우 사진전송이 불가할 수 있습니다.<br />이메일을 다시 한번 확인 부탁드립니다.
             </p>
             {isEmailConfirmed && !isPurchased ? (
-                <button type="button" onClick={onClickPurchase} className='mbtiImgGen-email-purchase-button'>
+                <a href={`https://ktest.bouns.me/_pay/ktest-ai/?name=fifteen&price=6900&success_url=https://ktestone.com&worktable_id=${orderId}`}>
+                <button type="button"
+                    // onClick={onClickPurchase}
+                    className='mbtiImgGen-email-purchase-button'>
                     결제하기
-                </button>
+                </button></a>
             ) : (
                 isPurchased ? (
                     <button type="button" onClick={onSubmitHandler} className='mbtiImgGen-email-purchase-button'>
