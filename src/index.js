@@ -10,6 +10,7 @@ import './components/TestTypes/Post2021/Post2021.css';
 import './components/TestTypes/Post2021/PostPopup.css';
 import './components/TestTypes/MetaPangApply/MetaPangApply.css';
 import './index.css';
+import './components/BasicComponents/Users/Users.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CookiesProvider } from 'react-cookie';

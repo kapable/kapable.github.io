@@ -30,10 +30,11 @@ function MyPage({ onClickLogout }) {
     return (
         <div>
             {console.log(aiOrderList)}
-            <div>{userInfo?.email}</div>
+            <div className='mypage-top-navbar'>마이페이지</div>
+            <div className='mypage-profile-div'>{userInfo?.email}</div>
             <div>
-                <div>AI 이용내역</div>
-                <div style={{ maxWidth: "30rem" , width: "100%", margin: "0 auto"}}>
+                <div className='mypage-section-title-div'>AI 이용내역</div>
+                <div style={{ maxWidth: "30rem" , width: "100%", margin: "0 auto" }}>
                     {aiOrderList.length === 0 ? null : (
                         aiOrderList.map((order) => (
                             <img

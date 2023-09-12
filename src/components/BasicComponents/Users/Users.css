@@ -1,0 +1,22 @@
+.mypage-top-navbar {
+    color: white;
+    background-color: #E31982;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+}
+
+.mypage-profile-div {
+    margin: 3rem auto;
+    font-size: larger;
+}
+
+.mypage-section-title-div {
+    background-color: #E31982;
+    width: 10rem;
+    height: 2rem;
+    line-height: 2rem;
+    margin: 0 auto 1rem;
+    color: white;
+    border-radius: 1rem;
+}
