@@ -76,7 +76,8 @@ const MbtiImgGenUpload = () => {
         if(window.confirm(`${email}\n입력하신 이메일이 정확한가요?`)) {
             await setSendingEmail(orderId, email)
             .then(res => {
-                if(res === 201) {
+                console.log(res);
+                if(res.status === 201) {
                     setIsEmailConfirmed(true);
                 }
             })

@@ -44,6 +44,7 @@ import MbtiImgGenUploadT from './components/TestTypes/mbtiImgGen/mbtiImgGenUploa
 import MbtiImgGenCompleteT from './components/TestTypes/mbtiImgGen/mbtiImgGenCompleteT';
 import { onCreateUser } from './tools/aiImgTools';
 import MyPage from './components/BasicComponents/Users/MyPage';
+import MbtiImgGenCheckT from './components/TestTypes/mbtiImgGen/mbtiImgGenCheckT';
 
 class App extends Component {
   constructor(props){
@@ -408,6 +409,7 @@ class App extends Component {
             <Route path='/mbtiImgGenT' component={() => <MbtiImgGenT />} exact/>
             <Route path='/mbtiImgGenT/upload' component={() => <MbtiImgGenUploadT />} exact/>
             <Route path='/mbtiImgGenT/complete' component={() => <MbtiImgGenCompleteT />} exact/>
+            <Route path='/mbtiImgGenT/check' component={() => <MbtiImgGenCheckT />} exact/>
 
             {/* "Main" page */}
             <Route path='/' exact>
@@ -526,8 +528,8 @@ class App extends Component {
       </div>
       {this.state.isLoggedIn ?
         <img onClick={() =>
-          // this.onClickLogout()}
-          {window.location.href = window.origin + '/myPage/'}}
+          this.onClickLogout()}
+          // {window.location.href = window.origin + '/myPage/'}}
           style={{cursor: "pointer", position: 'fixed', bottom: '20px', right: '20px'}} src='https://images.ktestone.com/default/logged-in-btn.png' alt='logged-in-btn'/> :
         <img style={{cursor: "pointer", position: 'fixed', bottom: '20px', right: '20px'}} onClick={() => onClickLogin(window.location)} src='https://images.ktestone.com/default/log-in-btn.png' alt='log-in-btn'/>}
     </Fragment>

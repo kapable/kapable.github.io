@@ -7,7 +7,7 @@ if(process.env.NODE_ENV === 'production') {
 } else {
     server_endpoint = "http://localhost:3065";
 };
-const projectId = "7a4499ca-4644-45ee-9b3f-f63ea3d19e64";
+export const projectId = "7a4499ca-4644-45ee-9b3f-f63ea3d19e64";
 
 export const favaActionUpload = async (uploadedUrl) => {
     try {
