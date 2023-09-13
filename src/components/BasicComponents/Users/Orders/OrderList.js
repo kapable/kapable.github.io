@@ -26,7 +26,7 @@ const OrderList = ({ order }) => {
             {console.log()}
             <div className='mypage-order-list-top'>
                 <div className='mypage-order-list-top-left'>
-                    <div><span style={{fontWeight: "bolder"}}>주문번호</span><br />{order.worktableId}</div>
+                    <div><span style={{fontWeight: "bolder"}}>주문번호</span> {order.worktableId.slice(0, 13)}</div>
                     <div>
                         <img className='mypage-order-list-top-left-product-thumb' src={`https://images.ktestone.com/aiImgGen/${order.Product.productName}/${order.Product.productName}-product-thumb.jpg`} alt={`${order.Product.productName}-product-thumb`} />
                     </div>
