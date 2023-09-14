@@ -4,11 +4,13 @@ phases:
     runtime-versions:
       nodejs: 10
     commands:
+      - npm cache clean --force
+      - del package-lock.json
       - npm install --unsafe-perm
       - npm install babel-cli cross-env webpack-cli --global
   build:
     commands:
-       - npm run build
+      - npm run build
 artifacts:
   files:
     - '**/*'
