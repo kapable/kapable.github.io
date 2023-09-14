@@ -405,7 +405,7 @@ class Result extends Component {
         let personalColor2022ListKor = [];
         let EngTestList = ["iPhoneMemoEng", "colorPaletteEng", "bubbleCharEng", "alienCharEng", "loveLotteryEng", "loveTVEng", "rainDropEng", "digitalCharEng", "postCardEng", "mazeHeartEng", "colorLabelStickerEng", "DIYEng", "labelStickerEng", "earthCharacteristicEng", "polaroidCharacteristicEng", "labelStickerLoveEng", "loveMagazineEng", "loveInMyHeadEng", "loveSpicyEng", "loveSpringFlowerEng", "coupleCharacterEng", "loveSpeedEng", "loveCellEng", "speechHabitEng", "mbtiFeaturesEng", "bondeeEng", "loveWarningEng", "characteristicChracterEng", "meGuideEng", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
         let CNTestList = ["emotionGraphCN", "loveInMyHeadCN", "loveSpicyCN", "cantWaitCN", "loveSpringFlowerCN", "coupleCharacterMaleCN", "coupleCharacterFemaleCN", "loveCellCN", "speechHabitCN", "bondeeCN", "loveFlameCN", "characteristicChracterCN", "loveWarningCN", "loveCharacterCN", "smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
-        let JPTestList = ["deepOceanOutlawJP", "bloodTransfusionJP", "colorPaletteJP", "unlockMyHeartJP", "bubbleCharJP", "alienCharJP", "whyLoveJP", "charRoadJP", "scrapBookCharJP", "flowerGardenJP", "speechHabitJP", "loveFlameJP", "readyToBoneJP", "earthCharacteristicJP", "cantWaitJP", "puzzleLoveJP", "coupleCharacterJP","coupleCharacterMaleJP","coupleCharacterFemaleJP", "mbtiFeaturesJP", "loveCellJP", "emotionGraphJP", "polaroidCharacteristicJP", "loveTicketJP", "loveCharacterMaleJP", "loveCharacterFemaleJP", "loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP", "personalColorJP"];
+        let JPTestList = ["egoProfileJP", "deepOceanOutlawJP", "bloodTransfusionJP", "colorPaletteJP", "unlockMyHeartJP", "bubbleCharJP", "alienCharJP", "whyLoveJP", "charRoadJP", "scrapBookCharJP", "flowerGardenJP", "speechHabitJP", "loveFlameJP", "readyToBoneJP", "earthCharacteristicJP", "cantWaitJP", "puzzleLoveJP", "coupleCharacterJP","coupleCharacterMaleJP","coupleCharacterFemaleJP", "mbtiFeaturesJP", "loveCellJP", "emotionGraphJP", "polaroidCharacteristicJP", "loveTicketJP", "loveCharacterMaleJP", "loveCharacterFemaleJP", "loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP", "personalColorJP"];
         let GerTestList = ["loveCharacterGer", "personalColorGer"];
         let ESTestList = ["loveWarningES", "personalColorES"];
         let ITTestList = ["coupleCharacterIT","coupleCharacterMaleIT","coupleCharacterFemaleIT", "loveCharacterMaleIT", "loveCharacterFemaleIT", "loveFlameIT", "characteristicChracterIT"];
@@ -413,11 +413,11 @@ class Result extends Component {
         let characteristicChracterESList = ["characteristicChracterES"];
         let characteristicChracterGerList = ["characteristicChracterGer",];
         let labelStickerCNList = ["labelStickerCN"];
-        let egoProfileJPList = ["egoProfileJP"];
+        let iPhoneMemoJPList = ["iPhoneMemoJP"];
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let egoProfileEngList = ["egoProfileEng"];
-        let lovePotionList = ["lovePotion"];
+        let stoneCharList = ["stoneChar"];
         let hmallList = ['gardenflower', 'hmall', 'labelStickerSKT'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
@@ -539,8 +539,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (lovePotionList.includes(this.state.current_test)) {
-            const rederTestList = ["puffyClouds", "guestbookChar", "bookChar", "newsChar", "zgChar", "remindProfile", ];
+        } else if (stoneCharList.includes(this.state.current_test)) {
+            const rederTestList = ["lovePotion", "puffyClouds", "guestbookChar", "bookChar", ];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -588,7 +588,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (JPTestList.includes(this.state.current_test)) {
-            const rederTestList = ["egoProfileJP", "deepOceanOutlawJP", "bloodTransfusionJP", "colorPaletteJP",];
+            const rederTestList = ["iPhoneMemoJP", "egoProfileJP", "deepOceanOutlawJP", "bloodTransfusionJP", "colorPaletteJP",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -779,8 +779,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (egoProfileJPList.includes(this.state.current_test)) {
-            const rederTestList = ["deepOceanOutlawJP", "bloodTransfusionJP", "colorPaletteJP", "unlockMyHeartJP", "bubbleCharJP",];
+        } else if (iPhoneMemoJPList.includes(this.state.current_test)) {
+            const rederTestList = ["egoProfileJP", "deepOceanOutlawJP", "bloodTransfusionJP", "colorPaletteJP", "unlockMyHeartJP", "bubbleCharJP",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -806,7 +806,7 @@ class Result extends Component {
         } else if (hmallList.includes(this.state.current_test)) {
             return null;
         } else {
-            const rederTestList = ["lovePotion", "puffyClouds", "guestbookChar", "bookChar", "newsChar", "zgChar",];
+            const rederTestList = ["stoneChar", "lovePotion", "puffyClouds", "guestbookChar",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (

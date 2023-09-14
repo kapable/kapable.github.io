@@ -18,9 +18,15 @@ function MyPage({ onClickLogout }) {
     useEffect(() => {
         // Only logged-In user can access this page
         if(cookies.get('accessToken')) {
-            verifyAccessToken(cookies.get('accessToken'))
-                .then(res => setUserInfo(res))
+            try {
+                verifyAccessToken(cookies.get('accessToken'))
+                    .then(res => setUserInfo(res))
+            } catch (error) {
+                alert('로그인이 필요합니다.')
+                history.replace("/");
+            }
         } else {
+            alert('로그인이 필요합니다.')
             history.replace("/");
         };
     }, [history])
