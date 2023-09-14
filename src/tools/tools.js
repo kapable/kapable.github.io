@@ -84,3 +84,10 @@ export const nowFormatter = (now) => {
 
     return yyyy + MM + dd+  hh + mm + ss;
 }
+
+export const urlToFile = async(imgUrl, fileName)  => {
+    const response = await fetch(imgUrl);
+    const blob = await response.blob();
+    const file = new File([blob], fileName, { type: blob.type });
+    return file;
+};

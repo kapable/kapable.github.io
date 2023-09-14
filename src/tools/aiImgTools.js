@@ -142,3 +142,23 @@ export const setOrderPurchased = async (worktableId) => {
         return alert("에러가 발생했습니다.");
     }
 }
+
+export const setOrderSended = async (worktableId, sendedUrl) => {
+    try {
+        return await axios.post(server_endpoint + '/order/set-sended', {
+            worktableId, sendedUrl
+        });
+    } catch (error) {
+        return alert(error);
+    };
+};
+
+export const checkOrderUserMatched = async (worktableId, userId) => {
+    try {
+        return await axios.post(server_endpoint + '/order/check-order-user', {
+            worktableId, userId
+        });
+    } catch (error) {
+        return alert(error);
+    };
+};

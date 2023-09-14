@@ -62,10 +62,16 @@
     vertical-align: middle;
 }
 
-.mypage-order-list-go-to-pay-button {
+.mypage-order-list-go-to-pay-button, .image-check-page-download-button {
     background-color: #E31982;
     border-radius: 1rem;
     border: none;
     color: white;
     cursor: pointer;
+}
+
+.image-check-page-download-button {
+    margin: 3rem auto;
+    width: 8rem;
+    height: 3rem;
 }
