@@ -60,7 +60,7 @@ const MbtiImgGen = () => {
             <>
                 {metaTagRenderer()}
                 <div className='mbtiImgGen-intro-div'>
-                    <img className='mbtiImgGen-intro' src='https://images.ktestone.com/introImages/mbtiImgGen-intro.jpg' alt='mbtiImgGen-intro' />
+                    <img className='mbtiImgGen-intro' src='https://images.ktestone.com/introImages/fifteenAiTheme-intro.jpg' alt='mbtiImgGen-intro' />
                     {/* <a href='https://bouns.io/app/7a4499ca-4644-45ee-9b3f-f63ea3d19e64/_pay/ktest-ai/?name=MBTI%20%ED%85%8C%EB%A7%88&price=6900'> */}
                         <div className='mbtiImgGen-intro-btn-div'
                         onClick={() => setMode('guide')}

@@ -38,7 +38,7 @@ const MbtiImgGenUpload = () => {
     }, [history]);
 
     const onClickUpload = useCallback(() => {
-        if(pictures?.length < 1) {
+        if(pictures?.length < minimunImgNumber) {
             return alert(`${minimunImgNumber}장 이상 업로드 해주세요!`);
         };
         const now = new Date();
@@ -111,7 +111,7 @@ const MbtiImgGenUpload = () => {
                             height='10px' width='70%' transitionDuration='.3s' margin='1rem auto 1rem'/>
                 </div>
                 <p>{pictures?.length}/{20}</p>
-                {pictures?.length > 20 ? <p>20장의 사진을 넘어섰습니다.</p> : null}
+                {pictures?.length > 20 ? <p>20장의 사진을 넘어섰습니다.<br />새로고침을 눌러 최대 20장까지 업로드해주세요.</p> : null}
                 {pictures?.length < 20 ? (
                     <ImageUploader
                         className="mbtiImgGen-image-uploader"

@@ -149,7 +149,7 @@ export const setOrderSended = async (worktableId, sendedUrl) => {
             worktableId, sendedUrl
         });
     } catch (error) {
-        return alert("setOrderSended", error);
+        return alert("setOrderSended");
     };
 };
 
@@ -159,6 +159,6 @@ export const checkOrderUserMatched = async (worktableId, userId) => {
             worktableId, userId
         });
     } catch (error) {
-        return alert("checkOrderUserMatched", error);
+        return alert("checkOrderUserMatched");
     };
 };
