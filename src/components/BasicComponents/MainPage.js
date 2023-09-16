@@ -34,6 +34,13 @@ function MainPage(props) {
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
             />
 
+            {/* FIFTEEN AI IMG GEN */}
+            {/* {props.lang === 'Kor' || !props.lang ? (
+                <Link to='/mbtiImgGenT/' className="main-link-block" key="fifteenAiTheme-banner">
+                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenAiTheme-thumb.png`} alt="fifteenAiTheme" />
+                </Link>
+            ) : null} */}
+
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
                 {props.all_tests_url.slice(0,7).map((item, idx)=>{
