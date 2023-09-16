@@ -95,7 +95,6 @@ export const onCreateUser = async (hashId, email) => {
         axios.post(server_endpoint + "/user", {
             hashId, email
         }, { withCredentials: true })
-        .then((res) => console.log(res));
     } catch (error) {
         return alert("생성 과정 중 문제가 발생했습니다.");
     };
@@ -149,7 +148,8 @@ export const setOrderSended = async (worktableId, sendedUrl) => {
             worktableId, sendedUrl
         });
     } catch (error) {
-        return alert("setOrderSended");
+        // return alert("setOrderSended");
+        console.log(error);
     };
 };
 
@@ -159,6 +159,7 @@ export const checkOrderUserMatched = async (worktableId, userId) => {
             worktableId, userId
         });
     } catch (error) {
-        return alert("checkOrderUserMatched");
+        // return alert("checkOrderUserMatched");
+        console.log(error);
     };
 };

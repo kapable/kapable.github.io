@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import { checkOrderUserMatched, projectId, setOrderSended } from '../../../tools/aiImgTools';
 import { Cookies } from 'react-cookie';
-import { verifyAccessToken } from '../../../tools/tools';
+import { onClickLogin, verifyAccessToken } from '../../../tools/tools';
 import { Button, Col, Modal, Progress, Row } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import dayjs from 'dayjs';
@@ -92,12 +92,14 @@ const MbtiImgGenCheckT = () => {
                         })
                     })
             } catch (error) {
-                alert('로그인이 필요합니다.')
-                history.replace("/");
+                if(window.confirm("로그인이 필요합니다.")) {
+                    onClickLogin(window.location);
+                }
             }
         } else {
-            alert('로그인이 필요합니다.')
-            history.replace("/");
+            if(window.confirm("로그인이 필요합니다.")) {
+                onClickLogin(window.location);
+            }
         };
         load();
     }, [load, history, worktableId]);
@@ -136,7 +138,8 @@ const MbtiImgGenCheckT = () => {
         <>
             <div><img style={{width: "100%", maxWidth: "20rem"}} src="https://images.ktestone.com/aiImgGen/resultCheck/upper-banner.png" alt="upper-side-img" /></div>
             <div style={{display: "flex"}}>
-                <div style={{marginLeft:"auto"}}>
+                <div style={{marginLeft:"auto", display:"grid"}}>
+                    <img src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
                     <img src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
                 </div>
                 {images.length > 0 ? (
@@ -163,7 +166,8 @@ const MbtiImgGenCheckT = () => {
                         <p>loading...</p>
                     </div>
                 )}
-                <div style={{marginRight:"auto"}}>
+                <div style={{marginRight:"auto", display:"grid"}}>
+                    <img src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
                     <img src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
                 </div>
             </div>

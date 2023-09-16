@@ -12,7 +12,7 @@ export const _eventSenderGA = (category, action, label) => {
 };
 
 export const onClickLogin = async (windowLocation) => {
-    const redirectUri = windowLocation.protocol + "//" + windowLocation.host + windowLocation.pathname;
+    const redirectUri = windowLocation.protocol + "//" + windowLocation.host + windowLocation.pathname + windowLocation?.search;
 
     const queryString = new URLSearchParams({
         client_id: projectId,
