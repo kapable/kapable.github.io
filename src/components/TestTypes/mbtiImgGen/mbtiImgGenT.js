@@ -32,25 +32,25 @@ const MbtiImgGen = () => {
             <Helmet>
                 {/* <!-- Primary Meta Tags --> */}
                 <title>내가 다른 MBTI 였다면?</title>
-                <meta name="title" content="내가 다른 MBTI 였다면?"/>
-                <meta name="description" content="다른 MBTI 15가지 타입의 사진을 받아보세요" data-react-helmet="true"/>
+                <meta name="title" content="케이테스트 Ai 피프틴 테마"/>
+                <meta name="description" content="다양한 15가지 타입의 사진이 축력 됩니다" data-react-helmet="true"/>
                 <link rel="main-url" href="https://ktestone.com/fifteenTheme/"/>
 
                 {/* <!-- Open Graph / Facebook --> */}
                 <meta property="og:type" content="website"/>
                 <meta property="og:url" content="https://ktestone.com/fifteenTheme/"/>
-                <meta property="og:title" content="내가 다른 MBTI 였다면?"/>
-                <meta property="og:description" content="다른 MBTI 15가지 타입의 사진을 받아보세요"/>
+                <meta property="og:title" content="케이테스트 Ai 피프틴 테마"/>
+                <meta property="og:description" content="다양한 15가지 타입의 사진이 축력 됩니다"/>
                 <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/fifteenAiTheme-thumb.png`}/>
-                <meta property="og:image:alt" content="내가 다른 MBTI 였다면?" />
+                <meta property="og:image:alt" content="케이테스트 Ai 피프틴 테마" />
 
                 {/* <!-- Twitter --> */}
                 <meta property="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:url" content="https://ktestone.com/fifteenTheme/"/>
-                <meta property="twitter:title" content="내가 다른 MBTI 였다면?"/>
-                <meta property="twitter:description" content="다른 MBTI 15가지 타입의 사진을 받아보세요"/>
+                <meta property="twitter:title" content="케이테스트 Ai 피프틴 테마"/>
+                <meta property="twitter:description" content="다양한 15가지 타입의 사진이 축력 됩니다"/>
                 <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/fifteenAiTheme-thumb.png`}/>
-                <meta property="twitter:image:alt" content="내가 다른 MBTI 였다면?" />
+                <meta property="twitter:image:alt" content="케이테스트 Ai 피프틴 테마" />
             </Helmet>
         )
     };
@@ -61,13 +61,11 @@ const MbtiImgGen = () => {
                 {metaTagRenderer()}
                 <div className='mbtiImgGen-intro-div'>
                     <img className='mbtiImgGen-intro' src='https://images.ktestone.com/introImages/fifteenAiTheme-intro.jpg' alt='mbtiImgGen-intro' />
-                    {/* <a href='https://bouns.io/app/7a4499ca-4644-45ee-9b3f-f63ea3d19e64/_pay/ktest-ai/?name=MBTI%20%ED%85%8C%EB%A7%88&price=6900'> */}
                         <div className='mbtiImgGen-intro-btn-div'
                         onClick={() => setMode('guide')}
                     >
                         <img className='mbtiImgGen-intro-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-intro-btn.png' alt='mbtiImgGen-intro-btn' />
                     </div>
-                    {/* </a> */}
                 </div>
                 <p style={{ color: "grey", fontWeight: "bolder" }}>*위 상품의 최대 이용 기간은 6개월입니다.</p>
                 <p onClick={() => setIsModalOpen(true)} style={{ color: "grey", fontWeight: "bolder", cursor: "pointer", textDecoration: "underline" }}>환불 규정 안내</p>

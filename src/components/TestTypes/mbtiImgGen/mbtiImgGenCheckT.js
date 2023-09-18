@@ -6,8 +6,7 @@ import { onClickLogin, verifyAccessToken } from '../../../tools/tools';
 import { Button, Col, Modal, Progress, Row } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import dayjs from 'dayjs';
-// import { saveAs } from 'file-saver';
-// import axios from 'axios';
+import JSZip from 'jszip';
 
 const cookies = new Cookies();
 
@@ -111,25 +110,44 @@ const MbtiImgGenCheckT = () => {
         setSended();
     }, [worktableId]);
 
-    const onImagesDownload = useCallback(() => {
+    const downloadZip = (file) => {
+        const anchor = document.createElement("a");
+        anchor.download = 'fifteenAIImg.zip';
+        const url = URL.createObjectURL(file);
+        anchor.href = url;
+
+        anchor.style.display = "none";
+
+        document.body.appendChild(anchor);
+
+        anchor.click();
+        anchor.remove();
+
+        URL.revokeObjectURL(url);
+    }
+
+    const onImagesDownload = useCallback(async (imgs) => {
+        if(!imgs || imgs.length === 0) {
+            return alert("이미지 정보를 볼러올 수 없습니다.");
+        };
         try {
-            return alert('현재 전체 이미지 다운로드 기능을 준비중입니다!');
-            // setIsModalOpen(true);
-            // images.map((image, idx) => {
-            //     let fileName = idx+1+'_'+dayjs().format('YYYYMMDD_HHmmss')+'.jpg';
-            //     setDownloadCount(idx+1);
-            //     axios.get(image, {
-            //         responseType: 'blob'
-            //     })
-            //     .then((obj) => {
-            //         console.log(obj);
-            //         // const url = URL.createObjectURL(obj.data);
-            //         // const a = document.createElement('a');
-            //         // a.href = url;
-            //         // a.
-            //         // saveAs(image, fileName)
-            //     })
-            // });
+            const streams = await Promise.all(
+                imgs.map(async (url) => {
+                    return (
+                        await fetch(url, {
+                            cache:"no-cache"
+                        }).then((r) => r.blob())
+                    )
+                })
+            )
+            const zip = new JSZip();
+            streams.forEach((blob, index) => {
+                zip.file(`images${index}.jpg`, blob);
+            })
+            const zipFile = await zip.generateAsync({ type: 'blob' });
+
+            downloadZip(zipFile);
+
         } catch (error) {
             alert('다운로드 중 에러가 발생했습니다');
         };
@@ -146,7 +164,7 @@ const MbtiImgGenCheckT = () => {
                 {images.length > 0 ? (
                     // images fetched successfully
                     <div style={{width: "100%", maxWidth:"20rem", margin: "0rem 1rem"}}>
-                        <button className='image-check-page-download-button' onClick={onImagesDownload}>전체 이미지 다운로드</button>
+                        <button className='image-check-page-download-button' onClick={() => onImagesDownload(images)}>전체 이미지 다운로드</button>
                         <p style={{fontSize:"0.7rem", marginBottom: "1rem"}}>전체 다운로드 시 <strong>압축파일 형태</strong>로 다운로드 됩니다.<br /><strong>개별 다운로드</strong>는 사진을 1초 정도 누르면 다운로드 가능합니다</p>
                         <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, { xs: 8, sm: 16, md: 24, lg: 32 }]}>
                             {images.map((image) => (
