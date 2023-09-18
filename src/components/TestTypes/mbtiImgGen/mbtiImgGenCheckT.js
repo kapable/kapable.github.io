@@ -163,7 +163,7 @@ const MbtiImgGenCheckT = () => {
                     </div>
                 ) : (
                     // in case that images not fetched yet
-                    <div style={{ margin: "5rem auto", fontSize: "3rem" }}>
+                    <div style={{ margin: "5rem auto", fontSize: "3rem", color: "#E9277D" }}>
                         <LoadingOutlined />
                         <p>loading...</p>
                     </div>
