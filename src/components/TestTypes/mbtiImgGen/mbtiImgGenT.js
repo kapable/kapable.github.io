@@ -41,7 +41,7 @@ const MbtiImgGen = () => {
                 <meta property="og:url" content="https://ktestone.com/fifteenTheme/"/>
                 <meta property="og:title" content="내가 다른 MBTI 였다면?"/>
                 <meta property="og:description" content="다른 MBTI 15가지 타입의 사진을 받아보세요"/>
-                <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/mbtiImgGen-thumb.png`}/>
+                <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/fifteenAiTheme-thumb.png`}/>
                 <meta property="og:image:alt" content="내가 다른 MBTI 였다면?" />
 
                 {/* <!-- Twitter --> */}
@@ -49,7 +49,7 @@ const MbtiImgGen = () => {
                 <meta property="twitter:url" content="https://ktestone.com/fifteenTheme/"/>
                 <meta property="twitter:title" content="내가 다른 MBTI 였다면?"/>
                 <meta property="twitter:description" content="다른 MBTI 15가지 타입의 사진을 받아보세요"/>
-                <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/mbtiImgGen-thumb.png`}/>
+                <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/fifteenAiTheme-thumb.png`}/>
                 <meta property="twitter:image:alt" content="내가 다른 MBTI 였다면?" />
             </Helmet>
         )

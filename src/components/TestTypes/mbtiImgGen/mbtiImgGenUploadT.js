@@ -4,7 +4,7 @@ import ImageUploader from "react-images-upload";
 import ProgressBar from "@ramonak/react-progress-bar";
 import './MbtiImgGen.css';
 import { favaActionUpload, onAiUpload, onCreateOrder, setSendingEmail } from '../../../tools/aiImgTools';
-import { nowFormatter, verifyAccessToken } from '../../../tools/tools';
+import { nowFormatter, onClickLogin, verifyAccessToken } from '../../../tools/tools';
 import { Button, Modal, Progress } from 'antd';
 import { Cookies } from 'react-cookie';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
@@ -33,7 +33,8 @@ const MbtiImgGenUpload = () => {
             .then(res => setCurrentUser(res));
         } else {
             alert('로그인이 필요합니다!');
-            history.replace("/");
+            onClickLogin(window.location);
+            // history.replace("/");
         };
     }, [history]);
 
