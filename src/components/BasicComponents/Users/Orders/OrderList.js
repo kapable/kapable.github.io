@@ -25,14 +25,14 @@ const OrderList = ({ order }) => {
     const goToButton = useCallback(() => {
         if(status === 0) { // purchased needed
             return (
-                <Link to={{pathname: "/mbtiImgGenT/upload", query: { premode: "email", preWorktableId: order.worktableId }}} >
+                <Link to={{pathname: "/fifteenTheme/upload", query: { premode: "email", preWorktableId: order.worktableId }}} >
                     <button className='mypage-order-list-go-to-pay-button'> <RightCircleOutlined style={{fontSize:"1rem", margin: "0.5rem auto"}} /> 결제하러 가기</button>
                 </Link>
             )
         }
         if(status === 2 && dayjs().diff(dayjs(order.imgCheckDate), 'hours') <= imgCheckableHour) { // sended & in 2-Hour
             return (
-                <a href={`${window.location.origin}/mbtiImgGenT/check/?worktableId=${order.worktableId}`} target='_blank' rel="noopener noreferrer">
+                <a href={`${window.location.origin}/fifteenTheme/check/?worktableId=${order.worktableId}`} target='_blank' rel="noopener noreferrer">
                     <button className='mypage-order-list-go-to-pay-button'> <RightCircleOutlined style={{fontSize:"1rem", margin: "0.5rem auto"}} /> 이미지 링크 확인</button>
                 </a>
             )

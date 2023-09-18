@@ -34,11 +34,11 @@ const MbtiImgGen = () => {
                 <title>내가 다른 MBTI 였다면?</title>
                 <meta name="title" content="내가 다른 MBTI 였다면?"/>
                 <meta name="description" content="다른 MBTI 15가지 타입의 사진을 받아보세요" data-react-helmet="true"/>
-                <link rel="main-url" href="https://ktestone.com/mbtiImgGenT/"/>
+                <link rel="main-url" href="https://ktestone.com/fifteenTheme/"/>
 
                 {/* <!-- Open Graph / Facebook --> */}
                 <meta property="og:type" content="website"/>
-                <meta property="og:url" content="https://ktestone.com/mbtiImgGenT/"/>
+                <meta property="og:url" content="https://ktestone.com/fifteenTheme/"/>
                 <meta property="og:title" content="내가 다른 MBTI 였다면?"/>
                 <meta property="og:description" content="다른 MBTI 15가지 타입의 사진을 받아보세요"/>
                 <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/mbtiImgGen-thumb.png`}/>
@@ -46,7 +46,7 @@ const MbtiImgGen = () => {
 
                 {/* <!-- Twitter --> */}
                 <meta property="twitter:card" content="summary_large_image"/>
-                <meta property="twitter:url" content="https://ktestone.com/mbtiImgGenT/"/>
+                <meta property="twitter:url" content="https://ktestone.com/fifteenTheme/"/>
                 <meta property="twitter:title" content="내가 다른 MBTI 였다면?"/>
                 <meta property="twitter:description" content="다른 MBTI 15가지 타입의 사진을 받아보세요"/>
                 <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/mbtiImgGen-thumb.png`}/>
@@ -83,7 +83,7 @@ const MbtiImgGen = () => {
             <>
                 <div className='mbtiImgGen-guide-div'>
                     <img className='mbtiImgGen-guide' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-guide.jpg' alt='mbtiImgGen-guide' />
-                    <Link to='/mbtiImgGenT/upload'>
+                    <Link to='/fifteenTheme/upload'>
                         <div className='mbtiImgGen-guide-btn-div' onClick={() => setMode('intro')}>
                             <img className='mbtiImgGen-guide-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-guide-btn.png' alt='mbtiImgGen-guide-btn' />
                         </div>

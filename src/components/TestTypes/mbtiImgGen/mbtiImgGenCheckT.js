@@ -73,7 +73,7 @@ const MbtiImgGenCheckT = () => {
     useEffect(() => {
         if(!worktableId) {
             alert('잘못된 경로입니다.');
-            history.push('/mbtiImgGenT');
+            history.push('/fifteenTheme');
         };
         if(cookies.get('accessToken')) {
             try {
@@ -83,11 +83,11 @@ const MbtiImgGenCheckT = () => {
                         .then(resChecked => {
                             if(!resChecked.data.matched) {
                                 alert('본인의 이미지만 확인할 수 있습니다.')
-                                history.push('/mbtiImgGenT');
+                                history.push('/fifteenTheme');
                             }
                             if(dayjs().diff(dayjs(resChecked.data.imgCheckDate), 'hours') > imgCheckableHour) {
                                 alert('메일 확인 후 2시간 이내만 확인할 수 있습니다.')
-                                history.push('/mbtiImgGenT');
+                                history.push('/fifteenTheme');
                             }
                         })
                     })

@@ -406,10 +406,10 @@ class App extends Component {
             <Route path='/mbtiImgGen' component={() => <MbtiImgGen />} exact/>
             <Route path='/mbtiImgGen/upload' component={() => <MbtiImgGenUpload />} exact/>
             <Route path='/mbtiImgGen/complete' component={() => <MbtiImgGenComplete />} exact/>
-            <Route path='/mbtiImgGenT' component={() => <MbtiImgGenT />} exact/>
-            <Route path='/mbtiImgGenT/upload' component={() => <MbtiImgGenUploadT />} exact/>
-            <Route path='/mbtiImgGenT/complete' component={() => <MbtiImgGenCompleteT />} exact/>
-            <Route path='/mbtiImgGenT/check' component={() => <MbtiImgGenCheckT />} exact/>
+            <Route path='/fifteenTheme' component={() => <MbtiImgGenT />} exact/>
+            <Route path='/fifteenTheme/upload' component={() => <MbtiImgGenUploadT />} exact/>
+            <Route path='/fifteenTheme/complete' component={() => <MbtiImgGenCompleteT />} exact/>
+            <Route path='/fifteenTheme/check' component={() => <MbtiImgGenCheckT />} exact/>
 
             {/* "Main" page */}
             <Route path='/' exact>
