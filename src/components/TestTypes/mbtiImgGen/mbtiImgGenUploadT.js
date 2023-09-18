@@ -77,7 +77,6 @@ const MbtiImgGenUpload = () => {
         if(window.confirm(`${email}\n입력하신 이메일이 정확한가요?`)) {
             await setSendingEmail(orderId, email)
             .then(res => {
-                console.log(res);
                 if(res.status === 201) {
                     setIsEmailConfirmed(true);
                 }
@@ -133,7 +132,7 @@ const MbtiImgGenUpload = () => {
                 <Modal title="사진 업로드" open={isModalOpen} onOk={handleOkOrCancel} onCancel={handleOkOrCancel} footer={isUploading ? null : [
                     <Button onClick={handleOkOrCancel}>확인</Button>
                 ]}>
-                    <Progress type='circle' percent={uploadedCount / pictures?.length * 100} />
+                    <Progress type='circle' percent={parseInt(uploadedCount / pictures?.length * 100)} />
                 </Modal>
             </>
         );
@@ -144,6 +143,7 @@ const MbtiImgGenUpload = () => {
             <div className='mbtiImgGen-email-logo-div'>
                 <img className='mbtiImgGen-email-logo' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-email-logo.png' alt='mbtiImgGen-email-logo' />
             </div>
+            {console.log(window.location.origin)}
             <input
                 onChange={onEmailHandler}
                 type="email"
@@ -158,7 +158,7 @@ const MbtiImgGenUpload = () => {
                 이메일이 다르거나 전송이 불가한<br />이메일의 경우 사진전송이 불가할 수 있습니다.<br />이메일을 다시 한번 확인 부탁드립니다.
             </p>
             {isEmailConfirmed && (
-                <a href={`https://ktest.bouns.me/_pay/ktestai-live/?name=fifteenAI&price=6900&worktable_id=${orderId}&buyer_email=${email}&success_url=${window.location.origin}/fifteenTheme/complete/?orderId=${orderId}/`}>
+                <a href={`https://ktest.bouns.me/_pay/ktest-ai/?name=fifteenAI&price=6900&worktable_id=${orderId}&buyer_email=${email}&success_url=${window.location.origin}/fifteenTheme/complete/?orderId=${orderId}/`}>
                 <button type="button"
                     className='mbtiImgGen-email-purchase-button'>
                     결제하기
