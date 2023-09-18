@@ -93,7 +93,7 @@ class App extends Component {
       pct_test: _pct_test,
       ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
       lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'ES', 'IT', 'Rus' ,'Others'],
-      category_list:['saju', 'characteristic', 'love', 'etc'],
+      category_list:['saju', 'characteristic', 'love', 'ai', 'etc'],
       isLoggedIn: false
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);

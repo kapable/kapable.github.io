@@ -2,7 +2,6 @@ import React, { Fragment, useState } from 'react';
 import { Link, useLocation, withRouter } from 'react-router-dom';
 import OhterLangIconsMain from '../SubComponents/OhterLangIconsMain';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
-import JELLINGBANNERENG from '../../api/DefaultImg/go-to-jelling-eng.png';
 import '../TestTypes/Post2021/Post2021.css';
 import '../TestTypes/Post2021/PostPopup.css';
 import '../TestTypes/Post2022/Post2022.css';
@@ -35,7 +34,7 @@ function MainPage(props) {
             />
 
             {/* FIFTEEN AI IMG GEN */}
-            {/* {props.lang === 'Kor' || !props.lang ? (
+            {/* {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "ai") ? (
                 <Link to='/mbtiImgGenT/' className="main-link-block" key="fifteenAiTheme-banner">
                     <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenAiTheme-thumb.png`} alt="fifteenAiTheme" />
                 </Link>
@@ -199,7 +198,7 @@ function MainPage(props) {
             ) : null}
 
             {/* Go to POST 2022 */}
-            {props.lang === 'Kor' ? (
+            {props.lang === 'Kor' && (currentCategory === '' || currentCategory === "etc") ? (
                 <Link to='/post2022/' className="main-link-block" key="post2022-banner">
                     <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022-thumb.png`} alt="POST-2022" />
                 </Link>
@@ -252,17 +251,13 @@ function MainPage(props) {
                     className='to-jelling-banner'
                 > <img loading="lazy" src={JELLINGBANNERKOR} className='test-main-img' alt="go to Jelling games" /> </a>
             ) : null}
-            <a
-                target='_blank'
-                rel="noopener noreferrer"
-                href='https://jellinggame.com/'
-                className='to-jelling-banner'
-            > <img loading="lazy" src={JELLINGBANNERENG} className='test-main-img' alt="go to Jelling games" /> </a>
 
             {/* Go to K-TEST blog articles */}
-            <Link to='/blog/' className="main-link-block" key="article-banner">
-                <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png`} alt="KTEST-Blog" />
-            </Link>
+            {props.lang === 'Kor' && (currentCategory !== 'ai') ? (
+                <Link to='/blog/' className="main-link-block" key="article-banner">
+                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/ktest-blog-thumb.png`} alt="KTEST-Blog" />
+                </Link>
+            ) : null}
 
             {/** Floating Button for KakaoPlusFriend */}
             <KakaoPlusFriendBtn />
