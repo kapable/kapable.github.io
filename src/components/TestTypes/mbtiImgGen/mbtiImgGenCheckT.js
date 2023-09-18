@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import { checkOrderUserMatched, projectId, setOrderSended } from '../../../tools/aiImgTools';
 import { Cookies } from 'react-cookie';
-import { onClickLogin, verifyAccessToken } from '../../../tools/tools';
+import { _eventSenderGA, onClickLogin, verifyAccessToken } from '../../../tools/tools';
 import { Button, Col, Modal, Progress, Row } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import dayjs from 'dayjs';
@@ -131,6 +131,7 @@ const MbtiImgGenCheckT = () => {
             return alert("이미지 정보를 볼러올 수 없습니다.");
         };
         try {
+            _eventSenderGA("Downloading", `Click Fifteen Download Button`, "check page");
             const streams = await Promise.all(
                 imgs.map(async (url) => {
                     return (

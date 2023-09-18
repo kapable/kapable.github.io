@@ -4,7 +4,7 @@ import ImageUploader from "react-images-upload";
 import ProgressBar from "@ramonak/react-progress-bar";
 import './MbtiImgGen.css';
 import { favaActionUpload, onAiUpload, onCreateOrder, setSendingEmail } from '../../../tools/aiImgTools';
-import { nowFormatter, onClickLogin, verifyAccessToken } from '../../../tools/tools';
+import { _eventSenderGA, nowFormatter, onClickLogin, verifyAccessToken } from '../../../tools/tools';
 import { Button, Modal, Progress } from 'antd';
 import { Cookies } from 'react-cookie';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
@@ -78,6 +78,7 @@ const MbtiImgGenUpload = () => {
             await setSendingEmail(orderId, email)
             .then(res => {
                 if(res.status === 201) {
+                    _eventSenderGA("Confirming", `Click Fifteen Email Confirm Button`, "upload page");
                     setIsEmailConfirmed(true);
                 }
             })
@@ -97,12 +98,20 @@ const MbtiImgGenUpload = () => {
         setMode('email');
     }, [uploadedUrl, currentUser]);
 
+    const onImgUploadClick = () => {
+        _eventSenderGA("Uploading", `Click Fifteen Upload Button`, "upload page");
+    }
+
+    const onPayBtnClick = () => {
+        _eventSenderGA("Paging", `Click Fifteen Payment Button`, "upload page");
+    }
+
     if(mode === 'upload') {
         return (
             <>
                 <img className='mbtiImgGen-upload-upper-banner' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-upload-upper-banner.png' alt='mbtiImgGen-upload-upper-banner' />
                 <div className='mbtiImgGen-upload-btn-div' onClick={() => onClickUpload()}>
-                    <img className='mbtiImgGen-upload-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-upload-btn.png' alt='mbtiImgGen-upload-btn' />
+                    <img onClick={onImgUploadClick} className='mbtiImgGen-upload-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-upload-btn.png' alt='mbtiImgGen-upload-btn' />
                 </div>
                 <div style={{ maxWidth: "30rem", margin: "0 auto" }}>
                     <ProgressBar
@@ -159,7 +168,7 @@ const MbtiImgGenUpload = () => {
             </p>
             {isEmailConfirmed && (
                 <a href={`https://ktest.bouns.me/_pay/ktest-ai/?name=fifteenAI&price=6900&worktable_id=${orderId}&buyer_email=${email}&success_url=${window.location.origin}/fifteenTheme/complete/?orderId=${orderId}/`}>
-                <button type="button"
+                <button type="button" onClick={onPayBtnClick}
                     className='mbtiImgGen-email-purchase-button'>
                     결제하기
                 </button></a>

@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import './MbtiImgGen.css';
 import { Helmet } from 'react-helmet';
 import { Modal, Button } from 'antd';
+import { _eventSenderGA } from '../../../tools/tools';
 
 const MbtiImgGen = () => {
     const [mode, setMode] = useState('intro');
@@ -55,6 +56,14 @@ const MbtiImgGen = () => {
         )
     };
 
+    const onIntroBtnClick = () => {
+        _eventSenderGA("Paging", `Click Fifteen Intro Button`, "intro page");
+    }
+
+    const onGoToUploadClick = () => {
+        _eventSenderGA("Paging", `Click Fifteen Go-to-Upload Button`, "intro page");
+    }
+
     if(mode === 'intro') {
         return (
             <>
@@ -64,7 +73,7 @@ const MbtiImgGen = () => {
                         <div className='mbtiImgGen-intro-btn-div'
                         onClick={() => setMode('guide')}
                     >
-                        <img className='mbtiImgGen-intro-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-intro-btn.png' alt='mbtiImgGen-intro-btn' />
+                        <img onClick={onIntroBtnClick} className='mbtiImgGen-intro-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-intro-btn.png' alt='mbtiImgGen-intro-btn' />
                     </div>
                 </div>
                 <p style={{ color: "grey", fontWeight: "bolder" }}>*위 상품의 최대 이용 기간은 6개월입니다.</p>
@@ -83,7 +92,7 @@ const MbtiImgGen = () => {
                     <img className='mbtiImgGen-guide' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-guide.jpg' alt='mbtiImgGen-guide' />
                     <Link to='/fifteenTheme/upload'>
                         <div className='mbtiImgGen-guide-btn-div' onClick={() => setMode('intro')}>
-                            <img className='mbtiImgGen-guide-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-guide-btn.png' alt='mbtiImgGen-guide-btn' />
+                            <img onClick={onGoToUploadClick} className='mbtiImgGen-guide-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-guide-btn.png' alt='mbtiImgGen-guide-btn' />
                         </div>
                     </Link>
                 </div>
