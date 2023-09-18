@@ -113,7 +113,8 @@ const MbtiImgGenCheckT = () => {
 
     const onImagesDownload = useCallback(() => {
         try {
-            setIsModalOpen(true);
+            return alert('현재 전체 이미지 다운로드 기능을 준비중입니다!');
+            // setIsModalOpen(true);
             // images.map((image, idx) => {
             //     let fileName = idx+1+'_'+dayjs().format('YYYYMMDD_HHmmss')+'.jpg';
             //     setDownloadCount(idx+1);
@@ -136,15 +137,17 @@ const MbtiImgGenCheckT = () => {
 
     return (
         <>
-            <div><img style={{width: "100%", maxWidth: "20rem"}} src="https://images.ktestone.com/aiImgGen/resultCheck/upper-banner.png" alt="upper-side-img" /></div>
+            <div><img style={{width: "100%", maxWidth: "25rem", margin: "0 auto"}} src="https://images.ktestone.com/aiImgGen/resultCheck/upper-banner.png" alt="upper-side-img" /></div>
             <div style={{display: "flex"}}>
                 <div style={{marginLeft:"auto", display:"grid"}}>
-                    <img src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
-                    <img src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
+                    <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
+                    <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
                 </div>
                 {images.length > 0 ? (
                     // images fetched successfully
-                    <div style={{width: "100%", maxWidth:"20rem", margin: "2rem 1rem"}}>
+                    <div style={{width: "100%", maxWidth:"20rem", margin: "0rem 1rem"}}>
+                        <button className='image-check-page-download-button' onClick={onImagesDownload}>전체 이미지 다운로드</button>
+                        <p style={{fontSize:"0.7rem", marginBottom: "1rem"}}>전체 다운로드 시 <strong>압축파일 형태</strong>로 다운로드 됩니다.<br /><strong>개별 다운로드</strong>는 사진을 1초 정도 누르면 다운로드 가능합니다</p>
                         <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, { xs: 8, sm: 16, md: 24, lg: 32 }]}>
                             {images.map((image) => (
                                 <Col span={12} key={image}>
@@ -153,7 +156,6 @@ const MbtiImgGenCheckT = () => {
                             ))
                             }
                         </Row>
-                        <button className='image-check-page-download-button' onClick={onImagesDownload}>이미지 다운로드</button>
                         <Modal title="사진 다운로드" open={isModalOpen} onOk={() => setIsModalOpen(false)} onCancel={() => setIsModalOpen(false)} footer={<Button onClick={() => setIsModalOpen(false)}>확인</Button>}>
                             <Progress type='circle' percent={downloadCount / images?.length * 100} />
                             {downloadCount === images.length ? <p>다운로드 완료</p> : null}
@@ -167,8 +169,8 @@ const MbtiImgGenCheckT = () => {
                     </div>
                 )}
                 <div style={{marginRight:"auto", display:"grid"}}>
-                    <img src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
-                    <img src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
+                    <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
+                    <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
                 </div>
             </div>
         </>
