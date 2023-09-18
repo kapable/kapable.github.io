@@ -152,7 +152,6 @@ const MbtiImgGenUpload = () => {
             <div className='mbtiImgGen-email-logo-div'>
                 <img className='mbtiImgGen-email-logo' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-email-logo.png' alt='mbtiImgGen-email-logo' />
             </div>
-            {console.log(window.location.origin)}
             <input
                 onChange={onEmailHandler}
                 type="email"
@@ -167,7 +166,8 @@ const MbtiImgGenUpload = () => {
                 이메일이 다르거나 전송이 불가한<br />이메일의 경우 사진전송이 불가할 수 있습니다.<br />이메일을 다시 한번 확인 부탁드립니다.
             </p>
             {isEmailConfirmed && (
-                <a href={`https://ktest.bouns.me/_pay/ktestai-live/?name=fifteenAI&price=6900&worktable_id=${orderId}&buyer_email=${email}&success_url=${window.location.origin}/fifteenTheme/complete/?orderId=${orderId}/`}>
+                <a href={`https://ktest.bouns.me/_pay/ktestai-live/?name=fifteenAI&price=6900&worktable_id=${orderId}&buyer_email=${email}&success_url=${encodeURIComponent(window.location.origin + '/fifteenTheme/complete/?orderId='+orderId+'/')}`}>
+                    {/* ${window.location.origin}/fifteenTheme/complete/?orderId=${orderId}/ */}
                 <button type="button" onClick={onPayBtnClick}
                     className='mbtiImgGen-email-purchase-button'>
                     결제하기
