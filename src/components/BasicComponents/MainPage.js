@@ -175,14 +175,6 @@ function MainPage(props) {
                 })}
             </div>
 
-
-            {/* RRR Car Test */}
-            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
-                <a target='_blank' rel="noopener noreferrer" href="https://bit.ly/401a25W" className="main-link-block" key="rrr-intro-banner" onClick={() => _eventSenderGA("Paging", "Click RRR Car Thumbnail", "main page")}>
-                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/introImages/RRR-intro.jpg`} alt="rrr-intro" />
-                </a>
-            ) : null}
-
             {/* Fortune Cookie */}
             {props.lang === 'Kor' && (currentCategory === '' || currentCategory === "saju") ? (
                 <Link to='/fortuneCookie/' className="main-link-block" key="fortuneCookie-banner">
