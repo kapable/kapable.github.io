@@ -5,7 +5,7 @@ import ProgressBar from "@ramonak/react-progress-bar";
 import './MbtiImgGen.css';
 import { favaActionUpload, onAiUpload, onCreateOrder, setSendingEmail } from '../../../tools/aiImgTools';
 import { _eventSenderGA, nowFormatter, onClickLogin, verifyAccessToken } from '../../../tools/tools';
-import { Button, Modal, Progress } from 'antd';
+import { Button, Modal, Progress, Radio } from 'antd';
 import { Cookies } from 'react-cookie';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 
@@ -25,6 +25,20 @@ const MbtiImgGenUpload = ({ lang }) => {
     const [isUploading, setIsUploading] = useState(false);
     const minimunImgNumber = 10;
     const [stateLangs, setStateLangs] = useState([`20장의 사진을 넘어섰습니다.${<br />}새로고침을 눌러 최대 20장까지 업로드해주세요.`, '사진 용량이 너무 커요.', '지원하지 않는 파일입니다.', '사진 업로드', '확인', '이메일을 입력해 주세요.', '결제하기']);
+    const [gender, setGender] = useState('woman');
+    const genderOptions = [
+        {
+            label: 'woman',
+            value: 'woman',
+        },
+        {
+            label: 'man',
+            value: 'man',
+        },
+    ];
+    const onChangeGender = ({ target: { value } }) => {
+        setGender(value);
+    };
 
     useEffect(() => {
         if(lang === 'Eng') {
@@ -150,7 +164,7 @@ const MbtiImgGenUpload = ({ lang }) => {
     const handleOkOrCancel = useCallback(async () => {
         setIsModalOpen(false);
         await favaActionUpload(
-            uploadedUrl
+            uploadedUrl, gender
         ).then(async (res) => {
             setOrderId(res.id);
             await onCreateOrder(
@@ -158,7 +172,7 @@ const MbtiImgGenUpload = ({ lang }) => {
             )}
         );
         setMode('email');
-    }, [uploadedUrl, currentUser]);
+    }, [uploadedUrl, currentUser, gender]);
 
     const onImgUploadClick = () => {
         _eventSenderGA("Uploading", `Click Fifteen Upload Button`, "upload page");
@@ -172,6 +186,16 @@ const MbtiImgGenUpload = ({ lang }) => {
         return (
             <>
                 <img className='mbtiImgGen-upload-upper-banner' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang}-upload-upper-banner.png`} alt='mbtiImgGen-upload-upper-banner' />
+                <div>
+                    <Radio.Group
+                        options={genderOptions}
+                        onChange={onChangeGender}
+                        value={gender}
+                        optionType="button"
+                        buttonStyle="solid"
+                        className='mbtiImgGen-select-gender'
+                    />
+                </div>
                 <div className='mbtiImgGen-upload-btn-div' onClick={() => onClickUpload()}>
                     <img onClick={onImgUploadClick} className='mbtiImgGen-upload-btn' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang}-upload-btn.png`} alt='mbtiImgGen-upload-btn' />
                 </div>

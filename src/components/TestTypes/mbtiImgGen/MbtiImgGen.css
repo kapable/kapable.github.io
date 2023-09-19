@@ -27,6 +27,11 @@
     color: grey;
 }
 
+.ant-radio-button-wrapper-checked, .ant-radio-button-checked {
+    background-color: #E9277D;
+    border-color: #E9277D;
+}
+
 .mbtiImgGen-upload-upper-banner, .mbtiImgGen-upload-btn {
     width: 100%;
     max-width: 30rem;
