@@ -35,8 +35,20 @@ function MainPage(props) {
 
             {/* FIFTEEN AI IMG GEN */}
             {/* {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "ai") ? (
-                <Link to='/mbtiImgGenT/' className="main-link-block" key="fifteenAiTheme-banner">
+                <Link to='/fifteenTheme/' className="main-link-block" key="fifteenAiTheme-banner">
                     <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenAiTheme-thumb.png`} alt="fifteenAiTheme" />
+                </Link>
+            ) : null} */}
+            {/* FIFTEEN AI IMG GEN ENG */}
+            {/* {(props.lang === 'Eng') && (!currentCategory || currentCategory === "ai") ? (
+                <Link to='/fifteenThemeEng/' className="main-link-block" key="fifteenAiThemeEng-banner">
+                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenAiThemeEng-thumb.png`} alt="fifteenAiThemeEng" />
+                </Link>
+            ) : null} */}
+            {/* FIFTEEN AI IMG GEN JP */}
+            {/* {(props.lang === 'JP') && (!currentCategory || currentCategory === "ai") ? (
+                <Link to='/fifteenThemeJP/' className="main-link-block" key="fifteenAiThemeJP-banner">
+                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenAiThemeJP-thumb.png`} alt="fifteenAiThemeJP" />
                 </Link>
             ) : null} */}
 
@@ -114,7 +126,7 @@ function MainPage(props) {
                     <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter-thumb.png`} alt='coupleCharacter' />
                 </Link>
             ) : (
-                (props.lang === 'Eng' || props.lang === 'CN' || props.lang === 'JP' || props.lang === 'IT')
+                (props.lang === 'Eng' || props.lang === 'CN' || props.lang === 'JP' || props.lang === 'IT') && (!currentCategory || currentCategory === "love")
                 ? <Link to={`/coupleCharacter${props.lang}`} className="main-link-block" key="coupleCharacter-banner">
                     <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter${props.lang}-thumb.png`} alt='coupleCharacter' />
                 </Link>:null
@@ -128,7 +140,7 @@ function MainPage(props) {
                     <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter-thumb.png`} alt='loveCharacter' />
                 </Link>
             ) : (
-                (props.lang === 'Eng' || props.lang === 'CN'|| props.lang === 'JP'|| props.lang === 'ES'|| props.lang === 'Ger' || props.lang === 'IT')
+                (props.lang === 'Eng' || props.lang === 'CN'|| props.lang === 'JP'|| props.lang === 'ES'|| props.lang === 'Ger' || props.lang === 'IT') && (!currentCategory || currentCategory === "love")
                 ? <Link to={`/loveCharacter${props.lang}`} className="main-link-block" key="loveCharacter-banner">
                     <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang}-thumb.png`} alt='loveCharacter' />
                 </Link> : null

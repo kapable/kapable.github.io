@@ -5,7 +5,7 @@ import { setOrderPurchased } from '../../../tools/aiImgTools';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import { _eventSenderGA } from '../../../tools/tools';
 
-const MbtiImgGenComplete = () => {
+const MbtiImgGenComplete = ({ lang }) => {
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const orderId = queryParams.get('orderId').split('/')[0];
@@ -23,9 +23,9 @@ const MbtiImgGenComplete = () => {
 
     return (
         <div className='mbtiImgGen-complete-div'>
-            <img className='mbtiImgGen-complete' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-complete.jpg' alt='mbtiImgGen-complete' />
+            <img className='mbtiImgGen-complete' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang}-complete.jpg`} alt='mbtiImgGen-complete' />
             <Link to='/'>
-                <img onClick={onGoToHomeClick} className='mbtiImgGen-complete-btn' src='https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen-complete-btn.png' alt='mbtiImgGen-complete-btn' />
+                <img onClick={onGoToHomeClick} className='mbtiImgGen-complete-btn' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang}-complete-btn.png`} alt='mbtiImgGen-complete-btn' />
             </Link>
         </div>
     );

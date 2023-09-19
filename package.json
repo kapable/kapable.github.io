@@ -2508,7 +2508,11 @@
       "/kapable.github.io/mbtiImgGen",
       "/mbtiImgGen",
       "/kapable.github.io/fifteenTheme",
-      "/fifteenTheme"
+      "/fifteenTheme",
+      "/kapable.github.io/fifteenThemeEng",
+      "/fifteenThemeEng",
+      "/kapable.github.io/fifteenThemeJP",
+      "/fifteenThemeJP"
     ]
   },
   "eslintConfig": {

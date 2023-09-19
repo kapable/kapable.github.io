@@ -406,10 +406,18 @@ class App extends Component {
             <Route path='/mbtiImgGen' component={() => <MbtiImgGen />} exact/>
             <Route path='/mbtiImgGen/upload' component={() => <MbtiImgGenUpload />} exact/>
             <Route path='/mbtiImgGen/complete' component={() => <MbtiImgGenComplete />} exact/>
-            <Route path='/fifteenTheme' component={() => <MbtiImgGenT />} exact/>
-            <Route path='/fifteenTheme/upload' component={() => <MbtiImgGenUploadT />} exact/>
-            <Route path='/fifteenTheme/complete' component={() => <MbtiImgGenCompleteT />} exact/>
-            <Route path='/fifteenTheme/check' component={() => <MbtiImgGenCheckT />} exact/>
+            <Route path='/fifteenTheme' component={() => <MbtiImgGenT lang={''} />} exact/>
+            <Route path='/fifteenTheme/upload' component={() => <MbtiImgGenUploadT lang={''} />} exact/>
+            <Route path='/fifteenTheme/complete' component={() => <MbtiImgGenCompleteT lang={''} />} exact/>
+            <Route path='/fifteenTheme/check' component={() => <MbtiImgGenCheckT lang={''} />} exact/>
+            <Route path='/fifteenThemeEng' component={() => <MbtiImgGenT lang={'Eng'} />} exact/>
+            <Route path='/fifteenThemeEng/upload' component={() => <MbtiImgGenUploadT lang={'Eng'} />} exact/>
+            <Route path='/fifteenThemeEng/complete' component={() => <MbtiImgGenCompleteT lang={'Eng'} />} exact/>
+            <Route path='/fifteenThemeEng/check' component={() => <MbtiImgGenCheckT lang={'Eng'} />} exact/>
+            <Route path='/fifteenThemeJP' component={() => <MbtiImgGenT lang={'JP'} />} exact/>
+            <Route path='/fifteenThemeJP/upload' component={() => <MbtiImgGenUploadT lang={'JP'} />} exact/>
+            <Route path='/fifteenThemeJP/complete' component={() => <MbtiImgGenCompleteT lang={'JP'} />} exact/>
+            <Route path='/fifteenThemeJP/check' component={() => <MbtiImgGenCheckT lang={'JP'} />} exact/>
 
             {/* "Main" page */}
             <Route path='/' exact>
