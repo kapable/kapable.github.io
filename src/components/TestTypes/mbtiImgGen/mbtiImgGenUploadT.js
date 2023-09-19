@@ -24,7 +24,7 @@ const MbtiImgGenUpload = ({ lang }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isUploading, setIsUploading] = useState(false);
     const minimunImgNumber = 10;
-    const [stateLangs, setStateLangs] = useState([`20장의 사진을 넘어섰습니다.${<br />}새로고침을 눌러 최대 20장까지 업로드해주세요.`, '사진 용량이 너무 커요.', '지원하지 않는 파일입니다.', '사진 업로드', '확인', '이메일을 입력해 주세요.', '결제하기']);
+    const [stateLangs, setStateLangs] = useState([`20장의 사진을 넘어섰습니다.\n새로고침을 눌러 최대 20장까지 업로드해주세요.`, '사진 용량이 너무 커요.', '지원하지 않는 파일입니다.', '사진 업로드', '확인', '이메일을 입력해 주세요.', '결제하기']);
     const [gender, setGender] = useState('woman');
     const genderOptions = [
         {
@@ -42,9 +42,9 @@ const MbtiImgGenUpload = ({ lang }) => {
 
     useEffect(() => {
         if(lang === 'Eng') {
-            setStateLangs([`It's over 20 photos.${<br />}Please click Refresh to upload up to 20 pages.`, 'The photo capacity is too large.', 'Unsupported file.', 'Uploading Photos', 'Check', 'Please enter your email.' ,'Payment']);
+            setStateLangs([`It's over 20 photos.\nPlease click Refresh to upload up to 20 pages.`, 'The photo capacity is too large.', 'Unsupported file.', 'Uploading Photos', 'Check', 'Please enter your email.' ,'Payment']);
         } else if (lang === 'JP') {
-            setStateLangs([`20枚の写真を超えました。${<br />}リロードを押して最大20枚までアップロードしてください。`, '写真の容量が大きすぎます。', 'サポートされていないファイルです。', '写真アップロード', '確認.', 'メールを入力してください。', '決済する']);
+            setStateLangs([`20枚の写真を超えました。\nリロードを押して最大20枚までアップロードしてください。`, '写真の容量が大きすぎます。', 'サポートされていないファイルです。', '写真アップロード', '確認.', 'メールを入力してください。', '決済する']);
         }
     }, [lang]);
 

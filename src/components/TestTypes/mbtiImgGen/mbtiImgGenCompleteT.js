@@ -24,7 +24,7 @@ const MbtiImgGenComplete = ({ lang }) => {
     return (
         <div className='mbtiImgGen-complete-div'>
             <img className='mbtiImgGen-complete' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang}-complete.jpg`} alt='mbtiImgGen-complete' />
-            <Link to='/'>
+            <Link to={`/${lang}`}>
                 <img onClick={onGoToHomeClick} className='mbtiImgGen-complete-btn' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang}-complete-btn.png`} alt='mbtiImgGen-complete-btn' />
             </Link>
         </div>
