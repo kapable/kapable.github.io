@@ -223,7 +223,11 @@ const MbtiImgGenUpload = ({ lang }) => {
                 required />
             {emailComment(lang)}
             {isEmailConfirmed && (
-                <a href={`https://ktest.bouns.me/_pay/ktestai-live/?name=fifteenAI&price=6900&worktable_id=${orderId}&buyer_email=${email}&success_url=${encodeURIComponent(window.location.origin + '/fifteenTheme/complete/?orderId='+orderId+'/')}`}>
+                <a href={lang === '' ? (
+                    `https://ktest.bouns.me/_pay/ktestai-live/?name=fifteenAI&price=6900&worktable_id=${orderId}&buyer_email=${email}&success_url=${encodeURIComponent(window.location.origin + '/fifteenTheme/complete/?orderId='+orderId+'/')}`
+                ) : (
+                    `https://ktest.bouns.me/_pay/ktestai-live-stripe/?name=fifteenAI&price=599&worktable_id=${orderId}&buyer_email=${email}&auto=1&success_url=${encodeURIComponent(window.location.origin + '/fifteenTheme/complete/?orderId='+orderId+'/')}`
+                )}>
                 <button type="button" onClick={onPayBtnClick}
                     className='mbtiImgGen-email-purchase-button'>
                     {stateLangs[6]}
