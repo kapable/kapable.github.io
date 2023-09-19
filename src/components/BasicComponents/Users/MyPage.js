@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { withRouter, useHistory } from 'react-router';
 import { Cookies } from 'react-cookie';
-import { verifyAccessToken } from '../../../tools/tools';
+import { onClickLogin, verifyAccessToken } from '../../../tools/tools';
 import { getOrdertList } from '../../../tools/aiImgTools';
 import OrderList from './Orders/OrderList';
 import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
@@ -22,12 +22,14 @@ function MyPage({ onClickLogout }) {
                 verifyAccessToken(cookies.get('accessToken'))
                     .then(res => setUserInfo(res))
             } catch (error) {
-                alert('로그인이 필요합니다.')
-                history.replace("/");
+                if(window.confirm("로그인이 필요합니다.")) {
+                    onClickLogin(window.location);
+                }
             }
         } else {
-            alert('로그인이 필요합니다.')
-            history.replace("/");
+            if(window.confirm("로그인이 필요합니다.")) {
+                onClickLogin(window.location);
+            }
         };
     }, [history])
 
