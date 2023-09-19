@@ -168,7 +168,7 @@ const MbtiImgGenUpload = ({ lang }) => {
         ).then(async (res) => {
             setOrderId(res.id);
             await onCreateOrder(
-                currentUser.userId, res.id, "fifteenAiTheme"
+                currentUser.userId, res.id, "fifteenAiTheme", gender
             )}
         );
         setMode('email');

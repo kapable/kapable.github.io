@@ -100,10 +100,10 @@ export const onCreateUser = async (hashId, email) => {
     };
 };
 
-export const onCreateOrder = async (hashId, worktableId, productName) => {
+export const onCreateOrder = async (hashId, worktableId, productName, gender) => {
     try {
         axios.post(server_endpoint + "/order", {
-            hashId, worktableId, productName
+            hashId, worktableId, productName, gender
         })
     } catch (error) {
         return alert("에러가 발생했습니다.");
