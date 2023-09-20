@@ -68,7 +68,7 @@ const OrderList = ({ order, lang }) => {
                 </div>
                 <div className='mypage-order-list-top-right'>
                     <p>{dayjs(order.createdAt).format('YYYY-MM-DD')}</p>
-                    <p><span style={{fontWeight: "bolder"}}>{langComments[3]}:</span> {order.Product.productKoreanName}</p>
+                    <p><span style={{fontWeight: "bolder"}}>{langComments[3]}:</span> {lang === 'Kor' ? order.Product.productKoreanName : order.Product.productName}</p>
                     <p><span style={{fontWeight: "bolder"}}>{langComments[4]}:</span> {lang === 'Kor' ? order.Product.price + ' 원' : '$ ' + order.Product.dollarPrice} </p>
                     <p><span style={{fontWeight: "bolder"}}>{langComments[5]}</span><br />{order?.sendingEmail}</p>
                 </div>
