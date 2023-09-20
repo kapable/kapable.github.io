@@ -8,7 +8,6 @@ import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
-import { _eventSenderGA } from '../../tools/tools';
 
 function MainPage(props) {
     const { state } = useLocation();
@@ -100,13 +99,6 @@ function MainPage(props) {
                 <Link to='/todayLuck/' className="main-link-block" key="todayLuck-banner">
                     <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/todayLuck-thumb.png`} alt="todayLuck" />
                 </Link>
-            ) : null}
-
-            {/* CASPER SOCIAL CLUB Test */}
-            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
-                <a target='_blank' rel="noopener noreferrer" href="https://bit.ly/3OuqjhT" className="main-link-block" key="casper-social-club-thumb-banner" onClick={() => _eventSenderGA("Paging", "Click RRR Car Thumbnail", "main page")}>
-                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/casper-social-club-thumb.jpg`} alt="rrr-intro" />
-                </a>
             ) : null}
 
             {/* Go to HaGender */}

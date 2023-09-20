@@ -13,14 +13,14 @@ const cookies = new Cookies();
 
 const MbtiImgGenUpload = ({ lang }) => {
     const { query } = useLocation(); // from MyPage yet-purchased order
-    const [mode, setMode] = useState(query ? query.premode : 'upload');
+    const [mode, setMode] = useState('email'); //query ? query.premode : 'upload'
     const [orderId, setOrderId] = useState(query ? query.preWorktableId : '');
     const [currentUser, setCurrentUser] = useState({});
     const [pictures, setPictures] =useState([]);
     const [uploadedCount, setUploadedCount] = useState(0);
     const [uploadedUrl, setUploadedUrl] = useState([]);
     const [email, setEmail] = useState("");
-    const [isEmailConfirmed, setIsEmailConfirmed] = useState(false);
+    const [isEmailConfirmed, setIsEmailConfirmed] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isUploading, setIsUploading] = useState(false);
     const minimunImgNumber = 10;
@@ -254,7 +254,7 @@ const MbtiImgGenUpload = ({ lang }) => {
                 )}>
                 <button type="button" onClick={onPayBtnClick}
                     className='mbtiImgGen-email-purchase-button'>
-                    {stateLangs[6]}
+                    {lang === '' ? `6,900원 ` + stateLangs[6] : `$5.99 ` + stateLangs[6]}
                 </button></a>
             )}
         </>
