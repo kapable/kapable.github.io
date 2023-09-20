@@ -24,7 +24,7 @@ const MbtiImgGenUpload = ({ lang }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isUploading, setIsUploading] = useState(false);
     const minimunImgNumber = 10;
-    const [stateLangs, setStateLangs] = useState([`20장의 사진을 넘어섰습니다.\n새로고침을 눌러 최대 20장까지 업로드해주세요.`, '사진 용량이 너무 커요.', '지원하지 않는 파일입니다.', '사진 업로드', '확인', '이메일을 입력해 주세요.', '결제하기']);
+    const [stateLangs, setStateLangs] = useState([`20장의 사진을 넘어섰습니다.\n새로고침을 눌러 최대 20장까지 업로드해주세요.`, '사진 용량이 너무 커요.', '지원하지 않는 파일입니다.', '사진 업로드', '확인', '이메일을 입력해 주세요.', '결제하기',]);
     const [gender, setGender] = useState('woman');
     const genderOptions = [
         {
@@ -161,6 +161,22 @@ const MbtiImgGenUpload = ({ lang }) => {
         }
     }
 
+    const paymentComment = (lang) => {
+        let upperComment = '';
+        let bottomComment = '';
+        if(lang === '') {
+            upperComment = '사진 전송 후 종료시,';
+            bottomComment = '재전송 없이 마이페이지에서 이어서 결제가 가능합니다.';
+        } else if (lang === 'Eng') {
+            upperComment = 'If you end after sending the photo,';
+            bottomComment = 'you can pay on My Page without retransmission.';
+        } else if (lang === 'JP') {
+            upperComment = '写真送信後終了時,';
+            bottomComment = '再送信なしでマイページで引き続き決済が可能です。';
+        }
+        return <p className='mbtiImgGen-payment-comment-p'>{upperComment}<br />{bottomComment}</p>;
+    }
+
     const handleOkOrCancel = useCallback(async () => {
         setIsModalOpen(false);
         await favaActionUpload(
@@ -199,6 +215,7 @@ const MbtiImgGenUpload = ({ lang }) => {
                 <div className='mbtiImgGen-upload-btn-div' onClick={() => onClickUpload()}>
                     <img onClick={onImgUploadClick} className='mbtiImgGen-upload-btn' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang}-upload-btn.png`} alt='mbtiImgGen-upload-btn' />
                 </div>
+                {paymentComment(lang)}
                 <div style={{ maxWidth: "30rem", margin: "0 auto" }}>
                     <ProgressBar
                             completed={pictures?.length / 20 * 100}

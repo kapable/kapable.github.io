@@ -12,6 +12,10 @@
     cursor: pointer;
 }
 
+.mbtiImgGen-upload-btn-div {
+    margin: 0.5rem auto;
+}
+
 .mbtiImgGen-intro-btn, .mbtiImgGen-guide-btn {
     position: absolute;
     left: 50%;
@@ -85,10 +89,15 @@
     cursor: pointer;
 }
 
-.mbtiImgGen-email-comment-p {
+.mbtiImgGen-email-comment-p, .mbtiImgGen-payment-comment-p {
     color: #E9277D;
     font-size: small;
     font-weight: bold;
+}
+
+.mbtiImgGen-payment-comment-p {
+    width: 20rem;
+    margin: 0.5rem auto;
 }
 
 .uploadPicturesWrapper {
