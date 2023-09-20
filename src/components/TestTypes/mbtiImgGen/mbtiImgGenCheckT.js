@@ -36,7 +36,7 @@ const MbtiImgGenCheckT = () => {
         )
     };
 
-    useState(() => {
+    useEffect(() => {
         if(lang === 'Eng') {
             setLangComments(['Wrong path', 'You can check only your images', 'You can check your images within 2 hours after the mail checked.', 'LogIn needed', `Can't find image's paths`, 'Error ocurred while downloading', 'Download all images', 'Download complete', 'Download images', 'Okay']);
         } else if (lang === 'JP') {
@@ -197,11 +197,17 @@ const MbtiImgGenCheckT = () => {
         <>
             <div><img style={{width: "100%", maxWidth: "25rem", margin: "0 auto"}} src="https://images.ktestone.com/aiImgGen/resultCheck/upper-banner.png" alt="upper-side-img" /></div>
             <div style={{display: "flex"}}>
-                <div style={{marginLeft:"auto", display:"grid"}}>
-                    <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
-                    <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
+                <div className='image-check-page-left-side-div'>
+                    <div className='image-check-page-left-side-div'>
+                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
+                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
+                    </div>
+                    <div className='image-check-page-left-side-div'>
+                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
+                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
+                    </div>
                 </div>
-                {images.length > 0 ? (
+                {images.length >= 0 ? (
                     // images fetched successfully
                     <div style={{width: "100%", maxWidth:"20rem", margin: "0rem 1rem"}}>
                         {languageIconRenderer()}
@@ -227,9 +233,15 @@ const MbtiImgGenCheckT = () => {
                         <p>loading...</p>
                     </div>
                 )}
-                <div style={{marginRight:"auto", display:"grid"}}>
-                    <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
-                    <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
+                <div className='image-check-page-right-side-div'>
+                    <div className='image-check-page-right-side-div'>
+                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
+                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
+                    </div>
+                    <div className='image-check-page-right-side-div'>
+                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
+                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
+                    </div>
                 </div>
             </div>
         </>

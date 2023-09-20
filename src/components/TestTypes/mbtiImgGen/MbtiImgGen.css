@@ -104,3 +104,12 @@
     overflow-y: scroll;
     height: 40rem;
 }
+
+.image-check-page-left-side-div {
+    margin-left: auto;
+    display: grid;
+}
+.image-check-page-right-side-div {
+    margin-right: auto;
+    display: grid;
+}
