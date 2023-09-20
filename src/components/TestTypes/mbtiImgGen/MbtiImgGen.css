@@ -32,6 +32,10 @@
     border-color: #E9277D;
 }
 
+.ant-radio-button-wrapper {
+    width: 5rem;
+}
+
 .mbtiImgGen-upload-upper-banner, .mbtiImgGen-upload-btn {
     width: 100%;
     max-width: 30rem;

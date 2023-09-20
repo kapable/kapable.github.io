@@ -13,14 +13,14 @@ const cookies = new Cookies();
 
 const MbtiImgGenUpload = ({ lang }) => {
     const { query } = useLocation(); // from MyPage yet-purchased order
-    const [mode, setMode] = useState('email'); //query ? query.premode : 'upload'
+    const [mode, setMode] = useState(query ? query.premode : 'upload'); //
     const [orderId, setOrderId] = useState(query ? query.preWorktableId : '');
     const [currentUser, setCurrentUser] = useState({});
     const [pictures, setPictures] =useState([]);
     const [uploadedCount, setUploadedCount] = useState(0);
     const [uploadedUrl, setUploadedUrl] = useState([]);
     const [email, setEmail] = useState("");
-    const [isEmailConfirmed, setIsEmailConfirmed] = useState(true);
+    const [isEmailConfirmed, setIsEmailConfirmed] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isUploading, setIsUploading] = useState(false);
     const minimunImgNumber = 10;
