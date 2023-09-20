@@ -42,7 +42,7 @@ const OrderList = ({ order, lang }) => {
     const goToButton = useCallback(() => {
         if(status === 0) { // purchased needed
             return (
-                <Link to={{pathname: "/fifteenTheme/upload", query: { premode: "email", preWorktableId: order.worktableId }}} >
+                <Link to={{pathname: `/fifteenTheme${lang}/upload`, query: { premode: "email", preWorktableId: order.worktableId }}} >
                     <button className='mypage-order-list-go-to-pay-button'> <RightCircleOutlined style={{fontSize:"1rem", margin: "0.5rem auto"}} /> {langComments[0]}</button>
                 </Link>
             )
@@ -54,7 +54,7 @@ const OrderList = ({ order, lang }) => {
                 </a>
             )
         }
-    }, [status, order.worktableId, order.imgCheckDate, langComments]);
+    }, [status, order.worktableId, order.imgCheckDate, langComments, lang]);
 
     return (
         <div className='mypage-order-list-div'>
