@@ -1,3 +1,4 @@
+import imageCompression from 'browser-image-compression';
 import axios from 'axios';
 axios.defaults.withCredentials = true;
 
@@ -54,11 +55,15 @@ export const onAiUpload = async (file, fileName) => {
             }),
         }
     ).then((res) => res.json());
+
+    const compressedFile = await imageCompression(file, {
+        maxWidthOrHeight: 1200,
+    });
     
     try {
         await fetch(presignedPutUrl, {
             method: "PUT",
-            body: file,
+            body: compressedFile,
         });
     } catch (error) {
         return alert("업로드 과정 중 문제가 발생했습니다.");

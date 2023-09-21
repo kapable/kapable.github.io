@@ -12,6 +12,7 @@
     "audio-react-recorder": "^1.0.4",
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
+    "browser-image-compression": "^2.0.2",
     "concurrently": "^6.1.0",
     "core-js": "^3.8.2",
     "crypto-js": "^4.1.1",
