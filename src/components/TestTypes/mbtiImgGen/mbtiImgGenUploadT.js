@@ -8,6 +8,7 @@ import { _eventSenderGA, nowFormatter, onClickLogin, verifyAccessToken } from '.
 import { Button, Modal, Progress, Radio } from 'antd';
 import { Cookies } from 'react-cookie';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
+import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
 
 const cookies = new Cookies();
 
@@ -246,6 +247,7 @@ const MbtiImgGenUpload = ({ lang }) => {
                 ]}>
                     <Progress type='circle' percent={parseInt(uploadedCount / pictures?.length * 100)} />
                 </Modal>
+                <GoToHomeBtn page="fifteenThemeUpload"/>
             </>
         );
     } else if (mode === 'email') {
@@ -274,6 +276,7 @@ const MbtiImgGenUpload = ({ lang }) => {
                     {lang === '' ? `6,900원 ` + stateLangs[6] : `$5.99 ` + stateLangs[6]}
                 </button></a>
             )}
+            <GoToHomeBtn page="fifteenThemeUpload"/>
         </>
         )
     }

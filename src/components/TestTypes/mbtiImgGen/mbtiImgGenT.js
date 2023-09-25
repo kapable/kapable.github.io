@@ -4,6 +4,7 @@ import './MbtiImgGen.css';
 import { Helmet } from 'react-helmet';
 import { Modal, Button } from 'antd';
 import { _eventSenderGA } from '../../../tools/tools';
+import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
 
 const MbtiImgGen = ({ lang }) => {
     const [mode, setMode] = useState('intro');
@@ -137,6 +138,7 @@ const MbtiImgGen = ({ lang }) => {
                 ]}>
                     {refundPolicy}
                 </Modal>
+                <GoToHomeBtn page="fifteenThemeIntro"/>
             </>
         );
     } else if (mode === 'guide') {
@@ -149,6 +151,7 @@ const MbtiImgGen = ({ lang }) => {
                             <img onClick={onGoToUploadClick} className='mbtiImgGen-guide-btn' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang}-guide-btn.png`} alt='mbtiImgGen-guide-btn' />
                         </div>
                     </Link>
+                    <GoToHomeBtn page="fifteenThemeIntro"/>
                 </div>
             </>
         );

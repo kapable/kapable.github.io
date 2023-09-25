@@ -444,7 +444,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
-            const rederTestList = ["egoProfileEng", "iPhoneMemoEng", "colorPaletteEng", "bubbleCharEng", "alienCharEng",];
+            const rederTestList = ["fifteenThemeEng", "egoProfileEng", "iPhoneMemoEng", "colorPaletteEng", "bubbleCharEng", "alienCharEng",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -516,7 +516,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (egoProfileEngList.includes(this.state.current_test)) {
-            const rederTestList = ["iPhoneMemoEng", "colorPaletteEng", "alienCharEng", "loveLotteryEng", "loveTVEng",];
+            const rederTestList = ["fifteenThemeEng", "iPhoneMemoEng", "colorPaletteEng", "alienCharEng", "loveLotteryEng", "loveTVEng",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -540,7 +540,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (colorComboList.includes(this.state.current_test)) {
-            const rederTestList = ["meOther", "neonsignChar", "stoneChar", "lovePotion", "puffyClouds", ];
+            const rederTestList = ["fifteenTheme", "meOther", "neonsignChar", "stoneChar", "lovePotion", "puffyClouds", ];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -588,7 +588,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (JPTestList.includes(this.state.current_test)) {
-            const rederTestList = ["iPhoneMemoJP", "egoProfileJP", "deepOceanOutlawJP", "bloodTransfusionJP", "colorPaletteJP",];
+            const rederTestList = ["fifteenThemeJP", "iPhoneMemoJP", "egoProfileJP", "deepOceanOutlawJP", "bloodTransfusionJP", "colorPaletteJP",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -780,7 +780,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (iPhoneMemoJPList.includes(this.state.current_test)) {
-            const rederTestList = ["egoProfileJP", "deepOceanOutlawJP", "bloodTransfusionJP", "colorPaletteJP", "unlockMyHeartJP", "bubbleCharJP",];
+            const rederTestList = ["fifteenThemeJP", "egoProfileJP", "deepOceanOutlawJP", "bloodTransfusionJP", "colorPaletteJP", "unlockMyHeartJP", "bubbleCharJP",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -806,7 +806,7 @@ class Result extends Component {
         } else if (hmallList.includes(this.state.current_test)) {
             return null;
         } else {
-            const rederTestList = ["colorCombo", "meOther", "neonsignChar", "stoneChar", "lovePotion",];
+            const rederTestList = ["fifteenTheme", "colorCombo", "meOther", "neonsignChar", "stoneChar", "lovePotion",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
