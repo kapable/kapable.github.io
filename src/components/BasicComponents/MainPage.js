@@ -33,23 +33,23 @@ function MainPage(props) {
             />
 
             {/* FIFTEEN AI IMG GEN */}
-            {/* {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "ai") ? (
+            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "ai") ? (
                 <Link to='/fifteenTheme/' className="main-link-block" key="fifteenAiTheme-banner">
                     <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenAiTheme-thumb.png`} alt="fifteenAiTheme" />
                 </Link>
-            ) : null} */}
+            ) : null}
             {/* FIFTEEN AI IMG GEN ENG */}
-            {/* {(props.lang === 'Eng') && (!currentCategory || currentCategory === "ai") ? (
+            {(props.lang === 'Eng') && (!currentCategory || currentCategory === "ai") ? (
                 <Link to='/fifteenThemeEng/' className="main-link-block" key="fifteenAiThemeEng-banner">
                     <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenAiThemeEng-thumb.png`} alt="fifteenAiThemeEng" />
                 </Link>
-            ) : null} */}
+            ) : null}
             {/* FIFTEEN AI IMG GEN JP */}
-            {/* {(props.lang === 'JP') && (!currentCategory || currentCategory === "ai") ? (
+            {(props.lang === 'JP') && (!currentCategory || currentCategory === "ai") ? (
                 <Link to='/fifteenThemeJP/' className="main-link-block" key="fifteenAiThemeJP-banner">
                     <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenAiThemeJP-thumb.png`} alt="fifteenAiThemeJP" />
                 </Link>
-            ) : null} */}
+            ) : null}
 
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
