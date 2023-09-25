@@ -24,7 +24,7 @@ const MbtiImgGenCheckT = () => {
     const bucketName = "bouns-test";
     const actionName = "ktest-fava-worktable";
     const fileManagerName = "bouns-test";
-    const imgCheckableHour = 2;
+    const imgCheckableHour = 2000;
 
     const languageIconRenderer = () => {
         return(
