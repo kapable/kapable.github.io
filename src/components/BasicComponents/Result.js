@@ -564,7 +564,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (CNTestList.includes(this.state.current_test)) {
-            const rederTestList = ["labelStickerCN", "emotionGraphCN", "cloudLoveCN",];
+            const rederTestList = ["fifteenThemeEng", "labelStickerCN", "emotionGraphCN", "cloudLoveCN",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -732,7 +732,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (labelStickerCNList.includes(this.state.current_test)) {
-            const rederTestList = ["emotionGraphCN", "cloudLoveCN", "loveMagazineCN",];
+            const rederTestList = ["fifteenThemeEng", "emotionGraphCN", "cloudLoveCN", "loveMagazineCN",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
