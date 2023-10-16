@@ -51,6 +51,8 @@ class Result extends Component {
             ppl_list:['auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn', 'personalIncense', 'personalTaro', 'jaetech', 'wealthluck'],
             coupangCookies: Cookies.get('coupang') || null,
             isOpened: false,
+            aliCookies: Cookies.get('ali') || null,
+            isAliOpened: false,
             originAdProb: 0.6 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
@@ -69,6 +71,7 @@ class Result extends Component {
         this.onOtherCoupangButtonClick = this.onOtherCoupangButtonClick.bind(this);
         this.labelTestUpperBannerRenderer = this.labelTestUpperBannerRenderer.bind(this);
         this.onGardenflowerButtonClick = this.onGardenflowerButtonClick.bind(this);
+        this.onAliButtonClick = this.onAliButtonClick.bind(this);
     };
 
     componentDidMount() {
@@ -103,6 +106,16 @@ class Result extends Component {
             _eventSenderGA("Paging", `Click go-to-Coupang Button(${test})`, "result page");
             _eventSenderGA("Paging", `Click go-to-Coupang Button`, "result page");
         }
+    };
+
+    onAliButtonClick(test){
+        Cookies.set('ali', true, { path: '', expires: this.state.cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        this.setState({
+            aliCookies: Cookies.get('ali'),
+            isAliOpened: true,
+        });
+        _eventSenderGA("Paging", `Click go-to-AliExpress Button(${test})`, "result page");
+        _eventSenderGA("Paging", `Click go-to-AliExpress Button`, "result page");
     };
 
     onGardenflowerButtonClick(){
@@ -906,6 +919,23 @@ class Result extends Component {
         );
     };
 
+    foreignAffiliateRenderer(){
+        const aliAffiliateLink = "https://s.click.aliexpress.com/e/_DlNChMR"
+        return (
+            <div className='article-adCover-div-1'>
+                <div className='article-adCover-div-2'>
+                    <div className='article-adCover-div-3'>
+                        <a href={aliAffiliateLink} target="_blank" rel='noreferrer noopener'>
+                            <button className='result-coupang-button' type='primary' shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={() => this.onAliButtonClick(this.state.current_test)}>
+                                <span>Visit AliExpress</span><br />& View the result
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     resultRender(){
         // searching the result content by current url path
         const _current_test_contents = TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0];
@@ -953,7 +983,18 @@ class Result extends Component {
                             <meta property="og:image:height" content="400"/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
+                        {this.state.isAliOpened || this.state.aliCookies
+                        ? (<>
+                            <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
+                        </>)
+                        : (<>
+                            <div className='article-adCover-div' oncontextmenu="return false" 
+                                ondragstart="return false" 
+                                onselectstart="return false">
+                                <img loading="lazy" src={img_src} className='result-img crop-result-img' alt={final_type} />
+                            </div>
+                            {this.foreignAffiliateRenderer()}
+                        </>)}
                     </Fragment>
                 )
             // meta tag for native test contents
