@@ -53,7 +53,7 @@ class Result extends Component {
             isOpened: false,
             aliCookies: Cookies.get('ali') || null,
             isAliOpened: false,
-            originAdProb: 0.6 < Math.random(),
+            originAdProb: 0.65 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
             coupangCount: 5,
@@ -430,7 +430,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let meOtherEngList = ["meOtherEng"];
-        let loveSimulationList = ["loveSimulation"];
+        let secretLetterList = ["secretLetter"];
         let hmallList = ['gardenflower', 'hmall', 'labelStickerSKT'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
@@ -552,8 +552,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (loveSimulationList.includes(this.state.current_test)) {
-            const rederTestList = ["fifteenTheme", "highteenSticker", "searchResult", "zookeeper", "distributionTable", "correspondence",];
+        } else if (secretLetterList.includes(this.state.current_test)) {
+            const rederTestList = ["fifteenTheme", "loveSimulation", "highteenSticker", "searchResult", "zookeeper",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -819,7 +819,7 @@ class Result extends Component {
         } else if (hmallList.includes(this.state.current_test)) {
             return null;
         } else {
-            const rederTestList = ["fifteenTheme", "loveSimulation", "highteenSticker", "searchResult", "zookeeper", "distributionTable",];
+            const rederTestList = ["fifteenTheme", "secretLetter", "loveSimulation", "highteenSticker", "searchResult",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -874,7 +874,7 @@ class Result extends Component {
     };
 
     affiliateRenderer(){
-        const cookieRocketCoupangLink = this.state.originAdProb ? "https://link.coupang.com/a/X2X8X" : "https://link.coupang.com/a/7pXoL";
+        const cookieRocketCoupangLink = this.state.originAdProb ? "https://link.coupang.com/a/X2X8X" : "https://link.coupang.com/a/bcQpxX";
         let otherAdProb = 0.1 > Math.random();
         const othersLink = [
             { test: "personalScentBTI", coupangLink: "https://link.coupang.com/a/FFVJ2" },
