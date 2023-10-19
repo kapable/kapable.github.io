@@ -12,7 +12,7 @@ import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
 
 const cookies = new Cookies();
 
-const MbtiImgGenUpload = ({ lang }) => {
+const MbtiImgGenUpload = ({ conceptType, lang }) => {
     const { query } = useLocation(); // from MyPage yet-purchased order
     const [mode, setMode] = useState(query ? query.premode : 'upload'); //
     const [orderId, setOrderId] = useState(query ? query.preWorktableId : '');
@@ -42,9 +42,9 @@ const MbtiImgGenUpload = ({ lang }) => {
     };
 
     useEffect(() => {
-        if(lang === 'Eng') {
+        if(lang.route === 'Eng') {
             setStateLangs([`It's over 20 photos.\nPlease click Refresh to upload up to 20 pages.`, 'The photo capacity is too large.', 'Unsupported file.', 'Uploading Photos', 'Check', 'Please enter your email.' ,'Payment']);
-        } else if (lang === 'JP') {
+        } else if (lang.route === 'JP') {
             setStateLangs([`20枚の写真を超えました。\nリロードを押して最大20枚までアップロードしてください。`, '写真の容量が大きすぎます。', 'サポートされていないファイルです。', '写真アップロード', '確認.', 'メールを入力してください。', '決済する']);
         }
     }, [lang]);
@@ -55,11 +55,11 @@ const MbtiImgGenUpload = ({ lang }) => {
             verifyAccessToken(cookies.get('accessToken'))
             .then(res => setCurrentUser(res));
         } else {
-            if(lang === '') {
+            if(lang.route === '') {
                 alert('로그인이 필요합니다!');
-            } else if(lang === 'Eng') {
+            } else if(lang.route === 'Eng') {
                 alert('Log In needed');
-            } else if(lang === 'JP') {
+            } else if(lang.route === 'JP') {
                 alert('ログインが必要です！');
             }
             onClickLogin(window.location);
@@ -68,11 +68,11 @@ const MbtiImgGenUpload = ({ lang }) => {
 
     const onClickUpload = useCallback(() => {
         if(pictures?.length < minimunImgNumber) {
-            if(lang === '') {
+            if(lang.route === '') {
                 return alert(`${minimunImgNumber}장 이상 업로드 해주세요!`);
-            } else if (lang === 'Eng') {
+            } else if (lang.route === 'Eng') {
                 return alert(`More than ${minimunImgNumber} images needed!`);
-            } else if (lang === 'JP') {
+            } else if (lang.route === 'JP') {
                 return alert(`${minimunImgNumber}枚以上アップロードしてください!`);
             }
         };
@@ -107,13 +107,13 @@ const MbtiImgGenUpload = ({ lang }) => {
     const onEmailSubmit = useCallback(async () => {
         let checkComment = '';
         let confirmComment = ''
-        if (lang === '') {
+        if (lang.route === '') {
             checkComment = '이메일을 입력해주세요!';
             confirmComment = '입력하신 이메일이 정확한가요?';
-        } else if (lang === 'Eng') {
+        } else if (lang.route === 'Eng') {
             checkComment = 'Insert your Email address!';
             confirmComment = 'Is your addrees correct?';
-        } else if (lang === 'JP') {
+        } else if (lang.route === 'JP') {
             checkComment = 'メールを入力してください';
             confirmComment = '入力されたメールは正確ですか？';
         }
@@ -124,15 +124,15 @@ const MbtiImgGenUpload = ({ lang }) => {
             await setSendingEmail(orderId, email)
             .then(res => {
                 if(res.status === 201) {
-                    _eventSenderGA("Confirming", `Click Fifteen Email Confirm Button`, "upload page");
+                    _eventSenderGA("Confirming", `Click ${conceptType} Email Confirm Button`, "upload page");
                     setIsEmailConfirmed(true);
                 }
             })
         }
-    }, [orderId, email, lang]);
+    }, [lang.route, email, orderId, conceptType]);
 
     const emailComment = (lang) => {
-        if(lang === '') {
+        if(lang.route === '') {
             return (
                 <>
                     <button type="button" onClick={onEmailSubmit} className='mbtiImgGen-email-submit-button'>이메일 확인</button>
@@ -141,7 +141,7 @@ const MbtiImgGenUpload = ({ lang }) => {
                     </p>
                 </>
             )
-        } else if (lang === 'Eng') {
+        } else if (lang.route === 'Eng') {
             return (
                 <>
                     <button type="button" onClick={onEmailSubmit} className='mbtiImgGen-email-submit-button'>Check</button>
@@ -150,7 +150,7 @@ const MbtiImgGenUpload = ({ lang }) => {
                     </p>
                 </>
             )
-        } else if (lang === 'JP') {
+        } else if (lang.route === 'JP') {
             return (
                 <>
                     <button type="button" onClick={onEmailSubmit} className='mbtiImgGen-email-submit-button'>確認</button>
@@ -165,13 +165,13 @@ const MbtiImgGenUpload = ({ lang }) => {
     const paymentComment = (lang) => {
         let upperComment = '';
         let bottomComment = '';
-        if(lang === '') {
+        if(lang.route === '') {
             upperComment = '사진 전송 후 종료시,';
             bottomComment = '재전송 없이 마이페이지에서 이어서 결제가 가능합니다.';
-        } else if (lang === 'Eng') {
+        } else if (lang.route === 'Eng') {
             upperComment = 'If you end after sending the photo,';
             bottomComment = 'you can pay on My Page without retransmission.';
-        } else if (lang === 'JP') {
+        } else if (lang.route === 'JP') {
             upperComment = '写真送信後終了時,';
             bottomComment = '再送信なしでマイページで引き続き決済が可能です。';
         }
@@ -185,24 +185,24 @@ const MbtiImgGenUpload = ({ lang }) => {
         ).then(async (res) => {
             setOrderId(res.id);
             await onCreateOrder(
-                currentUser.userId, res.id, "fifteenAiTheme", gender
+                currentUser.userId, res.id, conceptType, gender
             )}
         );
         setMode('email');
-    }, [uploadedUrl, currentUser, gender]);
+    }, [uploadedUrl, gender, currentUser.userId, conceptType]);
 
     const onImgUploadClick = () => {
-        _eventSenderGA("Uploading", `Click Fifteen Upload Button`, "upload page");
+        _eventSenderGA("Uploading", `Click ${conceptType} Upload Button`, "upload page");
     }
 
     const onPayBtnClick = () => {
-        _eventSenderGA("Paging", `Click Fifteen Payment Button`, "upload page");
+        _eventSenderGA("Paging", `Click ${conceptType} Payment Button`, "upload page");
     }
 
     if(mode === 'upload') {
         return (
             <>
-                <img className='mbtiImgGen-upload-upper-banner' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang}-upload-upper-banner.png`} alt='mbtiImgGen-upload-upper-banner' />
+                <img className='mbtiImgGen-upload-upper-banner' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang.route}-upload-upper-banner.png`} alt='mbtiImgGen-upload-upper-banner' />
                 <div>
                     <Radio.Group
                         options={genderOptions}
@@ -214,7 +214,7 @@ const MbtiImgGenUpload = ({ lang }) => {
                     />
                 </div>
                 <div className='mbtiImgGen-upload-btn-div' onClick={() => onClickUpload()}>
-                    <img onClick={onImgUploadClick} className='mbtiImgGen-upload-btn' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang}-upload-btn.png`} alt='mbtiImgGen-upload-btn' />
+                    <img onClick={onImgUploadClick} className='mbtiImgGen-upload-btn' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang.route}-upload-btn.png`} alt='mbtiImgGen-upload-btn' />
                 </div>
                 {paymentComment(lang)}
                 <div style={{ maxWidth: "30rem", margin: "0 auto" }}>
@@ -247,7 +247,7 @@ const MbtiImgGenUpload = ({ lang }) => {
                 ]}>
                     <Progress type='circle' percent={parseInt(uploadedCount / pictures?.length * 100)} />
                 </Modal>
-                <GoToHomeBtn page="fifteenThemeUpload"/>
+                <GoToHomeBtn page={`${conceptType} Upload`}/>
             </>
         );
     } else if (mode === 'email') {
@@ -266,17 +266,17 @@ const MbtiImgGenUpload = ({ lang }) => {
                 required />
             {emailComment(lang)}
             {isEmailConfirmed && (
-                <a href={lang === '' ? (
-                    `https://ktest.bouns.me/_pay/ktestai-live/?name=fifteenAI&price=6900&worktable_id=${orderId}&buyer_email=${email}&success_url=${encodeURIComponent(window.location.origin + '/fifteenTheme/complete/?orderId='+orderId+'/')}`
+                <a href={lang.route === '' ? (
+                    `https://ktest.bouns.me/_pay/ktestai-live/?name=${conceptType}&price=6900&worktable_id=${orderId}&buyer_email=${email}&success_url=${encodeURIComponent(window.location.origin + `/${conceptType}/complete/?orderId=`+orderId+'/')}`
                 ) : (
-                    `https://ktest.bouns.me/_pay/ktestai-live-stripe/?name=fifteenAI&price=599&worktable_id=${orderId}&buyer_email=${email}&auto=1&success_url=${encodeURIComponent(window.location.origin + `/fifteenTheme${lang}/complete/?orderId=`+orderId+'/')}`
+                    `https://ktest.bouns.me/_pay/ktestai-live-stripe/?name=${conceptType}&price=599&worktable_id=${orderId}&buyer_email=${email}&auto=1&success_url=${encodeURIComponent(window.location.origin + `/${conceptType}${lang.route}/complete/?orderId=`+orderId+'/')}`
                 )}>
                 <button type="button" onClick={onPayBtnClick}
                     className='mbtiImgGen-email-purchase-button'>
-                    {lang === '' ? `6,900원 ` + stateLangs[6] : `$5.99 ` + stateLangs[6]}
+                    {lang.route === '' ? `6,900원 ` + stateLangs[6] : `$5.99 ` + stateLangs[6]}
                 </button></a>
             )}
-            <GoToHomeBtn page="fifteenThemeUpload"/>
+            <GoToHomeBtn page={`${conceptType} Upload`}/>
         </>
         )
     }

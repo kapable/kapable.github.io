@@ -10,7 +10,7 @@ import JSZip from 'jszip';
 
 const cookies = new Cookies();
 
-const MbtiImgGenCheckT = () => {
+const MbtiImgGenCheckT = ({ conceptType }) => {
     let history = useHistory();
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
@@ -111,7 +111,7 @@ const MbtiImgGenCheckT = () => {
     useEffect(() => {
         if(!worktableId) {
             alert(langComments[0]);
-            history.push('/fifteenTheme');
+            history.push(`/${conceptType}`);
         };
         if(cookies.get('accessToken')) {
             try {
@@ -121,11 +121,11 @@ const MbtiImgGenCheckT = () => {
                         .then(resChecked => {
                             if(!resChecked.data.matched) {
                                 alert(langComments[1])
-                                history.push('/fifteenTheme');
+                                history.push(`/${conceptType}`);
                             }
                             if(dayjs().diff(dayjs(resChecked.data.imgCheckDate), 'hours') > imgCheckableHour) {
                                 alert(langComments[2])
-                                history.push('/fifteenTheme');
+                                history.push(`/${conceptType}`);
                             }
                         })
                     })
@@ -140,7 +140,7 @@ const MbtiImgGenCheckT = () => {
             }
         };
         load();
-    }, [load, history, worktableId, langComments]);
+    }, [load, history, worktableId, langComments, conceptType]);
 
     useEffect(() => {
         const setSended = async () => {
@@ -149,9 +149,9 @@ const MbtiImgGenCheckT = () => {
         setSended();
     }, [worktableId]);
 
-    const downloadZip = (file) => {
+    const downloadZip = useCallback((file) => {
         const anchor = document.createElement("a");
-        anchor.download = 'fifteenAIImg.zip';
+        anchor.download = `${conceptType}AIImg.zip`;
         const url = URL.createObjectURL(file);
         anchor.href = url;
 
@@ -163,14 +163,14 @@ const MbtiImgGenCheckT = () => {
         anchor.remove();
 
         URL.revokeObjectURL(url);
-    }
+    }, [conceptType]);
 
     const onImagesDownload = useCallback(async (imgs) => {
         if(!imgs || imgs.length === 0) {
             return alert(langComments[4]);
         };
         try {
-            _eventSenderGA("Downloading", `Click Fifteen Download Button`, "check page");
+            _eventSenderGA("Downloading", `Click ${conceptType} Download Button`, "check page");
             const streams = await Promise.all(
                 imgs.map(async (url) => {
                     return (
@@ -191,7 +191,7 @@ const MbtiImgGenCheckT = () => {
         } catch (error) {
             alert(langComments[5]);
         };
-    }, [langComments]);
+    }, [conceptType, downloadZip, langComments]);
 
     return (
         <>
