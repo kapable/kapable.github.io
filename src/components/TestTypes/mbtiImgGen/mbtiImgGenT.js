@@ -74,7 +74,7 @@ const MbtiImgGen = ({ conceptType, lang }) => {
                         <div className='mbtiImgGen-intro-btn-div'
                         onClick={() => setMode('guide')}
                     >
-                        <img onClick={onIntroBtnClick} className='mbtiImgGen-intro-btn' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang.route}-intro-btn.png`} alt='mbtiImgGen-intro-btn' />
+                        <img onClick={onIntroBtnClick} className='mbtiImgGen-intro-btn' src={`https://images.ktestone.com/meta/mbtiImgGen/${conceptType}/${conceptType}${lang.route}-intro-btn.png`} alt='mbtiImgGen-intro-btn' />
                     </div>
                 </div>
                 <p style={{ color: "grey", fontWeight: "bolder" }}>*위 상품의 최대 이용 기간은 6개월입니다.</p>
