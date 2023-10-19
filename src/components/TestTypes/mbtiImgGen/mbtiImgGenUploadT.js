@@ -181,7 +181,7 @@ const MbtiImgGenUpload = ({ conceptType, lang }) => {
     const handleOkOrCancel = useCallback(async () => {
         setIsModalOpen(false);
         await favaActionUpload(
-            uploadedUrl, gender
+            uploadedUrl, gender, conceptType
         ).then(async (res) => {
             setOrderId(res.id);
             await onCreateOrder(

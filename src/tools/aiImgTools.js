@@ -10,7 +10,7 @@ if(process.env.NODE_ENV === 'production') {
 };
 export const projectId = "7a4499ca-4644-45ee-9b3f-f63ea3d19e64";
 
-export const favaActionUpload = async (uploadedUrl, gender) => {
+export const favaActionUpload = async (uploadedUrl, gender, conceptType) => {
     try {
         const favaActionUploadRes = await fetch(
             "https://bouns.io/api/action-rpc",
@@ -22,7 +22,8 @@ export const favaActionUpload = async (uploadedUrl, gender) => {
                 body: JSON.stringify({
                     args: {
                         gender: gender,
-                        userImageDownUrls: uploadedUrl
+                        userImageDownUrls: uploadedUrl,
+                        conceptType: conceptType
                     },
                     where: {
                         projectId: projectId,
