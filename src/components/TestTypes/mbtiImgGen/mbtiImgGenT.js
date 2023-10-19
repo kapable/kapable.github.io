@@ -6,7 +6,7 @@ import { Modal, Button } from 'antd';
 import { _eventSenderGA } from '../../../tools/tools';
 import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
 
-const MbtiImgGen = ({ lang }) => {
+const MbtiImgGen = ({ conceptType, lang }) => {
     const [mode, setMode] = useState('intro');
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -29,106 +29,52 @@ const MbtiImgGen = ({ lang }) => {
         </p>
 
 
-    const metaTagRenderer = (lang) => {
-        if(lang === '') {
-            return (
-                <Helmet>
-                    {/* <!-- Primary Meta Tags --> */}
-                    <title>케이테스트 AI 피프틴 테마</title>
-                    <meta name="title" content="케이테스트 Ai 피프틴 테마"/>
-                    <meta name="description" content="다양한 15가지 타입의 사진이 출력 됩니다" data-react-helmet="true"/>
-                    <link rel="main-url" href="https://ktestone.com/fifteenTheme/"/>
-    
-                    {/* <!-- Open Graph / Facebook --> */}
-                    <meta property="og:type" content="website"/>
-                    <meta property="og:url" content="https://ktestone.com/fifteenTheme/"/>
-                    <meta property="og:title" content="케이테스트 Ai 피프틴 테마"/>
-                    <meta property="og:description" content="다양한 15가지 타입의 사진이 출력 됩니다"/>
-                    <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/fifteenAiTheme-thumb.png`}/>
-                    <meta property="og:image:alt" content="케이테스트 Ai 피프틴 테마" />
-    
-                    {/* <!-- Twitter --> */}
-                    <meta property="twitter:card" content="summary_large_image"/>
-                    <meta property="twitter:url" content="https://ktestone.com/fifteenTheme/"/>
-                    <meta property="twitter:title" content="케이테스트 Ai 피프틴 테마"/>
-                    <meta property="twitter:description" content="다양한 15가지 타입의 사진이 출력 됩니다"/>
-                    <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/fifteenAiTheme-thumb.png`}/>
-                    <meta property="twitter:image:alt" content="케이테스트 Ai 피프틴 테마" />
-                </Helmet>
-            )
-        } else if (lang === 'Eng') {
-            return (
-                <Helmet>
-                    {/* <!-- Primary Meta Tags --> */}
-                    <title>Ktest AI Fifteen Theme</title>
-                    <meta name="title" content="Ktest Ai Fifteen Theme"/>
-                    <meta name="description" content="Output 15 different types of photos" data-react-helmet="true"/>
-                    <link rel="main-url" href="https://ktestone.com/fifteenThemeEng/"/>
-    
-                    {/* <!-- Open Graph / Facebook --> */}
-                    <meta property="og:type" content="website"/>
-                    <meta property="og:url" content="https://ktestone.com/fifteenThemeEng/"/>
-                    <meta property="og:title" content="Ktest Ai Fifteen Theme"/>
-                    <meta property="og:description" content="Output 15 different types of photos"/>
-                    <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/fifteenAiThemeEng-thumb.png`}/>
-                    <meta property="og:image:alt" content="Ktest Ai Fifteen Theme" />
-    
-                    {/* <!-- Twitter --> */}
-                    <meta property="twitter:card" content="summary_large_image"/>
-                    <meta property="twitter:url" content="https://ktestone.com/fifteenThemeEng/"/>
-                    <meta property="twitter:title" content="Ktest Ai Fifteen Theme"/>
-                    <meta property="twitter:description" content="Output 15 different types of photos"/>
-                    <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/fifteenAiThemeEng-thumb.png`}/>
-                    <meta property="twitter:image:alt" content="Ktest Ai Fifteen Theme" />
-                </Helmet>
-            )
-        } else if (lang === 'JP') {
-            return (
-                <Helmet>
-                    {/* <!-- Primary Meta Tags --> */}
-                    <title>KTEST Ai Fifteenテーマ</title>
-                    <meta name="title" content="KTEST Ai Fifteenテーマ"/>
-                    <meta name="description" content="様々な15種類の写真が出力されます。" data-react-helmet="true"/>
-                    <link rel="main-url" href="https://ktestone.com/fifteenThemeJP/"/>
-    
-                    {/* <!-- Open Graph / Facebook --> */}
-                    <meta property="og:type" content="website"/>
-                    <meta property="og:url" content="https://ktestone.com/fifteenThemeJP/"/>
-                    <meta property="og:title" content="KTEST Ai Fifteenテーマ"/>
-                    <meta property="og:description" content="様々な15種類の写真が出力されます。"/>
-                    <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/fifteenAiThemeJP-thumb.png`}/>
-                    <meta property="og:image:alt" content="KTEST Ai Fifteenテーマ" />
-    
-                    {/* <!-- Twitter --> */}
-                    <meta property="twitter:card" content="summary_large_image"/>
-                    <meta property="twitter:url" content="https://ktestone.com/fifteenThemeJP/"/>
-                    <meta property="twitter:title" content="KTEST Ai Fifteenテーマ"/>
-                    <meta property="twitter:description" content="様々な15種類の写真が出力されます。"/>
-                    <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/fifteenAiThemeJP-thumb.png`}/>
-                    <meta property="twitter:image:alt" content="KTEST Ai Fifteenテーマ" />
-                </Helmet>
-            )
-        }
+    const metaTagRenderer = (conceptType, lang) => {
+        return (
+            <Helmet>
+                {/* <!-- Primary Meta Tags --> */}
+                <title>{lang.route}</title>
+                <meta name="title" content={lang.title}/>
+                <meta name="description" content={lang.desc} data-react-helmet="true"/>
+                <link rel="main-url" href={`https://ktestone.com/${conceptType}/`}/>
+
+                {/* <!-- Open Graph / Facebook --> */}
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content={`https://ktestone.com/${conceptType}/`}/>
+                <meta property="og:title" content={lang.title}/>
+                <meta property="og:description" content={lang.desc}/>
+                <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/${conceptType}${lang.route}-thumb.png`}/>
+                <meta property="og:image:alt" content={lang.title} />
+
+                {/* <!-- Twitter --> */}
+                <meta property="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:url" content={`https://ktestone.com/${conceptType}/`}/>
+                <meta property="twitter:title" content={lang.title}/>
+                <meta property="twitter:description" content={lang.desc}/>
+                <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/${conceptType}${lang.route}-thumb.png`}/>
+                <meta property="twitter:image:alt" content={lang.title} />
+            </Helmet>
+        )
     };
 
     const onIntroBtnClick = () => {
-        _eventSenderGA("Paging", `Click Fifteen Intro Button`, "intro page");
+        _eventSenderGA("Paging", `Click ${conceptType} Intro Button`, "intro page");
     }
 
     const onGoToUploadClick = () => {
-        _eventSenderGA("Paging", `Click Fifteen Go-to-Upload Button`, "intro page");
+        _eventSenderGA("Paging", `Click ${conceptType} Go-to-Upload Button`, "intro page");
     }
 
     if(mode === 'intro') {
         return (
             <>
-                {metaTagRenderer(lang)}
+                {metaTagRenderer(conceptType, lang)}
                 <div className='mbtiImgGen-intro-div'>
-                    <img className='mbtiImgGen-intro' src={`https://images.ktestone.com/introImages/fifteenAiTheme${lang}-intro.jpg`} alt='mbtiImgGen-intro' />
+                    <img className='mbtiImgGen-intro' src={`https://images.ktestone.com/introImages/${conceptType}${lang.route}-intro.jpg`} alt='mbtiImgGen-intro' />
                         <div className='mbtiImgGen-intro-btn-div'
                         onClick={() => setMode('guide')}
                     >
-                        <img onClick={onIntroBtnClick} className='mbtiImgGen-intro-btn' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang}-intro-btn.png`} alt='mbtiImgGen-intro-btn' />
+                        <img onClick={onIntroBtnClick} className='mbtiImgGen-intro-btn' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang.route}-intro-btn.png`} alt='mbtiImgGen-intro-btn' />
                     </div>
                 </div>
                 <p style={{ color: "grey", fontWeight: "bolder" }}>*위 상품의 최대 이용 기간은 6개월입니다.</p>
@@ -138,20 +84,20 @@ const MbtiImgGen = ({ lang }) => {
                 ]}>
                     {refundPolicy}
                 </Modal>
-                <GoToHomeBtn page="fifteenThemeIntro"/>
+                <GoToHomeBtn page={`${conceptType} Intro`}/>
             </>
         );
     } else if (mode === 'guide') {
         return (
             <>
                 <div className='mbtiImgGen-guide-div'>
-                    <img className='mbtiImgGen-guide' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang}-guide.jpg`} alt='mbtiImgGen-guide' />
-                    <Link to={`/fifteenTheme${lang}/upload`}>
+                    <img className='mbtiImgGen-guide' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang.route}-guide.jpg`} alt='mbtiImgGen-guide' />
+                    <Link to={`/${conceptType}${lang.route}/upload`}>
                         <div className='mbtiImgGen-guide-btn-div' onClick={() => setMode('intro')}>
-                            <img onClick={onGoToUploadClick} className='mbtiImgGen-guide-btn' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang}-guide-btn.png`} alt='mbtiImgGen-guide-btn' />
+                            <img onClick={onGoToUploadClick} className='mbtiImgGen-guide-btn' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang.route}-guide-btn.png`} alt='mbtiImgGen-guide-btn' />
                         </div>
                     </Link>
-                    <GoToHomeBtn page="fifteenThemeIntro"/>
+                    <GoToHomeBtn page={`${conceptType} Intro`}/>
                 </div>
             </>
         );

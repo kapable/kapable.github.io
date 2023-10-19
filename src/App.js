@@ -36,15 +36,12 @@ import LifeInterpretingResult from './components/TestTypes/Saju/LifeInterpreting
 import Privacy from './components/BasicComponents/Privacy';
 import { withCookies } from 'react-cookie';
 import { onClickLogin, verifyAccessToken, getRefreshedToken } from './tools/tools';
-import MbtiImgGen from './components/TestTypes/mbtiImgGen/mbtiImgGen';
-import MbtiImgGenUpload from './components/TestTypes/mbtiImgGen/mbtiImgGenUpload';
-import MbtiImgGenComplete from './components/TestTypes/mbtiImgGen/mbtiImgGenComplete';
 import MbtiImgGenT from './components/TestTypes/mbtiImgGen/mbtiImgGenT';
 import MbtiImgGenUploadT from './components/TestTypes/mbtiImgGen/mbtiImgGenUploadT';
 import MbtiImgGenCompleteT from './components/TestTypes/mbtiImgGen/mbtiImgGenCompleteT';
+import MbtiImgGenCheckT from './components/TestTypes/mbtiImgGen/mbtiImgGenCheckT';
 import { onCreateUser } from './tools/aiImgTools';
 import MyPage from './components/BasicComponents/Users/MyPage';
-import MbtiImgGenCheckT from './components/TestTypes/mbtiImgGen/mbtiImgGenCheckT';
 
 class App extends Component {
   constructor(props){
@@ -94,7 +91,15 @@ class App extends Component {
       ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
       lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'ES', 'IT', 'Rus' ,'Others'],
       category_list:['saju', 'characteristic', 'love', 'ai', 'etc'],
-      isLoggedIn: false
+      isLoggedIn: false,
+      aiImgGenLists: [{ type: 'fifteenTheme', langs: [
+          {route:'', title:'케이테스트 AI 피프틴 테마', desc:'다양한 15가지 타입의 사진이 출력 됩니다'},
+          {route:'Eng', title:'Ktest AI Fifteen Theme', desc:'Output 15 different types of photos'},
+          {route:'JP', title:'KTEST AI Fifteen テーマ', desc:'様々な15種類の写真が出力されます。'}] },
+        { type: 'colorFiveTheme', langs: [
+          {route:'', title:'케이테스트 AI 컬러파이브 테마', desc:'5가지 컬러의 사진이 출력 됩니다'},
+          {route:'Eng', title:'Ktest AI ColorFive Theme', desc:'Output 5 different types of photos'},
+          {route:'JP', title:'KTEST AI ColorFive テーマ', desc:'様々な5種類の写真が出力されます。'}] }],
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);
     this.lang_category_renderer = this.lang_category_renderer.bind(this);
@@ -403,21 +408,26 @@ class App extends Component {
             <Route path ='/post2022Eng/' component={() => <POSTSTART language={`Eng`}/>}/>
 
             {/* AI Image Gen page */}
-            <Route path='/mbtiImgGen' component={() => <MbtiImgGen />} exact/>
-            <Route path='/mbtiImgGen/upload' component={() => <MbtiImgGenUpload />} exact/>
-            <Route path='/mbtiImgGen/complete' component={() => <MbtiImgGenComplete />} exact/>
-            <Route path='/fifteenTheme' component={() => <MbtiImgGenT lang={''} />} exact/>
-            <Route path='/fifteenTheme/upload' component={() => <MbtiImgGenUploadT lang={''} />} exact/>
-            <Route path='/fifteenTheme/complete' component={() => <MbtiImgGenCompleteT lang={''} />} exact/>
-            <Route path='/fifteenTheme/check' component={() => <MbtiImgGenCheckT lang={''} />} exact/>
-            <Route path='/fifteenThemeEng' component={() => <MbtiImgGenT lang={'Eng'} />} exact/>
-            <Route path='/fifteenThemeEng/upload' component={() => <MbtiImgGenUploadT lang={'Eng'} />} exact/>
-            <Route path='/fifteenThemeEng/complete' component={() => <MbtiImgGenCompleteT lang={'Eng'} />} exact/>
-            <Route path='/fifteenThemeEng/check' component={() => <MbtiImgGenCheckT lang={'Eng'} />} exact/>
-            <Route path='/fifteenThemeJP' component={() => <MbtiImgGenT lang={'JP'} />} exact/>
-            <Route path='/fifteenThemeJP/upload' component={() => <MbtiImgGenUploadT lang={'JP'} />} exact/>
-            <Route path='/fifteenThemeJP/complete' component={() => <MbtiImgGenCompleteT lang={'JP'} />} exact/>
-            <Route path='/fifteenThemeJP/check' component={() => <MbtiImgGenCheckT lang={'JP'} />} exact/>
+            {this.state.aiImgGenLists.map((concept) => (
+              concept.langs.map((lang) => (
+                <Route path={'/' + concept.type + lang.route} component={() => <MbtiImgGenT conceptType={concept.type} lang={lang} />} exact/>
+              ))
+            ))}
+            {this.state.aiImgGenLists.map((concept) => (
+              concept.langs.map((lang) => (
+                <Route path={'/' + concept.type + lang.route + '/upload'} component={() => <MbtiImgGenUploadT conceptType={concept.type} lang={lang} />} exact/>
+              ))
+            ))}
+            {this.state.aiImgGenLists.map((concept) => (
+              concept.langs.map((lang) => (
+                <Route path={'/' + concept.type + lang.route + '/complete'} component={() => <MbtiImgGenCompleteT conceptType={concept.type} lang={lang} />} exact/>
+              ))
+            ))}
+            {this.state.aiImgGenLists.map((concept) => (
+              concept.langs.map((lang) => (
+                <Route path={'/' + concept.type + lang.route + '/check'} component={() => <MbtiImgGenCheckT conceptType={concept.type} lang={lang} />} exact/>
+              ))
+            ))}
 
             {/* "Main" page */}
             <Route path='/' exact>
