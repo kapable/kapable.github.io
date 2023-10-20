@@ -2802,7 +2802,13 @@
       "/kapable.github.io/fifteenThemeEng",
       "/fifteenThemeEng",
       "/kapable.github.io/fifteenThemeJP",
-      "/fifteenThemeJP"
+      "/fifteenThemeJP",
+      "/kapable.github.io/colorFiveTheme",
+      "/colorFiveTheme",
+      "/kapable.github.io/colorFiveThemeEng",
+      "/colorFiveThemeEng",
+      "/kapable.github.io/colorFiveThemeJP",
+      "/colorFiveThemeJP"
     ]
   },
   "eslintConfig": {

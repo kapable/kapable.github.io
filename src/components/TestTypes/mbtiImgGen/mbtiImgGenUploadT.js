@@ -267,9 +267,9 @@ const MbtiImgGenUpload = ({ conceptType, lang }) => {
             {emailComment(lang)}
             {isEmailConfirmed && (
                 <a href={lang.route === '' ? (
-                    `https://ktest.bouns.me/_pay/ktestai-live/?name=${conceptType}&price=6900&worktable_id=${orderId}&buyer_email=${email}&success_url=${encodeURIComponent(window.location.origin + `/${conceptType}/complete/?orderId=`+orderId+'/')}`
+                    `https://ktest.bouns.me/_pay/ktestai-live/?name=${conceptType}&price=6900&worktable_id=${orderId}&conceptType=${conceptType}&buyer_email=${email}&success_url=${encodeURIComponent(window.location.origin + `/${conceptType}/complete/?orderId=`+orderId+'/')}`
                 ) : (
-                    `https://ktest.bouns.me/_pay/ktestai-live-stripe/?name=${conceptType}&price=599&worktable_id=${orderId}&buyer_email=${email}&auto=1&success_url=${encodeURIComponent(window.location.origin + `/${conceptType}${lang.route}/complete/?orderId=`+orderId+'/')}`
+                    `https://ktest.bouns.me/_pay/ktestai-live-stripe/?name=${conceptType}&price=599&worktable_id=${orderId}&conceptType=${conceptType}&buyer_email=${email}&auto=1&success_url=${encodeURIComponent(window.location.origin + `/${conceptType}${lang.route}/complete/?orderId=`+orderId+'/')}`
                 )}>
                 <button type="button" onClick={onPayBtnClick}
                     className='mbtiImgGen-email-purchase-button'>
