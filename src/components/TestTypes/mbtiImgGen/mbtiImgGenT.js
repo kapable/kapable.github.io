@@ -33,7 +33,7 @@ const MbtiImgGen = ({ conceptType, lang }) => {
         return (
             <Helmet>
                 {/* <!-- Primary Meta Tags --> */}
-                <title>{lang.route}</title>
+                <title>{lang.title}</title>
                 <meta name="title" content={lang.title}/>
                 <meta name="description" content={lang.desc} data-react-helmet="true"/>
                 <link rel="main-url" href={`https://ktestone.com/${conceptType}/`}/>
