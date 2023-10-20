@@ -457,7 +457,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
-            const rederTestList = ["fifteenThemeEng", "mindFlowEng", "meOtherEng", "egoProfileEng", "iPhoneMemoEng",];
+            const rederTestList = ["colorFiveThemeEng", "fifteenThemeEng", "mindFlowEng", "meOtherEng", "egoProfileEng", "iPhoneMemoEng",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -529,7 +529,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (mindFlowEngList.includes(this.state.current_test)) {
-            const rederTestList = ["fifteenThemeEng", "meOtherEng", "egoProfileEng", "iPhoneMemoEng", "colorPaletteEng", "alienCharEng",];
+            const rederTestList = ["colorFiveThemeEng", "fifteenThemeEng", "meOtherEng", "egoProfileEng", "iPhoneMemoEng", "colorPaletteEng", "alienCharEng",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -553,7 +553,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (dailyCharList.includes(this.state.current_test)) {
-            const rederTestList = ["fifteenTheme", "consumeHabit", "secretLetter", "loveSimulation", "highteenSticker", "searchResult",];
+            const rederTestList = ["colorFiveTheme", "fifteenTheme", "consumeHabit", "secretLetter", "loveSimulation", "highteenSticker", "searchResult",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -577,7 +577,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (CNTestList.includes(this.state.current_test)) {
-            const rederTestList = ["fifteenThemeEng", "labelStickerCN", "emotionGraphCN", "cloudLoveCN",];
+            const rederTestList = ["colorFiveThemeEng", "fifteenThemeEng", "labelStickerCN", "emotionGraphCN", "cloudLoveCN",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -601,7 +601,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (JPTestList.includes(this.state.current_test)) {
-            const rederTestList = ["fifteenThemeJP", "labelStickerJP", "meOtherJP", "iPhoneMemoJP", "egoProfileJP"];
+            const rederTestList = ["colorFiveThemeJP", "fifteenThemeJP", "labelStickerJP", "meOtherJP", "iPhoneMemoJP", "egoProfileJP"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -745,7 +745,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (labelStickerCNList.includes(this.state.current_test)) {
-            const rederTestList = ["fifteenThemeEng", "emotionGraphCN", "cloudLoveCN", "loveMagazineCN",];
+            const rederTestList = ["colorFiveThemeEng", "fifteenThemeEng", "emotionGraphCN", "cloudLoveCN", "loveMagazineCN",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -793,7 +793,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (labelStickerJPList.includes(this.state.current_test)) {
-            const rederTestList = ["fifteenThemeJP", "meOtherJP", "iPhoneMemoJP", "egoProfileJP", "deepOceanOutlawJP",];
+            const rederTestList = ["colorFiveThemeJP", "fifteenThemeJP", "meOtherJP", "iPhoneMemoJP", "egoProfileJP", "deepOceanOutlawJP",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -819,7 +819,7 @@ class Result extends Component {
         } else if (hmallList.includes(this.state.current_test)) {
             return null;
         } else {
-            const rederTestList = ["fifteenTheme", "dailyChar", "consumeHabit", "secretLetter", "loveSimulation",];
+            const rederTestList = ["colorFiveTheme", "fifteenTheme", "dailyChar", "consumeHabit", "secretLetter", "loveSimulation",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
