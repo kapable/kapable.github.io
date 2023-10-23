@@ -28,6 +28,15 @@ const MbtiImgGen = ({ conceptType, lang }) => {
             고객센터 운영 시간: 평일 오전 11:00 ~ 오후 5:00 (주말 및 공휴일 제외)
         </p>
 
+    const languageIconRenderer = () => {
+        return(
+            <div style={{margin: "1.5rem 0"}}>
+                <a href={`https://ktestone.com/kapable.github.io/${conceptType}/`}><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/kor-icon.png' style={{ width: "2rem", display: "inline", margin: "0 0.5rem", cursor: "pointer" }} alt="[ 한국어 버전으로 하러가기 ]" /></a>
+                <a href={`https://ktestone.com/kapable.github.io/${conceptType}Eng/`}><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/usa-icon.png' style={{ width: "2rem", display: "inline", margin: "0 0.5rem", cursor: "pointer" }} alt="[ Go to the English version ]" /></a>
+                <a href={`https://ktestone.com/kapable.github.io/${conceptType}JP/`}><img loading="lazy" src='https://images.ktestone.com/default/languageIcon/japan-icon.png' style={{ width: "2rem", display: "inline", margin: "0 0.5rem", cursor: "pointer" }} alt="[ 日本語バージョンをやりに行く。 ]" /></a>
+            </div>
+        )
+    };
 
     const metaTagRenderer = (conceptType, lang) => {
         return (
@@ -70,6 +79,7 @@ const MbtiImgGen = ({ conceptType, lang }) => {
             <>
                 {metaTagRenderer(conceptType, lang)}
                 <div className='mbtiImgGen-intro-div'>
+                    {languageIconRenderer()}
                     <img className='mbtiImgGen-intro' src={`https://images.ktestone.com/introImages/${conceptType}${lang.route}-intro.jpg`} alt='mbtiImgGen-intro' />
                         <div className='mbtiImgGen-intro-btn-div'
                         onClick={() => setMode('guide')}
@@ -91,6 +101,7 @@ const MbtiImgGen = ({ conceptType, lang }) => {
         return (
             <>
                 <div className='mbtiImgGen-guide-div'>
+                    {languageIconRenderer()}
                     <img className='mbtiImgGen-guide' src={`https://images.ktestone.com/meta/mbtiImgGen/mbtiImgGen${lang.route}-guide.jpg`} alt='mbtiImgGen-guide' />
                     <Link to={`/${conceptType}${lang.route}/upload`}>
                         <div className='mbtiImgGen-guide-btn-div' onClick={() => setMode('intro')}>
