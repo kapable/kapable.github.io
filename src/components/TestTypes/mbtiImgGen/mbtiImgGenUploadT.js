@@ -14,18 +14,20 @@ const cookies = new Cookies();
 
 const MbtiImgGenUpload = ({ conceptType, lang }) => {
     const { query } = useLocation(); // from MyPage yet-purchased order
-    const [mode, setMode] = useState(query ? query.premode : 'upload'); //
+    // const [mode, setMode] = useState(query ? query.premode : 'upload');
+    const [mode, setMode] = useState('email');
     const [orderId, setOrderId] = useState(query ? query.preWorktableId : '');
     const [currentUser, setCurrentUser] = useState({});
     const [pictures, setPictures] =useState([]);
     const [uploadedCount, setUploadedCount] = useState(0);
     const [uploadedUrl, setUploadedUrl] = useState([]);
     const [email, setEmail] = useState("");
-    const [isEmailConfirmed, setIsEmailConfirmed] = useState(false);
+    const [isEmailConfirmed, setIsEmailConfirmed] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isUploading, setIsUploading] = useState(false);
     const minimunImgNumber = 10;
-    const [stateLangs, setStateLangs] = useState([`20장의 사진을 넘어섰습니다.\n새로고침을 눌러 최대 20장까지 업로드해주세요.`, '사진 용량이 너무 커요.', '지원하지 않는 파일입니다.', '사진 업로드', '확인', '이메일을 입력해 주세요.', '결제하기',]);
+    const [stateLangs, setStateLangs] = useState([`20장의 사진을 넘어섰습니다.\n새로고침을 눌러 최대 20장까지 업로드해주세요.`, '사진 용량이 너무 커요.', '지원하지 않는 파일입니다.', '사진 업로드', '확인', '이메일을 입력해 주세요.', '결제하기',`결제하기 버튼 클릭 후\n약 5~7초 정도 대기시간이 발생합니다.\n 
+    나가지마시고 기다려주시면 됩니다.`]);
     const [gender, setGender] = useState('woman');
     const genderOptions = [
         {
@@ -43,9 +45,11 @@ const MbtiImgGenUpload = ({ conceptType, lang }) => {
 
     useEffect(() => {
         if(lang.route === 'Eng') {
-            setStateLangs([`It's over 20 photos.\nPlease click Refresh to upload up to 20 pages.`, 'The photo capacity is too large.', 'Unsupported file.', 'Uploading Photos', 'Check', 'Please enter your email.' ,'Payment']);
+            setStateLangs([`It's over 20 photos.\nPlease click Refresh to upload up to 20 pages.`, 'The photo capacity is too large.', 'Unsupported file.', 'Uploading Photos', 'Check', 'Please enter your email.' ,'Payment', `After clicking the Pay button,\nthere will be a wait time of approximately 5 to 7 seconds\n
+            \nDon't go out please.`]);
         } else if (lang.route === 'JP') {
-            setStateLangs([`20枚の写真を超えました。\nリロードを押して最大20枚までアップロードしてください。`, '写真の容量が大きすぎます。', 'サポートされていないファイルです。', '写真アップロード', '確認.', 'メールを入力してください。', '決済する']);
+            setStateLangs([`20枚の写真を超えました。\nリロードを押して最大20枚までアップロードしてください。`, '写真の容量が大きすぎます。', 'サポートされていないファイルです。', '写真アップロード', '確認.', 'メールを入力してください。', '決済する', `お支払いボタンをクリックした後\n約5-7秒ほど待ち時間が発生します。\n
+            出ないで待っていてください。`]);
         }
     }, [lang]);
 
@@ -266,15 +270,18 @@ const MbtiImgGenUpload = ({ conceptType, lang }) => {
                 required />
             {emailComment(lang)}
             {isEmailConfirmed && (
-                <a href={lang.route === '' ? (
-                    `https://ktest.bouns.me/_pay/ktestai-live/?name=${conceptType}&price=6900&worktable_id=${orderId}&conceptType=${conceptType}&buyer_email=${email}&success_url=${encodeURIComponent(window.location.origin + `/${conceptType}/complete/?orderId=`+orderId+'/')}`
-                ) : (
-                    `https://ktest.bouns.me/_pay/ktestai-live-stripe/?name=${conceptType}&price=599&worktable_id=${orderId}&conceptType=${conceptType}&buyer_email=${email}&auto=1&success_url=${encodeURIComponent(window.location.origin + `/${conceptType}${lang.route}/complete/?orderId=`+orderId+'/')}`
-                )}>
-                <button type="button" onClick={onPayBtnClick}
-                    className='mbtiImgGen-email-purchase-button'>
-                    {lang.route === '' ? `6,900원 ` + stateLangs[6] : `$5.99 ` + stateLangs[6]}
-                </button></a>
+                <div>
+                    <a href={lang.route === '' ? (
+                        `https://ktest.bouns.me/_pay/ktestai-live/?name=${conceptType}&price=6900&worktable_id=${orderId}&conceptType=${conceptType}&buyer_email=${email}&success_url=${encodeURIComponent(window.location.origin + `/${conceptType}/complete/?orderId=`+orderId+'/')}`
+                    ) : (
+                        `https://ktest.bouns.me/_pay/ktestai-live-stripe/?name=${conceptType}&price=599&worktable_id=${orderId}&conceptType=${conceptType}&buyer_email=${email}&auto=1&success_url=${encodeURIComponent(window.location.origin + `/${conceptType}${lang.route}/complete/?orderId=`+orderId+'/')}`
+                    )}>
+                    <button type="button" onClick={onPayBtnClick}
+                        className='mbtiImgGen-email-purchase-button'>
+                        {lang.route === '' ? `6,900원 ` + stateLangs[6] : `$5.99 ` + stateLangs[6]}
+                    </button></a>
+                    <div style={{margin: "0 2.5rem"}}><p>{stateLangs[7]}</p></div>
+                </div>
             )}
             <GoToHomeBtn page={`${conceptType} Upload`}/>
         </>
