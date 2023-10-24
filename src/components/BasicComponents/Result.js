@@ -920,7 +920,7 @@ class Result extends Component {
     };
 
     foreignAffiliateRenderer(){
-        const aliAffiliateLink = "https://s.click.aliexpress.com/e/_DlNChMR"
+        const aliAffiliateLink = this.state.originAdProb ? "https://s.click.aliexpress.com/e/_DlNChMR" : "https://s.click.aliexpress.com/e/_DDOVB7z";
         return (
             <div className='article-adCover-div-1'>
                 <div className='article-adCover-div-2'>
