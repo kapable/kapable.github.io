@@ -24,8 +24,9 @@ const MbtiImgGenUpload = ({ conceptType, lang }) => {
     const [isEmailConfirmed, setIsEmailConfirmed] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isUploading, setIsUploading] = useState(false);
-    const minimunImgNumber = 10;
-    const [stateLangs, setStateLangs] = useState([`20장의 사진을 넘어섰습니다.\n새로고침을 눌러 최대 20장까지 업로드해주세요.`, '사진 용량이 너무 커요.', '지원하지 않는 파일입니다.', '사진 업로드', '확인', '이메일을 입력해 주세요.', '결제하기',`결제하기 버튼 클릭 후\n약 5~7초 정도 대기시간이 발생합니다.\n 
+    const minimunImgNumber = 8;
+    const maximumImgNumber = 8;
+    const [stateLangs, setStateLangs] = useState([`${maximumImgNumber}장의 사진을 넘어섰습니다.\n새로고침을 눌러 최대 ${maximumImgNumber}장까지 업로드해주세요.`, '사진 용량이 너무 커요.', '지원하지 않는 파일입니다.', '사진 업로드', '확인', '이메일을 입력해 주세요.', '결제하기',`결제하기 버튼 클릭 후\n약 5~7초 정도 대기시간이 발생합니다.\n 
     나가지마시고 기다려주시면 됩니다.`]);
     const [gender, setGender] = useState('woman');
     const genderOptions = [
@@ -44,10 +45,10 @@ const MbtiImgGenUpload = ({ conceptType, lang }) => {
 
     useEffect(() => {
         if(lang.route === 'Eng') {
-            setStateLangs([`It's over 20 photos.\nPlease click Refresh to upload up to 20 pages.`, 'The photo capacity is too large.', 'Unsupported file.', 'Uploading Photos', 'Check', 'Please enter your email.' ,'Payment', `After clicking the Pay button,\nthere will be a wait time of approximately 5 to 7 seconds\n
+            setStateLangs([`It's over ${maximumImgNumber} photos.\nPlease click Refresh to upload up to ${maximumImgNumber} pages.`, 'The photo capacity is too large.', 'Unsupported file.', 'Uploading Photos', 'Check', 'Please enter your email.' ,'Payment', `After clicking the Pay button,\nthere will be a wait time of approximately 5 to 7 seconds\n
             \nDon't go out please.`]);
         } else if (lang.route === 'JP') {
-            setStateLangs([`20枚の写真を超えました。\nリロードを押して最大20枚までアップロードしてください。`, '写真の容量が大きすぎます。', 'サポートされていないファイルです。', '写真アップロード', '確認.', 'メールを入力してください。', '決済する', `お支払いボタンをクリックした後\n約5-7秒ほど待ち時間が発生します。\n
+            setStateLangs([`${maximumImgNumber}枚の写真を超えました。\nリロードを押して最大${maximumImgNumber}枚までアップロードしてください。`, '写真の容量が大きすぎます。', 'サポートされていないファイルです。', '写真アップロード', '確認.', 'メールを入力してください。', '決済する', `お支払いボタンをクリックした後\n約5-7秒ほど待ち時間が発生します。\n
             出ないで待っていてください。`]);
         }
     }, [lang]);
@@ -222,13 +223,13 @@ const MbtiImgGenUpload = ({ conceptType, lang }) => {
                 {paymentComment(lang)}
                 <div style={{ maxWidth: "30rem", margin: "0 auto" }}>
                     <ProgressBar
-                            completed={pictures?.length / 20 * 100}
+                            completed={pictures?.length / maximumImgNumber * 100}
                             isLabelVisible={false} baseBgColor='#fbf7f2' bgColor='#E62381'
                             height='10px' width='70%' transitionDuration='.3s' margin='1rem auto 1rem'/>
                 </div>
-                <p>{pictures?.length}/{20}</p>
-                {pictures?.length > 20 ? <p>{stateLangs[0]}</p> : null}
-                {pictures?.length < 20 ? (
+                <p>{pictures?.length}/{maximumImgNumber}</p>
+                {pictures?.length > maximumImgNumber ? <p>{stateLangs[0]}</p> : null}
+                {pictures?.length < maximumImgNumber ? (
                     <ImageUploader
                         className="mbtiImgGen-image-uploader"
                         withIcon={false}
