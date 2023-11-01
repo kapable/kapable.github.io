@@ -25,7 +25,7 @@ const MbtiImgGenUpload = ({ conceptType, lang }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isUploading, setIsUploading] = useState(false);
     const minimunImgNumber = 8;
-    const maximumImgNumber = 8;
+    const maximumImgNumber = 12;
     const [stateLangs, setStateLangs] = useState([`${maximumImgNumber}장의 사진을 넘어섰습니다.\n새로고침을 눌러 최대 ${maximumImgNumber}장까지 업로드해주세요.`, '사진 용량이 너무 커요.', '지원하지 않는 파일입니다.', '사진 업로드', '확인', '이메일을 입력해 주세요.', '결제하기',`결제하기 버튼 클릭 후\n약 5~7초 정도 대기시간이 발생합니다.\n 
     나가지마시고 기다려주시면 됩니다.`]);
     const [gender, setGender] = useState('woman');
