@@ -19,7 +19,7 @@
 .mbtiImgGen-intro-btn, .mbtiImgGen-guide-btn {
     position: absolute;
     left: 50%;
-    bottom: 1.5%;
+    bottom: 0.5%;
     transform: translateX(-50%);
     width: 22rem;
 }
