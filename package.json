@@ -23,6 +23,7 @@
     "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.1",
     "jszip": "^3.10.1",
+    "merge-images": "^2.0.0",
     "moment": "^2.29.4",
     "react": "^17.0.1",
     "react-app-polyfill": "^2.0.0",
@@ -3148,7 +3149,13 @@
       "/kapable.github.io/colorFiveThemeEng",
       "/colorFiveThemeEng",
       "/kapable.github.io/colorFiveThemeJP",
-      "/colorFiveThemeJP"
+      "/colorFiveThemeJP",
+      "/kapable.github.io/magazineTheme",
+      "/magazineTheme",
+      "/kapable.github.io/magazineThemeEng",
+      "/magazineThemeEng",
+      "/kapable.github.io/magazineThemeJP",
+      "/magazineThemeJP"
     ]
   },
   "eslintConfig": {
