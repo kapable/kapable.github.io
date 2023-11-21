@@ -81,6 +81,8 @@ const MbtiImgGenCheckT = ({ conceptType }) => {
 
         const fileManagerObjects = favaWorktable.fileManagerObjects;
 
+        // if overwrapped or not
+
         const presignedGetUrls = fileManagerObjects.map(
         async (objectName) => {
             const presignedGetUrl = await fetch(
