@@ -27,6 +27,7 @@ const MbtiImgGenCheckT = ({ conceptType }) => {
     const actionName = "ktest-fava-worktable";
     const fileManagerName = "bouns-test";
     const imgCheckableHour = 2000;
+    const sidebarMultipleNum = 15
 
     const languageIconRenderer = () => {
         return(
@@ -230,16 +231,14 @@ const MbtiImgGenCheckT = ({ conceptType }) => {
             <div><img style={{width: "100%", maxWidth: "25rem", margin: "0 auto"}} src="https://images.ktestone.com/aiImgGen/resultCheck/upper-banner.png" alt="upper-side-img" /></div>
             <div style={{display: "flex"}}>
                 <div className='image-check-page-left-side-div'>
-                    <div className='image-check-page-left-side-div'>
-                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
-                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
-                    </div>
-                    <div className='image-check-page-left-side-div'>
-                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
-                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
-                    </div>
+                    {Array.from(Array(Math.ceil(images?.length / sidebarMultipleNum))).map((_, index) => (
+                        <div className='image-check-page-left-side-div' key={`${index}-left`}>
+                            <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
+                            <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/left-banner.png" alt="left-side-img" />
+                        </div>
+                    ))}
                 </div>
-                {images.length >= 0 ? (
+                {images.length > 0 ? (
                     // images fetched successfully
                     <div style={{width: "100%", maxWidth:"20rem", margin: "0rem 1rem"}}>
                         {languageIconRenderer()}
@@ -266,14 +265,12 @@ const MbtiImgGenCheckT = ({ conceptType }) => {
                     </div>
                 )}
                 <div className='image-check-page-right-side-div'>
-                    <div className='image-check-page-right-side-div'>
-                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
-                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
-                    </div>
-                    <div className='image-check-page-right-side-div'>
-                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
-                        <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
-                    </div>
+                    {Array.from(Array(Math.ceil(images?.length / sidebarMultipleNum))).map((_, index) => (
+                        <div className='image-check-page-right-side-div' key={`${index}-right`}>
+                            <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
+                            <img style={{width: '2rem'}} src="https://images.ktestone.com/aiImgGen/resultCheck/right-banner.png" alt="right-side-img" />
+                        </div>
+                    ))}
                 </div>
             </div>
         </>
