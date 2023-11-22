@@ -92,18 +92,20 @@ class App extends Component {
       lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'ES', 'IT', 'Rus' ,'Others'],
       category_list:['saju', 'characteristic', 'love', 'ai', 'etc'],
       isLoggedIn: false,
-      aiImgGenLists: [{ type: 'fifteenTheme', langs: [
-          {route:'', title:'케이테스트 AI 피프틴 테마', desc:'다양한 15가지 타입의 사진이 출력 됩니다'},
-          {route:'Eng', title:'Ktest AI Fifteen Theme', desc:'Output 15 different types of photos'},
-          {route:'JP', title:'KTEST AI Fifteen テーマ', desc:'様々な15種類の写真が出力されます。'}] },
-        { type: 'colorFiveTheme', langs: [
-          {route:'', title:'케이테스트 AI 컬러파이브 테마', desc:'5가지 컬러의 사진이 출력 됩니다'},
-          {route:'Eng', title:'Ktest AI ColorFive Theme', desc:'Output 5 different types of photos'},
-          {route:'JP', title:'KTEST AI ColorFive テーマ', desc:'様々な5種類の写真が出力されます。'}] },
-        { type: 'magazineTheme', langs: [
-          {route:'', title:'케이테스트 AI 매거진 테마', desc:'총 60장의 다양한 매거진 테마의 사진이 출력 됩니다'},
-          {route:'Eng', title:'KTEST AI Magazine Theme', desc:'60 different magazine themed photos will be printed'},
-          {route:'JP', title:'KTESTマガジンテーマ', desc:'計60枚の多様なマガジンテーマの写真が出力されます。'}] }],
+      aiImgGenLists: [
+          { type: 'fifteenTheme', langs: [
+            {route:'', title:'케이테스트 AI 피프틴 테마', desc:'다양한 15가지 타입의 사진이 출력 됩니다'},
+            {route:'Eng', title:'Ktest AI Fifteen Theme', desc:'Output 15 different types of photos'},
+            {route:'JP', title:'KTEST AI Fifteen テーマ', desc:'様々な15種類の写真が出力されます。'}] },
+          { type: 'colorFiveTheme', langs: [
+            {route:'', title:'케이테스트 AI 컬러파이브 테마', desc:'5가지 컬러의 사진이 출력 됩니다'},
+            {route:'Eng', title:'Ktest AI ColorFive Theme', desc:'Output 5 different types of photos'},
+            {route:'JP', title:'KTEST AI ColorFive テーマ', desc:'様々な5種類の写真が出力されます。'}] },
+          { type: 'magazineTheme', langs: [
+            {route:'', title:'케이테스트 AI 매거진 테마', desc:'총 60장의 다양한 매거진 테마의 사진이 출력 됩니다'},
+            {route:'Eng', title:'KTEST AI Magazine Theme', desc:'60 different magazine themed photos will be printed'},
+            {route:'JP', title:'KTESTマガジンテーマ', desc:'計60枚の多様なマガジンテーマの写真が出力されます。'}] }
+        ],
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);
     this.lang_category_renderer = this.lang_category_renderer.bind(this);

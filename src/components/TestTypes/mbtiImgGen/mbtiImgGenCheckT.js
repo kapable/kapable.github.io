@@ -7,6 +7,7 @@ import { Button, Col, Modal, Progress, Row } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import dayjs from 'dayjs';
 import JSZip from 'jszip';
+import { ForeCoverRenderer } from './foreCoverRenderer';
 
 const cookies = new Cookies();
 
@@ -21,6 +22,7 @@ const MbtiImgGenCheckT = ({ conceptType }) => {
     const [lang, setLang] = useState('Kor');
     const [langComments, setLangComments] = useState(['잘못된 경로입니다.', '본인의 이미지만 확인할 수 있습니다.', '메일 확인 후 2시간 이내만 확인할 수 있습니다.', '로그인이 필요합니다.', '이미지 정보를 볼러올 수 없습니다.', '다운로드 중 에러가 발생했습니다', '전체 이미지 다운로드', '다운로드 완료', '사진 다운로드', '확인']);
 
+    const [foreCoveredTheme] = useState(['magazineTheme',]);
     const bucketName = "bouns-test";
     const actionName = "ktest-fava-worktable";
     const fileManagerName = "bouns-test";
@@ -81,34 +83,62 @@ const MbtiImgGenCheckT = ({ conceptType }) => {
 
         const fileManagerObjects = favaWorktable.fileManagerObjects;
 
-        // if overwrapped or not
+        // if overwrapped with foreCover
+        if(foreCoveredTheme.includes(conceptType)) {
+            const presignedGetUrls = fileManagerObjects.map(
+                async (objectName) => {
+                    const presignedGetUrl = await fetch(
+                    "https://bouns.io/api/file-manager-rpc",
+                    {
+                        method: "POST",
+                        headers: {
+                        "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                        args: [bucketName, objectName],
+                        operation: "presignedGetObject",
+                        where: {
+                            projectId: projectId,
+                            name: fileManagerName,
+                        },
+                        }),
+                    }
+                    ).then((res) => res.json());
+        
+                    return presignedGetUrl;
+                }
+            );
+            const presignedGetUrlsPromised = await Promise.all(presignedGetUrls);
 
-        const presignedGetUrls = fileManagerObjects.map(
-        async (objectName) => {
-            const presignedGetUrl = await fetch(
-            "https://bouns.io/api/file-manager-rpc",
-            {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                args: [bucketName, objectName],
-                operation: "presignedGetObject",
-                where: {
-                    projectId: projectId,
-                    name: fileManagerName,
-                },
-                }),
-            }
-            ).then((res) => res.json());
-
-            return presignedGetUrl;
+            return setImages(await ForeCoverRenderer(presignedGetUrlsPromised));
         }
+        // unless overwrapped with foreCover
+        const presignedGetUrls = fileManagerObjects.map(
+            async (objectName) => {
+                const presignedGetUrl = await fetch(
+                "https://bouns.io/api/file-manager-rpc",
+                {
+                    method: "POST",
+                    headers: {
+                    "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                    args: [bucketName, objectName],
+                    operation: "presignedGetObject",
+                    where: {
+                        projectId: projectId,
+                        name: fileManagerName,
+                    },
+                    }),
+                }
+                ).then((res) => res.json());
+    
+                return presignedGetUrl;
+            }
         );
 
-        setImages(await Promise.all(presignedGetUrls));
-    }, [worktableId]);
+        return setImages(await Promise.all(presignedGetUrls));
+    }, [conceptType, foreCoveredTheme, worktableId]);
 
     useEffect(() => {
         if(!worktableId) {
@@ -119,7 +149,7 @@ const MbtiImgGenCheckT = ({ conceptType }) => {
             try {
                 verifyAccessToken(cookies.get('accessToken'))
                     .then(res => {
-                        checkOrderUserMatched(worktableId, res.userId)
+                        checkOrderUserMatched(worktableId, res?.userId)
                         .then(resChecked => {
                             if(!resChecked.data.matched) {
                                 alert(langComments[1])
