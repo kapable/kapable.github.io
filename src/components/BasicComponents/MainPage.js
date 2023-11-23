@@ -35,9 +35,9 @@ function MainPage(props) {
             {/* FIFTEEN AI IMG GEN */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "ai") ? (
                 <>
-                    {/* <Link to='/magazineTheme/' className="main-link-block" key="magazineTheme-banner">
+                    <Link to='/magazineTheme/' className="main-link-block" key="magazineTheme-banner">
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/magazineTheme-thumb.png`} alt="magazineTheme" />
-                    </Link> */}
+                    </Link>
                     <Link to='/colorFiveTheme/' className="main-link-block" key="colorFiveTheme-banner">
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorFiveTheme-thumb.png`} alt="colorFiveTheme" />
                     </Link>
@@ -49,9 +49,9 @@ function MainPage(props) {
             {/* FIFTEEN AI IMG GEN ENG */}
             {(props.lang === 'Eng') && (!currentCategory || currentCategory === "ai") ? (
                 <>
-                    {/* <Link to='/magazineThemeEng/' className="main-link-block" key="magazineThemeEng-banner">
+                    <Link to='/magazineThemeEng/' className="main-link-block" key="magazineThemeEng-banner">
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/magazineThemeEng-thumb.png`} alt="magazineThemeEng" />
-                    </Link> */}
+                    </Link>
                     <Link to='/colorFiveThemeEng/' className="main-link-block" key="colorFiveThemeEng-banner">
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorFiveThemeEng-thumb.png`} alt="colorFiveThemeEng" />
                     </Link>
@@ -63,9 +63,9 @@ function MainPage(props) {
             {/* FIFTEEN AI IMG GEN JP */}
             {(props.lang === 'JP') && (!currentCategory || currentCategory === "ai") ? (
                 <>
-                    {/* <Link to='/magazineThemeJP/' className="main-link-block" key="magazineThemeJP-banner">
+                    <Link to='/magazineThemeJP/' className="main-link-block" key="magazineThemeJP-banner">
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/magazineThemeJP-thumb.png`} alt="magazineThemeJP" />
-                    </Link> */}
+                    </Link>
                     <Link to='/colorFiveThemeJP/' className="main-link-block" key="colorFiveThemeJP-banner">
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorFiveThemeJP-thumb.png`} alt="colorFiveThemeJP" />
                     </Link>
