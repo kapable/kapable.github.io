@@ -441,9 +441,9 @@ body {
 
 .coupang-close-button {
   position: absolute;
-  left: 0;
+  right: 0;
   font-size: 0.8rem;
-  top: 50%;
+  top: 0%;
   background-color: black;
   border: none;
   color: white;
