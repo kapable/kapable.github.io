@@ -58,6 +58,7 @@ class Result extends Component {
             startTimer: false,
             coupangCount: 5,
             cookieAges: 1/24*2,
+            aliCookieAges: 0,
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
@@ -109,7 +110,7 @@ class Result extends Component {
     };
 
     onAliButtonClick(test){
-        Cookies.set('ali', true, { path: '', expires: this.state.cookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
+        Cookies.set('ali', true, { path: '', expires: this.state.aliCookieAges, secure: true }); // shorter one of 60 sec * 60 min * 12 hour | tommorow 00 - now time
         this.setState({
             aliCookies: Cookies.get('ali'),
             isAliOpened: true,
@@ -900,7 +901,7 @@ class Result extends Component {
             <div className='article-adCover-div-1'>
                 <div className='article-adCover-div-2'>
                     {/* Old Version */}
-                    {/* <div className='article-adCover-div-3'>
+                    <div className='article-adCover-div-3'>
                         <p><b><span style={{color:"#4185F4"}}>콘텐츠를 보기 전</span> 쿠팡 쇼핑을 해보세요</b></p>
                         <div><p style={{ fontSize: '0.7rem' }}>쿠팡 방문은 케이테스트가 항상 질좋은 콘텐츠를 제공 할 수 있는 힘이 됩니다.<br />항상 케이테스트 콘텐츠를 사랑해주셔서 감사합니다.</p></div>
                         <p style={{ fontSize: "0.7rem", width: "0.7rem", color: "white", backgroundColor: "#83b4de", position:"absolute", right:"4rem", top: "5.2rem" }}>
@@ -914,9 +915,9 @@ class Result extends Component {
                             </button>
                         </a>
                         <p style={{ fontSize: '10px', color: 'grey', marginTop: "0.5rem" }}>원치 않을 경우 뒤로 가기를 눌러주세요.</p>
-                    </div> */}
+                    </div>
                     {/* New Version */}
-                    <div className='article-adCover-div-3'>
+                    {/* <div className='article-adCover-div-3'>
                         <p style={{fontSize:'1rem'}}><b><span style={{color:'#0074E9'}}>인기 상품</span> 확인하고 결과 확인하세요!</b></p>
                         <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
                             <button className='coupang-cover-button'
@@ -933,14 +934,13 @@ class Result extends Component {
                                 }
                             </button>
                         ) : null}
-
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );
     };
 
-    foreignAffiliateRenderer(){
+    foreignAffiliateRenderer(lang){
         const aliAffiliateLink = this.state.originAdProb ? "https://s.click.aliexpress.com/e/_DlNChMR" : "https://s.click.aliexpress.com/e/_DDOVB7z";
         return (
             <div className='article-adCover-div-1'>
@@ -948,7 +948,11 @@ class Result extends Component {
                     <div className='article-adCover-div-3'>
                         <a href={aliAffiliateLink} target="_blank" rel='noreferrer noopener'>
                             <button className='result-coupang-button' type='primary' shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={() => this.onAliButtonClick(this.state.current_test)}>
-                                <span>Visit AliExpress</span><br />& View the result
+                                {lang === 'KR' ? (
+                                    <span>버튼 누르고 결과 보기</span>
+                                ) : (
+                                    <span><span>Visit AliExpress</span><br />& View the result</span>
+                                )}
                             </button>
                         </a>
                     </div>
@@ -1077,13 +1081,13 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        {this.state.isOpened || this.state.coupangCookies
+                        {this.state.isAliOpened || this.state.aliCookies
                         ? (<img loading="lazy" src={img_src} className='result-img' alt={final_type} />)
                         : (<>
                             <div className='article-adCover-div'>
                                 <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                             </div>
-                            {this.affiliateRenderer()}
+                            {this.foreignAffiliateRenderer('KR')}
                         </>)}
                         <a target="_blank" 
                         rel="noopener noreferrer"
@@ -1211,13 +1215,13 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        {this.state.isOpened || this.state.coupangCookies
+                        {this.state.isAliOpened || this.state.aliCookies
                         ? (<img loading="lazy" src={img_src} className='result-img' alt={final_type} />)
                         : (<>
                             <div className='article-adCover-div'>
                                 <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                             </div>
-                            {this.affiliateRenderer()}
+                            {this.foreignAffiliateRenderer('KR')}
                         </>)}
                     </Fragment>
                 )
@@ -1409,7 +1413,7 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        {this.state.isOpened || this.state.coupangCookies
+                        {this.state.isAliOpened || this.state.aliCookies
                         ? (<>
                             <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                             {_current_test_contents.info?.blogUrl ? (
@@ -1423,7 +1427,7 @@ class Result extends Component {
                                 onselectstart="return false">
                                 <img loading="lazy" src={img_src} className='result-img crop-result-img' alt={final_type} />
                             </div>
-                            {this.affiliateRenderer()}
+                            {this.foreignAffiliateRenderer('KR')}
                         </>)}
                     </Fragment>
                 )
@@ -1554,12 +1558,12 @@ class Result extends Component {
             } else {
                 return (
                     <Fragment>
-                        {this.state.adProb && (!this.state.isOpened || !this.state.coupangCookies)
+                        {this.state.adProb && (!this.state.isAliOpened || !this.state.aliCookies)
                         ? (<>
                             <div className='article-adCover-div'>
                                 <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                             </div>
-                            {this.affiliateRenderer()}
+                            {this.foreignAffiliateRenderer('KR')}
                         </>)
                         : (
                             <>
