@@ -1653,9 +1653,10 @@ class Result extends Component {
                 <div className="result">
                     {/* Coupang Partners Dynamic Banner */}
                     {TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0].info.lang === 'Kor' && !ppl_list.includes(this.state.current_test)
-                    ? (this.state.current_test !== 'labelSticker' && this.state.current_test !== 'labelStickerLove' && this.state.current_test !== 'labelStickerFriendship'
-                        ? <CoupangDynamicBanner page={'result'} />
-                        : this.labelTestUpperBannerRenderer()
+                    ? (<CoupangDynamicBanner page={'result'} originAdProb={this.state.originAdProb} />
+                        // this.state.current_test !== 'labelSticker' && this.state.current_test !== 'labelStickerLove' && this.state.current_test !== 'labelStickerFriendship'
+                        // ? <CoupangDynamicBanner page={'result'} originAdProb={this.state.originAdProb} />
+                        // : this.labelTestUpperBannerRenderer()
                     ): null}
 
                     {/* Adsense */}
