@@ -949,9 +949,9 @@ class Result extends Component {
                         <a href={aliAffiliateLink} target="_blank" rel='noreferrer noopener'>
                             <button className='result-coupang-button' type='primary' shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={() => this.onAliButtonClick(this.state.current_test)}>
                                 {lang === 'KR' ? (
-                                    <span>버튼 누르고 결과 보기</span>
+                                    <span>알리익스프레스 보고<br />결과 보기</span>
                                 ) : (
-                                    <span><span>Visit AliExpress</span><br />& View the result</span>
+                                    <span>Visit AliExpress<br />& View the result</span>
                                 )}
                             </button>
                         </a>
