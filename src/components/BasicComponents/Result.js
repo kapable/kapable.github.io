@@ -58,7 +58,7 @@ class Result extends Component {
             startTimer: false,
             coupangCount: 5,
             cookieAges: 1/24*2,
-            aliCookieAges: 0,
+            aliCookieAges: 1/24/60*5,
         };
         this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
