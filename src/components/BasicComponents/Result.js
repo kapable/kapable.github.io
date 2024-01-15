@@ -1081,13 +1081,13 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        {this.state.isAliOpened || this.state.aliCookies
+                        {this.state.isOpened || this.state.coupangCookies
                         ? (<img loading="lazy" src={img_src} className='result-img' alt={final_type} />)
                         : (<>
                             <div className='article-adCover-div'>
                                 <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                             </div>
-                            {this.foreignAffiliateRenderer('KR')}
+                            {this.affiliateRenderer()}
                         </>)}
                         <a target="_blank" 
                         rel="noopener noreferrer"
@@ -1215,13 +1215,13 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        {this.state.isAliOpened || this.state.aliCookies
+                        {this.state.isOpened || this.state.coupangCookies
                         ? (<img loading="lazy" src={img_src} className='result-img' alt={final_type} />)
                         : (<>
                             <div className='article-adCover-div'>
                                 <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                             </div>
-                            {this.foreignAffiliateRenderer('KR')}
+                            {this.affiliateRenderer()}
                         </>)}
                     </Fragment>
                 )
@@ -1413,7 +1413,7 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        {this.state.isAliOpened || this.state.aliCookies
+                        {this.state.isOpened || this.state.coupangCookies
                         ? (<>
                             <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                             {_current_test_contents.info?.blogUrl ? (
@@ -1427,7 +1427,7 @@ class Result extends Component {
                                 onselectstart="return false">
                                 <img loading="lazy" src={img_src} className='result-img crop-result-img' alt={final_type} />
                             </div>
-                            {this.foreignAffiliateRenderer('KR')}
+                            {this.affiliateRenderer()}
                         </>)}
                     </Fragment>
                 )
@@ -1558,12 +1558,12 @@ class Result extends Component {
             } else {
                 return (
                     <Fragment>
-                        {this.state.adProb && (!this.state.isAliOpened || !this.state.aliCookies)
+                        {this.state.adProb && (!this.state.isOpened || !this.state.coupangCookies)
                         ? (<>
                             <div className='article-adCover-div'>
                                 <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                             </div>
-                            {this.foreignAffiliateRenderer('KR')}
+                            {this.affiliateRenderer()}
                         </>)
                         : (
                             <>
