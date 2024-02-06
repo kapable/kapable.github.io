@@ -431,7 +431,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let mindFlowEngList = ["mindFlowEng"];
-        let honeycombCharList = ["honeycombChar"]; 
+        let blackCherryList = ["blackCherry"]; 
         let hmallList = ['gardenflower', 'hmall', 'labelStickerSKT'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
@@ -553,8 +553,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (honeycombCharList.includes(this.state.current_test)) {
-            const rederTestList = ["magazineTheme", "colorFiveTheme", "fifteenTheme", "charScore", "graphicDesignChar", "nagForYou", "webChar",];
+        } else if (blackCherryList.includes(this.state.current_test)) {
+            const rederTestList = ["magazineTheme", "colorFiveTheme", "fifteenTheme", "honeycombChar", "charScore", "graphicDesignChar", "nagForYou",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -820,7 +820,7 @@ class Result extends Component {
         } else if (hmallList.includes(this.state.current_test)) {
             return null;
         } else {
-            const rederTestList = ["magazineTheme", "colorFiveTheme", "fifteenTheme", "honeycombChar", "charScore", "graphicDesignChar", "nagForYou",];
+            const rederTestList = ["magazineTheme", "colorFiveTheme", "fifteenTheme", "blackCherry", "honeycombChar", "charScore", "graphicDesignChar",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
