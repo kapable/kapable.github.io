@@ -432,7 +432,7 @@ class Result extends Component {
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let mindFlowEngList = ["mindFlowEng"];
         let blackCherryList = ["blackCherry"]; 
-        let hmallList = ['MALIN+GOETZ', 'gardenflower', 'hmall', 'labelStickerSKT'];
+        let hmallList = ['MALINGOETZ', 'gardenflower', 'hmall', 'labelStickerSKT'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
             return(
@@ -1647,7 +1647,7 @@ class Result extends Component {
     };
 
     resultPageRender(){
-        let ppl_list = ["MALIN+GOETZ", "gardenflower","labelStickerSKT", "hmall", "factPok", "MyFactPok", "FriendFactPok"];
+        let ppl_list = ["MALINGOETZ", "gardenflower","labelStickerSKT", "hmall", "factPok", "MyFactPok", "FriendFactPok"];
         return(
             <Fragment>
                 <div className="result">
