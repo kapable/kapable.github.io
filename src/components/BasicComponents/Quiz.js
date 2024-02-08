@@ -136,7 +136,7 @@ class Quiz extends Component {
                     </a>
                 </div>
             )
-        } else if (window.location.href.split('/').includes('gardenflower') || window.location.href.split('/').includes('hmall') || window.location.href.split('/').includes('fatecharmtest')) {
+        } else if (window.location.href.split('/').includes('MALIN+GOETZ') ||window.location.href.split('/').includes('gardenflower') || window.location.href.split('/').includes('hmall') || window.location.href.split('/').includes('fatecharmtest')) {
             return null;
         } else {
             return(
