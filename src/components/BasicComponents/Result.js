@@ -1660,12 +1660,12 @@ class Result extends Component {
                     ): null}
 
                     {/* Adsense */}
-                    <AdsenseAdvertiser
+                    {ppl_list.includes(this.state.current_test) ? null  : <AdsenseAdvertiser
                         client="ca-pub-2382342018701919"
                         slot="5663135072"
                         format="auto"
                         responsive="true"
-                    />
+                    />}
                     
                     <div className="result-header">
                         <h5 className="result-title">결과는...</h5>
@@ -1691,13 +1691,12 @@ class Result extends Component {
                     {ppl_list.includes(this.state.current_test) || this.state.isOpened || this.state.coupangCookies ? null : <p className='result-coupang-comment' style={{color:'grey'}}>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>}
 
                     <OtherLangIcons currentTest={this.state.current_test}/>
-                    
-                    <AdsenseAdvertiser
+                    {ppl_list.includes(this.state.current_test) ? null  : <AdsenseAdvertiser
                         client="ca-pub-2382342018701919"
                         slot="5663135072"
                         format="auto"
                         responsive="true"
-                    />
+                    />}
 
                     <div className="share">
                         <h5 className="share-title">친구에게 공유하기</h5>
