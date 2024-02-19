@@ -186,7 +186,7 @@ class Intro extends Component {
                         alt={_mainTitle + '|' + _subTitle}/>
                     <OtherLangIcons currentTest={this.state.current_test.info.mainUrl}/>
                     
-                    {this.state.current_test.info.mainUrl === 'MALIN+GOETZ' || this.state.current_test.info.mainUrl === 'gardenflower' || this.state.current_test.info.mainUrl === 'hmall' || this.state.current_test.info.mainUrl === 'labelStickerSKT' || this.state.current_test.info.mainUrl === 'fatecharmtest' ? null : (
+                    {this.state.current_test.info.mainUrl === 'MALINGOETZ' || this.state.current_test.info.mainUrl === 'gardenflower' || this.state.current_test.info.mainUrl === 'hmall' || this.state.current_test.info.mainUrl === 'labelStickerSKT' || this.state.current_test.info.mainUrl === 'fatecharmtest' ? null : (
                         <AdsenseAdvertiser
                         client="ca-pub-2382342018701919"
                         slot="5663135072"
