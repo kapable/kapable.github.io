@@ -977,7 +977,6 @@ class Result extends Component {
             // meta tag for PPL test contents
             let jelling_list = ['fruitAlt', 'fruitAltEng', 'idealType', 'idealTypeEng'];
             let tonymoly_list = ["factPok", "MyFactPok", "FriendFactPok",];
-            let ppl_list = ["MALINGOETZ"];
             if(foreignTest.includes(this.state.current_test)) {
                 let og_img_url = "https://images.ktestone.com/meta/" + this.state.current_test + "/" + this.state.current_result + ".png"
                 return (
@@ -1388,7 +1387,41 @@ class Result extends Component {
                         </div>
                     </Fragment>
                 )
-            } else if (ppl_list.includes(this.state.current_test)) {
+            } else if (this.state.current_test === 'MALINGOETZ') {
+                const MALINGOETZ_type_obj = {
+                    "ESTP":    
+                    "Darkrum",
+                    "ESFP":    
+                    "Darkrum",
+                    "ENFP":    
+                    "Cannabis",
+                    "INFP":    
+                    "Strawberry",
+                    "ENTJ":    
+                    "Cannabis",
+                    "INFJ":    
+                    "Leather",
+                    "INTJ":    
+                    "Leather",
+                    "ESTJ":    
+                    "Bergamot",
+                    "INTP":    
+                    "Vetiver",
+                    "ENFJ":    
+                    "Bergamot",
+                    "ISFJ":    
+                    "Strawberry",
+                    "ENTP":    
+                    "Darkrum",
+                    "ISTJ":    
+                    "Vetiver",
+                    "ISTP":     
+                    "Leather",
+                    "ISFP":    
+                    "Strawberry",
+                    "ESFJ":    
+                    "Cannabis",
+                }
                 return(
                     <Fragment>
                         <Helmet>
@@ -1414,6 +1447,7 @@ class Result extends Component {
                             <meta property="twitter:image" content={img_src}/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
+                        <img loading="lazy" src={`https://images.ktestone.com/meta/MALINGOETZ/MALINGOETZ-${MALINGOETZ_type_obj[_current_test_result.type]}-banner.jpg`} className='result-img' alt={`${MALINGOETZ_type_obj[_current_test_result.type]}-banner`} />
                         <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                     </Fragment>
                 )
