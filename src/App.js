@@ -36,10 +36,6 @@ import LifeInterpretingResult from './components/TestTypes/Saju/LifeInterpreting
 import Privacy from './components/BasicComponents/Privacy';
 import { withCookies } from 'react-cookie';
 import { onClickLogin, verifyAccessToken, getRefreshedToken } from './tools/tools';
-import MbtiImgGenT from './components/TestTypes/mbtiImgGen/mbtiImgGenT';
-import MbtiImgGenUploadT from './components/TestTypes/mbtiImgGen/mbtiImgGenUploadT';
-import MbtiImgGenCompleteT from './components/TestTypes/mbtiImgGen/mbtiImgGenCompleteT';
-import MbtiImgGenCheckT from './components/TestTypes/mbtiImgGen/mbtiImgGenCheckT';
 import { onCreateUser } from './tools/aiImgTools';
 import MyPage from './components/BasicComponents/Users/MyPage';
 
@@ -414,7 +410,7 @@ class App extends Component {
             <Route path ='/post2022Eng/' component={() => <POSTSTART language={`Eng`}/>}/>
 
             {/* AI Image Gen page */}
-            {this.state.aiImgGenLists.map((concept) => (
+            {/* {this.state.aiImgGenLists.map((concept) => (
               concept.langs.map((lang) => (
                 <Route path={'/' + concept.type + lang.route} component={() => <MbtiImgGenT conceptType={concept.type} lang={lang} />} exact/>
               ))
@@ -433,7 +429,7 @@ class App extends Component {
               concept.langs.map((lang) => (
                 <Route path={'/' + concept.type + lang.route + '/check'} component={() => <MbtiImgGenCheckT conceptType={concept.type} lang={lang} />} exact/>
               ))
-            ))}
+            ))} */}
 
             {/* "Main" page */}
             <Route path='/' exact>

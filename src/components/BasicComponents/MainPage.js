@@ -33,7 +33,7 @@ function MainPage(props) {
             />
 
             {/* FIFTEEN AI IMG GEN */}
-            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "ai") ? (
+            {/* {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "ai") ? (
                 <>
                     <Link to='/magazineTheme/' className="main-link-block" key="magazineTheme-banner">
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/magazineTheme-thumb.png`} alt="magazineTheme" />
@@ -45,9 +45,9 @@ function MainPage(props) {
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenTheme-thumb.png`} alt="fifteenTheme" />
                     </Link>
                 </>
-            ) : null}
+            ) : null} */}
             {/* FIFTEEN AI IMG GEN ENG */}
-            {(props.lang === 'Eng') && (!currentCategory || currentCategory === "ai") ? (
+            {/* {(props.lang === 'Eng') && (!currentCategory || currentCategory === "ai") ? (
                 <>
                     <Link to='/magazineThemeEng/' className="main-link-block" key="magazineThemeEng-banner">
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/magazineThemeEng-thumb.png`} alt="magazineThemeEng" />
@@ -59,9 +59,9 @@ function MainPage(props) {
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenThemeEng-thumb.png`} alt="fifteenThemeEng" />
                     </Link>
                 </>
-            ) : null}
+            ) : null} */}
             {/* FIFTEEN AI IMG GEN JP */}
-            {(props.lang === 'JP') && (!currentCategory || currentCategory === "ai") ? (
+            {/* {(props.lang === 'JP') && (!currentCategory || currentCategory === "ai") ? (
                 <>
                     <Link to='/magazineThemeJP/' className="main-link-block" key="magazineThemeJP-banner">
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/magazineThemeJP-thumb.png`} alt="magazineThemeJP" />
@@ -73,7 +73,7 @@ function MainPage(props) {
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenThemeJP-thumb.png`} alt="fifteenThemeJP" />
                     </Link>
                 </>
-            ) : null}
+            ) : null} */}
 
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
