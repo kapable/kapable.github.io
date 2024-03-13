@@ -52,7 +52,7 @@ class Result extends Component {
             coupangCookies: Cookies.get('coupang') || null,
             isOpened: false,
             aliCookies: Cookies.get('ali') || null,
-            isAliOpened: true,
+            isAliOpened: false,
             originAdProb: 0.65 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
@@ -957,6 +957,7 @@ class Result extends Component {
                         </a>
                     </div>
                 </div>
+                <p className='result-coupang-comment' style={{ fontSize:'0.8rem', color:'grey'}}>* This post receives a certain amount of commission<br />as part of AliExpress activities.</p>
             </div>
         )
     }
