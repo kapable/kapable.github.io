@@ -431,7 +431,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let mindFlowEngList = ["mindFlowEng"];
-        let colorWoodstickList = ["colorWoodstick"]; 
+        let knittingList = ["knitting"]; 
         let hmallList = ['MALINGOETZ', 'gardenflower', 'hmall', 'labelStickerSKT'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
@@ -458,7 +458,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
-            const rederTestList = ["colorFiveThemeEng", "fifteenThemeEng", "mindFlowEng", "meOtherEng", "egoProfileEng", "iPhoneMemoEng",];
+            const rederTestList = ["mindFlowEng", "meOtherEng", "egoProfileEng", "iPhoneMemoEng",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -530,7 +530,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (mindFlowEngList.includes(this.state.current_test)) {
-            const rederTestList = ["colorFiveThemeEng", "fifteenThemeEng", "meOtherEng", "egoProfileEng", "iPhoneMemoEng", "colorPaletteEng", "alienCharEng",];
+            const rederTestList = ["meOtherEng", "egoProfileEng", "iPhoneMemoEng", "colorPaletteEng", "alienCharEng",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -553,8 +553,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (colorWoodstickList.includes(this.state.current_test)) {
-            const rederTestList = ["magazineTheme", "colorFiveTheme", "fifteenTheme", "charFile", "koreanTable", "colorScream",];
+        } else if (knittingList.includes(this.state.current_test)) {
+            const rederTestList = ["colorWoodstick", "charFile", "koreanTable", "colorScream",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -578,7 +578,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (CNTestList.includes(this.state.current_test)) {
-            const rederTestList = ["colorFiveThemeEng", "fifteenThemeEng", "labelStickerCN", "emotionGraphCN", "cloudLoveCN",];
+            const rederTestList = ["labelStickerCN", "emotionGraphCN", "cloudLoveCN",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -602,7 +602,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (JPTestList.includes(this.state.current_test)) {
-            const rederTestList = ["colorFiveThemeJP", "fifteenThemeJP", "labelStickerJP", "meOtherJP", "iPhoneMemoJP", "egoProfileJP"];
+            const rederTestList = ["meOtherJP", "iPhoneMemoJP", "egoProfileJP"];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -746,7 +746,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (labelStickerCNList.includes(this.state.current_test)) {
-            const rederTestList = ["colorFiveThemeEng", "fifteenThemeEng", "emotionGraphCN", "cloudLoveCN", "loveMagazineCN",];
+            const rederTestList = ["emotionGraphCN", "cloudLoveCN", "loveMagazineCN",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -794,7 +794,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (labelStickerJPList.includes(this.state.current_test)) {
-            const rederTestList = ["colorFiveThemeJP", "fifteenThemeJP", "meOtherJP", "iPhoneMemoJP", "egoProfileJP", "deepOceanOutlawJP",];
+            const rederTestList = ["iPhoneMemoJP", "egoProfileJP", "deepOceanOutlawJP",];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -820,7 +820,7 @@ class Result extends Component {
         } else if (hmallList.includes(this.state.current_test)) {
             return null;
         } else {
-            const rederTestList = ["magazineTheme", "colorFiveTheme", "fifteenTheme", "colorWoodstick", "charFile", "koreanTable", "colorScream",];
+            const rederTestList = ["knitting", "colorWoodstick", "charFile", "koreanTable", "colorScream",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
