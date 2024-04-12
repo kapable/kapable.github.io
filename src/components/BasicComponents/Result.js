@@ -430,7 +430,7 @@ class Result extends Component {
         let percentageMBTI2022ListKor = ["percentageMBTI2022",];
         let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
         let mindFlowEngList = ["mindFlowEng"];
-        let cherryBlossomLovekList = ["cherryBlossomLovek"];
+        let albumPlayList = ["albumPlay"];
         let hmallList = ['MALINGOETZ', 'gardenflower', 'hmall', 'labelStickerSKT'];
         if(personalColor2022ListKor.includes(this.state.current_test)){
             const jelling_outlink = "https://bit.ly/3FlwKMJ";
@@ -457,7 +457,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
-            const rederTestList = ["mindFlowEng", "meOtherEng", "egoProfileEng", "iPhoneMemoEng",];
+            const rederTestList = ["albumPlay", "mindFlowEng", "meOtherEng", "egoProfileEng", "iPhoneMemoEng",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -552,8 +552,8 @@ class Result extends Component {
                     ))}
                 </Fragment>
             )
-        } else if (cherryBlossomLovekList.includes(this.state.current_test)) {
-            const rederTestList = ["monsterAttack", "blockYou", "keyboardChar", "knitting", "colorWoodstick", ];
+        } else if (albumPlayList.includes(this.state.current_test)) {
+            const rederTestList = ["cherryBlossomLove", "monsterAttack", "blockYou", "keyboardChar", "knitting", "colorWoodstick", ];
             return (
                 <Fragment>
                     {rederTestList.map((test) => (
