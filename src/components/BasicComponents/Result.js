@@ -1740,12 +1740,14 @@ class Result extends Component {
                     ): null} */}
 
                     {/* Adsense */}
-                    {ppl_list.includes(this.state.current_test) ? null  : <AdsenseAdvertiser
+                    {/* {ppl_list.includes(this.state.current_test) ? null  : } */}
+                    <AdsenseAdvertiser
                         client="ca-pub-2382342018701919"
                         slot="9580326529"
                         format="auto"
                         responsive="true"
-                    />}
+                        style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+                    />
                     <div className="result-header">
                         <h5 className="result-title">결과는...</h5>
                         <div className="result-value">
