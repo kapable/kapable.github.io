@@ -20,7 +20,6 @@ import Cookies from 'js-cookie';
 import '../TestTypes/FactPok/factPok.css';
 import ShareGroup from './ShareGroup';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
-import CoupangDynamicBanner from '../SubComponents/CoupangDynamicBanner';
 import GoToHomeBtn from '../SubComponents/GoToHomeBtn';
 
 class Result extends Component {
@@ -1733,21 +1732,20 @@ class Result extends Component {
             <Fragment>
                 <div className="result">
                     {/* Coupang Partners Dynamic Banner */}
-                    {TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0].info.lang === 'Kor' && !ppl_list.includes(this.state.current_test)
+                    {/* {!ppl_list.includes(this.state.current_test)
                     ? (<CoupangDynamicBanner page={'result'} originAdProb={this.state.originAdProb} />
-                        // this.state.current_test !== 'labelSticker' && this.state.current_test !== 'labelStickerLove' && this.state.current_test !== 'labelStickerFriendship'
-                        // ? <CoupangDynamicBanner page={'result'} originAdProb={this.state.originAdProb} />
-                        // : this.labelTestUpperBannerRenderer()
-                    ): null}
+                        this.state.current_test !== 'labelSticker' && this.state.current_test !== 'labelStickerLove' && this.state.current_test !== 'labelStickerFriendship'
+                        ? <CoupangDynamicBanner page={'result'} originAdProb={this.state.originAdProb} />
+                        : this.labelTestUpperBannerRenderer()
+                    ): null} */}
 
                     {/* Adsense */}
                     {ppl_list.includes(this.state.current_test) ? null  : <AdsenseAdvertiser
                         client="ca-pub-2382342018701919"
-                        slot="5663135072"
+                        slot="9580326529"
                         format="auto"
                         responsive="true"
                     />}
-                    
                     <div className="result-header">
                         <h5 className="result-title">결과는...</h5>
                         <div className="result-value">
