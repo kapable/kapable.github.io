@@ -81,7 +81,7 @@ function MainPage(props) {
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
                 {props.all_tests_url.slice(0,7).map((item, idx)=>{
-                    if(idx % 3 === 0) {
+                    if(idx % 2 === 0) {
                         return(
                             <Fragment key={item[0].replaceAll('/','')+'fragment'}>
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
@@ -168,7 +168,7 @@ function MainPage(props) {
             {/* Main Test Banners(Middle) */}
             <div className="main-link-div">
                 {props.all_tests_url.slice(7,11).map((item, idx)=>{
-                    if(idx % 3 === 0) {
+                    if(idx % 2 === 0) {
                         return(
                             <Fragment key={item[0].replaceAll('/','')+'fragment'}>
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
@@ -239,7 +239,7 @@ function MainPage(props) {
             {/* Main Test Banners(Bottom) */}
             <div className="main-link-div">
                 {props.all_tests_url.slice(11).map((item, idx)=>{
-                    if(idx % 3 === 0) {
+                    if(idx % 2 === 0) {
                         return(
                             <Fragment key={item[0].replaceAll('/','')+'fragment'}>
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
