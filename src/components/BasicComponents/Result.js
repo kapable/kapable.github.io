@@ -1716,11 +1716,17 @@ class Result extends Component {
     }
 
     mainPageRender(){
+        const another_langs = ['Kor', 'JP'];
+        let current_test_lang = 'Eng'
+        const _current_test_contents = TESTS.filter((test) => test.info.mainUrl === this.state.current_test)[0];
+        if (another_langs.includes(_current_test_contents.info.lang)) {
+            current_test_lang = _current_test_contents.info.lang
+        }
         return(
             <Router >
                 <Switch>
-                    <Route path='/' component={App} exact/>
-                    <Redirect to='/' />
+                    <Route path={`/${current_test_lang}`} component={App} exact/>
+                    <Redirect to={`/${current_test_lang}`} />
                 </Switch>
             </Router>
         )
@@ -1810,7 +1816,7 @@ class Result extends Component {
                                 e.preventDefault();
                                 _eventSenderGA("Paging", "Click Back-to-main Button", "result page");
                                 this.setState({
-                                    mode:"main"
+                                    mode:"main",
                                 })
                             }.bind(this)}
                             className="back-to-main-btn-img"
