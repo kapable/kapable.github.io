@@ -8,13 +8,16 @@ import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
+import { reloadPage } from '../../tools/tools';
 
 function MainPage(props) {
     const { state } = useLocation();
     const [currentCategory, setCurrentCategory] = useState(state?.currentCategory);
+    useState(() => {
+        reloadPage();
+    }, []);
     return (
         <Fragment>
-            
             {/* Language Converting */}
             <OhterLangIconsMain />
             <div>
