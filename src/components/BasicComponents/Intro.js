@@ -26,7 +26,7 @@ import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 class Intro extends Component {
     constructor(props){
         super(props)
-        this.mainImgRef = React.createRef();
+        this.mainImgRef = React.createRef(null);
         let _current_test = [];
         let i = 0;
         while (i<TESTS.length) {
