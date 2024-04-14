@@ -19,8 +19,10 @@ function MainPage(props) {
     return (
         <Fragment>
             {/* Language Converting */}
-            <OhterLangIconsMain />
             <div ref={mainImgRef}>
+                <OhterLangIconsMain />
+            </div>
+            <div>
                 <img loading="lazy" className='main-header' src={(props.lang === 'Eng' || props.lang === 'JP' || props.lang === 'CN') ? `https://images.ktestone.com/default/main-header-2023${props.lang}.png` : `https://images.ktestone.com/default/main-header-2023${(props.lang === 'Kor' || !props.lang) ? '' : 'Eng'}.png`} alt="K-test"/>
             </div>
 
