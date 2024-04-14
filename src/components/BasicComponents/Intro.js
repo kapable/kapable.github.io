@@ -26,7 +26,6 @@ import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 class Intro extends Component {
     constructor(props){
         super(props)
-        this.mainImgRef = React.createRef(null);
         let _current_test = [];
         let i = 0;
         while (i<TESTS.length) {
@@ -91,7 +90,6 @@ class Intro extends Component {
                 mode:"quiz"
             });
         };
-        return this.mainImgRef.current?.scrollIntoView({ behaviour: 'smooth' });
     };
     _onStartButtonClick(){
         let testQuery = '';
@@ -155,7 +153,7 @@ class Intro extends Component {
         return (
             <Fragment>
                 {/* for blocking Adfit banner with page refreshing for PPL */}
-                {this.reloadPage()}
+                {/* {this.reloadPage()} */}
                 <div className="intro container">
                     <Helmet>
                         {/* <!-- Primary Meta Tags --> */}
@@ -181,12 +179,13 @@ class Intro extends Component {
                         <meta property="twitter:image:alt" content={this.state.current_test.info.mainTitle} />
                     </Helmet>
                     {/* <div id="optadnpm ATB" style={{"minHeight": "220px"}}></div> */}
+                    <div ref={this.mainImgRef}>
                     <img loading="lazy"
                         className="intro-main-img"
                         onClick={this._onStartButtonClick}
                         src={_thumbImage}
-                        alt={_mainTitle + '|' + _subTitle}
-                        ref={this.mainImgRef}/>
+                        alt={_mainTitle + '|' + _subTitle}/>
+                    </div>
                     <OtherLangIcons currentTest={this.state.current_test.info.mainUrl}/>
                     
                     {this.state.current_test.info.mainUrl === 'MALINGOETZ' || this.state.current_test.info.mainUrl === 'gardenflower' || this.state.current_test.info.mainUrl === 'hmall' || this.state.current_test.info.mainUrl === 'labelStickerSKT' || this.state.current_test.info.mainUrl === 'fatecharmtest' ? null : (
