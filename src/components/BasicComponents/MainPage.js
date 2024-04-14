@@ -87,8 +87,7 @@ function MainPage(props) {
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
-                                {isAdsenseTrue ?(
-                                    <AdsenseAdvertiser
+                                <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client="ca-pub-2382342018701919"
                                     slot="3780210756"
@@ -96,7 +95,6 @@ function MainPage(props) {
                                     responsive="true"
                                     style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
                                 />
-                                ) : null}
                             </Fragment>
                         )
                     } else {
@@ -176,8 +174,7 @@ function MainPage(props) {
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
-                                {isAdsenseTrue ? (
-                                    <AdsenseAdvertiser
+                                <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client="ca-pub-2382342018701919"
                                     slot="3780210756"
@@ -185,7 +182,6 @@ function MainPage(props) {
                                     responsive="true"
                                     style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
                                 />
-                                ) : null}
                             </Fragment>
                         )
                     } else {
@@ -249,8 +245,7 @@ function MainPage(props) {
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
-                                {isAdsenseTrue ? (
-                                    <AdsenseAdvertiser
+                                <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client="ca-pub-2382342018701919"
                                     slot="3780210756"
@@ -258,7 +253,6 @@ function MainPage(props) {
                                     responsive="true"
                                     style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
                                 />
-                                ) : null}
                             </Fragment>
                         )
                     } else {
