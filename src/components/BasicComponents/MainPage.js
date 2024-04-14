@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState, useRef } from 'react';
 import { Link, useLocation, withRouter } from 'react-router-dom';
 import OhterLangIconsMain from '../SubComponents/OhterLangIconsMain';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
@@ -8,19 +8,19 @@ import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
-import { reloadPage } from '../../tools/tools';
 
 function MainPage(props) {
+    const mainImgRef = useRef(null);
     const { state } = useLocation();
     const [currentCategory, setCurrentCategory] = useState(state?.currentCategory);
     useEffect(() => {
-        reloadPage();
-    }, []);
+        return mainImgRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, [mainImgRef]);
     return (
         <Fragment>
             {/* Language Converting */}
             <OhterLangIconsMain />
-            <div>
+            <div ref={mainImgRef}>
                 <img loading="lazy" className='main-header' src={(props.lang === 'Eng' || props.lang === 'JP' || props.lang === 'CN') ? `https://images.ktestone.com/default/main-header-2023${props.lang}.png` : `https://images.ktestone.com/default/main-header-2023${(props.lang === 'Kor' || !props.lang) ? '' : 'Eng'}.png`} alt="K-test"/>
             </div>
 
