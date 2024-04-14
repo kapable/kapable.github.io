@@ -13,14 +13,14 @@ import TOHOMEBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import { _eventSenderGA } from '../../tools/tools';
 import { Helmet } from 'react-helmet';
 import ScriptTag from 'react-script-tag';
-import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
-import KAKAOPLUSFRIEND from '../../api/DefaultImg/go-to-kakao-plusfriend.png';
 import PCTMBTIBAR from '../SubComponents/PctMBTIBar';
 import Cookies from 'js-cookie';
 import '../TestTypes/FactPok/factPok.css';
 import ShareGroup from './ShareGroup';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import GoToHomeBtn from '../SubComponents/GoToHomeBtn';
+// import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
+// import KAKAOPLUSFRIEND from '../../api/DefaultImg/go-to-kakao-plusfriend.png';
 
 class Result extends Component {
 
@@ -415,434 +415,460 @@ class Result extends Component {
     };
 
     otherTestBannerRenderer() {
-        let personalColor2022ListKor = [];
-        let EngTestList = ["meOtherEng", "egoProfileEng", "iPhoneMemoEng", "colorPaletteEng", "bubbleCharEng", "alienCharEng", "loveLotteryEng", "loveTVEng", "rainDropEng", "digitalCharEng", "postCardEng", "mazeHeartEng", "colorLabelStickerEng", "DIYEng", "labelStickerEng", "earthCharacteristicEng", "polaroidCharacteristicEng", "labelStickerLoveEng", "loveMagazineEng", "loveInMyHeadEng", "loveSpicyEng", "loveSpringFlowerEng", "coupleCharacterEng", "loveSpeedEng", "loveCellEng", "speechHabitEng", "mbtiFeaturesEng", "bondeeEng", "loveWarningEng", "characteristicChracterEng", "meGuideEng", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
-        let CNTestList = ["emotionGraphCN", "loveInMyHeadCN", "loveSpicyCN", "cantWaitCN", "loveSpringFlowerCN", "coupleCharacterMaleCN", "coupleCharacterFemaleCN", "loveCellCN", "speechHabitCN", "bondeeCN", "loveFlameCN", "characteristicChracterCN", "loveWarningCN", "loveCharacterCN", "smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
-        let JPTestList = ["meOtherJP", "iPhoneMemoJP", "egoProfileJP", "deepOceanOutlawJP", "bloodTransfusionJP", "colorPaletteJP", "unlockMyHeartJP", "bubbleCharJP", "alienCharJP", "whyLoveJP", "charRoadJP", "scrapBookCharJP", "flowerGardenJP", "speechHabitJP", "loveFlameJP", "readyToBoneJP", "earthCharacteristicJP", "cantWaitJP", "puzzleLoveJP", "coupleCharacterJP","coupleCharacterMaleJP","coupleCharacterFemaleJP", "mbtiFeaturesJP", "loveCellJP", "emotionGraphJP", "polaroidCharacteristicJP", "loveTicketJP", "loveCharacterMaleJP", "loveCharacterFemaleJP", "loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP", "personalColorJP"];
-        let GerTestList = ["loveCharacterGer", "personalColorGer"];
-        let ESTestList = ["loveWarningES", "personalColorES"];
-        let ITTestList = ["coupleCharacterIT","coupleCharacterMaleIT","coupleCharacterFemaleIT", "loveCharacterMaleIT", "loveCharacterFemaleIT", "loveFlameIT", "characteristicChracterIT"];
-        let readyToBoneITList = ["readyToBoneIT"];
-        let characteristicChracterESList = ["characteristicChracterES"];
-        let characteristicChracterGerList = ["characteristicChracterGer",];
-        let labelStickerCNList = ["labelStickerCN"];
-        let labelStickerJPList = ["labelStickerJP"];
-        let percentageMBTI2022ListKor = ["percentageMBTI2022",];
-        let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
-        let mindFlowEngList = ["mindFlowEng"];
-        let albumPlayList = ["albumPlay"];
-        let hmallList = ['MALINGOETZ', 'gardenflower', 'hmall', 'labelStickerSKT'];
-        if(personalColor2022ListKor.includes(this.state.current_test)){
-            const jelling_outlink = "https://bit.ly/3FlwKMJ";
-            return(
-                <Fragment>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='https://ktestone.com/kapable.github.io/percentageMBTI2022/'
-                    className="to-ppl-banner-text"
-                    > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/percentageMBTI2022-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href='http://pf.kakao.com/_IxnRfb'
-                    className="to-ppl-banner-text"
-                    > <img loading="lazy" src={KAKAOPLUSFRIEND} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                    <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={jelling_outlink}
-                    className="to-ppl-banner-text"
-                    > <img loading="lazy" src={JELLINGBANNERKOR} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                </Fragment>
-            )
-        } else if (EngTestList.includes(this.state.current_test)) {
-            const rederTestList = ["mindFlowEng", "meOtherEng", "egoProfileEng", "iPhoneMemoEng",];
-            return(
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (percentageMBTI2022ListKor.includes(this.state.current_test)) {
-            const rederTestList = ["paints", "memo", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "personalColor2022", "personalColor"];
-            return(
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (percentageMBTI2022ListOverseas.includes(this.state.current_test)) {
-            const rederTestList = ["fishShapedBunEng", "personalColor2022Eng", "personalColorEng"];
-            return(
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (mindFlowEngList.includes(this.state.current_test)) {
-            const rederTestList = ["meOtherEng", "egoProfileEng", "iPhoneMemoEng", "colorPaletteEng", "alienCharEng",];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (albumPlayList.includes(this.state.current_test)) {
-            const rederTestList = ["cherryBlossomLove", "monsterAttack", "blockYou", "keyboardChar", "knitting", "colorWoodstick", ];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (CNTestList.includes(this.state.current_test)) {
-            const rederTestList = ["labelStickerCN", "emotionGraphCN", "cloudLoveCN",];
-            return(
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (JPTestList.includes(this.state.current_test)) {
-            const rederTestList = ["meOtherJP", "iPhoneMemoJP", "egoProfileJP"];
-            return(
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (ESTestList.includes(this.state.current_test)) {
-            const rederTestList = ["characteristicChracterES", "smileColorTestES", "loveWarningES", "loveCharacterES"];
-            return(
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (GerTestList.includes(this.state.current_test)) {
-            const rederTestList = ["characteristicChracterGer", "loveCharacterGer", "personalColorGer"];
-            return(
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (ITTestList.includes(this.state.current_test)) {
-            const rederTestList = ["readyToBoneIT", "loveFlameIT", "characteristicChracterIT"];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (readyToBoneITList.includes(this.state.current_test)) {
-            const rederTestList = ["loveCharacterIT", "loveFlameIT", "characteristicChracterIT",];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (characteristicChracterESList.includes(this.state.current_test)) {
-            const rederTestList = ["smileColorTestES", "loveWarningES", "loveCharacterES"];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (labelStickerCNList.includes(this.state.current_test)) {
-            const rederTestList = ["emotionGraphCN", "cloudLoveCN", "loveMagazineCN",];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (characteristicChracterGerList.includes(this.state.current_test)) {
-            const rederTestList = ["loveCharacterGer", "personalColorGer"];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (labelStickerJPList.includes(this.state.current_test)) {
-            const rederTestList = ["iPhoneMemoJP", "egoProfileJP", "deepOceanOutlawJP",];
-            return (
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        } else if (hmallList.includes(this.state.current_test)) {
-            return null;
-        } else {
-            const rederTestList = ["cherryBlossomLove", "monsterAttack", "blockYou", "keyboardChar", "knitting",];
-            return(
-                <Fragment>
-                    {rederTestList.map((test) => (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client="ca-pub-2382342018701919"
-                                slot="6832785479"
-                                format="auto"
-                                responsive="true"
-                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                            />
-                        </Fragment>
-                    ))}
-                </Fragment>
-            )
-        }
+        const current_test_info = TESTS.find((test) => test.info.mainUrl === this.state.current_test);
+        const current_lang = current_test_info.info.lang
+        const bottom_test_list = TESTS.filter((item) => (item.info.lang === current_lang && item.info.mainUrl !== current_test_info.info.mainUrl));
+        const bottom_test_name_list =bottom_test_list.map((li) => li.info.mainUrl);
+        // let personalColor2022ListKor = [];
+        // let EngTestList = ["meOtherEng", "egoProfileEng", "iPhoneMemoEng", "colorPaletteEng", "bubbleCharEng", "alienCharEng", "loveLotteryEng", "loveTVEng", "rainDropEng", "digitalCharEng", "postCardEng", "mazeHeartEng", "colorLabelStickerEng", "DIYEng", "labelStickerEng", "earthCharacteristicEng", "polaroidCharacteristicEng", "labelStickerLoveEng", "loveMagazineEng", "loveInMyHeadEng", "loveSpicyEng", "loveSpringFlowerEng", "coupleCharacterEng", "loveSpeedEng", "loveCellEng", "speechHabitEng", "mbtiFeaturesEng", "bondeeEng", "loveWarningEng", "characteristicChracterEng", "meGuideEng", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
+        // let CNTestList = ["emotionGraphCN", "loveInMyHeadCN", "loveSpicyCN", "cantWaitCN", "loveSpringFlowerCN", "coupleCharacterMaleCN", "coupleCharacterFemaleCN", "loveCellCN", "speechHabitCN", "bondeeCN", "loveFlameCN", "characteristicChracterCN", "loveWarningCN", "loveCharacterCN", "smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
+        // let JPTestList = ["meOtherJP", "iPhoneMemoJP", "egoProfileJP", "deepOceanOutlawJP", "bloodTransfusionJP", "colorPaletteJP", "unlockMyHeartJP", "bubbleCharJP", "alienCharJP", "whyLoveJP", "charRoadJP", "scrapBookCharJP", "flowerGardenJP", "speechHabitJP", "loveFlameJP", "readyToBoneJP", "earthCharacteristicJP", "cantWaitJP", "puzzleLoveJP", "coupleCharacterJP","coupleCharacterMaleJP","coupleCharacterFemaleJP", "mbtiFeaturesJP", "loveCellJP", "emotionGraphJP", "polaroidCharacteristicJP", "loveTicketJP", "loveCharacterMaleJP", "loveCharacterFemaleJP", "loveWarningJP", "meGuideJP", "smileColorTestJP", "flowerBTIJP", "auditionBTIJp", "percentageMBTI2022JP", "oneSidedLoveJP", "dringkingHabitJP", "personalColorJP"];
+        // let GerTestList = ["loveCharacterGer", "personalColorGer"];
+        // let ESTestList = ["loveWarningES", "personalColorES"];
+        // let ITTestList = ["coupleCharacterIT","coupleCharacterMaleIT","coupleCharacterFemaleIT", "loveCharacterMaleIT", "loveCharacterFemaleIT", "loveFlameIT", "characteristicChracterIT"];
+        // let readyToBoneITList = ["readyToBoneIT"];
+        // let characteristicChracterESList = ["characteristicChracterES"];
+        // let characteristicChracterGerList = ["characteristicChracterGer",];
+        // let labelStickerCNList = ["labelStickerCN"];
+        // let labelStickerJPList = ["labelStickerJP"];
+        // let percentageMBTI2022ListKor = ["percentageMBTI2022",];
+        // let percentageMBTI2022ListOverseas = ["percentageMBTI2022Eng","percentageMBTI2022Cn"];
+        // let mindFlowEngList = ["mindFlowEng"];
+        // let albumPlayList = ["albumPlay"];
+        // let hmallList = ['MALINGOETZ', 'gardenflower', 'hmall', 'labelStickerSKT'];
+        // if(personalColor2022ListKor.includes(this.state.current_test)){
+        //     const jelling_outlink = "https://bit.ly/3FlwKMJ";
+        //     return(
+        //         <Fragment>
+        //             <a
+        //             target="_blank"
+        //             rel="noopener noreferrer"
+        //             href='https://ktestone.com/kapable.github.io/percentageMBTI2022/'
+        //             className="to-ppl-banner-text"
+        //             > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/percentageMBTI2022-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //             <a
+        //             target="_blank"
+        //             rel="noopener noreferrer"
+        //             href='http://pf.kakao.com/_IxnRfb'
+        //             className="to-ppl-banner-text"
+        //             > <img loading="lazy" src={KAKAOPLUSFRIEND} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //             <a
+        //             target="_blank"
+        //             rel="noopener noreferrer"
+        //             href={jelling_outlink}
+        //             className="to-ppl-banner-text"
+        //             > <img loading="lazy" src={JELLINGBANNERKOR} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //         </Fragment>
+        //     )
+        // } else if (EngTestList.includes(this.state.current_test)) {
+        //     const rederTestList = ["mindFlowEng", "meOtherEng", "egoProfileEng", "iPhoneMemoEng",];
+        //     return(
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (percentageMBTI2022ListKor.includes(this.state.current_test)) {
+        //     const rederTestList = ["paints", "memo", "waterLove", "fortuneCookie", "musicNote", "bread2023", "luckyBag2023", "personalColor2022", "personalColor"];
+        //     return(
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (percentageMBTI2022ListOverseas.includes(this.state.current_test)) {
+        //     const rederTestList = ["fishShapedBunEng", "personalColor2022Eng", "personalColorEng"];
+        //     return(
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (mindFlowEngList.includes(this.state.current_test)) {
+        //     const rederTestList = ["meOtherEng", "egoProfileEng", "iPhoneMemoEng", "colorPaletteEng", "alienCharEng",];
+        //     return (
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (albumPlayList.includes(this.state.current_test)) {
+        //     const rederTestList = ["cherryBlossomLove", "monsterAttack", "blockYou", "keyboardChar", "knitting", "colorWoodstick", ];
+        //     return (
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (CNTestList.includes(this.state.current_test)) {
+        //     const rederTestList = ["labelStickerCN", "emotionGraphCN", "cloudLoveCN",];
+        //     return(
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (JPTestList.includes(this.state.current_test)) {
+        //     const rederTestList = ["meOtherJP", "iPhoneMemoJP", "egoProfileJP"];
+        //     return(
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (ESTestList.includes(this.state.current_test)) {
+        //     const rederTestList = ["characteristicChracterES", "smileColorTestES", "loveWarningES", "loveCharacterES"];
+        //     return(
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (GerTestList.includes(this.state.current_test)) {
+        //     const rederTestList = ["characteristicChracterGer", "loveCharacterGer", "personalColorGer"];
+        //     return(
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (ITTestList.includes(this.state.current_test)) {
+        //     const rederTestList = ["readyToBoneIT", "loveFlameIT", "characteristicChracterIT"];
+        //     return (
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (readyToBoneITList.includes(this.state.current_test)) {
+        //     const rederTestList = ["loveCharacterIT", "loveFlameIT", "characteristicChracterIT",];
+        //     return (
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (characteristicChracterESList.includes(this.state.current_test)) {
+        //     const rederTestList = ["smileColorTestES", "loveWarningES", "loveCharacterES"];
+        //     return (
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (labelStickerCNList.includes(this.state.current_test)) {
+        //     const rederTestList = ["emotionGraphCN", "cloudLoveCN", "loveMagazineCN",];
+        //     return (
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (characteristicChracterGerList.includes(this.state.current_test)) {
+        //     const rederTestList = ["loveCharacterGer", "personalColorGer"];
+        //     return (
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (labelStickerJPList.includes(this.state.current_test)) {
+        //     const rederTestList = ["iPhoneMemoJP", "egoProfileJP", "deepOceanOutlawJP",];
+        //     return (
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // } else if (hmallList.includes(this.state.current_test)) {
+        //     return null;
+        // } else {
+        //     const rederTestList = ["cherryBlossomLove", "monsterAttack", "blockYou", "keyboardChar", "knitting",];
+        //     return(
+        //         <Fragment>
+        //             {rederTestList.map((test) => (
+        //                 <Fragment key={test + '-test-key'}>
+        //                     <a
+        //                         target="_blank"
+        //                         rel="noopener noreferrer"
+        //                         href={`https://ktestone.com/kapable.github.io/${test}/`}
+        //                         className="to-ppl-banner-text"
+        //                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+        //                     <AdsenseAdvertiser
+        //                         key={test+'-adsense'}
+        //                         client="ca-pub-2382342018701919"
+        //                         slot="6832785479"
+        //                         format="auto"
+        //                         responsive="true"
+        //                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+        //                     />
+        //                 </Fragment>
+        //             ))}
+        //         </Fragment>
+        //     )
+        // }
+        return(
+            <Fragment>
+                {bottom_test_name_list.map((test) => (
+                    <Fragment key={test + '-test-key'}>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={`https://ktestone.com/kapable.github.io/${test}/`}
+                            className="to-ppl-banner-text"
+                            > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                        <AdsenseAdvertiser
+                            key={test+'-adsense'}
+                            client="ca-pub-2382342018701919"
+                            slot="6832785479"
+                            format="auto"
+                            responsive="true"
+                            style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+                        />
+                    </Fragment>
+                ))}
+            </Fragment>
+        )
     };
 
     introPageRender(){
@@ -859,18 +885,6 @@ class Result extends Component {
     };
 
     adTagRenderer(){
-        return(
-            <Fragment>
-                <div id="protag-in_article_video"></div>
-                    <ScriptTag type="text/javascript">
-                        {`window.googletag = window.googletag || { cmd: [] };
-                        window.protag = window.protag || { cmd: [] };
-                        window.protag.cmd.push(function () {
-                            window.protag.display("protag-in_article_video");
-                        });`}
-                    </ScriptTag>
-            </Fragment>
-        )
     };
 
     affiliateRenderer(){
