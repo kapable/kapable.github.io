@@ -8,13 +8,13 @@ import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
+import { reloadPage } from '../../tools/tools';
 
 function MainPage(props) {
     const { state } = useLocation();
     const [currentCategory, setCurrentCategory] = useState(state?.currentCategory);
-    const [isAdsenseTrue, setIsAdsenseTrue] = useState(false);
     useEffect(() => {
-        setIsAdsenseTrue(true);
+        reloadPage();
     }, []);
     return (
         <Fragment>
@@ -27,13 +27,13 @@ function MainPage(props) {
             {/* Category Converting */}
             <CategoryIconsMain lang={props?.lang} setCurrentCategory={setCurrentCategory} />
 
-            {isAdsenseTrue ? (<AdsenseAdvertiser
+            <AdsenseAdvertiser
                 client="ca-pub-2382342018701919"
                 slot="2858791575"
                 format="auto"
                 responsive="true"
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
-            />)  : null}
+            />
 
             {/* FIFTEEN AI IMG GEN */}
             {/* {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "ai") ? (
