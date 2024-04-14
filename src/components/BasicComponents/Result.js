@@ -457,7 +457,7 @@ class Result extends Component {
                 </Fragment>
             )
         } else if (EngTestList.includes(this.state.current_test)) {
-            const rederTestList = ["albumPlay", "mindFlowEng", "meOtherEng", "egoProfileEng", "iPhoneMemoEng",];
+            const rederTestList = ["mindFlowEng", "meOtherEng", "egoProfileEng", "iPhoneMemoEng",];
             return(
                 <Fragment>
                     {rederTestList.map((test) => (
@@ -1725,8 +1725,8 @@ class Result extends Component {
         return(
             <Router >
                 <Switch>
-                    <Route path={`/${current_test_lang}`} component={App} exact/>
-                    <Redirect to={`/${current_test_lang}`} />
+                    <Route path={`/${current_test_lang}/`} component={App} exact/>
+                    <Redirect to={`/${current_test_lang}/`} />
                 </Switch>
             </Router>
         )

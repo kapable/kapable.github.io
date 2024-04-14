@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { Link, useLocation, withRouter } from 'react-router-dom';
 import OhterLangIconsMain from '../SubComponents/OhterLangIconsMain';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
@@ -8,13 +8,13 @@ import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
-import { reloadPage } from '../../tools/tools';
 
 function MainPage(props) {
     const { state } = useLocation();
     const [currentCategory, setCurrentCategory] = useState(state?.currentCategory);
-    useState(() => {
-        reloadPage();
+    const [isAdsenseTrue, setIsAdsenseTrue] = useState(false);
+    useEffect(() => {
+        setIsAdsenseTrue(true);
     }, []);
     return (
         <Fragment>
@@ -27,13 +27,13 @@ function MainPage(props) {
             {/* Category Converting */}
             <CategoryIconsMain lang={props?.lang} setCurrentCategory={setCurrentCategory} />
 
-            <AdsenseAdvertiser
+            {isAdsenseTrue ? (<AdsenseAdvertiser
                 client="ca-pub-2382342018701919"
                 slot="2858791575"
                 format="auto"
                 responsive="true"
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
-            />
+            />)  : null}
 
             {/* FIFTEEN AI IMG GEN */}
             {/* {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "ai") ? (
@@ -87,7 +87,8 @@ function MainPage(props) {
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
-                                <AdsenseAdvertiser
+                                {isAdsenseTrue ?(
+                                    <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client="ca-pub-2382342018701919"
                                     slot="3780210756"
@@ -95,6 +96,7 @@ function MainPage(props) {
                                     responsive="true"
                                     style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
                                 />
+                                ) : null}
                             </Fragment>
                         )
                     } else {
@@ -174,7 +176,8 @@ function MainPage(props) {
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
-                                <AdsenseAdvertiser
+                                {isAdsenseTrue ? (
+                                    <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client="ca-pub-2382342018701919"
                                     slot="3780210756"
@@ -182,6 +185,7 @@ function MainPage(props) {
                                     responsive="true"
                                     style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
                                 />
+                                ) : null}
                             </Fragment>
                         )
                     } else {
@@ -245,7 +249,8 @@ function MainPage(props) {
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
-                                <AdsenseAdvertiser
+                                {isAdsenseTrue ? (
+                                    <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client="ca-pub-2382342018701919"
                                     slot="3780210756"
@@ -253,6 +258,7 @@ function MainPage(props) {
                                     responsive="true"
                                     style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
                                 />
+                                ) : null}
                             </Fragment>
                         )
                     } else {
