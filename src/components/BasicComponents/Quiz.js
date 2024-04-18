@@ -8,7 +8,6 @@ class Quiz extends Component {
         super(props)
         this.state = {
             quizCount:0,
-            originAdProb: 0.35 < Math.random(),
         }
     }
     // the function below is for option randomize
@@ -150,11 +149,33 @@ class Quiz extends Component {
             )
         }
     }
+    adsenseRenderer(idx) {
+        if (idx === 1) {
+            return(
+                <AdsenseAdvertiser
+                    client={`ca-pub-2382342018701919`}
+                    slot={"5663135072"}
+                    format="auto"
+                    responsive="true"
+                />
+            )
+        } else {
+            return(
+                <AdsenseAdvertiser
+                    client={`ca-pub-5142864985628271`}
+                    slot={"7281907187"}
+                    format="auto"
+                    responsive="true"
+                />
+            )
+        }
+    }
     render(){
         
         return(
             <Fragment>
-                {this.pplTopbannerRenderer()}
+                {/* {this.pplTopbannerRenderer()} */}
+                {this.adsenseRenderer(1)}
                 <Question question={this.props.qAndA[this.props.quizNum].question}></Question>
                 {/* In case of Quiz with Image Options */}
                 <Fragment>
@@ -164,6 +185,7 @@ class Quiz extends Component {
                     {this.renderAnswerOptions()}
                 </div>
                 <QuestionCount totalCount={this.props.qAndA.length} quizCount={this.state.quizCount}></QuestionCount>
+                {this.adsenseRenderer(2)}
             </Fragment>
         );
     }
