@@ -917,9 +917,9 @@ class Result extends Component {
                     <div className='article-adCover-div-3'>
                         <p><b><span style={{color:"#4185F4"}}>콘텐츠를 보기 전</span> 쿠팡 쇼핑을 해보세요</b></p>
                         <div><p style={{ fontSize: '0.7rem' }}>쿠팡 방문은 케이테스트가 항상 질좋은 콘텐츠를 제공할 수 있는 힘이 됩니다.<br />항상 케이테스트 콘텐츠를 사랑해주셔서 감사합니다.</p></div>
-                        <p style={{ fontSize: "0.6rem", width: this.state.coupangCount === 0 ? "5.7rem" : "0.7rem", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)", position:"absolute", right:"0rem", bottom: "-2rem" }}>
+                        <p style={{ fontSize: "0.6rem", width: "0.8rem", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)", position:"absolute", right:"0rem", top: "0" }}>
                             {this.state.startTimer ? (
-                                    this.state.coupangCount === 0 ? <span style={{color:'white', cursor:'pointer'}} onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}><b>광고 건너뛰기 &rarr;|</b></span> : this.state.coupangCount
+                                    this.state.coupangCount === 0 ? <span style={{color:'white', cursor:'pointer'}} onClick={this.state.coupangCount === 0 ? this.onCoupangCloseButtonClick : null}><b>x</b></span> : this.state.coupangCount
                             ) :null}
                         </p>
                         <a href={testsArray.includes(this.state.current_test) && otherAdProb ? othersLink.find((item) => item?.test === this.state.current_test)?.coupangLink : cookieRocketCoupangLink} target="_blank" rel='noreferrer noopener'>
