@@ -8,6 +8,7 @@ class Quiz extends Component {
         super(props)
         this.state = {
             quizCount:0,
+            originAdProb: 0.35 < Math.random(),
         }
     }
     // the function below is for option randomize
@@ -141,8 +142,8 @@ class Quiz extends Component {
         } else {
             return(
                 <AdsenseAdvertiser
-                    client="ca-pub-2382342018701919"
-                    slot="5663135072"
+                    client={`ca-pub-${this.state.originAdProb ? "2382342018701919" : "5142864985628271"}`}
+                    slot={this.state.originAdProb ? "5663135072" : "7281907187"}
                     format="auto"
                     responsive="true"
                 />

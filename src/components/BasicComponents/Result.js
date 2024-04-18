@@ -53,6 +53,7 @@ class Result extends Component {
             aliCookies: Cookies.get('ali') || null,
             isAliOpened: true,
             originAdProb: 0.65 < Math.random(),
+            originAdsProb: 0.35 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
             coupangCount: 5,
@@ -857,14 +858,14 @@ class Result extends Component {
                             href={`https://ktestone.com/kapable.github.io/${test}/`}
                             className="to-ppl-banner-text"
                             > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                        <AdsenseAdvertiser
-                            key={test+'-adsense'}
-                            client="ca-pub-2382342018701919"
-                            slot="6832785479"
-                            format="auto"
-                            responsive="true"
-                            style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                        />
+                            <AdsenseAdvertiser
+                                key={test+'-adsense'}
+                                client={`ca-pub-${this.state.originAdsProb ? "2382342018701919" : "5142864985628271"}`}
+                                slot={this.state.originAdsProb ? "6832785479" : "7947271538"}
+                                format="auto"
+                                responsive="true"
+                                style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+                            />
                     </Fragment>
                 ))}
             </Fragment>
@@ -1762,8 +1763,8 @@ class Result extends Component {
                     {/* Adsense */}
                     {/* {ppl_list.includes(this.state.current_test) ? null  : } */}
                     <AdsenseAdvertiser
-                        client="ca-pub-2382342018701919"
-                        slot="9580326529"
+                        client={`ca-pub-${this.state.originAdsProb ? "2382342018701919" : "5142864985628271"}`}
+                        slot={this.state.originAdsProb ? "9580326529" : "6783213734"}
                         format="auto"
                         responsive="true"
                         style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
@@ -1793,8 +1794,8 @@ class Result extends Component {
 
                     <OtherLangIcons currentTest={this.state.current_test}/>
                     {ppl_list.includes(this.state.current_test) ? null  : <AdsenseAdvertiser
-                        client="ca-pub-2382342018701919"
-                        slot="5663135072"
+                        client={`ca-pub-${this.state.originAdsProb ? "2382342018701919" : "5142864985628271"}`}
+                        slot={this.state.originAdsProb ? "5663135072" : "7281907187"}
                         format="auto"
                         responsive="true"
                     />}
