@@ -51,7 +51,7 @@ class Result extends Component {
             coupangCookies: Cookies.get('coupang') || null,
             isOpened: false,
             aliCookies: Cookies.get('ali') || null,
-            isAliOpened: false,
+            isAliOpened: true,
             originAdProb: 0.65 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
