@@ -35,8 +35,6 @@ import LifeInterpreting from './components/TestTypes/Saju/LifeInterpreting';
 import LifeInterpretingResult from './components/TestTypes/Saju/LifeInterpretingResult';
 import Privacy from './components/BasicComponents/Privacy';
 import { withCookies } from 'react-cookie';
-import { onClickLogin, verifyAccessToken, getRefreshedToken } from './tools/tools';
-import { onCreateUser } from './tools/aiImgTools';
 import MyPage from './components/BasicComponents/Users/MyPage';
 
 class App extends Component {
@@ -87,21 +85,6 @@ class App extends Component {
       ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
       lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'ES', 'IT', 'Rus' ,'Others'],
       category_list:['saju', 'characteristic', 'love', 'ai', 'etc'],
-      isLoggedIn: false,
-      aiImgGenLists: [
-          { type: 'fifteenTheme', langs: [
-            {route:'', title:'케이테스트 AI 피프틴 테마', desc:'다양한 15가지 타입의 사진이 출력 됩니다'},
-            {route:'Eng', title:'Ktest AI Fifteen Theme', desc:'Output 15 different types of photos'},
-            {route:'JP', title:'KTEST AI Fifteen テーマ', desc:'様々な15種類の写真が出力されます。'}] },
-          { type: 'colorFiveTheme', langs: [
-            {route:'', title:'케이테스트 AI 컬러파이브 테마', desc:'5가지 컬러의 사진이 출력 됩니다'},
-            {route:'Eng', title:'Ktest AI ColorFive Theme', desc:'Output 5 different types of photos'},
-            {route:'JP', title:'KTEST AI ColorFive テーマ', desc:'様々な5種類の写真が出力されます。'}] },
-          { type: 'magazineTheme', langs: [
-            {route:'', title:'케이테스트 AI 매거진 테마', desc:'총 60장의 다양한 매거진 테마의 사진이 출력 됩니다'},
-            {route:'Eng', title:'KTEST AI Magazine Theme', desc:'60 different magazine themed photos will be printed'},
-            {route:'JP', title:'KTESTマガジンテーマ', desc:'計60枚の多様なマガジンテーマの写真が出力されます。'}] }
-        ],
     }
     this.each_lang_renderer = this.each_lang_renderer.bind(this);
     this.lang_category_renderer = this.lang_category_renderer.bind(this);
@@ -109,19 +92,6 @@ class App extends Component {
     this.mainMetaTagRenderer = this.mainMetaTagRenderer.bind(this);
     this.onClickLogout = this.onClickLogout.bind(this);
   }
-  
-  componentDidUpdate() {
-    // if only logged-In case -> USER DB check
-    let parsedUrl = new URL(window.location.href);
-    const accessToken = parsedUrl.searchParams.get("access_token");
-    if(accessToken) {
-      verifyAccessToken(accessToken)
-      .then(res => {        
-        // create user in KTEST USER DB
-        onCreateUser(res.userId, res.email);
-      });
-    };
-  };
 
   componentDidMount (){
     ReactGA4.initialize([
@@ -132,57 +102,6 @@ class App extends Component {
         }
       }
     ]);
-
-    // about Logged-In
-    let parsedUrl = new URL(window.location.href);
-    const accessToken = parsedUrl.searchParams.get("access_token");
-    const refreshToken = parsedUrl.searchParams.get("refresh_token");
-    const { cookies } = this.props;
-
-    try {
-      if (accessToken || refreshToken) {
-        const accessTokenCookieAges = 60*60*2; // 2 Hours
-        cookies.set('accessToken', accessToken, { path: '/', maxAge: accessTokenCookieAges, secure: true });
-        const refreshTokenCookieAges = 60*60*24*60; // 60 Days
-        cookies.set('refreshToken', refreshToken, { path: '/', maxAge: refreshTokenCookieAges, secure: true });
-
-        this.setState({
-          isLoggedIn: true,
-        });
-      } else if (cookies.get('accessToken')) {
-        // accessToken validation (related to Expiration)
-        verifyAccessToken(cookies.get('accessToken'))
-        .then(res => {
-          if(res) { // if valid -> isLoggedIn : true
-            this.setState({
-              isLoggedIn: true,
-            });
-          } else if (cookies.get('refreshToken')) { // else if expired & refreshToken exist -> refreshToken for new accessToken
-            getRefreshedToken(cookies.get('refreshToken'))
-            .then(res => {
-              const accessTokenCookieAges = 60*60*2; // 2 Hours
-              cookies.set('accessToken', res, { path: '/', maxAge: accessTokenCookieAges, secure: true });
-              this.setState({
-                isLoggedIn: true,
-              });
-            })
-          }
-        });
-      } else if (cookies.get('refreshToken')) { // if only the refreshToken exist -> refreshToken for new accessToken
-        getRefreshedToken(cookies.get('refreshToken'))
-        .then(res => {
-          const accessTokenCookieAges = 60*60*2; // 2 Hours
-          cookies.set('accessToken', res, { path: '/', maxAge: accessTokenCookieAges, secure: true });
-          this.setState({
-            isLoggedIn: true,
-          });
-        })
-      }
-    } catch {
-      alert("에러가 발생했습니다 ㅠㅠ");
-      window.location.href = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
-    }
-
   }
   all_lang_renderer(){
     let i = 0;
@@ -343,12 +262,6 @@ class App extends Component {
     return(
     <Router>
     <Fragment>
-
-      {/* CPC Banner Upper */}
-      {/* {this.cpcBannerUpperScriptor()} */}
-
-      {/* <div id="optadATF" style={{"minHeight": "110px"}}></div> */}
-
       <Router basename='/kapable.github.io/'>
         <ScrollToTop>
           <Switch>
@@ -408,28 +321,6 @@ class App extends Component {
             <Route path='/post2022Eng/:username/postwrite/' component={() => <POSTWRITE language={`Eng`}/>} />
             <Route path='/post2022Eng/:username/' component={() => <POSTPOST language={`Eng`}/>} />
             <Route path ='/post2022Eng/' component={() => <POSTSTART language={`Eng`}/>}/>
-
-            {/* AI Image Gen page */}
-            {/* {this.state.aiImgGenLists.map((concept) => (
-              concept.langs.map((lang) => (
-                <Route path={'/' + concept.type + lang.route} component={() => <MbtiImgGenT conceptType={concept.type} lang={lang} />} exact/>
-              ))
-            ))}
-            {this.state.aiImgGenLists.map((concept) => (
-              concept.langs.map((lang) => (
-                <Route path={'/' + concept.type + lang.route + '/upload'} component={() => <MbtiImgGenUploadT conceptType={concept.type} lang={lang} />} exact/>
-              ))
-            ))}
-            {this.state.aiImgGenLists.map((concept) => (
-              concept.langs.map((lang) => (
-                <Route path={'/' + concept.type + lang.route + '/complete'} component={() => <MbtiImgGenCompleteT conceptType={concept.type} lang={lang} />} exact/>
-              ))
-            ))}
-            {this.state.aiImgGenLists.map((concept) => (
-              concept.langs.map((lang) => (
-                <Route path={'/' + concept.type + lang.route + '/check'} component={() => <MbtiImgGenCheckT conceptType={concept.type} lang={lang} />} exact/>
-              ))
-            ))} */}
 
             {/* "Main" page */}
             <Route path='/' exact>
@@ -522,10 +413,6 @@ class App extends Component {
           </Switch>
         </ScrollToTop>
       </Router>
-
-      {/* CPC Banner footer */}
-      {/* {this.cpcBannerFooterScriptor()} */}
-
       {/* footer */}
       {/* BIZ INFO */}
       <div className="intro-footer">
@@ -546,12 +433,6 @@ class App extends Component {
             href={'https://ktestone.com/privacy'}
         >개인정보 처리방침</a></p>
       </div>
-      {this.state.isLoggedIn ?
-        <img onClick={() =>
-          // this.onClickLogout()}
-          {window.location.href = window.origin + '/myPage/'}}
-          style={{cursor: "pointer", position: 'fixed', bottom: '20px', right: '20px'}} src='https://images.ktestone.com/default/logged-in-btn.png' alt='logged-in-btn'/> :
-        <img style={{cursor: "pointer", position: 'fixed', bottom: '20px', right: '20px'}} onClick={() => onClickLogin(window.location)} src='https://images.ktestone.com/default/log-in-btn.png' alt='log-in-btn'/>}
     </Fragment>
     </Router>
     )
