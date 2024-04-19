@@ -194,12 +194,12 @@ class Intro extends Component {
                         format="auto"
                         responsive="true"
                     />
-                    <AdsenseAdvertiser
+                    {/* <AdsenseAdvertiser
                         client={`ca-pub-5142864985628271`}
                         slot={"7281907187"}
                         format="auto"
                         responsive="true"
-                    />
+                    /> */}
 
                     {/* CPC Banner Intro footer */}
                     {/* {this.cpcBannerIntroFooterScriptor()} */}

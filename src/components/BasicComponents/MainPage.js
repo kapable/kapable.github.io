@@ -36,13 +36,13 @@ function MainPage(props) {
                 responsive="true"
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
             />
-            <AdsenseAdvertiser
+            {/* <AdsenseAdvertiser
                 client={`ca-pub-5142864985628271`}
                 slot={"7281907187"}
                 format="auto"
                 responsive="true"
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
-            />
+            /> */}
 
             {/* FIFTEEN AI IMG GEN */}
             {/* {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "ai") ? (
@@ -97,23 +97,8 @@ function MainPage(props) {
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
                                 <AdsenseAdvertiser
-                                    client={`ca-pub-2382342018701919`}
-                                    slot={"5663135072"}
-                                    format="auto"
-                                    responsive="true"
-                                    style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
-                                />
-                            </Fragment>
-                        )
-                    } else if(idx % 3 === 0) {
-                        return(
-                            <Fragment key={item[0].replaceAll('/','')+'fragment'}>
-                                <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                                    <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
-                                </Link>
-                                <AdsenseAdvertiser
-                                    client={`ca-pub-5142864985628271`}
-                                    slot={"7281907187"}
+                                    client={`ca-pub-2382342018701919`} //5142864985628271
+                                    slot={"5663135072"} //7281907187
                                     format="auto"
                                     responsive="true"
                                     style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
@@ -198,23 +183,8 @@ function MainPage(props) {
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
                                 <AdsenseAdvertiser
-                                    client={`ca-pub-2382342018701919`}
-                                    slot={"5663135072"}
-                                    format="auto"
-                                    responsive="true"
-                                    style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
-                                />
-                            </Fragment>
-                        )
-                    } else if(idx % 3 === 0) {
-                        return(
-                            <Fragment key={item[0].replaceAll('/','')+'fragment'}>
-                                <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                                    <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
-                                </Link>
-                                <AdsenseAdvertiser
-                                    client={`ca-pub-5142864985628271`}
-                                    slot={"7281907187"}
+                                    client={`ca-pub-2382342018701919`} //5142864985628271
+                                    slot={"5663135072"} //7281907187
                                     format="auto"
                                     responsive="true"
                                     style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
@@ -283,23 +253,8 @@ function MainPage(props) {
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
                                 <AdsenseAdvertiser
-                                    client={`ca-pub-2382342018701919`}
-                                    slot={"5663135072"}
-                                    format="auto"
-                                    responsive="true"
-                                    style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
-                                />
-                            </Fragment>
-                        )
-                    } else if(idx % 3 === 0) {
-                        return(
-                            <Fragment key={item[0].replaceAll('/','')+'fragment'}>
-                                <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
-                                    <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
-                                </Link>
-                                <AdsenseAdvertiser
-                                    client={`ca-pub-5142864985628271`}
-                                    slot={"7281907187"}
+                                    client={`ca-pub-2382342018701919`} //5142864985628271
+                                    slot={"5663135072"} //7281907187
                                     format="auto"
                                     responsive="true"
                                     style={{display:"inline-block",width:"100%",maxWidth:"450px"}}

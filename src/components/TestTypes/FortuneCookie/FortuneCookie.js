@@ -110,41 +110,22 @@ const FortuneCookie = () => {
         return(
             <Fragment>
                 {rederTestList.map((test, idx) => {
-                    if(idx % 2 === 0) {
-                        return (
-                            <div key={`${test}-key`}>
-                                <a
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                    className="to-ppl-banner-text"
-                                    > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={test} onClick={_onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                                <AdsenseAdvertiser
-                                    client={`ca-pub-2382342018701919`}
-                                    slot={"5663135072"}
-                                    format="auto"
-                                    responsive="true"
-                                />
-                            </div>
-                        )
-                    } else {
-                        return (
-                            <div key={`${test}-key`}>
-                                <a
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                    className="to-ppl-banner-text"
-                                    > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={test} onClick={_onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
-                                <AdsenseAdvertiser
-                                    client={`ca-pub-5142864985628271`}
-                                    slot={"7281907187"}
-                                    format="auto"
-                                    responsive="true"
-                                />
-                            </div>
-                        )
-                    }
+                    return (
+                        <div key={`${test}-key`}>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={test} onClick={_onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
+                            <AdsenseAdvertiser
+                                client={`ca-pub-2382342018701919`} //5142864985628271
+                                slot={"5663135072"} //7281907187
+                                format="auto"
+                                responsive="true"
+                            />
+                        </div>
+                    )
                 })}
             </Fragment>
         );

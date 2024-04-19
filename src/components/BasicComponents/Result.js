@@ -51,7 +51,7 @@ class Result extends Component {
             coupangCookies: Cookies.get('coupang') || null,
             isOpened: false,
             aliCookies: Cookies.get('ali') || null,
-            isAliOpened: true,
+            isAliOpened: false,
             originAdProb: 0.65 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
@@ -850,45 +850,24 @@ class Result extends Component {
         return(
             <Fragment>
                 {bottom_test_name_list.map((test, idx) => {
-                    if(idx % 2 === 0) {
-                        return (
-                            <Fragment key={test + '-test-key'}>
-                                <a
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                    className="to-ppl-banner-text"
-                                    > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                                    <AdsenseAdvertiser
-                                        key={test+'-adsense'}
-                                        client={`ca-pub-2382342018701919`}
-                                        slot={"5663135072"}
-                                        format="auto"
-                                        responsive="true"
-                                        style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                                    />
-                            </Fragment>
-                        )
-                    } else {
-                        return (
-                            <Fragment key={test + '-test-key'}>
-                                <a
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                    className="to-ppl-banner-text"
-                                    > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                                    <AdsenseAdvertiser
-                                        key={test+'-adsense'}
-                                        client={`ca-pub-5142864985628271`}
-                                        slot={"7281907187"}
-                                        format="auto"
-                                        responsive="true"
-                                        style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                                    />
-                            </Fragment>
-                        )
-                    }
+                    return (
+                        <Fragment key={test + '-test-key'}>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={`https://ktestone.com/kapable.github.io/${test}/`}
+                                className="to-ppl-banner-text"
+                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
+                                <AdsenseAdvertiser
+                                    key={test+'-adsense'}
+                                    client={`ca-pub-2382342018701919`} //5142864985628271
+                                    slot={"5663135072"} //7281907187
+                                    format="auto"
+                                    responsive="true"
+                                    style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+                                />
+                        </Fragment>
+                    )
                 })}
             </Fragment>
         )

@@ -141,8 +141,8 @@ class Quiz extends Component {
         } else {
             return(
                 <AdsenseAdvertiser
-                    client={`ca-pub-${this.state.originAdProb ? "2382342018701919" : "5142864985628271"}`}
-                    slot={this.state.originAdProb ? "5663135072" : "7281907187"}
+                    client={`ca-pub-2382342018701919`} //5142864985628271
+                    slot={"5663135072"} //7281907187
                     format="auto"
                     responsive="true"
                 />
@@ -174,8 +174,8 @@ class Quiz extends Component {
         
         return(
             <Fragment>
-                {/* {this.pplTopbannerRenderer()} */}
-                {this.adsenseRenderer(1)}
+                {this.pplTopbannerRenderer()}
+                {/* {this.adsenseRenderer(1)} */}
                 <Question question={this.props.qAndA[this.props.quizNum].question}></Question>
                 {/* In case of Quiz with Image Options */}
                 <Fragment>
@@ -185,7 +185,7 @@ class Quiz extends Component {
                     {this.renderAnswerOptions()}
                 </div>
                 <QuestionCount totalCount={this.props.qAndA.length} quizCount={this.state.quizCount}></QuestionCount>
-                {this.adsenseRenderer(2)}
+                {/* {this.adsenseRenderer(2)} */}
             </Fragment>
         );
     }
