@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Lottie from 'react-lottie';
 import * as loading from '../../../loading-animation.json';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import './colorPicker.css';
 import { Progress } from 'antd';
+import { useCookies } from 'react-cookie';
 
 const defaultOptions = {
     loop: true,
@@ -51,11 +52,12 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
     const [remainingTime, setRemainingTime] = useState(data.seconds);
     const [countdown, setCountdown] = useState(3);
     const [isPicking, setIsPicking] = useState(false);
-
-
-    const [isButtonClick, setIsButtonClick] = useState(false);
+    const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
 
     // INTRO Countdown
+    useEffect(() => {
+        setRemainingTime(data.seconds);
+    }, [data, setRemainingTime])
     useEffect(() => {
         if((data.round === 1) && !isReady) {
             let firstTimeout;
@@ -76,7 +78,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
         setRandomNum(Math.floor(Math.random() * (data.squares+1 - 1) + 1));
     }, [data]);
 
-    // TODO: TIME limit
+    // TIME limit
     useEffect(() => {
         if(!isPicking) {
             return;
@@ -87,55 +89,22 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
             setRemainingTime((prev) => prev - 0.1);
         }, 100);
 
-        return () => clearInterval(secondInterval);
+        if(-0.15 >= remainingTime) { // for progress-bar
+            alert('시간이 다 지났다요');
+            clearInterval(secondInterval);
+            return history.push('/colorPicker');
+        } else {
+            return () => clearInterval(secondInterval);
+        }
+    }, [data, isReady, isPicking, remainingTime, history]);
 
+    const onCoupangButtonClick = () => {
+        const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
+        // _eventSenderGA("Paging", "Click go-to-Coupang Button", "post page");
+        return setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true });
+    }
 
-
-        // let secondTimeout;
-        // if(isButtonClick) {
-        //     clearTimeout(secondTimeout);
-        //     clearInterval(secondInterval);
-        // }
-        // if(isReady && data) {
-        //     secondInterval = setInterval(() => {
-        //         setRemainingTime((prev) => prev -0.1);
-        //     }, 100);
-        //     secondTimeout = setTimeout(() => {
-        //         clearTimeout(secondTimeout);
-        //         clearInterval(secondInterval);
-        //         setRemainingTime(data.seconds)
-        //     }, 3000);
-        // }
-        // if(isReady) {
-            // let startTimeMS = 0;
-            // let timerId;
-            // let intervalId;
-            // let timerStep = 3000;
-            // let intervalStep = 100;
-            // startTimeMS =(new Date()).getTime();
-    
-            // intervalId = setInterval(() => {
-            //     if(timerStep - ((new Date()).getTime() - startTimeMS) <= 0 || isButtonClick) {
-            //         clearInterval(intervalId)
-            //     }
-            //     setRemainingTime(timerStep - ((new Date()).getTime() - startTimeMS));
-            //     // console.log(timerStep - ((new Date()).getTime() - startTimeMS));
-            // }, intervalStep);
-    
-            // timerId = setTimeout(() => {
-            //     clearTimeout(timerId);
-            //     clearInterval(intervalId)
-            //     return alert('시간 다됐다!');
-            // }, timerStep);
-            // if(isButtonClick) {
-            //     clearTimeout(timerId);
-            // }
-        // }
-    }, [data, isReady, isButtonClick, isPicking]);
-
-
-    const onButtonClick = (number) => {
-        setIsButtonClick(true);
+    const onButtonClick = useCallback((number) => {
         if(number === randomNum) {
             if(data.round === 10) {
                 setIsLoading(true);
@@ -144,13 +113,21 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                 }, 2500);
             } else {
                 setCurrentRound(data.round + 1);
-                setRemainingTime(data.seconds);
             }
         } else {
             // TODO: coupang cookie and go to start
-            return alert('틀렸다 너')
+            if(coupangCookies?.coupang) {
+                alert('틀렸어요. 처음부터 다시');
+                // TODO: onCoupangButtonClick to button onClick
+                return history.push('/colorPicker');
+            } else {
+                // TODO: coupang view banner
+                alert('쿠팡 보고 다시하기');
+                return history.push('/colorPicker');
+            }
         }
-    }
+    }, [coupangCookies, data.round, difficulty, history, randomNum, setCurrentRound, setIsLoading]);
+
     if(isReady) {
         if(isLoading) {
             return (
@@ -161,7 +138,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
         } else {
             return(
                 <div className='picker-background'>
-                    <Progress className='picker-progress' percent={remainingTime / data.seconds * 100} showInfo={false} />
+                    <Progress className='picker-progress' percent={(remainingTime) / data.seconds * 100} showInfo={false} />
                     {[...Array(parseInt(gridMatrix.rows))].map((_, row_num) => (
                         <div className='picker-row' key={`${row_num}-div`}>
                             {[...Array(parseInt(gridMatrix.cols))].map((_, col_num) => (

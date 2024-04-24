@@ -18,7 +18,7 @@ const difficulties = [
       {
         round: 2,
         squares: 8,
-        seconds: 3,
+        seconds: 6,
         normalColor: "green",
         uniqueColor: "red",
       },
@@ -252,6 +252,7 @@ const ColorPicking = () => {
       )
     }, [contents.rounds, currentRound])
   return (
+    // TODO: Design
     <div className='colorpicker-div' style={{padding: isLoading? '15rem 0' : null}}>
       {isLoading || !isReady ? null : (
         <div className='picker-header'>
@@ -278,4 +279,4 @@ const ColorPicking = () => {
   )
 }
 
-export default ColorPicking
+export default ColorPicking;

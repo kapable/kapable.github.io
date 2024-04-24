@@ -1,15 +1,15 @@
 import React from 'react'
-import './colorPicker.css';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import './colorPicker.css';
 
 const ColorPicker = () => {
-    const history = useHistory();
+  const history = useHistory();
 
-    const onButtonClick = (difficulty) => {
-      // TODO: direct start without intro?
-        return history.push(`/colorPicker/${difficulty}`, difficulty);
-    }
+  const onButtonClick = (difficulty) => {
+      return history.push(`/colorPicker/${difficulty}`, difficulty);
+  }
   return (
+    // TODO: Design
     <div>
         <h1>케이테스트 색감 테스트</h1>
         <p>중간에 틀리면 다시 처음으로 돌아가요</p>
@@ -23,4 +23,4 @@ const ColorPicker = () => {
   )
 }
 
-export default ColorPicker
+export default ColorPicker;
