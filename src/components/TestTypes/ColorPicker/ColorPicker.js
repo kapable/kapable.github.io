@@ -10,6 +10,7 @@ const ColorPicker = () => {
   }
   return (
     // TODO: Design
+    // TODO: add metatag
     <div>
         <h1>케이테스트 색감 테스트</h1>
         <p>중간에 틀리면 다시 처음으로 돌아가요</p>

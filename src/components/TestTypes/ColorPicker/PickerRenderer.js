@@ -43,7 +43,7 @@ const gridMatrixs = [
     },
 ]
 
-const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficulty, isReady, setIsReady}) => {
+const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficulty, isReady, setIsReady, totalRound}) => {
     const history = useHistory();
     const [randomNum, setRandomNum] = useState(Math.floor(Math.random() * (data.squares+1 - 1) + 1));
     const [gridMatrix, setGridMatrix] = useState(
@@ -89,14 +89,14 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
             setRemainingTime((prev) => prev - 0.1);
         }, 100);
 
-        if(-0.15 >= remainingTime) { // for progress-bar
+        if(-0.15 >= remainingTime && data.round !== totalRound) { // for progress-bar
             alert('시간이 다 지났다요');
             clearInterval(secondInterval);
             return history.push('/colorPicker');
         } else {
             return () => clearInterval(secondInterval);
         }
-    }, [data, isReady, isPicking, remainingTime, history]);
+    }, [data, isReady, isPicking, remainingTime, history, totalRound]);
 
     const onCoupangButtonClick = () => {
         const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
@@ -106,7 +106,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
 
     const onButtonClick = useCallback((number) => {
         if(number === randomNum) {
-            if(data.round === 10) {
+            if(data.round === totalRound) {
                 setIsLoading(true);
                 setTimeout(() => {
                     history.push(`/colorPicker/result/`, difficulty)
@@ -126,7 +126,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                 return history.push('/colorPicker');
             }
         }
-    }, [coupangCookies, data.round, difficulty, history, randomNum, setCurrentRound, setIsLoading]);
+    }, [coupangCookies.coupang, data.round, difficulty, history, randomNum, setCurrentRound, setIsLoading, totalRound]);
 
     if(isReady) {
         if(isLoading) {
@@ -158,7 +158,9 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
         }
     } else {
         return (
-            <div className='start-countdown-div'>{countdown}</div>
+            <div className='start-countdown-div'>
+                {countdown}
+            </div>
         )
     }
 }

@@ -268,6 +268,7 @@ const ColorPicking = () => {
         difficulty={contents.difficulty}
         isReady={isReady}
         setIsReady={setIsReady}
+        totalRound={contents.rounds.length}
       />
       {isLoading || !isReady ? null : (
         <>
