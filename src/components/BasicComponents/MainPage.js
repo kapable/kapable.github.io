@@ -8,6 +8,7 @@ import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
+import ScriptTag from 'react-script-tag'
 
 function MainPage(props) {
     const mainImgRef = useRef(null);
@@ -16,6 +17,20 @@ function MainPage(props) {
     useEffect(() => {
         return mainImgRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [mainImgRef]);
+    function adTagRenderer(){
+        return(
+            <Fragment>
+                <div id="protag-in_article_video"></div>
+                    <ScriptTag type="text/javascript">
+                        {`window.googletag = window.googletag || { cmd: [] };
+                        window.protag = window.protag || { cmd: [] };
+                        window.protag.cmd.push(function () {
+                            window.protag.display("protag-in_article_video");
+                        });`}
+                    </ScriptTag>
+            </Fragment>
+        )
+    }
     return (
         <Fragment>
             {/* Language Converting */}
@@ -290,6 +305,7 @@ function MainPage(props) {
 
             {/** Floating Button for KakaoPlusFriend */}
             <KakaoPlusFriendBtn />
+            {adTagRenderer()}
         </Fragment>
         
     );
