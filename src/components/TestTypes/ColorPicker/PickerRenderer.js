@@ -60,6 +60,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
     const [countdown, setCountdown] = useState(3);
     const [isPicking, setIsPicking] = useState(false);
     const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
+    const [isWrong, setIsWrong] = useState(false);
     const [wrongMessage, setWrongMessage] = useState('');
 
 
@@ -115,12 +116,15 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
         if(-0.15 >= remainingTime && data.round !== totalRound) { // for progress-bar
             clearInterval(secondInterval);
             setStartCoupangTimer(true);
-            setWrongMessage('시간이 다됐어요!');
-            // return history.push('/colorPicker');
+            if(isWrong) {
+                setWrongMessage('색감이 틀렸어요!');
+            } else {
+                setWrongMessage('시간이 다됐어요!');
+            }
         } else {
             return () => clearInterval(secondInterval);
         }
-    }, [data, isReady, isPicking, remainingTime, history, totalRound]);
+    }, [data, isReady, isPicking, remainingTime, history, totalRound, wrongMessage, isWrong]);
 
     const onCoupangButtonClick = useCallback(() => {
         const cookieAges = 60*60*2;
@@ -183,6 +187,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                 setRemainingTime(0);
                 setStartCoupangTimer(true);
                 setWrongMessage('색감이 틀렸어요!');
+                setIsWrong(true);
             }
         }
     }, [coupangCookies.coupang, data.round, difficulty, history, isOpened, randomNum, setCurrentRound, setIsLoading, totalRound]);
