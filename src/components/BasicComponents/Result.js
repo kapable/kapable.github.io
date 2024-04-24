@@ -887,7 +887,19 @@ class Result extends Component {
     };
 
     adTagRenderer(){
-    };
+        return(
+            <Fragment>
+                <div id="protag-in_article_video"></div>
+                    <ScriptTag type="text/javascript">
+                        {`window.googletag = window.googletag || { cmd: [] };
+                        window.protag = window.protag || { cmd: [] };
+                        window.protag.cmd.push(function () {
+                            window.protag.display("protag-in_article_video");
+                        });`}
+                    </ScriptTag>
+            </Fragment>
+        )
+    }
 
     affiliateRenderer(){
         const cookieRocketCoupangLink = this.state.originAdProb ? "https://link.coupang.com/a/X2X8X" : "https://link.coupang.com/a/bcQpxX";

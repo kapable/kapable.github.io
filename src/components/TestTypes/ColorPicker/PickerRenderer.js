@@ -2,9 +2,10 @@ import React, { useCallback, useEffect, useState } from 'react'
 import Lottie from 'react-lottie';
 import * as loading from '../../../loading-animation.json';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-import './colorPicker.css';
 import { Progress } from 'antd';
 import { useCookies } from 'react-cookie';
+import { _eventSenderGA } from '../../../tools/tools';
+import './colorPicker.css';
 
 const defaultOptions = {
     loop: true,
@@ -45,6 +46,12 @@ const gridMatrixs = [
 
 const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficulty, isReady, setIsReady, totalRound}) => {
     const history = useHistory();
+    const [isOpened, setIsOpened] = useState(false);
+    const [coupangCount, setCoupangCount] = useState(5);
+    const [startCoupangTimer, setStartCoupangTimer] = useState(false);
+    const originAdProb = 0.5 < Math.random();
+    const coupangLink = originAdProb ? "https://link.coupang.com/a/PqWGr" : "https://link.coupang.com/a/PC8eL" ;
+
     const [randomNum, setRandomNum] = useState(Math.floor(Math.random() * (data.squares+1 - 1) + 1));
     const [gridMatrix, setGridMatrix] = useState(
         gridMatrixs.find((grid) => grid.count === data.squares)
@@ -53,6 +60,22 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
     const [countdown, setCountdown] = useState(3);
     const [isPicking, setIsPicking] = useState(false);
     const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
+    const [wrongMessage, setWrongMessage] = useState('');
+
+
+    useEffect(() => {
+        if(startCoupangTimer) {
+            const interval = setInterval(() => {
+            if (coupangCount <= 0) {
+                clearInterval(interval);
+                setCoupangCount(0)
+            } else {
+                setCoupangCount(coupangCount-1);
+            }
+            }, 1000);
+            return () => clearInterval(interval);
+        }
+    }, [coupangCount, startCoupangTimer]);
 
     // INTRO Countdown
     useEffect(() => {
@@ -90,19 +113,57 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
         }, 100);
 
         if(-0.15 >= remainingTime && data.round !== totalRound) { // for progress-bar
-            alert('시간이 다 지났다요');
             clearInterval(secondInterval);
-            return history.push('/colorPicker');
+            setStartCoupangTimer(true);
+            setWrongMessage('시간이 다됐어요!');
+            // return history.push('/colorPicker');
         } else {
             return () => clearInterval(secondInterval);
         }
     }, [data, isReady, isPicking, remainingTime, history, totalRound]);
 
-    const onCoupangButtonClick = () => {
-        const cookieAges = (24 - new Date().getHours()) <= 12 ? 60*60*(24 - new Date().getHours()) : 60*60*12;
-        // _eventSenderGA("Paging", "Click go-to-Coupang Button", "post page");
-        return setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true });
-    }
+    const onCoupangButtonClick = useCallback(() => {
+        const cookieAges = 60*60*2;
+        setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true });
+        setIsOpened(true);
+        _eventSenderGA("Paging", "Click go-to-Coupang Button(ColorPicker)", "quiz page");
+        return history.push('/colorPicker');
+    }, [history, setCoupangCookie]);
+
+    const onCoupangCloseButtonClick = useCallback(() => {
+        const cookieAges = 60*60*2;
+        setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true });
+        setIsOpened(true);
+        alert('다시 처음으로 돌아갑니다.');
+        _eventSenderGA("Closing", "Click Close-Coupang Button(ColorPicker)", "quiz page");
+        return history.push('/colorPicker');
+    }, [setCoupangCookie, history]);
+
+    const coupangButtonRenderer = useCallback(() => {
+        return (
+            <div className='article-adCover-div-1'>
+                <div className='article-adCover-div-2'>
+                    <div className='article-adCover-div-3'>
+                        <p style={{color:"#4185F4"}}><b>{wrongMessage}</b></p>
+                        <p><b><span style={{color:"#4185F4"}}>콘텐츠를 보기 전</span> 쿠팡 쇼핑을 해보세요</b></p>
+                        <div><p style={{ fontSize: '0.7rem' }}>쿠팡 방문은 케이테스트가 항상 질좋은 콘텐츠를 제공할 수 있는 힘이 됩니다.<br />항상 케이테스트 콘텐츠를 사랑해주셔서 감사합니다.</p></div>
+                        <p style={{ fontSize: "0.6rem", width: "0.8rem", color: "white", backgroundColor: "rgba(0, 0, 0, 0.5)", position:"absolute", right:"0rem", top: "0" }}>
+                            {startCoupangTimer ? (
+                                    coupangCount === 0 ? <span style={{color:'white', cursor:'pointer'}} onClick={coupangCount === 0 ? onCoupangCloseButtonClick : null}><b>x</b></span> : coupangCount
+                            ) :null}
+                        </p>
+                        <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
+                            <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={onCoupangButtonClick}>
+                                버튼 누르고 결과 보기
+                            </button>
+                        </a>
+                        <p style={{ fontSize: '10px', color: 'grey', marginTop: "0.5rem" }}>원치 않을 경우 뒤로 가기를 눌러주세요.</p>
+                    </div>
+                    <p className='result-coupang-comment' style={{marginTop: "1rem"}}>* 이 포스팅은 쿠팡 파트너스 활동의 일환으로,<br />이에 따른 일정액의 수수료를 제공받습니다.</p>
+                </div>
+            </div>
+        )
+    }, [coupangCount, coupangLink, onCoupangButtonClick, onCoupangCloseButtonClick, startCoupangTimer, wrongMessage]);
 
     const onButtonClick = useCallback((number) => {
         if(number === randomNum) {
@@ -115,18 +176,16 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                 setCurrentRound(data.round + 1);
             }
         } else {
-            // TODO: coupang cookie and go to start
-            if(coupangCookies?.coupang) {
-                alert('틀렸어요. 처음부터 다시');
-                // TODO: onCoupangButtonClick to button onClick
+            if(isOpened || coupangCookies?.coupang) {
+                alert('틀렸어요. 처음부터 다시 시작합니다.');
                 return history.push('/colorPicker');
             } else {
-                // TODO: coupang view banner
-                alert('쿠팡 보고 다시하기');
-                return history.push('/colorPicker');
+                setRemainingTime(0);
+                setStartCoupangTimer(true);
+                setWrongMessage('색감이 틀렸어요!');
             }
         }
-    }, [coupangCookies.coupang, data.round, difficulty, history, randomNum, setCurrentRound, setIsLoading, totalRound]);
+    }, [coupangCookies.coupang, data.round, difficulty, history, isOpened, randomNum, setCurrentRound, setIsLoading, totalRound]);
 
     if(isReady) {
         if(isLoading) {
@@ -143,7 +202,10 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                         <div className='picker-row' key={`${row_num}-div`}>
                             {[...Array(parseInt(gridMatrix.cols))].map((_, col_num) => (
                                 <button
-                                    onClick={() => onButtonClick(((row_num+1) * gridMatrix.cols) - (gridMatrix.cols - (col_num+1)))}
+                                    onClick={
+                                        startCoupangTimer ? null : 
+                                        () => onButtonClick(((row_num+1) * gridMatrix.cols) - (gridMatrix.cols - (col_num+1)))
+                                    }
                                     className='picker-col'
                                     style={{ backgroundColor: ((row_num+1) * gridMatrix.cols) - (gridMatrix.cols - (col_num+1)) === randomNum ? data.uniqueColor : data.normalColor }}
                                     key={`${((row_num+1) * gridMatrix.cols) - (gridMatrix.cols - (col_num+1))}-square`}
@@ -153,6 +215,10 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                             ))}
                         </div>
                     ))}
+                    {startCoupangTimer ? (
+                        isOpened || coupangCookies?.coupang ? null :
+                        coupangButtonRenderer()
+                    ) : null}
                 </div>
             )
         }
