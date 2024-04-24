@@ -9,7 +9,7 @@
     width: 100%;
 }
 
-/* PickerREnderer */
+/* PickerRenderer */
 .picker-header {
     padding-top: 3rem;
 }
@@ -48,4 +48,8 @@
     width: 80%;
     max-width: 35rem;
     margin-bottom: 3rem;
+}
+
+.start-countdown-div {
+    padding: 15rem 0;
 }

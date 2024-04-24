@@ -12,7 +12,7 @@ const difficulties = [
         round: 1,
         squares: 4,
         seconds: 3,
-        normalColor: "green",
+        normalColor: "yellow",
         uniqueColor: "red",
       },
       {
@@ -245,6 +245,7 @@ const ColorPicking = () => {
     const [currentRound, setCurrentRound] = useState(1);
     const [currentRoundContent, setCurrentRoundContent] = useState(contents?.rounds.find((item) => item.round === currentRound))
     const [isLoading, setIsLoading] = useState(false);
+    const [isReady, setIsReady] = useState(false);
     useEffect(() => {
       setCurrentRoundContent(
         contents?.rounds.find((item) => item.round === currentRound)
@@ -252,7 +253,7 @@ const ColorPicking = () => {
     }, [contents.rounds, currentRound])
   return (
     <div className='colorpicker-div' style={{padding: isLoading? '15rem 0' : null}}>
-      {isLoading ? null : (
+      {isLoading || !isReady ? null : (
         <div className='picker-header'>
             <h1>{currentRoundContent.round}단계 </h1>
             <h3>못찾으면 50대 이상</h3>
@@ -264,8 +265,10 @@ const ColorPicking = () => {
         isLoading={isLoading}
         setIsLoading={setIsLoading}
         difficulty={contents.difficulty}
+        isReady={isReady}
+        setIsReady={setIsReady}
       />
-      {isLoading ? null : (
+      {isLoading || !isReady ? null : (
         <>
           <p className='picker-progress-text'>{`${(currentRound)} / ${contents.rounds.length}`}</p>
           <Progress className='picker-progress' percent={(currentRound-1) / contents.rounds.length * 100} showInfo={false} />
