@@ -36,6 +36,8 @@ import LifeInterpretingResult from './components/TestTypes/Saju/LifeInterpreting
 import Privacy from './components/BasicComponents/Privacy';
 import { withCookies } from 'react-cookie';
 import MyPage from './components/BasicComponents/Users/MyPage';
+import ColorPicker from './components/TestTypes/ColorPicker/ColorPicker';
+import ColorPicking from './components/TestTypes/ColorPicker/ColorPicking';
 
 class App extends Component {
   constructor(props){
@@ -266,6 +268,10 @@ class App extends Component {
         <ScrollToTop>
           <Switch>
             <Route exact path="/myPage" component={() => <MyPage onClickLogout={this.onClickLogout} />} />
+
+            {/* ColorPicker */}
+            <Route path="/colorPicker/" component={() => <ColorPicker />} exact />
+            <Route path="/colorPicker/:query" component={() => <ColorPicking />} />
 
             {/* go to "HaGender" page */}
             <Route path="/haGender/" component={() => <TwoSplitedIntro test={"haGender"} lang={'Kor'} info={{ title: "하남자 하여자 테스트 - 남자편 | 여자편 - 케이테스트", subTitle: "나는 과연 몇% 확률로 하남자/하여자 일까? - 남자편 | 여자편 - 케이테스트" }} />} />
