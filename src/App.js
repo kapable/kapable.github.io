@@ -38,6 +38,7 @@ import { withCookies } from 'react-cookie';
 import MyPage from './components/BasicComponents/Users/MyPage';
 import ColorPicker from './components/TestTypes/ColorPicker/ColorPicker';
 import ColorPicking from './components/TestTypes/ColorPicker/ColorPicking';
+import ColorPickerResutl from './components/TestTypes/ColorPicker/ColorPickerResult';
 
 class App extends Component {
   constructor(props){
@@ -271,6 +272,7 @@ class App extends Component {
 
             {/* ColorPicker */}
             <Route path="/colorPicker/" component={() => <ColorPicker />} exact />
+            <Route path="/colorPicker/result" component={() => <ColorPickerResutl />} exact />
             <Route path="/colorPicker/:query" component={() => <ColorPicking />} />
 
             {/* go to "HaGender" page */}

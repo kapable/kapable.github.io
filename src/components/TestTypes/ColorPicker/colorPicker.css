@@ -1,3 +1,51 @@
+/* ColorPicker */
 .difficulty-button {
     margin: 0 1rem;
+}
+
+/* ColorPicking */
+.colorpicker-div {
+    background-color: pink;
+    width: 100%;
+}
+
+/* PickerREnderer */
+.picker-header {
+    padding-top: 3rem;
+}
+.picker-background {
+    background-color: white;
+    width: 80%;
+    max-width: 35rem;
+    margin: 0 auto 3rem;
+}
+
+.picker-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.picker-col {
+    border:none;
+    box-shadow:none;
+    border-radius:0;
+    padding:0;
+    overflow:visible;
+    cursor:pointer;
+    width: 50%;
+    height: 5rem;
+    align-content: center;
+    margin: 0.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.picker-progress-text {
+    font-weight: bold;
+}
+
+.picker-progress {
+    width: 80%;
+    max-width: 35rem;
+    margin-bottom: 3rem;
 }
