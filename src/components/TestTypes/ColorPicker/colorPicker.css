@@ -53,3 +53,33 @@
 .start-countdown-div {
     padding: 15rem 0;
 }
+
+/* ColorPickerResult */
+.picker-result-info-div {
+    width: 90%;
+    max-width: 30rem;
+    margin: 2rem auto 0rem;
+}
+
+.picker-result-info-title {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+}
+
+.picker-result-info-highlight {
+    font-size: 2.5rem;
+    color: #FF71BC;
+}
+
+.picker-result-go-home-button {
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-color: #E62383;
+    border-radius: 1rem;
+    height: 4rem;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+}

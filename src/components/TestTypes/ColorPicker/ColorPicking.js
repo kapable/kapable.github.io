@@ -12,71 +12,71 @@ const difficulties = [
         round: 1,
         squares: 4,
         seconds: 3,
-        normalColor: "yellow",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 2,
         squares: 8,
         seconds: 6,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 3,
         squares: 4,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 4,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 5,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 6,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 7,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 8,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 9,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 10,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
     ]
   },
@@ -87,71 +87,71 @@ const difficulties = [
         round: 1,
         squares: 4,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 2,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 3,
         squares: 4,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 4,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 5,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 6,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 7,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 8,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 9,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 10,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
     ]
   },
@@ -162,71 +162,71 @@ const difficulties = [
         round: 1,
         squares: 4,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 2,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 3,
         squares: 4,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 4,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 5,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 6,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 7,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 8,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 9,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
       {
         round: 10,
         squares: 8,
         seconds: 3,
-        normalColor: "green",
-        uniqueColor: "red",
+        normalColor: "#FF71BC",
+        uniqueColor: "#E62383",
       },
     ]
   },
@@ -246,11 +246,28 @@ const ColorPicking = () => {
     const [currentRoundContent, setCurrentRoundContent] = useState(contents?.rounds.find((item) => item.round === currentRound))
     const [isLoading, setIsLoading] = useState(false);
     const [isReady, setIsReady] = useState(false);
+    const [isDone, setIsDone] = useState(false);
+    const [totalTime, setTotalTime] = useState(0);
     useEffect(() => {
       setCurrentRoundContent(
         contents?.rounds.find((item) => item.round === currentRound)
       )
-    }, [contents.rounds, currentRound])
+    }, [contents.rounds, currentRound]);
+    
+    useEffect(() => { // for totalCount to test result
+      let totalInterval;
+      if(isReady) {
+        totalInterval = setInterval(() => {
+          if(isDone) {
+            return () => clearInterval(totalInterval);
+          } else {
+            setTotalTime((prev) => prev + 0.1);
+          }
+        }, 100);
+      }
+      return () => clearInterval(totalInterval);
+    }, [isReady, isDone, setTotalTime]);
+
   return (
     // TODO: Design
     <div className='colorpicker-div' style={{padding: isLoading? '15rem 0' : null}}>
@@ -268,7 +285,10 @@ const ColorPicking = () => {
         difficulty={contents.difficulty}
         isReady={isReady}
         setIsReady={setIsReady}
+        isDone={isDone}
+        setIsDone={setIsDone}
         totalRound={contents.rounds.length}
+        totalTime={totalTime}
       />
       {isLoading || !isReady ? null : (
         <>

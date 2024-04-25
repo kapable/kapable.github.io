@@ -44,7 +44,7 @@ const gridMatrixs = [
     },
 ]
 
-const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficulty, isReady, setIsReady, totalRound}) => {
+const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficulty, isReady, setIsReady, setIsDone, totalRound, totalTime}) => {
     const history = useHistory();
     const [isOpened, setIsOpened] = useState(false);
     const [coupangCount, setCoupangCount] = useState(5);
@@ -77,11 +77,11 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
             return () => clearInterval(interval);
         }
     }, [coupangCount, startCoupangTimer]);
-
-    // INTRO Countdown
     useEffect(() => {
         setRemainingTime(data.seconds);
-    }, [data, setRemainingTime])
+    }, [data, setRemainingTime]);
+
+    // INTRO Countdown
     useEffect(() => {
         if((data.round === 1) && !isReady) {
             let firstTimeout;
@@ -114,6 +114,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
         }, 100);
 
         if(-0.15 >= remainingTime && data.round !== totalRound) { // for progress-bar
+            setIsDone(true);
             clearInterval(secondInterval);
             setStartCoupangTimer(true);
             if(isWrong) {
@@ -124,7 +125,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
         } else {
             return () => clearInterval(secondInterval);
         }
-    }, [data, isReady, isPicking, remainingTime, history, totalRound, wrongMessage, isWrong]);
+    }, [data, isReady, isPicking, remainingTime, history, totalRound, wrongMessage, isWrong, setIsReady, setIsDone]);
 
     const onCoupangButtonClick = useCallback(() => {
         const cookieAges = 60*60*2;
@@ -172,14 +173,16 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
     const onButtonClick = useCallback((number) => {
         if(number === randomNum) {
             if(data.round === totalRound) {
+                setIsDone(true);
                 setIsLoading(true);
                 setTimeout(() => {
-                    history.push(`/colorPicker/result/`, difficulty)
+                    history.push(`/colorPicker/result/`, {difficulty, totalTime})
                 }, 2500);
             } else {
                 setCurrentRound(data.round + 1);
             }
         } else {
+            setIsDone(true);
             if(isOpened || coupangCookies?.coupang) {
                 alert('틀렸어요. 처음부터 다시 시작합니다.');
                 return history.push('/colorPicker');
@@ -190,7 +193,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                 setIsWrong(true);
             }
         }
-    }, [coupangCookies.coupang, data.round, difficulty, history, isOpened, randomNum, setCurrentRound, setIsLoading, totalRound]);
+    }, [coupangCookies.coupang, data.round, difficulty, history, isOpened, randomNum, setCurrentRound, setIsDone, setIsLoading, totalRound, totalTime]);
 
     if(isReady) {
         if(isLoading) {
