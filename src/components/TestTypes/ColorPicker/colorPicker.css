@@ -54,6 +54,12 @@
     padding: 15rem 0;
 }
 
+.start-countdown-p {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+}
+
 /* ColorPickerResult */
 .picker-result-info-div {
     width: 90%;
@@ -82,4 +88,22 @@
     padding: 1rem;
     text-align: center;
     cursor: pointer;
+    margin: 2rem auto;
+}
+
+/* TIER TABLE in result page */
+.tier-table-div {
+    /* background-color: yellow; */
+}
+
+.tier-table-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.tier-table-highlight {
+    font-weight: bold;
 }

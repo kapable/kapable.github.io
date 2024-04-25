@@ -233,7 +233,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
     } else {
         return (
             <div className='start-countdown-div'>
-                {countdown}
+                <p className='start-countdown-p'>{countdown}</p>
             </div>
         )
     }
