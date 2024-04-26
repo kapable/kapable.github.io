@@ -103,9 +103,14 @@ function MainPage(props) {
             ) : null} */}
 
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
-                <Link to='/colorPickerEasy/' className="main-link-block" key="colorPickerEasy-banner">
-                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorPicker-Easy-thumb.png`} alt="lifeInterpreting" />
-                </Link>
+                <>
+                    <Link to='/colorPickerMedium/' className="main-link-block" key="colorPickerMedium-banner">
+                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorPicker-Medium-thumb.png`} alt="lifeInterpreting" />
+                    </Link>
+                    <Link to='/colorPickerEasy/' className="main-link-block" key="colorPickerEasy-banner">
+                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorPicker-Easy-thumb.png`} alt="lifeInterpreting" />
+                    </Link>
+                </>
             ) : null}
 
             {/* Main Test Banners(Top) */}

@@ -1,7 +1,7 @@
 import React, { Fragment, useCallback, useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import ColorPickerTierTable from './ColorPickerTierTable';
-import { tiers } from '../../../api/COLORPICKING';
+import { color_picker_list, tiers } from '../../../api/COLORPICKING';
 import { _eventSenderGA } from '../../../tools/tools';
 import TESTS from '../../../api/TESTS';
 import AdsenseAdvertiser from '../../SubComponents/AdsenseAdvertiser';
@@ -36,11 +36,33 @@ const ColorPickerResult = () => {
   }, [history, location.state]);
 
   const otherTestBannerRenderer = () => {
+    // TODO: filtering for Difficulty of colorPicker
     const current_lang = 'Kor';
     const bottom_test_list = TESTS.filter((item) => (item.info.lang === current_lang));
     const bottom_test_name_list =bottom_test_list.map((li) => li.info.mainUrl);
     return(
         <Fragment>
+            {color_picker_list.map((difficulty) => {
+              if(location.state.difficulty !== difficulty) {
+                return (
+                  <Fragment key={`${difficulty}-fragKey`}>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={`https://ktestone.com/kapable.github.io/colorPicker${difficulty}/`}
+                        className="to-ppl-banner-text"
+                    > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/colorPicker-${difficulty}-thumb.png`} className='ppl-banner-img' alt={'colorPicker'} onClick={() => _eventSenderGA("Paging", "Click Go-another-Test-Banner Button", "result page")}/> </a>
+                    <AdsenseAdvertiser
+                        client={`ca-pub-2382342018701919`} //5142864985628271
+                        slot={"5663135072"} //7281907187
+                        format="auto"
+                        responsive="true"
+                        style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+                    />
+                </Fragment>
+                )
+              }
+            })}
             {bottom_test_name_list.map((test) => {
                 return (
                     <Fragment key={test + '-test-key'}>
@@ -67,7 +89,8 @@ const ColorPickerResult = () => {
 
   return (
     <div>
-      <img className='result-img' src="https://images.ktestone.com/resultImages/colorPicker/colorPicker-result-banner.jpeg" alt="colorPicker-result-banner" />
+      {/* TODO: Add metatag */}
+      <img className='result-img' src={`https://images.ktestone.com/resultImages/colorPicker/colorPicker-${location.state.difficulty}-result-banner.jpeg`} alt="colorPicker-result-banner" />
       <div className='picker-result-info-div'>
         <p className='picker-result-info-title'>
             <span style={{color: "#E62383"}}>케이테스트</span>&nbsp;

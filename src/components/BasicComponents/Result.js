@@ -19,6 +19,7 @@ import '../TestTypes/FactPok/factPok.css';
 import ShareGroup from './ShareGroup';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import GoToHomeBtn from '../SubComponents/GoToHomeBtn';
+import { color_picker_list } from '../../api/COLORPICKING';
 // import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 // import KAKAOPLUSFRIEND from '../../api/DefaultImg/go-to-kakao-plusfriend.png';
 
@@ -849,19 +850,23 @@ class Result extends Component {
         // }
         return(
             <Fragment>
-                <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={`https://ktestone.com/kapable.github.io/colorPickerEasy/`}
-                    className="to-ppl-banner-text"
-                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/colorPicker-Easy-thumb.png`} className='ppl-banner-img' alt={'colorPickerEasy'} onClick={this._onPPLBannerClick}/> </a>
-                <AdsenseAdvertiser
-                    client={`ca-pub-2382342018701919`} //5142864985628271
-                    slot={"5663135072"} //7281907187
-                    format="auto"
-                    responsive="true"
-                    style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                />
+                {color_picker_list.map((difficulty) => (
+                    <Fragment key={`${difficulty}-fragKey`}>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={`https://ktestone.com/kapable.github.io/colorPicker${difficulty}/`}
+                            className="to-ppl-banner-text"
+                        > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/colorPicker-${difficulty}-thumb.png`} className='ppl-banner-img' alt={'colorPicker'} onClick={this._onPPLBannerClick}/> </a>
+                        <AdsenseAdvertiser
+                            client={`ca-pub-2382342018701919`} //5142864985628271
+                            slot={"5663135072"} //7281907187
+                            format="auto"
+                            responsive="true"
+                            style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+                        />
+                    </Fragment>
+                ))}
                 {bottom_test_name_list.map((test) => {
                     return (
                         <Fragment key={test + '-test-key'}>

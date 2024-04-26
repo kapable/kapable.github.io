@@ -149,81 +149,6 @@ export const difficulties = [
         },
       ]
     },
-    {
-      difficulty: "Hard",
-      rounds: [
-        {
-          round: 1,
-          squares: 4,
-          seconds: 3,
-          normalColor: "#FF71BC",
-          uniqueColor: "#E62383",
-        },
-        {
-          round: 2,
-          squares: 8,
-          seconds: 3,
-          normalColor: "#FF71BC",
-          uniqueColor: "#E62383",
-        },
-        {
-          round: 3,
-          squares: 4,
-          seconds: 3,
-          normalColor: "#FF71BC",
-          uniqueColor: "#E62383",
-        },
-        {
-          round: 4,
-          squares: 8,
-          seconds: 3,
-          normalColor: "#FF71BC",
-          uniqueColor: "#E62383",
-        },
-        {
-          round: 5,
-          squares: 8,
-          seconds: 3,
-          normalColor: "#FF71BC",
-          uniqueColor: "#E62383",
-        },
-        {
-          round: 6,
-          squares: 8,
-          seconds: 3,
-          normalColor: "#FF71BC",
-          uniqueColor: "#E62383",
-        },
-        {
-          round: 7,
-          squares: 8,
-          seconds: 3,
-          normalColor: "#FF71BC",
-          uniqueColor: "#E62383",
-        },
-        {
-          round: 8,
-          squares: 8,
-          seconds: 3,
-          normalColor: "#FF71BC",
-          uniqueColor: "#E62383",
-        },
-        {
-          round: 9,
-          squares: 8,
-          seconds: 3,
-          normalColor: "#FF71BC",
-          uniqueColor: "#E62383",
-        },
-        {
-          round: 10,
-          squares: 8,
-          seconds: 3,
-          normalColor: "#FF71BC",
-          uniqueColor: "#E62383",
-        },
-      ]
-    },
 ];
 
 export const color_picker_list = difficulties.map((item) => item.difficulty);
@@ -322,7 +247,7 @@ export const tiers = [
           tier: '챌린저',
         },
         {
-          sec: 0.1,
+          sec: 3,
           tier: '페이커',
         },
       ],
