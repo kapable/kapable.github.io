@@ -4056,7 +4056,9 @@
       "/kapable.github.io/magazineThemeEng",
       "/magazineThemeEng",
       "/kapable.github.io/magazineThemeJP",
-      "/magazineThemeJP"
+      "/magazineThemeJP",
+      "/colorPickerEasy",
+      "/kapable.github.io/colorPickerEasy"
     ]
   },
   "eslintConfig": {
