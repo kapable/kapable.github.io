@@ -273,7 +273,7 @@ export const tiers = [
           tier: '챌린저',
         },
         {
-          sec: 0.1,
+          sec: 3,
           tier: '페이커',
         },
       ],
