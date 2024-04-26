@@ -218,9 +218,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                                     className='picker-col'
                                     style={{ backgroundColor: ((row_num+1) * gridMatrix.cols) - (gridMatrix.cols - (col_num+1)) === randomNum ? data.uniqueColor : data.normalColor }}
                                     key={`${((row_num+1) * gridMatrix.cols) - (gridMatrix.cols - (col_num+1))}-square`}
-                                >
-                                    {((row_num+1) * gridMatrix.cols) - (gridMatrix.cols - (col_num+1))}
-                                </button>
+                                />
                             ))}
                         </div>
                     ))}
