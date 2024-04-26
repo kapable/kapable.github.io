@@ -2,9 +2,9 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import ColorPickerTierTable from './ColorPickerTierTable';
 import { tiers } from '../../../api/COLORPICKING';
+import { _eventSenderGA } from '../../../tools/tools';
 
 const ColorPickerResult = () => {
-  // TODO: GA event sender
   const location = useLocation();
   const history = useHistory();
   const [currentRange, setCurrentRange] = useState([{},]);
@@ -29,6 +29,7 @@ const ColorPickerResult = () => {
     }
   }, [history, location]);
   const onGoToIntroButtonClick = useCallback(() => {
+    _eventSenderGA("Paging", "Click Re-test Button", "colorPicker result page");
     history.push(`/colorPicker${location.state?.difficulty}`, 'again');
   }, [history, location.state]);
   return (

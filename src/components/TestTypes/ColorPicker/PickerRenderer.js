@@ -45,7 +45,6 @@ const gridMatrixs = [
 ]
 
 const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficulty, isReady, setIsReady, setIsDone, totalRound, totalTime}) => {
-    // TODO: GA event sender
     const history = useHistory();
     const [isOpened, setIsOpened] = useState(false);
     const [coupangCount, setCoupangCount] = useState(5);
@@ -133,18 +132,18 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
         const cookieAges = 60*60*2;
         setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true });
         setIsOpened(true);
-        _eventSenderGA("Paging", "Click go-to-Coupang Button(ColorPicker)", "quiz page");
+        _eventSenderGA("Paging", `Click go-to-Coupang Button(ColorPicker${difficulty})`, "quiz page");
         return history.push(testDomain);
-    }, [history, setCoupangCookie, testDomain]);
+    }, [difficulty, history, setCoupangCookie, testDomain]);
 
     const onCoupangCloseButtonClick = useCallback(() => {
         const cookieAges = 60*60*2;
         setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true });
         setIsOpened(true);
         alert('다시 처음으로 돌아갑니다.');
-        _eventSenderGA("Closing", "Click Close-Coupang Button(ColorPicker)", "quiz page");
+        _eventSenderGA("Closing", `Click Close-Coupang Button(ColorPicker${difficulty})`, "quiz page");
         return history.push(testDomain);
-    }, [setCoupangCookie, history, testDomain]);
+    }, [setCoupangCookie, difficulty, history, testDomain]);
 
     const coupangButtonRenderer = useCallback(() => {
         return (

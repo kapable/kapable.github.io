@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import { Progress } from 'antd';
 import PickerRenderer from './PickerRenderer';
-import { reloadPage } from '../../../tools/tools';
+import { _eventSenderGA, reloadPage } from '../../../tools/tools';
 import { color_picker_list, difficulties } from '../../../api/COLORPICKING';
 import './colorPicker.css';
 import { Helmet } from 'react-helmet';
@@ -77,6 +77,11 @@ const ColorPicking = ({ difficulty }) => {
       )
     }
 
+    const onStartButtonClick = () => {
+      _eventSenderGA("Paging", `Click colorPicker${difficulty}Start-test Button`, "intro page");
+      setMode("start");
+    }
+
     if (mode === 'intro') {
       return (
         <div>
@@ -85,7 +90,7 @@ const ColorPicking = ({ difficulty }) => {
               className='result-img'
               style={{cursor: 'pointer'}}
               src={`https://images.ktestone.com/introImages/colorPicker-${difficulty}-intro.jpeg`} alt="colorPicker-intro"
-              onClick={() => setMode("start")}
+              onClick={onStartButtonClick}
             />
             <p>* 시작 버튼을 누른 후 3초 뒤에 시작</p>
             <p>* 중간에 틀리면 다시 처음으로 돌아가요</p>
