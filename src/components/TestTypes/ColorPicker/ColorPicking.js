@@ -8,6 +8,7 @@ import './colorPicker.css';
 import { Helmet } from 'react-helmet';
 
 const ColorPicking = ({ difficulty }) => {
+  // TODO: GA event sender
     const location = useLocation();
     const history = useHistory();
     useEffect(() => {
@@ -92,7 +93,6 @@ const ColorPicking = ({ difficulty }) => {
       )
     } else if (mode === 'start') {
       return (
-        // TODO: Design
         <div className='colorpicker-div' style={{padding: isLoading? '15rem 0' : null}}>
           {metaTagRenderer(difficulty)}
           {isLoading || !isReady ? null : (

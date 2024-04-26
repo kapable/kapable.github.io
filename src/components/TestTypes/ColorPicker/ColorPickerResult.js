@@ -4,6 +4,7 @@ import ColorPickerTierTable from './ColorPickerTierTable';
 import { tiers } from '../../../api/COLORPICKING';
 
 const ColorPickerResult = () => {
+  // TODO: GA event sender
   const location = useLocation();
   const history = useHistory();
   const [currentRange, setCurrentRange] = useState([{},]);

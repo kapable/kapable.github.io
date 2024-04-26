@@ -45,6 +45,7 @@ const gridMatrixs = [
 ]
 
 const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficulty, isReady, setIsReady, setIsDone, totalRound, totalTime}) => {
+    // TODO: GA event sender
     const history = useHistory();
     const [isOpened, setIsOpened] = useState(false);
     const [coupangCount, setCoupangCount] = useState(5);
@@ -160,7 +161,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                         </p>
                         <a href={coupangLink} target="_blank" rel='noreferrer noopener'>
                             <button className='result-coupang-button' type="primary" shape='round' style={{ width: '15rem', height: '3.5rem'}} onClick={onCoupangButtonClick}>
-                                버튼 누르고 결과 보기
+                                버튼 누르고 다시하기
                             </button>
                         </a>
                         <p style={{ fontSize: '10px', color: 'grey', marginTop: "0.5rem" }}>원치 않을 경우 뒤로 가기를 눌러주세요.</p>
@@ -207,6 +208,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
             return(
                 <div className='picker-background'>
                     <Progress className='picker-progress' percent={(remainingTime) / data.seconds * 100} showInfo={false} />
+                    {/* TODO: width / height with number of squares */}
                     {[...Array(parseInt(gridMatrix.rows))].map((_, row_num) => (
                         <div className='picker-row' key={`${row_num}-div`}>
                             {[...Array(parseInt(gridMatrix.cols))].map((_, col_num) => (
