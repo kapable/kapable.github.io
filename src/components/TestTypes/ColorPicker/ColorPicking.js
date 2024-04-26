@@ -8,7 +8,6 @@ import './colorPicker.css';
 import { Helmet } from 'react-helmet';
 
 const ColorPicking = ({ difficulty }) => {
-  // TODO: GA event sender
     const location = useLocation();
     const history = useHistory();
     useEffect(() => {

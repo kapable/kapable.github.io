@@ -37,6 +37,13 @@ const ColorPickerResult = () => {
       <img className='result-img' src="https://images.ktestone.com/resultImages/colorPicker/colorPicker-result-banner.jpeg" alt="colorPicker-result-banner" />
       <div className='picker-result-info-div'>
         <p className='picker-result-info-title'>
+            <span style={{color: "#E62383"}}>케이테스트</span>&nbsp;
+            <span style={{color: '#e2b0ff', fontSize: '2rem'}}>색</span>
+            <span style={{color: '#f0e0b0', fontSize: '2rem'}}>감</span>&nbsp;
+            <span style={{color: '#ffa9d0', fontSize: '2rem'}}>테</span>
+            <span style={{color: '#94b7e7', fontSize: '2rem'}}>스</span>
+            <span style={{color: '#ff8585', fontSize: '2rem'}}>트</span>
+        <br />
           <span className='picker-result-info-highlight'>{location.state.difficulty.toUpperCase()}</span>
           &nbsp;모드를<br />
           <span className='picker-result-info-highlight'>{location.state.totalTime.toFixed(1)}초</span>만에 클리어 했습니다&nbsp;!
