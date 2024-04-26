@@ -305,7 +305,7 @@ function MainPage(props) {
 
             {/** Floating Button for KakaoPlusFriend */}
             <KakaoPlusFriendBtn />
-            {/* {adTagRenderer()} */}
+            {adTagRenderer()}
         </Fragment>
         
     );
