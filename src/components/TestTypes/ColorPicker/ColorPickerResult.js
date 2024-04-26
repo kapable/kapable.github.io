@@ -28,8 +28,8 @@ const ColorPickerResult = () => {
     }
   }, [history, location]);
   const onGoToIntroButtonClick = useCallback(() => {
-    history.push('/colorPickerEasy', 'again');
-  }, [history]);
+    history.push(`/colorPicker${location.state?.difficulty}`, 'again');
+  }, [history, location.state]);
   return (
     <div>
       <img className='result-img' src="https://images.ktestone.com/resultImages/colorPicker/colorPicker-result-banner.jpeg" alt="colorPicker-result-banner" />
