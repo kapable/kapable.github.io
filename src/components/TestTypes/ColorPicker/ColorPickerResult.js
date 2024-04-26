@@ -6,6 +6,7 @@ import { _eventSenderGA } from '../../../tools/tools';
 import TESTS from '../../../api/TESTS';
 import AdsenseAdvertiser from '../../SubComponents/AdsenseAdvertiser';
 import { Helmet } from 'react-helmet';
+import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
 
 const ColorPickerResult = () => {
   const location = useLocation();
@@ -142,6 +143,7 @@ const ColorPickerResult = () => {
         <button className='picker-result-go-home-button' onClick={onGoToIntroButtonClick} type='button'>다시 처음부터 하기</button>
       </div>
       {otherTestBannerRenderer()}
+      <GoToHomeBtn page="colorPicker result"/>
     </div>
   );
 };
