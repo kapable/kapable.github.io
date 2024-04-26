@@ -849,7 +849,20 @@ class Result extends Component {
         // }
         return(
             <Fragment>
-                {bottom_test_name_list.map((test, idx) => {
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`https://ktestone.com/kapable.github.io/colorPickerEasy/`}
+                    className="to-ppl-banner-text"
+                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/colorPicker-Easy-thumb.png`} className='ppl-banner-img' alt={'colorPickerEasy'} onClick={this._onPPLBannerClick}/> </a>
+                <AdsenseAdvertiser
+                    client={`ca-pub-2382342018701919`} //5142864985628271
+                    slot={"5663135072"} //7281907187
+                    format="auto"
+                    responsive="true"
+                    style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+                />
+                {bottom_test_name_list.map((test) => {
                     return (
                         <Fragment key={test + '-test-key'}>
                             <a

@@ -91,3 +91,7 @@ export const urlToFile = async(imgUrl, fileName)  => {
     const file = new File([blob], fileName, { type: blob.type });
     return file;
 };
+
+export const firstLetterUppercase = (word) => {
+    return word[0].toUpperCase() + word.slice(1);
+};

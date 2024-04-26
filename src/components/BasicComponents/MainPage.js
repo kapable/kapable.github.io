@@ -102,6 +102,12 @@ function MainPage(props) {
                 </>
             ) : null} */}
 
+            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
+                <Link to='/colorPickerEasy/' className="main-link-block" key="colorPickerEasy-banner">
+                    <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorPicker-Easy-thumb.png`} alt="lifeInterpreting" />
+                </Link>
+            ) : null}
+
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
                 {props.all_tests_url.slice(0,7).map((item, idx)=>{

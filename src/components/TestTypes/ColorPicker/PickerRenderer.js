@@ -62,6 +62,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
     const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
     const [isWrong, setIsWrong] = useState(false);
     const [wrongMessage, setWrongMessage] = useState('');
+    const [testDomain] = useState(`/colorPicker${difficulty}`);
 
 
     useEffect(() => {
@@ -132,8 +133,8 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
         setCoupangCookie('coupang', true, { path: '/', maxAge: cookieAges, secure: true });
         setIsOpened(true);
         _eventSenderGA("Paging", "Click go-to-Coupang Button(ColorPicker)", "quiz page");
-        return history.push('/colorPicker');
-    }, [history, setCoupangCookie]);
+        return history.push(testDomain);
+    }, [history, setCoupangCookie, testDomain]);
 
     const onCoupangCloseButtonClick = useCallback(() => {
         const cookieAges = 60*60*2;
@@ -141,8 +142,8 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
         setIsOpened(true);
         alert('다시 처음으로 돌아갑니다.');
         _eventSenderGA("Closing", "Click Close-Coupang Button(ColorPicker)", "quiz page");
-        return history.push('/colorPicker');
-    }, [setCoupangCookie, history]);
+        return history.push(testDomain);
+    }, [setCoupangCookie, history, testDomain]);
 
     const coupangButtonRenderer = useCallback(() => {
         return (
@@ -176,7 +177,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                 setIsDone(true);
                 setIsLoading(true);
                 setTimeout(() => {
-                    history.push(`/colorPicker/result/`, {difficulty, totalTime})
+                    history.push(`${testDomain}/result/`, {difficulty, totalTime})
                 }, 2500);
             } else {
                 setCurrentRound(data.round + 1);
@@ -185,7 +186,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
             setIsDone(true);
             if(isOpened || coupangCookies?.coupang) {
                 alert('틀렸어요. 처음부터 다시 시작합니다.');
-                return history.push('/colorPicker');
+                return history.push(testDomain);
             } else {
                 setRemainingTime(0);
                 setStartCoupangTimer(true);
@@ -193,7 +194,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                 setIsWrong(true);
             }
         }
-    }, [coupangCookies.coupang, data.round, difficulty, history, isOpened, randomNum, setCurrentRound, setIsDone, setIsLoading, totalRound, totalTime]);
+    }, [coupangCookies.coupang, data.round, difficulty, history, isOpened, randomNum, setCurrentRound, setIsDone, setIsLoading, testDomain, totalRound, totalTime]);
 
     if(isReady) {
         if(isLoading) {
@@ -239,4 +240,4 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
     }
 }
 
-export default PickerRenderer
+export default PickerRenderer;

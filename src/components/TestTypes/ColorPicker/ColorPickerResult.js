@@ -1,156 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import ColorPickerTierTable from './ColorPickerTierTable';
-
-const tiers = [
-  {
-    difficulty: 'easy',
-    range: [
-      {
-        sec: 50,
-        tier: '아이언',
-      },
-      {
-        sec: 40,
-        tier: '브론즈',
-      },
-      {
-        sec: 30,
-        tier: '실버',
-      },
-      {
-        sec: 20,
-        tier: '골드',
-      },
-      {
-        sec: 10,
-        tier: '플래티넘',
-      },
-      {
-        sec: 9,
-        tier: '에메랄드',
-      },
-      {
-        sec: 8,
-        tier: '다이아몬드',
-      },
-      {
-        sec: 7,
-        tier: '마스터',
-      },
-      {
-        sec: 6,
-        tier: '그랜드 마스터',
-      },
-      {
-        sec: 5,
-        tier: '챌린저',
-      },
-      {
-        sec: 0.1,
-        tier: '페이커',
-      },
-    ],
-  },
-  {
-    difficulty: 'medium',
-    range: [
-      {
-        sec: 50,
-        tier: '아이언',
-      },
-      {
-        sec: 40,
-        tier: '브론즈',
-      },
-      {
-        sec: 30,
-        tier: '실버',
-      },
-      {
-        sec: 20,
-        tier: '골드',
-      },
-      {
-        sec: 10,
-        tier: '플래티넘',
-      },
-      {
-        sec: 9,
-        tier: '에메랄드',
-      },
-      {
-        sec: 8,
-        tier: '다이아몬드',
-      },
-      {
-        sec: 7,
-        tier: '마스터',
-      },
-      {
-        sec: 6,
-        tier: '그랜드 마스터',
-      },
-      {
-        sec: 5,
-        tier: '챌린저',
-      },
-      {
-        sec: 0.1,
-        tier: '페이커',
-      },
-    ],
-  },
-  {
-    difficulty: 'hard',
-    range: [
-      {
-        sec: 50,
-        tier: '아이언',
-      },
-      {
-        sec: 40,
-        tier: '브론즈',
-      },
-      {
-        sec: 30,
-        tier: '실버',
-      },
-      {
-        sec: 20,
-        tier: '골드',
-      },
-      {
-        sec: 10,
-        tier: '플래티넘',
-      },
-      {
-        sec: 9,
-        tier: '에메랄드',
-      },
-      {
-        sec: 8,
-        tier: '다이아몬드',
-      },
-      {
-        sec: 7,
-        tier: '마스터',
-      },
-      {
-        sec: 6,
-        tier: '그랜드 마스터',
-      },
-      {
-        sec: 5,
-        tier: '챌린저',
-      },
-      {
-        sec: 0.1,
-        tier: '페이커',
-      },
-    ],
-  },
-];
+import { tiers } from '../../../api/COLORPICKING';
 
 const ColorPickerResult = () => {
   const location = useLocation();
@@ -173,14 +24,13 @@ const ColorPickerResult = () => {
   useEffect(() => {
     if(!location.state.difficulty) {
       alert("잘못된 경로로 접근하셨습니다.");
-      history.push('/colorPicker');
+      history.push('/colorPickerEasy');
     }
   }, [history, location]);
   const onGoToIntroButtonClick = useCallback(() => {
-    history.push('/colorPicker', 'again');
+    history.push('/colorPickerEasy', 'again');
   }, [history]);
   return (
-    // TODO: Design
     <div>
       <img className='result-img' src="https://images.ktestone.com/resultImages/colorPicker/colorPicker-result-banner.jpeg" alt="colorPicker-result-banner" />
       <div className='picker-result-info-div'>
