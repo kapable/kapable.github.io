@@ -482,7 +482,7 @@ aol.com,58905,RESELLER,e1a5b5b6e3255540
 #contact:programmatic@optad360.com
 
 #Ad.Plus
-ad.plus, NetworkCode, DIRECT
+ad.plus, 23131258305, DIRECT
 google.com, pub-4573231550355221, RESELLER, f08c47fec0942fa0
 pubmatic.com, 160907, RESELLER, 5d62403b186f2ace
 indexexchange.com, 194273, RESELLER, 50b1c356f2c5c8fc
