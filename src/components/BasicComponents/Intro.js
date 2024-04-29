@@ -66,7 +66,6 @@ class Intro extends Component {
             num_shares_count:0,
             custom_name:"",
             custom_option:"",
-            originAdProb: 0.35 < Math.random(),
         }
         this._onStartButtonClick = this._onStartButtonClick.bind(this);
         this._onMainButtonClick = this._onMainButtonClick.bind(this);
@@ -190,11 +189,17 @@ class Intro extends Component {
                     <OtherLangIcons currentTest={this.state.current_test.info.mainUrl}/>
                     
                     <AdsenseAdvertiser
-                        client={`ca-pub-${this.state.originAdProb ? "2382342018701919" : "5142864985628271"}`}
-                        slot={this.state.originAdProb ? "5663135072" : "7281907187"}
+                        client={`ca-pub-2382342018701919`}
+                        slot={"5663135072"}
                         format="auto"
                         responsive="true"
                     />
+                    {/* <AdsenseAdvertiser
+                        client={`ca-pub-5142864985628271`}
+                        slot={"7281907187"}
+                        format="auto"
+                        responsive="true"
+                    /> */}
 
                     {/* CPC Banner Intro footer */}
                     {/* {this.cpcBannerIntroFooterScriptor()} */}
