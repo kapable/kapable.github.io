@@ -98,6 +98,9 @@ function MainPage(props) {
 
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
                 <>
+                    <Link to='/colorPickerHard/' className="main-link-block" key="colorPickerHard-banner">
+                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorPicker-Hard-thumb.png`} alt="lifeInterpreting" />
+                    </Link>
                     <Link to='/colorPickerMedium/' className="main-link-block" key="colorPickerMedium-banner">
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorPicker-Medium-thumb.png`} alt="lifeInterpreting" />
                     </Link>
