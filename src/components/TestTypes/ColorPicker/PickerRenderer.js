@@ -207,7 +207,6 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
             return(
                 <div className='picker-background'>
                     <Progress className='picker-progress' percent={(remainingTime) / data.seconds * 100} showInfo={false} />
-                    {/* TODO: width / height with number of squares */}
                     {[...Array(parseInt(gridMatrix.rows))].map((_, row_num) => (
                         <div className='picker-row' key={`${row_num}-div`}>
                             {[...Array(parseInt(gridMatrix.cols))].map((_, col_num) => (
