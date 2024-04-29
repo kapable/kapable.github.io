@@ -14,6 +14,7 @@ function MainPage(props) {
     const mainImgRef = useRef(null);
     const { state } = useLocation();
     const [currentCategory, setCurrentCategory] = useState(state?.currentCategory);
+    const [originAdProb] = useState(0.35 < Math.random());
     useEffect(() => {
         return mainImgRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [mainImgRef]);
@@ -45,19 +46,12 @@ function MainPage(props) {
             <CategoryIconsMain lang={props?.lang} setCurrentCategory={setCurrentCategory} />
 
             <AdsenseAdvertiser
-                client={`ca-pub-2382342018701919`}
-                slot={"5663135072"}
+                client={`ca-pub-${originAdProb ? "2382342018701919" : "5142864985628271"}`}
+                slot={originAdProb ? "2858791575" : "8926161348"}
                 format="auto"
                 responsive="true"
                 style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
             />
-            {/* <AdsenseAdvertiser
-                client={`ca-pub-5142864985628271`}
-                slot={"7281907187"}
-                format="auto"
-                responsive="true"
-                style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
-            /> */}
 
             {/* FIFTEEN AI IMG GEN */}
             {/* {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "ai") ? (
@@ -123,8 +117,9 @@ function MainPage(props) {
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
                                 <AdsenseAdvertiser
-                                    client={`ca-pub-2382342018701919`} //5142864985628271
-                                    slot={"5663135072"} //7281907187
+                                    key={item[0].replaceAll('/','')+'-adsense'}
+                                    client={`ca-pub-${originAdProb ? "2382342018701919" : "5142864985628271"}`}
+                                    slot={originAdProb ? "3780210756" : "8523153898"}
                                     format="auto"
                                     responsive="true"
                                     style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
@@ -209,8 +204,9 @@ function MainPage(props) {
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
                                 <AdsenseAdvertiser
-                                    client={`ca-pub-2382342018701919`} //5142864985628271
-                                    slot={"5663135072"} //7281907187
+                                    key={item[0].replaceAll('/','')+'-adsense'}
+                                    client={`ca-pub-${originAdProb ? "2382342018701919" : "5142864985628271"}`}
+                                    slot={originAdProb ? "3780210756" : "8523153898"}
                                     format="auto"
                                     responsive="true"
                                     style={{display:"inline-block",width:"100%",maxWidth:"450px"}}
@@ -279,8 +275,9 @@ function MainPage(props) {
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
                                 <AdsenseAdvertiser
-                                    client={`ca-pub-2382342018701919`} //5142864985628271
-                                    slot={"5663135072"} //7281907187
+                                    key={item[0].replaceAll('/','')+'-adsense'}
+                                    client={`ca-pub-${originAdProb ? "2382342018701919" : "5142864985628271"}`}
+                                    slot={originAdProb ? "3780210756" : "8523153898"}
                                     format="auto"
                                     responsive="true"
                                     style={{display:"inline-block",width:"100%",maxWidth:"450px"}}

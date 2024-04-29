@@ -119,8 +119,8 @@ const FortuneCookie = () => {
                                 className="to-ppl-banner-text"
                                 > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={test} onClick={_onPPLBannerClick} style={{"marginTop": "2.5rem"}}/> </a>
                             <AdsenseAdvertiser
-                                client={`ca-pub-2382342018701919`} //5142864985628271
-                                slot={"5663135072"} //7281907187
+                                client={`ca-pub-${0.35 < Math.random() ? "2382342018701919" : "5142864985628271"}`}
+                                slot={0.35 < Math.random() ? "5663135072" : "7281907187"}
                                 format="auto"
                                 responsive="true"
                             />
