@@ -190,9 +190,10 @@ class Intro extends Component {
                     
                     <AdsenseAdvertiser
                         client={`ca-pub-2382342018701919`}
-                        slot={"5663135072"}
+                        slot={"9210802615"}
                         format="auto"
                         responsive="true"
+                        style={{display:'block'}}
                     />
                     {/* <AdsenseAdvertiser
                         client={`ca-pub-5142864985628271`}

@@ -1,9 +1,8 @@
 import axios from 'axios';
-import React, { useState, useEffect, useCallback, Fragment } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import styled, { createGlobalStyle } from 'styled-components';
-import ScriptTag from 'react-script-tag'
 import Pagination from "react-js-pagination";
 import { _eventSenderGA } from '../../../tools/tools';
 import { Helmet } from 'react-helmet';
@@ -71,18 +70,7 @@ function PostPage(props) {
         .main-header {
             display: none;
         }
-    `
-
-    function adTagRenderer(){
-        return(
-            <Fragment>
-                {/* <ScriptTag async src="https://cdn.ad.plus/player/adplus.js"></ScriptTag>
-                <ScriptTag data-playerPro="current">
-                    {`(function(){var s=document.querySelector('ScriptTag[data-playerPro="current"]');s.removeAttribute("data-playerPro");(playerPro=window.playerPro||[]).push({id:"z2I717k6zq5b",after:s,appParams:{"C_NETWORK_CODE":"23131258305", "C_WEBSITE":"ktestone.com"}});})();`}
-                </ScriptTag> */}
-            </Fragment>
-        )
-    }
+    `;
 
     const onShareBtnClick = () => {
         _eventSenderGA("Sharing", "Click Copy-link Button", "post page");
@@ -280,7 +268,7 @@ function PostPage(props) {
                         eachMail
                         : null}
                 </div>
-                {adTagRenderer()}
+                {/* {AdplusAdvertiser()} */}
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -348,7 +336,7 @@ function PostPage(props) {
                     </>}
                 </div>
                 
-                {adTagRenderer()}
+                {/* {AdplusAdvertiser()} */}
                 <a
                     target="_blank"
                     rel="noopener noreferrer"

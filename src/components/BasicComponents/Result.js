@@ -65,7 +65,6 @@ class Result extends Component {
         this._onPPLBannerClick = this._onPPLBannerClick.bind(this);
         this._onGotoBlogClick = this._onGotoBlogClick.bind(this);
         this.horizontalNewTestRenderer = this.horizontalNewTestRenderer.bind(this);
-        this.adTagRenderer = this.adTagRenderer.bind(this);
         this.otherTestBannerRenderer = this.otherTestBannerRenderer.bind(this);
         this.onCoupangButtonClick = this.onCoupangButtonClick.bind(this);
         this.onCoupangCloseButtonClick = this.onCoupangCloseButtonClick.bind(this)
@@ -420,6 +419,7 @@ class Result extends Component {
         const current_lang = current_test_info.info.lang
         const bottom_test_list = TESTS.filter((item) => (item.info.lang === current_lang && item.info.mainUrl !== current_test_info.info.mainUrl));
         const bottom_test_name_list =bottom_test_list.map((li) => li.info.mainUrl);
+        console.log(current_test_info);
         // let personalColor2022ListKor = [];
         // let EngTestList = ["meOtherEng", "egoProfileEng", "iPhoneMemoEng", "colorPaletteEng", "bubbleCharEng", "alienCharEng", "loveLotteryEng", "loveTVEng", "rainDropEng", "digitalCharEng", "postCardEng", "mazeHeartEng", "colorLabelStickerEng", "DIYEng", "labelStickerEng", "earthCharacteristicEng", "polaroidCharacteristicEng", "labelStickerLoveEng", "loveMagazineEng", "loveInMyHeadEng", "loveSpicyEng", "loveSpringFlowerEng", "coupleCharacterEng", "loveSpeedEng", "loveCellEng", "speechHabitEng", "mbtiFeaturesEng", "bondeeEng", "loveWarningEng", "characteristicChracterEng", "meGuideEng", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "memoEng", "waterLoveEng", "musicNoteEng", "fishShapedBunEng", "smileColorTestEng", "personalColorEng", "snowflakeEng", "personalColor2022Eng", "auditionBTIEng", "percentageMBTI2022Eng", "lovejewerlyEng", "idealTypeEng", "fruitAltEng", "facialExpressionAnalyzerEng", "dogSoundsEng", "hanbokBTIEng", "personalColorFactEng", "dringkingHabitEng", "personalIncenseEng"];
         // let CNTestList = ["emotionGraphCN", "loveInMyHeadCN", "loveSpicyCN", "cantWaitCN", "loveSpringFlowerCN", "coupleCharacterMaleCN", "coupleCharacterFemaleCN", "loveCellCN", "speechHabitCN", "bondeeCN", "loveFlameCN", "characteristicChracterCN", "loveWarningCN", "loveCharacterCN", "smileColorTestCn", "auditionBTICn", "percentageMBTI2022Cn", "personalColor2022CN", "oneSidedLoveCN"];
@@ -860,10 +860,10 @@ class Result extends Component {
                         > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/colorPicker-${difficulty}-thumb.png`} className='ppl-banner-img' alt={'colorPicker'} onClick={this._onPPLBannerClick}/> </a>
                         <AdsenseAdvertiser
                             client={`ca-pub-2382342018701919`} //5142864985628271
-                            slot={"5663135072"} //7281907187
+                            slot={"9210802615"} //7281907187
                             format="auto"
                             responsive="true"
-                            style={{ display:"block", width:"100%", margin: '0 auto' }}
+                            style={{display:"block"}}
                         />
                     </Fragment>
                 ))}
@@ -879,10 +879,10 @@ class Result extends Component {
                                 <AdsenseAdvertiser
                                     key={test+'-adsense'}
                                     client={`ca-pub-2382342018701919`} //5142864985628271
-                                    slot={"5663135072"} //7281907187
+                                    slot={"9210802615"} //7281907187
                                     format="auto"
                                     responsive="true"
-                                    style={{ display:"block", width:"100%", margin: '0 auto' }}
+                                    style={{display:"block"}}
                                 />
                         </Fragment>
                     )
@@ -903,17 +903,6 @@ class Result extends Component {
             </Router>
         )
     };
-
-    adTagRenderer(){
-        return(
-            <Fragment>
-                {/* <ScriptTag async src="https://cdn.ad.plus/player/adplus.js"></ScriptTag>
-                <ScriptTag data-playerPro="current">
-                    {`(function(){var s=document.querySelector('ScriptTag[data-playerPro="current"]');s.removeAttribute("data-playerPro");(playerPro=window.playerPro||[]).push({id:"z2I717k6zq5b",after:s,appParams:{"C_NETWORK_CODE":"23131258305", "C_WEBSITE":"ktestone.com"}});})();`}
-                </ScriptTag> */}
-            </Fragment>
-        )
-    }
 
     affiliateRenderer(){
         const cookieRocketCoupangLink = this.state.originAdProb ? "https://link.coupang.com/a/X2X8X" : "https://link.coupang.com/a/bcQpxX";
@@ -1791,10 +1780,10 @@ class Result extends Component {
                     {/* {ppl_list.includes(this.state.current_test) ? null  : } */}
                     <AdsenseAdvertiser
                         client={`ca-pub-2382342018701919`} //5142864985628271
-                        slot={"5663135072"} //7281907187
+                        slot={"9210802615"} //7281907187
                         format="auto"
                         responsive="true"
-                        style={{ display:"block", width:"100%",margin: '0 auto' }}
+                        style={{display:"block"}}
                     />
                     <div className="result-header">
                         <h5 className="result-title">결과는...</h5>
@@ -1822,9 +1811,10 @@ class Result extends Component {
                     <OtherLangIcons currentTest={this.state.current_test}/>
                     {ppl_list.includes(this.state.current_test) ? null  : <AdsenseAdvertiser
                         client={`ca-pub-2382342018701919`} //5142864985628271
-                        slot={"5663135072"} //7281907187
+                        slot={"9210802615"} //7281907187
                         format="auto"
                         responsive="true"
+                        style={{display:"block"}}
                     />}
 
                     <div className="share">
@@ -1867,7 +1857,7 @@ class Result extends Component {
                     </div>
                 </div>
                 {this.otherTestBannerRenderer()}
-                {this.adTagRenderer()}
+                {/* {AdplusAdvertiser()} */}
                 {/* New Test banners */}
                 {/* {this.horizontalNewTestRenderer()} */}
 

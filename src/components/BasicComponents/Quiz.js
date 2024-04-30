@@ -143,9 +143,10 @@ class Quiz extends Component {
             return(
                 <AdsenseAdvertiser
                     client={`ca-pub-2382342018701919`} //5142864985628271
-                    slot={"5663135072"} //7281907187
+                    slot={"9210802615"} //7281907187
                     format="auto"
                     responsive="true"
+                    style={{display:"block"}}
                 />
             )
         }
@@ -155,9 +156,10 @@ class Quiz extends Component {
             return(
                 <AdsenseAdvertiser
                     client={`ca-pub-2382342018701919`}
-                    slot={"5663135072"}
+                    slot={"9210802615"}
                     format="auto"
                     responsive="true"
+                    style={{display:"block"}}
                 />
             )
         } else {
@@ -167,6 +169,7 @@ class Quiz extends Component {
                     slot={"7281907187"}
                     format="auto"
                     responsive="true"
+                    style={{display:"block"}}
                 />
             )
         }

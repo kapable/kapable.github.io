@@ -8,7 +8,6 @@ import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
-import ScriptTag from 'react-script-tag'
 
 function MainPage(props) {
     const mainImgRef = useRef(null);
@@ -17,16 +16,7 @@ function MainPage(props) {
     useEffect(() => {
         return mainImgRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [mainImgRef]);
-    function adTagRenderer(){
-        return(
-            <Fragment>
-                {/* <ScriptTag async src="https://cdn.ad.plus/player/adplus.js"></ScriptTag>
-                <ScriptTag data-playerPro="current">
-                    {`(function(){var s=document.querySelector('ScriptTag[data-playerPro="current"]');s.removeAttribute("data-playerPro");(playerPro=window.playerPro||[]).push({id:"z2I717k6zq5b",after:s,appParams:{"C_NETWORK_CODE":"23131258305", "C_WEBSITE":"ktestone.com"}});})();`}
-                </ScriptTag> */}
-            </Fragment>
-        )
-    }
+    
     return (
         <Fragment>
             {/* Language Converting */}
@@ -42,17 +32,17 @@ function MainPage(props) {
 
             <AdsenseAdvertiser
                 client={`ca-pub-2382342018701919`}
-                slot={"5663135072"}
+                slot={"9210802615"}
                 format="auto"
                 responsive="true"
-                style={{display:"inline-block",width:"100%"}}
+                style={{display:"block"}}
             />
             {/* <AdsenseAdvertiser
                 client={`ca-pub-5142864985628271`}
                 slot={"7281907187"}
                 format="auto"
                 responsive="true"
-                style={{display:"inline-block",width:"100%"}}
+                style={{display:"block"}}
             /> */}
 
             {/* FIFTEEN AI IMG GEN */}
@@ -124,10 +114,10 @@ function MainPage(props) {
                                 <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client={`ca-pub-2382342018701919`} //5142864985628271
-                                    slot={"5663135072"} //7281907187
+                                    slot={"9210802615"} //7281907187
                                     format="auto"
                                     responsive="true"
-                                    style={{display:"inline-block",width:"100%"}}
+                                    style={{display:"block"}}
                                 />
                             </Fragment>
                         )
@@ -211,10 +201,10 @@ function MainPage(props) {
                                 <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client={`ca-pub-2382342018701919`} //5142864985628271
-                                    slot={"5663135072"} //7281907187
+                                    slot={"9210802615"} //7281907187
                                     format="auto"
                                     responsive="true"
-                                    style={{display:"inline-block",width:"100%"}}
+                                    style={{display:"block"}}
                                 />
                             </Fragment>
                         )
@@ -282,10 +272,10 @@ function MainPage(props) {
                                 <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client={`ca-pub-2382342018701919`} //5142864985628271
-                                    slot={"5663135072"} //7281907187
+                                    slot={"9210802615"} //7281907187
                                     format="auto"
                                     responsive="true"
-                                    style={{display:"inline-block",width:"100%"}}
+                                    style={{display:"block"}}
                                 />
                             </Fragment>
                         )
@@ -318,7 +308,6 @@ function MainPage(props) {
 
             {/** Floating Button for KakaoPlusFriend */}
             <KakaoPlusFriendBtn />
-            {adTagRenderer()}
         </Fragment>
         
     );

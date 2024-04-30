@@ -1,8 +1,7 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { _eventSenderGA } from '../../../tools/tools';
-import ScriptTag from 'react-script-tag'
 import { Helmet } from 'react-helmet';
 import RegisterPage from './RegisterPage';
 import LoginPage from './LoginPage';
@@ -24,18 +23,7 @@ function LandingPage(props) {
         margin: 1.5rem auto;
         font-weight: bold;
         font-size: .8rem;
-    `
-
-    function adTagRenderer(){
-        return(
-            <Fragment>
-                {/* <ScriptTag async src="https://cdn.ad.plus/player/adplus.js"></ScriptTag>
-                <ScriptTag data-playerPro="current">
-                    {`(function(){var s=document.querySelector('ScriptTag[data-playerPro="current"]');s.removeAttribute("data-playerPro");(playerPro=window.playerPro||[]).push({id:"z2I717k6zq5b",after:s,appParams:{"C_NETWORK_CODE":"23131258305", "C_WEBSITE":"ktestone.com"}});})();`}
-                </ScriptTag> */}
-            </Fragment>
-        )
-    }
+    `;
 
     const applyBtnHandler = () => {
         _eventSenderGA("Submitting", "Click Apply Button", "apply page")
@@ -92,7 +80,7 @@ function LandingPage(props) {
             <ContentImg src={`https://images.ktestone.com/MetaPang/Apply/MetaPangApply_04.png`} alt="BG1" />
             <div>
                 {formRenderer(mode)}
-                {adTagRenderer()}
+                {/* {AdplusAdvertiser()} */}
             </div>
             <CompanyName>©CookieRocket</CompanyName>
         </BackgroundDiv>
