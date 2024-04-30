@@ -8,6 +8,7 @@ import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
+import useAdplus from '../SubComponents/useAdplus';
 
 function MainPage(props) {
     const mainImgRef = useRef(null);
@@ -16,6 +17,8 @@ function MainPage(props) {
     useEffect(() => {
         return mainImgRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [mainImgRef]);
+
+    useAdplus();
     
     return (
         <Fragment>
