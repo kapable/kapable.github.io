@@ -20,14 +20,10 @@ function MainPage(props) {
     function adTagRenderer(){
         return(
             <Fragment>
-                <div id="protag-in_article_video"></div>
-                    <ScriptTag type="text/javascript">
-                        {`window.googletag = window.googletag || { cmd: [] };
-                        window.protag = window.protag || { cmd: [] };
-                        window.protag.cmd.push(function () {
-                            window.protag.display("protag-in_article_video");
-                        });`}
-                    </ScriptTag>
+                <ScriptTag async src="https://cdn.ad.plus/player/adplus.js"></ScriptTag>
+                <ScriptTag data-playerPro="current">
+                    {`(function(){var s=document.querySelector('ScriptTag[data-playerPro="current"]');s.removeAttribute("data-playerPro");(playerPro=window.playerPro||[]).push({id:"z2I717k6zq5b",after:s,appParams:{"C_NETWORK_CODE":"23131258305", "C_WEBSITE":"ktestone.com"}});})();`}
+                </ScriptTag>
             </Fragment>
         )
     }
@@ -264,7 +260,7 @@ function MainPage(props) {
                     <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/post2022-thumb.png`} alt="POST-2022" />
                 </Link>
             ) : null}
-
+ 
             {/* Go to POST 2021 ENG */}
             {props.match.path !== '/Kor/' && (currentCategory === '' || currentCategory === "etc")
             ? (
