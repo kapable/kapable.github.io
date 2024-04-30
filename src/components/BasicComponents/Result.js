@@ -863,7 +863,7 @@ class Result extends Component {
                             slot={"5663135072"} //7281907187
                             format="auto"
                             responsive="true"
-                            style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+                            style={{ display:"block", width:"100%", margin: '0 auto' }}
                         />
                     </Fragment>
                 ))}
@@ -882,7 +882,7 @@ class Result extends Component {
                                     slot={"5663135072"} //7281907187
                                     format="auto"
                                     responsive="true"
-                                    style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+                                    style={{ display:"block", width:"100%", margin: '0 auto' }}
                                 />
                         </Fragment>
                     )
@@ -907,10 +907,10 @@ class Result extends Component {
     adTagRenderer(){
         return(
             <Fragment>
-                <ScriptTag async src="https://cdn.ad.plus/player/adplus.js"></ScriptTag>
+                {/* <ScriptTag async src="https://cdn.ad.plus/player/adplus.js"></ScriptTag>
                 <ScriptTag data-playerPro="current">
                     {`(function(){var s=document.querySelector('ScriptTag[data-playerPro="current"]');s.removeAttribute("data-playerPro");(playerPro=window.playerPro||[]).push({id:"z2I717k6zq5b",after:s,appParams:{"C_NETWORK_CODE":"23131258305", "C_WEBSITE":"ktestone.com"}});})();`}
-                </ScriptTag>
+                </ScriptTag> */}
             </Fragment>
         )
     }
@@ -1794,7 +1794,7 @@ class Result extends Component {
                         slot={"5663135072"} //7281907187
                         format="auto"
                         responsive="true"
-                        style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
+                        style={{ display:"block", width:"100%",margin: '0 auto' }}
                     />
                     <div className="result-header">
                         <h5 className="result-title">결과는...</h5>
