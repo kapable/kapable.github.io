@@ -1,10 +1,17 @@
 import { Divider } from 'antd';
 import React, { useEffect, useState } from 'react';
 
-const ColorPickerTierTable = ({ currentTier, totalTime, tierRange }) => {
+const ColorPickerTierTable = ({ currentTier, totalTime, tierRange, lang }) => {
     const [nowTier, setNowTier] = useState();
     const [nowTotalTime, setNowTotalTime] = useState();
     const [nowTierRange, setNowTierRange] = useState(tierRange);
+    const [langComments, setLangComments] = useState(['초', '', '초 이내']);
+
+    useEffect(() => {
+        if (lang === 'Eng') {
+            setLangComments(['sec', 'under ', 'sec'])
+        }
+    }, [lang]);
     useEffect(() => {
         if(tierRange.length > 1)  {
             setNowTier(currentTier);
@@ -16,7 +23,7 @@ const ColorPickerTierTable = ({ currentTier, totalTime, tierRange }) => {
         <div className='tier-table-div'>
             <div className='tier-table-row'>
                 <div className='picker-result-info-highlight tier-table-highlight'>{nowTier}</div>
-                <div className='tier-table-highlight'>{nowTotalTime}초</div>
+                <div className='tier-table-highlight'>{nowTotalTime}{langComments[0]}</div>
             </div>
             <Divider />
             {nowTierRange.map((tier) => (
@@ -30,7 +37,7 @@ const ColorPickerTierTable = ({ currentTier, totalTime, tierRange }) => {
                     }}
                 >
                     <div>{tier.tier}</div>
-                    <div>{tier.sec}초 이내</div>
+                    <div>{langComments[1]}{tier.sec}{langComments[2]}</div>
                 </div>
             ))}
         </div>

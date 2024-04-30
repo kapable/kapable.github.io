@@ -38,7 +38,7 @@ import { withCookies } from 'react-cookie';
 import MyPage from './components/BasicComponents/Users/MyPage';
 import ColorPicking from './components/TestTypes/ColorPicker/ColorPicking';
 import ColorPickerResult from './components/TestTypes/ColorPicker/ColorPickerResult';
-import { color_picker_list } from './api/COLORPICKING';
+import { difficulties } from './api/COLORPICKING';
 
 class App extends Component {
   constructor(props){
@@ -271,11 +271,11 @@ class App extends Component {
             <Route exact path="/myPage" component={() => <MyPage onClickLogout={this.onClickLogout} />} />
 
             {/* ColorPicker */}
-            {color_picker_list.map((item) => (
-              <Route key={`colorPicker${item}-intro`} path={`/colorPicker${item}/`} component={() => <ColorPicking difficulty={item} />} exact />
+            {difficulties.map((item) => (
+              <Route key={`colorPicker${item.difficulty}-intro`} path={`/colorPicker${item.difficulty}/`} component={() => <ColorPicking difficulty={item.difficulty} lang={item.lang} />} exact />
             ))}
-            {color_picker_list.map((item) => (
-              <Route key={`colorPicker${item}-result`} path={`/colorPicker${item}/result`} component={() => <ColorPickerResult />} exact />
+            {difficulties.map((item) => (
+              <Route key={`colorPicker${item.difficulty}-result`} path={`/colorPicker${item.difficulty}/result`} component={() => <ColorPickerResult lang={item.lang} />} exact />
             ))}
 
             {/* go to "HaGender" page */}

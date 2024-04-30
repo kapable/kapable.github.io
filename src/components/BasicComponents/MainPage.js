@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState, useRef } from 'react';
+import React, { Fragment, useEffect, useState, useRef, useCallback } from 'react';
 import { Link, useLocation, withRouter } from 'react-router-dom';
 import OhterLangIconsMain from '../SubComponents/OhterLangIconsMain';
 import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
@@ -9,6 +9,7 @@ import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
 import useAdplus from '../SubComponents/useAdplus';
+import { difficulties } from '../../api/COLORPICKING';
 
 function MainPage(props) {
     const mainImgRef = useRef(null);
@@ -19,6 +20,36 @@ function MainPage(props) {
     }, [mainImgRef]);
 
     useAdplus();
+
+    const colorPickerRenderer = useCallback(() => {
+        if((props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc")) {
+            const renderingArray = difficulties.filter((item) => item.lang === 'Kor').reverse();
+            return (
+                <>
+                    {
+                        renderingArray.map((elem) => (
+                            <Link to={`/colorPicker${elem.difficulty}/`} className="main-link-block" key={`colorPicker${elem.difficulty}-banner`}>
+                                <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorPicker-${elem.difficulty}-thumb.png`} alt={`colorPicker${elem.difficulty}-banner`} />
+                            </Link>
+                        ))
+                    }
+                </>
+            )
+        } else if ((props.lang === 'Eng') && (!currentCategory || currentCategory === "etc")) {
+            const renderingArray = difficulties.filter((item) => item.lang === 'Eng').reverse();
+            return (
+                <>
+                    {
+                        renderingArray.map((elem) => (
+                            <Link to={`/colorPicker${elem.difficulty}/`} className="main-link-block" key={`colorPicker${elem.difficulty}-banner`}>
+                                <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorPicker-${elem.difficulty}-thumb.png`} alt={`colorPicker${elem.difficulty}-banner`} />
+                            </Link>
+                        ))
+                    }
+                </>
+            )
+        }
+    }, [props.lang, currentCategory]);
     
     return (
         <Fragment>
@@ -91,7 +122,7 @@ function MainPage(props) {
                 </>
             ) : null} */}
 
-            {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
+            {/* {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
                 <>
                     <Link to='/colorPickerHard/' className="main-link-block" key="colorPickerHard-banner">
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorPicker-Hard-thumb.png`} alt="lifeInterpreting" />
@@ -103,7 +134,8 @@ function MainPage(props) {
                         <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorPicker-Easy-thumb.png`} alt="lifeInterpreting" />
                     </Link>
                 </>
-            ) : null}
+            ) : null} */}
+            {colorPickerRenderer()}
 
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">

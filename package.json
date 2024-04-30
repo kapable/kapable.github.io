@@ -4113,7 +4113,13 @@
       "/colorPickerMedium",
       "/kapable.github.io/colorPickerMedium",
       "/colorPickerHard",
-      "/kapable.github.io/colorPickerHard"
+      "/kapable.github.io/colorPickerHard",
+      "/colorPickerEasyEng",
+      "/kapable.github.io/colorPickerEasyEng",
+      "/colorPickerMediumEng",
+      "/kapable.github.io/colorPickerMediumEng",
+      "/colorPickerHardEng",
+      "/kapable.github.io/colorPickerHarEngd"
     ]
   },
   "eslintConfig": {

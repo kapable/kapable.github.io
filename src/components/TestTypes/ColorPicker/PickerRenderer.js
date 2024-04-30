@@ -44,7 +44,7 @@ const gridMatrixs = [
     },
 ]
 
-const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficulty, isReady, setIsReady, setIsDone, totalRound, totalTime}) => {
+const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficulty, isReady, setIsReady, setIsDone, totalRound, totalTime, lang}) => {
     const history = useHistory();
     const [isOpened, setIsOpened] = useState(false);
     const [coupangCount, setCoupangCount] = useState(5);
@@ -64,6 +64,12 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
     const [wrongMessage, setWrongMessage] = useState('');
     const [testDomain] = useState(`/colorPicker${difficulty}`);
 
+    const refresh = useCallback((url) => {
+        history.replace("/empty");
+        setTimeout(() => {
+            history.replace(url);
+        }, 10);
+    }, [history]);
 
     useEffect(() => {
         if(startCoupangTimer) {
@@ -118,6 +124,14 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
             setIsDone(true);
             clearInterval(secondInterval);
             setStartCoupangTimer(true);
+            if(lang !== 'Kor') {
+                alert('Time is UP!')
+                return refresh(testDomain);
+            }
+            if(isOpened || coupangCookies?.coupang) {
+                alert('시간이 다됐어요!')
+                return refresh(testDomain);
+            }
             if(isWrong) {
                 setWrongMessage('색감이 틀렸어요!');
             } else {
@@ -126,7 +140,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
         } else {
             return () => clearInterval(secondInterval);
         }
-    }, [data, isReady, isPicking, remainingTime, history, totalRound, wrongMessage, isWrong, setIsReady, setIsDone]);
+    }, [data, isReady, isPicking, remainingTime, history, totalRound, wrongMessage, isWrong, setIsReady, setIsDone, lang, refresh, testDomain, isOpened, coupangCookies.coupang]);
 
     const onCoupangButtonClick = useCallback(() => {
         const cookieAges = 60*60*2;
@@ -177,16 +191,21 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                 setIsDone(true);
                 setIsLoading(true);
                 setTimeout(() => {
-                    history.push(`${testDomain}/result/`, {difficulty, totalTime})
+                    history.push(`${testDomain}/result/`, {difficulty, totalTime, lang});
                 }, 2500);
             } else {
                 setCurrentRound(data.round + 1);
             }
         } else {
             setIsDone(true);
+            if(lang !== 'Kor') {
+                alert('Wrong. Go back to the beginning!');
+                return refresh(testDomain);
+            }
             if(isOpened || coupangCookies?.coupang) {
+                console.log(history);
                 alert('틀렸어요. 처음부터 다시 시작합니다.');
-                return history.push(testDomain);
+                return refresh(testDomain);
             } else {
                 setRemainingTime(0);
                 setStartCoupangTimer(true);
@@ -194,7 +213,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                 setIsWrong(true);
             }
         }
-    }, [coupangCookies.coupang, data.round, difficulty, history, isOpened, randomNum, setCurrentRound, setIsDone, setIsLoading, testDomain, totalRound, totalTime]);
+    }, [coupangCookies.coupang, data.round, difficulty, history, isOpened, lang, randomNum, refresh, setCurrentRound, setIsDone, setIsLoading, testDomain, totalRound, totalTime]);
 
     if(isReady) {
         if(isLoading) {
@@ -222,7 +241,7 @@ const PickerRenderer = ({data, setCurrentRound, isLoading, setIsLoading, difficu
                             ))}
                         </div>
                     ))}
-                    {startCoupangTimer ? (
+                    {lang === 'Kor' && startCoupangTimer ? (
                         isOpened || coupangCookies?.coupang ? null :
                         coupangButtonRenderer()
                     ) : null}
