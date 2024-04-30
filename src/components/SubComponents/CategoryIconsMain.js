@@ -2,8 +2,8 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 function CategoryIconsMain({ lang }) {
-    const categoryListKor = ['', 'characteristic', 'love', 'saju', 'ai', 'etc'];
-    const categoryList = ['', 'characteristic', 'love', 'ai', 'etc'];
+    const categoryListKor = ['', 'characteristic', 'love', 'saju', 'etc'];
+    const categoryList = ['', 'characteristic', 'love', 'etc'];
     if(lang === 'Kor' || !lang) {
         return(
             <div className="go-to-each-category-main">

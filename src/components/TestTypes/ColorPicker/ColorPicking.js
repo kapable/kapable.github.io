@@ -6,6 +6,7 @@ import { _eventSenderGA, reloadPage } from '../../../tools/tools';
 import { color_picker_list, difficulties } from '../../../api/COLORPICKING';
 import './colorPicker.css';
 import { Helmet } from 'react-helmet';
+import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
 
 const ColorPicking = ({ difficulty }) => {
     const location = useLocation();
@@ -52,26 +53,26 @@ const ColorPicking = ({ difficulty }) => {
       return (
         <Helmet>
           {/* <!-- Primary Meta Tags --> */}
-          <title>색감 테스트 {difficulty} | 당신의 티어는? - 케이테스트 | 타임어택</title>
-          <meta name="title" content={`색감 테스트 ${difficulty} - 케이테스트 | 타임어택`}/>
+          <title>색감 테스트 게임 {difficulty} | 당신의 티어는? - 케이테스트 | 타임어택</title>
+          <meta name="title" content={`색감 테스트 게임 ${difficulty} - 케이테스트 | 타임어택`}/>
           <meta name="description" content={`당신의 티어는? | 타임어택`} data-react-helmet="true"/>
           <link rel="main-url" href={`https://ktestone.com/colorPicker${difficulty}/`}/>
 
           {/* <!-- Open Graph / Facebook --> */}
           <meta property="og:type" content="website"/>
           <meta property="og:url" content={`https://ktestone.com/colorPicker${difficulty}/`}/>
-          <meta property="og:title" content={`색감 테스트 ${difficulty} - 케이테스트 | 타임어택`}/>
+          <meta property="og:title" content={`색감 테스트 게임 ${difficulty} - 케이테스트 | 타임어택`}/>
           <meta property="og:description" content={`당신의 티어는? | 타임어택`}/>
           <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/colorPicker-${difficulty}-thumb.png`}/>
-          <meta property="og:image:alt" content={`색감 테스트 ${difficulty} - 케이테스트 | 타임어택`} />
+          <meta property="og:image:alt" content={`색감 테스트 게임 ${difficulty} - 케이테스트 | 타임어택`} />
 
           {/* <!-- Twitter --> */}
           <meta property="twitter:card" content="summary_large_image"/>
           <meta property="twitter:url" content={`https://ktestone.com/colorPicker${difficulty}/`}/>
-          <meta property="twitter:title" content={`색감 테스트 ${difficulty} - 케이테스트 | 타임어택`}/>
+          <meta property="twitter:title" content={`색감 테스트 게임 ${difficulty} - 케이테스트 | 타임어택`}/>
           <meta property="twitter:description" content={`당신의 티어는? | 타임어택`}/>
           <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/colorPicker-${difficulty}-thumb.png`}/>
-          <meta property="twitter:image:alt" content={`색감 테스트 ${difficulty} - 케이테스트 | 타임어택`} />
+          <meta property="twitter:image:alt" content={`색감 테스트 게임 ${difficulty} - 케이테스트 | 타임어택`} />
       </Helmet>
       )
     }
@@ -93,6 +94,7 @@ const ColorPicking = ({ difficulty }) => {
             />
             <p>* 시작 버튼을 누른 후 3초 뒤에 시작</p>
             <p>* 중간에 틀리면 다시 처음으로 돌아가요</p>
+            <GoToHomeBtn page="colorPicker intro"/>
         </div>
       )
     } else if (mode === 'start') {
@@ -123,6 +125,7 @@ const ColorPicking = ({ difficulty }) => {
               <Progress className='picker-progress' percent={(currentRound-1) / contents.rounds.length * 100} showInfo={false} />
             </>
           )}
+          <GoToHomeBtn page="colorPicker playing"/>
         </div>
       )
     }

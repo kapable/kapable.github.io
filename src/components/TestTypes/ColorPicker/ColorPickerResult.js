@@ -93,26 +93,26 @@ const ColorPickerResult = () => {
     return (
       <Helmet>
         {/* <!-- Primary Meta Tags --> */}
-        <title>색감 테스 | 당신의 티어는? - 케이테스트 | 타임어택</title>
-        <meta name="title" content={`색감 테스트 - 케이테스트 | 타임어택`}/>
+        <title>색감 테스트 게임 | 당신의 티어는? - 케이테스트 | 타임어택</title>
+        <meta name="title" content={`색감 테스트 게임 - 케이테스트 | 타임어택`}/>
         <meta name="description" content={`당신의 티어는? | 타임어택`} data-react-helmet="true"/>
         <link rel="main-url" href={`https://ktestone.com/colorPicker/`}/>
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website"/>
         <meta property="og:url" content={`https://ktestone.com/colorPicker/`}/>
-        <meta property="og:title" content={`색감 테스트 - 케이테스트 | 타임어택`}/>
+        <meta property="og:title" content={`색감 테스트 게임 - 케이테스트 | 타임어택`}/>
         <meta property="og:description" content={`당신의 티어는? | 타임어택`}/>
         <meta property="og:image" content={`https://images.ktestone.com/main-thumbnail/colorPicker-Easy-thumb.png`}/>
-        <meta property="og:image:alt" content={`색감 테스트 - 케이테스트 | 타임어택`} />
+        <meta property="og:image:alt" content={`색감 테스트 게임 - 케이테스트 | 타임어택`} />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content={`https://ktestone.com/colorPicker/`}/>
-        <meta property="twitter:title" content={`색감 테스트 - 케이테스트 | 타임어택`}/>
+        <meta property="twitter:title" content={`색감 테스트 게임 - 케이테스트 | 타임어택`}/>
         <meta property="twitter:description" content={`당신의 티어는? | 타임어택`}/>
         <meta property="twitter:image" content={`https://images.ktestone.com/main-thumbnail/colorPicker-Easy-thumb.png`}/>
-        <meta property="twitter:image:alt" content={`색감 테스트 - 케이테스트 | 타임어택`} />
+        <meta property="twitter:image:alt" content={`색감 테스트 게임 - 케이테스트 | 타임어택`} />
     </Helmet>
     )
   }
