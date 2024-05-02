@@ -20,6 +20,7 @@ import ShareGroup from './ShareGroup';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import GoToHomeBtn from '../SubComponents/GoToHomeBtn';
 import { difficulties } from '../../api/COLORPICKING';
+import AdplusVideoAdvertiser from '../SubComponents/AdplusVideoAdvertiser';
 // import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 // import KAKAOPLUSFRIEND from '../../api/DefaultImg/go-to-kakao-plusfriend.png';
 
@@ -90,27 +91,6 @@ class Result extends Component {
                 }
             }, 1000);
         }.bind(this), 800);
-        const script0 = document.createElement('script');
-        script0.async = true;
-        script0.src = "https://cdn.ad.plus/player/adplus.js";
-
-        const script = document.createElement('script');
-        script.setAttribute('data-playerPro', 'current');
-        script.text = `(function(){
-                var s=document.querySelector('script[data-playerPro="current"]');
-                s.removeAttribute("data-playerPro");
-                (playerPro=window.playerPro||[]).push({
-                    id:"z2I717k6zq5b",
-                    after:s,
-                    appParams:{"C_NETWORK_CODE":"23131258305", "C_WEBSITE":"ktestone.com"}
-                });}
-            )();`
-        document.body.appendChild(script0);
-        document.body.appendChild(script);
-        return () => {
-            document.body.removeChild(script0);
-            document.body.removeChild(script);
-        }
     }
 
     componentWillUnmount() {
@@ -1457,6 +1437,7 @@ class Result extends Component {
                 {/* CPC Banner Result footer */}
                 {/* {this.cpcBannerResultFooterScriptor()} */}
                 <GoToHomeBtn page="result"/>
+                <AdplusVideoAdvertiser />
             </Fragment>
         );
     };

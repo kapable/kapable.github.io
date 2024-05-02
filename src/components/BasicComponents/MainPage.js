@@ -7,9 +7,9 @@ import '../TestTypes/Post2021/PostPopup.css';
 import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
-import useAdplusVideo from '../SubComponents/useAdplusVideo';
 import { difficulties } from '../../api/COLORPICKING';
 import AdplusDisplayAdvertiser from '../SubComponents/AdplusDisplayAdvertiser';
+import AdplusVideoAdvertiser from '../SubComponents/AdplusVideoAdvertiser';
 
 function MainPage(props) {
     const mainImgRef = useRef(null);
@@ -18,8 +18,6 @@ function MainPage(props) {
     useEffect(() => {
         return mainImgRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [mainImgRef]);
-
-    useAdplusVideo();
 
     const colorPickerRenderer = useCallback(() => {
         if((props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc")) {
@@ -346,6 +344,7 @@ function MainPage(props) {
 
             {/** Floating Button for KakaoPlusFriend */}
             <KakaoPlusFriendBtn />
+            <AdplusVideoAdvertiser />
         </Fragment>
         
     );
