@@ -90,6 +90,27 @@ class Result extends Component {
                 }
             }, 1000);
         }.bind(this), 800);
+        const script0 = document.createElement('script');
+        script0.async = true;
+        script0.src = "https://cdn.ad.plus/player/adplus.js";
+
+        const script = document.createElement('script');
+        script.setAttribute('data-playerPro', 'current');
+        script.text = `(function(){
+                var s=document.querySelector('script[data-playerPro="current"]');
+                s.removeAttribute("data-playerPro");
+                (playerPro=window.playerPro||[]).push({
+                    id:"z2I717k6zq5b",
+                    after:s,
+                    appParams:{"C_NETWORK_CODE":"23131258305", "C_WEBSITE":"ktestone.com"}
+                });}
+            )();`
+        document.body.appendChild(script0);
+        document.body.appendChild(script);
+        return () => {
+            document.body.removeChild(script0);
+            document.body.removeChild(script);
+        }
     }
 
     componentWillUnmount() {
@@ -422,7 +443,7 @@ class Result extends Component {
         const colorPickerArray = difficulties.filter((item) => item.lang === current_lang);
         return(
             <Fragment>
-                {colorPickerArray.map((elem) => (
+                {colorPickerArray.map((elem, idx) => (
                     <Fragment key={`${elem.difficulty}-fragKey`}>
                         <a
                             target="_blank"
@@ -439,7 +460,7 @@ class Result extends Component {
                         />
                     </Fragment>
                 ))}
-                {bottom_test_name_list.map((test) => {
+                {bottom_test_name_list.map((test, idx) => {
                     return (
                         <Fragment key={test + '-test-key'}>
                             <a
@@ -448,14 +469,14 @@ class Result extends Component {
                                 href={`https://ktestone.com/kapable.github.io/${test}/`}
                                 className="to-ppl-banner-text"
                                 > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                                <AdsenseAdvertiser
-                                    key={test+'-adsense'}
-                                    client={`ca-pub-2382342018701919`} //5142864985628271
-                                    slot={"9210802615"} //7281907187
-                                    format="auto"
-                                    responsive="true"
-                                    style={{display:"block"}}
-                                />
+                            <AdsenseAdvertiser
+                                key={test+'-adsense'}
+                                client={`ca-pub-2382342018701919`} //5142864985628271
+                                slot={"9210802615"} //7281907187
+                                format="auto"
+                                responsive="true"
+                                style={{display:"block"}}
+                            />
                         </Fragment>
                     )
                 })}

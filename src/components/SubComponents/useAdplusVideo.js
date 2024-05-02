@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-const useAdplus = () => {
+const useAdplusVideo = () => {
     useEffect(() => {
         const script0 = document.createElement('script');
         script0.async = true;
@@ -26,4 +26,4 @@ const useAdplus = () => {
     }, []);
 };
 
-export default useAdplus;
+export default useAdplusVideo;

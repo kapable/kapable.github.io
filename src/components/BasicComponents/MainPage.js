@@ -6,10 +6,10 @@ import '../TestTypes/Post2021/Post2021.css';
 import '../TestTypes/Post2021/PostPopup.css';
 import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
-import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
-import useAdplus from '../SubComponents/useAdplus';
+import useAdplusVideo from '../SubComponents/useAdplusVideo';
 import { difficulties } from '../../api/COLORPICKING';
+import AdplusDisplayAdvertiser from '../SubComponents/AdplusDisplayAdvertiser';
 
 function MainPage(props) {
     const mainImgRef = useRef(null);
@@ -19,7 +19,7 @@ function MainPage(props) {
         return mainImgRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [mainImgRef]);
 
-    useAdplus();
+    useAdplusVideo();
 
     const colorPickerRenderer = useCallback(() => {
         if((props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc")) {
@@ -63,15 +63,15 @@ function MainPage(props) {
 
             {/* Category Converting */}
             <CategoryIconsMain lang={props?.lang} setCurrentCategory={setCurrentCategory} />
-
-            <AdsenseAdvertiser
+            <AdplusDisplayAdvertiser slotId={'Main-Top'} />
+            {/* <AdsenseAdvertiser
                 client={`ca-pub-2382342018701919`}
                 slot={"9210802615"}
                 format="auto"
                 responsive="true"
                 style={{display:"block"}}
             />
-            {/* <AdsenseAdvertiser
+            <AdsenseAdvertiser
                 client={`ca-pub-5142864985628271`}
                 slot={"7281907187"}
                 format="auto"
@@ -146,14 +146,15 @@ function MainPage(props) {
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
-                                <AdsenseAdvertiser
+                                <AdplusDisplayAdvertiser slotId={`Main-Top-${idx}`} />
+                                {/* <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client={`ca-pub-2382342018701919`} //5142864985628271
                                     slot={"9210802615"} //7281907187
                                     format="auto"
                                     responsive="true"
                                     style={{display:"block"}}
-                                />
+                                /> */}
                             </Fragment>
                         )
                     } else {
@@ -233,14 +234,15 @@ function MainPage(props) {
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
-                                <AdsenseAdvertiser
+                                <AdplusDisplayAdvertiser slotId={`Main-Middle-${idx}`} />
+                                {/* <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client={`ca-pub-2382342018701919`} //5142864985628271
                                     slot={"9210802615"} //7281907187
                                     format="auto"
                                     responsive="true"
                                     style={{display:"block"}}
-                                />
+                                /> */}
                             </Fragment>
                         )
                     } else {
@@ -304,14 +306,15 @@ function MainPage(props) {
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
-                                <AdsenseAdvertiser
+                                <AdplusDisplayAdvertiser slotId={`Main-Bottom-${idx}`} />
+                                {/* <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client={`ca-pub-2382342018701919`} //5142864985628271
                                     slot={"9210802615"} //7281907187
                                     format="auto"
                                     responsive="true"
                                     style={{display:"block"}}
-                                />
+                                /> */}
                             </Fragment>
                         )
                     } else {

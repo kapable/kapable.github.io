@@ -21,7 +21,7 @@ import COPYBTN from '../../api/DefaultImg/result-copy-link-btn.png';
 import BACKBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import ScriptTag from 'react-script-tag'
 import { _eventSenderGA } from '../../tools/tools';
-import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
+import AdplusDisplayAdvertiser from '../SubComponents/AdplusDisplayAdvertiser';
 
 class Intro extends Component {
     constructor(props){
@@ -188,14 +188,15 @@ class Intro extends Component {
                     </div>
                     <OtherLangIcons currentTest={this.state.current_test.info.mainUrl}/>
                     
-                    <AdsenseAdvertiser
+                    <AdplusDisplayAdvertiser slotId={'Intro-Top'} />
+                    {/* <AdsenseAdvertiser
                         client={`ca-pub-2382342018701919`}
                         slot={"9210802615"}
                         format="auto"
                         responsive="true"
                         style={{display:'block'}}
                     />
-                    {/* <AdsenseAdvertiser
+                    <AdsenseAdvertiser
                         client={`ca-pub-5142864985628271`}
                         slot={"7281907187"}
                         format="auto"
