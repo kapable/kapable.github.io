@@ -9,7 +9,7 @@ import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
 import { difficulties } from '../../api/COLORPICKING';
 import AdplusDisplayAdvertiser from '../SubComponents/AdplusDisplayAdvertiser';
-import AdplusVideoAdvertiser from '../SubComponents/AdplusVideoAdvertiser';
+import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 
 function MainPage(props) {
     const mainImgRef = useRef(null);
@@ -62,14 +62,14 @@ function MainPage(props) {
             {/* Category Converting */}
             <CategoryIconsMain lang={props?.lang} setCurrentCategory={setCurrentCategory} />
             <AdplusDisplayAdvertiser slotId={'Main-Top'} />
-            {/* <AdsenseAdvertiser
+            <AdsenseAdvertiser
                 client={`ca-pub-2382342018701919`}
                 slot={"9210802615"}
                 format="auto"
                 responsive="true"
                 style={{display:"block"}}
             />
-            <AdsenseAdvertiser
+            {/* <AdsenseAdvertiser
                 client={`ca-pub-5142864985628271`}
                 slot={"7281907187"}
                 format="auto"
@@ -144,15 +144,14 @@ function MainPage(props) {
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
-                                <AdplusDisplayAdvertiser slotId={`Main-Top-${idx}`} />
-                                {/* <AdsenseAdvertiser
+                                <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client={`ca-pub-2382342018701919`} //5142864985628271
                                     slot={"9210802615"} //7281907187
                                     format="auto"
                                     responsive="true"
                                     style={{display:"block"}}
-                                /> */}
+                                />
                             </Fragment>
                         )
                     } else {
@@ -232,15 +231,14 @@ function MainPage(props) {
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
-                                <AdplusDisplayAdvertiser slotId={`Main-Middle-${idx}`} />
-                                {/* <AdsenseAdvertiser
+                                <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client={`ca-pub-2382342018701919`} //5142864985628271
                                     slot={"9210802615"} //7281907187
                                     format="auto"
                                     responsive="true"
                                     style={{display:"block"}}
-                                /> */}
+                                />
                             </Fragment>
                         )
                     } else {
@@ -304,15 +302,14 @@ function MainPage(props) {
                                 <Link to={item[0]} className="main-link-block" key={item[0].replaceAll('/','')}>
                                     <img loading="lazy" className="test-main-img" src={item[1]} alt={item[2]}/>
                                 </Link>
-                                <AdplusDisplayAdvertiser slotId={`Main-Bottom-${idx}`} />
-                                {/* <AdsenseAdvertiser
+                                <AdsenseAdvertiser
                                     key={item[0].replaceAll('/','')+'-adsense'}
                                     client={`ca-pub-2382342018701919`} //5142864985628271
                                     slot={"9210802615"} //7281907187
                                     format="auto"
                                     responsive="true"
                                     style={{display:"block"}}
-                                /> */}
+                                />
                             </Fragment>
                         )
                     } else {
@@ -344,7 +341,6 @@ function MainPage(props) {
 
             {/** Floating Button for KakaoPlusFriend */}
             <KakaoPlusFriendBtn />
-            <AdplusVideoAdvertiser />
         </Fragment>
         
     );

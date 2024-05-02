@@ -20,7 +20,6 @@ import ShareGroup from './ShareGroup';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import GoToHomeBtn from '../SubComponents/GoToHomeBtn';
 import { difficulties } from '../../api/COLORPICKING';
-import AdplusVideoAdvertiser from '../SubComponents/AdplusVideoAdvertiser';
 // import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 // import KAKAOPLUSFRIEND from '../../api/DefaultImg/go-to-kakao-plusfriend.png';
 
@@ -1437,7 +1436,6 @@ class Result extends Component {
                 {/* CPC Banner Result footer */}
                 {/* {this.cpcBannerResultFooterScriptor()} */}
                 <GoToHomeBtn page="result"/>
-                <AdplusVideoAdvertiser />
             </Fragment>
         );
     };
