@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import QuestionCount from './QuestionCount'
 import Question from './Question'
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
-import AdplusDisplayAdvertiser from '../SubComponents/AdplusDisplayAdvertiser';
 
 class Quiz extends Component {
     constructor(props){
@@ -142,14 +141,13 @@ class Quiz extends Component {
             return null;
         } else {
             return(
-                <AdplusDisplayAdvertiser slotId={`Quiz-Top-${this.state.quizCount}`} />
-                // <AdsenseAdvertiser
-                //     client={`ca-pub-2382342018701919`} //5142864985628271
-                //     slot={"9210802615"} //7281907187
-                //     format="auto"
-                //     responsive="true"
-                //     style={{display:"block"}}
-                // />
+                <AdsenseAdvertiser
+                    client={`ca-pub-2382342018701919`} //5142864985628271
+                    slot={"9210802615"} //7281907187
+                    format="auto"
+                    responsive="true"
+                    style={{display:"block"}}
+                />
             )
         }
     }
