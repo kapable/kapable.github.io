@@ -76,6 +76,14 @@ function MainPage(props) {
                 responsive="true"
                 style={{display:"block"}}
             /> */}
+
+            {/* Go to DadJoke */}
+            {((!currentCategory || currentCategory === "etc") && props.lang === 'Kor')
+            ? (
+                <Link to={'/dadJoke1/'} className="main-link-block" key="dadJoke1-banner">
+                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/dadJoke1-thumb.png`} alt='dadJoke1' />
+                </Link>
+            ) : null}
             
             {/* Go to MaleFemaleChar */}
             {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
