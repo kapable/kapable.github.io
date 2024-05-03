@@ -297,6 +297,9 @@ class App extends Component {
             <Route path="/loveCharacterJP/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'JP'} info={{ title: "恋愛キャラクターテスト - KTEST", subTitle: "私の恋愛キャラクターはどんなキャラクターかな? - KTEST" }} />} />
             <Route path="/loveCharacterIT/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'IT'} info={{ title: "Test sul carattere dell'amore - KTEST", subTitle: "Quali sono le mie tendenze romantiche come personaggio? - KTEST" }} />} />
 
+            {/* go to "MaleFemaleChar" page */}
+            <Route path="/maleFemaleChar/" component={() => <TwoSplitedIntro test={"maleFemaleChar"} lang={'Kor'} info={{ title: "남녀 성격 풀이법 테스트 - 남자편 | 여자편 - 케이테스트", subTitle: "내 성격 풀이법을 알려줄게! - 남자편 | 여자편 - 케이테스트" }} />} />
+
             {/* go to "lifeInterpreting" page */}
             <Route path="/lifeInterpreting/" component={() => <LifeInterpreting />} exact/>
             <Route path="/lifeInterpreting/:query/" component={() => <LifeInterpretingResult />} />

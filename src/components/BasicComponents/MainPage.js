@@ -133,6 +133,14 @@ function MainPage(props) {
                     </Link>
                 </>
             ) : null} */}
+            {/* Go to MaleFemaleChar */}
+            {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
+            ? (
+                <Link to={'/maleFemaleChar/'} className="main-link-block" key="maleFemaleChar-banner">
+                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar-thumb.png`} alt='maleFemaleChar' />
+                </Link>
+            ) : null}
+            
             {colorPickerRenderer()}
 
             {/* Main Test Banners(Top) */}

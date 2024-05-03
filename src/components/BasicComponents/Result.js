@@ -157,6 +157,7 @@ class Result extends Component {
         let loveCharacterGerQueries = ["loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer"];
         let loveCharacterESQueries = ["loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES"];
         let loveCharacterITQueries = ["loveCharacterIT", "loveCharacterFemaleIT", "loveCharacterMaleIT"];
+        let maleFemaleCharQueries = ["maleFemaleChar", "maleFemaleCharFemale", "maleFemaleCharMale"];
         let haGenderQueries = ["haGender", "haGenderFemale", "haGenderMale"];
         if(factPokQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/factPok/";
@@ -196,6 +197,9 @@ class Result extends Component {
         };
         if(haGenderQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/haGender/";
+        };
+        if(maleFemaleCharQueries.some(el => this.state.current_url.includes(el))) {
+            window.location.href = window.location.origin + "/kapable.github.io/maleFemaleChar/";
         };
         _eventSenderGA("Paging", "Click Re-test Button", "result page");
         this.setState({
@@ -422,6 +426,19 @@ class Result extends Component {
         const colorPickerArray = difficulties.filter((item) => item.lang === current_lang);
         return(
             <Fragment>
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`https://ktestone.com/kapable.github.io/maleFemaleChar/`}
+                    className="to-ppl-banner-text"
+                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar-thumb.png`} className='ppl-banner-img' alt={'maleFemaleChar'} onClick={this._onPPLBannerClick}/> </a>
+                <AdsenseAdvertiser
+                    client={`ca-pub-2382342018701919`} //5142864985628271
+                    slot={"9210802615"} //7281907187
+                    format="auto"
+                    responsive="true"
+                    style={{display:"block"}}
+                />
                 {colorPickerArray.map((elem, idx) => (
                     <Fragment key={`${elem.difficulty}-fragKey`}>
                         <a
