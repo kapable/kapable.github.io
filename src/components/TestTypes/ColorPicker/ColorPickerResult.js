@@ -46,7 +46,6 @@ const ColorPickerResult = () => {
   }, [history, location.state]);
 
   const otherTestBannerRenderer = (lang) => {
-    console.log(lang);
     const current_lang = lang;
     const bottom_test_list = TESTS.filter((item) => (item.info.lang === current_lang));
     const bottom_test_name_list =bottom_test_list.map((li) => li.info.mainUrl);
@@ -113,7 +112,6 @@ const ColorPickerResult = () => {
   };
 
   const metaTagRenderer = (lang) => {
-    console.log(lang);
     if(lang === 'Kor') {
       return (
         <Helmet>

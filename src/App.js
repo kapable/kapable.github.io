@@ -39,6 +39,9 @@ import MyPage from './components/BasicComponents/Users/MyPage';
 import ColorPicking from './components/TestTypes/ColorPicker/ColorPicking';
 import ColorPickerResult from './components/TestTypes/ColorPicker/ColorPickerResult';
 import { difficulties } from './api/COLORPICKING';
+import DadJoke from './components/TestTypes/DadJoke/DadJoke';
+import DadJokeAnswer from './components/TestTypes/DadJoke/DadJokeAnswer';
+import { dadJokesRoutes } from './api/DADJOKE';
 
 class App extends Component {
   constructor(props){
@@ -269,6 +272,14 @@ class App extends Component {
         <ScrollToTop>
           <Switch>
             <Route exact path="/myPage" component={() => <MyPage onClickLogout={this.onClickLogout} />} />
+
+            {/* DadJoke */}
+            {dadJokesRoutes.map((route, idx) => 
+              <Route path={`/${route}/`} key={`dadJoke-${idx}`} component={() => <DadJoke testId={idx+1} />} exact />
+            )}
+            {dadJokesRoutes.map((route, idx) => 
+              <Route path={`/${route}/answers/:query/`} key={`dadJoke-${idx}`} component={() => <DadJokeAnswer />} />
+            )}
 
             {/* ColorPicker */}
             {difficulties.map((item) => (

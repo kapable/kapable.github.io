@@ -76,63 +76,7 @@ function MainPage(props) {
                 responsive="true"
                 style={{display:"block"}}
             /> */}
-
-            {/* FIFTEEN AI IMG GEN */}
-            {/* {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "ai") ? (
-                <>
-                    <Link to='/magazineTheme/' className="main-link-block" key="magazineTheme-banner">
-                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/magazineTheme-thumb.png`} alt="magazineTheme" />
-                    </Link>
-                    <Link to='/colorFiveTheme/' className="main-link-block" key="colorFiveTheme-banner">
-                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorFiveTheme-thumb.png`} alt="colorFiveTheme" />
-                    </Link>
-                    <Link to='/fifteenTheme/' className="main-link-block" key="fifteenTheme-banner">
-                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenTheme-thumb.png`} alt="fifteenTheme" />
-                    </Link>
-                </>
-            ) : null} */}
-            {/* FIFTEEN AI IMG GEN ENG */}
-            {/* {(props.lang === 'Eng') && (!currentCategory || currentCategory === "ai") ? (
-                <>
-                    <Link to='/magazineThemeEng/' className="main-link-block" key="magazineThemeEng-banner">
-                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/magazineThemeEng-thumb.png`} alt="magazineThemeEng" />
-                    </Link>
-                    <Link to='/colorFiveThemeEng/' className="main-link-block" key="colorFiveThemeEng-banner">
-                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorFiveThemeEng-thumb.png`} alt="colorFiveThemeEng" />
-                    </Link>
-                    <Link to='/fifteenThemeEng/' className="main-link-block" key="fifteenThemeEng-banner">
-                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenThemeEng-thumb.png`} alt="fifteenThemeEng" />
-                    </Link>
-                </>
-            ) : null} */}
-            {/* FIFTEEN AI IMG GEN JP */}
-            {/* {(props.lang === 'JP') && (!currentCategory || currentCategory === "ai") ? (
-                <>
-                    <Link to='/magazineThemeJP/' className="main-link-block" key="magazineThemeJP-banner">
-                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/magazineThemeJP-thumb.png`} alt="magazineThemeJP" />
-                    </Link>
-                    <Link to='/colorFiveThemeJP/' className="main-link-block" key="colorFiveThemeJP-banner">
-                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorFiveThemeJP-thumb.png`} alt="colorFiveThemeJP" />
-                    </Link>
-                    <Link to='/fifteenThemeJP/' className="main-link-block" key="fifteenThemeJP-banner">
-                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/fifteenThemeJP-thumb.png`} alt="fifteenThemeJP" />
-                    </Link>
-                </>
-            ) : null} */}
-
-            {/* {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc") ? (
-                <>
-                    <Link to='/colorPickerHard/' className="main-link-block" key="colorPickerHard-banner">
-                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorPicker-Hard-thumb.png`} alt="lifeInterpreting" />
-                    </Link>
-                    <Link to='/colorPickerMedium/' className="main-link-block" key="colorPickerMedium-banner">
-                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorPicker-Medium-thumb.png`} alt="lifeInterpreting" />
-                    </Link>
-                    <Link to='/colorPickerEasy/' className="main-link-block" key="colorPickerEasy-banner">
-                        <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/colorPicker-Easy-thumb.png`} alt="lifeInterpreting" />
-                    </Link>
-                </>
-            ) : null} */}
+            
             {/* Go to MaleFemaleChar */}
             {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
             ? (
