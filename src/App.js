@@ -278,7 +278,7 @@ class App extends Component {
               <Route path={`/${route}/`} key={`dadJoke-${idx}`} component={() => <DadJoke testId={idx+1} />} exact />
             )}
             {dadJokesRoutes.map((route, idx) => 
-              <Route path={`/${route}/answers/:query/`} key={`dadJoke-${idx}`} component={() => <DadJokeAnswer />} />
+              <Route path={`/${route}/answers/`} key={`dadJoke-${idx}`} component={() => <DadJokeAnswer testTitle={route} />} />
             )}
 
             {/* ColorPicker */}

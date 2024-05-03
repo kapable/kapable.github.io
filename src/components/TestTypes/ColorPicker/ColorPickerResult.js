@@ -57,7 +57,7 @@ const ColorPickerResult = () => {
                   rel="noopener noreferrer"
                   href={`https://ktestone.com/kapable.github.io/maleFemaleChar/`}
                   className="to-ppl-banner-text"
-              > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar-thumb.png`} className='ppl-banner-img' alt={'maleFemaleChar'} onClick={this._onPPLBannerClick}/> </a>
+              > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar-thumb.png`} className='ppl-banner-img' alt={'maleFemaleChar'} onClick={() => _eventSenderGA("Paging", "Click Go-another-Test-Banner Button", "result page")} /> </a>
               <AdsenseAdvertiser
                   client={`ca-pub-2382342018701919`} //5142864985628271
                   slot={"9210802615"} //7281907187

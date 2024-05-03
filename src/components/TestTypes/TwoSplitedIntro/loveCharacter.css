@@ -6,4 +6,5 @@
 
 .loveCharacter-intro-left-img, .loveCharacter-intro-right-img {
     width: 50%;
+    cursor: pointer;
 }

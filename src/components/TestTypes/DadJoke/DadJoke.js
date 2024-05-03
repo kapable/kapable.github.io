@@ -3,6 +3,7 @@ import { dadJokes } from '../../../api/DADJOKE';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import Loading from '../../BasicComponents/Loading';
 import { Helmet } from 'react-helmet';
+import DadJokeIntro from './DadJokeIntro';
 
 const DadJoke = ({ testId }) => {
     const history = useHistory();
@@ -11,6 +12,7 @@ const DadJoke = ({ testId }) => {
     const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * currentTest.questions.length));
     const [finalQuestion, setFinalQuestion] = useState('');
     const [isLoading, setIsLoding] = useState(false);
+    const [mode, setMode] = useState('intro');
 
     useEffect(() => {
         if(isRolling) {
@@ -25,7 +27,7 @@ const DadJoke = ({ testId }) => {
     useEffect(() => {
         if(isLoading) {
             setTimeout(() => {
-                return history.push(`/${currentTest.title}/answers/${testId}`);
+                return history.push(`/${currentTest.title}/answers/`);
             }, 2200);
         }
     }, [isLoading, currentTest.title, history, testId]);
@@ -70,34 +72,45 @@ const DadJoke = ({ testId }) => {
                 <meta property="twitter:image:alt" content={`아재 개그 맞추기 게임 테스트 - 케이테스트`} />
             </Helmet>
         )
-    }
+    };
 
-    if(isLoading) {
-        return <Loading />
-    } else {
-        return (
-            <div style={{ alignItems: 'center'}}>
-                {metaTagRenderer()}
+    if(mode === 'intro') {
+        return <DadJokeIntro setMode={setMode} currentTest={currentTest} />
+    } else if(mode === 'quiz') {
+        if(isLoading) {
+            return (
                 <div>
                     <img src="https://images.ktestone.com/meta/dadJoke/dadJoke-upper-banner.jpeg" alt="dadJoke-upper-banner" className='result-img' />
+                    <Loading />
                 </div>
-                <div style={{ margin: '4rem 0', fontSize: '2rem', fontWeight: "bold" }}>
-                    {isRolling ? currentTest.questions[randomNumber] : finalQuestion}
+            )
+        } else {
+            return (
+                <div style={{ alignItems: 'center'}}>
+                    {metaTagRenderer()}
+                    <div>
+                        <img src="https://images.ktestone.com/meta/dadJoke/dadJoke-upper-banner.jpeg" alt="dadJoke-upper-banner" className='result-img' />
+                    </div>
+                    <div style={{ margin: '4rem 0', fontSize: '2rem', fontWeight: "bold", width: '100%' }}>
+                        {isRolling ? currentTest.questions[randomNumber] : finalQuestion}
+                    </div>
+                    {isRolling ? (
+                        <div onClick={onStopButtonClick}>
+                            <img style={{cursor: 'pointer', width: '15rem'}} src="https://images.ktestone.com/meta/dadJoke/dadJoke-stop-button.jpg" alt="dadJoke-stop-button" className='result-img' />
+                        </div>
+                    ) : (
+                        <div onClick={onStopButtonClick}>
+                            <img style={{cursor: 'pointer', width: '15rem'}} src="https://images.ktestone.com/meta/dadJoke/dadJoke-redo-button.jpg" alt="dadJoke-redo-button" className='result-img' />
+                        </div>
+                    )}
+                    {isRolling ? null : (
+                        <div onClick={onResultButtonClick}>
+                            <img style={{cursor: 'pointer', margin:'2rem 0', width: '15rem'}} src="https://images.ktestone.com/meta/dadJoke/dadJoke-go-to-answer-button.jpg" alt="dadJoke-go-to-answer-button" className='result-img' />
+                        </div>
+                    )}
                 </div>
-                <div
-                    onClick={onStopButtonClick}
-                    style={{ fontWeight: 'bold', color: 'white', cursor:'pointer', alignContent:'center', borderRadius: '2rem', backgroundColor: 'red' , width: '20rem', height: '5rem', margin: '0 auto'}}>
-                    {isRolling ? 'STOP' : '다시 돌리기'}
-                </div>
-                {isRolling ? null : (
-                <div
-                    onClick={onResultButtonClick}
-                    style={{ fontWeight: 'bold', color: 'white', cursor:'pointer', alignContent:'center', borderRadius: '2rem', backgroundColor: 'blue' , width: '20rem', height: '5rem', margin: '0 auto'}}>
-                    결과 보러 가기
-                </div>
-                )}
-            </div>
-        );
+            );
+        }
     }
 };
 
