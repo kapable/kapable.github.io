@@ -20,7 +20,7 @@ import { Helmet } from 'react-helmet';
 import COPYBTN from '../../api/DefaultImg/result-copy-link-btn.png';
 import BACKBTN from '../../api/DefaultImg/result-to-home-btn.png';
 import ScriptTag from 'react-script-tag'
-import { _eventSenderGA } from '../../tools/tools';
+import { _eventSenderGA, reloadPage } from '../../tools/tools';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 
 class Intro extends Component {
@@ -71,18 +71,19 @@ class Intro extends Component {
         this._onMainButtonClick = this._onMainButtonClick.bind(this);
         this._onShareButtonClick = this._onShareButtonClick.bind(this);
     }
-    reloadPage() {
-        // for blocking Adfit banner with page refreshing for PPL
-        let ppl_list = ['personalTaro', 'personalIncense', 'jaetech']
-        if(ppl_list.includes(this.props.test)){
-            var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
-            var now = Date.now();
-            var tenSec = 10 * 90; // added time is critical
-            var plusTenSec = currentDocumentTimestamp + tenSec;
-            if (now > plusTenSec) { window.location.reload(); } else {}
-        }
-    }
+    // reloadPage() {
+    //     // for blocking Adfit banner with page refreshing for PPL
+    //     let ppl_list = ['personalTaro', 'personalIncense', 'jaetech']
+    //     if(ppl_list.includes(this.props.test)){
+    //         var currentDocumentTimestamp = new Date(performance.timing.domLoading).getTime();
+    //         var now = Date.now();
+    //         var tenSec = 10 * 90; // added time is critical
+    //         var plusTenSec = currentDocumentTimestamp + tenSec;
+    //         if (now > plusTenSec) { window.location.reload(); } else {}
+    //     }
+    // }
     componentDidMount(){
+        reloadPage();
         // go to quiz mode when TONYMOLY factPok contents start
         let dualQueries = ["haGender", "haGenderMale", "haGenderFemale", "coupleCharacterJP", "coupleCharacterMaleIT", "coupleCharacterFemaleIT", "coupleCharacterMaleJP", "coupleCharacterFemaleJP", "coupleCharacterCN", "coupleCharacterMaleCN", "coupleCharacterFemaleCN", "coupleCharacterEng", "coupleCharacterMaleEng", "coupleCharacterFemaleEng", "coupleCharacterMale", "coupleCharacterFemale", "factPok", "MyFactPok", "FriendFactPok", "loveCharacter", "loveCharacterFemale", "loveCharacterMale", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN", "loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer", "loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES", "maleFemaleCharMale", "maleFemaleCharFemale"];
         if(dualQueries.some(el => this.state.quiz_url.includes(el))) {
