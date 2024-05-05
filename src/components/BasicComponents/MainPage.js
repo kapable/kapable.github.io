@@ -10,12 +10,14 @@ import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
 import { difficulties } from '../../api/COLORPICKING';
 import AdplusDisplayAdvertiser from '../SubComponents/AdplusDisplayAdvertiser';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
+import { reloadPage } from '../../tools/tools';
 
 function MainPage(props) {
     const mainImgRef = useRef(null);
     const { state } = useLocation();
     const [currentCategory, setCurrentCategory] = useState(state?.currentCategory);
     useEffect(() => {
+        reloadPage();
         return mainImgRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [mainImgRef]);
 
