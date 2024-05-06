@@ -124,7 +124,7 @@ const BalanceTestResult = ({ title }) => {
                 ))}
             </div>
             <div className="share">
-                <h5 className="share-title">친구에게 공유하기</h5>
+                <h5 className="share-title" style={{ fontWeight: "bold", color: "#db0253" }}>* 위 결과를 캡쳐해서 친구에게 공유해보세요!</h5>
                 <ShareGroup
                     link={`https://ktestone.com/kapable.github.io/${title}/`}
                     testTitle={title}/>
