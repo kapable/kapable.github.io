@@ -1,43 +1,40 @@
-import React, { Fragment, useCallback, useEffect, useState } from 'react';
+import React, { Fragment, useCallback, useEffect } from 'react';
 import AGAINBTN from '../../../api/DefaultImg/result-to-again-btn.png';
 import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
 import TOHOMEBTN from '../../../api/DefaultImg/result-to-home-btn.png';
-import TESTS from '../../../api/TESTS';
-import { dadJokes } from '../../../api/DADJOKE';
-import { useHistory, withRouter } from 'react-router-dom/cjs/react-router-dom.min';
+import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
+import './balanceTest.css';
 import ShareGroup from '../../BasicComponents/ShareGroup';
+import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { _eventSenderGA } from '../../../tools/tools';
-import { RedoOutlined } from '@ant-design/icons';
-import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
-import { difficulties } from '../../../api/COLORPICKING';
 import AdsenseAdvertiser from '../../SubComponents/AdsenseAdvertiser';
+import TESTS from '../../../api/TESTS';
+import { difficulties } from '../../../api/COLORPICKING';
 
-const DadJokeAnswer = ({ testTitle }) => {
+const BalanceTestResult = ({ title }) => {
+
+    const location = useLocation();
     const history = useHistory();
-    const [currentTest] = useState(dadJokes.find(test => test.title === testTitle));
-    const [answerImages, setAnswerImages] = useState(currentTest.answers);
-    
+
     useEffect(() => {
-        if(currentTest) {
-            return setAnswerImages(currentTest.answers)
+        if(!location.state.resultArray) {
+            history.push('/');
         }
-        alert('오류가 발생하여 처음으로 돌아갑니다!');
-        history.push(currentTest.title);
-    }, [currentTest, history]);
+    }, [location.state.resultArray, history]);
 
     const _onShareButtonClick = useCallback(() => {
-        _eventSenderGA("Sharing", "Click Copy-link Button", "answer page");
+        _eventSenderGA("Sharing", "Click Copy-link Button", "result page");
         alert("링크가 복사됐어요!");
     }, []);
 
     const _onBackToStartButtonClick = useCallback(() => {
-        _eventSenderGA("Paging", "Click Re-test Button", "answer page");
-        history.push(`/${currentTest.title}/`);
-    }, [history, currentTest.title]);
+        _eventSenderGA("Paging", "Click Re-test Button", "result page");
+        history.push(`/${title}/`);
+    }, [history, title]);
 
     const _onBackToMainButtonClick = useCallback(() => {
-        _eventSenderGA("Paging", "Click Back-to-main Button", "answer page");
+        _eventSenderGA("Paging", "Click Back-to-main Button", "result page");
         history.push('/');
     }, [history]);
 
@@ -100,21 +97,38 @@ const DadJokeAnswer = ({ testTitle }) => {
             )
         };
 
+
     return (
-        <div className="result">
-            <div>
-                <img src="https://images.ktestone.com/meta/dadJoke/dadJoke-upper-banner.jpeg" alt="dadJoke-upper-banner" className='result-img' />
+        <div className='result-div'>
+            <div className='result-contents-div'>
+                {location.state.resultArray.map((result, idx) => (
+                    <div className='result-row-div' key={`${idx}-row-key`}>
+                        {location.state.questions[idx].options.map((option, optionIdx) => (
+                            <Fragment key={`${option}-key`}>
+                                <div className='result-paragraph-div'>
+                                    <p className='result-paragraph' style={{ color: result === optionIdx ? '#db0253' : 'grey', fontWeight: result === optionIdx ? 'bold' : null }}>{option}</p>
+                                </div>
+                                {optionIdx === 0 ?  (
+                                    result === 0 ? (
+                                        <label className='toggle'>
+                                            <input role="switch" type="checkbox" className='checked-input checked-input-0' />
+                                        </label>
+                                    ) : <label className='toggle'>
+                                            <input role="switch" type="checkbox" className='checked-input checked-input-1' />
+                                        </label>
+                                ) : null}
+                            </Fragment>
+                        ))}
+                    </div>
+                ))}
             </div>
-            {answerImages.map((imageLink, idx) => (
-                <img className='result-img' src={imageLink} alt={`dadJoke-${idx}`} key={`dadJoke-${idx}`} />
-            ))}
             <div className="share">
                 <h5 className="share-title">친구에게 공유하기</h5>
                 <ShareGroup
-                    link={`https://ktestone.com/kapable.github.io/${currentTest.title}/`}
-                    testTitle={currentTest.title}/>
+                    link={`https://ktestone.com/kapable.github.io/${title}/`}
+                    testTitle={title}/>
                 <div className="share">
-                    <CopyToClipboard text={`https://ktestone.com/kapable.github.io/${currentTest.title}/`}>
+                    <CopyToClipboard text={`https://ktestone.com/kapable.github.io/${title}/`}>
                         <img loading="lazy"
                             src={COPYBTN}
                             onClick={_onShareButtonClick}
@@ -139,17 +153,10 @@ const DadJokeAnswer = ({ testTitle }) => {
                     alt="다른 테스트 하러가기"
                     />
             </div>
-            <div className="kakao-plusfriend-btn-container"
-                onClick={_onBackToStartButtonClick}
-                style={{ cursor: 'pointer', padding: '0.5rem', backgroundColor: 'white', fontSize: '1rem', borderRadius: '1rem', border: '1px solid black', boxShadow: '3px 3px 0px 2px rgba(230,33,130,1)'}} >
-                <RedoOutlined style={{color: '#E62182', fontSize: '1.1rem'}} />&nbsp;
-                <span style={{ color: 'black', margin: 0, fontWeight:'bold' }}>게임</span><br />
-                <p style={{ color: 'black', margin: 0, fontWeight:'bold' }}>다시하기</p>
-            </div>
-            <GoToHomeBtn page={`${currentTest.title} answer`}/>
+            <GoToHomeBtn page={`${title} answer`}/>
             {otherTestBannerRenderer()}
         </div>
-    );    
+    );
 };
 
-export default withRouter(DadJokeAnswer);
+export default BalanceTestResult;

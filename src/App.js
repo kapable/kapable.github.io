@@ -42,6 +42,9 @@ import { difficulties } from './api/COLORPICKING';
 import DadJoke from './components/TestTypes/DadJoke/DadJoke';
 import DadJokeAnswer from './components/TestTypes/DadJoke/DadJokeAnswer';
 import { dadJokesRoutes } from './api/DADJOKE';
+import BalanceTest from './components/TestTypes/BalanceTest/BalanceTest';
+import { balanceTestsTitle } from './api/BALANCEGAME';
+import BalanceTestResult from './components/TestTypes/BalanceTest/BalanceTestResult';
 
 class App extends Component {
   constructor(props){
@@ -272,6 +275,14 @@ class App extends Component {
         <ScrollToTop>
           <Switch>
             <Route exact path="/myPage" component={() => <MyPage onClickLogout={this.onClickLogout} />} />
+
+            {/* Balance Test */}
+            {balanceTestsTitle.map((title) => (
+              <Route path={`/${title}/`} key={`${title}-route`} component={() => <BalanceTest title={title} />} exact />
+            ))}
+            {balanceTestsTitle.map((title) => (
+              <Route path={`/${title}/result/`} key={`${title}-result-route`} component={() => <BalanceTestResult title={title} />} exact />
+            ))}
 
             {/* DadJoke */}
             {dadJokesRoutes.map((route, idx) => 
