@@ -18,10 +18,11 @@ const BalanceTestResult = ({ title }) => {
     const history = useHistory();
 
     useEffect(() => {
-        if(!location.state.resultArray) {
-            history.push('/');
+        if(!location?.state) {
+            alert('잘못된 경로로 들어오셨습니다! 게임 첫 페이지로 돌아갑니다!');
+            history.push(`/${title}/`);
         }
-    }, [location.state.resultArray, history]);
+    }, [history, location, title]);
 
     const _onShareButtonClick = useCallback(() => {
         _eventSenderGA("Sharing", "Click Copy-link Button", "result page");
@@ -101,7 +102,7 @@ const BalanceTestResult = ({ title }) => {
     return (
         <div className='result-div'>
             <div className='result-contents-div'>
-                {location.state.resultArray.map((result, idx) => (
+                {location?.state?.resultArray.map((result, idx) => (
                     <div className='result-row-div' key={`${idx}-row-key`}>
                         {location.state.questions[idx].options.map((option, optionIdx) => (
                             <Fragment key={`${option}-key`}>
