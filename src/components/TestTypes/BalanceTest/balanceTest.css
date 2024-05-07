@@ -4,6 +4,12 @@
     margin: 0 auto;
 }
 
+.result-upper-banner {
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
 .result-contents-div {
     border: 1rem solid #ffe5e6;
     margin-bottom: 2rem;

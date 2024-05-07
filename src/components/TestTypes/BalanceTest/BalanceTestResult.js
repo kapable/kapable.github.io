@@ -8,9 +8,7 @@ import ShareGroup from '../../BasicComponents/ShareGroup';
 import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { _eventSenderGA } from '../../../tools/tools';
-import AdsenseAdvertiser from '../../SubComponents/AdsenseAdvertiser';
-import TESTS from '../../../api/TESTS';
-import { difficulties } from '../../../api/COLORPICKING';
+import OtherTestBannerRenderer from '../../SubComponents/OtherTestBannerRenderer';
 
 const BalanceTestResult = ({ title }) => {
 
@@ -39,68 +37,13 @@ const BalanceTestResult = ({ title }) => {
         history.push('/');
     }, [history]);
 
-    const otherTestBannerRenderer = (lang) => {
-        const current_lang = 'Kor';
-        const bottom_test_list = TESTS.filter((item) => (item.info.lang === current_lang));
-        const bottom_test_name_list =bottom_test_list.map((li) => li.info.mainUrl);
-        const renderingArray = difficulties.filter((item) => item.lang === current_lang);
-        return(
-            <Fragment>
-                <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={`https://ktestone.com/kapable.github.io/maleFemaleChar/`}
-                    className="to-ppl-banner-text"
-                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar-thumb.png`} className='ppl-banner-img' alt={'maleFemaleChar'} onClick={() => _eventSenderGA("Paging", "Click Go-another-Test-Banner Button", "result page")}/> </a>
-                <AdsenseAdvertiser
-                    client={`ca-pub-2382342018701919`} //5142864985628271
-                    slot={"9210802615"} //7281907187
-                    format="auto"
-                    responsive="true"
-                    style={{display:"block"}}
-                />
-                {renderingArray.map((elem) => (
-                    <Fragment key={`${elem.difficulty}-fragKey`}>
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={`https://ktestone.com/kapable.github.io/colorPicker${elem.difficulty}/`}
-                            className="to-ppl-banner-text"
-                        > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/colorPicker-${elem.difficulty}-thumb.png`} className='ppl-banner-img' alt={'colorPicker'} onClick={() => _eventSenderGA("Paging", "Click Go-another-Test-Banner Button", "result page")}/> </a>
-                        <AdsenseAdvertiser
-                            client={`ca-pub-2382342018701919`} //5142864985628271
-                            slot={"9210802615"} //7281907187
-                            format="auto"
-                            responsive="true"
-                            style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                        />
-                    </Fragment>
-                ))}
-                {bottom_test_name_list.map((test) => (
-                    <Fragment key={test + '-test-key'}>
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={`https://ktestone.com/kapable.github.io/${test}/`}
-                            className="to-ppl-banner-text"
-                            > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={'another-Test'} onClick={() => _eventSenderGA("Paging", "Click Go-another-Test-Banner Button", "result page")}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client={`ca-pub-2382342018701919`} //5142864985628271
-                                slot={"9210802615"} //7281907187
-                                format="auto"
-                                responsive="true"
-                                style={{display:"block"}}
-                            />
-                    </Fragment>
-                ))}
-                </Fragment>
-            )
-        };
-
 
     return (
         <div className='result-div'>
+            <img
+                className='result-upper-banner'
+                src={`https://images.ktestone.com/meta/balanceTest/${title}-upper-banner.jpg`}
+                alt={`${title}-upper-banner`} />
             <div className='result-contents-div'>
                 {location?.state?.resultArray.map((result, idx) => (
                     <div className='result-row-div' key={`${idx}-row-key`}>
@@ -155,7 +98,7 @@ const BalanceTestResult = ({ title }) => {
                     />
             </div>
             <GoToHomeBtn page={`${title} answer`}/>
-            {otherTestBannerRenderer()}
+            <OtherTestBannerRenderer lang='Kor' mainUrl={title} />
         </div>
     );
 };

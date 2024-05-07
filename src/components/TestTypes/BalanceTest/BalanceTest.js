@@ -20,8 +20,11 @@ const BalanceTest = ({ title }) => {
 
     useEffect(() => {
         if(isLoading) {
-            setTimeout(() => {
+            let timeout = setTimeout(() => {
                 history.push(`/${title}/result/`, { resultArray, questions: currentTest.questions });
+                return () => {
+                    clearTimeout(timeout);
+                }
             }, 2000);
         }
     }, [isLoading, history, title, resultArray, currentTest.questions]);

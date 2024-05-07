@@ -26,8 +26,11 @@ const DadJoke = ({ testId }) => {
 
     useEffect(() => {
         if(isLoading) {
-            setTimeout(() => {
-                return history.push(`/${currentTest.title}/answers/`);
+            let timeOut = setTimeout(() => {
+                history.push(`/${currentTest.title}/answers/`);
+                return () => {
+                    clearTimeout(timeOut);
+                }
             }, 2200);
         }
     }, [isLoading, currentTest.title, history, testId]);

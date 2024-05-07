@@ -19,7 +19,7 @@ import '../TestTypes/FactPok/factPok.css';
 import ShareGroup from './ShareGroup';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import GoToHomeBtn from '../SubComponents/GoToHomeBtn';
-import { difficulties } from '../../api/COLORPICKING';
+import OtherTestBannerRenderer from '../SubComponents/OtherTestBannerRenderer';
 // import JELLINGBANNERKOR from '../../api/DefaultImg/go-to-jelling-kor.png';
 // import KAKAOPLUSFRIEND from '../../api/DefaultImg/go-to-kakao-plusfriend.png';
 
@@ -65,7 +65,6 @@ class Result extends Component {
         this._onPPLBannerClick = this._onPPLBannerClick.bind(this);
         this._onGotoBlogClick = this._onGotoBlogClick.bind(this);
         this.horizontalNewTestRenderer = this.horizontalNewTestRenderer.bind(this);
-        this.otherTestBannerRenderer = this.otherTestBannerRenderer.bind(this);
         this.onCoupangButtonClick = this.onCoupangButtonClick.bind(this);
         this.onCoupangCloseButtonClick = this.onCoupangCloseButtonClick.bind(this)
         this.onOtherCoupangButtonClick = this.onOtherCoupangButtonClick.bind(this);
@@ -416,68 +415,6 @@ class Result extends Component {
                 </Fragment>
             )
         }
-    };
-
-    otherTestBannerRenderer() {
-        const current_test_info = TESTS.find((test) => test.info.mainUrl === this.state.current_test);
-        const current_lang = current_test_info.info.lang
-        const bottom_test_list = TESTS.filter((item) => (item.info.lang === current_lang && item.info.mainUrl !== current_test_info.info.mainUrl));
-        const bottom_test_name_list =bottom_test_list.map((li) => li.info.mainUrl);
-        const colorPickerArray = difficulties.filter((item) => item.lang === current_lang);
-        return(
-            <Fragment>
-                <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={`https://ktestone.com/kapable.github.io/maleFemaleChar/`}
-                    className="to-ppl-banner-text"
-                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar-thumb.png`} className='ppl-banner-img' alt={'maleFemaleChar'} onClick={this._onPPLBannerClick}/> </a>
-                <AdsenseAdvertiser
-                    client={`ca-pub-2382342018701919`} //5142864985628271
-                    slot={"9210802615"} //7281907187
-                    format="auto"
-                    responsive="true"
-                    style={{display:"block"}}
-                />
-                {colorPickerArray.map((elem, idx) => (
-                    <Fragment key={`${elem.difficulty}-fragKey`}>
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={`https://ktestone.com/kapable.github.io/colorPicker${elem.difficulty}/`}
-                            className="to-ppl-banner-text"
-                        > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/colorPicker-${elem.difficulty}-thumb.png`} className='ppl-banner-img' alt={'colorPicker'} onClick={this._onPPLBannerClick}/> </a>
-                        <AdsenseAdvertiser
-                            client={`ca-pub-2382342018701919`} //5142864985628271
-                            slot={"9210802615"} //7281907187
-                            format="auto"
-                            responsive="true"
-                            style={{display:"block"}}
-                        />
-                    </Fragment>
-                ))}
-                {bottom_test_name_list.map((test, idx) => {
-                    return (
-                        <Fragment key={test + '-test-key'}>
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={`https://ktestone.com/kapable.github.io/${test}/`}
-                                className="to-ppl-banner-text"
-                                > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={this.state.current_result} onClick={this._onPPLBannerClick}/> </a>
-                            <AdsenseAdvertiser
-                                key={test+'-adsense'}
-                                client={`ca-pub-2382342018701919`} //5142864985628271
-                                slot={"9210802615"} //7281907187
-                                format="auto"
-                                responsive="true"
-                                style={{display:"block"}}
-                            />
-                        </Fragment>
-                    )
-                })}
-            </Fragment>
-        )
     };
 
     introPageRender(){
@@ -1445,7 +1382,7 @@ class Result extends Component {
                             />
                     </div>
                 </div>
-                {this.otherTestBannerRenderer()}
+                <OtherTestBannerRenderer lang={TESTS.find((test) => test.info.mainUrl === this.state.current_test).info.lang} mainUrl={this.state.current_test} />
                 {/* {AdplusAdvertiser()} */}
                 {/* New Test banners */}
                 {/* {this.horizontalNewTestRenderer()} */}

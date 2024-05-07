@@ -1,12 +1,11 @@
-import React, { Fragment, useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import ColorPickerTierTable from './ColorPickerTierTable';
-import { difficulties, tiers } from '../../../api/COLORPICKING';
+import { tiers } from '../../../api/COLORPICKING';
 import { _eventSenderGA } from '../../../tools/tools';
-import TESTS from '../../../api/TESTS';
-import AdsenseAdvertiser from '../../SubComponents/AdsenseAdvertiser';
 import { Helmet } from 'react-helmet';
 import GoToHomeBtn from '../../SubComponents/GoToHomeBtn';
+import OtherTestBannerRenderer from '../../SubComponents/OtherTestBannerRenderer';
 
 const ColorPickerResult = () => {
   const location = useLocation();
@@ -44,72 +43,6 @@ const ColorPickerResult = () => {
     _eventSenderGA("Paging", "Click Re-test Button", "colorPicker result page");
     history.push(`/colorPicker${location.state?.difficulty}`, 'again');
   }, [history, location.state]);
-
-  const otherTestBannerRenderer = (lang) => {
-    const current_lang = lang;
-    const bottom_test_list = TESTS.filter((item) => (item.info.lang === current_lang));
-    const bottom_test_name_list =bottom_test_list.map((li) => li.info.mainUrl);
-    const renderingArray = difficulties.filter((item) => item.lang === current_lang);
-    return(
-        <Fragment>
-              <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={`https://ktestone.com/kapable.github.io/maleFemaleChar/`}
-                  className="to-ppl-banner-text"
-              > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar-thumb.png`} className='ppl-banner-img' alt={'maleFemaleChar'} onClick={() => _eventSenderGA("Paging", "Click Go-another-Test-Banner Button", "result page")} /> </a>
-              <AdsenseAdvertiser
-                  client={`ca-pub-2382342018701919`} //5142864985628271
-                  slot={"9210802615"} //7281907187
-                  format="auto"
-                  responsive="true"
-                  style={{display:"block"}}
-              />
-              {renderingArray.map((elem) => {
-                if(elem.difficulty !== location.state.difficulty) {
-                  return (
-                    <Fragment key={`${elem.difficulty}-fragKey`}>
-                      <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href={`https://ktestone.com/kapable.github.io/colorPicker${elem.difficulty}/`}
-                          className="to-ppl-banner-text"
-                      > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/colorPicker-${elem.difficulty}-thumb.png`} className='ppl-banner-img' alt={'colorPicker'} onClick={() => _eventSenderGA("Paging", "Click Go-another-Test-Banner Button", "result page")}/> </a>
-                      <AdsenseAdvertiser
-                          client={`ca-pub-2382342018701919`} //5142864985628271
-                          slot={"9210802615"} //7281907187
-                          format="auto"
-                          responsive="true"
-                          style={{ display:"block", width:"23rem", maxWidth:"40rem", margin: '0 auto' }}
-                      />
-                  </Fragment>
-                  )
-                }
-                return null;
-              })}
-              {bottom_test_name_list.map((test) => {
-                  return (
-                      <Fragment key={test + '-test-key'}>
-                          <a
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              href={`https://ktestone.com/kapable.github.io/${test}/`}
-                              className="to-ppl-banner-text"
-                              > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`} className='ppl-banner-img' alt={'another-Test'} onClick={() => _eventSenderGA("Paging", "Click Go-another-Test-Banner Button", "result page")}/> </a>
-                              <AdsenseAdvertiser
-                                  key={test+'-adsense'}
-                                  client={`ca-pub-2382342018701919`} //5142864985628271
-                                  slot={"9210802615"} //7281907187
-                                  format="auto"
-                                  responsive="true"
-                                  style={{display:"block"}}
-                              />
-                      </Fragment>
-                  )
-              })}
-          </Fragment>
-      )
-  };
 
   const metaTagRenderer = (lang) => {
     if(lang === 'Kor') {
@@ -194,7 +127,7 @@ const ColorPickerResult = () => {
         />
         <button className='picker-result-go-home-button' onClick={onGoToIntroButtonClick} type='button'>{langComments[11]}</button>
       </div>
-      {otherTestBannerRenderer(currentLang)}
+      <OtherTestBannerRenderer lang='Kor' mainUrl={`colorPicker${location.state.difficulty}`} />
       <GoToHomeBtn page="colorPicker result"/>
     </div>
   );

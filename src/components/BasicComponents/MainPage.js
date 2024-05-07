@@ -11,6 +11,7 @@ import { difficulties } from '../../api/COLORPICKING';
 import AdplusDisplayAdvertiser from '../SubComponents/AdplusDisplayAdvertiser';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import { reloadPage } from '../../tools/tools';
+import { balanceTests } from '../../api/BALANCEGAME';
 
 function MainPage(props) {
     const mainImgRef = useRef(null);
@@ -50,6 +51,23 @@ function MainPage(props) {
             )
         }
     }, [props.lang, currentCategory]);
+
+    const balanceTestRenderer = useCallback(() => {
+        if((props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc")) {
+            const renderingArray = balanceTests.filter((item) => item.info.lang === 'Kor').reverse();
+            return (
+                <>
+                    {
+                        renderingArray.map((elem) => (
+                            <Link to={`/${elem.info.mainUrl}/`} className="main-link-block" key={`${elem.info.mainUrl}-banner`}>
+                                <img loading="lazy" className="test-main-img" src={`https://images.ktestone.com/main-thumbnail/${elem.info.mainUrl}-thumb.png`} alt={`${elem.info.mainUrl}-banner`} />
+                            </Link>
+                        ))
+                    }
+                </>
+            )
+        }
+    }, [props.lang, currentCategory]);
     
     return (
         <Fragment>
@@ -78,6 +96,8 @@ function MainPage(props) {
                 responsive="true"
                 style={{display:"block"}}
             /> */}
+
+            {balanceTestRenderer()}
 
             {/* Go to DadJoke */}
             {((!currentCategory || currentCategory === "etc") && props.lang === 'Kor')
