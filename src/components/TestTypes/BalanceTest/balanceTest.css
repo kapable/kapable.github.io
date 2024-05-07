@@ -68,3 +68,7 @@
 .checked-input-1::before {
     right: 0;
 }
+
+.quiz-question-title {
+    font-weight: bold;
+}

@@ -117,6 +117,7 @@ const BalanceTest = ({ title }) => {
         } else {
             return (
                 <div className="option-btn-div" style={{ marginTop: "3rem" }}>
+                    <h2 className='quiz-question-title'>당신의 선택은?</h2>
                     {currentTest.questions[currentQuestionNumber].options.map((question, idx) => (
                         <button
                             className="option-btn"
