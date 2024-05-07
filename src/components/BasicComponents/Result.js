@@ -157,6 +157,7 @@ class Result extends Component {
         let loveCharacterESQueries = ["loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES"];
         let loveCharacterITQueries = ["loveCharacterIT", "loveCharacterFemaleIT", "loveCharacterMaleIT"];
         let maleFemaleCharQueries = ["maleFemaleChar", "maleFemaleCharFemale", "maleFemaleCharMale"];
+        let maleFemaleCharEngQueries = ["maleFemaleCharEng", "maleFemaleCharFemaleEng", "maleFemaleCharMaleEng"];
         let haGenderQueries = ["haGender", "haGenderFemale", "haGenderMale"];
         if(factPokQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/factPok/";
@@ -199,6 +200,9 @@ class Result extends Component {
         };
         if(maleFemaleCharQueries.some(el => this.state.current_url.includes(el))) {
             window.location.href = window.location.origin + "/kapable.github.io/maleFemaleChar/";
+        };
+        if(maleFemaleCharEngQueries.some(el => this.state.current_url.includes(el))) {
+            window.location.href = window.location.origin + "/kapable.github.io/maleFemaleCharEng/";
         };
         _eventSenderGA("Paging", "Click Re-test Button", "result page");
         this.setState({

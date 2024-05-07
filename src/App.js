@@ -321,6 +321,7 @@ class App extends Component {
 
             {/* go to "MaleFemaleChar" page */}
             <Route path="/maleFemaleChar/" component={() => <TwoSplitedIntro test={"maleFemaleChar"} lang={'Kor'} info={{ title: "남녀 성격 풀이법 테스트 - 남자편 | 여자편 - 케이테스트", subTitle: "내 성격 풀이법을 알려줄게! - 남자편 | 여자편 - 케이테스트" }} />} />
+            <Route path="/maleFemaleCharEng/" component={() => <TwoSplitedIntro test={"maleFemaleChar"} lang={'Eng'} info={{ title: "Personality solving method test - Male | Female - KTEST", subTitle: "I'll teach you how to solve my personality! - Male | Female - KTEST" }} />} />
 
             {/* go to "lifeInterpreting" page */}
             <Route path="/lifeInterpreting/" component={() => <LifeInterpreting />} exact/>
