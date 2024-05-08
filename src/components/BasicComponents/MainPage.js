@@ -105,14 +105,6 @@ function MainPage(props) {
                     <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/dadJoke1-thumb.png`} alt='dadJoke1' />
                 </Link>
             ) : null}
-            
-            {/* Go to MaleFemaleChar */}
-            {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
-            ? (
-                <Link to={'/maleFemaleChar/'} className="main-link-block" key="maleFemaleChar-banner">
-                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar-thumb.png`} alt='maleFemaleChar' />
-                </Link>
-            ) : null}
 
             {/* Go to MaleFemaleChar */}
             {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
