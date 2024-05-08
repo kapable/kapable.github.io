@@ -8,7 +8,6 @@ import '../TestTypes/Post2022/Post2022.css';
 import KakaoPlusFriendBtn from '../SubComponents/KakaoPlusFriendBtn';
 import CategoryIconsMain from '../SubComponents/CategoryIconsMain';
 import { difficulties } from '../../api/COLORPICKING';
-import AdplusDisplayAdvertiser from '../SubComponents/AdplusDisplayAdvertiser';
 import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 import { reloadPage } from '../../tools/tools';
 import { balanceTests } from '../../api/BALANCEGAME';
@@ -82,7 +81,6 @@ function MainPage(props) {
 
             {/* Category Converting */}
             <CategoryIconsMain lang={props?.lang} setCurrentCategory={setCurrentCategory} />
-            <AdplusDisplayAdvertiser slotId={'Main-Top'} />
             <AdsenseAdvertiser
                 client={`ca-pub-2382342018701919`}
                 slot={"9210802615"}
