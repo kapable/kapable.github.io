@@ -26,6 +26,7 @@ import AdsenseAdvertiser from '../SubComponents/AdsenseAdvertiser';
 class Intro extends Component {
     constructor(props){
         super(props)
+        this.mainImgRef = React.createRef(null);
         let _current_test = [];
         let i = 0;
         while (i<TESTS.length) {
@@ -83,6 +84,7 @@ class Intro extends Component {
     //     }
     // }
     componentDidMount(){
+        this.mainImgRef.current.scrollIntoView({ behavior: 'smooth' });
         // go to quiz mode when TONYMOLY factPok contents start
         let dualQueries = ["haGender", "haGenderMale", "haGenderFemale", "coupleCharacterJP", "coupleCharacterMaleIT", "coupleCharacterFemaleIT", "coupleCharacterMaleJP", "coupleCharacterFemaleJP", "coupleCharacterCN", "coupleCharacterMaleCN", "coupleCharacterFemaleCN", "coupleCharacterEng", "coupleCharacterMaleEng", "coupleCharacterFemaleEng", "coupleCharacterMale", "coupleCharacterFemale", "factPok", "MyFactPok", "FriendFactPok", "loveCharacter", "loveCharacterFemale", "loveCharacterMale", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN", "loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer", "loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES", "maleFemaleCharMale", "maleFemaleCharFemale", "maleFemaleCharEngFemale", "maleFemaleCharEngMale"];
         if(dualQueries.some(el => this.state.quiz_url.includes(el))) {
@@ -90,6 +92,7 @@ class Intro extends Component {
                 mode:"quiz"
             });
         };
+        // return this.mainImgRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
     _onStartButtonClick(){
         let testQuery = '';
@@ -181,11 +184,11 @@ class Intro extends Component {
                     </Helmet>
                     {/* <div id="optadnpm ATB" style={{"minHeight": "220px"}}></div> */}
                     <div ref={this.mainImgRef}>
-                    <img loading="lazy"
-                        className="intro-main-img"
-                        onClick={this._onStartButtonClick}
-                        src={_thumbImage}
-                        alt={_mainTitle + '|' + _subTitle}/>
+                        <img loading="lazy"
+                            className="intro-main-img"
+                            onClick={this._onStartButtonClick}
+                            src={_thumbImage}
+                            alt={_mainTitle + '|' + _subTitle}/>
                     </div>
                     <OtherLangIcons currentTest={this.state.current_test.info.mainUrl}/>
                     
