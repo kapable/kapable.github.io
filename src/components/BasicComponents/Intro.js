@@ -83,7 +83,6 @@ class Intro extends Component {
     //     }
     // }
     componentDidMount(){
-        reloadPage();
         // go to quiz mode when TONYMOLY factPok contents start
         let dualQueries = ["haGender", "haGenderMale", "haGenderFemale", "coupleCharacterJP", "coupleCharacterMaleIT", "coupleCharacterFemaleIT", "coupleCharacterMaleJP", "coupleCharacterFemaleJP", "coupleCharacterCN", "coupleCharacterMaleCN", "coupleCharacterFemaleCN", "coupleCharacterEng", "coupleCharacterMaleEng", "coupleCharacterFemaleEng", "coupleCharacterMale", "coupleCharacterFemale", "factPok", "MyFactPok", "FriendFactPok", "loveCharacter", "loveCharacterFemale", "loveCharacterMale", "loveCharacterEng", "loveCharacterFemaleEng", "loveCharacterMaleEng", "loveCharacterCN", "loveCharacterFemaleCN", "loveCharacterMaleCN", "loveCharacterGer", "loveCharacterFemaleGer", "loveCharacterMaleGer", "loveCharacterES", "loveCharacterFemaleES", "loveCharacterMaleES", "maleFemaleCharMale", "maleFemaleCharFemale", "maleFemaleCharEngFemale", "maleFemaleCharEngMale"];
         if(dualQueries.some(el => this.state.quiz_url.includes(el))) {
@@ -147,6 +146,7 @@ class Intro extends Component {
     }
 
     introPageRender(){
+        reloadPage(); // because the adsense ads when the page convert from mainPage to intro
         let _mainTitle = this.state.current_test.info.mainTitle;
         let _subTitle = this.state.current_test.info.subTitle;
         let _thumbImage = this.state.current_test.info.mainImage;
@@ -601,7 +601,7 @@ class Intro extends Component {
     pageRenderer(){
         let _page = []
         if(this.state.mode === "intro") {
-            _page = this.introPageRender()
+            _page = this.introPageRender();
         } else if (this.state.mode === "quiz") {
             _page =  this.quizPageRender()
         } else if (this.state.mode === "main") {
