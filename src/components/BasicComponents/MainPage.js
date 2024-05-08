@@ -115,6 +115,19 @@ function MainPage(props) {
                     <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar-thumb.png`} alt='maleFemaleChar' />
                 </Link>
             ) : null}
+
+            {/* Go to MaleFemaleChar */}
+            {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
+            ? (
+                <Link to={'/maleFemaleChar/'} className="main-link-block" key="maleFemaleChar-banner">
+                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar-thumb.png`} alt='maleFemaleChar' />
+                </Link>
+            ) : (
+                (props.lang === 'Eng') && (!currentCategory || currentCategory === "love")
+                ? <Link to={`/maleFemaleChar${props.lang}/`} className="main-link-block" key="maleFemaleChar-banner">
+                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar${props.lang}-thumb.png`} alt='maleFemaleChar' />
+                </Link> : null
+            )}
             
             {colorPickerRenderer()}
 
@@ -186,7 +199,7 @@ function MainPage(props) {
                 </Link>
             ) : (
                 (props.lang === 'Eng' || props.lang === 'CN' || props.lang === 'JP' || props.lang === 'IT') && (!currentCategory || currentCategory === "love")
-                ? <Link to={`/coupleCharacter${props.lang}`} className="main-link-block" key="coupleCharacter-banner">
+                ? <Link to={`/coupleCharacter${props.lang}/`} className="main-link-block" key="coupleCharacter-banner">
                     <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/coupleCharacter${props.lang}-thumb.png`} alt='coupleCharacter' />
                 </Link>:null
                 
@@ -200,7 +213,7 @@ function MainPage(props) {
                 </Link>
             ) : (
                 (props.lang === 'Eng' || props.lang === 'CN'|| props.lang === 'JP'|| props.lang === 'ES'|| props.lang === 'Ger' || props.lang === 'IT') && (!currentCategory || currentCategory === "love")
-                ? <Link to={`/loveCharacter${props.lang}`} className="main-link-block" key="loveCharacter-banner">
+                ? <Link to={`/loveCharacter${props.lang}/`} className="main-link-block" key="loveCharacter-banner">
                     <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/loveCharacter${props.lang}-thumb.png`} alt='loveCharacter' />
                 </Link> : null
             )}

@@ -36,7 +36,7 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href={`https://ktestone.com/kapable.github.io/maleFemaleChar/${lang === 'Kor' ? '' : lang}`}
+                        href={`https://ktestone.com/kapable.github.io/maleFemaleChar${lang === 'Kor' ? '' : lang}/`}
                         className="to-ppl-banner-text"
                     > <img
                         loading="lazy" src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar${lang === 'Kor' ? '' : lang}-thumb.png`}
