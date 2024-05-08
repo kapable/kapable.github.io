@@ -53,8 +53,9 @@ function MainPage(props) {
     }, [props.lang, currentCategory]);
 
     const balanceTestRenderer = useCallback(() => {
-        if((props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "etc")) {
-            const renderingArray = balanceTests.filter((item) => item.info.lang === 'Kor').reverse();
+        if(!currentCategory || currentCategory === "etc") {
+            const filterLang = props.lang ? props.lang : 'Kor';
+            const renderingArray = balanceTests.filter((item) => item.info.lang === filterLang).reverse();
             return (
                 <>
                     {

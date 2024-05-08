@@ -34,8 +34,8 @@ const BalanceTestResult = ({ title }) => {
 
     const _onBackToMainButtonClick = useCallback(() => {
         _eventSenderGA("Paging", "Click Back-to-main Button", "result page");
-        history.push('/');
-    }, [history]);
+        history.push(`/kapable.github.io/${location?.state?.lang || 'Kor'}`);
+    }, [history, location.state.lang]);
 
 
     return (
@@ -67,7 +67,9 @@ const BalanceTestResult = ({ title }) => {
                 ))}
             </div>
             <div className="share">
-                <h5 className="share-title" style={{ fontWeight: "bold", color: "#db0253" }}>* 위 결과를 캡쳐해서 친구에게 공유해보세요!</h5>
+                <h5 className="share-title" style={{ fontWeight: "bold", color: "#db0253" }}>
+                    {location?.state?.lang === 'Kor' ? "* 위 결과를 캡쳐해서 친구에게 공유해보세요!" : "* Capture the above results and share them with your friends!"}
+                </h5>
                 <ShareGroup
                     link={`https://ktestone.com/kapable.github.io/${title}/`}
                     testTitle={title}/>
@@ -98,7 +100,7 @@ const BalanceTestResult = ({ title }) => {
                     />
             </div>
             <GoToHomeBtn page={`${title} answer`}/>
-            <OtherTestBannerRenderer lang='Kor' mainUrl={title} />
+            <OtherTestBannerRenderer lang={location?.state?.lang || 'Eng'} mainUrl={title} />
         </div>
     );
 };

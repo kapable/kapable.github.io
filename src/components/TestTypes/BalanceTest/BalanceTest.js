@@ -21,13 +21,13 @@ const BalanceTest = ({ title }) => {
     useEffect(() => {
         if(isLoading) {
             let timeout = setTimeout(() => {
-                history.push(`/${title}/result/`, { resultArray, questions: currentTest.questions });
+                history.push(`/${title}/result/`, { resultArray, questions: currentTest.questions, lang: currentTest.info.lang });
                 return () => {
                     clearTimeout(timeout);
                 }
             }, 2000);
         }
-    }, [isLoading, history, title, resultArray, currentTest.questions]);
+    }, [isLoading, history, title, resultArray, currentTest.questions, currentTest.info.lang]);
 
     const _onStartButtonClick = useCallback(() => {
         setMode('quiz');
@@ -40,8 +40,8 @@ const BalanceTest = ({ title }) => {
 
     const _onMainButtonClick = useCallback(() => {
         _eventSenderGA("Paging", "Click Back-to-main Button", "intro page");
-        history.push('/');
-    }, [history]);
+        history.push(`/kapable.github.io/${currentTest.info.lang || 'Kor'}`);
+    }, [currentTest.info.lang, history]);
 
     const _onOptionButtonClick = (idx) => () => {
         setResultArray([...resultArray, idx])
@@ -117,7 +117,9 @@ const BalanceTest = ({ title }) => {
         } else {
             return (
                 <div className="option-btn-div" style={{ marginTop: "3rem" }}>
-                    <h2 className='quiz-question-title'>당신의 선택은?</h2>
+                    <h2 className='quiz-question-title'>
+                        {currentTest.info.lang === 'Kor' ? "당신의 선택은?" : "What's your choice?"}
+                    </h2>
                     {currentTest.questions[currentQuestionNumber].options.map((question, idx) => (
                         <button
                             className="option-btn"
@@ -126,7 +128,7 @@ const BalanceTest = ({ title }) => {
                         >{question}</button>
                     ))}
                     <>
-                        <p className='picker-progress-text'>{`${(currentQuestionNumber)} / ${currentTest.questions.length}`}</p>
+                        <p className='picker-progress-text'>{`${(currentQuestionNumber + 1)} / ${currentTest.questions.length}`}</p>
                         <Progress className='picker-progress' percent={(currentQuestionNumber) / currentTest.questions.length * 100} showInfo={false} />
                     </>
                 </div>

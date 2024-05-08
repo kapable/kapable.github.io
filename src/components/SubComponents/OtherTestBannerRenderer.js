@@ -36,10 +36,10 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href={`https://ktestone.com/kapable.github.io/maleFemaleChar/${lang === 'Kor' ? '' : 'Eng'}`}
+                        href={`https://ktestone.com/kapable.github.io/maleFemaleChar/${lang === 'Kor' ? '' : lang}`}
                         className="to-ppl-banner-text"
                     > <img
-                        loading="lazy" src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar${lang === 'Kor' ? '' : 'Eng'}-thumb.png`}
+                        loading="lazy" src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar${lang === 'Kor' ? '' : lang}-thumb.png`}
                         className='ppl-banner-img' alt={'maleFemaleChar'}
                         onClick={() => _eventSenderGA("Paging", "Click Go-another-Test-Banner Button", "result page")}/> </a>
                     <AdsenseAdvertiser

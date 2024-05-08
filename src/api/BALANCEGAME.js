@@ -51,7 +51,63 @@ export const balanceTests = [
                 options: [ '매일 돈 없다고 말하는 애인 ', '돈은 많지만 잘 안 쓰는 짠돌이 애인',],
             },
             {
-                options: [ '친구의 전 애인과 사귀기 ', '친구의 현 애인과 사귀기',],
+                options: [ '친구의 전 애인과 사귀기 ', '내 전 애인이 친구랑 사귀기',],
+            },
+        ],
+    },
+    {
+        info : {
+            mainTitle:"Love balance game part 1",
+            subTitle:"Beware of breaking up",
+            mainUrl:"loveBalance1Eng",
+            mainImage:"https://images.ktestone.com/introImages/loveBalance1Eng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveBalance1Eng-thumb.png",
+            lang:"Eng",
+            category: "game",
+        },
+        questions: [
+            {
+                options: [ "A lover who goes to a bar every day to meet a girlfriend (boyfriend) but doesn't have a single girlfriend (boyfriend)", "A lover who goes to the library every day but has many girlfriends (boyfriends)",],
+            },
+            {
+                options: [ "A lover who has a female (male) friend they've known for 20 years", "A lover who has an ex-girlfriend (or ex-boyfriend) they dated for five years.",],
+            },
+            {
+                options: [ "A lover who cheated on her but never got caught", "A lover who has cheated but confesses and asks for forgiveness",],
+            },
+            {
+                options: [ "A lover for whom everything is a first", "A lover who is a dating expert and knows too much",],
+            },
+            {
+                options: [ "Going on a two-day trip with my ex-girlfriend(ex-boyfriend)", "Drinking alone with my ex-girlfriend (ex-boyfriend)",],
+            },
+        ],
+    },
+    {
+        info : {
+            mainTitle:"Love balance game part 2",
+            subTitle:"Beware of breaking up",
+            mainUrl:"loveBalance2Eng",
+            mainImage:"https://images.ktestone.com/introImages/loveBalance2Eng-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveBalance2Eng-thumb.png",
+            lang:"Eng",
+            category: "game",
+        },
+        questions: [
+            {
+                options: [ "A lover who gets anxious if they don't hear from you for a minute", "A lover who doesn't care if you contact them after 24 hours",],
+            },
+            {
+                options: [ "A very popular lover who asks her phone number every day", "A lover who engages in physical affection with their friends (holding hands, hugging, putting an arm around someone's shoulder)",],
+            },
+            {
+                options: [ "A lover who hides all her worries and doesn't talk", "An overly whiny lover who complains about even the smallest things",],
+            },
+            {
+                options: [ "A lover who says they have no money every day", "A stingy lover who has a lot of money but rarely spends it",],
+            },
+            {
+                options: [ "started dating my friend’s ex dating my friend", "My ex is dating my friend' date",],
             },
         ],
     },
