@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
-const DadJokeIntro = ({ setMode, currentTest }) => {
-    
+const DadJokeIntro = ({ setMode, currentTest }) => { 
     return (
         <div className='loveCharacter-intro-images-container'>
             <img src="https://images.ktestone.com/meta/dadJoke/dadJoke-intro-upper-banner.jpg" alt="dadJoke-upper-banner" style={{width: '100%', maxWidth: '456px', margin: '0 auto'}} />
