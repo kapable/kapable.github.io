@@ -96,31 +96,6 @@ function MainPage(props) {
                 style={{display:"block"}}
             /> */}
 
-            {balanceTestRenderer()}
-
-            {/* Go to DadJoke */}
-            {((!currentCategory || currentCategory === "etc") && props.lang === 'Kor')
-            ? (
-                <Link to={'/dadJoke1/'} className="main-link-block" key="dadJoke1-banner">
-                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/dadJoke1-thumb.png`} alt='dadJoke1' />
-                </Link>
-            ) : null}
-
-            {/* Go to MaleFemaleChar */}
-            {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
-            ? (
-                <Link to={'/maleFemaleChar/'} className="main-link-block" key="maleFemaleChar-banner">
-                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar-thumb.png`} alt='maleFemaleChar' />
-                </Link>
-            ) : (
-                (props.lang === 'Eng') && (!currentCategory || currentCategory === "love")
-                ? <Link to={`/maleFemaleChar${props.lang}/`} className="main-link-block" key="maleFemaleChar-banner">
-                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar${props.lang}-thumb.png`} alt='maleFemaleChar' />
-                </Link> : null
-            )}
-            
-            {colorPickerRenderer()}
-
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
                 {props.all_tests_url.slice(0,7).map((item, idx)=>{
@@ -149,6 +124,32 @@ function MainPage(props) {
                     };
                 })}
             </div>
+
+            {balanceTestRenderer()}
+
+            {/* Go to DadJoke */}
+            {((!currentCategory || currentCategory === "etc") && props.lang === 'Kor')
+            ? (
+                <Link to={'/dadJoke1/'} className="main-link-block" key="dadJoke1-banner">
+                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/dadJoke1-thumb.png`} alt='dadJoke1' />
+                </Link>
+            ) : null}
+
+            {/* Go to MaleFemaleChar */}
+            {((!currentCategory || currentCategory === "love") && props.lang === 'Kor')
+            ? (
+                <Link to={'/maleFemaleChar/'} className="main-link-block" key="maleFemaleChar-banner">
+                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar-thumb.png`} alt='maleFemaleChar' />
+                </Link>
+            ) : (
+                (props.lang === 'Eng') && (!currentCategory || currentCategory === "love")
+                ? <Link to={`/maleFemaleChar${props.lang}/`} className="main-link-block" key="maleFemaleChar-banner">
+                    <img loading="lazy" className='test-main-img' src={`https://images.ktestone.com/main-thumbnail/maleFemaleChar${props.lang}-thumb.png`} alt='maleFemaleChar' />
+                </Link> : null
+            )}
+            
+            {colorPickerRenderer()}
+
 
             {/* Life Interpreting Luck */}
             {(props.lang === 'Kor' || !props.lang) && (!currentCategory || currentCategory === "saju") ? (
