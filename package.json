@@ -4267,7 +4267,10 @@
       "/loveBalance1Eng",
       "/kapable.github.io/loveBalance1Eng",
       "/loveBalance2Eng",
-      "/kapable.github.io/loveBalance2Eng"
+      "/kapable.github.io/loveBalance2Eng",
+      "/loveBalance3",
+      "/kapable.github.io/loveBalance3"
+
     ]
   },
   "eslintConfig": {

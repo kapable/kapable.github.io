@@ -57,6 +57,34 @@ export const balanceTests = [
     },
     {
         info : {
+            mainTitle:"연애 밸런스 게임 3탄",
+            subTitle:"애정 박살 주의!",
+            mainUrl:"loveBalance3",
+            mainImage:"https://images.ktestone.com/introImages/loveBalance3-intro.jpg",
+            thumbImage:"https://images.ktestone.com/main-thumbnail/loveBalance3-thumb.png",
+            lang:"Kor",
+            category: "game",
+        },
+        questions: [
+            {
+                options: [ '문신 돼지인데 얼굴만 완벽', '몸매 완벽한데 못봐줄 정도 얼굴',],
+            },
+            {
+                options: [ '숨겨진 자녀가 있는 애인 ', '이혼 전적 3번 있는 애인',],
+            },
+            {
+                options: [ '맨날 맞춤법 지적하는 애인', '항상 맞춤법 틀리는 애인',],
+            },
+            {
+                options: [ '밥 먹을 때 쩝쩝거리며 침 다 튀기는 애인', '맛있는 것만 쏙쏙 다 골라 먹는 식탐충 애인',],
+            },
+            {
+                options: [ '내가 준 선물을 중고 사이트에 파는 애인', '동성 친구에게 다시 선물로 주는 애인',],
+            },
+        ],
+    },
+    {
+        info : {
             mainTitle:"Love balance game part 1",
             subTitle:"Beware of breaking up",
             mainUrl:"loveBalance1Eng",
