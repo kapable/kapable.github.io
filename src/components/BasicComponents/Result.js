@@ -52,7 +52,7 @@ class Result extends Component {
             coupangCookies: Cookies.get('coupang') || null,
             isOpened: false,
             aliCookies: Cookies.get('ali') || null,
-            isAliOpened: true,
+            isAliOpened: false,
             originAdProb: 0.65 < Math.random(),
             adProb: 1.1 >= Math.random(),
             startTimer: false,
@@ -585,7 +585,7 @@ class Result extends Component {
                             <meta property="og:image:height" content="400"/>
                             <meta property="twitter:image:alt" content={this.state.current_result} />
                         </Helmet>
-                        {this.state.isAliOpened || this.state.aliCookies
+                        {(!this.state.originAdProb || this.state.aliCookies)
                         ? (<>
                             <img loading="lazy" src={img_src} className='result-img' alt={final_type} />
                         </>)
