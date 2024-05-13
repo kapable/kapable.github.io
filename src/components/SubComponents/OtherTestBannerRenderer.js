@@ -13,25 +13,6 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
         const balanceTestArray = balanceTests.filter((item) => (item.info.lang === lang && item.info.mainUrl !== mainUrl)).reverse();
         return(
             <Fragment>
-                {balanceTestArray.map((elem) => (
-                    <Fragment key={`${elem.info.mainUrl}-fragKey`}>
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={`https://ktestone.com/kapable.github.io/${elem.info.mainUrl}/`}
-                            className="to-ppl-banner-text"
-                        > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${elem.info.mainUrl}-thumb.png`}
-                            className='ppl-banner-img' alt={'balanceTest'}
-                            onClick={() => _eventSenderGA("Paging", "Click Go-another-Test-Banner Button", "result page")}/> </a>
-                        <AdsenseAdvertiser
-                            client={`ca-pub-2382342018701919`} //5142864985628271
-                            slot={"9210802615"} //7281907187
-                            format="auto"
-                            responsive="true"
-                            style={{display:"block"}}
-                        />
-                    </Fragment>
-                ))}
                {bottom_test_name_list.map((test) => {
                     return (
                         <Fragment key={test + '-test-key'}>
@@ -55,7 +36,27 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
                             />
                         </Fragment>
                     )
-                })}
+               })}
+               {balanceTestArray.map((elem) => (
+                    <Fragment key={`${elem.info.mainUrl}-fragKey`}>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={`https://ktestone.com/kapable.github.io/${elem.info.mainUrl}/`}
+                            className="to-ppl-banner-text"
+                        > <img loading="lazy" src={`https://images.ktestone.com/main-thumbnail/${elem.info.mainUrl}-thumb.png`}
+                            className='ppl-banner-img' alt={'balanceTest'}
+                            onClick={() => _eventSenderGA("Paging", "Click Go-another-Test-Banner Button", "result page")}/> </a>
+                        <AdsenseAdvertiser
+                            client={`ca-pub-2382342018701919`} //5142864985628271
+                            slot={"9210802615"} //7281907187
+                            format="auto"
+                            responsive="true"
+                            style={{display:"block"}}
+                        />
+                    </Fragment>
+                ))}
+
                 <>
                     <a
                         target="_blank"
