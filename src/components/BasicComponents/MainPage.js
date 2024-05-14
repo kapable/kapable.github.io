@@ -88,13 +88,13 @@ function MainPage(props) {
                 responsive="true"
                 style={{display:"block"}}
             />
-            <AdsenseAdvertiser
+            {/* <AdsenseAdvertiser
                 client={`ca-pub-5142864985628271`}
                 slot={"7281907187"}
                 format="auto"
                 responsive="true"
                 style={{display:"block"}}
-            />
+            /> */}
 
             {/* Main Test Banners(Top) */}
             <div className="main-link-div">
