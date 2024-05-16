@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Do+Hyeon&display=swap");
-@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Do+Hyeon&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 :root {
   /* --bg-color: #ededed; */
   --bg-color: white;
   --font-color: black;
-  --title-font: sans-serif, "NanumSquare", "Noto Sans";
-  --content-font: sans-serif, "NanumSquare", "Noto Sans";
+  --title-font: sans-serif, 'NanumSquare', 'Noto Sans';
+  --content-font: sans-serif, 'NanumSquare', 'Noto Sans';
 }
 body {
   height: auto;
@@ -64,7 +64,7 @@ body {
   position: fixed;
   width: 15rem;
   bottom: 95px;
-	right: 27px;
+  right: 27px;
 }
 
 .kakao-plusfriend-comment-image {
@@ -76,8 +76,8 @@ body {
 .kakao-plusfriend-btn-container {
   position: fixed;
   width: 5rem;
-  bottom:20px;
-	right:20px;
+  bottom: 20px;
+  right: 20px;
 }
 
 .kakao-plusfriend-btn-image {
@@ -86,11 +86,11 @@ body {
 
 .go-to-home-btn-container {
   position: fixed;
-  bottom:30px;
-	left:20px;
+  bottom: 30px;
+  left: 20px;
   font-size: 2rem;
-  background-color: white ;
-  border: #E71C83 solid 0.15rem;
+  background-color: white;
+  border: #e71c83 solid 0.15rem;
   border-radius: 100%;
   width: 3.5rem;
   height: 3.5rem;
@@ -104,7 +104,8 @@ body {
   margin: 0 0.3rem;
 }
 
-.go-to-each-language-main, .go-to-each-category-main {
+.go-to-each-language-main,
+.go-to-each-category-main {
   margin: 2rem auto;
   display: block;
   font-family: var(--title-font);
@@ -419,7 +420,7 @@ body {
 
 .article-adCover-div-1 {
   position: relative;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   height: 4rem;
   top: -4rem;
   width: 100%;
@@ -551,7 +552,7 @@ body {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid #b3b4b3;
-  content: "";
+  content: '';
   position: absolute;
   top: -10px;
   left: 200px;

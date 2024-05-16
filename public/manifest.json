@@ -1,6 +1,6 @@
 {
-  "short_name": "Personality Test App",
-  "name": "Create React App Sample",
+  "short_name": "KTEST",
+  "name": "Personality Test App",
   "icons": [
     {
       "src": "k_test_logo.png",

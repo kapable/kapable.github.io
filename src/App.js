@@ -1,481 +1,443 @@
-import React, { Component, Fragment } from 'react';
-import MainPage from './components/BasicComponents/MainPage';
-import Intro from './components/BasicComponents/Intro'
-import ResultToIntro from './components/SubComponents/ResultToIntro'
-import ScrollToTop from './components/SubComponents/ScrollToTop'
-import TESTS from './api/TESTS';
-import POSTSTART from './components/TestTypes/Post2021/StartPage';
-import POSTPOST from './components/TestTypes/Post2021/PostPage';
-import POSTWRITE from './components/TestTypes/Post2021/PostWrite';
-import POSTSTART2022 from './components/TestTypes/Post2022/StartPage';
-import POSTPOST2022 from './components/TestTypes/Post2022/PostPage';
-import POSTWRITE2022 from './components/TestTypes/Post2022/PostWrite';
-import ARTICLES from './api/ARTICLES'
-import ArticleList from './components/BasicComponents/Article/ArticleList';
-import Article from './components/BasicComponents/Article/Article';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Result from './components/BasicComponents/Result';
-import ScriptTag from 'react-script-tag'
-import { Helmet } from 'react-helmet';
-import ReactGA4 from "react-ga4";
-import AuthPage from './components/TestTypes/Post2021/Users/AuthPage';
-import LoginPage from './components/TestTypes/Post2021/Users/LoginPage';
-import RegisterPage from './components/TestTypes/Post2021/Users/RegisterPage';
-import AuthPage2022 from './components/TestTypes/Post2022/Users/AuthPage';
-import Auth from './hoc/auth';
-import Acrostic from './components/TestTypes/Acrostic';
-import FactPok from './components/TestTypes/FactPok/FactPok';
-import FortuneCookie from './components/TestTypes/FortuneCookie/FortuneCookie';
-import TodayLuck from './components/TestTypes/Saju/TodayLuck';
-import TodayLuckResult from './components/TestTypes/Saju/TodayLuckResult';
-import TwoSplitedIntro from './components/TestTypes/TwoSplitedIntro/TwoSplitedIntro';
-import LifetimeSaju from './components/TestTypes/Saju/LifetimeSaju';
-import LifetimeSajuResult from './components/TestTypes/Saju/LifetimeSajuResult';
-import LifeInterpreting from './components/TestTypes/Saju/LifeInterpreting';
-import LifeInterpretingResult from './components/TestTypes/Saju/LifeInterpretingResult';
-import Privacy from './components/BasicComponents/Privacy';
-import { withCookies } from 'react-cookie';
-import MyPage from './components/BasicComponents/Users/MyPage';
-import ColorPicking from './components/TestTypes/ColorPicker/ColorPicking';
-import ColorPickerResult from './components/TestTypes/ColorPicker/ColorPickerResult';
-import { difficulties } from './api/COLORPICKING';
+import { Route, Routes } from 'react-router-dom';
+import MainPage from './pages/Basic/MainPage';
+import Privacy from './pages/Basic/Privacy';
+import { useEffect, useState } from 'react';
+import { mbti_tests_list, TESTS } from './api/TESTS';
+import { dadJokesRoutes } from './api/DADJOKE';
+import { color_picker_list, difficulties } from './api/COLORPICKING';
+import { balanceTestsTitle } from './api/BALANCEGAME';
+import ReactGA4 from 'react-ga4';
+import Intro from './pages/Basic/Intro';
+import Result from './pages/Basic/Result';
+import BalanceTest from './components/TestTypes/BalanceTest/BalanceTest';
+import BalanceTestResult from './components/TestTypes/BalanceTest/BalanceTestResult';
 import DadJoke from './components/TestTypes/DadJoke/DadJoke';
 import DadJokeAnswer from './components/TestTypes/DadJoke/DadJokeAnswer';
-import { dadJokesRoutes } from './api/DADJOKE';
-import BalanceTest from './components/TestTypes/BalanceTest/BalanceTest';
-import { balanceTestsTitle } from './api/BALANCEGAME';
-import BalanceTestResult from './components/TestTypes/BalanceTest/BalanceTestResult';
+import ColorPicking from './components/TestTypes/ColorPicker/ColorPicking';
+import ColorPickerResult from './components/TestTypes/ColorPicker/ColorPickerResult';
+import TwoSplitedIntro from './components/TestTypes/TwoSplitedIntro/TwoSplitedIntro';
+import LifeInterpreting from './components/TestTypes/Saju/LifeInterpreting';
+import LifeInterpretingResult from './components/TestTypes/Saju/LifeInterpretingResult';
+import LifetimeSaju from './components/TestTypes/Saju/LifetimeSaju';
+import LifetimeSajuResult from './components/TestTypes/Saju/LifetimeSajuResult';
+import TodayLuck from './components/TestTypes/Saju/TodayLuck';
+import TodayLuckResult from './components/TestTypes/Saju/TodayLuckResult';
+import FortuneCookie from './components/TestTypes/FortuneCookie/FortuneCookie';
+import FactPok from './components/TestTypes/FactPok/FactPok';
+import Acrostic from './components/TestTypes/Acrostic/Acrostic';
 
-class App extends Component {
-  constructor(props){
-    super(props)
-    const _sharable_url = window.location.href;
-    let i = 0;
-    let _all_tests_url = [];
-    while (i<TESTS.length) {
-      _all_tests_url.push('/'+TESTS[i].info.mainUrl+'/');
-      i = i + 1;
-    }
-    let j = 0;
-    let _all_tests_result_url = [];
-    while (j<_all_tests_url.length){
-      _all_tests_result_url.push(_all_tests_url[j]+'result/')
-      j = j + 1;
-    }
-    let _final_render_routes = [];
-    var k = 0;
+let mbti_results_set = [];
 
-    while(k<TESTS.length){
-      var l=  0;
-      while(l<TESTS[k].results.length){
-        _final_render_routes.push([TESTS[k].results[l].query, TESTS[k].info.mainUrl])
-        l = l + 1;
-      }
-      k = k + 1;
-    }
+TESTS.map((test) =>
+  test.results.map((result) =>
+    mbti_results_set.push({
+      mainUrl: test.info.mainUrl,
+      resultQuery: result.query,
+    })
+  )
+);
 
-    let m = 0;
-    let _all_articles_url = [];
-    while (m < ARTICLES.length) {
-      _all_articles_url.push('/'+ARTICLES[m].mainUrl+'/');
-      m = m + 1;
-    }
-
-    let _pct_test = TESTS.filter((test) => test.info.scoreType === 'percentageMBTI');
-
-    this.state = {
-      result_route:'result/',
-      all_tests_url:_all_tests_url,
-      all_articles_url:_all_articles_url,
-      all_tests_result_url:_all_tests_result_url,
-      final_render_routes:_final_render_routes,
-      sharable_url:_sharable_url,
-      pct_test: _pct_test,
-      ppl_list:['personalTaro', 'jaetech', 'wealthluck'],
-      lang_list:['Kor', 'JP', 'Eng', 'CN', 'Ger', 'ES', 'IT', 'Rus' ,'Others'],
-      category_list:['saju', 'characteristic', 'love', 'ai', 'etc'],
-    }
-    this.each_lang_renderer = this.each_lang_renderer.bind(this);
-    this.lang_category_renderer = this.lang_category_renderer.bind(this);
-    this.all_lang_renderer = this.all_lang_renderer.bind(this);
-    this.mainMetaTagRenderer = this.mainMetaTagRenderer.bind(this);
-    this.onClickLogout = this.onClickLogout.bind(this);
-  }
-
-  componentDidMount (){
+function App() {
+  useEffect(() => {
     ReactGA4.initialize([
       {
-        trackingId: "G-W3LQWJVJLX",
+        trackingId: 'G-W3LQWJVJLX',
         gaOptions: {
-          siteSpeedSampleRate: 100
-        }
-      }
+          siteSpeedSampleRate: 100,
+        },
+      },
     ]);
-  }
-  all_lang_renderer(){
-    let i = 0;
-    let _all_tests_url = [];
-    while (i<TESTS.length) {
-        _all_tests_url.push(['/'+TESTS[i].info.mainUrl+'/', TESTS[i].info.thumbImage, TESTS[i].info.mainTitle])
-        i = i + 1;
-    }
-    return _all_tests_url;
-  }
-  each_lang_renderer(lang){
-    let m = 0;
-    let lang_route_list = [];
-    if(lang === "Others") {
-      while(m<TESTS.length){
-        if((TESTS[m].info.lang !== "Kor") && (TESTS[m].info.lang !== "Eng") && (TESTS[m].info.lang !== "CN") && (TESTS[m].info.lang !== "JP") && (TESTS[m].info.lang !== "Ger") && (TESTS[m].info.lang !== "ES") && (TESTS[m].info.lang !== "Rus") && (TESTS[m].info.lang !== "")) {
-          lang_route_list.push(['/'+TESTS[m].info.mainUrl+'/', TESTS[m].info.thumbImage, TESTS[m].info.mainTitle]);
+  }, []);
+  const [lang_list] = useState([
+    'Kor',
+    'JP',
+    'Eng',
+    'CN',
+    'Ger',
+    'ES',
+    'IT',
+    'Rus',
+    'Others',
+  ]);
+  const [category_list] = useState([
+    'saju',
+    'characteristic',
+    'love',
+    'ai',
+    'etc',
+  ]);
+
+  const [all_contents_list] = useState(
+    mbti_tests_list.concat(dadJokesRoutes, color_picker_list, balanceTestsTitle)
+  );
+
+  return (
+    <Routes>
+      {/* Main Page */}
+      <Route path='/' element={<MainPage lang={'Kor'} />} />
+      <Route path='/kapable.github.io/' element={<MainPage lang={'Kor'} />} />
+
+      {/* Each Langs Main page */}
+      {lang_list.map((lang) => (
+        <Route
+          path={`/${lang}/`}
+          key={lang}
+          element={<MainPage lang={lang} />}
+        />
+      ))}
+      {lang_list.map((lang) => (
+        <Route
+          path={`/kapable.github.io/${lang}/`}
+          key={`${lang}-kap`}
+          element={<MainPage lang={lang} />}
+        />
+      ))}
+      {/* Each Category and Langs page */}
+      {lang_list.map((lang) =>
+        category_list.map((cat) => (
+          <Route
+            path={`/${lang}/${cat}/`}
+            element={<MainPage lang={lang} category={cat} />}
+            key={`${lang}-${cat}`}
+          />
+        ))
+      )}
+      {lang_list.map((lang) =>
+        category_list.map((cat) => (
+          <Route
+            path={`/kapable.github.io/${lang}/${cat}/`}
+            element={<MainPage lang={lang} category={cat} />}
+            key={`${lang}-${cat}-kap`}
+          />
+        ))
+      )}
+
+      {/* Intro Page */}
+      {all_contents_list.map((test) => (
+        <Route
+          path={test.mainUrl}
+          element={<Intro test={test.mainUrl} />}
+          key={`${test.mainUrl}-intro`}
+        />
+      ))}
+      {all_contents_list.map((test) => (
+        <Route
+          path={`/kapable.github.io/${test.mainUrl}`}
+          element={<Intro test={test.mainUrl} />}
+          key={`${test.mainUrl}-intro-kap`}
+        />
+      ))}
+
+      {/* Result Page */}
+      {mbti_results_set.map((set) => (
+        <Route
+          element={<Result />}
+          key={`${set.mainUrl}-${set.resultQuery}-result`}
+          path={`/${set.mainUrl}/result/${set.resultQuery}/`}
+        />
+      ))}
+      {mbti_results_set.map((set) => (
+        <Route
+          element={<Result />}
+          key={`${set.mainUrl}-${set.resultQuery}-result-kap`}
+          path={`/kapable.github.io/${set.mainUrl}/result/${set.resultQuery}/`}
+        />
+      ))}
+
+      {/* Privacy */}
+      <Route path='/privacy' element={<Privacy />} />
+
+      {/* Balance Test */}
+      {balanceTestsTitle.map((title) => (
+        <Route
+          path={`/${title}/`}
+          key={`${title}-route`}
+          element={<BalanceTest title={title} />}
+        />
+      ))}
+      {balanceTestsTitle.map((title) => (
+        <Route
+          path={`/${title}/result/`}
+          key={`${title}-result-route`}
+          element={<BalanceTestResult title={title} />}
+        />
+      ))}
+
+      {/* DadJoke */}
+      {dadJokesRoutes.map((route, idx) => (
+        <Route
+          path={`/${route}/`}
+          key={`dadJoke-${idx}`}
+          element={<DadJoke testId={idx + 1} />}
+        />
+      ))}
+      {dadJokesRoutes.map((route, idx) => (
+        <Route
+          path={`/${route}/answers/`}
+          key={`dadJoke-${idx}`}
+          element={<DadJokeAnswer testTitle={route} />}
+        />
+      ))}
+
+      {/* ColorPicker */}
+      {difficulties.map((item) => (
+        <Route
+          key={`colorPicker${item.difficulty}-intro`}
+          path={`/colorPicker${item.difficulty}/`}
+          element={
+            <ColorPicking difficulty={item.difficulty} lang={item.lang} />
+          }
+        />
+      ))}
+      {difficulties.map((item) => (
+        <Route
+          key={`colorPicker${item.difficulty}-result`}
+          path={`/colorPicker${item.difficulty}/result`}
+          element={<ColorPickerResult lang={item.lang} />}
+        />
+      ))}
+
+      {/* go to "HaGender" page */}
+      <Route
+        path='/haGender/'
+        element={
+          <TwoSplitedIntro
+            test={'haGender'}
+            lang={'Kor'}
+            info={{
+              title: '하남자 하여자 테스트 - 남자편 | 여자편 - 케이테스트',
+              subTitle:
+                '나는 과연 몇% 확률로 하남자/하여자 일까? - 남자편 | 여자편 - 케이테스트',
+            }}
+          />
         }
-        m = m + 1;
-      }
-    } else {
-      while(m<TESTS.length){
-        if(TESTS[m].info.lang === lang) {
-          lang_route_list.push(['/'+TESTS[m].info.mainUrl+'/', TESTS[m].info.thumbImage, TESTS[m].info.mainTitle]);
+      />
+
+      {/* go to "CoupleCharacter" page */}
+      <Route
+        path='/coupleCharacter/'
+        element={
+          <TwoSplitedIntro
+            test={'coupleCharacter'}
+            lang={'Kor'}
+            info={{
+              title: '커플 캐릭터 테스트 - 케이테스트',
+              subTitle:
+                '커플 캐릭터로 보는 나의 연애 성향은? - 커플 캐릭터 테스트 여자편 남자편 - 케이테스트',
+            }}
+          />
         }
-        m = m + 1;
-      }
-    }
-    return lang_route_list;
-  }
+      />
+      <Route
+        path='/coupleCharacterEng/'
+        element={
+          <TwoSplitedIntro
+            test={'coupleCharacter'}
+            lang={'Eng'}
+            info={{
+              title: 'Couple character test - Male | Female - KTEST',
+              subTitle:
+                'Your dating personality as couple character? - Male | Female - KTEST',
+            }}
+          />
+        }
+      />
+      <Route
+        path='/coupleCharacterCN/'
+        element={
+          <TwoSplitedIntro
+            test={'coupleCharacter'}
+            lang={'CN'}
+            info={{
+              title: '情侣性格测试 - 女方,男方 - KTEST',
+              subTitle: '以情侣类型看我在恋爱中的性格是？ - 女方,男方 - KTEST',
+            }}
+          />
+        }
+      />
+      <Route
+        path='/coupleCharacterJP/'
+        element={
+          <TwoSplitedIntro
+            test={'coupleCharacter'}
+            lang={'JP'}
+            info={{
+              title: 'カップルキャラクターテスト - 女方,男方 - KTEST',
+              subTitle:
+                '私が花びらだったら、果たしてどんな花びらだろう？ - 女方,男方 - KTEST',
+            }}
+          />
+        }
+      />
+      <Route
+        path='/coupleCharacterIT/'
+        element={
+          <TwoSplitedIntro
+            test={'coupleCharacter'}
+            lang={'IT'}
+            info={{
+              title: 'Test del carattere della coppia - KTEST',
+              subTitle:
+                'Quali sono le mie tendenze romantiche come personaggio di coppia? - KTEST',
+            }}
+          />
+        }
+      />
 
-  lang_category_renderer(lang, cat) {
-    let m = 0;
-    let lang_category_route_list = [];
-    while(m < TESTS.length) {
-      if(TESTS[m].info.lang === lang && TESTS[m].info.category === cat) {
-        lang_category_route_list.push(['/'+TESTS[m].info.mainUrl+'/', TESTS[m].info.thumbImage, TESTS[m].info.mainTitle]);
-      }
-      m = m + 1;
-    }
-    return lang_category_route_list;
-  }
+      {/* go to "LoveCharacter" page */}
+      <Route
+        path='/loveCharacter/'
+        element={
+          <TwoSplitedIntro
+            test={'loveCharacter'}
+            lang={'Kor'}
+            info={{
+              title: '연애 캐릭터 테스트 - 케이테스트',
+              subTitle:
+                '캐릭터로 보는 나의 연애 성향은? - 연애 캐릭터 테스트 남자편 여자편 - 케이테스트',
+            }}
+          />
+        }
+      />
+      <Route
+        path='/loveCharacterEng/'
+        element={
+          <TwoSplitedIntro
+            test={'loveCharacter'}
+            lang={'Eng'}
+            info={{
+              title: 'Love Character Test - KTEST',
+              subTitle:
+                'What kind of my character is my love character? - Male | Love chracter test - male female boyfriend girlfriend - KTEST',
+            }}
+          />
+        }
+      />
+      <Route
+        path='/loveCharacterCN/'
+        element={
+          <TwoSplitedIntro
+            test={'loveCharacter'}
+            lang={'CN'}
+            info={{
+              title: '恋爱角色测试 - KTEST',
+              subTitle:
+                '我的爱情角色是什么样的角色？ | 恋爱角色测试 - 女方,男方 - KTEST',
+            }}
+          />
+        }
+      />
+      <Route
+        path='/loveCharacterGer/'
+        element={
+          <TwoSplitedIntro
+            test={'loveCharacter'}
+            lang={'Ger'}
+            info={{
+              title: 'Beziehungstypen Test - KTEST',
+              subTitle:
+                'Was für ein Charakter ist mein Liebescharakter? | BeziehungstypenTest - Freund, Freundin - KTEST',
+            }}
+          />
+        }
+      />
+      <Route
+        path='/loveCharacterES/'
+        element={
+          <TwoSplitedIntro
+            test={'loveCharacter'}
+            lang={'ES'}
+            info={{
+              title: 'Test de Personalidad en noviazgo. - KTEST',
+              subTitle:
+                '¿Cuál es mi inclinación a enamorarme como personaje? | para hombres, para mujeres - KTEST',
+            }}
+          />
+        }
+      />
+      <Route
+        path='/loveCharacterJP/'
+        element={
+          <TwoSplitedIntro
+            test={'loveCharacter'}
+            lang={'JP'}
+            info={{
+              title: '恋愛キャラクターテスト - KTEST',
+              subTitle: '私の恋愛キャラクターはどんなキャラクターかな? - KTEST',
+            }}
+          />
+        }
+      />
+      <Route
+        path='/loveCharacterIT/'
+        element={
+          <TwoSplitedIntro
+            test={'loveCharacter'}
+            lang={'IT'}
+            info={{
+              title: "Test sul carattere dell'amore - KTEST",
+              subTitle:
+                'Quali sono le mie tendenze romantiche come personaggio? - KTEST',
+            }}
+          />
+        }
+      />
 
-  cpcBannerUpperScriptor(){
-    if((this.state.sharable_url.includes("ktestone.com") || this.state.sharable_url.includes("localhost")) && !window.location.href.split('/').some(que => this.state.ppl_list.includes(que))) { // for blocking Adfit banner with page refreshing for PPL
-      return(
-        <Fragment>
-          <ins className="kakao_ad_area" style={{display:"none"}}
-          data-ad-unit    = "DAN-q3lQrzFnTNGEBQSA"
-          data-ad-width   = "320"
-          data-ad-height  = "100"></ins>
-          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
-        </Fragment>
-      )
-    } else if(this.state.sharable_url.includes("https://kapable.github.io/")) {
-      return(
-        <Fragment>
-          <ins className="kakao_ad_area" style={{display:"none"}}
-          data-ad-unit    = "DAN-2heOjnHUdZLjBuFC"
-          data-ad-width   = "320"
-          data-ad-height  = "100"></ins>
-          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
-        </Fragment>
-      )
-    } else if(this.state.sharable_url.includes("niair.xyz")) {
-      return(
-        <Fragment>
-          <Helmet>
-            <script data-ad-client="ca-pub-2382342018701919" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          </Helmet>
-        </Fragment>
-      )
-    }
-  }
+      {/* go to "MaleFemaleChar" page */}
+      <Route
+        path='/maleFemaleChar/'
+        element={
+          <TwoSplitedIntro
+            test={'maleFemaleChar'}
+            lang={'Kor'}
+            info={{
+              title: '남녀 성격 풀이법 테스트 - 남자편 | 여자편 - 케이테스트',
+              subTitle:
+                '내 성격 풀이법을 알려줄게! - 남자편 | 여자편 - 케이테스트',
+            }}
+          />
+        }
+      />
+      <Route
+        path='/maleFemaleCharEng/'
+        element={
+          <TwoSplitedIntro
+            test={'maleFemaleChar'}
+            lang={'Eng'}
+            info={{
+              title: 'Personality solving method test - Male | Female - KTEST',
+              subTitle:
+                "I'll teach you how to solve my personality! - Male | Female - KTEST",
+            }}
+          />
+        }
+      />
 
-  cpcBannerFooterScriptor(){
-    if((this.state.sharable_url.includes("localhost") || this.state.sharable_url.includes("ktestone.com")) && !window.location.href.split('/').some(que => this.state.ppl_list.includes(que))) { // for blocking Adfit banner with page refreshing for PPL
-      return(
-        <Fragment>
-          <ins className="kakao_ad_area" style={{display:"none"}}
-          data-ad-unit    = "DAN-M3XcjSrV4BrUGCJG"
-          data-ad-width   = "300"
-          data-ad-height  = "250"></ins>
-          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
-        </Fragment>
-      )
-    } else if(this.state.sharable_url.includes("https://kapable.github.io/")) {
-      return(
-        <Fragment>
-          <ins className="kakao_ad_area" style={{display:"none"}}
-          data-ad-unit    = "DAN-rgfAOJhp6Faz2JFX"
-          data-ad-width   = "300"
-          data-ad-height  = "250"></ins>
-          <ScriptTag type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></ScriptTag>
-        </Fragment>
-      )
-    } else if(this.state.sharable_url.includes("niair.xyz")) {
-      return(
-        <Fragment>
-          {/* 반응형 기본 */}
-          <ins className="adsbygoogle"
-            style={{display:"block"}}
-            data-ad-client="ca-pub-2382342018701919"
-            data-ad-slot="8429103833"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        </Fragment>
-      )
-    }
-  }
+      {/* go to "lifeInterpreting" page */}
+      <Route path='/lifeInterpreting/' element={<LifeInterpreting />} />
+      <Route
+        path='/lifeInterpreting/:query/'
+        element={<LifeInterpretingResult />}
+      />
 
-  mainMetaTagRenderer(){
-    let _kapable_meta = <meta name = "purpleads-verification" content = "67e5e9a6f3495f65f6b05cee"/>
-    let _metaTag = <Helmet>
-                    {/* <!-- Primary Meta Tags --> */}
-                    <title>취향 분석 테스트 - 케이테스트</title>
-                    <meta name="title" content="케이테스트 - 퍼스널 컬러 테스트 진단"/>
-                    <meta name="description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트 진단, 퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러" data-react-helmet="true"/>
-                    {this.state.sharable_url.includes("ktestone.com") ? null : _kapable_meta}
-                    <link rel="main-url" href={window.location.href}/>
+      {/* go to "lifetimeSaju" page */}
+      <Route path='/lifetimeSaju/' element={<LifetimeSaju />} />
+      <Route path='/lifetimeSaju/:query/' element={<LifetimeSajuResult />} />
 
-                    {/* <!-- Open Graph / Facebook --> */}
-                    <meta property="og:type" content="website"/>
-                    <meta property="og:url" content="https://ktestone.com/"/>
-                    <meta property="og:title" content="케이테스트 - 퍼스널 컬러 테스트 진단"/>
-                    <meta property="og:description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트 진단, 퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러"/>
-                    <meta property="og:image" content="https://images.ktestone.com/default/main-header-2023.png"/>
-                    <meta property="og:image:alt" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트" />
+      {/* go to "todayLuck" page */}
+      <Route path='/todayLuck/' element={<TodayLuck />} />
+      <Route path='/todayLuck/:query/' element={<TodayLuckResult />} />
 
-                    {/* <!-- Twitter --> */}
-                    <meta property="twitter:card" content="summary_large_image"/>
-                    <meta property="twitter:url" content="https://ktestone.com/"/>
-                    <meta property="twitter:title" content="케이테스트 - 퍼스널 컬러 테스트 진단"/>
-                    <meta property="twitter:description" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트 진단, 퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러"/>
-                    <meta property="twitter:image" content="https://images.ktestone.com/default/main-header-2023.png"/>
-                    <meta property="twitter:image:alt" content="진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트" />
-                  </Helmet>
-    
-    return _metaTag
-  }
+      {/* go to "FortuneCookie" page */}
+      <Route path='/fortuneCookie/' element={<FortuneCookie />} />
 
-  onClickLogout(){
-    try {
-      const { cookies } = this.props;
-      cookies.remove('accessToken', { path: '/' });
-      cookies.remove('refreshToken', { path: '/' });
-      this.setState({
-          isLoggedIn: false
-      })
-      window.location.href = window.location.protocol + "//" + window.location.host;
-    } catch {
-      alert("에러가 발생했습니다 ㅠㅠ");
-      window.location.href = window.location.protocol + "//" + window.location.host;
-    }
-  }
+      {/* go to "FactPok" page */}
+      <Route path='/factPok/' element={<FactPok />} />
 
-  render() {
-    return(
-    <Router>
-    <Fragment>
-      <Router basename='/kapable.github.io/'>
-        <ScrollToTop>
-          <Switch>
-            <Route exact path="/myPage" component={() => <MyPage onClickLogout={this.onClickLogout} />} />
-
-            {/* Balance Test */}
-            {balanceTestsTitle.map((title) => (
-              <Route path={`/${title}/`} key={`${title}-route`} component={() => <BalanceTest title={title} />} exact />
-            ))}
-            {balanceTestsTitle.map((title) => (
-              <Route path={`/${title}/result/`} key={`${title}-result-route`} component={() => <BalanceTestResult title={title} />} exact />
-            ))}
-
-            {/* DadJoke */}
-            {dadJokesRoutes.map((route, idx) => 
-              <Route path={`/${route}/`} key={`dadJoke-${idx}`} component={() => <DadJoke testId={idx+1} />} exact />
-            )}
-            {dadJokesRoutes.map((route, idx) => 
-              <Route path={`/${route}/answers/`} key={`dadJoke-${idx}`} component={() => <DadJokeAnswer testTitle={route} />} />
-            )}
-
-            {/* ColorPicker */}
-            {difficulties.map((item) => (
-              <Route key={`colorPicker${item.difficulty}-intro`} path={`/colorPicker${item.difficulty}/`} component={() => <ColorPicking difficulty={item.difficulty} lang={item.lang} />} exact />
-            ))}
-            {difficulties.map((item) => (
-              <Route key={`colorPicker${item.difficulty}-result`} path={`/colorPicker${item.difficulty}/result`} component={() => <ColorPickerResult lang={item.lang} />} exact />
-            ))}
-
-            {/* go to "HaGender" page */}
-            <Route path="/haGender/" component={() => <TwoSplitedIntro test={"haGender"} lang={'Kor'} info={{ title: "하남자 하여자 테스트 - 남자편 | 여자편 - 케이테스트", subTitle: "나는 과연 몇% 확률로 하남자/하여자 일까? - 남자편 | 여자편 - 케이테스트" }} />} />
-
-            {/* go to "CoupleCharacter" page */}
-            <Route path="/coupleCharacter/" component={() => <TwoSplitedIntro test={"coupleCharacter"} lang={'Kor'} info={{ title: "커플 캐릭터 테스트 - 케이테스트", subTitle: "커플 캐릭터로 보는 나의 연애 성향은? - 커플 캐릭터 테스트 여자편 남자편 - 케이테스트" }} />} />
-            <Route path="/coupleCharacterEng/" component={() => <TwoSplitedIntro test={"coupleCharacter"} lang={'Eng'} info={{ title: "Couple character test - Male | Female - KTEST", subTitle: "Your dating personality as couple character? - Male | Female - KTEST" }} />} />
-            <Route path="/coupleCharacterCN/" component={() => <TwoSplitedIntro test={"coupleCharacter"} lang={'CN'} info={{ title: "情侣性格测试 - 女方,男方 - KTEST", subTitle: "以情侣类型看我在恋爱中的性格是？ - 女方,男方 - KTEST" }} />} />
-            <Route path="/coupleCharacterJP/" component={() => <TwoSplitedIntro test={"coupleCharacter"} lang={'JP'} info={{ title: "カップルキャラクターテスト - 女方,男方 - KTEST", subTitle: "私が花びらだったら、果たしてどんな花びらだろう？ - 女方,男方 - KTEST" }} />} />
-            <Route path="/coupleCharacterIT/" component={() => <TwoSplitedIntro test={"coupleCharacter"} lang={'IT'} info={{ title: "Test del carattere della coppia - KTEST", subTitle: "Quali sono le mie tendenze romantiche come personaggio di coppia? - KTEST" }} />} />
-
-            {/* go to "LoveCharacter" page */}
-            <Route path="/loveCharacter/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'Kor'} info={{ title: "연애 캐릭터 테스트 - 케이테스트", subTitle: "캐릭터로 보는 나의 연애 성향은? - 연애 캐릭터 테스트 남자편 여자편 - 케이테스트" }} />} />
-            <Route path="/loveCharacterEng/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'Eng'} info={{ title: "Love Character Test - KTEST", subTitle: "What kind of my character is my love character? - Male | Love chracter test - male female boyfriend girlfriend - KTEST" }} />} />
-            <Route path="/loveCharacterCN/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'CN'} info={{ title: "恋爱角色测试 - KTEST", subTitle: "我的爱情角色是什么样的角色？ | 恋爱角色测试 - 女方,男方 - KTEST" }} />} />
-            <Route path="/loveCharacterGer/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'Ger'} info={{ title: "Beziehungstypen Test - KTEST", subTitle: "Was für ein Charakter ist mein Liebescharakter? | BeziehungstypenTest - Freund, Freundin - KTEST" }} />} />
-            <Route path="/loveCharacterES/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'ES'} info={{ title: "Test de Personalidad en noviazgo. - KTEST", subTitle: "¿Cuál es mi inclinación a enamorarme como personaje? | para hombres, para mujeres - KTEST" }} />} />
-            <Route path="/loveCharacterJP/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'JP'} info={{ title: "恋愛キャラクターテスト - KTEST", subTitle: "私の恋愛キャラクターはどんなキャラクターかな? - KTEST" }} />} />
-            <Route path="/loveCharacterIT/" component={() => <TwoSplitedIntro test={"loveCharacter"} lang={'IT'} info={{ title: "Test sul carattere dell'amore - KTEST", subTitle: "Quali sono le mie tendenze romantiche come personaggio? - KTEST" }} />} />
-
-            {/* go to "MaleFemaleChar" page */}
-            <Route path="/maleFemaleChar/" component={() => <TwoSplitedIntro test={"maleFemaleChar"} lang={'Kor'} info={{ title: "남녀 성격 풀이법 테스트 - 남자편 | 여자편 - 케이테스트", subTitle: "내 성격 풀이법을 알려줄게! - 남자편 | 여자편 - 케이테스트" }} />} />
-            <Route path="/maleFemaleCharEng/" component={() => <TwoSplitedIntro test={"maleFemaleChar"} lang={'Eng'} info={{ title: "Personality solving method test - Male | Female - KTEST", subTitle: "I'll teach you how to solve my personality! - Male | Female - KTEST" }} />} />
-
-            {/* go to "lifeInterpreting" page */}
-            <Route path="/lifeInterpreting/" component={() => <LifeInterpreting />} exact/>
-            <Route path="/lifeInterpreting/:query/" component={() => <LifeInterpretingResult />} />
-
-            {/* go to "lifetimeSaju" page */}
-            <Route path="/lifetimeSaju/" component={() => <LifetimeSaju />} exact/>
-            <Route path="/lifetimeSaju/:query/" component={() => <LifetimeSajuResult />} />
-
-            {/* go to "todayLuck" page */}
-            <Route path="/todayLuck/" component={() => <TodayLuck />} exact/>
-            <Route path="/todayLuck/:query/" component={() => <TodayLuckResult />} />
-
-            {/* go to "FortuneCookie" page */}
-            <Route path="/fortuneCookie/" component={() => <FortuneCookie />} />
-
-            {/* go to "FactPok" page */}
-            <Route path="/factPok/" component={() => <FactPok />} />
-
-            {/* go to "Acroistic" page */}
-            <Route path="/acrostic/" component={() => <Acrostic />} />
-
-            {/* go to "POST 2022" page */}
-            <Route path='/post2022/:username/postwrite/' component={() => <POSTWRITE2022 language={`Kor`}/>} />
-            <Route path='/post2022/:username/' component={() => <POSTPOST2022 language={`Kor`}/>} />
-            <Route path ='/post2022/' component={() => <POSTSTART2022 language={`Kor`}/>}/>
-
-            {/* go to "POST 2021" page */}
-            <Route path='/post2021/:username/postwrite/' component={() => <POSTWRITE language={`Kor`}/>} />
-            <Route path='/post2021/:username/' component={() => <POSTPOST language={`Kor`}/>} />
-            <Route path ='/post2021/' component={() => <POSTSTART language={`Kor`}/>}/>
-
-            {/* go to `post2022Eng` page */}
-            <Route path='/post2022Eng/:username/postwrite/' component={() => <POSTWRITE language={`Eng`}/>} />
-            <Route path='/post2022Eng/:username/' component={() => <POSTPOST language={`Eng`}/>} />
-            <Route path ='/post2022Eng/' component={() => <POSTSTART language={`Eng`}/>}/>
-
-            {/* "Main" page */}
-            <Route path='/' exact>
-                {/* meta tag form for all main page */}
-                {this.mainMetaTagRenderer()}
-                <MainPage all_tests_url={this.each_lang_renderer("Kor")} lang={'Kor'}/>
-            </Route>
-
-            {/* go to "Each langs Main" page */}
-            {this.state.lang_list.map((lang)=>(
-              <Route
-                path={'/' + lang + '/'}
-                component={() => <MainPage all_tests_url={this.each_lang_renderer(lang)} lang={lang}/>}
-                key={lang}
-                exact
-              />
-            ))}
-
-            {this.state.lang_list.map((lang)=>(
-              <Route
-                path={'/kapable.github.io/' + lang + '/'}
-                component={() => <MainPage all_tests_url={this.each_lang_renderer(lang)} lang={lang}/>}
-                key={lang}
-                exact
-              />
-            ))}
-
-            {this.state.lang_list.map((lang) => (
-              this.state.category_list.map((cat) => (
-                <Route
-                  path={'/'+lang+'/'+cat+'/'}
-                  component={() => <MainPage all_tests_url={this.lang_category_renderer(lang, cat)} lang={lang} />}
-                  key={`${lang}-${cat}`}
-                  exact
-                />
-              ))
-            ))}
-
-            {this.state.lang_list.map((lang) => (
-              this.state.category_list.map((cat) => (
-                <Route
-                  path={'/kapable.github.io/'+lang+'/'+cat+'/'}
-                  component={() => <MainPage all_tests_url={this.lang_category_renderer(lang, cat)} lang={lang} />}
-                  key={`${lang}-${cat}`}
-                  exact
-                />
-              ))
-            ))}
-
-            {/* go to "Intro" page */}
-            {this.state.all_tests_url.map((item)=>(
-              <Route
-                path={item}
-                component={() => <Intro test={item.replaceAll('/','')}/>}
-                key={item.replaceAll('/','')}
-                exact
-              />
-            ))}
-
-            {/* go to "Result to Start" page */}
-            <Route path={this.state.all_tests_result_url} component={ResultToIntro} exact/>
-
-            {/* go to "Each Result contents" page */}
-            {this.state.final_render_routes.map((item)=>(
-              <Route
-                path={'/'+item[1]+'/'+this.state.result_route+item[0]}
-                component={Result}
-                key={item[1]+'_'+item[0]} exact/>
-            ))}
-
-            {/* go to "Article list" page */}
-            <Route path={'/blog/'} component={ArticleList} exact/>
-
-            {/* go to "Article" page */}
-            {ARTICLES.map((item)=>(
-              <Route
-                path={"/blog/" + item.testUrl + 'blog/'}
-                component={() => <Article source={item}/>}
-                key={item.testUrl}
-                exact
-              />
-            ))}
-
-            {/* go to User related pages */}
-            <Route exact path="/privacy" component={Privacy} />
-            <Route exact path="/login" component={Auth(LoginPage, false)} />
-            <Route exact path="/register" component={Auth(RegisterPage, false)} />
-            <Route exact path={`${"/auth/" || "/auth"}`} component={() => <AuthPage language={`Kor`}/>} />
-            <Route exact path={`${"/postAuth2022/" || "/postAuth2022"}`} component={() => <AuthPage2022 />} />
-          </Switch>
-        </ScrollToTop>
-      </Router>
-      {/* footer */}
-      {/* BIZ INFO */}
-      <div className="intro-footer">
-          <h5>광고 및 후원 문의<br></br>Advertising and Sponsorship Contact</h5>
-          <p>soumy21@naver.com</p>
-          <p className='mbtiImgGen-intro-biz-info-p'>
-            주식회사 쿠키로켓 | 사업자등록번호 : 582-88-01697 | 대표 김정빈<br />
-            주소 : 서울특별시 송파구 송파대로 409 4층<br />호스팅 서비스 : AWS | 통신판매업<br />
-            유선번호 : 01084542518<br />
-            신고번호 2020-경기하남-0706호
-          </p>
-          <p>Disclaimer:<br></br>All content is provided for fun and entertainment purposes only</p>
-          <p>©주식회사 쿠키로켓 All Rights Reserved. 2023.</p>
-          <p><a
-            style={{color:"lightGrey"}}
-            target="_blank"
-            rel="noopener noreferrer"
-            href={'https://ktestone.com/privacy'}
-        >개인정보 처리방침</a></p>
-      </div>
-    </Fragment>
-    </Router>
-    )
-  }
-
+      {/* go to "Acroistic" page */}
+      <Route path='/acrostic/' element={<Acrostic />} />
+    </Routes>
+  );
 }
 
-
-export default withCookies(App);
+export default App;

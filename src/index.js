@@ -2,43 +2,33 @@ import 'react-app-polyfill/ie9';
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 import 'core-js';
-import 'regenerator-runtime/runtime';
 import React from 'react';
-import {hydrate, render} from 'react-dom';
-import 'antd/dist/antd.css';
-import './components/TestTypes/Post2021/Post2021.css';
-import './components/TestTypes/Post2021/PostPopup.css';
-import './components/TestTypes/MetaPangApply/MetaPangApply.css';
+import ReactDOM from 'react-dom/client';
 import './index.css';
-import './components/BasicComponents/Users/Users.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { CookiesProvider } from 'react-cookie';
-import dotenv from 'dotenv';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import 'dayjs/locale/ko';
+import { CookiesProvider } from 'react-cookie';
+import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import Footer from './components/Basic/Footer';
 dayjs.extend(relativeTime);
 dayjs.locale('ko');
 
-dotenv.config();
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <HelmetProvider>
+        <CookiesProvider>
+          <App />
+          <Footer />
+        </CookiesProvider>
+      </HelmetProvider>
+    </BrowserRouter>
+  </React.StrictMode>
+);
 
-const rootElement = document.getElementById("root");
-if (rootElement.hasChildNodes()) {
-  hydrate(
-  <CookiesProvider>
-    <App />
-  </CookiesProvider>
-  , rootElement
-  );
-} else {
-  render(
-  <CookiesProvider>
-    <App />
-  </CookiesProvider>
-  , rootElement);
-}
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

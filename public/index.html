@@ -16,40 +16,6 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
-    <!--script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    /-->
-    <!-- below for github page deploy related to 404 Error for SPA -->
-    <!-- Start Single Page Apps for GitHub Pages -->
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      // This script checks to see if a redirect is present in the query string,
-      // converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
-      // (function(l) {
-      //   if (l.search[1] === '/' ) {
-      //     var decoded = l.search.slice(1).split('&').map(function(s) {
-      //       return s.replace(/~and~/g, '&')
-      //     }).join('?');
-      //     window.history.replaceState(null, null,
-      //         l.pathname.slice(0, -1) + decoded + l.hash
-      //     );
-      //   }
-      // }(window.location))
-    </script>
-    <!-- End Single Page Apps for GitHub Pages -->
     <!-- optAd script -->
     <!-- <script async src="//cmp.optad360.io/items/0339721b-ae6f-4b22-8bf0-a3107b2e6d6d.min.js"></script>
     <script async src="//get.optad360.io/sf/e241357b-ff18-4ccd-9468-2f3d5c4c70ca/plugin.min.js"></script> -->
@@ -64,24 +30,11 @@
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2382342018701919"
     crossorigin="anonymous"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5142864985628271"
-    crossorigin="anonymous"></script>
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5142864985628271"
+    crossorigin="anonymous"></script> -->
     <script>if(top !== self) top.location.href = self.location.href;</script>
   </head>
   <body>
     <div id="root"></div>
-  <script type="text/javascript">
-    const invalidAdsRoutes = ['zipkok', 'auditionBTI', 'auditionBTIEng', 'auditionBTIJp', 'auditionBTICn'];
-    window.googletag = window.googletag || { cmd: [] };
-    window.protag = window.protag || { cmd: [] };
-    window.protag.cmd.push(function () {
-      if(invalidAdsRoutes.some(routes => window.location.href.includes(routes))) {
-        null;
-      } else {
-        // window.protag.display("protag-sticky-bottom");
-        null;
-      }
-    });
-  </script>
   </body>
 </html>
