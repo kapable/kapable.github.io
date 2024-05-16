@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 20
+      nodejs: 12
     commands:
       - npm cache clean --force
       - npm install --unsafe-perm
