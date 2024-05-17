@@ -6,6 +6,7 @@ import { mbti_tests_list, TESTS } from './api/TESTS';
 import { dadJokesRoutes } from './api/DADJOKE';
 import { color_picker_list, difficulties } from './api/COLORPICKING';
 import { balanceTestsTitle } from './api/BALANCEGAME';
+import { bingoList } from './api/BINGO';
 import ReactGA4 from 'react-ga4';
 import Intro from './pages/Basic/Intro';
 import Result from './pages/Basic/Result';
@@ -25,6 +26,8 @@ import TodayLuckResult from './components/TestTypes/Saju/TodayLuckResult';
 import FortuneCookie from './components/TestTypes/FortuneCookie/FortuneCookie';
 import FactPok from './components/TestTypes/FactPok/FactPok';
 import Acrostic from './components/TestTypes/Acrostic/Acrostic';
+import BingoMain from './components/TestTypes/Bingo/BingoMain';
+import BingoResult from './components/TestTypes/Bingo/BingoResult';
 
 let mbti_results_set = [];
 
@@ -146,6 +149,25 @@ function App() {
 
       {/* Privacy */}
       <Route path='/privacy' element={<Privacy />} />
+
+      {/* ------------------GAME ROUTES------------------ */}
+
+      {/* Bingo */}
+      {bingoList.map((title) => (
+        <Route
+          path={`/${title}/`}
+          key={`${title}-route`}
+          element={<BingoMain title={title} />}
+        />
+      ))}
+      {/* TODO: FINISH RESULT */}
+      {bingoList.map((title) => (
+        <Route
+          path={`/${title}/result`}
+          key={`${title}-route`}
+          element={<BingoResult title={title} />}
+        />
+      ))}
 
       {/* Balance Test */}
       {balanceTestsTitle.map((title) => (
