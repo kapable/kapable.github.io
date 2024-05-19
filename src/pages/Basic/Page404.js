@@ -1,0 +1,26 @@
+import React from 'react';
+import { useNavigate } from 'react-router';
+import { HomeOutlined } from '@ant-design/icons';
+
+const Page404 = () => {
+  const navigation = useNavigate();
+  const onGoToIntroButtonClick = () => {
+    navigation(`/`);
+  };
+  return (
+    <div style={{ margin: '5rem auto' }}>
+      <h3>잘못된 경로 또는 없는 페이지로 들어오셨습니다.</h3>
+      <h3>Wrong Path of Page.</h3>
+      <button
+        className='picker-result-go-home-button'
+        onClick={onGoToIntroButtonClick}
+        type='button'
+      >
+        <HomeOutlined />
+        &nbsp; Go Back to Home
+      </button>
+    </div>
+  );
+};
+
+export default Page404;

@@ -2,6 +2,7 @@ export const bingo = [
   {
     id: 1,
     title: 'bingo1',
+    lang: 'Kor',
     size: [5, 5],
     shuffle: true,
     contents: [

@@ -24,6 +24,9 @@ const BingoTable = ({ title, size, contents, resultSelectedNumArray }) => {
 
   const onCellClick = useCallback(
     (contents_idx) => {
+      if (resultSelectedNumArray) {
+        return null;
+      }
       if (selectedNumArray.includes(contents_idx)) {
         let temp_array = selectedNumArray;
         temp_array = temp_array.filter((el) => el !== contents_idx);
@@ -32,7 +35,7 @@ const BingoTable = ({ title, size, contents, resultSelectedNumArray }) => {
         setSelectedNumArray((prev) => [...prev, contents_idx]);
       }
     },
-    [selectedNumArray, setSelectedNumArray]
+    [resultSelectedNumArray, selectedNumArray, setSelectedNumArray]
   );
   const onCompleteButtonClick = () => {
     setIsLoading(true);
@@ -103,7 +106,7 @@ const BingoTable = ({ title, size, contents, resultSelectedNumArray }) => {
                         <div
                           style={{
                             position: 'relative',
-                            cursor: 'pointer',
+                            cursor: resultSelectedNumArray ? null : 'pointer',
                             alignContent: 'center',
                             height: '5rem',
                             wordBreak: 'keep-all',
@@ -141,7 +144,10 @@ const BingoTable = ({ title, size, contents, resultSelectedNumArray }) => {
           </div>
         </div>
         {resultSelectedNumArray ? null : (
-          <button onClick={onCompleteButtonClick}>빙고 완성하기</button>
+          <>
+            <button onClick={onCompleteButtonClick}>빙고 완성하기</button>
+            <p>* 버튼 클릭 후 결과가 보이지 않을 경우 새로고침을 눌러주세요!</p>
+          </>
         )}
       </div>
     );

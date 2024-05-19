@@ -33,8 +33,6 @@ const BingoResult = () => {
       >
         처음부터 다시하기
       </button>
-      {/* TODO: Share Group */}
-      {/* TODO: ADD other banner bottom BINGO game thumb */}
       {/* TODO: add snap url */}
       <OtherTestBannerRenderer lang='Kor' mainUrl={title} />
       <GoToHomeBtn page={`${title} result`} />

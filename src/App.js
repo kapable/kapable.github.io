@@ -1,3 +1,4 @@
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import MainPage from './pages/Basic/MainPage';
 import Privacy from './pages/Basic/Privacy';
@@ -28,6 +29,7 @@ import FactPok from './components/TestTypes/FactPok/FactPok';
 import Acrostic from './components/TestTypes/Acrostic/Acrostic';
 import BingoMain from './components/TestTypes/Bingo/BingoMain';
 import BingoResult from './components/TestTypes/Bingo/BingoResult';
+import Page404 from './pages/Basic/Page404';
 
 let mbti_results_set = [];
 
@@ -458,6 +460,8 @@ function App() {
 
       {/* go to "Acroistic" page */}
       <Route path='/acrostic/' element={<Acrostic />} />
+
+      <Route path='/*' element={<Page404 />} />
     </Routes>
   );
 }
