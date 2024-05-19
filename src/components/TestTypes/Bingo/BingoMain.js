@@ -7,6 +7,7 @@ const BingoMain = ({ title }) => {
   const [currentBingo] = useState(bingo.find((elem) => elem.title === title));
   const [mode, setMode] = useState('intro');
 
+  // TODO: ADD METATAG
   if (mode === 'intro') {
     return <BingoIntro title={title} setMode={setMode} />;
   } else if (mode === 'start') {

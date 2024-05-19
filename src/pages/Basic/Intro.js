@@ -245,7 +245,6 @@ class Intro extends Component {
               content={this.state.current_test.info.mainTitle}
             />
           </Helmet>
-          {/* <div id="optadnpm ATB" style={{"minHeight": "220px"}}></div> */}
           <div ref={this.mainImgRef}>
             <img
               loading='lazy'

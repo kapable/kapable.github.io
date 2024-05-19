@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Progress } from 'antd';
 import PickerRenderer from './PickerRenderer';
 import { _eventSenderGA, reloadPage } from '../../../tools/tools';
@@ -9,6 +9,7 @@ import GoToHomeBtn from '../../Sub/GoToHomeBtn';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const ColorPicking = ({ difficulty, lang }) => {
+  const mainImgRef = useRef(null);
   const location = useLocation();
   const navigate = useNavigate();
   useEffect(() => {
@@ -72,6 +73,10 @@ const ColorPicking = ({ difficulty, lang }) => {
     }
     return () => clearInterval(totalInterval);
   }, [isReady, isDone, setTotalTime]);
+
+  useEffect(() => {
+    mainImgRef.current.scrollIntoView({ behacior: 'smooth' });
+  }, [mainImgRef]);
 
   const metaTagRenderer = (lang, difficulty) => {
     if (lang === 'Kor') {
@@ -229,6 +234,7 @@ const ColorPicking = ({ difficulty, lang }) => {
       <div>
         {metaTagRenderer(currentLang, difficulty)}
         <img
+          ref={mainImgRef}
           className='result-img'
           style={{ cursor: 'pointer' }}
           src={`https://images.ktestone.com/introImages/colorPicker-${difficulty}-intro.jpeg`}

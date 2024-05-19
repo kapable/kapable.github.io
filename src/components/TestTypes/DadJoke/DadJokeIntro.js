@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const DadJokeIntro = ({ setMode, currentTest }) => {
+  const mainImgRef = useRef(null);
+  useEffect(() => {
+    mainImgRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, [mainImgRef]);
   return (
-    <div className='loveCharacter-intro-images-container'>
+    <div className='loveCharacter-intro-images-container' ref={mainImgRef}>
       <img
         src='https://images.ktestone.com/meta/dadJoke/dadJoke-intro-upper-banner.jpg'
         alt='dadJoke-upper-banner'
