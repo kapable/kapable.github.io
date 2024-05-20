@@ -30,7 +30,7 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
             <a
               target='_blank'
               rel='noopener noreferrer'
-              href={`https://ktestone.com/kapable.github.io/${test.title}/`}
+              href={`https://ktestone.com/${test.title}/`}
               className='to-ppl-banner-text'
             >
               {' '}

@@ -25,7 +25,7 @@ const BingoResult = () => {
     <div>
       <img
         ref={mainImgRef}
-        src={`https://images.ktestone.com/meta/bingo/${title}-upper-banner.jpg`}
+        src={`https://images.ktestone.com/meta/bingo/${title}-result-upper-banner.jpeg`}
         alt='bingo1-intro'
         className='result-img'
       />
@@ -35,6 +35,13 @@ const BingoResult = () => {
         contents={contents}
         resultSelectedNumArray={selectedNumArray}
       />
+      <p style={{ fontSize: '0.8rem', fontWeight: 'bold' }}>
+        * 위 결과를 캡쳐해서{' '}
+        <span style={{ fontSize: '0.9rem', color: '#E62383' }}>
+          남친 / 여친 / 남사친 / 여사친
+        </span>
+        과 같이 나눠보세요!
+      </p>
       <button
         className='picker-result-go-home-button'
         onClick={onGoToIntroButtonClick}

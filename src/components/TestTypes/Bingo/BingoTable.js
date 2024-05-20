@@ -111,7 +111,12 @@ const BingoTable = ({ title, size, contents, resultSelectedNumArray }) => {
         </div>
         {resultSelectedNumArray ? null : (
           <>
-            <button onClick={onCompleteButtonClick}>빙고 완성하기</button>
+            <button
+              className='picker-result-go-home-button'
+              onClick={onCompleteButtonClick}
+            >
+              빙고 완성하기
+            </button>
             <p style={{ fontSize: '0.8rem' }}>
               * 버튼 클릭 후 결과가 보이지 않을 경우 새로고침을 눌러주세요!
             </p>

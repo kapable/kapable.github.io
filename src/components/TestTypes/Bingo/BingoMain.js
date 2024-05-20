@@ -59,7 +59,7 @@ const BingoMain = ({ title }) => {
   if (mode === 'intro') {
     return (
       <>
-        {metaTagRenderer()}
+        {metaTagRenderer(title)}
         <BingoIntro title={title} setMode={setMode} lang={currentBingo.lang} />
       </>
     );
