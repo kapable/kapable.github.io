@@ -4,11 +4,11 @@ import { TESTS } from '../../api/TESTS';
 import { difficulties } from '../../api/COLORPICKING';
 import { _eventSenderGA } from '../../tools/tools';
 import { balanceTests } from '../../api/BALANCEGAME';
-import { bingoList } from '../../api/BINGO';
+import { bingo } from '../../api/BINGO';
 
 const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
   const current_lang = lang;
-  const bingoListArray = bingoList.filter(
+  const bingoListArray = bingo.filter(
     (item) => item.lang === lang && item.title !== mainUrl
   );
   const bottom_test_list = TESTS.filter(
@@ -24,22 +24,21 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
     .reverse();
   return (
     <Fragment>
-      {/* // TODO: FOR RELEASING */}
-      {/* {bingoListArray.map((test) => {
+      {bingoListArray.map((test) => {
         return (
           <Fragment key={test + '-test-key'}>
             <a
               target='_blank'
               rel='noopener noreferrer'
-              href={`https://ktestone.com/kapable.github.io/${test}/`}
+              href={`https://ktestone.com/kapable.github.io/${test.title}/`}
               className='to-ppl-banner-text'
             >
               {' '}
               <img
                 loading='lazy'
-                src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`}
+                src={`https://images.ktestone.com/main-thumbnail/${test.title}-thumb.png`}
                 className='ppl-banner-img'
-                alt={`${test}-thumb`}
+                alt={`${test.title}-thumb`}
                 onClick={() =>
                   _eventSenderGA(
                     'Paging',
@@ -59,7 +58,7 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
             />
           </Fragment>
         );
-      })} */}
+      })}
       {bottom_test_name_list.map((test) => {
         return (
           <Fragment key={test + '-test-key'}>

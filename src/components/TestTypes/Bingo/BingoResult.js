@@ -19,7 +19,7 @@ const BingoResult = () => {
     mainImgRef.current.scrollIntoView({ behavior: 'smooth' });
   }, [mainImgRef]);
   const onGoToIntroButtonClick = () => {
-    navigation(`/${title}`);
+    navigation(`/${title}/`);
   };
   return (
     <div>
@@ -42,7 +42,6 @@ const BingoResult = () => {
       >
         처음부터 다시하기
       </button>
-      {/* TODO: add snap url */}
       <OtherTestBannerRenderer lang='Kor' mainUrl={title} />
       <GoToHomeBtn page={`${title} result`} />
     </div>
