@@ -15,7 +15,7 @@ const BingoIntro = ({ title, setMode }) => {
     <div>
       <img
         ref={mainImgRef}
-        src='https://images.ktestone.com/introImages/bingo1-intro-sample.jpg'
+        src={`https://images.ktestone.com/introImages/${title}-intro-sample.jpg`}
         alt='bingo1-intro'
         className='result-img'
         onClick={onStartButtonClick}

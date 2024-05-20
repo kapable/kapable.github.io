@@ -162,12 +162,11 @@ function App() {
           element={<BingoMain title={title} />}
         />
       ))}
-      {/* TODO: FINISH RESULT */}
       {bingoList.map((title) => (
         <Route
-          path={`/${title}/result`}
+          path={`/${title}/result/`}
           key={`${title}-route`}
-          element={<BingoResult title={title} />}
+          element={<BingoResult />}
         />
       ))}
 
