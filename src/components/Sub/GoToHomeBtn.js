@@ -13,7 +13,7 @@ const GoToHomeBtn = ({ page }) => {
         <a href='/' rel='noopener noreferrer'>
           <HomeOutlined
             className='bottom-fixed-go-to-home-button'
-            style={{ color: '#E71C83' }}
+            style={{ color: '#E71C83', verticalAlign: '-0.38em' }}
           />
         </a>
       </div>

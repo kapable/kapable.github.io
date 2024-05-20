@@ -30,6 +30,7 @@ import Acrostic from './components/TestTypes/Acrostic/Acrostic';
 import BingoMain from './components/TestTypes/Bingo/BingoMain';
 import BingoResult from './components/TestTypes/Bingo/BingoResult';
 import Page404 from './pages/Basic/Page404';
+import AlcoholGames from './components/TestTypes/AlcoholGames';
 
 let mbti_results_set = [];
 
@@ -153,6 +154,8 @@ function App() {
       <Route path='/privacy' element={<Privacy />} />
 
       {/* ------------------GAME ROUTES------------------ */}
+
+      <Route path='/alcoholGames/' element={<AlcoholGames />} />
 
       {/* Bingo */}
       {bingoList.map((title) => (
