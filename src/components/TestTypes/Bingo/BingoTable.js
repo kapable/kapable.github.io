@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Lottie from 'react-lottie';
 import * as loading from '../../../loading-animation.json';
+import styles from './bingo.module.css';
 
 const defaultOptions = {
   loop: true,
@@ -63,39 +64,21 @@ const BingoTable = ({ title, size, contents, resultSelectedNumArray }) => {
   }, [navigate, title, isLoading, contents, selectedNumArray, size]);
   if (isLoading) {
     return (
-      <div style={{ margin: '13rem auto' }}>
+      <div className={styles.loadingDiv}>
         <Lottie options={defaultOptions} height={120} width={120} />
       </div>
     );
   } else {
     return (
       <div>
-        <div
-          style={{
-            width: '100%',
-            margin: '5rem auto',
-            maxWidth: '45rem',
-            fontSize: '0.8rem',
-            fontWeight: 'bold',
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              width: '100%',
-              margin: '0 auto',
-            }}
-          >
+        <div className={styles.tableTopDiv}>
+          <div className={styles.tableRowDiv}>
             {Array.from({ length: size[0] })
               .map((_, i) => i)
               .map((col) => (
                 <div
-                  style={{
-                    textAlign: 'center',
-                    border: '1px solid #E82383',
-                    width: `${widthSize}%`,
-                  }}
+                  className={styles.tableColDiv}
+                  style={{ width: `${widthSize}%` }}
                   key={`${col}-col`}
                 >
                   {Array.from({ length: size[1] })
@@ -104,18 +87,9 @@ const BingoTable = ({ title, size, contents, resultSelectedNumArray }) => {
                       const contents_idx = col * size[1] + row;
                       return (
                         <div
+                          className={styles.tableContentsDiv}
                           style={{
-                            position: 'relative',
                             cursor: resultSelectedNumArray ? null : 'pointer',
-                            alignContent: 'center',
-                            height: '5rem',
-                            wordBreak: 'keep-all',
-                            margin: '0 auto',
-                            border: '0.5px solid #E82383',
-                            borderLeft: '0.025px',
-                            borderRight: '0.025px',
-                            padding: '0.2rem',
-                            color: 'black',
                           }}
                           key={`${row}-row`}
                           onClick={() => onCellClick(contents_idx)}
@@ -123,15 +97,7 @@ const BingoTable = ({ title, size, contents, resultSelectedNumArray }) => {
                           {contents[contents_idx]}
                           {selectedNumArray.includes(contents_idx) ? (
                             <img
-                              style={{
-                                position: 'absolute',
-                                left: 0,
-                                top: 0,
-                                width: '100%',
-                                height: '100%',
-                                alignContent: 'center',
-                                mixBlendMode: 'multiply',
-                              }}
+                              className={styles.circleImg}
                               src='https://thumbs.dreamstime.com/z/circle-pen-draw-concept-d-illustration-isolated-circle-pen-draw-concept-d-illustration-isolated-white-background-138765708.jpg?w=768'
                               alt='asdfasdf'
                             />
