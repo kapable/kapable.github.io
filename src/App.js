@@ -223,6 +223,8 @@ function App() {
         />
       ))}
 
+      {/* Dual Quries Tests */}
+
       {/* go to "HaGender" page */}
       <Route
         path='/haGender/'

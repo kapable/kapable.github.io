@@ -244,8 +244,6 @@ const MainPage = ({ lang, category }) => {
         style={{ display: 'block' }}
       />
 
-      {bingoGameRenderer()}
-
       {/* Main Test Banners(Top) */}
       <div className='main-link-div'>
         {currentTestList.slice(0, render_range_points[0]).map((item, idx) => {
@@ -272,6 +270,8 @@ const MainPage = ({ lang, category }) => {
           );
         })}
       </div>
+
+      {bingoGameRenderer()}
       {balanceTestRenderer()}
 
       {/* Go to DadJoke */}

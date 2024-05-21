@@ -1,9 +1,16 @@
-import React from 'react';
-import { useNavigate } from 'react-router';
+import React, { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router';
 import { HomeOutlined } from '@ant-design/icons';
 
 const Page404 = () => {
+  const legacyRoute = '/kapable.github.io';
   const navigation = useNavigate();
+  const location = useLocation();
+  useEffect(() => {
+    if (location.pathname.includes(legacyRoute)) {
+      navigation(location.pathname.replace(legacyRoute, ''));
+    }
+  }, [location, navigation]);
   const onGoToIntroButtonClick = () => {
     navigation(`/`);
   };
