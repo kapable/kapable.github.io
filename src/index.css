@@ -127,7 +127,6 @@ body {
   width: 100%;
   height: auto;
   font-family: var(--title-font);
-  cursor: pointer;
 }
 
 .go-to-each-language {

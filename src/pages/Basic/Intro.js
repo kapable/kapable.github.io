@@ -14,6 +14,8 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Helmet } from 'react-helmet-async';
 import COPYBTN from '../../api/DefaultImg/result-copy-link-btn.png';
 import BACKBTN from '../../api/DefaultImg/result-to-home-btn.png';
+import STARTBTN from '../../api/DefaultImg/intro-start-button.png';
+import STARTBTNENG from '../../api/DefaultImg/intro-start-button-Eng.png';
 import { _eventSenderGA, reloadPage } from '../../tools/tools';
 import AdsenseAdvertiser from '../../components/Sub/AdsenseAdvertiser';
 import { withRouter } from '../../tools/withRouter';
@@ -170,8 +172,6 @@ class Intro extends Component {
 
     return (
       <Fragment>
-        {/* for blocking Adfit banner with page refreshing for PPL */}
-        {/* {this.reloadPage()} */}
         <div className='intro container'>
           <Helmet>
             {/* <!-- Primary Meta Tags --> */}
@@ -245,30 +245,56 @@ class Intro extends Component {
               content={this.state.current_test.info.mainTitle}
             />
           </Helmet>
-          <div ref={this.mainImgRef}>
+          <div
+            ref={this.mainImgRef}
+            style={{ lineHeight: '0.6rem', marginTop: '2.5rem' }}
+          >
+            <h1>{this.state.current_test.info.mainTitle}</h1>
+            <h4 style={{ color: 'grey' }}>
+              {this.state.current_test.info.subTitle}
+            </h4>
+          </div>
+          <div>
             <img
               loading='lazy'
               className='intro-main-img'
-              onClick={this._onStartButtonClick}
               src={_thumbImage}
               alt={_mainTitle + '|' + _subTitle}
             />
           </div>
-          <OtherLangIcons currentTest={this.state.current_test.info.mainUrl} />
 
           <AdsenseAdvertiser
             client={`ca-pub-2382342018701919`}
-            slot={'9210802615'}
+            slot={'1017740958'}
             format='auto'
             responsive='true'
             style={{ display: 'block' }}
           />
-          {/* <AdsenseAdvertiser
-                        client={`ca-pub-5142864985628271`}
-                        slot={"7281907187"}
-                        format="auto"
-                        responsive="true"
-                    /> */}
+
+          <div>
+            <p
+              style={{
+                whiteSpace: 'pre-line',
+                lineHeight: '1.rem',
+                fontWeight: 'bold',
+                margin: '2.5rem auto',
+                color: 'grey',
+              }}
+            >
+              {this.state.current_test.info?.description
+                ? this.state.current_test.info?.description
+                : `${this.state.current_test.info?.subTitle}\n${this.state.lang === 'Kor' ? '지금 케이테스트를 통해 살펴보세요✨' : 'Find it NOW with the TEST✨'}`}
+            </p>
+          </div>
+
+          <OtherLangIcons currentTest={this.state.current_test.info.mainUrl} />
+
+          <img
+            style={{ width: '100%', maxWidth: '20rem', cursor: 'pointer' }}
+            src={this.state.lang === 'Kor' ? STARTBTN : STARTBTNENG}
+            alt={`${this.state.current_test.info.mainTitle}-start-button`}
+            onClick={this._onStartButtonClick}
+          />
 
           <div className='test-intro-with-friend'>
             <CopyToClipboard text={this.state.quiz_url + '/'}>
