@@ -110,7 +110,12 @@ const BingoTable = ({ title, size, contents, resultSelectedNumArray }) => {
               ))}
           </div>
         </div>
-        <div className={styles.bingoBottomFooter}>
+        <div
+          className={styles.bingoBottomFooter}
+          style={{
+            backgroundColor: title.includes('Male') ? '#1312FF' : '#E82383',
+          }}
+        >
           <p className={styles.bingoBottomFooterInnerP}>KTEST</p>
         </div>
         {resultSelectedNumArray ? null : (
