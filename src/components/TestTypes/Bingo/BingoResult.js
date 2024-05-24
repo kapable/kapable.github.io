@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import BingoTable from './BingoTable';
 import OtherTestBannerRenderer from '../../Sub/OtherTestBannerRenderer';
 import GoToHomeBtn from '../../Sub/GoToHomeBtn';
+import styles from './bingo.module.css';
 
 const BingoResult = () => {
   const mainImgRef = useRef(null);
@@ -22,12 +23,13 @@ const BingoResult = () => {
     navigation(`/${title}/`);
   };
   return (
-    <div>
+    <div className={styles.viewTopDiv}>
       <img
         ref={mainImgRef}
         src={`https://images.ktestone.com/meta/bingo/${title}-result-upper-banner.jpeg`}
         alt='bingo1-intro'
-        className='result-img'
+        className={styles.tableTopDiv}
+        style={{ marginBottom: 0 }}
       />
       <BingoTable
         title={title}

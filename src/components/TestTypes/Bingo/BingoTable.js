@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Lottie from 'react-lottie';
 import * as loading from '../../../loading-animation.json';
 import styles from './bingo.module.css';
+import { CheckOutlined } from '@ant-design/icons';
 
 const defaultOptions = {
   loop: true,
@@ -109,13 +110,17 @@ const BingoTable = ({ title, size, contents, resultSelectedNumArray }) => {
               ))}
           </div>
         </div>
+        <div className={styles.bingoBottomFooter}>
+          <p className={styles.bingoBottomFooterInnerP}>KTEST</p>
+        </div>
         {resultSelectedNumArray ? null : (
           <>
             <button
               className='picker-result-go-home-button'
               onClick={onCompleteButtonClick}
             >
-              빙고 완성하기
+              <CheckOutlined />
+              &nbsp;&nbsp;빙고 완성하기
             </button>
             <p style={{ fontSize: '0.8rem' }}>
               * 버튼 클릭 후 결과가 보이지 않을 경우 새로고침을 눌러주세요!

@@ -24,21 +24,21 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
     .reverse();
   return (
     <Fragment>
-      {bottom_test_name_list.map((test) => {
+      {bingoListArray.map((test) => {
         return (
           <Fragment key={test + '-test-key'}>
             <a
               target='_blank'
               rel='noopener noreferrer'
-              href={`https://ktestone.com/kapable.github.io/${test}/`}
+              href={`https://ktestone.com/${test.title}/`}
               className='to-ppl-banner-text'
             >
               {' '}
               <img
                 loading='lazy'
-                src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`}
+                src={`https://images.ktestone.com/main-thumbnail/${test.title}-thumb.png`}
                 className='ppl-banner-img'
-                alt={`${test}-thumb`}
+                alt={`${test.title}-thumb`}
                 onClick={() =>
                   _eventSenderGA(
                     'Paging',
@@ -59,21 +59,21 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
           </Fragment>
         );
       })}
-      {bingoListArray.map((test) => {
+      {bottom_test_name_list.map((test) => {
         return (
           <Fragment key={test + '-test-key'}>
             <a
               target='_blank'
               rel='noopener noreferrer'
-              href={`https://ktestone.com/${test.title}/`}
+              href={`https://ktestone.com/kapable.github.io/${test}/`}
               className='to-ppl-banner-text'
             >
               {' '}
               <img
                 loading='lazy'
-                src={`https://images.ktestone.com/main-thumbnail/${test.title}-thumb.png`}
+                src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`}
                 className='ppl-banner-img'
-                alt={`${test.title}-thumb`}
+                alt={`${test}-thumb`}
                 onClick={() =>
                   _eventSenderGA(
                     'Paging',

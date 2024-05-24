@@ -15,7 +15,9 @@ const BingoMain = ({ title }) => {
         <meta name='title' content={'이상형 빙고판 - 케이테스트'} />
         <meta
           name='description'
-          content={'나의 이상형을 빙고판에 체크해보자!'}
+          content={
+            '나의 이상형을 빙고판에 체크해보자! - 이상형 빙고 여자편, 남자편 - 케이테스트'
+          }
           data-react-helmet='true'
         />
         <link rel='main-url' href={`https://ktestone.com/${title}/`} />
@@ -26,7 +28,9 @@ const BingoMain = ({ title }) => {
         <meta property='og:title' content={'이상형 빙고판 - 케이테스트'} />
         <meta
           property='og:description'
-          content={'나의 이상형을 빙고판에 체크해보자!'}
+          content={
+            '나의 이상형을 빙고판에 체크해보자! - 이상형 빙고 여자편, 남자편 - 케이테스트'
+          }
         />
         <meta
           property='og:image'
@@ -43,7 +47,9 @@ const BingoMain = ({ title }) => {
         <meta property='twitter:title' content={'이상형 빙고판 - 케이테스트'} />
         <meta
           property='twitter:description'
-          content={'나의 이상형을 빙고판에 체크해보자!'}
+          content={
+            '나의 이상형을 빙고판에 체크해보자! - 이상형 빙고 여자편, 남자편 - 케이테스트'
+          }
         />
         <meta
           property='twitter:image'
@@ -60,7 +66,13 @@ const BingoMain = ({ title }) => {
     return (
       <>
         {metaTagRenderer(title)}
-        <BingoIntro title={title} setMode={setMode} lang={currentBingo.lang} />
+        <BingoIntro
+          title={title}
+          setMode={setMode}
+          lang={currentBingo.lang}
+          displayTitle={currentBingo.displayTitle}
+          displaySubtitle={currentBingo.displaySubtitle}
+        />
       </>
     );
   } else if (mode === 'start') {

@@ -2,6 +2,8 @@ export const bingo = [
   {
     id: 1,
     title: 'idealTypeBingoFemale',
+    displayTitle: '이상형 빙고판(여자편)',
+    displaySubtitle: '나의 이상형을 빙고판에 체크해보자!',
     lang: 'Kor',
     size: [5, 5],
     shuffle: true,
@@ -36,6 +38,8 @@ export const bingo = [
   {
     id: 2,
     title: 'idealTypeBingoMale',
+    displayTitle: '이상형 빙고판(남자편)',
+    displaySubtitle: '나의 이상형을 빙고판에 체크해보자!',
     lang: 'Kor',
     size: [5, 5],
     shuffle: true,

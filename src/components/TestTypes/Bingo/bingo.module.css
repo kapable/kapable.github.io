@@ -1,12 +1,17 @@
+.viewTopDiv {
+  display: flex;
+  flex-direction: column;
+}
+
 .loadingDiv {
   margin: 13rem auto;
 }
 
 .tableTopDiv {
   width: 100%;
-  margin: 2rem auto 2rem;
-  max-width: 45rem;
-  font-size: 0.8rem;
+  margin: 0rem auto;
+  max-width: 40rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -19,7 +24,8 @@
 
 .tableColDiv {
   text-align: center;
-  border: 1px solid #e82383;
+  border-left: 1px solid #e82383;
+  border-right: 1px solid #e82383;
 }
 
 .tableContentsDiv {
@@ -28,7 +34,7 @@
   height: 5rem;
   word-break: keep-all;
   margin: 0 auto;
-  border: 0.5px solid #e82383;
+  border-top: 0.5px solid #e82383;
   border-left: 0.025px;
   border-right: 0.025px;
   padding: 0.2rem;
@@ -43,4 +49,21 @@
   height: 100%;
   align-content: center;
   mix-blend-mode: multiply;
+}
+
+.bingoBottomFooter {
+  height: 2rem;
+  background-color: #e82383;
+  text-align: end;
+  align-content: center;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  margin: 0rem auto;
+  max-width: 40rem;
+}
+
+.bingoBottomFooterInnerP {
+  margin: 0;
+  margin-right: 0.5rem;
 }

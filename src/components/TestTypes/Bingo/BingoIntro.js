@@ -5,9 +5,17 @@ import AdsenseAdvertiser from '../../Sub/AdsenseAdvertiser';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
 import BACKBTN from '../../../api/DefaultImg/result-to-home-btn.png';
+import STARTBTN from '../../../api/DefaultImg/intro-start-button.png';
+import STARTBTNENG from '../../../api/DefaultImg/intro-start-button-Eng.png';
 import { useNavigate } from 'react-router';
 
-const BingoIntro = ({ title, setMode, lang }) => {
+const BingoIntro = ({
+  title,
+  setMode,
+  lang,
+  displayTitle,
+  displaySubtitle,
+}) => {
   const navigator = useNavigate();
   const mainImgRef = useRef(null);
   const onStartButtonClick = useCallback(() => {
@@ -28,13 +36,15 @@ const BingoIntro = ({ title, setMode, lang }) => {
   }, [mainImgRef]);
   return (
     <div>
+      <div style={{ lineHeight: '0.6rem', marginTop: '2.5rem' }}>
+        <h1>{displayTitle}</h1>
+        <h4 style={{ color: 'grey' }}>{displaySubtitle}</h4>
+      </div>
       <img
         ref={mainImgRef}
         src={`https://images.ktestone.com/introImages/${title}-intro.jpg`}
         alt='bingo1-intro'
         className='result-img'
-        onClick={onStartButtonClick}
-        style={{ cursor: 'pointer' }}
       />
       <AdsenseAdvertiser
         client={`ca-pub-2382342018701919`}
@@ -42,6 +52,30 @@ const BingoIntro = ({ title, setMode, lang }) => {
         format='auto'
         responsive='true'
         style={{ display: 'block' }}
+      />
+      <div>
+        <p
+          style={{
+            whiteSpace: 'pre-line',
+            lineHeight: '1.rem',
+            fontWeight: 'bold',
+            margin: '2.5rem auto',
+            color: 'grey',
+          }}
+        >
+          여러분의 이상형은 어떻게 되나요 ? <br />
+          <br />
+          이상형을 체크 후 빙고판을 완성하고
+          <br />
+          <br />
+          친구들과 함께 공유해보아요 ✨
+        </p>
+      </div>
+      <img
+        style={{ width: '100%', maxWidth: '20rem', cursor: 'pointer' }}
+        src={lang === 'Kor' ? STARTBTN : STARTBTNENG}
+        alt={`${title}-start-button`}
+        onClick={onStartButtonClick}
       />
       <div className='test-intro-with-friend'>
         <CopyToClipboard text={`https://ktestone.com/${title}/`}>
