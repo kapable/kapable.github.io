@@ -812,8 +812,8 @@ class Result extends Component {
 
   foreignAffiliateRenderer(lang) {
     const aliAffiliateLink = this.state.originAdProb
-      ? 'https://s.click.aliexpress.com/e/_DDOVB7z'
-      : 'https://s.click.aliexpress.com/e/_DDOVB7z';
+      ? 'https://s.click.aliexpress.com/e/_DB6vpnh'
+      : 'https://s.click.aliexpress.com/e/_DB6vpnh';
     return (
       <div className='article-adCover-div-1'>
         <div className='article-adCover-div-2'>
