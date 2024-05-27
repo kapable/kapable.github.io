@@ -7,6 +7,9 @@ import './colorPicker.css';
 import { Helmet } from 'react-helmet-async';
 import GoToHomeBtn from '../../Sub/GoToHomeBtn';
 import { useNavigate, useLocation } from 'react-router-dom';
+import STARTBTN from '../../../api/DefaultImg/intro-start-button.png';
+import STARTBTNENG from '../../../api/DefaultImg/intro-start-button-Eng.png';
+import AdsenseAdvertiser from '../../Sub/AdsenseAdvertiser';
 
 const ColorPicking = ({ difficulty, lang }) => {
   const mainImgRef = useRef(null);
@@ -236,13 +239,24 @@ const ColorPicking = ({ difficulty, lang }) => {
         <img
           ref={mainImgRef}
           className='result-img'
-          style={{ cursor: 'pointer' }}
           src={`https://images.ktestone.com/introImages/colorPicker-${difficulty}-intro.jpeg`}
           alt='colorPicker-intro'
-          onClick={onStartButtonClick}
         />
         <p>{langComments[0]}</p>
         <p>{langComments[1]}</p>
+        <AdsenseAdvertiser
+          client={`ca-pub-2382342018701919`}
+          slot={'9210802615'}
+          format='auto'
+          responsive='true'
+          style={{ display: 'block' }}
+        />
+        <img
+          style={{ width: '100%', maxWidth: '20rem', cursor: 'pointer' }}
+          src={lang === 'Kor' ? STARTBTN : STARTBTNENG}
+          alt={`${difficulty}-start-button`}
+          onClick={onStartButtonClick}
+        />
         <GoToHomeBtn page='colorPicker intro' />
       </div>
     );
