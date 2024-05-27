@@ -239,7 +239,7 @@ const ColorPicking = ({ difficulty, lang }) => {
         <img
           ref={mainImgRef}
           className='result-img'
-          src={`https://images.ktestone.com/introImages/colorPicker-${difficulty}-intro.jpeg`}
+          src={`https://images.ktestone.com/introImages/colorPicker-${difficulty}-intro.jpg`}
           alt='colorPicker-intro'
         />
         <p>{langComments[0]}</p>
