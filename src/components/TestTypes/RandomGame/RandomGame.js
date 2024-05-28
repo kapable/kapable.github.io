@@ -1,18 +1,14 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { dadJokes } from '../../../api/DADJOKE';
-import { songTitles } from '../../../api/SONGTITLE';
+import { randomGames } from '../../../api/RANDOMGAME';
 import Loading from '../../Basic/Loading';
 import { Helmet } from 'react-helmet-async';
-import DadJokeIntro from './DadJokeIntro';
+import RandomGameIntro from './RandomGameIntro';
 import { useNavigate } from 'react-router-dom';
 
-let totalTests = [];
-totalTests = [...dadJokes, ...songTitles];
-
-const DadJoke = ({ testTitle }) => {
+const RandomGame = ({ testTitle }) => {
   const navigate = useNavigate();
   const [currentTest] = useState(
-    totalTests.find((test) => test.title === testTitle)
+    randomGames.find((test) => test.title === testTitle)
   );
   const [isRolling, setIsRolling] = useState(true);
   const [randomNumber, setRandomNumber] = useState(
@@ -61,14 +57,11 @@ const DadJoke = ({ testTitle }) => {
     return (
       <Helmet>
         {/* <!-- Primary Meta Tags --> */}
-        <title>아재 개그 맞추기 게임 테스트 - 케이테스트</title>
-        <meta
-          name='title'
-          content={`아재 개그 맞추기 게임 테스트 - 케이테스트`}
-        />
+        <title>{`${currentTest.metaTitle} - 케이테스트`}</title>
+        <meta name='title' content={`${currentTest.metaTitle} - 케이테스트`} />
         <meta
           name='description'
-          content={`아재 개그 맞추기 게임 테스트 | 멈춰서 나온 문제 못맞추면 한잔마셔!`}
+          content={`${currentTest.metaTitle} | 멈춰서 나온 문제 못맞추면 한잔마셔!`}
           data-react-helmet='true'
         />
         <link
@@ -84,11 +77,11 @@ const DadJoke = ({ testTitle }) => {
         />
         <meta
           property='og:title'
-          content={`아재 개그 맞추기 게임 테스트 - 케이테스트`}
+          content={`${currentTest.metaTitle} - 케이테스트`}
         />
         <meta
           property='og:description'
-          content={`아재 개그 맞추기 게임 테스트 | 멈춰서 나온 문제 못맞추면 한잔마셔!`}
+          content={`${currentTest.metaTitle} | 멈춰서 나온 문제 못맞추면 한잔마셔!`}
         />
         <meta
           property='og:image'
@@ -96,7 +89,7 @@ const DadJoke = ({ testTitle }) => {
         />
         <meta
           property='og:image:alt'
-          content={`아재 개그 맞추기 게임 테스트 - 케이테스트`}
+          content={`${currentTest.metaTitle} - 케이테스트`}
         />
 
         {/* <!-- Twitter --> */}
@@ -107,11 +100,11 @@ const DadJoke = ({ testTitle }) => {
         />
         <meta
           property='twitter:title'
-          content={`아재 개그 맞추기 게임 테스트 - 케이테스트`}
+          content={`${currentTest.metaTitle} - 케이테스트`}
         />
         <meta
           property='twitter:description'
-          content={`아재 개그 맞추기 게임 테스트 | 멈춰서 나온 문제 못맞추면 한잔마셔!`}
+          content={`${currentTest.metaTitle} | 멈춰서 나온 문제 못맞추면 한잔마셔!`}
         />
         <meta
           property='twitter:image'
@@ -119,23 +112,26 @@ const DadJoke = ({ testTitle }) => {
         />
         <meta
           property='twitter:image:alt'
-          content={`아재 개그 맞추기 게임 테스트 - 케이테스트`}
+          content={`${currentTest.metaTitle} - 케이테스트`}
         />
       </Helmet>
     );
   };
 
   if (mode === 'intro') {
-    // TODO: dynamic image url
-    return <DadJokeIntro setMode={setMode} currentTest={currentTest} />;
+    return (
+      <>
+        {metaTagRenderer()}
+        <RandomGameIntro setMode={setMode} currentTest={currentTest} />
+      </>
+    );
   } else if (mode === 'quiz') {
     if (isLoading) {
       return (
         <div>
           <img
-            // TODO: dynamic image url
-            src='https://images.ktestone.com/meta/dadJoke/dadJoke-upper-banner.jpeg'
-            alt='dadJoke-upper-banner'
+            src={`https://images.ktestone.com/meta/randomGames/${currentTest.category}/${currentTest.title}-upper-banner.jpg`}
+            alt='randomGames-upper-banner'
             className='result-img'
           />
           <Loading />
@@ -147,9 +143,8 @@ const DadJoke = ({ testTitle }) => {
           {metaTagRenderer()}
           <div>
             <img
-              // TODO: dynamic image url
-              src='https://images.ktestone.com/meta/dadJoke/dadJoke-upper-banner.jpeg'
-              alt='dadJoke-upper-banner'
+              src={`https://images.ktestone.com/meta/randomGames/${currentTest.category}/${currentTest.title}-upper-banner.jpg`}
+              alt='randomGames-upper-banner'
               className='result-img'
             />
           </div>
@@ -167,8 +162,8 @@ const DadJoke = ({ testTitle }) => {
             <div onClick={onStopButtonClick}>
               <img
                 style={{ cursor: 'pointer', width: '15rem' }}
-                src='https://images.ktestone.com/meta/dadJoke/dadJoke-stop-button.jpg'
-                alt='dadJoke-stop-button'
+                src='https://images.ktestone.com/meta/randomGames/stop-button.jpg'
+                alt='randomGames-stop-button'
                 className='result-img'
               />
             </div>
@@ -176,8 +171,8 @@ const DadJoke = ({ testTitle }) => {
             <div onClick={onStopButtonClick}>
               <img
                 style={{ cursor: 'pointer', width: '15rem' }}
-                src='https://images.ktestone.com/meta/dadJoke/dadJoke-redo-button.jpg'
-                alt='dadJoke-redo-button'
+                src='https://images.ktestone.com/meta/randomGames/redo-button.jpg'
+                alt='randomGames-redo-button'
                 className='result-img'
               />
             </div>
@@ -186,8 +181,8 @@ const DadJoke = ({ testTitle }) => {
             <div onClick={onResultButtonClick}>
               <img
                 style={{ cursor: 'pointer', margin: '2rem 0', width: '15rem' }}
-                src='https://images.ktestone.com/meta/dadJoke/dadJoke-go-to-answer-button.jpg'
-                alt='dadJoke-go-to-answer-button'
+                src='https://images.ktestone.com/meta/randomGames/go-to-answer-button.jpg'
+                alt='randomGames-go-to-answer-button'
                 className='result-img'
               />
             </div>
@@ -198,4 +193,4 @@ const DadJoke = ({ testTitle }) => {
   }
 };
 
-export default DadJoke;
+export default RandomGame;

@@ -4,8 +4,8 @@ import MainPage from './pages/Basic/MainPage';
 import Privacy from './pages/Basic/Privacy';
 import { useEffect, useState } from 'react';
 import { mbti_tests_list, TESTS } from './api/TESTS';
-import { dadJokesRoutes } from './api/DADJOKE';
-import { color_picker_list, difficulties } from './api/COLORPICKING';
+import { randomGamesRoutes } from './api/RANDOMGAME';
+import { difficulties } from './api/COLORPICKING';
 import { balanceTestsTitle } from './api/BALANCEGAME';
 import { bingoList } from './api/BINGO';
 import ReactGA4 from 'react-ga4';
@@ -13,8 +13,8 @@ import Intro from './pages/Basic/Intro';
 import Result from './pages/Basic/Result';
 import BalanceTest from './components/TestTypes/BalanceTest/BalanceTest';
 import BalanceTestResult from './components/TestTypes/BalanceTest/BalanceTestResult';
-import DadJoke from './components/TestTypes/DadJoke/DadJoke';
-import DadJokeAnswer from './components/TestTypes/DadJoke/DadJokeAnswer';
+import RandomGame from './components/TestTypes/RandomGame/RandomGame';
+import RandomGameAnswer from './components/TestTypes/RandomGame/RandomGameAnswer';
 import ColorPicking from './components/TestTypes/ColorPicker/ColorPicking';
 import ColorPickerResult from './components/TestTypes/ColorPicker/ColorPickerResult';
 import TwoSplitedIntro from './components/TestTypes/TwoSplitedIntro/TwoSplitedIntro';
@@ -73,10 +73,6 @@ function App() {
     'etc',
   ]);
 
-  const [all_contents_list] = useState(
-    mbti_tests_list.concat(dadJokesRoutes, color_picker_list, balanceTestsTitle)
-  );
-
   return (
     <Routes>
       {/* Main Page */}
@@ -119,14 +115,14 @@ function App() {
       )}
 
       {/* Intro Page */}
-      {all_contents_list.map((test) => (
+      {mbti_tests_list.map((test) => (
         <Route
           path={test.mainUrl}
           element={<Intro test={test.mainUrl} />}
           key={`${test.mainUrl}-intro`}
         />
       ))}
-      {all_contents_list.map((test) => (
+      {mbti_tests_list.map((test) => (
         <Route
           path={`/kapable.github.io/${test.mainUrl}`}
           element={<Intro test={test.mainUrl} />}
@@ -190,19 +186,18 @@ function App() {
       ))}
 
       {/* Random Games */}
-      {dadJokesRoutes.map((route, idx) => (
+      {randomGamesRoutes.map((route, idx) => (
         <Route
           path={`/${route}/`}
-          key={`dadJoke-${idx}`}
-          // element={<DadJoke testId={idx + 1} />}
-          element={<DadJoke testTitle={route} />}
+          key={`randomGame-${idx}`}
+          element={<RandomGame testTitle={route} />}
         />
       ))}
-      {dadJokesRoutes.map((route, idx) => (
+      {randomGamesRoutes.map((route, idx) => (
         <Route
           path={`/${route}/answers/`}
-          key={`dadJoke-${idx}`}
-          element={<DadJokeAnswer testTitle={route} />}
+          key={`randomGame-${idx}`}
+          element={<RandomGameAnswer testTitle={route} />}
         />
       ))}
 

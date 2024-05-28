@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import AGAINBTN from '../../../api/DefaultImg/result-to-again-btn.png';
 import COPYBTN from '../../../api/DefaultImg/result-copy-link-btn.png';
 import TOHOMEBTN from '../../../api/DefaultImg/result-to-home-btn.png';
-import { dadJokes } from '../../../api/DADJOKE';
+import { randomGames } from '../../../api/RANDOMGAME';
 import ShareGroup from '../../Basic/ShareGroup';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { _eventSenderGA } from '../../../tools/tools';
@@ -11,10 +11,10 @@ import GoToHomeBtn from '../../Sub/GoToHomeBtn';
 import OtherTestBannerRenderer from '../../Sub/OtherTestBannerRenderer';
 import { useNavigate } from 'react-router-dom';
 
-const DadJokeAnswer = ({ testTitle }) => {
+const RandomGameAnswer = ({ testTitle }) => {
   const navigate = useNavigate();
   const [currentTest] = useState(
-    dadJokes.find((test) => test.title === testTitle)
+    randomGames.find((test) => test.title === testTitle)
   );
   const [answerImages, setAnswerImages] = useState(currentTest.answers);
 
@@ -45,8 +45,8 @@ const DadJokeAnswer = ({ testTitle }) => {
     <div className='result'>
       <div>
         <img
-          src='https://images.ktestone.com/meta/dadJoke/dadJoke-upper-banner.jpeg'
-          alt='dadJoke-upper-banner'
+          src={`https://images.ktestone.com/meta/randomGames/${currentTest.category}/${currentTest.title}-upper-banner.jpg`}
+          alt='randomGame-upper-banner'
           className='result-img'
         />
       </div>
@@ -54,8 +54,8 @@ const DadJokeAnswer = ({ testTitle }) => {
         <img
           className='result-img'
           src={imageLink}
-          alt={`dadJoke-${idx}`}
-          key={`dadJoke-${idx}`}
+          alt={`randomGame-${idx}`}
+          key={`randomGame-${idx}`}
         />
       ))}
       <div className='share'>
@@ -125,4 +125,4 @@ const DadJokeAnswer = ({ testTitle }) => {
   );
 };
 
-export default DadJokeAnswer;
+export default RandomGameAnswer;

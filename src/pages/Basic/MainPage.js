@@ -244,6 +244,21 @@ const MainPage = ({ lang, category }) => {
         style={{ display: 'block' }}
       />
 
+      {lang === 'Kor' ? (
+        <Link
+          to={'/alcoholGames/'}
+          className='main-link-block'
+          key='alcoholGames-banner'
+        >
+          <img
+            loading='lazy'
+            className='test-main-img'
+            src={`https://images.ktestone.com/main-thumbnail/alcoholGame-thumb.png`}
+            alt='alcoholGames'
+          />
+        </Link>
+      ) : null}
+
       {/* Main Test Banners(Top) */}
       <div className='main-link-div'>
         {currentTestList.slice(0, render_range_points[0]).map((item, idx) => {
@@ -273,23 +288,6 @@ const MainPage = ({ lang, category }) => {
 
       {bingoGameRenderer()}
       {balanceTestRenderer()}
-
-      {/* Go to DadJoke */}
-      {(!currentCategory || currentCategory === 'etc') && lang === 'Kor' ? (
-        <Link
-          to={'/dadJoke1/'}
-          className='main-link-block'
-          key='dadJoke1-banner'
-        >
-          <img
-            loading='lazy'
-            className='test-main-img'
-            src={`https://images.ktestone.com/main-thumbnail/dadJoke1-thumb.png`}
-            alt='dadJoke1'
-          />
-        </Link>
-      ) : null}
-
       {colorPickerRenderer()}
 
       {/* Main Test Banners(Middle) */}
