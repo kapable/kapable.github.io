@@ -1,13 +1,19 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { dadJokes } from '../../../api/DADJOKE';
+import { songTitles } from '../../../api/SONGTITLE';
 import Loading from '../../Basic/Loading';
 import { Helmet } from 'react-helmet-async';
 import DadJokeIntro from './DadJokeIntro';
 import { useNavigate } from 'react-router-dom';
 
-const DadJoke = ({ testId }) => {
+let totalTests = [];
+totalTests = [...dadJokes, ...songTitles];
+
+const DadJoke = ({ testTitle }) => {
   const navigate = useNavigate();
-  const [currentTest] = useState(dadJokes.find((test) => test.id === testId));
+  const [currentTest] = useState(
+    totalTests.find((test) => test.title === testTitle)
+  );
   const [isRolling, setIsRolling] = useState(true);
   const [randomNumber, setRandomNumber] = useState(
     Math.floor(Math.random() * currentTest.questions.length)
@@ -35,7 +41,7 @@ const DadJoke = ({ testId }) => {
         };
       }, 2200);
     }
-  }, [isLoading, currentTest.title, navigate, testId]);
+  }, [isLoading, currentTest.title, navigate]);
 
   const onStopButtonClick = useCallback(() => {
     if (isRolling) {
@@ -120,12 +126,14 @@ const DadJoke = ({ testId }) => {
   };
 
   if (mode === 'intro') {
+    // TODO: dynamic image url
     return <DadJokeIntro setMode={setMode} currentTest={currentTest} />;
   } else if (mode === 'quiz') {
     if (isLoading) {
       return (
         <div>
           <img
+            // TODO: dynamic image url
             src='https://images.ktestone.com/meta/dadJoke/dadJoke-upper-banner.jpeg'
             alt='dadJoke-upper-banner'
             className='result-img'
@@ -139,6 +147,7 @@ const DadJoke = ({ testId }) => {
           {metaTagRenderer()}
           <div>
             <img
+              // TODO: dynamic image url
               src='https://images.ktestone.com/meta/dadJoke/dadJoke-upper-banner.jpeg'
               alt='dadJoke-upper-banner'
               className='result-img'

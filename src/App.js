@@ -189,12 +189,13 @@ function App() {
         />
       ))}
 
-      {/* DadJoke */}
+      {/* Random Games */}
       {dadJokesRoutes.map((route, idx) => (
         <Route
           path={`/${route}/`}
           key={`dadJoke-${idx}`}
-          element={<DadJoke testId={idx + 1} />}
+          // element={<DadJoke testId={idx + 1} />}
+          element={<DadJoke testTitle={route} />}
         />
       ))}
       {dadJokesRoutes.map((route, idx) => (
