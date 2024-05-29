@@ -863,7 +863,9 @@ class Result extends Component {
     const _current_test_contents = TESTS.filter(
       (test) => test.info.mainUrl === this.state.current_test
     )[0];
-    const foreignTest = TESTS.filter((test) => test.info.lang !== 'Kor')
+    const foreignTest = TESTS.filter(
+      (test) => test.info.lang !== 'Kor' && test.info.lang !== 'CN'
+    )
       .filter((test) => test.info.lang !== 'sample')
       .map((test) => test.info.mainUrl);
     let _current_test_result = _current_test_contents.results.filter(
