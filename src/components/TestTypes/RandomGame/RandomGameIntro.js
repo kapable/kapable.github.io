@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import GoToHomeBtn from '../../Sub/GoToHomeBtn';
 import AdsenseAdvertiser from '../../Sub/AdsenseAdvertiser';
+import STARTBTN from '../../../api/DefaultImg/intro-start-button.png';
+import STARTBTNENG from '../../../api/DefaultImg/intro-start-button-Eng.png';
 
-const DadJokeIntro = ({ setMode, currentTest }) => {
+const RandomGameIntro = ({ setMode, currentTest }) => {
   const mainImgRef = useRef(null);
   useEffect(() => {
     mainImgRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -15,8 +16,8 @@ const DadJokeIntro = ({ setMode, currentTest }) => {
         <h4 style={{ color: 'grey' }}>케이테스트 x 술자리 게임</h4>
       </div>
       <img
-        src={`https://images.ktestone.com/meta/randomGames/${currentTest.category}/${currentTest.title}-intro-upper-banner.jpg`}
-        alt='dadJoke-upper-banner'
+        src={`https://images.ktestone.com/introImages/${currentTest.title}-intro.jpg`}
+        alt='randomGame-upper-banner'
         style={{ width: '100%', maxWidth: '456px', margin: '0 auto' }}
       />
       <AdsenseAdvertiser
@@ -38,23 +39,14 @@ const DadJokeIntro = ({ setMode, currentTest }) => {
         {currentTest.metaDesc}
       </p>
       <img
+        style={{ width: '100%', maxWidth: '20rem', cursor: 'pointer' }}
+        src={currentTest.lang === 'Kor' ? STARTBTN : STARTBTNENG}
+        alt={`Game-start-button`}
         onClick={() => setMode('quiz')}
-        loading='lazy'
-        className='loveCharacter-intro-left-img'
-        src={`https://images.ktestone.com/meta/randomGames/game-start-button.jpg`}
-        alt={`left`}
       />
-      <Link to={`/${currentTest.title}/answers/`}>
-        <img
-          loading='lazy'
-          className='loveCharacter-intro-right-img'
-          src={`https://images.ktestone.com/meta/randomGames/goto-answer-button.jpg`}
-          alt={`right`}
-        />
-      </Link>
       <GoToHomeBtn page={`alcoholGames intro`} />
     </div>
   );
 };
 
-export default DadJokeIntro;
+export default RandomGameIntro;

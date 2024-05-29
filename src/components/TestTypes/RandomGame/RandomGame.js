@@ -177,7 +177,7 @@ const RandomGame = ({ testTitle }) => {
               />
             </div>
           )}
-          {isRolling ? null : (
+          {isRolling || !currentTest.answers ? null : (
             <div onClick={onResultButtonClick}>
               <img
                 style={{ cursor: 'pointer', margin: '2rem 0', width: '15rem' }}
