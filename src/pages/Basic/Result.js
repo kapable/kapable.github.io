@@ -56,7 +56,7 @@ class Result extends Component {
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
       aliCookies: Cookies.get('ali') || null,
-      isAliOpened: false,
+      isAliOpened: true,
       originAdProb: 0.65 < Math.random(),
       adProb: 1.1 >= Math.random(),
       startTimer: false,
@@ -139,7 +139,7 @@ class Result extends Component {
     //   `Click go-to-AliExpress Button(${test})`,
     //   'result page'
     // );
-    _eventSenderGA('Paging', `Click go-to-Coupang Button`, 'result page');
+    _eventSenderGA('Paging', `Click go-to-AliExpress Button`, 'result page');
   }
 
   onGardenflowerButtonClick() {
@@ -950,7 +950,7 @@ class Result extends Component {
                 content={this.state.current_result}
               />
             </Helmet>
-            {!this.state.originAdProb || this.state.aliCookies ? (
+            {this.state.isAliOpened || this.state.aliCookies ? (
               <>
                 <img
                   loading='lazy'
