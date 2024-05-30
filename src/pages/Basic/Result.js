@@ -134,11 +134,11 @@ class Result extends Component {
       aliCookies: Cookies.get('ali'),
       isAliOpened: true,
     });
-    _eventSenderGA(
-      'Paging',
-      `Click go-to-AliExpress Button(${test})`,
-      'result page'
-    );
+    // _eventSenderGA(
+    //   'Paging',
+    //   `Click go-to-AliExpress Button(${test})`,
+    //   'result page'
+    // );
     _eventSenderGA('Paging', `Click go-to-Coupang Button`, 'result page');
   }
 
