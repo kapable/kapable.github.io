@@ -7,6 +7,11 @@ phases:
       - npm cache clean --force
       - npm install --unsafe-perm
       - npm install babel-cli cross-env webpack-cli --global
+      - npm install -y atk cups-libs gtk3 libXcomposite alsa-lib \ libXdamage
+        libXrandr libXtst pango alsa-lib \ libXcursor libXinerama cairo pango \
+        ipa-gothic-fonts xorg-x11-fonts-100dpi \ xorg-x11-fonts-75dpi
+        xorg-x11-utils \ xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 \
+        xorg-x11-fonts-misc
   build:
     commands:
       - npm run build
