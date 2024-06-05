@@ -6,7 +6,7 @@ phases:
     commands:
       - npm cache clean --force
       - su - root
-      - yum install -y libgbm-dev
+      - yum install -y chromium-browser
       - npm install --unsafe-perm
       - npm install babel-cli cross-env webpack-cli --global
   build:
