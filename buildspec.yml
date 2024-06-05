@@ -5,8 +5,8 @@ phases:
       nodejs: 20.13.1
     commands:
       - npm cache clean --force
-      - apt-get -y update
-      - apt-get --assume-yes install chromium-browser
+      - su - root
+      - yum install -y chromium
       - npm install --unsafe-perm
       - npm install babel-cli cross-env webpack-cli --global
   build:
