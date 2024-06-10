@@ -9305,6 +9305,19 @@ export default function OtherLangIcons(props) {
               alt='[ Go to the English version ]'
             />
           </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/onigiriCharJP/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/japan-icon.png'
+              className='language-icon'
+              alt='[ 日本語バージョンをやりに行く。 ]'
+            />
+          </a>
         </div>
       );
     } else if (props.currentTest === 'onigiriCharEng') {
@@ -9322,6 +9335,51 @@ export default function OtherLangIcons(props) {
               src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
               className='language-icon'
               alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/onigiriCharJP/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/japan-icon.png'
+              className='language-icon'
+              alt='[ 日本語バージョンをやりに行く。 ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'onigiriCharJP') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/onigiriChar/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/onigiriCharEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
             />
           </a>
         </div>
@@ -9431,6 +9489,19 @@ export default function OtherLangIcons(props) {
               alt='[ Go to the English version ]'
             />
           </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/flyJjackCharJP/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/japan-icon.png'
+              className='language-icon'
+              alt='[ 日本語バージョンをやりに行く。 ]'
+            />
+          </a>
         </div>
       );
     } else if (props.currentTest === 'flyJjackCharEng') {
@@ -9441,6 +9512,177 @@ export default function OtherLangIcons(props) {
             target='_blank'
             rel='noopener noreferrer'
             href='https://ktestone.com/kapable.github.io/flyJjackChar/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/flyJjackCharJP/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/japan-icon.png'
+              className='language-icon'
+              alt='[ 日本語バージョンをやりに行く。 ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'flyJjackCharJP') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/flyJjackChar/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/flyJjackCharEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
+  function degreeWeatherCharTestLinkRenderer() {
+    if (props.currentTest === 'degreeWeatherChar') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/degreeWeatherCharJP/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/japan-icon.png'
+              className='language-icon'
+              alt='[ 日本語バージョンをやりに行く。 ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'degreeWeatherCharJP') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/degreeWeatherChar/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
+  function blockYouTestLinkRenderer() {
+    if (props.currentTest === 'blockYou') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/blockYouJP/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/japan-icon.png'
+              className='language-icon'
+              alt='[ 日本語バージョンをやりに行く。 ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'blockYouJP') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/blockYou/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
+  function talkAlotLoveTestLinkRenderer() {
+    if (props.currentTest === 'talkAlotLove') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/talkAlotLoveJP/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/japan-icon.png'
+              className='language-icon'
+              alt='[ 日本語バージョンをやりに行く。 ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'talkAlotLoveJP') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/talkAlotLove/'
             className='to-personalColorOut-test-banner-text'
           >
             <img
@@ -9529,6 +9771,9 @@ export default function OtherLangIcons(props) {
       {ethereumCharTestLinkRenderer()}
       {loveDiceLoveTestLinkRenderer()}
       {flyJjackCharTestLinkRenderer()}
+      {degreeWeatherCharTestLinkRenderer()}
+      {blockYouTestLinkRenderer()}
+      {talkAlotLoveTestLinkRenderer()}
     </Fragment>
   );
 }

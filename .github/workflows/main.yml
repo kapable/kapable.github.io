@@ -1,27 +1,27 @@
-name: Main CI # action 명
+name: Main CI
 
-on: # 이벤트 트리거
-  push: # push event에 반응
-    branches: # github repository의 branch가
-      - master # master 일 경우만
+on:
+  push:
+    branches:
+      - master
 
-jobs: # jobs
-  build: # GitHub-hosted runners env
-    runs-on: ubuntu-latest # using Ubuntu LTS
-    steps: # steps
-      - name: git clone #
-        uses: actions/checkout@v2 #
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git clone
+        uses: actions/checkout@v2
 
-      - name: npm install #
+      - name: npm install
         run: |
           npm cache clean --force
           npm install --unsafe-perm
           npm install babel-cli cross-env webpack-cli --global
 
-      - name: build #
-        run: npm run build # code build
+      - name: build
+        run: npm run build
 
-      - name: deploy # 배포
+      - name: deploy
         env:
           AWS_ACCESS_KEY_ID: '${{ secrets.AWS_ACCESS_KEY_ID }}'
           AWS_SECRET_ACCESS_KEY: '${{ secrets.AWS_SECRET_ACCESS_KEY }}'
@@ -31,7 +31,6 @@ jobs: # jobs
             --region ap-northeast-2 \
             ./build s3://ktestweb
 
-      # CloudFront 무효화
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v1
         env:
