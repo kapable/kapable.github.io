@@ -2413,6 +2413,11 @@ class Result extends Component {
                   (test) => test?.info?.mainUrl === this.state.current_test
                 )?.info?.mainTitle
               }
+              hashTag={
+                TESTS.find(
+                  (test) => test?.info?.mainUrl === this.state.current_test
+                )?.info?.hashTag
+              }
             />
             <div className='share'>
               {/* if facialExpAnalyzer, copy url is test home, other tests' urls are result urls */}
