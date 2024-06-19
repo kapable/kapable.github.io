@@ -150,8 +150,8 @@ const MainPage = ({ lang, category }) => {
       );
     }
   }, [lang, currentCategory]);
-  const mainMetaTagRenderer = () => {
-    const _metaTag = (
+  const mainMetaTagRenderer = (lang) => {
+    const _metaTagKor = (
       <Helmet>
         {/* <!-- Primary Meta Tags --> */}
         <title>취향 분석 테스트 - 케이테스트</title>
@@ -208,11 +208,68 @@ const MainPage = ({ lang, category }) => {
         />
       </Helmet>
     );
+    const _metaTag = (
+      <Helmet>
+        {/* <!-- Primary Meta Tags --> */}
+        <title>KTEST - Personality Test & Games</title>
+        <meta name='title' content='KTEST - Personality Test & Games' />
+        <meta
+          name='description'
+          content='Find you real you with Personality Tests!: Personal Color Test, Love Character Tests, 16 Personality Tests, KTEST'
+          data-react-helmet='true'
+        />
+        <meta
+          name='purpleads-verification'
+          content='67e5e9a6f3495f65f6b05cee'
+        />
+        <link rel='main-url' href={`https://ktestone.com`} />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://ktestone.com/' />
+        <meta property='og:title' content='KTEST - Personality Test & Games' />
+        <meta
+          property='og:description'
+          content='Find you real you with Personality Tests!: Personal Color Test, Love Character Tests, 16 Personality Tests, KTEST'
+        />
+        <meta
+          property='og:image'
+          content='https://images.ktestone.com/default/main-header-2023.png'
+        />
+        <meta
+          property='og:image:alt'
+          content='Find you real you with Personality Tests!: Personal Color Test, Love Character Tests, 16 Personality Tests, KTEST'
+        />
+
+        {/* <!-- Twitter --> */}
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='https://ktestone.com/' />
+        <meta
+          property='twitter:title'
+          content='KTEST - Personality Test & Games'
+        />
+        <meta
+          property='twitter:description'
+          content='Find you real you with Personality Tests!: Personal Color Test, Love Character Tests, 16 Personality Tests, KTEST'
+        />
+        <meta
+          property='twitter:image'
+          content='https://images.ktestone.com/default/main-header-2023.png'
+        />
+        <meta
+          property='twitter:image:alt'
+          content='Find you real you with Personality Tests!: Personal Color Test, Love Character Tests, 16 Personality Tests, KTEST'
+        />
+      </Helmet>
+    );
+    if (lang === 'Kor') {
+      return _metaTagKor;
+    }
     return _metaTag;
   };
   return (
     <Fragment>
-      <>{mainMetaTagRenderer()}</>
+      <>{mainMetaTagRenderer(lang)}</>
       {/* Language Converting */}
       <>
         <div ref={mainImgRef}>
