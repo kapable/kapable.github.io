@@ -105,14 +105,14 @@ const TwoSplitedIntro = ({ test, lang, info }) => {
             <img
               src='https://images.ktestone.com/meta/loveCharacter/Eng/loveChar-button-woman.jpg'
               alt='loveChar-button-woman'
-              style={{ width: '50%', cursor: 'pointer' }}
+              style={{ width: '100%', cursor: 'pointer' }}
             />
           </Link>
           <Link to={`/${test}Male${lang === 'Kor' ? '' : lang}/`}>
             <img
               src='https://images.ktestone.com/meta/loveCharacter/Eng/loveChar-button-man.jpg'
               alt='loveChar-button-man'
-              style={{ width: '50%', cursor: 'pointer' }}
+              style={{ width: '100%', cursor: 'pointer' }}
             />
           </Link>
         </div>
