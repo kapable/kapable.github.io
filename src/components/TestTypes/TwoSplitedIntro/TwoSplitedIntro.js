@@ -63,28 +63,71 @@ const TwoSplitedIntro = ({ test, lang, info }) => {
     );
   }, [lang, test, info]);
 
+  const mainBannerRenderer = useCallback(() => {
+    if (test + lang === 'loveCharacterEng') {
+      return (
+        <img
+          loading='lazy'
+          className='intro-main-img'
+          src={`https://images.ktestone.com/introImages/${test}${lang}-intro.jpg`}
+          alt={`${test}${lang}-start`}
+        />
+      );
+    } else {
+      return (
+        <>
+          <Link to={`/${test}Female${lang === 'Kor' ? '' : lang}/`}>
+            <img
+              loading='lazy'
+              className='loveCharacter-intro-left-img'
+              src={`https://images.ktestone.com/introImages/${test}${lang === 'Kor' ? '' : lang}-intro-left.jpg`}
+              alt={`${test}Female`}
+            />
+          </Link>
+          <Link to={`/${test}Male${lang === 'Kor' ? '' : lang}/`}>
+            <img
+              loading='lazy'
+              className='loveCharacter-intro-right-img'
+              src={`https://images.ktestone.com/introImages/${test}${lang === 'Kor' ? '' : lang}-intro-right.jpg`}
+              alt={`${test}Male`}
+            />
+          </Link>
+        </>
+      );
+    }
+  }, [test, lang]);
+
+  const bottomButtonRenderer = useCallback(() => {
+    if (test + lang === 'loveCharacterEng') {
+      return (
+        <div className='loveCharacter-intro-images-container'>
+          <Link to={`/${test}Female${lang === 'Kor' ? '' : lang}/`}>
+            <img
+              src='https://images.ktestone.com/meta/loveCharacter/Eng/loveChar-button-woman.jpg'
+              alt='loveChar-button-woman'
+              style={{ width: '50%', cursor: 'pointer' }}
+            />
+          </Link>
+          <Link to={`/${test}Male${lang === 'Kor' ? '' : lang}/`}>
+            <img
+              src='https://images.ktestone.com/meta/loveCharacter/Eng/loveChar-button-man.jpg'
+              alt='loveChar-button-man'
+              style={{ width: '50%', cursor: 'pointer' }}
+            />
+          </Link>
+        </div>
+      );
+    }
+  }, [test, lang]);
+
   return (
     <div>
       {metaTagRenderer()}
       <div className='loveCharacter-intro-images-container'>
-        <Link to={`/${test}Female${lang === 'Kor' ? '' : lang}/`}>
-          <img
-            loading='lazy'
-            className='loveCharacter-intro-left-img'
-            src={`https://images.ktestone.com/introImages/${test}${lang === 'Kor' ? '' : lang}-intro-left.jpg`}
-            alt={`${test}Female`}
-          />
-        </Link>
-        <Link to={`/${test}Male${lang === 'Kor' ? '' : lang}/`}>
-          <img
-            loading='lazy'
-            className='loveCharacter-intro-right-img'
-            src={`https://images.ktestone.com/introImages/${test}${lang === 'Kor' ? '' : lang}-intro-right.jpg`}
-            alt={`${test}Male`}
-          />
-        </Link>
+        {mainBannerRenderer()}
       </div>
       <OtherLangIcons currentTest={lang === 'Kor' ? test : `${test}${lang}`} />
+      {bottomButtonRenderer()}
       <div className='test-intro-with-friend'>
         <CopyToClipboard
           text={`https://ktestone.com/kapable.github.io/${test}${lang === 'Kor' ? '' : lang}/`}
