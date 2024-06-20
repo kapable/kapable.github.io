@@ -31,6 +31,9 @@ import BingoMain from './components/TestTypes/Bingo/BingoMain';
 import BingoResult from './components/TestTypes/Bingo/BingoResult';
 import Page404 from './pages/Basic/Page404';
 import AlcoholGames from './components/TestTypes/AlcoholGames';
+import WhoIsInMyThreads from './pages/Sub/WhoIsInMyThreads';
+import ThreadsCallback from './pages/Sub/ThreadsCallback';
+import MyThreads from './pages/Sub/MyThreads';
 
 let mbti_results_set = [];
 
@@ -460,6 +463,10 @@ function App() {
 
       {/* go to "Acroistic" page */}
       <Route path='/acrostic/' element={<Acrostic />} />
+
+      <Route path='/whoisinmyThreads/' element={<WhoIsInMyThreads />} />
+      <Route path='/threadsCallback/' element={<ThreadsCallback />} />
+      <Route path='/myThreads/' element={<MyThreads />} />
 
       <Route path='/*' element={<Page404 />} />
     </Routes>

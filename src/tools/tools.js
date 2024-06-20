@@ -118,3 +118,16 @@ export function shuffleArray(array) {
 
   return array;
 }
+
+const GRAPH_API_BASE_URL = process.env.REACT_APP_THREADS_GRAPH_API_BASE_URL;
+const PARAMS__ACCESS_TOKEN = 'access_token';
+export function buildGraphAPIURL(path, searchParams, accessToken, base_url) {
+  const url = new URL(path, base_url ?? GRAPH_API_BASE_URL);
+
+  url.search = new URLSearchParams(searchParams);
+  if (accessToken) {
+    url.searchParams.append(PARAMS__ACCESS_TOKEN, accessToken);
+  }
+
+  return url.toString();
+}
