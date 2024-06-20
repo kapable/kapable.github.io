@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 import OhterLangIconsMain from '../../components/Sub/OhterLangIconsMain';
 import CategoryIconsMain from '../../components/Sub/CategoryIconsMain';
 import AdsenseAdvertiser from '../../components/Sub/AdsenseAdvertiser';
-import { TESTS } from '../../api/TESTS';
+import { dual_qurie_test_list, TESTS } from '../../api/TESTS';
 import KakaoPlusFriendBtn from '../../components/Sub/KakaoPlusFriendBtn';
 import { bingo } from '../../api/BINGO';
 
@@ -43,6 +43,25 @@ const MainPage = ({ lang, category }) => {
     );
     setCurrentTestList(setted_test_list);
   }, [lang, category]);
+  const dualQurieTestRenderer = useCallback(() => {
+    if (!currentCategory || currentCategory === 'love') {
+      const tests = dual_qurie_test_list.filter((item) => item.lang === lang);
+      return (
+        <>
+          {tests.map((elem, idx) => (
+            <Link className='main-link-block' to={`/${elem.mainUrl}/`}>
+              <img
+                loading='lazy'
+                className='test-main-img'
+                src={`https://images.ktestone.com/main-thumbnail/${elem.mainUrl}-thumb.png`}
+                alt={`${elem.mainUrl}-thumb-img`}
+              />
+            </Link>
+          ))}
+        </>
+      );
+    }
+  }, [lang, currentCategory]);
   const colorPickerRenderer = useCallback(() => {
     if (
       (lang === 'Kor' || !lang) &&
@@ -354,6 +373,8 @@ const MainPage = ({ lang, category }) => {
           />
         </div>
       </>
+
+      {dualQurieTestRenderer()}
 
       {/* Category Converting */}
       <CategoryIconsMain lang={lang} setCurrentCategory={setCurrentCategory} />
