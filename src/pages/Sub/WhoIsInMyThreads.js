@@ -35,6 +35,7 @@ const WhoIsInMyThreads = () => {
   }
   return (
     <div>
+      {console.log(APP_ID, REDIRECT_URI)}
       <button onClick={onSubmitHandler}>로그인해요</button>
     </div>
   );
