@@ -208,7 +208,7 @@ const MainPage = ({ lang, category }) => {
         />
       </Helmet>
     );
-    const _metaTag = (
+    const _metaTagEng = (
       <Helmet>
         {/* <!-- Primary Meta Tags --> */}
         <title>KTEST - Personality Test & Games</title>
@@ -222,11 +222,11 @@ const MainPage = ({ lang, category }) => {
           name='purpleads-verification'
           content='67e5e9a6f3495f65f6b05cee'
         />
-        <link rel='main-url' href={`https://ktestone.com`} />
+        <link rel='main-url' href={`https://ktestone.com/Eng/`} />
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://ktestone.com/' />
+        <meta property='og:url' content='https://ktestone.com/Eng/' />
         <meta property='og:title' content='KTEST - Personality Test & Games' />
         <meta
           property='og:description'
@@ -234,7 +234,7 @@ const MainPage = ({ lang, category }) => {
         />
         <meta
           property='og:image'
-          content='https://images.ktestone.com/default/main-header-2023.png'
+          content='https://images.ktestone.com/default/main-header-2023Eng.png'
         />
         <meta
           property='og:image:alt'
@@ -243,7 +243,7 @@ const MainPage = ({ lang, category }) => {
 
         {/* <!-- Twitter --> */}
         <meta property='twitter:card' content='summary_large_image' />
-        <meta property='twitter:url' content='https://ktestone.com/' />
+        <meta property='twitter:url' content='https://ktestone.com/Eng/' />
         <meta
           property='twitter:title'
           content='KTEST - Personality Test & Games'
@@ -254,7 +254,7 @@ const MainPage = ({ lang, category }) => {
         />
         <meta
           property='twitter:image'
-          content='https://images.ktestone.com/default/main-header-2023.png'
+          content='https://images.ktestone.com/default/main-header-2023Eng.png'
         />
         <meta
           property='twitter:image:alt'
@@ -262,10 +262,74 @@ const MainPage = ({ lang, category }) => {
         />
       </Helmet>
     );
-    if (lang === 'Kor') {
+    const _metaTagJP = (
+      <Helmet>
+        {/* <!-- Primary Meta Tags --> */}
+        <title>ケイテスト ケーテスト KTEST - 趣向分析MBTIテスト</title>
+        <meta
+          name='title'
+          content='ケイテスト ケーテスト KTEST - 趣向分析MBTIテスト'
+        />
+        <meta
+          name='description'
+          content='あなたの本当の性格をテストで探してみてください！: パーソナルカラーテスト、愛の性格テスト、16の性格テストがあります, MBTI'
+          data-react-helmet='true'
+        />
+        <meta
+          name='purpleads-verification'
+          content='67e5e9a6f3495f65f6b05cee'
+        />
+        <link rel='main-url' href={`https://ktestone.com/JP/`} />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://ktestone.com/JP/' />
+        <meta
+          property='og:title'
+          content='ケイテスト ケーテスト KTEST - 趣向分析MBTIテスト'
+        />
+        <meta
+          property='og:description'
+          content='あなたの本当の性格をテストで探してみてください！: パーソナルカラーテスト、愛の性格テスト、16の性格テストがあります, MBTI'
+        />
+        <meta
+          property='og:image'
+          content='https://images.ktestone.com/default/main-header-2023JP.png'
+        />
+        <meta
+          property='og:image:alt'
+          content='あなたの本当の性格をテストで探してみてください！: パーソナルカラーテスト、愛の性格テスト、16の性格テストがあります, MBTI'
+        />
+
+        {/* <!-- Twitter --> */}
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='https://ktestone.com/JP/' />
+        <meta
+          property='twitter:title'
+          content='ケイテスト ケーテスト KTEST - 趣向分析MBTIテスト'
+        />
+        <meta
+          property='twitter:description'
+          content='あなたの本当の性格をテストで探してみてください！: パーソナルカラーテスト、愛の性格テスト、16の性格テストがあります, MBTI'
+        />
+        <meta
+          property='twitter:image'
+          content='https://images.ktestone.com/default/main-header-2023JP.png'
+        />
+        <meta
+          property='twitter:image:alt'
+          content='あなたの本当の性格をテストで探してみてください！: パーソナルカラーテスト、愛の性格テスト、16の性格テストがあります, MBTI'
+        />
+      </Helmet>
+    );
+    if (lang === 'Kor' || lang === '') {
       return _metaTagKor;
+    } else if (lang === 'Eng') {
+      return _metaTagEng;
+    } else if (lang === 'JP') {
+      return _metaTagJP;
     }
-    return _metaTag;
+    return _metaTagEng;
   };
   return (
     <Fragment>

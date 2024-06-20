@@ -56,8 +56,10 @@
     },
     "cacheAjaxRequests": false,
     "include": [
+      "/",
       "/Kor/",
       "/Eng/",
+      "/JP/",
       "/kapable.github.io/personalColor",
       "/kapable.github.io/personalColor/result/ESTJ",
       "/kapable.github.io/personalColor/result/ESTP",
