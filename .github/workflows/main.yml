@@ -14,11 +14,11 @@ jobs:
 
       - name: .env setting
         run: |
-          echo "REACT_APP_SERVER_IP=${{ secrets.REACT_APP_THREADS_APP_ID }}" >> .env
-          echo "REACT_APP_EXAMPLE=${{ secrets.REACT_APP_THREADS_API_SECRET }}" >> .env
-          echo "REACT_APP_SERVER_IP=${{ secrets.REACT_APP_THREADS_REDIRECT_URL }}" >> .env
-          echo "REACT_APP_EXAMPLE=${{ secrets.REACT_APP_THREADS_GRAPH_API_BASE_URL }}" >> .env
-          echo "REACT_APP_SERVER_IP=${{ secrets.REACT_APP_THREADS_SESSION_SECRET }}" >> .env
+          echo "REACT_APP_THREADS_APP_ID=${{ secrets.REACT_APP_THREADS_APP_ID }}" >> .env
+          echo "REACT_APP_THREADS_API_SECRET=${{ secrets.REACT_APP_THREADS_API_SECRET }}" >> .env
+          echo "REACT_APP_THREADS_REDIRECT_URL=${{ secrets.REACT_APP_THREADS_REDIRECT_URL }}" >> .env
+          echo "REACT_APP_THREADS_GRAPH_API_BASE_URL=${{ secrets.REACT_APP_THREADS_GRAPH_API_BASE_URL }}" >> .env
+          echo "REACT_APP_THREADS_SESSION_SECRET=${{ secrets.REACT_APP_THREADS_SESSION_SECRET }}" >> .env
 
       - name: npm install
         run: |
