@@ -657,11 +657,15 @@ class Result extends Component {
     return this.props.navigate('/kapable.github.io' + current_tests_path);
   }
 
-  affiliateRenderer() {
-    const cookieRocketCoupangLink = this.state.originAdProb
-      ? 'https://link.coupang.com/a/X2X8X'
-      : 'https://link.coupang.com/a/bcQpxX';
-    let otherAdProb = 0.1 > Math.random();
+  affiliateRenderer(coupang_link) {
+    const cookieRocketCoupangLink = coupang_link
+      ? coupang_link
+      : this.state.originAdProb
+        ? 'https://link.coupang.com/a/X2X8X'
+        : 'https://link.coupang.com/a/bcQpxX';
+
+    console.log(cookieRocketCoupangLink);
+    let otherAdProb = 0.0 > Math.random();
     const othersLink = [
       {
         test: 'personalScentBTI',
@@ -751,20 +755,28 @@ class Result extends Component {
               }
               target='_blank'
               rel='noreferrer noopener'
+              onClick={
+                testsArray.includes(this.state.current_test) && otherAdProb
+                  ? this.onOtherCoupangButtonClick
+                  : () => this.onCoupangButtonClick(this.state.current_test)
+              }
             >
-              <button
-                className='result-coupang-button'
-                type='primary'
-                shape='round'
-                style={{ width: '15rem', height: '3.5rem' }}
-                onClick={
-                  testsArray.includes(this.state.current_test) && otherAdProb
-                    ? this.onOtherCoupangButtonClick
-                    : () => this.onCoupangButtonClick(this.state.current_test)
-                }
-              >
-                버튼 누르고 결과 보기
-              </button>
+              {coupang_link ? (
+                <img
+                  style={{ height: '5rem', cursor: 'pointer' }}
+                  src={`https://images.ktestone.com/resultImages/${this.state.current_test}/${this.state.current_test}-result-coupang-button.png`}
+                  alt={this.state.current_test}
+                />
+              ) : (
+                <button
+                  className='result-coupang-button'
+                  type='primary'
+                  shape='round'
+                  style={{ width: '15rem', height: '3.5rem' }}
+                >
+                  버튼 누르고 결과 보기
+                </button>
+              )}
             </a>
             <p style={{ fontSize: '10px', color: 'grey', marginTop: '0.5rem' }}>
               원치 않을 경우 뒤로 가기를 눌러주세요.
@@ -873,6 +885,7 @@ class Result extends Component {
     )[0];
     let final_type = _current_test_result.type;
     let final_desc = _current_test_result.desc;
+    let final_coupang_link = _current_test_result?.coupang_link;
     let img_src = _current_test_result.img_src;
     let test_current = _current_test_contents.info.mainTitle;
     let desc_test_current = _current_test_contents.info.subTitle;
@@ -1933,7 +1946,7 @@ class Result extends Component {
                     alt={final_type}
                   />
                 </div>
-                {this.affiliateRenderer()}
+                {this.affiliateRenderer(final_coupang_link)}
               </>
             )}
           </Fragment>
