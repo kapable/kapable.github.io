@@ -22,7 +22,7 @@ const Footer = () => {
         Disclaimer:<br></br>All content is provided for fun and entertainment
         purposes only
       </p>
-      <p>©주식회사 쿠키로켓 All Rights Reserved. 2023.</p>
+      <p>©주식회사 쿠키로켓 All Rights Reserved. 2024.</p>
       <p>
         <a
           style={{ color: 'lightGrey' }}
