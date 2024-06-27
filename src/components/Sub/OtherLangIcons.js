@@ -9991,6 +9991,174 @@ export default function OtherLangIcons(props) {
     }
   }
 
+  function webCharTestLinkRenderer() {
+    if (props.currentTest === 'webChar') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/webCharEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'webCharEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/webChar/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
+  function paintDoodleCharTestLinkRenderer() {
+    if (props.currentTest === 'paintDoodleChar') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/paintDoodleCharEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'paintDoodleCharEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/paintDoodleChar/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
+  function heartWindowTestLinkRenderer() {
+    if (props.currentTest === 'heartWindow') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/heartWindowEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'heartWindowEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/heartWindow/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
+  function colorThemeTestLinkRenderer() {
+    if (props.currentTest === 'colorTheme') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/colorThemeEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'colorThemeEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/colorTheme/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
   return (
     <Fragment>
       {factBTILinkRenderer()}
@@ -10075,6 +10243,10 @@ export default function OtherLangIcons(props) {
       {plopPoolCharTestLinkRenderer()}
       {receiptCharTestLinkRenderer()}
       {fruitSilhouetteCharTestLinkRenderer()}
+      {webCharTestLinkRenderer()}
+      {paintDoodleCharTestLinkRenderer()}
+      {heartWindowTestLinkRenderer()}
+      {colorThemeTestLinkRenderer()}
     </Fragment>
   );
 }
