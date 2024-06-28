@@ -1563,24 +1563,6 @@ class Result extends Component {
           </Fragment>
         );
       } else if (this.state.current_test === 'gardenflower') {
-        const gardenflower_type_obj = {
-          ESTP: 'iris',
-          ESFP: 'magnolia',
-          ENFP: 'magnolia',
-          INFP: 'gensomino',
-          ENTJ: 'iris',
-          INFJ: 'gensomino',
-          INTJ: 'bizzarria',
-          ESTJ: 'iris',
-          INTP: 'bizzarria',
-          ENFJ: 'magnolia',
-          ISFJ: 'gensomino',
-          ENTP: 'iris',
-          ISTJ: 'bizzarria',
-          ISTP: 'bizzarria',
-          ISFP: 'gensomino',
-          ESFJ: 'magnolia',
-        };
         return (
           <Fragment>
             <Helmet>
@@ -1655,26 +1637,6 @@ class Result extends Component {
               src={img_src}
               className='result-img'
               alt={final_type}
-            />
-            <img
-              loading='lazy'
-              src={`https://images.ktestone.com/meta/gardenflower/gardenflower-${
-                gardenflower_type_obj[_current_test_result.type]
-              }-banner.jpg`}
-              className='result-img'
-              alt={`${gardenflower_type_obj[_current_test_result.type]}-banner`}
-            />
-            <img
-              loading='lazy'
-              src={`https://images.ktestone.com/meta/gardenflower/gardenflower-popup-banner.jpg`}
-              className='result-img'
-              alt={`gardenflower-popup-banner`}
-            />
-            <img
-              loading='lazy'
-              src={`https://images.ktestone.com/meta/gardenflower/gardenflower-SIVILLAGE-banner.jpg`}
-              className='result-img'
-              alt={'SIVILLAGE'}
             />
           </Fragment>
         );
