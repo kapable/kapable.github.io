@@ -374,8 +374,6 @@ const MainPage = ({ lang, category }) => {
         </div>
       </>
 
-      {dualQurieTestRenderer()}
-
       {/* Category Converting */}
       <CategoryIconsMain lang={lang} setCurrentCategory={setCurrentCategory} />
       <AdsenseAdvertiser
@@ -385,21 +383,6 @@ const MainPage = ({ lang, category }) => {
         responsive='true'
         style={{ display: 'block' }}
       />
-
-      {lang === 'Kor' ? (
-        <Link
-          to={'/alcoholGames/'}
-          className='main-link-block'
-          key='alcoholGames-banner'
-        >
-          <img
-            loading='lazy'
-            className='test-main-img'
-            src={`https://images.ktestone.com/main-thumbnail/alcoholGame-thumb.png`}
-            alt='alcoholGames'
-          />
-        </Link>
-      ) : null}
 
       {/* Main Test Banners(Top) */}
       <div className='main-link-div'>
@@ -427,6 +410,22 @@ const MainPage = ({ lang, category }) => {
           );
         })}
       </div>
+
+      {dualQurieTestRenderer()}
+      {lang === 'Kor' ? (
+        <Link
+          to={'/alcoholGames/'}
+          className='main-link-block'
+          key='alcoholGames-banner'
+        >
+          <img
+            loading='lazy'
+            className='test-main-img'
+            src={`https://images.ktestone.com/main-thumbnail/alcoholGame-thumb.png`}
+            alt='alcoholGames'
+          />
+        </Link>
+      ) : null}
 
       {bingoGameRenderer()}
       {balanceTestRenderer()}
