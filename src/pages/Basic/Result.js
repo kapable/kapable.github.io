@@ -139,7 +139,7 @@ class Result extends Component {
     //   `Click go-to-AliExpress Button(${test})`,
     //   'result page'
     // );
-    _eventSenderGA('Paging', `Click go-to-AliExpress Button`, 'result page');
+    _eventSenderGA('Paging', `Click go-to-Coupang Button`, 'result page');
   }
 
   onGardenflowerButtonClick() {
