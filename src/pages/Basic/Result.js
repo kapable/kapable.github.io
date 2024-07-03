@@ -664,7 +664,6 @@ class Result extends Component {
         ? 'https://link.coupang.com/a/X2X8X'
         : 'https://link.coupang.com/a/bcQpxX';
 
-    console.log(cookieRocketCoupangLink);
     let otherAdProb = 0.0 > Math.random();
     const othersLink = [
       {
@@ -906,6 +905,7 @@ class Result extends Component {
         'idealTypeEng',
       ];
       let tonymoly_list = ['factPok', 'MyFactPok', 'FriendFactPok'];
+      let new_release_list = ['insideEmotionControl'];
       if (foreignTest.includes(this.state.current_test)) {
         let og_img_url =
           'https://images.ktestone.com/meta/' +
@@ -1870,7 +1870,9 @@ class Result extends Component {
                 content={this.state.current_result}
               />
             </Helmet>
-            {this.state.isOpened || this.state.coupangCookies ? (
+            {this.state.isOpened ||
+            this.state.coupangCookies ||
+            new_release_list.includes(this.state.current_test) ? (
               <>
                 <img
                   loading='lazy'
