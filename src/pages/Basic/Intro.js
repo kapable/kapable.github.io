@@ -485,7 +485,7 @@ class Intro extends Component {
             ref={this.mainImgRef}
             style={{ lineHeight: '0.6rem', marginTop: '2.5rem' }}
           >
-            <h1>{this.state.current_test.info.mainTitle}</h1>
+            <h2>{this.state.current_test.info.mainTitle}</h2>
             <h4 style={{ color: 'grey' }}>
               {this.state.current_test.info.subTitle}
             </h4>

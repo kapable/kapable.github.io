@@ -8501,6 +8501,19 @@ export default function OtherLangIcons(props) {
           <a
             target='_blank'
             rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/bloodTransfusionEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
             href='https://ktestone.com/kapable.github.io/bloodTransfusionJP/'
             className='to-personalColorOut-test-banner-text'
           >
@@ -8520,6 +8533,19 @@ export default function OtherLangIcons(props) {
           <a
             target='_blank'
             rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/bloodTransfusionEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
             href='https://ktestone.com/kapable.github.io/bloodTransfusion/'
             className='to-personalColorOut-test-banner-text'
           >
@@ -8528,6 +8554,38 @@ export default function OtherLangIcons(props) {
               src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
               className='language-icon'
               alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'bloodTransfusionEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/bloodTransfusion/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/bloodTransfusionJP/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/japan-icon.png'
+              className='language-icon'
+              alt='[ 日本語バージョンをやりに行く。 ]'
             />
           </a>
         </div>
@@ -10401,6 +10459,90 @@ export default function OtherLangIcons(props) {
     }
   }
 
+  function doodleGlassBoardCharTestLinkRenderer() {
+    if (props.currentTest === 'doodleGlassBoardChar') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/doodleGlassBoardCharEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'doodleGlassBoardCharEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/doodleGlassBoardChar/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
+  function charPartnerConnTestLinkRenderer() {
+    if (props.currentTest === 'charPartnerConn') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/charPartnerConnEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'charPartnerConnEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/charPartnerConn/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
   return (
     <Fragment>
       {factBTILinkRenderer()}
@@ -10492,6 +10634,8 @@ export default function OtherLangIcons(props) {
       {colorBubbleLoveTestLinkRenderer()}
       {profilePosterTestLinkRenderer()}
       {insideEmotionControlTestLinkRenderer()}
+      {doodleGlassBoardCharTestLinkRenderer()}
+      {charPartnerConnTestLinkRenderer()}
     </Fragment>
   );
 }
