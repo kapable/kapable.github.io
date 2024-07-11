@@ -905,7 +905,11 @@ class Result extends Component {
         'idealTypeEng',
       ];
       let tonymoly_list = ['factPok', 'MyFactPok', 'FriendFactPok'];
-      let new_release_list = ['insideEmotionControl', 'charFactPokPick'];
+      let new_release_list = [
+        'insideEmotionControl',
+        'charFactPokPick',
+        'messageBox',
+      ];
       if (foreignTest.includes(this.state.current_test)) {
         let og_img_url =
           'https://images.ktestone.com/meta/' +
