@@ -1,5 +1,6 @@
 .modalCloseButton {
   color: #e62182;
+  font-size: 1.2rem;
   font-weight: bold;
   position: sticky;
   right: 0;
@@ -10,14 +11,15 @@
 }
 
 .modalTopAlertDiv {
-  background-color: #e62182;
+  background-color: rgba(230, 33, 130, 0.7);
   padding: 1.5rem;
   color: white;
   border-radius: 1rem;
+  word-break: keep-all;
 }
 
 .modalTutorialDiv {
-  background-color: gold;
+  background-color: rgb(255, 215, 0, 0.7);
   border-radius: 1rem;
   padding: 2rem;
 }
@@ -38,4 +40,14 @@
   width: 4rem;
   height: 2rem;
   cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+.appstoreLink,
+.appstoreLink:visited,
+appstoreLink:hover,
+appstoreLink:active,
+appstoreLink:focus {
+  color: black;
+  text-decoration: none;
 }
