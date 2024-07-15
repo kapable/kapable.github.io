@@ -1,0 +1,41 @@
+.modalCloseButton {
+  color: #e62182;
+  font-weight: bold;
+  position: sticky;
+  right: 0;
+  top: 0;
+  width: max-content;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.modalTopAlertDiv {
+  background-color: #e62182;
+  padding: 1.5rem;
+  color: white;
+  border-radius: 1rem;
+}
+
+.modalTutorialDiv {
+  background-color: gold;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.modalFooter {
+  width: 90%;
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.modalOkButton {
+  color: white;
+  font-weight: bold;
+  background-color: #e62182;
+  border: none;
+  border-radius: 0.5rem;
+  width: 4rem;
+  height: 2rem;
+  cursor: pointer;
+}

@@ -16,6 +16,7 @@ import AdsenseAdvertiser from '../../components/Sub/AdsenseAdvertiser';
 import GoToHomeBtn from '../../components/Sub/GoToHomeBtn';
 import OtherTestBannerRenderer from '../../components/Sub/OtherTestBannerRenderer';
 import { withRouter } from '../../tools/withRouter';
+// import ResultModal from '../../components/Sub/ResultModal';
 
 class Result extends Component {
   constructor(props) {
@@ -2335,6 +2336,7 @@ class Result extends Component {
           />
           <div className='result-header'>
             <h5 className='result-title'>결과는...</h5>
+            {/* <ResultModal /> */}
             <div className='result-value'>{this.resultRender()}</div>
             {/* PPL banner image */}
             {this.pplBannerRenderer()}
