@@ -59,9 +59,17 @@ const ResultModal = ({ testTitle, testResultContents }) => {
             },
           }}
         >
-          <Button className={styles.downloadButton} onClick={showModal}>
+          <div>
+            <img
+              src={`https://images.ktestone.com/resultImages/insideEmotionControl/insideEmotionControl-modal-header.jpg`}
+              alt={`insideEmotionControl`}
+              className='result-img'
+              onClick={showModal}
+            />
+          </div>
+          {/* <Button className={styles.downloadButton} onClick={showModal}>
             <DownloadOutlined /> 워치 페이스 다운로드
-          </Button>
+          </Button> */}
 
           <Modal
             isOpen={isModalOpen}
