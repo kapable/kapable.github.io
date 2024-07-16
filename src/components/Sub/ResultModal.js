@@ -35,16 +35,6 @@ const ResultModal = ({ testTitle, testResultContents }) => {
   const showModal = () => {
     setIsModalOpen(true);
   };
-  // const onDownLoadClick = async (url) => {
-  //   await fetch(url, { method: 'GET' })
-  //     .then((res) => {
-  //       return res.blob();
-  //     })
-  //     .then((blob) => saveAs(blob, 'watchFace.clock2'))
-  //     .catch((err) => {
-  //       console.error('err: ', err);
-  //     });
-  // };
   const onDownLoadClick = (url) => {
     fetch(url)
       .then((response) => response.blob())
@@ -62,25 +52,8 @@ const ResultModal = ({ testTitle, testResultContents }) => {
         console.error('파일 다운로드 오류:', error);
       });
   };
-  const onAsyncDownLoadClick = async (url) => {
-    await fetch(url)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const url = window.URL.createObjectURL(new Blob([blob]));
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'watchFace.clock2';
-        document.body.appendChild(a);
-        a.click();
-        window.URL.revokeObjectURL(url);
-        document.body.removeChild(a);
-      })
-      .catch((error) => {
-        console.error('파일 다운로드 오류:', error);
-      });
-  };
 
-  if (testTitle === 'gardenflower') {
+  if (testTitle === 'insideEmotionControl') {
     return (
       <>
         <ConfigProvider
@@ -95,16 +68,13 @@ const ResultModal = ({ testTitle, testResultContents }) => {
         >
           <div>
             <img
-              src={`https://images.ktestone.com/resultImages/insideEmotionControl/insideEmotionControl-modal-header.jpg`}
-              alt={`insideEmotionControl`}
+              src={`https://images.ktestone.com/resultImages/${testTitle}/${testTitle}-modal-header.jpg`}
+              alt={`${testTitle}`}
               className='result-img'
               onClick={showModal}
               style={{ cursor: 'pointer' }}
             />
           </div>
-          {/* <Button className={styles.downloadButton} onClick={showModal}>
-            <DownloadOutlined /> 워치 페이스 다운로드
-          </Button> */}
 
           <Modal
             isOpen={isModalOpen}
@@ -137,26 +107,15 @@ const ResultModal = ({ testTitle, testResultContents }) => {
                 style={{ marginTop: '1.5rem' }}
                 className={styles.downloadButton}
                 onClick={() =>
-                  onAsyncDownLoadClick(
-                    `https://ktestone.com/watchFaces/insideEmotionControl/${testResultContents?.type}.clock2`
-                  )
-                }
-              >
-                <DownloadOutlined /> async 워치 페이스 다운로드
-              </Button>
-              <Button
-                style={{ marginTop: '1.5rem' }}
-                className={styles.downloadButton}
-                onClick={() =>
                   onDownLoadClick(
-                    `https://ktestone.com/watchFaces/insideEmotionControl/${testResultContents?.type}.clock2`
+                    `https://ktestone.com/watchFaces/${testTitle}/${testResultContents?.type}.clock2`
                   )
                 }
               >
                 <DownloadOutlined /> 워치 페이스 다운로드
               </Button>
               <img
-                src={`https://images.ktestone.com/resultImages/insideEmotionControl/watchFaceImage/${testResultContents?.type}.png`}
+                src={`https://images.ktestone.com/resultImages/${testTitle}/watchFaceImage/${testResultContents?.type}.png`}
                 alt='sample'
                 width={'100%'}
               />
