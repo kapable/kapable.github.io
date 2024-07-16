@@ -3,6 +3,7 @@ import styles from './resultModal.module.css';
 import { Button, ConfigProvider } from 'antd';
 import Modal from 'react-modal';
 import { DownloadOutlined } from '@ant-design/icons';
+import { saveAs } from 'file-saver';
 
 const ResultModal = ({ testTitle, testResultContents }) => {
   const modalStyles = {
@@ -34,6 +35,16 @@ const ResultModal = ({ testTitle, testResultContents }) => {
   };
   const showModal = () => {
     setIsModalOpen(true);
+  };
+  const onDownLoadClick = async (url) => {
+    await fetch(url, { method: 'GET' })
+      .then((res) => {
+        return res.blob();
+      })
+      .then((blob) => saveAs(blob, 'watchFace.clock2'))
+      .catch((err) => {
+        console.error('err: ', err);
+      });
   };
   if (testTitle === 'gardenflower') {
     return (
@@ -79,17 +90,17 @@ const ResultModal = ({ testTitle, testResultContents }) => {
               </p>
             </div>
             <div>
-              <a
-                href={`https://images.ktestone.com/resultImages/insideEmotionControl/watchFace/${testResultContents?.type}.clock2`}
-                download
+              <Button
+                style={{ marginTop: '1.5rem' }}
+                className={styles.downloadButton}
+                onClick={() =>
+                  onDownLoadClick(
+                    `https://images.ktestone.com/resultImages/insideEmotionControl/watchFace/${testResultContents?.type}.clock2`
+                  )
+                }
               >
-                <Button
-                  style={{ marginTop: '1.5rem' }}
-                  className={styles.downloadButton}
-                >
-                  <DownloadOutlined /> 워치 페이스 다운로드
-                </Button>
-              </a>
+                <DownloadOutlined /> 워치 페이스 다운로드
+              </Button>
               <img
                 src={`https://images.ktestone.com/resultImages/insideEmotionControl/watchFaceImage/${testResultContents?.type}.png`}
                 alt='sample'
