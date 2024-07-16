@@ -55,6 +55,12 @@ class Result extends Component {
         'jaetech',
         'wealthluck',
       ],
+      new_release_list: [
+        'insideEmotionControl',
+        'charFactPokPick',
+        'messageBox',
+        'teruterubozu',
+      ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
       aliCookies: Cookies.get('ali') || null,
@@ -912,11 +918,6 @@ class Result extends Component {
         'idealTypeEng',
       ];
       let tonymoly_list = ['factPok', 'MyFactPok', 'FriendFactPok'];
-      let new_release_list = [
-        'insideEmotionControl',
-        'charFactPokPick',
-        'messageBox',
-      ];
       if (foreignTest.includes(this.state.current_test)) {
         let og_img_url =
           'https://images.ktestone.com/meta/' +
@@ -1883,7 +1884,7 @@ class Result extends Component {
             </Helmet>
             {this.state.isOpened ||
             this.state.coupangCookies ||
-            new_release_list.includes(this.state.current_test) ? (
+            this.state.new_release_list?.includes(this.state.current_test) ? (
               <>
                 <img
                   loading='lazy'
