@@ -49,7 +49,11 @@ const MainPage = ({ lang, category }) => {
       return (
         <>
           {tests.map((elem, idx) => (
-            <Link className='main-link-block' to={`/${elem.mainUrl}/`}>
+            <Link
+              className='main-link-block'
+              to={`/${elem.mainUrl}/`}
+              key={elem?.mainUrl}
+            >
               <img
                 loading='lazy'
                 className='test-main-img'
