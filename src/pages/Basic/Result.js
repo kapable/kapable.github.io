@@ -43,6 +43,7 @@ class Result extends Component {
       current_test: _current_test,
       current_result: _current_result,
       current_test_contents: null,
+      current_test_result: null,
       num_shares_count: 0,
       ppl_list: [
         'auditionBTI',
@@ -79,6 +80,18 @@ class Result extends Component {
   }
 
   componentDidMount() {
+    // searching the result content by current url path
+    const _current_test_contents = TESTS.filter(
+      (test) => test.info.mainUrl === this.state.current_test
+    )[0];
+    let _current_test_result = _current_test_contents.results.filter(
+      (res) => res.query === this.state.current_result
+    )[0];
+    this.setState({
+      current_test_contents: _current_test_contents,
+      current_test_result: _current_test_result,
+    });
+
     setTimeout(
       function () {
         this.setState({
@@ -871,32 +884,25 @@ class Result extends Component {
   }
 
   resultRender() {
-    // searching the result content by current url path
-    const _current_test_contents = TESTS.filter(
-      (test) => test.info.mainUrl === this.state.current_test
-    )[0];
     const foreignTest = TESTS.filter(
       (test) => test.info.lang !== 'Kor' && test.info.lang !== 'CN'
     )
       .filter((test) => test.info.lang !== 'sample')
       .map((test) => test.info.mainUrl);
-    let _current_test_result = _current_test_contents.results.filter(
-      (res) => res.query === this.state.current_result
-    )[0];
-    let final_type = _current_test_result.type;
-    let final_desc = _current_test_result.desc;
-    let final_coupang_link = _current_test_result?.coupang_link;
-    let img_src = _current_test_result.img_src;
-    let test_current = _current_test_contents.info.mainTitle;
-    let desc_test_current = _current_test_contents.info.subTitle;
-    let lang_test_current = _current_test_contents.info.lang;
+    let final_type = this.state.current_test_result?.type;
+    let final_desc = this.state.current_test_result?.desc;
+    let final_coupang_link = this.state.current_test_result?.coupang_link;
+    let img_src = this.state.current_test_result?.img_src;
+    let test_current = this.state.current_test_contents?.info.mainTitle;
+    let desc_test_current = this.state.current_test_contents?.info.subTitle;
+    let lang_test_current = this.state.current_test_contents?.info.lang;
 
     // return final result option
     if (
-      _current_test_contents.info.scoreType === 'storyTelling' ||
-      _current_test_contents.info.scoreType === 'typeCountingMBTI' ||
-      _current_test_contents.info.scoreType === 'dualMBTI' ||
-      _current_test_contents.info.scoreType === 'numberScoring'
+      this.state.current_test_contents?.info.scoreType === 'storyTelling' ||
+      this.state.current_test_contents?.info.scoreType === 'typeCountingMBTI' ||
+      this.state.current_test_contents?.info.scoreType === 'dualMBTI' ||
+      this.state.current_test_contents?.info.scoreType === 'numberScoring'
     ) {
       // meta tag for PPL test contents
       let jelling_list = [
@@ -1668,7 +1674,7 @@ class Result extends Component {
           <a
             target='_blank'
             rel='noopener noreferrer'
-            href={hmall_type_link_obj[_current_test_result.type]}
+            href={hmall_type_link_obj[this.state.current_test_result?.type]}
           >
             <img
               loading='lazy'
@@ -1815,10 +1821,10 @@ class Result extends Component {
             <img
               loading='lazy'
               src={`https://images.ktestone.com/meta/MALINGOETZ/MALINGOETZ-${
-                MALINGOETZ_type_obj[_current_test_result.type]
+                MALINGOETZ_type_obj[this.state.current_test_result?.type]
               }-banner.jpg`}
               className='result-img'
-              alt={`${MALINGOETZ_type_obj[_current_test_result.type]}-banner`}
+              alt={`${MALINGOETZ_type_obj[this.state.current_test_result?.type]}-banner`}
             />
             <img
               loading='lazy'
@@ -1885,10 +1891,10 @@ class Result extends Component {
                   className='result-img'
                   alt={final_type}
                 />
-                {_current_test_contents.info?.blogUrl ? (
+                {this.state.current_test_contents?.info?.blogUrl ? (
                   <a
                     rel='noopener noreferrer'
-                    href={`/kapable.github.io/blog/${_current_test_contents.info?.blogUrl}/`}
+                    href={`/kapable.github.io/blog/${this.state.current_test_contents?.info?.blogUrl}/`}
                     onClick={this._onGotoBlogClick}
                   >
                     <img
@@ -1923,12 +1929,14 @@ class Result extends Component {
       }
 
       //  and other case of Type Quizes
-    } else if (_current_test_contents.info.scoreType === 'percentageMBTI') {
+    } else if (
+      this.state.current_test_contents?.info.scoreType === 'percentageMBTI'
+    ) {
       // let result_score = this.state.current_url[6].match(/\d+/g)[0];
       const queryParams = new URLSearchParams(this.state.current_url[6]);
       const result_score = queryParams.get('pct');
-      let result_color = _current_test_result.color;
-      let bg_img_src = _current_test_result.bg_img_src;
+      let result_color = this.state.current_test_result?.color;
+      let bg_img_src = this.state.current_test_result?.bg_img_src;
       return (
         <Fragment>
           <Helmet>
@@ -2289,19 +2297,10 @@ class Result extends Component {
   mainPageRender() {
     const another_langs = ['Kor', 'JP'];
     let current_test_lang = 'Eng';
-    const _current_test_contents = TESTS.filter(
-      (test) => test.info.mainUrl === this.state.current_test
-    )[0];
-    if (another_langs.includes(_current_test_contents.info.lang)) {
-      current_test_lang = _current_test_contents.info.lang;
+    if (another_langs.includes(this.state.current_test_contents?.info.lang)) {
+      current_test_lang = this.state.current_test_contents?.info.lang;
     }
     return this.props.navigate(`/${current_test_lang}/`);
-    //   <Router>
-    //     <Switch>
-    //     <Route path={`/${current_test_lang}/`} component={App} exact />
-    //     <Redirect to={`/${current_test_lang}/`} />
-    //     </Switch>
-    //   </Router>
   }
 
   resultPageRender() {
@@ -2326,7 +2325,6 @@ class Result extends Component {
                     ): null} */}
 
           {/* Adsense */}
-          {/* {ppl_list.includes(this.state.current_test) ? null  : } */}
           <AdsenseAdvertiser
             client={`ca-pub-2382342018701919`} //5142864985628271
             slot={'9210802615'} //7281907187
@@ -2338,7 +2336,7 @@ class Result extends Component {
             <h5 className='result-title'>결과는...</h5>
             <ResultModal
               testTitle={this.state.current_test}
-              testResult={this.state.current_result}
+              testResultContents={this.state.current_test_result}
             />
             <div className='result-value'>{this.resultRender()}</div>
             {/* PPL banner image */}

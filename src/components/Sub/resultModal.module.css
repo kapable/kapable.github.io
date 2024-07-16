@@ -1,3 +1,11 @@
+.downloadButton {
+  background-color: #e62182;
+  color: white;
+  margin: 0 auto 1rem;
+  height: 2.5rem;
+  font-weight: bold;
+}
+
 .modalCloseButton {
   color: #e62182;
   font-size: 1.2rem;
@@ -34,11 +42,12 @@
 .modalOkButton {
   color: white;
   font-weight: bold;
+  font-size: 1.1rem;
   background-color: #e62182;
   border: none;
   border-radius: 0.5rem;
-  width: 4rem;
-  height: 2rem;
+  width: 5.5rem;
+  height: 2.5rem;
   cursor: pointer;
   margin-top: 1.5rem;
 }
