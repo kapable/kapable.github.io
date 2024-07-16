@@ -138,7 +138,7 @@ const ResultModal = ({ testTitle, testResultContents }) => {
                 className={styles.downloadButton}
                 onClick={() =>
                   onAsyncDownLoadClick(
-                    `https://images.ktestone.com/resultImages/insideEmotionControl/watchFace/${testResultContents?.type}.clock2`
+                    `https://ktestone.com/watchFaces/insideEmotionControl/${testResultContents?.type}.clock2`
                   )
                 }
               >
@@ -149,7 +149,7 @@ const ResultModal = ({ testTitle, testResultContents }) => {
                 className={styles.downloadButton}
                 onClick={() =>
                   onDownLoadClick(
-                    `https://images.ktestone.com/resultImages/insideEmotionControl/watchFace/${testResultContents?.type}.clock2`
+                    `https://ktestone.com/watchFaces/insideEmotionControl/${testResultContents?.type}.clock2`
                   )
                 }
               >
