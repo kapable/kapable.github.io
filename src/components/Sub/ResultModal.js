@@ -62,8 +62,7 @@ const ResultModal = ({ testTitle, testResultContents }) => {
     );
   }, []);
 
-  if (testTitle === '') {
-    // insideEmotionControl
+  if (testTitle === 'insideEmotionControl') {
     return (
       <>
         <ConfigProvider
@@ -125,7 +124,7 @@ const ResultModal = ({ testTitle, testResultContents }) => {
                 <DownloadOutlined /> 워치 페이스 다운로드
               </Button> */}
               <a
-                href={testResultContents?.watch_face_url}
+                href={testResultContents?.watch_face_link}
                 target='_blank'
                 rel='noopener noreferrer'
               >
