@@ -6,6 +6,12 @@
   font-weight: bold;
 }
 
+.downloadComment {
+  width: 80%;
+  margin: 1rem auto 0;
+  word-break: keep-all;
+}
+
 .modalCloseButton {
   color: #e62182;
   font-size: 1.2rem;

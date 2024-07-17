@@ -112,17 +112,11 @@ const ResultModal = ({ testTitle, testResultContents }) => {
               </p>
             </div>
             <div>
-              {/* <Button
-                style={{ marginTop: '1.5rem' }}
-                className={styles.downloadButton}
-                onClick={() =>
-                  onDownLoadClick(
-                    `https://ktestone.com/watchFaces/${testTitle}/${testResultContents?.type}.clock2`
-                  )
-                }
-              >
-                <DownloadOutlined /> 워치 페이스 다운로드
-              </Button> */}
+              <p className={styles.downloadComment}>
+                * 인스타그램 내에서 다운로드가 안될 수 있어서 다른 웹
+                브라운저(사파리, 크롬, 네이버, 카카오톡 등)를 이용해서 다운로드
+                받아주세요
+              </p>
               <a
                 href={testResultContents?.watch_face_link}
                 target='_blank'
