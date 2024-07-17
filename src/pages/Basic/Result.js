@@ -2338,10 +2338,13 @@ class Result extends Component {
             <div className='result-value'>{this.resultRender()}</div>
             {/* PPL banner image */}
             {this.pplBannerRenderer()}
-            <ResultModal
-              testTitle={this.state.current_test}
-              testResultContents={this.state.current_test_result}
-            />
+            {this.state.current_test_contents?.info?.hasWatchFace ? (
+              <ResultModal
+                testTitle={this.state.current_test}
+                testResultContents={this.state.current_test_result}
+                testLang={this.state.current_test_contents?.info?.lang}
+              />
+            ) : null}
           </div>
 
           {/* LabelSticker Goods Banner */}
