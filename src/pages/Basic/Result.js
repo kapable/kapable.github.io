@@ -2335,13 +2335,13 @@ class Result extends Component {
           />
           <div className='result-header'>
             <h5 className='result-title'>결과는...</h5>
+            <div className='result-value'>{this.resultRender()}</div>
+            {/* PPL banner image */}
+            {this.pplBannerRenderer()}
             <ResultModal
               testTitle={this.state.current_test}
               testResultContents={this.state.current_test_result}
             />
-            <div className='result-value'>{this.resultRender()}</div>
-            {/* PPL banner image */}
-            {this.pplBannerRenderer()}
           </div>
 
           {/* LabelSticker Goods Banner */}

@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import styles from './resultModal.module.css';
 import { Button, ConfigProvider } from 'antd';
 import Modal from 'react-modal';
 import { DownloadOutlined } from '@ant-design/icons';
+import { _eventSenderGA } from '../../tools/tools';
 
 const ResultModal = ({ testTitle, testResultContents }) => {
   const modalStyles = {
@@ -35,25 +36,34 @@ const ResultModal = ({ testTitle, testResultContents }) => {
   const showModal = () => {
     setIsModalOpen(true);
   };
-  const onDownLoadClick = (url) => {
-    fetch(url)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const url = window.URL.createObjectURL(new Blob([blob]));
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'watchFace.clock2';
-        document.body.appendChild(a);
-        a.click();
-        window.URL.revokeObjectURL(url);
-        document.body.removeChild(a);
-      })
-      .catch((error) => {
-        console.error('파일 다운로드 오류:', error);
-      });
-  };
+  // const onDownLoadClick = (url) => {
+  //   fetch(url, { mode: 'no-cors' })
+  //     .then((response) => response.blob())
+  //     .then((blob) => {
+  //       const url = window.URL.createObjectURL(new Blob([blob]));
+  //       const a = document.createElement('a');
+  //       a.href = url;
+  //       a.download = 'watchFace.clock2';
+  //       document.body.appendChild(a);
+  //       a.click();
+  //       window.URL.revokeObjectURL(url);
+  //       document.body.removeChild(a);
+  //     })
+  //     .catch((error) => {
+  //       console.error('파일 다운로드 오류:', error);
+  //     });
+  // };
 
-  if (testTitle === 'insideEmotionControl') {
+  const onDownLoadClick = useCallback(() => {
+    _eventSenderGA(
+      'Download',
+      'Click watchFace-download Button',
+      'result page modal'
+    );
+  }, []);
+
+  if (testTitle === '') {
+    // insideEmotionControl
     return (
       <>
         <ConfigProvider
@@ -103,7 +113,7 @@ const ResultModal = ({ testTitle, testResultContents }) => {
               </p>
             </div>
             <div>
-              <Button
+              {/* <Button
                 style={{ marginTop: '1.5rem' }}
                 className={styles.downloadButton}
                 onClick={() =>
@@ -113,7 +123,20 @@ const ResultModal = ({ testTitle, testResultContents }) => {
                 }
               >
                 <DownloadOutlined /> 워치 페이스 다운로드
-              </Button>
+              </Button> */}
+              <a
+                href={testResultContents?.watch_face_url}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Button
+                  style={{ marginTop: '1.5rem' }}
+                  className={styles.downloadButton}
+                  onClick={onDownLoadClick}
+                >
+                  <DownloadOutlined /> 워치 페이스 다운로드
+                </Button>
+              </a>
               <img
                 src={`https://images.ktestone.com/resultImages/${testTitle}/watchFaceImage/${testResultContents?.type}.png`}
                 alt='sample'
