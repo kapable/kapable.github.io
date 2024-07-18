@@ -57,8 +57,6 @@ class Result extends Component {
       ],
       new_release_list: [
         'insideEmotionControl',
-        'charFactPokPick',
-        'messageBox',
         'teruterubozu',
         'loveCalculator',
       ],
