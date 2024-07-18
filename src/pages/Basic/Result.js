@@ -60,6 +60,7 @@ class Result extends Component {
         'charFactPokPick',
         'messageBox',
         'teruterubozu',
+        'loveCalculator',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
