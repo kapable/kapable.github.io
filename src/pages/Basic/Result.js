@@ -16,7 +16,8 @@ import AdsenseAdvertiser from '../../components/Sub/AdsenseAdvertiser';
 import GoToHomeBtn from '../../components/Sub/GoToHomeBtn';
 import OtherTestBannerRenderer from '../../components/Sub/OtherTestBannerRenderer';
 import { withRouter } from '../../tools/withRouter';
-import ResultModal from '../../components/Sub/ResultModal';
+import WatchFaceModal from '../../components/Sub/WatchFaceModal';
+import BackgroundModal from '../../components/Sub/BackgroudnModal';
 
 class Result extends Component {
   constructor(props) {
@@ -2338,7 +2339,14 @@ class Result extends Component {
             {/* PPL banner image */}
             {this.pplBannerRenderer()}
             {this.state.current_test_contents?.info?.hasWatchFace ? (
-              <ResultModal
+              <WatchFaceModal
+                testTitle={this.state.current_test}
+                testResultContents={this.state.current_test_result}
+                testLang={this.state.current_test_contents?.info?.lang}
+              />
+            ) : null}
+            {this.state.current_test_contents?.info?.hasBackground ? (
+              <BackgroundModal
                 testTitle={this.state.current_test}
                 testResultContents={this.state.current_test_result}
                 testLang={this.state.current_test_contents?.info?.lang}
