@@ -56,7 +56,7 @@ class Result extends Component {
         'jaetech',
         'wealthluck',
       ],
-      new_release_list: ['insideEmotionControl', 'teruterubozu', 'loveGene'],
+      new_release_list: ['insideEmotionControl', 'teruterubozu', 'chatSales'],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
       aliCookies: Cookies.get('ali') || null,
