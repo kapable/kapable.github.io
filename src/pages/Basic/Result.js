@@ -1888,6 +1888,20 @@ class Result extends Component {
                   className='result-img'
                   alt={final_type}
                 />
+                {this.state.current_test_contents?.info?.hasWatchFace ? (
+                  <WatchFaceModal
+                    testTitle={this.state.current_test}
+                    testResultContents={this.state.current_test_result}
+                    testLang={this.state.current_test_contents?.info?.lang}
+                  />
+                ) : null}
+                {this.state.current_test_contents?.info?.hasBackground ? (
+                  <BackgroundModal
+                    testTitle={this.state.current_test}
+                    testResultContents={this.state.current_test_result}
+                    testLang={this.state.current_test_contents?.info?.lang}
+                  />
+                ) : null}
                 {this.state.current_test_contents?.info?.blogUrl ? (
                   <a
                     rel='noopener noreferrer'
@@ -2334,20 +2348,6 @@ class Result extends Component {
             <div className='result-value'>{this.resultRender()}</div>
             {/* PPL banner image */}
             {this.pplBannerRenderer()}
-            {this.state.current_test_contents?.info?.hasWatchFace ? (
-              <WatchFaceModal
-                testTitle={this.state.current_test}
-                testResultContents={this.state.current_test_result}
-                testLang={this.state.current_test_contents?.info?.lang}
-              />
-            ) : null}
-            {this.state.current_test_contents?.info?.hasBackground ? (
-              <BackgroundModal
-                testTitle={this.state.current_test}
-                testResultContents={this.state.current_test_result}
-                testLang={this.state.current_test_contents?.info?.lang}
-              />
-            ) : null}
           </div>
 
           {/* LabelSticker Goods Banner */}
