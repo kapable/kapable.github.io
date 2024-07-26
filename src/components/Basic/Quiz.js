@@ -111,7 +111,8 @@ class Quiz extends Component {
         );
       } else if (
         this.props.scoreType === 'typeCountingMBTI' ||
-        this.props.scoreType === 'percentageMBTI'
+        this.props.scoreType === 'percentageMBTI' ||
+        this.props.scoreType === 'typeCountingMBTIName'
       ) {
         _questions.push(
           <button

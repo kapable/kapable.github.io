@@ -56,7 +56,12 @@ class Result extends Component {
         'jaetech',
         'wealthluck',
       ],
-      new_release_list: ['insideEmotionControl', 'teruterubozu', 'dirtChar'],
+      new_release_list: [
+        'insideEmotionControl',
+        'teruterubozu',
+        'dirtChar',
+        'likeLoveThought',
+      ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
       aliCookies: Cookies.get('ali') || null,
@@ -1940,6 +1945,105 @@ class Result extends Component {
       }
 
       //  and other case of Type Quizes
+    } else if (
+      this.state.current_test_contents?.info.scoreType ===
+      'typeCountingMBTIName'
+    ) {
+      // let result_score = this.state.current_url[6].match(/\d+/g)[0];
+      const queryParams = new URLSearchParams(this.state.current_url[6]);
+      const name_input = queryParams.get('name');
+      return (
+        <Fragment>
+          <Helmet>
+            {/* <!-- Primary Meta Tags --> */}
+            <title>{test_current}-케이테스트</title>
+            <meta name='title' content={test_current + '-케이테스트'} />
+            <meta
+              name='description'
+              content={this.state.current_result + ':' + desc_test_current}
+            />
+            <link rel='main-url' href={this.state.sharable_url} />
+
+            {/* <!-- Open Graph / Facebook --> */}
+            <meta property='og:type' content='website' />
+            <meta property='og:url' content={this.state.sharable_url} />
+            <meta property='og:title' content={test_current + '-케이테스트'} />
+            <meta
+              property='og:description'
+              content={this.state.current_result + ':' + desc_test_current}
+            />
+            <meta property='og:image' content={img_src} />
+            <meta property='og:image:alt' content={this.state.current_result} />
+
+            {/* <!-- Twitter --> */}
+            <meta property='twitter:card' content='summary_large_image' />
+            <meta property='twitter:url' content={this.state.sharable_url} />
+            <meta
+              property='twitter:title'
+              content={test_current + '-케이테스트'}
+            />
+            <meta
+              property='twitter:description'
+              content={this.state.current_result + ':' + desc_test_current}
+            />
+            <meta property='twitter:image' content={img_src} />
+            <meta
+              property='twitter:image:alt'
+              content={this.state.current_result}
+            />
+          </Helmet>
+          {this.state.isOpened ||
+          this.state.coupangCookies ||
+          this.state.new_release_list?.includes(this.state.current_test) ? (
+            <div className='resultMainDiv'>
+              <div>
+                <img
+                  loading='lazy'
+                  src={
+                    'https://images.ktestone.com/resultImages/likeLoveThought/likeLoveThought-sample.jpeg'
+                  }
+                  className='result-img'
+                  alt={final_type}
+                />
+              </div>
+              <div className='resultNameInputDiv'>
+                <h2 className='resultNameInput'>{name_input}</h2>
+              </div>
+              {this.state.current_test_contents?.info?.hasWatchFace ? (
+                <WatchFaceModal
+                  testTitle={this.state.current_test}
+                  testResultContents={this.state.current_test_result}
+                  testLang={this.state.current_test_contents?.info?.lang}
+                />
+              ) : null}
+              {this.state.current_test_contents?.info?.hasBackground ? (
+                <BackgroundModal
+                  testTitle={this.state.current_test}
+                  testResultContents={this.state.current_test_result}
+                  testLang={this.state.current_test_contents?.info?.lang}
+                />
+              ) : null}
+            </div>
+          ) : (
+            <>
+              <div
+                className='article-adCover-div'
+                oncontextmenu='return false'
+                ondragstart='return false'
+                onselectstart='return false'
+              >
+                <img
+                  loading='lazy'
+                  src={img_src}
+                  className='result-img crop-result-img'
+                  alt={final_type}
+                />
+              </div>
+              {this.affiliateRenderer(final_coupang_link)}
+            </>
+          )}
+        </Fragment>
+      );
     } else if (
       this.state.current_test_contents?.info.scoreType === 'percentageMBTI'
     ) {

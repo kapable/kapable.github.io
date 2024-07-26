@@ -18,6 +18,7 @@ import STARTBTN from '../../api/DefaultImg/intro-start-button.png';
 import STARTBTNENG from '../../api/DefaultImg/intro-start-button-Eng.png';
 import { _eventSenderGA, reloadPage } from '../../tools/tools';
 import AdsenseAdvertiser from '../../components/Sub/AdsenseAdvertiser';
+import './css/typeCountingMBTIName.css';
 import { withRouter } from '../../tools/withRouter';
 
 class Intro extends Component {
@@ -64,11 +65,13 @@ class Intro extends Component {
       num_shares_count: 0,
       custom_name: '',
       custom_option: '',
+      name_input: '', // < ----------------------- for typeCountingMBTIName test type
     };
     this._metaTagRenderer = this._metaTagRenderer.bind(this);
     this._onStartButtonClick = this._onStartButtonClick.bind(this);
     this._onMainButtonClick = this._onMainButtonClick.bind(this);
     this._onShareButtonClick = this._onShareButtonClick.bind(this);
+    this.handleNameChange = this.handleNameChange.bind(this);
   }
   // reloadPage() {
   //     // for blocking Adfit banner with page refreshing for PPL
@@ -146,8 +149,6 @@ class Intro extends Component {
     this.setState({
       mode: 'quiz',
     });
-    // const audio = new Audio(sample)
-    // audio.play();
   }
 
   _onMainButtonClick() {
@@ -471,6 +472,15 @@ class Intro extends Component {
     }
   }
 
+  handleNameChange = (e) => {
+    if (e.target.value.length > 4) {
+      return;
+    }
+    this.setState({
+      name_input: e.target.value,
+    });
+  };
+
   introPageRender() {
     reloadPage(); // because the adsense ads when the page convert from mainPage to intro
     let _mainTitle = this.state.current_test.info.mainTitle;
@@ -490,14 +500,39 @@ class Intro extends Component {
               {this.state.current_test.info.subTitle}
             </h4>
           </div>
-          <div>
-            <img
-              loading='lazy'
-              className='intro-main-img'
-              src={_thumbImage}
-              alt={_mainTitle + '|' + _subTitle}
-            />
-          </div>
+          {this.state.scoreType === 'typeCountingMBTIName' ? (
+            <div className='introMainDiv'>
+              <div>
+                <img
+                  loading='lazy'
+                  className='intro-main-img'
+                  src={
+                    'https://images.ktestone.com/introImages/likeLoveThought-intro-test.jpg'
+                  }
+                  alt={_mainTitle + '|' + _subTitle}
+                />
+              </div>
+              <div className='introInputDiv'>
+                <input
+                  type='text'
+                  value={this.state.name_input}
+                  onChange={this.handleNameChange}
+                  placeholder='이름 입력하기'
+                  maxLength={4}
+                  className='introInput'
+                />
+              </div>
+            </div>
+          ) : (
+            <div>
+              <img
+                loading='lazy'
+                className='intro-main-img'
+                src={_thumbImage}
+                alt={_mainTitle + '|' + _subTitle}
+              />
+            </div>
+          )}
 
           <AdsenseAdvertiser
             client={`ca-pub-2382342018701919`}
@@ -592,7 +627,10 @@ class Intro extends Component {
           return this.state.current_test.results[z];
         }
       }
-    } else if (this.state.scoreType === 'typeCountingMBTI') {
+    } else if (
+      this.state.scoreType === 'typeCountingMBTI' ||
+      this.state.scoreType === 'typeCountingMBTIName'
+    ) {
       let final_result_obj = this.state.answer_type_obj;
 
       // for creating an array which contains VS between types ex.["EI", "SN", "TF", "JP"]
@@ -786,7 +824,8 @@ class Intro extends Component {
         return _page;
       } else if (
         this.state.scoreType === 'typeCountingMBTI' ||
-        this.state.scoreType === 'percentageMBTI'
+        this.state.scoreType === 'percentageMBTI' ||
+        this.state.scoreType === 'typeCountingMBTIName'
       ) {
         let _page = (
           <Quiz
@@ -897,6 +936,19 @@ class Intro extends Component {
           final_score_query +
           '/',
         search: createSearchParams({ pct: searchQuery }).toString(),
+      });
+    } else if (
+      this.state.current_test.info.scoreType === 'typeCountingMBTIName'
+    ) {
+      let final_score_query = result_contents.query;
+      return this.props.navigate({
+        pathname:
+          '/kapable.github.io/' +
+          this.state.current_test.info.mainUrl +
+          this.state.result_url +
+          final_score_query +
+          '/',
+        search: createSearchParams({ name: this.state.name_input }).toString(),
       });
     } else {
       let final_score_query = result_contents.query; // <----------------query export
