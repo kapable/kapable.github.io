@@ -473,7 +473,7 @@ class Intro extends Component {
   }
 
   handleNameChange = (e) => {
-    if (e.target.value.length > 4) {
+    if (e.target.value.length > 2) {
       return;
     }
     this.setState({
@@ -518,7 +518,7 @@ class Intro extends Component {
                   value={this.state.name_input}
                   onChange={this.handleNameChange}
                   placeholder='이름 입력하기'
-                  maxLength={4}
+                  maxLength={2}
                   className='introInput'
                 />
               </div>
