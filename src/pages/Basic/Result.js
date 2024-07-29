@@ -1999,9 +1999,7 @@ class Result extends Component {
               <div>
                 <img
                   loading='lazy'
-                  src={
-                    'https://images.ktestone.com/resultImages/likeLoveThought/likeLoveThought-sample.jpeg'
-                  }
+                  src={img_src}
                   className='result-img'
                   alt={final_type}
                 />
@@ -2235,12 +2233,6 @@ class Result extends Component {
         if (window.location.href.includes('sinjoer2022')) {
           return (
             <Fragment>
-              <img
-                loading='lazy'
-                src={img_src}
-                className='result-img'
-                alt={final_type}
-              />
               <img
                 loading='lazy'
                 src={
