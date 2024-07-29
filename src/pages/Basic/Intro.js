@@ -506,9 +506,7 @@ class Intro extends Component {
                 <img
                   loading='lazy'
                   className='intro-main-img'
-                  src={
-                    'https://images.ktestone.com/introImages/likeLoveThought-intro-test.jpg'
-                  }
+                  src={_thumbImage}
                   alt={_mainTitle + '|' + _subTitle}
                 />
               </div>
