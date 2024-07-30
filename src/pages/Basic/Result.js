@@ -59,7 +59,7 @@ class Result extends Component {
       new_release_list: [
         'insideEmotionControl',
         'teruterubozu',
-        'dirtChar',
+        'loveLego',
         'likeLoveThought',
       ],
       coupangCookies: Cookies.get('coupang') || null,
