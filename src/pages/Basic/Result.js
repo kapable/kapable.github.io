@@ -65,6 +65,7 @@ class Result extends Component {
         'todayBentoChar',
         'loveGene',
         'chatSales',
+        'underTheSeaChar'
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
