@@ -1,5 +1,5 @@
 import React, { Fragment, useCallback, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import axios from 'axios';
 import { Divider } from 'antd';
 import { useCookies } from 'react-cookie';
@@ -14,6 +14,7 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 axios.defaults.withCredentials = true;
 
 const TodayLuckResult = (props) => {
+  const params = useParams();
   const navigate = useNavigate();
   const saju_url = 'https://saju.ktestone.com';
   // const saju_url = 'http://localhost:3065';
@@ -70,8 +71,10 @@ const TodayLuckResult = (props) => {
         return alert('결과를 가져오는 중 에러가 발생했습니다 ㅠㅠ');
       }
     };
-    getToday(props?.match?.params?.query);
-  }, [props]);
+    if (params?.query) {
+      getToday(params?.query);
+    }
+  }, [params]);
 
   useEffect(() => {
     setStartTimer(true);

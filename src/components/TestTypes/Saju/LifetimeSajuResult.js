@@ -1,5 +1,5 @@
 import React, { Fragment, useCallback, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import axios from 'axios';
 import { Divider } from 'antd';
 import { useCookies } from 'react-cookie';
@@ -13,10 +13,11 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 axios.defaults.withCredentials = true;
 
 const LifetimeSajuResult = (props) => {
+  const params = useParams();
   const navigate = useNavigate();
   const saju_url = 'https://saju.ktestone.com';
   const [result, setResult] = useState({});
-  const [isOpened, setIsOpened] = useState(false);
+  const [isOpened, setIsOpened] = useState(true);
   const [coupangCookies, setCoupangCookie] = useCookies(['coupang']);
   const originAdProb = 0.5 < Math.random();
   const coupangLink = originAdProb
@@ -66,8 +67,10 @@ const LifetimeSajuResult = (props) => {
         return alert('결과를 가져오는 중 에러가 발생했습니다 ㅠㅠ');
       }
     };
-    getToday(props?.match?.params?.query);
-  }, [props]);
+    if (params?.query) {
+      getToday(params?.query);
+    }
+  }, [params]);
 
   useEffect(() => {
     setStartTimer(true);
