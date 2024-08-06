@@ -70,6 +70,7 @@ class Result extends Component {
         'bottleCap',
         'systemError',
         'loveCalculator',
+        'criticalTshirts',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
