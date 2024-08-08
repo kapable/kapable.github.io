@@ -72,6 +72,7 @@ class Intro extends Component {
     this._onMainButtonClick = this._onMainButtonClick.bind(this);
     this._onShareButtonClick = this._onShareButtonClick.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);
+    this.nameInputMbtiRenderer = this.nameInputMbtiRenderer.bind(this);
   }
   // reloadPage() {
   //     // for blocking Adfit banner with page refreshing for PPL
@@ -481,6 +482,55 @@ class Intro extends Component {
     });
   };
 
+  nameInputMbtiRenderer(_thumbImage, _mainTitle, _subTitle) {
+    const screenWidth = window.screen.width;
+    let introBottom = this.state.current_test.info.nameLocation.intro.bottom;
+    let pcIntroBottom =
+      this.state.current_test.info.nameLocation.intro.pcBottom;
+    let introFontSize =
+      this.state.current_test.info.nameLocation.intro.fontSize;
+    let pcIntroFontSize =
+      this.state.current_test.info.nameLocation.intro.pcFontSize;
+
+    if (screenWidth >= 768) {
+      introBottom = pcIntroBottom;
+      introFontSize = pcIntroFontSize;
+    }
+
+    return (
+      <div className='introMainDiv'>
+        <div>
+          <img
+            loading='lazy'
+            className='intro-main-img'
+            src={_thumbImage}
+            alt={_mainTitle + '|' + _subTitle}
+          />
+        </div>
+        <div
+          className='introInputDiv'
+          style={{
+            bottom: `${introBottom}%`,
+          }}
+        >
+          <input
+            type='text'
+            value={this.state.name_input}
+            onChange={this.handleNameChange}
+            placeholder='이름 입력하기'
+            maxLength={2}
+            className='introInput'
+            style={{
+              fontFamily: this.state.current_test.info.nameLocation.intro.font,
+              fontSize: `${introFontSize}rem`,
+              fontWeight: 'bold',
+            }}
+          />
+        </div>
+      </div>
+    );
+  }
+
   introPageRender() {
     reloadPage(); // because the adsense ads when the page convert from mainPage to intro
     let _mainTitle = this.state.current_test.info.mainTitle;
@@ -501,26 +551,7 @@ class Intro extends Component {
             </h4>
           </div>
           {this.state.scoreType === 'typeCountingMBTIName' ? (
-            <div className='introMainDiv'>
-              <div>
-                <img
-                  loading='lazy'
-                  className='intro-main-img'
-                  src={_thumbImage}
-                  alt={_mainTitle + '|' + _subTitle}
-                />
-              </div>
-              <div className='introInputDiv'>
-                <input
-                  type='text'
-                  value={this.state.name_input}
-                  onChange={this.handleNameChange}
-                  placeholder='이름 입력하기'
-                  maxLength={2}
-                  className='introInput'
-                />
-              </div>
-            </div>
+            this.nameInputMbtiRenderer(_thumbImage, _mainTitle, _subTitle)
           ) : (
             <div>
               <img

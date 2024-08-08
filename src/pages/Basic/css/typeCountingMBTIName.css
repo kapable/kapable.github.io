@@ -9,46 +9,21 @@
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  bottom: 25%;
 }
 
 .introInput {
   border: none;
-  font-size: 1.2rem;
   width: 80%;
-  font-family: 'Jua', sans-serif;
   font-weight: 400;
   font-style: normal;
   text-align: center;
 }
 
 /* RESULT */
-.resultNameInputDiv {
-  left: 8rem;
-  top: 10rem;
-}
 
 .resultNameInput {
-  font-family: 'Jua', sans-serif;
-  font-weight: 400;
+  font-weight: bold;
   font-style: normal;
-}
-
-/* Extra small devices (phones, 300px and up) */
-@media only screen and (min-width: 300px) {
-  .introInputDiv {
-    bottom: 25%;
-  }
-  .resultNameInputDiv {
-    top: 9.6rem;
-  }
-}
-
-/* Extra small devices (phones, 480px and up) */
-@media only screen and (min-width: 480px) {
-  .introInputDiv {
-    bottom: 25%;
-  }
 }
 
 /* Extra small devices (phones, 600px and up) */
@@ -56,10 +31,6 @@
   .introInputDiv {
     bottom: 27%;
   }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -71,15 +42,4 @@
     font-size: 2rem;
     width: 12rem;
   }
-  .resultNameInputDiv {
-    left: 14rem;
-    top: 16.7rem;
-  }
-  .resultNameInput {
-    font-size: 2.5rem;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
 }
