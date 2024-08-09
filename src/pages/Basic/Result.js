@@ -72,6 +72,7 @@ class Result extends Component {
         'loveCalculator',
         'criticalTshirts',
         'pressTest',
+        'olympicChar',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
