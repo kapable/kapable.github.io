@@ -927,7 +927,6 @@ class Result extends Component {
       resultLeft = pcResultLeft;
       resultFontSize = pcResultFontSize;
     }
-
     return (
       <>
         <div>
