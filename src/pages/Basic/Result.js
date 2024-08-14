@@ -74,6 +74,7 @@ class Result extends Component {
         'pressTest',
         'olympicChar',
         'retroPhoneChar',
+        'insignia',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
