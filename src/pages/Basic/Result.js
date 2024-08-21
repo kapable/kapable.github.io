@@ -77,6 +77,7 @@ class Result extends Component {
         'insignia',
         'criticalTshirtsEng',
         'scaryGhostChar',
+        'idealTypeGraph',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
