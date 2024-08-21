@@ -474,9 +474,9 @@ class Intro extends Component {
   }
 
   handleNameChange = (e) => {
-    if (e.target.value.length > 2) {
-      return;
-    }
+    // if (e.target.value.length > 2) {
+    //   return;
+    // }
     this.setState({
       name_input: e.target.value,
     });
@@ -517,8 +517,10 @@ class Intro extends Component {
             type='text'
             value={this.state.name_input}
             onChange={this.handleNameChange}
-            placeholder='이름 입력하기'
-            maxLength={2}
+            placeholder={
+              this.state.lang === 'Kor' ? '이름 입력하기' : 'Your Name'
+            }
+            maxLength={this.state.lang === 'Kor' ? 2 : 6}
             className='introInput'
             style={{
               fontFamily: this.state.current_test.info.nameLocation.intro.font,

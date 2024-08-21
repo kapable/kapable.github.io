@@ -2130,22 +2130,24 @@ class Result extends Component {
               ) : null}
             </div>
           ) : (
-            <>
-              <div
-                className='article-adCover-div'
-                oncontextmenu='return false'
-                ondragstart='return false'
-                onselectstart='return false'
-              >
-                <img
-                  loading='lazy'
-                  src={img_src}
-                  className='result-img crop-result-img'
-                  alt={final_type}
+            <div className='resultMainDiv'>
+              {this.nameInputMbtiRenderer(img_src, final_type, name_input)}
+              {this.state.current_test_contents?.info?.hasWatchFace ? (
+                <WatchFaceModal
+                  testTitle={this.state.current_test}
+                  testResultContents={this.state.current_test_result}
+                  testLang={this.state.current_test_contents?.info?.lang}
                 />
-              </div>
-              {this.affiliateRenderer(final_coupang_link)}
-            </>
+              ) : null}
+              {this.state.current_test_contents?.info?.hasBackground ? (
+                <BackgroundModal
+                  testTitle={this.state.current_test}
+                  testResultContents={this.state.current_test_result}
+                  testLang={this.state.current_test_contents?.info?.lang}
+                />
+              ) : null}
+              {/* {this.affiliateRenderer(final_coupang_link)} */}
+            </div>
           )}
         </Fragment>
       );
