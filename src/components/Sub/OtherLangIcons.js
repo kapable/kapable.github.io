@@ -11609,6 +11609,132 @@ export default function OtherLangIcons(props) {
     }
   }
 
+  function charSituationTestLinkRenderer() {
+    if (props.currentTest === 'charSituation') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/charSituationEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'charSituationEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/charSituation/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
+  function underTheSeaCharTestLinkRenderer() {
+    if (props.currentTest === 'underTheSeaChar') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/underTheSeaCharEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'underTheSeaCharEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/underTheSeaChar/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
+  function pressTestTestLinkRenderer() {
+    if (props.currentTest === 'pressTest') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/pressTestEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'pressTestEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/pressTest/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
   return (
     <Fragment>
       {factBTILinkRenderer()}
@@ -11726,6 +11852,9 @@ export default function OtherLangIcons(props) {
       {charSignTestLinkRenderer()}
       {weekendScheduleTestLinkRenderer()}
       {criticalTshirtsTestLinkRenderer()}
+      {charSituationTestLinkRenderer()}
+      {underTheSeaCharTestLinkRenderer()}
+      {pressTestTestLinkRenderer()}
     </Fragment>
   );
 }
