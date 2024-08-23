@@ -79,6 +79,7 @@ class Result extends Component {
         'scaryGhostChar',
         'idealTypeGraph',
         'korDictChar',
+        'loveWeight',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
