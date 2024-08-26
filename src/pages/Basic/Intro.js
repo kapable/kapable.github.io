@@ -518,7 +518,11 @@ class Intro extends Component {
             value={this.state.name_input}
             onChange={this.handleNameChange}
             placeholder={
-              this.state.lang === 'Kor' ? '이름 입력하기' : 'Your Name'
+              this.state.lang === 'Kor'
+                ? '이름 입력하기'
+                : this.state.lang === 'JP'
+                  ? '名前を入力'
+                  : 'Your Name'
             }
             maxLength={this.state.lang === 'Kor' ? 2 : 6}
             className='introInput'
