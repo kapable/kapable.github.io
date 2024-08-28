@@ -80,6 +80,7 @@ class Result extends Component {
         'idealTypeGraph',
         'korDictChar',
         'loveWeight',
+        'myCookieClass',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
