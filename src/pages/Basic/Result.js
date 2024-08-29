@@ -81,6 +81,7 @@ class Result extends Component {
         'korDictChar',
         'loveWeight',
         'myCookieClass',
+        'loveEmergencyStop',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
