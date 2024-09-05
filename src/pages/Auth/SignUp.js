@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { supabase } from '../../tools/supabaseClient';
 import { _eventSenderGA } from '../../tools/tools';
 
 const SocialSignUp = () => {
-  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
   const handleSocialSignUp = async (provider) => {
     try {
       setLoading(true);
-      const { session, error } = await supabase.auth.signInWithOAuth({
+      const { error } = await supabase.auth.signInWithOAuth({
         provider,
         options: {
           redirectTo: 'https://ktestone.com/',
