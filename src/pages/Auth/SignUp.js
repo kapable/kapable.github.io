@@ -15,6 +15,10 @@ const SocialSignUp = () => {
         options: {
           redirectTo:
             'https://pxqkknopartnayikfmtg.supabase.co/auth/v1/callback',
+          queryParams: {
+            access_type: 'offline',
+            prompt: 'consent',
+          },
         },
       });
       if (error) throw error;
@@ -27,7 +31,7 @@ const SocialSignUp = () => {
 
       // Handle successful signup
       localStorage.setItem('access_token', session.access_token);
-      navigate(``, {
+      navigate(`/`, {
         state: session.access_token,
       });
     } catch (error) {
