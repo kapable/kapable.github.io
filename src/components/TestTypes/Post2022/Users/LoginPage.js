@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import axios from 'axios';
 import { useNavigate, withRouter } from 'react-router-dom';
 import { _eventSenderGA } from '../../../../tools/tools';
+import { supabase } from '../../../../supabaseClient';
 
 const LoginPage = (props) => {
   const navigate = useNavigate();
@@ -46,6 +47,22 @@ const LoginPage = (props) => {
         alert('로그인에 실패했습니다!');
       });
   }
+
+  const handleSocialLogin = async (provider) => {
+    try {
+      const { user, session, error } = await supabase.auth.signIn({ provider });
+      if (error) throw error;
+
+      // Handle successful login
+      localStorage.setItem('access_token', session.access_token);
+      _eventSenderGA('Submitting', 'Click Social Log-in Button', 'login page');
+      navigate(`/post2022/${encodeURIComponent(user.id)}/`, {
+        state: session.access_token,
+      });
+    } catch (error) {
+      alert('Social login failed: ' + error.message);
+    }
+  };
 
   return (
     <div className='post2022-login-page-bg-div'>
@@ -102,6 +119,15 @@ const LoginPage = (props) => {
             <img loading='lazy' src={buttonImgSrc} alt='submit' />
           </button>
         </form>
+      </div>
+      <div className='social-login-buttons'>
+        <button onClick={() => handleSocialLogin('google')}>
+          Login with Google
+        </button>
+        <button onClick={() => handleSocialLogin('facebook')}>
+          Login with Facebook
+        </button>
+        {/* Add more social login buttons as needed */}
       </div>
       <p className='post2022-name-footer'>©Coocie Rocket</p>
     </div>

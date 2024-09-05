@@ -28,7 +28,7 @@ const Footer = () => {
           style={{ color: 'lightGrey' }}
           target='_blank'
           rel='noopener noreferrer'
-          href={'https://ktestone.com/privacy'}
+          href={'https://ktestone.com/privacy/'}
         >
           개인정보 처리방침
         </a>

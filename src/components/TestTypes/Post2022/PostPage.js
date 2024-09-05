@@ -1,17 +1,17 @@
 import axios from 'axios';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, withRouter } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Pagination from 'react-js-pagination';
 import { _eventSenderGA } from '../../../tools/tools';
 import { Helmet } from 'react-helmet-async';
+import { supabase } from '../../../supabaseClient';
 
 const PostPage = (props) => {
   const navigate = useNavigate();
   const [page, setPage] = useState(1);
-  const [isLogin, setIsLogin] = useState(
-    props.location.state === localStorage.getItem('access_token')
-  );
+  const [isLogin, setIsLogin] = useState(false);
+  const [user, setUser] = useState(null);
   const [mailList, setMailList] = useState([]);
   const [mailCount, setMailCount] = useState(0);
   const [userNickname, setUserNickname] = useState('');
@@ -204,7 +204,23 @@ const PostPage = (props) => {
   );
 
   useEffect(() => {
-    setIsLogin(props.location.state === localStorage.getItem('access_token'));
+    const session = supabase.auth.session();
+    setIsLogin(!!session);
+    setUser(session?.user ?? null);
+
+    const { data: authListener } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        setIsLogin(!!session);
+        setUser(session?.user ?? null);
+      }
+    );
+
+    return () => {
+      authListener.unsubscribe();
+    };
+  }, []);
+
+  useEffect(() => {
     getList();
     setPostListBackgroundImg(
       'https://images.ktestone.com/PostImg2022/PostList/postList_bg_long.png'
@@ -226,7 +242,7 @@ const PostPage = (props) => {
     );
   }, [props, getList]);
 
-  if (isLogin) {
+  if (isLogin && user) {
     axios.defaults.headers.common['Authorization'] =
       `Bearer ${localStorage.getItem('access_token')}`;
     return (
@@ -250,7 +266,9 @@ const PostPage = (props) => {
         <p className='post2022-page-mailcount'>{mailCount}</p>
 
         {/* User name */}
-        <p className='post2022-page-whosname'>{`${userNickname}`}님의</p>
+        <p className='post2022-page-whosname'>
+          {`${user.user_metadata.full_name || user.email}`}님의
+        </p>
 
         <div className='post2022-page-btn-div'>
           <CopyToClipboard

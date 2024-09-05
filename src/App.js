@@ -34,6 +34,7 @@ import AlcoholGames from './components/TestTypes/AlcoholGames';
 import WhoIsInMyThreads from './pages/Sub/WhoIsInMyThreads';
 import ThreadsCallback from './pages/Sub/ThreadsCallback';
 import MyThreads from './pages/Sub/MyThreads';
+import SignUp from './pages/Auth/SignUp';
 
 let mbti_results_set = [];
 
@@ -469,6 +470,9 @@ function App() {
       <Route path='/myThreads/' element={<MyThreads />} />
 
       <Route path='/*' element={<Page404 />} />
+
+      {/* Auth */}
+      <Route path='/auth/signup' element={<SignUp />} />
     </Routes>
   );
 }

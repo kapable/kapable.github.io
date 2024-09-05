@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@ramonak/react-progress-bar": "^5.2.0",
+    "@supabase/supabase-js": "^2.45.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
