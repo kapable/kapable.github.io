@@ -85,6 +85,7 @@ class Result extends Component {
         'fallInLoveThree',
         'charSocialSyndrom',
         'fillBlank',
+        'naggingMenu',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,

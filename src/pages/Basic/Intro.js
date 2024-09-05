@@ -484,6 +484,13 @@ class Intro extends Component {
 
   nameInputMbtiRenderer(_thumbImage, _mainTitle, _subTitle) {
     const screenWidth = window.screen.width;
+    let fontColor = this.state.current_test.info.nameLocation.intro?.fontColor
+      ? this.state.current_test.info.nameLocation.intro?.fontColor
+      : 'black';
+    let inputBgColor = this.state.current_test.info.nameLocation.intro
+      ?.inputBgColor
+      ? this.state.current_test.info.nameLocation.intro?.inputBgColor
+      : 'white';
     let introBottom = this.state.current_test.info.nameLocation.intro.bottom;
     let pcIntroBottom =
       this.state.current_test.info.nameLocation.intro.pcBottom;
@@ -530,6 +537,8 @@ class Intro extends Component {
               fontFamily: this.state.current_test.info.nameLocation.intro.font,
               fontSize: `${introFontSize}rem`,
               fontWeight: 'bold',
+              fontColor: fontColor,
+              backgroundColor: inputBgColor,
             }}
           />
         </div>
