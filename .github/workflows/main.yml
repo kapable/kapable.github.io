@@ -19,6 +19,8 @@ jobs:
           echo "REACT_APP_THREADS_REDIRECT_URL=${{ secrets.REACT_APP_THREADS_REDIRECT_URL }}" >> .env
           echo "REACT_APP_THREADS_GRAPH_API_BASE_URL=${{ secrets.REACT_APP_THREADS_GRAPH_API_BASE_URL }}" >> .env
           echo "REACT_APP_THREADS_SESSION_SECRET=${{ secrets.REACT_APP_THREADS_SESSION_SECRET }}" >> .env
+          echo "REACT_APP_SUPABASE_URL=${{ secrets.REACT_APP_SUPABASE_URL }}" >> .env
+          echo "REACT_APP_SUPABASE_ANON_KEY=${{ secrets.REACT_APP_SUPABASE_ANON_KEY }}" >> .env
 
       - name: npm install
         run: |
