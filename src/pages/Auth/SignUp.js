@@ -13,8 +13,7 @@ const SocialSignUp = () => {
       const { session, error } = await supabase.auth.signInWithOAuth({
         provider,
         options: {
-          redirectTo:
-            'https://pxqkknopartnayikfmtg.supabase.co/auth/v1/callback',
+          redirectTo: 'https://ktestone.com/',
           queryParams: {
             access_type: 'offline',
             prompt: 'consent',
@@ -30,10 +29,10 @@ const SocialSignUp = () => {
       );
 
       // Handle successful signup
-      localStorage.setItem('access_token', session.access_token);
-      navigate(`/`, {
-        state: session.access_token,
-      });
+      //   localStorage.setItem('access_token', session.access_token);
+      //   navigate(`/`, {
+      //     state: session.access_token,
+      //   });
     } catch (error) {
       alert('Social signup failed: ' + error.message);
     } finally {
