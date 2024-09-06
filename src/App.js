@@ -35,6 +35,7 @@ import WhoIsInMyThreads from './pages/Sub/WhoIsInMyThreads';
 import ThreadsCallback from './pages/Sub/ThreadsCallback';
 import MyThreads from './pages/Sub/MyThreads';
 import SignUp from './pages/Auth/SignUp';
+import MyPage from './pages/Auth/MyPage';
 
 let mbti_results_set = [];
 
@@ -473,6 +474,7 @@ function App() {
 
       {/* Auth */}
       <Route path='/auth/signup' element={<SignUp />} />
+      <Route path='/auth/mypage' element={<MyPage />} />
     </Routes>
   );
 }

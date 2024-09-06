@@ -13,7 +13,8 @@ const SocialSignUp = () => {
       const { error } = await supabase.auth.signInWithOAuth({
         provider,
         options: {
-          redirectTo: 'https://ktestone.com/',
+          redirectTo: 'https://ktestone.com/auth/mypage',
+          // redirectTo: 'http://localhost:3000/auth/mypage',
           queryParams: {
             access_type: 'offline',
             prompt: 'consent',
