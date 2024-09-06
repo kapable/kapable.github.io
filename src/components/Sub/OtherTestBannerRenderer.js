@@ -14,7 +14,7 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
   const bottom_test_list = TESTS.filter(
     (item) => item.info.lang === current_lang && item.info.mainUrl !== mainUrl
   );
-  const bottom_test_name_list = bottom_test_list.map((li) => li.info.mainUrl);
+  // const bottom_test_name_list = bottom_test_list.map((li) => li.info.mainUrl);
   const colorPickerArray = difficulties.filter(
     (item) =>
       item.lang === current_lang && `colorPicker${item.difficulty}` !== mainUrl
@@ -61,21 +61,21 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
               </Fragment>
             );
           })}
-          {bottom_test_name_list.map((test) => {
+          {bottom_test_list.map((test) => {
             return (
-              <Fragment key={test + '-test-key'}>
+              <Fragment key={test?.info?.mainUrl + '-test-key'}>
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
-                  href={`https://ktestone.com/kapable.github.io/${test}/`}
+                  href={`https://ktestone.com/kapable.github.io/${test?.info?.mainUrl}/`}
                   className='to-ppl-banner-text'
                 >
                   {' '}
                   <img
                     loading='lazy'
-                    src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`}
+                    src={`https://images.ktestone.com/main-thumbnail/${test?.info?.thumbImage}`}
                     className='ppl-banner-img'
-                    alt={`${test}-thumb`}
+                    alt={`${test?.info?.mainTitle}-thumb`}
                     onClick={() =>
                       _eventSenderGA(
                         'Paging',
@@ -86,7 +86,7 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
                   />{' '}
                 </a>
                 <AdsenseAdvertiser
-                  key={test + '-adsense'}
+                  key={test?.info?.mainUrl + '-adsense'}
                   client={`ca-pub-2382342018701919`} //5142864985628271
                   slot={'9210802615'} //7281907187
                   format='auto'
@@ -99,21 +99,21 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
         </>
       ) : (
         <>
-          {bottom_test_name_list.map((test) => {
+          {bottom_test_list.map((test) => {
             return (
-              <Fragment key={test + '-test-key'}>
+              <Fragment key={test?.info?.mainUrl + '-test-key'}>
                 <a
                   target='_blank'
                   rel='noopener noreferrer'
-                  href={`https://ktestone.com/kapable.github.io/${test}/`}
+                  href={`https://ktestone.com/kapable.github.io/${test?.info?.mainUrl}/`}
                   className='to-ppl-banner-text'
                 >
                   {' '}
                   <img
                     loading='lazy'
-                    src={`https://images.ktestone.com/main-thumbnail/${test}-thumb.png`}
+                    src={`https://images.ktestone.com/main-thumbnail/${test?.info?.thumbImage}`}
                     className='ppl-banner-img'
-                    alt={`${test}-thumb`}
+                    alt={`${test?.info?.mainTitle}-thumb`}
                     onClick={() =>
                       _eventSenderGA(
                         'Paging',
@@ -124,7 +124,7 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
                   />{' '}
                 </a>
                 <AdsenseAdvertiser
-                  key={test + '-adsense'}
+                  key={test?.info?.mainUrl + '-adsense'}
                   client={`ca-pub-2382342018701919`} //5142864985628271
                   slot={'9210802615'} //7281907187
                   format='auto'
