@@ -24,6 +24,7 @@ const MyPage = () => {
   }
 
   const onClickSignOut = () => {
+    alert('Successfully signed out!');
     supabase.auth.signOut();
     navigate('/');
   };
