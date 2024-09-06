@@ -2033,7 +2033,7 @@ class Result extends Component {
                     alt={final_type}
                   />
                 </div>
-                <div
+                {/* <div
                   dangerouslySetInnerHTML={{
                     __html: `
                     <script src="https://gopartner.kr/assets/js/csw_ad_cl_ex.js?v=0001"></script>
@@ -2042,7 +2042,7 @@ class Result extends Component {
                     </script>
                   `,
                   }}
-                />
+                /> */}
                 {this.affiliateRenderer(final_coupang_link)}
               </>
             )}

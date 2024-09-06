@@ -73,7 +73,7 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
                   {' '}
                   <img
                     loading='lazy'
-                    src={`https://images.ktestone.com/main-thumbnail/${test?.info?.thumbImage}`}
+                    src={test?.info?.thumbImage}
                     className='ppl-banner-img'
                     alt={`${test?.info?.mainTitle}-thumb`}
                     onClick={() =>
@@ -111,7 +111,7 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
                   {' '}
                   <img
                     loading='lazy'
-                    src={`https://images.ktestone.com/main-thumbnail/${test?.info?.thumbImage}`}
+                    src={test?.info?.thumbImage}
                     className='ppl-banner-img'
                     alt={`${test?.info?.mainTitle}-thumb`}
                     onClick={() =>
