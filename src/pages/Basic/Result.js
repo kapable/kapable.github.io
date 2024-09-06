@@ -1976,6 +1976,19 @@ class Result extends Component {
                   className='result-img'
                   alt={final_type}
                 />
+                {this.state.current_test === 'fallInLoveThree' ||
+                this.state.current_test === 'charSocialSyndrom' ? (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: `
+                    <script src="https://gopartner.kr/assets/js/csw_ad_cl_ex.js?v=0001"></script>
+                    <script>
+                      new csw_ad_cl("<iframe width="300" height="250" frameborder="0" scrolling="no" name="cozymangframe" src="//ad.planbplus.co.kr/adReq/?k=MjE3NQ==&pb=&di="></iframe>","<iframe width="190" height="190" frameborder="0" scrolling="no" name="cozymangframe" src="//ad.planbplus.co.kr/adReq/?k=MjE3Ng==&pb=&di="></iframe>",['300','250','190','190'],['k'],'f');
+                    </script>
+                  `,
+                    }}
+                  />
+                ) : null}
                 {this.state.current_test_contents?.info?.hasWatchFace ? (
                   <WatchFaceModal
                     testTitle={this.state.current_test}
@@ -2020,6 +2033,16 @@ class Result extends Component {
                     alt={final_type}
                   />
                 </div>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: `
+                    <script src="https://gopartner.kr/assets/js/csw_ad_cl_ex.js?v=0001"></script>
+                    <script>
+                      new csw_ad_cl("<iframe width="300" height="250" frameborder="0" scrolling="no" name="cozymangframe" src="//ad.planbplus.co.kr/adReq/?k=MjE3NQ==&pb=&di="></iframe>","<iframe width="190" height="190" frameborder="0" scrolling="no" name="cozymangframe" src="//ad.planbplus.co.kr/adReq/?k=MjE3Ng==&pb=&di="></iframe>",['300','250','190','190'],['k'],'f');
+                    </script>
+                  `,
+                  }}
+                />
                 {this.affiliateRenderer(final_coupang_link)}
               </>
             )}
