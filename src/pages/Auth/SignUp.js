@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { supabase } from '../../tools/supabaseClient';
 import { _eventSenderGA } from '../../tools/tools';
 import googleLoginButton from '../../api/DefaultImg/android_light_sq_SI.svg';
@@ -6,6 +6,7 @@ import googleLoginButtonGrey from '../../api/DefaultImg/android_neutral_sq_SI.sv
 
 const SocialSignUp = () => {
   const [loading, setLoading] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleSocialSignUp = async (provider) => {
     try {
@@ -13,8 +14,8 @@ const SocialSignUp = () => {
       const { error } = await supabase.auth.signInWithOAuth({
         provider,
         options: {
-          redirectTo: 'https://ktestone.com/auth/mypage',
-          // redirectTo: 'http://localhost:3000/auth/mypage',
+          // redirectTo: 'https://ktestone.com/auth/mypage/',
+          redirectTo: 'http://localhost:3000/auth/mypage/',
           queryParams: {
             access_type: 'offline',
             prompt: 'consent',
@@ -28,18 +29,45 @@ const SocialSignUp = () => {
         'Click Social Sign-up Button',
         'signup page'
       );
-
-      // Handle successful signup
-      //   localStorage.setItem('access_token', session.access_token);
-      //   navigate(`/`, {
-      //     state: session.access_token,
-      //   });
+      console.log('error', error);
     } catch (error) {
       alert('Social signup failed: ' + error.message);
     } finally {
       setLoading(false);
     }
   };
+
+  // check login status
+  useEffect(() => {
+    const checkLoginStatus = async () => {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      setIsLoggedIn(!!user);
+      if (user) {
+        window.location.href = '/auth/mypage';
+      }
+    };
+
+    checkLoginStatus();
+
+    const { data: authListener } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        setIsLoggedIn(!!session);
+        if (session) {
+          window.location.href = '/auth/mypage';
+        }
+      }
+    );
+
+    return () => {
+      authListener.subscription.unsubscribe();
+    };
+  }, []);
+
+  if (isLoggedIn) {
+    return <div>Logged In</div>;
+  }
 
   return (
     <div className='social-signup-container'>
