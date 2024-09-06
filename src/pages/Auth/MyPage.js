@@ -23,6 +23,11 @@ const MyPage = () => {
     return <div>Loading...</div>;
   }
 
+  const onClickSignOut = () => {
+    supabase.auth.signOut();
+    navigate('/');
+  };
+
   return (
     <div className='my-profile'>
       <h1>My Profile</h1>
@@ -39,7 +44,7 @@ const MyPage = () => {
           <strong>Email:</strong> {user.email}
         </p>
       </div>
-      <button onClick={() => supabase.auth.signOut()}>Sign Out</button>
+      <button onClick={onClickSignOut}>Sign Out</button>
     </div>
   );
 };
