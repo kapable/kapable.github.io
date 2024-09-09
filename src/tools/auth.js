@@ -50,5 +50,3 @@ export const checkIfMainUrlExists = async (mainUrl) => {
   }
   return data.length > 0;
 };
-// pxqkknopartnayikfmtg.supabase.co
-// endpoint.ktestone.com

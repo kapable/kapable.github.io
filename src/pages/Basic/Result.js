@@ -1995,9 +1995,7 @@ class Result extends Component {
                     dangerouslySetInnerHTML={{
                       __html: `
                     <script src="https://gopartner.kr/assets/js/csw_ad_cl_ex.js?v=0001"></script>
-                    <script>
-                      new csw_ad_cl("<iframe width="300" height="250" frameborder="0" scrolling="no" name="cozymangframe" src="//ad.planbplus.co.kr/adReq/?k=MjE3NQ==&pb=&di="></iframe>","<iframe width="190" height="190" frameborder="0" scrolling="no" name="cozymangframe" src="//ad.planbplus.co.kr/adReq/?k=MjE3Ng==&pb=&di="></iframe>",['300','250','190','190'],['k'],'f');
-                    </script>
+                    <script>new csw_ad_cl("//ad.planbplus.co.kr/adReq/?k=MjE3NQ==&pb=&di=","//ad.planbplus.co.kr/adReq/?k=MjE3Ng==&pb=&di=",['300','250','190','190'],['k'],'f');</script>
                   `,
                     }}
                   />
