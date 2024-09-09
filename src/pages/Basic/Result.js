@@ -18,6 +18,7 @@ import OtherTestBannerRenderer from '../../components/Sub/OtherTestBannerRendere
 import { withRouter } from '../../tools/withRouter';
 import WatchFaceModal from '../../components/Sub/WatchFaceModal';
 import BackgroundModal from '../../components/Sub/BackgroudnModal';
+import { checkIfMainUrlExists, upsertUserDoneTest } from '../../tools/auth';
 
 class Result extends Component {
   constructor(props) {
@@ -146,6 +147,14 @@ class Result extends Component {
       }.bind(this),
       800
     );
+
+    if (checkIfMainUrlExists(this.state.current_test_contents?.info?.mainUrl)) {
+      // set result & test info to user with supabase
+      upsertUserDoneTest(
+        this.state.current_test_contents?.info?.mainUrl,
+        this.state.current_test_result?.type
+      );
+    }
   }
 
   componentWillUnmount() {
