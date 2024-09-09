@@ -7,11 +7,35 @@ export const USER_DONE_TEST_TABLE = 'user_done_test';
 export const upsertUserDoneTest = async (mainUrl, resultType) => {
   const { data } = await supabase.auth.getUser();
   if (data?.user) {
-    await supabase.from(USER_DONE_TEST_TABLE).upsert({
-      user_id: data.user.id,
-      test_query: mainUrl,
-      result_query: resultType,
-    });
+    // Check if the user and test combination already exists
+    const { data: existingData, error: checkError } = await supabase
+      .from(USER_DONE_TEST_TABLE)
+      .select('*')
+      .eq('user_id', data.user.id)
+      .eq('test_query', mainUrl)
+      .single();
+
+    if (checkError && checkError.code !== 'PGRST116') {
+      console.error('Error checking existing data:', checkError);
+      return;
+    }
+    if (existingData) {
+      // If exists, update the result_query
+      await supabase
+        .from(USER_DONE_TEST_TABLE)
+        .update({ result_query: resultType })
+        .eq('id', existingData.id)
+        .eq('user_id', data.user.id)
+        .eq('test_query', mainUrl);
+    } else {
+      // If not exists, create a new row
+      const upsertData = {
+        user_id: data.user.id,
+        test_query: mainUrl,
+        result_query: resultType,
+      };
+      await supabase.from(USER_DONE_TEST_TABLE).upsert(upsertData);
+    }
   }
 };
 
@@ -26,3 +50,5 @@ export const checkIfMainUrlExists = async (mainUrl) => {
   }
   return data.length > 0;
 };
+// pxqkknopartnayikfmtg.supabase.co
+// endpoint.ktestone.com

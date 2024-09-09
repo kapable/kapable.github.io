@@ -99,6 +99,7 @@ class Result extends Component {
       coupangCount: 5,
       cookieAges: (1 / 24) * 2,
       aliCookieAges: (1 / 24 / 60) * 5,
+      resultUpserted: false,
     };
     this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
     this._onShareButtonClick = this._onShareButtonClick.bind(this);
@@ -148,12 +149,15 @@ class Result extends Component {
       800
     );
 
-    if (checkIfMainUrlExists(this.state.current_test_contents?.info?.mainUrl)) {
+    if (checkIfMainUrlExists(_current_test_contents?.info?.mainUrl)) {
       // set result & test info to user with supabase
-      upsertUserDoneTest(
-        this.state.current_test_contents?.info?.mainUrl,
-        this.state.current_test_result?.type
-      );
+      if (!this.state.resultUpserted) {
+        upsertUserDoneTest(
+          _current_test_contents?.info?.mainUrl,
+          _current_test_result?.type
+        );
+        this.setState({ resultUpserted: true });
+      }
     }
   }
 
