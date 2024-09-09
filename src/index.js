@@ -19,16 +19,16 @@ dayjs.locale('ko');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <HelmetProvider>
-        <CookiesProvider>
-          <App />
-          <Footer />
-        </CookiesProvider>
-      </HelmetProvider>
-    </BrowserRouter>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <BrowserRouter>
+    <HelmetProvider>
+      <CookiesProvider>
+        <App />
+        <Footer />
+      </CookiesProvider>
+    </HelmetProvider>
+  </BrowserRouter>
+  // </React.StrictMode>
 );
 
 reportWebVitals();

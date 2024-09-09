@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../../tools/supabaseClient';
 import { useNavigate } from 'react-router';
+import UserDoneTestList from '../../components/Auth/UserDoneTestList';
 
 const MyPage = () => {
   const navigate = useNavigate();
@@ -45,6 +46,7 @@ const MyPage = () => {
           <strong>Email:</strong> {user.email}
         </p>
       </div>
+      <UserDoneTestList />
       <button onClick={onClickSignOut}>Sign Out</button>
     </div>
   );
