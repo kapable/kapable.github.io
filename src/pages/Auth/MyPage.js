@@ -24,9 +24,9 @@ const MyPage = () => {
     return <div>Loading...</div>;
   }
 
-  const onClickSignOut = () => {
+  const onClickSignOut = async () => {
     alert('Successfully signed out!');
-    supabase.auth.signOut();
+    await supabase.auth.signOut();
     navigate('/');
   };
 
