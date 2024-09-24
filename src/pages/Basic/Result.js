@@ -79,6 +79,7 @@ class Result extends Component {
         'pingChar',
         'badHabit',
         'listenThought',
+        'feedToMe',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
