@@ -56,14 +56,7 @@ const ShortAnswerQuiz = ({ title, length }) => {
         clearTimeout(timeout);
       };
     }
-  }, [
-    isLoading,
-    navigate,
-    title,
-    userScore,
-    currentTest.info,
-    currentTest?.info?.length,
-  ]);
+  }, [isLoading, navigate, title, userScore, currentTest.info]);
 
   const _onStartButtonClick = useCallback(() => {
     setMode('quiz');
