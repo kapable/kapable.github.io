@@ -36,6 +36,9 @@ import ThreadsCallback from './pages/Sub/ThreadsCallback';
 import MyThreads from './pages/Sub/MyThreads';
 import SignUp from './pages/Auth/SignUp';
 import MyPage from './pages/Auth/MyPage';
+import ShortAnswerQuiz from './components/TestTypes/ShortAnswerQuiz/ShortAnswerQuiz';
+import ShortAnswerQuizResult from './components/TestTypes/ShortAnswerQuiz/ShortAnswerQuizResult';
+import { shortAnswerQuizesTitle } from './api/SHORTANSWERQUIZ';
 
 let mbti_results_set = [];
 
@@ -155,6 +158,22 @@ function App() {
       <Route path='/privacy' element={<Privacy />} />
 
       {/* ------------------GAME ROUTES------------------ */}
+
+      {/* Short Answer Quiz */}
+      {shortAnswerQuizesTitle.map((title) => (
+        <Route
+          path={`/${title}/`}
+          key={`${title}-route`}
+          element={<ShortAnswerQuiz title={title} />}
+        />
+      ))}
+      {shortAnswerQuizesTitle.map((title) => (
+        <Route
+          path={`/${title}/result/`}
+          key={`${title}-route`}
+          element={<ShortAnswerQuizResult />}
+        />
+      ))}
 
       <Route path='/alcoholGames/' element={<AlcoholGames />} />
 

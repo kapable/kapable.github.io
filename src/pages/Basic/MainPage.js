@@ -15,6 +15,7 @@ import AdsenseAdvertiser from '../../components/Sub/AdsenseAdvertiser';
 import { dual_qurie_test_list, TESTS } from '../../api/TESTS';
 import KakaoPlusFriendBtn from '../../components/Sub/KakaoPlusFriendBtn';
 import { bingo } from '../../api/BINGO';
+import { shortAnswerQuizes } from '../../api/SHORTANSWERQUIZ';
 
 const MainPage = ({ lang, category }) => {
   const render_range_points = [7, 11];
@@ -173,6 +174,32 @@ const MainPage = ({ lang, category }) => {
       );
     }
   }, [lang, currentCategory]);
+  const shortAnswerQuizRenderer = useCallback(() => {
+    if (!currentCategory || currentCategory === 'etc') {
+      const renderingArray = shortAnswerQuizes
+        .filter((item) => item.info.lang === lang)
+        .reverse();
+      return (
+        <>
+          {renderingArray.map((elem) => (
+            <Link
+              to={`/${elem.info.mainUrl}/`}
+              className='main-link-block'
+              key={`${elem.info.mainUrl}-banner`}
+            >
+              <img
+                loading='lazy'
+                className='test-main-img'
+                src={`https://images.ktestone.com/main-thumbnail/${elem.info.mainUrl}-thumb.png`}
+                alt={`${elem.info.mainUrl}-banner`}
+              />
+            </Link>
+          ))}
+        </>
+      );
+    }
+  }, [lang, currentCategory]);
+
   const mainMetaTagRenderer = (lang) => {
     const _metaTagKor = (
       <Helmet>
@@ -490,6 +517,7 @@ const MainPage = ({ lang, category }) => {
           );
         })}
       </div>
+      {shortAnswerQuizRenderer()}
       <KakaoPlusFriendBtn />
     </Fragment>
   );
