@@ -160,14 +160,14 @@ function App() {
       {/* ------------------GAME ROUTES------------------ */}
 
       {/* Short Answer Quiz */}
-      {shortAnswerQuizesTitle.map((title) => (
+      {shortAnswerQuizesTitle.map(({ title, length }) => (
         <Route
           path={`/${title}/`}
           key={`${title}-route`}
-          element={<ShortAnswerQuiz title={title} />}
+          element={<ShortAnswerQuiz title={title} length={length} />}
         />
       ))}
-      {shortAnswerQuizesTitle.map((title) => (
+      {shortAnswerQuizesTitle.map(({ title }) => (
         <Route
           path={`/${title}/result/`}
           key={`${title}-route`}

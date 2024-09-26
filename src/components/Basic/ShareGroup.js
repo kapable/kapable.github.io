@@ -51,7 +51,7 @@ const ShareGroup = ({ link, testTitle, hashTag }) => {
       <FacebookShareButton
         url={link}
         quote={testTitle}
-        hashtag={'#' + testTitle.replace(/\s/g, '')}
+        hashtag={'#' + testTitle?.replace(/\s/g, '')}
       >
         <FacebookIcon
           onClick={_onFacebookButtonClick}
