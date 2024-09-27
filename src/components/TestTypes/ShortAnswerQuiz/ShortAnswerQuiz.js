@@ -73,11 +73,8 @@ const ShortAnswerQuiz = ({ title, length }) => {
   }, [currentTest.info.lang, navigate]);
 
   const _onSubmitButtonClick = useCallback(() => {
-    if (userAnswer === currentTestOptions[currentQuestionNumber].answer) {
+    if (currentTestOptions[currentQuestionNumber].answer.includes(userAnswer)) {
       setUserScore(userScore + 1);
-    }
-    if (currentTestOptions?.length - 1 === currentQuestionNumber) {
-      setIsLoading(true);
     }
     setCheckAnswerMode(true);
   }, [currentQuestionNumber, userAnswer, userScore, currentTestOptions]);
@@ -86,7 +83,10 @@ const ShortAnswerQuiz = ({ title, length }) => {
     setCheckAnswerMode(false);
     setCurrentQuestionNumber(currentQuestionNumber + 1);
     setUserAnswer('');
-  }, [currentQuestionNumber]);
+    if (currentTestOptions?.length - 1 === currentQuestionNumber) {
+      setIsLoading(true);
+    }
+  }, [currentQuestionNumber, currentTestOptions?.length]);
 
   if (mode === 'intro') {
     return (
@@ -243,19 +243,21 @@ const ShortAnswerQuiz = ({ title, length }) => {
             <img
               src={currentTestOptions[currentQuestionNumber].image}
               alt='퀴즈 이미지'
+              style={{ width: '360px' }}
             />
           </div>
           {checkAnswerMode ? (
             <>
               <div className='quiz-question-input-div'>
-                {currentTestOptions[currentQuestionNumber].answer ===
-                userAnswer ? (
+                {currentTestOptions[currentQuestionNumber].answer.includes(
+                  userAnswer
+                ) ? (
                   <p style={{ color: 'green' }}>정답</p>
                 ) : (
                   <p style={{ color: 'red' }}>오답</p>
                 )}
                 <p style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>
-                  {currentTestOptions[currentQuestionNumber].answer}
+                  {currentTestOptions[currentQuestionNumber].answer?.[0]}
                 </p>
               </div>
               <div className='quiz-question-submit-div'>

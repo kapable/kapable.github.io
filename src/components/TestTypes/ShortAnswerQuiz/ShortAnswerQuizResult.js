@@ -11,6 +11,9 @@ import './shortAnswerQuiz.css';
 
 const ShortAnswerQuizResult = () => {
   const [otherRenderTests] = useState([
+    'culinaryClassWars',
+    'culinaryClassWarsBlack',
+    'culinaryClassWarsWhite',
     'pingLove',
     'pingChar',
     'catchTeeniepingQuiz',
@@ -46,7 +49,9 @@ const ShortAnswerQuizResult = () => {
   return (
     <div>
       <div style={{ margin: '5rem' }}>
-        <p style={{ fontSize: '1rem' }}>당신의 티니핑 이름 맞추기 점수는</p>
+        <p
+          style={{ fontSize: '1rem' }}
+        >{`당신의 ${testInfo?.mainTitle} 점수는`}</p>
         <p style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>
           <span style={{ color: '#db0253', fontSize: '2rem' }}>
             {userScore}
