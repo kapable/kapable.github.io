@@ -174,31 +174,35 @@ const MainPage = ({ lang, category }) => {
       );
     }
   }, [lang, currentCategory]);
-  const shortAnswerQuizRenderer = useCallback(() => {
-    if (!currentCategory || currentCategory === 'etc') {
-      const renderingArray = shortAnswerQuizes
-        .filter((item) => item.info.lang === lang)
-        .reverse();
-      return (
-        <>
-          {renderingArray.map((elem) => (
-            <Link
-              to={`/${elem.info.mainUrl}/`}
-              className='main-link-block'
-              key={`${elem.info.mainUrl}-banner`}
-            >
-              <img
-                loading='lazy'
-                className='test-main-img'
-                src={`https://images.ktestone.com/main-thumbnail/${elem.info.mainUrl}-thumb.png`}
-                alt={`${elem.info.mainUrl}-banner`}
-              />
-            </Link>
-          ))}
-        </>
-      );
-    }
-  }, [lang, currentCategory]);
+  const shortAnswerQuizRenderer = useCallback(
+    ({ start, end }) => {
+      if (!currentCategory || currentCategory === 'etc') {
+        const renderingArray = shortAnswerQuizes
+          .filter((item) => item.info.lang === lang)
+          .reverse()
+          .slice(start, end);
+        return (
+          <>
+            {renderingArray.map((elem) => (
+              <Link
+                to={`/${elem.info.mainUrl}/`}
+                className='main-link-block'
+                key={`${elem.info.mainUrl}-banner`}
+              >
+                <img
+                  loading='lazy'
+                  className='test-main-img'
+                  src={`https://images.ktestone.com/main-thumbnail/${elem.info.mainUrl}-thumb.png`}
+                  alt={`${elem.info.mainUrl}-banner`}
+                />
+              </Link>
+            ))}
+          </>
+        );
+      }
+    },
+    [lang, currentCategory]
+  );
 
   const mainMetaTagRenderer = (lang) => {
     const _metaTagKor = (
@@ -414,7 +418,7 @@ const MainPage = ({ lang, category }) => {
         responsive='true'
         style={{ display: 'block' }}
       />
-
+      {shortAnswerQuizRenderer({ start: 3, end: 4 })}
       {/* Main Test Banners(Top) */}
       <div className='main-link-div'>
         {currentTestList.slice(0, render_range_points[0]).map((item, idx) => {
@@ -491,6 +495,8 @@ const MainPage = ({ lang, category }) => {
           })}
       </div>
 
+      {shortAnswerQuizRenderer({ start: 0, end: 3 })}
+
       {/* Main Test Banners(Bottom) */}
       <div className='main-link-div'>
         {currentTestList.slice(render_range_points[1]).map((item, idx) => {
@@ -517,7 +523,7 @@ const MainPage = ({ lang, category }) => {
           );
         })}
       </div>
-      {shortAnswerQuizRenderer()}
+
       <KakaoPlusFriendBtn />
     </Fragment>
   );
