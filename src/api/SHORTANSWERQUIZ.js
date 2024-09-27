@@ -73,7 +73,7 @@ export const shortAnswerQuizes = [
       {
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chakePing.png',
-        answer: '모다핑',
+        answer: '차캐핑',
       },
       {
         image:
@@ -163,7 +163,7 @@ export const shortAnswerQuizes = [
       {
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
-        answer: '모다핑',
+        answer: '모야핑',
       },
       {
         image:
@@ -188,7 +188,7 @@ export const shortAnswerQuizes = [
       {
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
-        answer: '모다핑',
+        answer: '모야핑',
       },
       {
         image:
@@ -316,7 +316,7 @@ export const shortAnswerQuizes = [
       {
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chakePing.png',
-        answer: '모다핑',
+        answer: '차캐핑',
       },
       {
         image:
@@ -406,7 +406,7 @@ export const shortAnswerQuizes = [
       {
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
-        answer: '모다핑',
+        answer: '모야핑',
       },
       {
         image:
@@ -431,7 +431,7 @@ export const shortAnswerQuizes = [
       {
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
-        answer: '모다핑',
+        answer: '모야핑',
       },
       {
         image:
@@ -559,7 +559,7 @@ export const shortAnswerQuizes = [
       {
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chakePing.png',
-        answer: '모다핑',
+        answer: '차캐핑',
       },
       {
         image:
@@ -649,7 +649,7 @@ export const shortAnswerQuizes = [
       {
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
-        answer: '모다핑',
+        answer: '모야핑',
       },
       {
         image:
@@ -674,7 +674,7 @@ export const shortAnswerQuizes = [
       {
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
-        answer: '모다핑',
+        answer: '모야핑',
       },
       {
         image:
@@ -802,7 +802,7 @@ export const shortAnswerQuizes = [
       {
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chakePing.png',
-        answer: '모다핑',
+        answer: '차캐핑',
       },
       {
         image:
@@ -892,7 +892,7 @@ export const shortAnswerQuizes = [
       {
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
-        answer: '모다핑',
+        answer: '모야핑',
       },
       {
         image:
@@ -917,7 +917,7 @@ export const shortAnswerQuizes = [
       {
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
-        answer: '모다핑',
+        answer: '모야핑',
       },
       {
         image:

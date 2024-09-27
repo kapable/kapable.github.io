@@ -939,8 +939,9 @@ class Result extends Component {
       this.state.current_test_contents.info.nameLocation.result.fontSize;
     let pcResultFontSize =
       this.state.current_test_contents.info.nameLocation.result.pcFontSize;
-    const resultFontColor =
-      this.state.current_test_contents.info.nameLocation.result.fontColor;
+    const resultFontColor = this.state.current_test_result?.color
+      ? this.state.current_test_result?.color
+      : this.state.current_test_contents.info.nameLocation.result.fontColor;
 
     if (screenWidth >= 768) {
       resultTop = pcResultTop;
@@ -2105,50 +2106,6 @@ class Result extends Component {
           {this.state.isOpened ||
           this.state.coupangCookies ||
           this.state.new_release_list?.includes(this.state.current_test) ? (
-            // <div className='resultMainDiv'>
-            //   <div>
-            //     <img
-            //       loading='lazy'
-            //       src={img_src}
-            //       className='result-img'
-            //       alt={final_type}
-            //     />
-            //   </div>
-            //   {console.log(window.matchMedia)}
-            //   <div
-            //     className='resultNameInputDiv'
-            //     style={{
-            //       top: `${this.state.current_test_contents.info.nameLocation.result.result}rem`,
-            //       left: `${this.state.current_test_contents.info.nameLocation.result.left}rem`,
-            //     }}
-            //   >
-            //     <h2
-            //       className='resultNameInput'
-            //       style={{
-            //         fontFamily:
-            //           this.state.current_test_contents.info.nameLocation.result
-            //             .font,
-            //         fontSize: `${this.state.current_test_contents.info.nameLocation.result.fontSize}rem`,
-            //       }}
-            //     >
-            //       {name_input}
-            //     </h2>
-            //   </div>
-            //   {this.state.current_test_contents?.info?.hasWatchFace ? (
-            //     <WatchFaceModal
-            //       testTitle={this.state.current_test}
-            //       testResultContents={this.state.current_test_result}
-            //       testLang={this.state.current_test_contents?.info?.lang}
-            //     />
-            //   ) : null}
-            //   {this.state.current_test_contents?.info?.hasBackground ? (
-            //     <BackgroundModal
-            //       testTitle={this.state.current_test}
-            //       testResultContents={this.state.current_test_result}
-            //       testLang={this.state.current_test_contents?.info?.lang}
-            //     />
-            //   ) : null}
-            // </div>
             <div className='resultMainDiv'>
               {this.nameInputMbtiRenderer(img_src, final_type, name_input)}
               {this.state.current_test_contents?.info?.hasWatchFace ? (
