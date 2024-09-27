@@ -537,7 +537,7 @@ class Intro extends Component {
               fontFamily: this.state.current_test.info.nameLocation.intro.font,
               fontSize: `${introFontSize}rem`,
               fontWeight: 'bold',
-              fontColor: fontColor,
+              color: fontColor,
               backgroundColor: inputBgColor,
             }}
           />

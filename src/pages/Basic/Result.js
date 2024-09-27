@@ -81,6 +81,7 @@ class Result extends Component {
         'listenThought',
         'feedToMe',
         'pingLove',
+        'colorPing',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
