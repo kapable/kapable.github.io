@@ -418,7 +418,6 @@ const MainPage = ({ lang, category }) => {
         responsive='true'
         style={{ display: 'block' }}
       />
-      {shortAnswerQuizRenderer({ start: 3, end: 40 })}
       {/* Main Test Banners(Top) */}
       <div className='main-link-div'>
         {currentTestList.slice(0, render_range_points[0]).map((item, idx) => {
@@ -462,6 +461,7 @@ const MainPage = ({ lang, category }) => {
         </Link>
       ) : null}
 
+      {shortAnswerQuizRenderer({ start: 3, end: 40 })}
       {bingoGameRenderer()}
       {balanceTestRenderer()}
       {colorPickerRenderer()}
