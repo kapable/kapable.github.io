@@ -77,26 +77,25 @@ const UserDoneTestList = () => {
   return (
     <div>
       <h2>내 MBTI 성향</h2>
-      <div style={{ maxWidth: '400px', margin: '20px auto' }}>
+      <div style={{ maxWidth: '400px', margin: '20px auto 80px' }}>
         <RenderProgressBar left='E' right='I' mbtiScores={mbtiScores} />
         <RenderProgressBar left='S' right='N' mbtiScores={mbtiScores} />
         <RenderProgressBar left='T' right='F' mbtiScores={mbtiScores} />
         <RenderProgressBar left='J' right='P' mbtiScores={mbtiScores} />
       </div>
 
-      <ul>
-        {userDoneTests.map((test) => (
-          <li key={test.id}>
-            <a href={`/kapable.github.io/${test.test_query}`}>
-              <img
-                style={{ width: '20rem' }}
-                src={test.thumbImage}
-                alt={test.testName}
-              />
-            </a>
-          </li>
-        ))}
-      </ul>
+      <h2>내가 한 테스트</h2>
+      {userDoneTests.map((test) => (
+        <div key={test.id}>
+          <a href={`/kapable.github.io/${test.test_query}`}>
+            <img
+              style={{ width: '20rem' }}
+              src={test.thumbImage}
+              alt={test.testName}
+            />
+          </a>
+        </div>
+      ))}
     </div>
   );
 };

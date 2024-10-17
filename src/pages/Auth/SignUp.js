@@ -41,14 +41,13 @@ const SocialSignUp = () => {
 
   // check login status
   useEffect(() => {
-    console.log(process.env.NODE_ENV);
     const checkLoginStatus = async () => {
       const {
         data: { user },
       } = await supabase.auth.getUser();
       setIsLoggedIn(!!user);
       if (user) {
-        window.location.href = '/auth/mypage';
+        window.location.href = '/mypage';
       }
     };
 
@@ -58,7 +57,7 @@ const SocialSignUp = () => {
       (event, session) => {
         setIsLoggedIn(!!session);
         if (session) {
-          window.location.href = '/auth/mypage';
+          window.location.href = '/mypage';
         }
       }
     );

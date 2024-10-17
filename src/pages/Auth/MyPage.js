@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from '../../tools/supabaseClient';
 import { useNavigate } from 'react-router';
 import UserDoneTestList from '../../components/Auth/UserDoneTestList';
+import { Button } from 'antd';
 
 const MyPage = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const MyPage = () => {
     const fetchData = async () => {
       const { data, error } = await supabase.auth.getUser();
       if (error) {
-        alert('LogIn Error!');
+        alert('로그인을 해주세요!');
         navigate('/auth/signup');
       } else {
         setUser(data.user);
@@ -45,9 +46,11 @@ const MyPage = () => {
         <p>
           <strong>Email:</strong> {user.email}
         </p>
+        <Button danger type='dashed' onClick={onClickSignOut}>
+          Sign Out
+        </Button>
       </div>
       <UserDoneTestList />
-      <button onClick={onClickSignOut}>Sign Out</button>
     </div>
   );
 };

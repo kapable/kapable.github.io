@@ -86,7 +86,6 @@ function App() {
       {/* Main Page */}
       <Route path='/' element={<MainPage lang={'Kor'} />} />
       <Route path='/kapable.github.io/' element={<MainPage lang={'Kor'} />} />
-
       {/* Each Langs Main page */}
       {lang_list.map((lang) => (
         <Route
@@ -121,7 +120,6 @@ function App() {
           />
         ))
       )}
-
       {/* Intro Page */}
       {mbti_tests_list.map((test) => (
         <Route
@@ -137,7 +135,6 @@ function App() {
           key={`${test.mainUrl}-intro-kap`}
         />
       ))}
-
       {/* Result Page */}
       {mbti_results_set.map((set) => (
         <Route
@@ -153,12 +150,9 @@ function App() {
           path={`/kapable.github.io/${set.mainUrl}/result/${set.resultQuery}/`}
         />
       ))}
-
       {/* Privacy */}
       <Route path='/privacy' element={<Privacy />} />
-
       {/* ------------------GAME ROUTES------------------ */}
-
       {/* Short Answer Quiz */}
       {shortAnswerQuizesTitle.map(({ title, length }) => (
         <Route
@@ -174,9 +168,7 @@ function App() {
           element={<ShortAnswerQuizResult />}
         />
       ))}
-
       <Route path='/alcoholGames/' element={<AlcoholGames />} />
-
       {/* Bingo */}
       {bingoList.map((title) => (
         <Route
@@ -192,7 +184,6 @@ function App() {
           element={<BingoResult />}
         />
       ))}
-
       {/* Balance Test */}
       {balanceTestsTitle.map((title) => (
         <Route
@@ -208,7 +199,6 @@ function App() {
           element={<BalanceTestResult title={title} />}
         />
       ))}
-
       {/* Random Games */}
       {randomGamesRoutes.map((route, idx) => (
         <Route
@@ -224,7 +214,6 @@ function App() {
           element={<RandomGameAnswer testTitle={route} />}
         />
       ))}
-
       {/* ColorPicker */}
       {difficulties.map((item) => (
         <Route
@@ -242,9 +231,7 @@ function App() {
           element={<ColorPickerResult lang={item.lang} />}
         />
       ))}
-
       {/* Dual Quries Tests */}
-
       {/* go to "HaGender" page */}
       <Route
         path='/haGender/'
@@ -260,7 +247,6 @@ function App() {
           />
         }
       />
-
       {/* go to "CoupleCharacter" page */}
       <Route
         path='/coupleCharacter/'
@@ -331,7 +317,6 @@ function App() {
           />
         }
       />
-
       {/* go to "LoveCharacter" page */}
       <Route
         path='/loveCharacter/'
@@ -430,7 +415,6 @@ function App() {
           />
         }
       />
-
       {/* go to "MaleFemaleChar" page */}
       <Route
         path='/maleFemaleChar/'
@@ -460,37 +444,29 @@ function App() {
           />
         }
       />
-
       {/* go to "lifeInterpreting" page */}
       <Route path='/lifeInterpreting/' element={<LifeInterpreting />} />
       <Route
         path='/lifeInterpreting/:query/'
         element={<LifeInterpretingResult />}
       />
-
       {/* go to "lifetimeSaju" page */}
       <Route path='/lifetimeSaju/' element={<LifetimeSaju />} />
       <Route path='/lifetimeSaju/:query/' element={<LifetimeSajuResult />} />
-
       {/* go to "todayLuck" page */}
       <Route path='/todayLuck/' element={<TodayLuck />} />
       <Route path='/todayLuck/:query/' element={<TodayLuckResult />} />
-
       {/* go to "FortuneCookie" page */}
       <Route path='/fortuneCookie/' element={<FortuneCookie />} />
-
       {/* go to "FactPok" page */}
       <Route path='/factPok/' element={<FactPok />} />
-
       {/* go to "Acroistic" page */}
       <Route path='/acrostic/' element={<Acrostic />} />
-
+      0
       <Route path='/whoisinmyThreads/' element={<WhoIsInMyThreads />} />
       <Route path='/threadsCallback/' element={<ThreadsCallback />} />
       <Route path='/myThreads/' element={<MyThreads />} />
-
       <Route path='/*' element={<Page404 />} />
-
       {/* Auth */}
       <Route path='/auth/signup' element={<SignUp />} />
       <Route path='/auth/mypage' element={<MyPage />} />
