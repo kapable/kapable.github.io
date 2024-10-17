@@ -88,6 +88,7 @@ class Result extends Component {
         'twinkleTeenieping',
         'loveContract',
         'bearComplaint',
+        'fillImages',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
