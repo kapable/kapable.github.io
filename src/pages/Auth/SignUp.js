@@ -47,7 +47,7 @@ const SocialSignUp = () => {
       } = await supabase.auth.getUser();
       setIsLoggedIn(!!user);
       if (user) {
-        window.location.href = '/mypage';
+        window.location.href = '/auth/mypage';
       }
     };
 
@@ -57,7 +57,7 @@ const SocialSignUp = () => {
       (event, session) => {
         setIsLoggedIn(!!session);
         if (session) {
-          window.location.href = '/mypage';
+          window.location.href = '/auth/mypage';
         }
       }
     );

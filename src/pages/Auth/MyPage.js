@@ -3,6 +3,7 @@ import { supabase } from '../../tools/supabaseClient';
 import { useNavigate } from 'react-router';
 import UserDoneTestList from '../../components/Auth/UserDoneTestList';
 import { Button } from 'antd';
+import GoToHomeBtn from '../../components/Sub/GoToHomeBtn';
 
 const MyPage = () => {
   const navigate = useNavigate();
@@ -51,6 +52,7 @@ const MyPage = () => {
         </Button>
       </div>
       <UserDoneTestList />
+      <GoToHomeBtn page='mypage' />
     </div>
   );
 };
