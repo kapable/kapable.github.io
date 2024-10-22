@@ -2,6 +2,7 @@ import { supabase } from './supabaseClient';
 
 export const TESTS_TABLE_NAME = 'TESTS';
 export const USER_DONE_TEST_TABLE = 'user_done_test';
+export const USER_INFO_TABLE = 'user_info';
 
 // set result & test info to user with supabase
 export const upsertUserDoneTest = async (mainUrl, resultType) => {
@@ -49,4 +50,51 @@ export const checkIfMainUrlExists = async (mainUrl) => {
     return false;
   }
   return data.length > 0;
+};
+
+// a function to upsert a user's nickname in user_info table
+export const upsertUserNickname = async (nickname) => {
+  const { data } = await supabase.auth.getUser();
+  if (data?.user) {
+    // Check if the nickname already exists
+    const { data: nicknameData, error: nicknameError } = await supabase
+      .from(USER_INFO_TABLE)
+      .select('*')
+      .eq('nickname', nickname)
+      .single();
+    if (nicknameError && nicknameError.code !== 'PGRST116') {
+      console.error('Error checking existing nickname:', nicknameError);
+      return;
+    }
+    if (
+      nicknameData &&
+      data?.user?.id !== nicknameData?.user_id &&
+      nickname !== ''
+    ) {
+      return alert('이미 존재하는 닉네임입니다.');
+    }
+
+    const { data: existingData, error: checkError } = await supabase
+      .from(USER_INFO_TABLE)
+      .select('*')
+      .eq('user_id', data.user.id)
+      .single();
+    if (checkError && checkError.code !== 'PGRST116') {
+      console.error('Error checking existing data:', checkError);
+      return;
+    }
+
+    if (existingData) {
+      await supabase
+        .from(USER_INFO_TABLE)
+        .update({ nickname: nickname })
+        .eq('user_id', data.user.id);
+    } else {
+      const upsertData = {
+        user_id: data.user.id,
+        nickname: nickname,
+      };
+      await supabase.from(USER_INFO_TABLE).upsert(upsertData);
+    }
+  }
 };
