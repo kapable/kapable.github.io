@@ -75,7 +75,6 @@ const MyPage = () => {
           className='profile-avatar'
         />
         <p>
-          <strong>Nickname:</strong>{' '}
           {isNicknameEditMode ? (
             <div className='nickname-edit' style={{ display: 'contents' }}>
               <Input
@@ -92,13 +91,14 @@ const MyPage = () => {
               </Button>
             </div>
           ) : (
-            nickname || '닉네임을 입력해주세요.'
+            nickname || '닉네임을 입력해주세요. '
           )}
           {isNicknameEditMode ? null : (
             <div
               style={{ display: 'contents', cursor: 'pointer' }}
               onClick={() => setIsNicknameEditMode((prev) => !prev)}
             >
+              {' '}
               <EditOutlined />
             </div>
           )}
