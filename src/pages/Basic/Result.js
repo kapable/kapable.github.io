@@ -92,6 +92,7 @@ class Result extends Component {
         'hideLove',
         'runningCrewChar',
         'halloweenPhotoWidget',
+        'dawnText',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
