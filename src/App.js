@@ -39,6 +39,7 @@ import MyPage from './pages/Auth/MyPage';
 import ShortAnswerQuiz from './components/TestTypes/ShortAnswerQuiz/ShortAnswerQuiz';
 import ShortAnswerQuizResult from './components/TestTypes/ShortAnswerQuiz/ShortAnswerQuizResult';
 import { shortAnswerQuizesTitle } from './api/SHORTANSWERQUIZ';
+import AuthCallback from './pages/Auth/AuthCallback';
 
 let mbti_results_set = [];
 
@@ -462,14 +463,15 @@ function App() {
       <Route path='/factPok/' element={<FactPok />} />
       {/* go to "Acroistic" page */}
       <Route path='/acrostic/' element={<Acrostic />} />
-      0
+
       <Route path='/whoisinmyThreads/' element={<WhoIsInMyThreads />} />
       <Route path='/threadsCallback/' element={<ThreadsCallback />} />
       <Route path='/myThreads/' element={<MyThreads />} />
       <Route path='/*' element={<Page404 />} />
       {/* Auth */}
       <Route path='/auth/signup' element={<SignUp />} />
-      <Route path='/auth/mypage' element={<MyPage />} />
+      <Route path='/auth/mypage' element={<AuthCallback />} />
+      <Route path='/auth/mypage/:userid' element={<MyPage />} />
     </Routes>
   );
 }

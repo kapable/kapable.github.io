@@ -52,6 +52,8 @@ export const checkIfMainUrlExists = async (mainUrl) => {
   return data.length > 0;
 };
 
+// TODO: create a new user_info data
+
 // a function to upsert a user's nickname in user_info table
 export const upsertUserNickname = async (nickname) => {
   const { data } = await supabase.auth.getUser();

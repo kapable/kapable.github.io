@@ -4,9 +4,9 @@ import { USER_DONE_TEST_TABLE } from '../../tools/auth';
 import { TESTS } from '../../api/TESTS';
 import RenderProgressBar from './RenderProgressBar';
 
-const UserDoneTestList = () => {
+const UserDoneTestList = ({ user }) => {
   const [userDoneTests, setUserDoneTests] = useState([]);
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
   const [mbtiScores, setMbtiScores] = useState({
     E: 0,
     I: 0,
@@ -18,22 +18,23 @@ const UserDoneTestList = () => {
     P: 0,
   });
   // Check if user is logged in
-  useEffect(() => {
-    const checkUser = async () => {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      setUser(user);
-    };
-    checkUser();
-  }, []);
+  // useEffect(() => {
+  //   const checkUser = async () => {
+  //     const {
+  //       data: { user },
+  //     } = await supabase.auth.getUser();
+  //     setUser(user);
+  //   };
+  //   checkUser();
+  // }, []);
   useEffect(() => {
     if (user) {
       const fetchUserDoneTests = async () => {
         const { data, error } = await supabase
           .from(USER_DONE_TEST_TABLE)
           .select('*')
-          .eq('user_id', user.id);
+          // .eq('user_id', user.user_id);
+          .eq('user_id', 'bba4a301-b829-4d4c-a5a1-c0ae4861c6a3');
 
         if (error) {
           console.error('Error fetching user done tests:', error);
