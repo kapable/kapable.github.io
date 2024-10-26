@@ -16,7 +16,7 @@ const AuthCallback = () => {
         const { data } = await supabase
           .from(USER_INFO_TABLE)
           .select('id')
-          .eq('email', user.email.split('@')[0]);
+          .eq('email', user.email);
 
         if (data?.length === 0) {
           const upsertData = {

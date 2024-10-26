@@ -5,6 +5,7 @@ import { TESTS } from '../../api/TESTS';
 import RenderProgressBar from './RenderProgressBar';
 import { Segmented } from 'antd';
 import UserDoneTestRenderer from './UserDoneTestRenderer';
+import RadarChartRenderer from './RadarChartRenderer';
 
 const UserDoneTestList = ({ user, isMyPage }) => {
   const [userDoneTests, setUserDoneTests] = useState([]);
@@ -87,6 +88,7 @@ const UserDoneTestList = ({ user, isMyPage }) => {
   return (
     <div>
       <h2>내 MBTI 성향</h2>
+      <RadarChartRenderer mbtiScores={mbtiScores} />
       <div style={{ maxWidth: '400px', margin: '20px auto 80px' }}>
         <RenderProgressBar left='E' right='I' mbtiScores={mbtiScores} />
         <RenderProgressBar left='S' right='N' mbtiScores={mbtiScores} />
