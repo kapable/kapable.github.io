@@ -15,14 +15,13 @@ const MyPage = () => {
   const [nickname, setNickname] = useState('');
   const [isMyPage, setIsMyPage] = useState(false);
   const maxNicknameLength = 20; // Define the maximum length
-  // alert('로그인을 해주세요!');
-  // navigate('/auth/signup');
+
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await supabase.auth.getUser();
 
       // fot checking this user is mine
-      if (!data.user) {
+      if (!data.user || userid !== data?.user.email.split('@')[0]) {
         setIsMyPage(false);
       } else {
         setIsMyPage(true);
@@ -112,14 +111,16 @@ const MyPage = () => {
             )}
           </p>
         ) : (
-          nickname
+          <p>{nickname}</p>
         )}
-
-        <Button danger type='dashed' onClick={onClickSignOut}>
-          Sign Out
-        </Button>
+        {isMyPage ? (
+          <Button danger type='dashed' onClick={onClickSignOut}>
+            Sign Out
+          </Button>
+        ) : null}
       </div>
-      <UserDoneTestList user={user} />
+      <UserDoneTestList user={user} isMyPage={isMyPage} />
+
       <GoToHomeBtn page='mypage' />
     </div>
   );

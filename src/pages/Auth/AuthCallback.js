@@ -30,9 +30,7 @@ const AuthCallback = () => {
             email: user.email,
             profile_image_url: faker.image.avatar(),
           };
-          const { data: resultData } = await supabase
-            .from(USER_INFO_TABLE)
-            .upsert(upsertData);
+          await supabase.from(USER_INFO_TABLE).upsert(upsertData);
         }
         navigate(`/auth/mypage/${user.email.split('@')[0]}`);
       } else {

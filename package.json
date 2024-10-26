@@ -4,6 +4,7 @@
   "homepage": "https://ktestone.com",
   "private": true,
   "dependencies": {
+    "@carbon/charts-react": "^1.22.0",
     "@ramonak/react-progress-bar": "^5.2.0",
     "@supabase/supabase-js": "^2.45.3",
     "@testing-library/jest-dom": "^5.17.0",

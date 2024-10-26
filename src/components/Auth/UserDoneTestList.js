@@ -3,9 +3,12 @@ import { supabase } from '../../tools/supabaseClient';
 import { USER_DONE_TEST_TABLE } from '../../tools/auth';
 import { TESTS } from '../../api/TESTS';
 import RenderProgressBar from './RenderProgressBar';
+import { Segmented } from 'antd';
+import UserDoneTestRenderer from './UserDoneTestRenderer';
 
-const UserDoneTestList = ({ user }) => {
+const UserDoneTestList = ({ user, isMyPage }) => {
   const [userDoneTests, setUserDoneTests] = useState([]);
+  const [userNotDoneTests, setUserNotDoneTests] = useState([]);
   // const [user, setUser] = useState(null);
   const [mbtiScores, setMbtiScores] = useState({
     E: 0,
@@ -17,16 +20,9 @@ const UserDoneTestList = ({ user }) => {
     J: 0,
     P: 0,
   });
-  // Check if user is logged in
-  // useEffect(() => {
-  //   const checkUser = async () => {
-  //     const {
-  //       data: { user },
-  //     } = await supabase.auth.getUser();
-  //     setUser(user);
-  //   };
-  //   checkUser();
-  // }, []);
+
+  const [testListMode, setTestListMode] = useState('테스트 미개봉');
+
   useEffect(() => {
     if (user) {
       const fetchUserDoneTests = async () => {
@@ -34,7 +30,7 @@ const UserDoneTestList = ({ user }) => {
           .from(USER_DONE_TEST_TABLE)
           .select('*')
           // .eq('user_id', user.user_id);
-          .eq('user_id', 'bba4a301-b829-4d4c-a5a1-c0ae4861c6a3');
+          .eq('user_id', user.user_id);
 
         if (error) {
           console.error('Error fetching user done tests:', error);
@@ -57,6 +53,18 @@ const UserDoneTestList = ({ user }) => {
                 : 'Unknown Image',
             };
           });
+          // Filter out tests that are not done by the user
+          const notDoneTestsWithDetails = TESTS.filter(
+            (test) =>
+              !data.some(
+                (doneTest) => doneTest.test_query === test.info.mainUrl
+              )
+          ).map((test) => ({
+            testName: test.info.mainTitle,
+            test_query: test.info.mainUrl,
+            thumbImage: test.info.thumbImage,
+          }));
+
           // Calculate MBTI scores
           const scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
           testsWithDetails.forEach((test) => {
@@ -69,6 +77,7 @@ const UserDoneTestList = ({ user }) => {
           setMbtiScores(scores);
 
           setUserDoneTests(testsWithDetails);
+          setUserNotDoneTests(notDoneTestsWithDetails);
         }
       };
       fetchUserDoneTests();
@@ -85,20 +94,26 @@ const UserDoneTestList = ({ user }) => {
         <RenderProgressBar left='J' right='P' mbtiScores={mbtiScores} />
       </div>
 
-      <h2>내가 한 테스트</h2>
-      {userDoneTests
-        .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
-        .map((test) => (
-          <div key={test.id}>
-            <a href={`/kapable.github.io/${test.test_query}`}>
-              <img
-                style={{ width: '20rem' }}
-                src={test.thumbImage}
-                alt={test.testName}
-              />
-            </a>
+      {isMyPage ? (
+        <div>
+          <h2>내가 한 테스트</h2>
+          <div style={{ width: '15rem', margin: '0 auto' }}>
+            <Segmented
+              block
+              value={testListMode}
+              options={['테스트 개봉', '테스트 미개봉']}
+              onChange={(value) => {
+                setTestListMode(value);
+              }}
+            />
           </div>
-        ))}
+          <UserDoneTestRenderer
+            testList={
+              testListMode === '테스트 개봉' ? userDoneTests : userNotDoneTests
+            }
+          />
+        </div>
+      ) : null}
     </div>
   );
 };
