@@ -79,6 +79,7 @@ const MyPage = () => {
           src={user.profile_image_url}
           alt='Profile'
           className='profile-avatar'
+          style={{ borderRadius: '100%', width: '3rem' }}
         />
         {isMyPage ? (
           <p>
