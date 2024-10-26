@@ -29,7 +29,6 @@ const UserDoneTestList = ({ user, isMyPage }) => {
         const { data, error } = await supabase
           .from(USER_DONE_TEST_TABLE)
           .select('*')
-          // .eq('user_id', user.user_id);
           .eq('user_id', user.user_id);
 
         if (error) {
@@ -74,6 +73,7 @@ const UserDoneTestList = ({ user, isMyPage }) => {
               });
             }
           });
+
           setMbtiScores(scores);
 
           setUserDoneTests(testsWithDetails);
