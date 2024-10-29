@@ -29,6 +29,7 @@ const AuthCallback = () => {
               faker.music.artist(),
             email: user.email,
             profile_image_url: faker.image.avatar(),
+            random_number: `https://images.ktestone.com/auth/profile/${Math.floor(Math.random() * 8) + 1}.avif`,
           };
           await supabase.from(USER_INFO_TABLE).upsert(upsertData);
         }
