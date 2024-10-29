@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react';
 import { supabase } from '../../tools/supabaseClient';
+import React, { useEffect, useState } from 'react';
 import { USER_DONE_TEST_TABLE } from '../../tools/auth';
 import { TESTS } from '../../api/TESTS';
 import RenderProgressBar from './RenderProgressBar';
-import { Segmented } from 'antd';
+import { Button, Segmented } from 'antd';
 import UserDoneTestRenderer from './UserDoneTestRenderer';
 import RadarChartRenderer from './RadarChartRenderer';
+import { HomeFilled, LockOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router';
 
 const UserDoneTestList = ({ user, isMyPage }) => {
+  const navigate = useNavigate();
   const [userDoneTests, setUserDoneTests] = useState([]);
   const [userNotDoneTests, setUserNotDoneTests] = useState([]);
   // const [user, setUser] = useState(null);
@@ -88,13 +91,61 @@ const UserDoneTestList = ({ user, isMyPage }) => {
   return (
     <div>
       <h2>내 MBTI 성향</h2>
-      <RadarChartRenderer mbtiScores={mbtiScores} />
-      <div style={{ maxWidth: '400px', margin: '20px auto 80px' }}>
-        <RenderProgressBar left='E' right='I' mbtiScores={mbtiScores} />
-        <RenderProgressBar left='S' right='N' mbtiScores={mbtiScores} />
-        <RenderProgressBar left='T' right='F' mbtiScores={mbtiScores} />
-        <RenderProgressBar left='J' right='P' mbtiScores={mbtiScores} />
-      </div>
+      {userDoneTests?.length >= 5 ? (
+        <>
+          <RadarChartRenderer mbtiScores={mbtiScores} />
+          <div style={{ maxWidth: '400px', margin: '20px auto 80px' }}>
+            <RenderProgressBar left='E' right='I' mbtiScores={mbtiScores} />
+            <RenderProgressBar left='S' right='N' mbtiScores={mbtiScores} />
+            <RenderProgressBar left='T' right='F' mbtiScores={mbtiScores} />
+            <RenderProgressBar left='J' right='P' mbtiScores={mbtiScores} />
+          </div>
+        </>
+      ) : (
+        <div style={{ position: 'relative' }}>
+          <div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              zIndex: 1,
+              color: 'black',
+              fontSize: '1.5rem',
+              textAlign: 'center',
+              lineHeight: '2rem',
+            }}
+          >
+            다섯 개 이상 테스트를 완료해주세요!
+            <br />
+            <br />
+            <LockOutlined />
+            <br />
+            <br />
+            <Button
+              style={{
+                backgroundColor: '#E62182',
+                color: 'white',
+                fontSize: '1.1rem',
+                height: '2.5rem',
+              }}
+              onClick={() => navigate('/')}
+            >
+              테스트 하러 가기
+              <HomeFilled />
+            </Button>
+          </div>
+          <div style={{ filter: 'blur(15px)' }}>
+            <RadarChartRenderer mbtiScores={mbtiScores} />
+            <div style={{ maxWidth: '400px', margin: '20px auto 80px' }}>
+              <RenderProgressBar left='E' right='I' mbtiScores={mbtiScores} />
+              <RenderProgressBar left='S' right='N' mbtiScores={mbtiScores} />
+              <RenderProgressBar left='T' right='F' mbtiScores={mbtiScores} />
+              <RenderProgressBar left='J' right='P' mbtiScores={mbtiScores} />
+            </div>
+          </div>
+        </div>
+      )}
 
       {isMyPage ? (
         <div>
