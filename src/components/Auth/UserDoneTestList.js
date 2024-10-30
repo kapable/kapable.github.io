@@ -9,7 +9,7 @@ import RadarChartRenderer from './RadarChartRenderer';
 import { HomeFilled, LockOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router';
 
-const UserDoneTestList = ({ user, isMyPage }) => {
+const UserDoneTestList = ({ user, isMyPage, texts, currentLanguage }) => {
   const navigate = useNavigate();
   const [userDoneTests, setUserDoneTests] = useState([]);
   const [userNotDoneTests, setUserNotDoneTests] = useState([]);
@@ -25,7 +25,7 @@ const UserDoneTestList = ({ user, isMyPage }) => {
     P: 0,
   });
 
-  const [testListMode, setTestListMode] = useState('테스트 미개봉');
+  const [testListMode, setTestListMode] = useState(texts[4]);
 
   useEffect(() => {
     if (user) {
@@ -40,7 +40,7 @@ const UserDoneTestList = ({ user, isMyPage }) => {
         } else {
           const testsWithDetails = data.map((test) => {
             const testDetails = TESTS.find(
-              (t) => t.info.mainUrl === test.test_query
+              (t) => t.info.mainUrl === test.test_query // not apply language options for DONE TESTS to show all done tests of the user
             );
             return {
               ...test,
@@ -61,7 +61,7 @@ const UserDoneTestList = ({ user, isMyPage }) => {
             (test) =>
               !data.some(
                 (doneTest) => doneTest.test_query === test.info.mainUrl
-              )
+              ) && test.info.lang === currentLanguage // apply only for the selected language of the user
           ).map((test) => ({
             testName: test.info.mainTitle,
             test_query: test.info.mainUrl,
@@ -86,11 +86,11 @@ const UserDoneTestList = ({ user, isMyPage }) => {
       };
       fetchUserDoneTests();
     }
-  }, [user]);
+  }, [user, currentLanguage]);
 
   return (
     <div>
-      <h2>내 MBTI 성향</h2>
+      <h2>{texts[1]}</h2>
       {userDoneTests?.length >= 5 ? (
         <>
           <RadarChartRenderer mbtiScores={mbtiScores} />
@@ -114,9 +114,10 @@ const UserDoneTestList = ({ user, isMyPage }) => {
               fontSize: '1.5rem',
               textAlign: 'center',
               lineHeight: '2rem',
+              width: '70%',
             }}
           >
-            다섯 개 이상 테스트를 완료해주세요!
+            {texts[6]}
             <br />
             <br />
             <LockOutlined />
@@ -131,7 +132,7 @@ const UserDoneTestList = ({ user, isMyPage }) => {
               }}
               onClick={() => navigate('/')}
             >
-              테스트 하러 가기
+              {texts[7]}
               <HomeFilled />
             </Button>
           </div>
@@ -149,12 +150,12 @@ const UserDoneTestList = ({ user, isMyPage }) => {
 
       {isMyPage ? (
         <div>
-          <h2>내가 한 테스트</h2>
+          <h2>{texts[2]}</h2>
           <div style={{ width: '15rem', margin: '0 auto' }}>
             <Segmented
               block
               value={testListMode}
-              options={['테스트 개봉', '테스트 미개봉']}
+              options={[texts[3], texts[4]]}
               onChange={(value) => {
                 setTestListMode(value);
               }}
@@ -162,7 +163,7 @@ const UserDoneTestList = ({ user, isMyPage }) => {
           </div>
           <UserDoneTestRenderer
             testList={
-              testListMode === '테스트 개봉' ? userDoneTests : userNotDoneTests
+              testListMode === texts[3] ? userDoneTests : userNotDoneTests
             }
           />
         </div>

@@ -6,6 +6,50 @@ import { Button, Input } from 'antd';
 import GoToHomeBtn from '../../components/Sub/GoToHomeBtn';
 import { upsertUserNickname } from '../../tools/auth';
 import { EditOutlined } from '@ant-design/icons';
+import LanguageSettingBtn from '../../components/Auth/LanguageSettingBtn';
+
+const TextsByLanguages = {
+  Kor: [
+    '내 리포트',
+    '내 MBTI 성향',
+    '내가 한 테스트',
+    '테스트 개봉',
+    '테스트 미개봉',
+    '로그아웃',
+    '다섯 개 이상의 테스트 결과가 필요합니다!',
+    '테스트 하러 가기',
+  ],
+  Eng: [
+    'My Report',
+    'My MBTI',
+    'Completed Tests',
+    'Tests Opened',
+    'Tests Closed',
+    'Sign Out',
+    "More than 5 tests' results needed!",
+    'Go to TESTS',
+  ],
+  JP: [
+    '私のレポート',
+    '私のMBTI性向',
+    '私が行ったテスト',
+    'テスト公開',
+    'テスト未公開',
+    'ログアウト',
+    '5つ以上のテスト結果が必要です！',
+    'テストを受けに行く',
+  ],
+  CN: [
+    '我的报告',
+    '我的MBTI倾向',
+    '我做过的测试',
+    '测试公开',
+    '测试未公开',
+    '登出',
+    '需要超过5个测试结果',
+    '去测试',
+  ],
+};
 
 const MyPage = () => {
   const navigate = useNavigate();
@@ -14,6 +58,7 @@ const MyPage = () => {
   const [isNicknameEditMode, setIsNicknameEditMode] = useState(false);
   const [nickname, setNickname] = useState('');
   const [isMyPage, setIsMyPage] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState('Eng');
   const maxNicknameLength = 20; // Define the maximum length
 
   useEffect(() => {
@@ -41,6 +86,7 @@ const MyPage = () => {
       } else {
         userInfo.user_metadata = { ...userInfo.user_metadata, ...userInfo };
         setNickname(userInfo.user_metadata?.nickname || '');
+        setCurrentLanguage(userInfo.language);
       }
       setUser(userInfo);
     };
@@ -72,7 +118,7 @@ const MyPage = () => {
 
   return (
     <div className='my-profile'>
-      <h1>My Report</h1>
+      <h1>{TextsByLanguages[currentLanguage][0]}</h1>
       <div className='profile-info'>
         <img
           src={user.profile_image_url}
@@ -115,13 +161,24 @@ const MyPage = () => {
         )}
         {isMyPage ? (
           <Button danger type='dashed' onClick={onClickSignOut}>
-            Sign Out
+            {TextsByLanguages[currentLanguage][5]}
           </Button>
         ) : null}
       </div>
-      <UserDoneTestList user={user} isMyPage={isMyPage} />
+      <UserDoneTestList
+        user={user}
+        isMyPage={isMyPage}
+        texts={TextsByLanguages[currentLanguage]}
+        currentLanguage={currentLanguage}
+      />
 
       <GoToHomeBtn page='mypage' />
+      <LanguageSettingBtn
+        currentLanguage={currentLanguage}
+        setCurrentLanguage={setCurrentLanguage}
+        isMyPage={isMyPage}
+        userid={userid}
+      />
     </div>
   );
 };
