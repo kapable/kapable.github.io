@@ -13,7 +13,6 @@ const UserDoneTestList = ({ user, isMyPage, texts, currentLanguage }) => {
   const navigate = useNavigate();
   const [userDoneTests, setUserDoneTests] = useState([]);
   const [userNotDoneTests, setUserNotDoneTests] = useState([]);
-  // const [user, setUser] = useState(null);
   const [mbtiScores, setMbtiScores] = useState({
     E: 0,
     I: 0,
@@ -24,6 +23,7 @@ const UserDoneTestList = ({ user, isMyPage, texts, currentLanguage }) => {
     J: 0,
     P: 0,
   });
+  const [MBTIType, setMBTIType] = useState('');
 
   const [testListMode, setTestListMode] = useState(texts[4]);
 
@@ -88,12 +88,30 @@ const UserDoneTestList = ({ user, isMyPage, texts, currentLanguage }) => {
     }
   }, [user, currentLanguage]);
 
+  useEffect(() => {
+    const mbtiPairs = [
+      ['E', 'I'],
+      ['S', 'N'],
+      ['T', 'F'],
+      ['J', 'P'],
+    ];
+    const finalMbtiTypes = mbtiPairs
+      .map(([left, right]) => {
+        return mbtiScores[left] >= mbtiScores[right] ? left : right;
+      })
+      .join('');
+    setMBTIType(finalMbtiTypes);
+  }, [mbtiScores]);
+
   return (
     <div>
-      <h2>{texts[1]}</h2>
+      <h2>
+        {texts[1]} : {MBTIType}
+      </h2>
       {userDoneTests?.length >= 5 ? (
         <>
-          <RadarChartRenderer mbtiScores={mbtiScores} />
+          <RadarChartRenderer mbtiScores={mbtiScores} MBTIType={MBTIType} />
+          <h2>{texts[8]}</h2>
           <div style={{ maxWidth: '400px', margin: '20px auto 80px' }}>
             <RenderProgressBar left='E' right='I' mbtiScores={mbtiScores} />
             <RenderProgressBar left='S' right='N' mbtiScores={mbtiScores} />
@@ -137,8 +155,8 @@ const UserDoneTestList = ({ user, isMyPage, texts, currentLanguage }) => {
             </Button>
           </div>
           <div style={{ filter: 'blur(15px)' }}>
-            <RadarChartRenderer mbtiScores={mbtiScores} />
             <div style={{ maxWidth: '400px', margin: '20px auto 80px' }}>
+              <h2>{texts[9]}</h2>
               <RenderProgressBar left='E' right='I' mbtiScores={mbtiScores} />
               <RenderProgressBar left='S' right='N' mbtiScores={mbtiScores} />
               <RenderProgressBar left='T' right='F' mbtiScores={mbtiScores} />

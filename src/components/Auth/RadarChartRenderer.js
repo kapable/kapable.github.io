@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Radar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -9,8 +9,10 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import { getMBTIHashtags } from '../../tools/auth';
 
-const RadarChartRenderer = ({ mbtiScores }) => {
+const RadarChartRenderer = ({ mbtiScores, MBTIType }) => {
+  const [typeHashtags, setTypeHashtags] = useState([]);
   ChartJS.register(
     RadialLinearScale,
     PointElement,
@@ -32,7 +34,6 @@ const RadarChartRenderer = ({ mbtiScores }) => {
       },
     ],
   };
-
   const chartOptions = {
     scales: {
       r: {
@@ -52,28 +53,14 @@ const RadarChartRenderer = ({ mbtiScores }) => {
       },
     },
   };
-  //   const chartOptions = {
-  //     radar: {
-  //       axes: {
-  //         angle: 'feature',
-  //         value: 'score',
-  //       },
-  //       alignment: 'center',
-  //     },
-  //     data: {
-  //       groupMapsTo: 'product',
-  //     },
-  //     legend: {
-  //       //   alignment: 'center',
-  //       enabled: false,
-  //     },
-  //     height: '20rem',
-  //     toolbar: false,
-  //     color: {
-  //       scale: { MBTI: '#e52182' },
-  //     },
-  //     amimations: false,
-  //   };
+
+  useEffect(() => {
+    const hashtagGetter = async () => {
+      const Hashtags = await getMBTIHashtags(MBTIType);
+      setTypeHashtags(Hashtags);
+    };
+    hashtagGetter();
+  }, [MBTIType]);
 
   return (
     <div>
@@ -82,6 +69,24 @@ const RadarChartRenderer = ({ mbtiScores }) => {
         data={chartData}
         options={chartOptions}
       />
+      <div>
+        {typeHashtags.map((hashtag, index) => (
+          <span
+            key={index}
+            style={{
+              display: 'inline-block',
+              padding: '0.5rem',
+              margin: '0.25rem',
+              backgroundColor: '#e62182',
+              color: '#fff',
+              borderRadius: '1rem',
+              fontSize: '0.7rem',
+            }}
+          >
+            #{hashtag}
+          </span>
+        ))}
+      </div>
     </div>
   );
 };

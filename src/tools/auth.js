@@ -3,6 +3,7 @@ import { supabase } from './supabaseClient';
 export const TESTS_TABLE_NAME = 'TESTS';
 export const USER_DONE_TEST_TABLE = 'user_done_test';
 export const USER_INFO_TABLE = 'user_info';
+export const MBTI_FEATURES_INFO = 'mbti_features_info';
 
 // set result & test info to user with supabase
 export const upsertUserDoneTest = async (mainUrl, resultType) => {
@@ -97,4 +98,17 @@ export const upsertUserNickname = async (nickname) => {
       await supabase.from(USER_INFO_TABLE).upsert(upsertData);
     }
   }
+};
+
+// Get MBTI Hashtags for each type
+export const getMBTIHashtags = async (type) => {
+  const { data, error } = await supabase
+    .from(MBTI_FEATURES_INFO)
+    .select('type, hashtags')
+    .eq('type', type);
+  if (error) {
+    console.error('Error fetching MBTI hashtags:', error);
+    return [];
+  }
+  return data?.[0]?.hashtags || [];
 };
