@@ -2,56 +2,65 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from '../../tools/supabaseClient';
 import { useNavigate, useParams } from 'react-router';
 import UserDoneTestList from '../../components/Auth/UserDoneTestList';
-import { Button, Input } from 'antd';
+import { Button, Input, Tooltip } from 'antd';
 import GoToHomeBtn from '../../components/Sub/GoToHomeBtn';
 import { upsertUserNickname } from '../../tools/auth';
 import { EditOutlined } from '@ant-design/icons';
 import LanguageSettingBtn from '../../components/Auth/LanguageSettingBtn';
+import ProfileButtonGroup from '../../components/Auth/ProfileButtonGroup';
 
 const TextsByLanguages = {
   Kor: [
     '내 리포트',
     '나의 그래프 타입',
-    '내가 한 테스트',
+    '내 MBTI 성향',
     '테스트 개봉',
     '테스트 미개봉',
     '로그아웃',
     '다섯 개 이상의 테스트 결과가 필요합니다!',
     '테스트 하러 가기',
-    '내 MBTI 성향',
+    '공유하기',
+    '테스트 진행 상황',
+    ' 개의 테스트를 완료했어요!',
   ],
   Eng: [
     'My Report',
     'My Graph Type',
-    'Completed Tests',
+    'My MBTI',
     'Tests Opened',
     'Tests Closed',
     'Sign Out',
     "More than 5 tests' results needed!",
     'Go to TESTS',
-    'My MBTI',
+    'Share',
+    'Test Progress',
+    ' Tests Done!',
   ],
   JP: [
     '私のレポート',
     '私のグラフタイプ',
-    '私が行ったテスト',
+    '私のMBTI性向',
     'テスト公開',
     'テスト未公開',
     'ログアウト',
     '5つ以上のテスト結果が必要です！',
     'テストを受けに行く',
-    '私のMBTI性向',
+    '共有する',
+    'テストの進行状況',
+    ' テストが完了しました！',
   ],
   CN: [
     '我的报告',
     '我的图表类型',
-    '我做过的测试',
+    '我的MBTI倾向',
     '测试公开',
     '测试未公开',
     '登出',
     '需要超过5个测试结果',
     '去测试',
-    '我的MBTI倾向',
+    '分享',
+    '测试进度',
+    ' 完成的测试！',
   ],
 };
 
@@ -64,6 +73,20 @@ const MyPage = () => {
   const [isMyPage, setIsMyPage] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('Eng');
   const maxNicknameLength = 20; // Define the maximum length
+
+  const [userDoneTests, setUserDoneTests] = useState([]);
+  const [userNotDoneTests, setUserNotDoneTests] = useState([]);
+  const [mbtiScores, setMbtiScores] = useState({
+    E: 0,
+    I: 0,
+    S: 0,
+    N: 0,
+    T: 0,
+    F: 0,
+    J: 0,
+    P: 0,
+  });
+  const [MBTIType, setMBTIType] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -86,6 +109,7 @@ const MyPage = () => {
 
       if (userInfoError) {
         alert('존재하지 않는 사용자입니다!');
+        await supabase.auth.signOut();
         navigate('/auth/signup');
       } else {
         userInfo.user_metadata = { ...userInfo.user_metadata, ...userInfo };
@@ -95,17 +119,11 @@ const MyPage = () => {
       setUser(userInfo);
     };
     fetchData();
-  }, [navigate, userid]);
+  }, [navigate, userid, setUser]);
 
   if (!user) {
     return <div>Loading...</div>;
   }
-
-  const onClickSignOut = async () => {
-    alert('Successfully signed out!');
-    await supabase.auth.signOut();
-    navigate('/');
-  };
 
   const handleUpdateNickname = async () => {
     setIsNicknameEditMode(false);
@@ -122,14 +140,18 @@ const MyPage = () => {
 
   return (
     <div className='my-profile'>
-      <h1>{TextsByLanguages[currentLanguage][0]}</h1>
+      <h1 style={{ color: '#e62182' }}>
+        {TextsByLanguages[currentLanguage][0]}
+      </h1>
       <div className='profile-info'>
-        <img
-          src={user.profile_image_url}
-          alt='Profile'
-          className='profile-avatar'
-          style={{ borderRadius: '100%', width: '3rem' }}
-        />
+        <Tooltip title={"'Edit' coming soon!"} placement='rightTop' open>
+          <img
+            src={user.profile_image_url}
+            alt='Profile'
+            className='profile-avatar'
+            style={{ borderRadius: '100%', width: '3rem' }}
+          />
+        </Tooltip>
         {isMyPage ? (
           <p>
             {isNicknameEditMode ? (
@@ -164,25 +186,44 @@ const MyPage = () => {
           <p>{nickname}</p>
         )}
         {isMyPage ? (
-          <Button danger type='dashed' onClick={onClickSignOut}>
-            {TextsByLanguages[currentLanguage][5]}
-          </Button>
+          <ProfileButtonGroup
+            userid={userid}
+            texts={TextsByLanguages[currentLanguage]}
+            currentLanguage={currentLanguage}
+            userDoneTests={userDoneTests}
+          />
         ) : null}
       </div>
-      <UserDoneTestList
-        user={user}
-        isMyPage={isMyPage}
-        texts={TextsByLanguages[currentLanguage]}
-        currentLanguage={currentLanguage}
-      />
+      <div
+        style={{
+          backgroundColor: '#f2f2f2',
+          borderRadius: '1rem',
+          padding: '2rem',
+        }}
+      >
+        <UserDoneTestList
+          user={user}
+          isMyPage={isMyPage}
+          texts={TextsByLanguages[currentLanguage]}
+          currentLanguage={currentLanguage}
+          userDoneTests={userDoneTests}
+          setUserDoneTests={setUserDoneTests}
+          userNotDoneTests={userNotDoneTests}
+          setUserNotDoneTests={setUserNotDoneTests}
+          mbtiScores={mbtiScores}
+          setMbtiScores={setMbtiScores}
+          MBTIType={MBTIType}
+          setMBTIType={setMBTIType}
+        />
 
-      <GoToHomeBtn page='mypage' />
-      <LanguageSettingBtn
-        currentLanguage={currentLanguage}
-        setCurrentLanguage={setCurrentLanguage}
-        isMyPage={isMyPage}
-        userid={userid}
-      />
+        <GoToHomeBtn page='mypage' />
+        <LanguageSettingBtn
+          currentLanguage={currentLanguage}
+          setCurrentLanguage={setCurrentLanguage}
+          isMyPage={isMyPage}
+          userid={userid}
+        />
+      </div>
     </div>
   );
 };

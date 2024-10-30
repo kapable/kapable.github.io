@@ -19,6 +19,9 @@ import { withRouter } from '../../tools/withRouter';
 import WatchFaceModal from '../../components/Sub/WatchFaceModal';
 import BackgroundModal from '../../components/Sub/BackgroudnModal';
 import { checkIfMainUrlExists, upsertUserDoneTest } from '../../tools/auth';
+import { Link } from 'react-router-dom';
+import { supabase } from '../../tools/supabaseClient';
+import UserProfileFloatingBtn from '../../components/Sub/UserProfileFloatingBtn';
 
 class Result extends Component {
   constructor(props) {
@@ -58,39 +61,6 @@ class Result extends Component {
         'wealthluck',
       ],
       new_release_list: [
-        // 'loveCalculator',
-        // 'criticalTshirts',
-        // 'pressTest',
-        // 'olympicChar',
-        // 'retroPhoneChar',
-        // 'insignia',
-        // 'criticalTshirtsEng',
-        // 'scaryGhostChar',
-        // 'idealTypeGraph',
-        // 'korDictChar',
-        // 'loveWeight',
-        // 'myCookieClass',
-        // 'loveEmergencyStop',
-        // 'fallInLoveThree',
-        // 'charSocialSyndrom',
-        // 'fillBlank',
-        // 'naggingMenu',
-        // 'youBelowMe',
-        // 'pingChar',
-        // 'badHabit',
-        // 'listenThought',
-        // 'feedToMe',
-        // 'howChar',
-        // 'loveCellDiagnosis',
-        // 'myOwnFrame',
-        // 'pingLove',
-        // 'colorPing',
-        // 'twinkleTeenieping',
-        // 'loveContract',
-        // 'bearComplaint',
-        // 'fillImages',
-        // 'hideLove',
-        // 'runningCrewChar',
         'halloweenPhotoWidget',
         'dawnText',
         'nobelTest',
@@ -107,6 +77,7 @@ class Result extends Component {
       cookieAges: (1 / 24) * 2,
       aliCookieAges: (1 / 24 / 60) * 5,
       resultUpserted: false,
+      user: {},
     };
     this._onBackToStartButtonClick = this._onBackToStartButtonClick.bind(this);
     this._onShareButtonClick = this._onShareButtonClick.bind(this);
@@ -166,6 +137,11 @@ class Result extends Component {
         this.setState({ resultUpserted: true });
       }
     }
+    const checkUserLoggedIn = async () => {
+      const { data } = await supabase.auth.getUser();
+      this.setState({ user: data?.user ? data?.user : null });
+    };
+    checkUserLoggedIn();
   }
 
   componentWillUnmount() {
@@ -2547,7 +2523,6 @@ class Result extends Component {
                         ? <CoupangDynamicBanner page={'result'} originAdProb={this.state.originAdProb} />
                         : this.labelTestUpperBannerRenderer()
                     ): null} */}
-
           {/* Adsense */}
           <AdsenseAdvertiser
             client={`ca-pub-2382342018701919`} //5142864985628271
@@ -2562,6 +2537,19 @@ class Result extends Component {
             {/* PPL banner image */}
             {this.pplBannerRenderer()}
           </div>
+          <Link
+            to={
+              this.props?.users
+                ? `/auth/mypage/${this.props?.user?.email?.split('@')?.[0]}`
+                : `/auth/signup/`
+            }
+          >
+            <img
+              style={{ width: '100%' }}
+              src={`https://images.ktestone.com/auth/banner/go_to_myreport_${'Kor'}.avif`}
+              alt='go_to_myreport'
+            />
+          </Link>
 
           {/* LabelSticker Goods Banner */}
           {this.state.current_test === 'labelSticker' ||
@@ -2592,7 +2580,6 @@ class Result extends Component {
               이에 따른 일정액의 수수료를 제공받습니다.
             </p>
           )}
-
           <OtherLangIcons currentTest={this.state.current_test} />
           {ppl_list.includes(this.state.current_test) ? null : (
             <AdsenseAdvertiser
@@ -2603,7 +2590,6 @@ class Result extends Component {
               style={{ display: 'block' }}
             />
           )}
-
           <div className='share'>
             <h5 className='share-title'>친구에게 공유하기</h5>
             <ShareGroup
@@ -2682,6 +2668,7 @@ class Result extends Component {
         />
         {/* {AdplusAdvertiser()} */}
         <GoToHomeBtn page='result' />
+        <UserProfileFloatingBtn user={this.state.user} />
       </Fragment>
     );
   }

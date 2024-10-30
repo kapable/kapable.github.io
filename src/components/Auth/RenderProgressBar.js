@@ -18,51 +18,96 @@ const RenderProgressBar = ({ left, right, mbtiScores }) => {
     >
       <span
         style={{
-          width: '70px',
+          width: '30px',
           fontWeight: 'bold',
           textAlign: 'right',
           color: leftPercentage >= 50 ? winningColor : losingColor,
         }}
       >
-        {leftPercentage.toFixed(0)}% {left}
+        {left}
       </span>
       <div
         style={{
           flex: 1,
-          height: '20px',
+          height: '40px',
           display: 'flex',
-          margin: '0 10px',
+          margin: '0 20px',
+          position: 'relative',
+          alignItems: 'center',
         }}
       >
+        {leftPercentage >= 50 && (
+          <div
+            style={{
+              position: 'absolute',
+              left: `calc(${leftPercentage / 2}%)`,
+              top: 0,
+              transform: 'translateX(-50%)',
+              fontSize: '12px',
+              fontWeight: 'bold',
+              color: winningColor,
+            }}
+          >
+            {leftPercentage.toFixed(0)}%
+          </div>
+        )}
+        {leftPercentage < 50 && (
+          <div
+            style={{
+              position: 'absolute',
+              left: `calc(${leftPercentage + rightPercentage / 2}%)`,
+              top: 0,
+              transform: 'translateX(-50%)',
+              fontSize: '12px',
+              fontWeight: 'bold',
+              color: winningColor,
+            }}
+          >
+            {rightPercentage.toFixed(0)}%
+          </div>
+        )}
+
         <div
           style={{
             width: `${leftPercentage}%`,
-            height: '100%',
-            //   background: getColor(left),
+            height: '4px',
             backgroundColor: leftPercentage >= 50 ? winningColor : losingColor,
             borderTopLeftRadius: '10px',
             borderBottomLeftRadius: '10px',
           }}
-        ></div>
+        />
         <div
           style={{
             width: `${rightPercentage}%`,
-            height: '100%',
-            //   background: getColor(right),
+            height: '4px',
             backgroundColor: leftPercentage < 50 ? winningColor : losingColor,
             borderTopRightRadius: '10px',
             borderBottomRightRadius: '10px',
           }}
-        ></div>
+        />
+
+        <div
+          style={{
+            position: 'absolute',
+            left: `calc(${leftPercentage}% - 6px)`,
+            top: '50%',
+            transform: 'translateY(-50%)',
+            width: '12px',
+            height: '12px',
+            borderRadius: '50%',
+            backgroundColor: winningColor,
+            zIndex: 1,
+          }}
+        />
       </div>
       <span
         style={{
-          width: '70px',
+          width: '30px',
           fontWeight: 'bold',
           color: leftPercentage < 50 ? winningColor : losingColor,
         }}
       >
-        {right} {rightPercentage.toFixed(0)}%
+        {right}
       </span>
     </div>
   );

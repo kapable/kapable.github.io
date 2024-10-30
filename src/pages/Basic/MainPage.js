@@ -13,9 +13,10 @@ import OhterLangIconsMain from '../../components/Sub/OhterLangIconsMain';
 import CategoryIconsMain from '../../components/Sub/CategoryIconsMain';
 import AdsenseAdvertiser from '../../components/Sub/AdsenseAdvertiser';
 import { dual_qurie_test_list, TESTS } from '../../api/TESTS';
-import KakaoPlusFriendBtn from '../../components/Sub/KakaoPlusFriendBtn';
 import { bingo } from '../../api/BINGO';
 import { shortAnswerQuizes } from '../../api/SHORTANSWERQUIZ';
+import { supabase } from '../../tools/supabaseClient';
+import UserProfileFloatingBtn from '../../components/Sub/UserProfileFloatingBtn';
 
 const MainPage = ({ lang, category }) => {
   const render_range_points = [7, 11];
@@ -24,6 +25,17 @@ const MainPage = ({ lang, category }) => {
   const [currentTestList, setCurrentTestList] = useState(
     TESTS.filter((test) => test.info.lang === 'Kor')
   );
+  const [user, setUser] = useState(null);
+
+  // Check Is User Logged In?
+  useEffect(() => {
+    const checkUserLoggedIn = async () => {
+      const { data } = await supabase.auth.getUser();
+      return data?.user ? setUser(data?.user) : setUser(null);
+    };
+    checkUserLoggedIn();
+  }, [user]);
+
   useEffect(() => {
     // reloadPage();
     return mainImgRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -44,6 +56,7 @@ const MainPage = ({ lang, category }) => {
     );
     setCurrentTestList(setted_test_list);
   }, [lang, category]);
+
   const dualQurieTestRenderer = useCallback(() => {
     if (!currentCategory || currentCategory === 'love') {
       const tests = dual_qurie_test_list.filter((item) => item.lang === lang);
@@ -523,8 +536,7 @@ const MainPage = ({ lang, category }) => {
           );
         })}
       </div>
-
-      <KakaoPlusFriendBtn />
+      <UserProfileFloatingBtn user={user} />
     </Fragment>
   );
 };

@@ -3,27 +3,40 @@ import React, { useEffect, useState } from 'react';
 import { USER_DONE_TEST_TABLE } from '../../tools/auth';
 import { TESTS } from '../../api/TESTS';
 import RenderProgressBar from './RenderProgressBar';
-import { Button, Segmented } from 'antd';
+import { Button, ConfigProvider, Segmented } from 'antd';
 import UserDoneTestRenderer from './UserDoneTestRenderer';
 import RadarChartRenderer from './RadarChartRenderer';
 import { HomeFilled, LockOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router';
 
-const UserDoneTestList = ({ user, isMyPage, texts, currentLanguage }) => {
+const UserDoneTestList = ({
+  user,
+  isMyPage,
+  texts,
+  currentLanguage,
+  userDoneTests,
+  setUserDoneTests,
+  userNotDoneTests,
+  setUserNotDoneTests,
+  mbtiScores,
+  setMbtiScores,
+  MBTIType,
+  setMBTIType,
+}) => {
   const navigate = useNavigate();
-  const [userDoneTests, setUserDoneTests] = useState([]);
-  const [userNotDoneTests, setUserNotDoneTests] = useState([]);
-  const [mbtiScores, setMbtiScores] = useState({
-    E: 0,
-    I: 0,
-    S: 0,
-    N: 0,
-    T: 0,
-    F: 0,
-    J: 0,
-    P: 0,
-  });
-  const [MBTIType, setMBTIType] = useState('');
+  // const [userDoneTests, setUserDoneTests] = useState([]);
+  // const [userNotDoneTests, setUserNotDoneTests] = useState([]);
+  // const [mbtiScores, setMbtiScores] = useState({
+  //   E: 0,
+  //   I: 0,
+  //   S: 0,
+  //   N: 0,
+  //   T: 0,
+  //   F: 0,
+  //   J: 0,
+  //   P: 0,
+  // });
+  // const [MBTIType, setMBTIType] = useState('');
 
   const [testListMode, setTestListMode] = useState(texts[4]);
 
@@ -86,7 +99,13 @@ const UserDoneTestList = ({ user, isMyPage, texts, currentLanguage }) => {
       };
       fetchUserDoneTests();
     }
-  }, [user, currentLanguage]);
+  }, [
+    user,
+    currentLanguage,
+    setMbtiScores,
+    setUserDoneTests,
+    setUserNotDoneTests,
+  ]);
 
   useEffect(() => {
     const mbtiPairs = [
@@ -101,18 +120,38 @@ const UserDoneTestList = ({ user, isMyPage, texts, currentLanguage }) => {
       })
       .join('');
     setMBTIType(finalMbtiTypes);
-  }, [mbtiScores]);
+  }, [mbtiScores, setMBTIType]);
 
   return (
     <div>
-      <h2>
-        {texts[1]} : {MBTIType}
-      </h2>
       {userDoneTests?.length >= 5 ? (
         <>
-          <RadarChartRenderer mbtiScores={mbtiScores} MBTIType={MBTIType} />
-          <h2>{texts[8]}</h2>
-          <div style={{ maxWidth: '400px', margin: '20px auto 80px' }}>
+          <div
+            style={{
+              borderRadius: '1rem',
+              padding: '0.5rem',
+              maxWidth: '22rem',
+              margin: '0.5rem auto',
+              boxShadow: '0 8px 12px rgba(0, 0, 0, 0.1)',
+              backgroundColor: 'white',
+            }}
+          >
+            <h3 style={{ color: '#e62182' }}>
+              {texts[1]} : {MBTIType}
+            </h3>
+            <RadarChartRenderer mbtiScores={mbtiScores} MBTIType={MBTIType} />
+          </div>
+          <div
+            style={{
+              maxWidth: '22rem',
+              margin: '1.5rem auto',
+              boxShadow: '0 8px 12px rgba(0, 0, 0, 0.1)',
+              backgroundColor: 'white',
+              borderRadius: '1rem',
+              padding: '0.5rem',
+            }}
+          >
+            <h3 style={{ color: '#e62182' }}>{texts[2]}</h3>
             <RenderProgressBar left='E' right='I' mbtiScores={mbtiScores} />
             <RenderProgressBar left='S' right='N' mbtiScores={mbtiScores} />
             <RenderProgressBar left='T' right='F' mbtiScores={mbtiScores} />
@@ -168,16 +207,60 @@ const UserDoneTestList = ({ user, isMyPage, texts, currentLanguage }) => {
 
       {isMyPage ? (
         <div>
-          <h2>{texts[2]}</h2>
-          <div style={{ width: '15rem', margin: '0 auto' }}>
-            <Segmented
-              block
-              value={testListMode}
-              options={[texts[3], texts[4]]}
-              onChange={(value) => {
-                setTestListMode(value);
+          <div
+            style={{
+              width: '15rem',
+              margin: '2rem auto 1rem',
+              fontWeight: 'bold',
+            }}
+          >
+            <ConfigProvider
+              theme={{
+                components: {
+                  Segmented: {
+                    itemActiveBg: 'white',
+                    itemColor: 'white',
+                    itemHoverBg: 'white',
+                    itemHoverColor: '#e62182',
+                    itemSelectedBg: 'white',
+                    itemSelectedColor: '#e62182',
+                    trackBg: '#e62182',
+                  },
+                },
               }}
-            />
+            >
+              <Segmented
+                block
+                value={testListMode}
+                options={[texts[3], texts[4]]}
+                onChange={(value) => {
+                  setTestListMode(value);
+                }}
+              />
+            </ConfigProvider>
+          </div>
+          <div
+            style={{
+              borderRadius: '1rem',
+              padding: '0.5rem',
+              maxWidth: '22rem',
+              margin: '1.5rem auto',
+              boxShadow: '0 8px 12px rgba(0, 0, 0, 0.1)',
+              backgroundColor: 'white',
+            }}
+          >
+            <h3 style={{ color: '#e62182' }}>{texts[9]}</h3>
+            <p
+              style={{
+                color: '#e62182',
+                display: 'inline',
+                fontWeight: 'bold',
+                fontSize: '2rem',
+              }}
+            >
+              {userDoneTests?.length || 0}
+            </p>
+            {texts[10]}
           </div>
           <UserDoneTestRenderer
             testList={
