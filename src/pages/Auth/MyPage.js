@@ -22,6 +22,7 @@ const TextsByLanguages = {
     '공유하기',
     '테스트 진행 상황',
     ' 개의 테스트를 완료했어요!',
+    '영어, 숫자, 언더바만 가능합니다.',
   ],
   Eng: [
     'My Report',
@@ -35,6 +36,7 @@ const TextsByLanguages = {
     'Share',
     'Test Progress',
     ' Tests Done!',
+    'Only English, numbers, and underscores are allowed.',
   ],
   JP: [
     '私のレポート',
@@ -48,6 +50,7 @@ const TextsByLanguages = {
     '共有する',
     'テストの進行状況',
     ' テストが完了しました！',
+    '英語、数字、アンダーバーのみ使用可能です。',
   ],
   CN: [
     '我的报告',
@@ -61,6 +64,7 @@ const TextsByLanguages = {
     '分享',
     '测试进度',
     ' 完成的测试！',
+    '仅允许使用英文、数字和下划线。',
   ],
 };
 
@@ -72,7 +76,7 @@ const MyPage = () => {
   const [nickname, setNickname] = useState('');
   const [isMyPage, setIsMyPage] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('Eng');
-  const maxNicknameLength = 20; // Define the maximum length
+  const maxNicknameLength = 30; // Define the maximum length
 
   const [userDoneTests, setUserDoneTests] = useState([]);
   const [userNotDoneTests, setUserNotDoneTests] = useState([]);
@@ -92,20 +96,21 @@ const MyPage = () => {
     const fetchData = async () => {
       const { data } = await supabase.auth.getUser();
 
-      // fot checking this user is mine
-      if (!data.user || userid !== data?.user.email.split('@')[0]) {
-        setIsMyPage(false);
-      } else {
-        setIsMyPage(true);
-      }
-
       // get user's info
       const { data: userInfo, error: userInfoError } = await supabase
         .from('user_info')
         .select('*')
-        // .eq('user_id', data.user.id)
-        .eq('email', `${userid}@gmail.com`)
+        // .eq('email', `${userid}@gmail.com`)
+        // .like('email', `${userid}@%`)
+        .eq('nickname', userid)
         .single();
+
+      // fot checking this user is mine
+      if (!data.user || userid !== userInfo?.nickname) {
+        setIsMyPage(false);
+      } else {
+        setIsMyPage(true);
+      }
 
       if (userInfoError) {
         alert('존재하지 않는 사용자입니다!');
@@ -125,11 +130,20 @@ const MyPage = () => {
     return <div>Loading...</div>;
   }
 
+  // check the nickname only availabel for English and number and one sequential dot and underbar
   const handleUpdateNickname = async () => {
+    const nicknamePattern = /^[a-zA-Z0-9._]+$/;
+    if (!nicknamePattern.test(nickname) || nickname.includes(' ')) {
+      alert(TextsByLanguages[currentLanguage][11]);
+      return;
+    }
     setIsNicknameEditMode(false);
-    const success = await upsertUserNickname(nickname);
-    if (success) {
+    const result = await upsertUserNickname(nickname);
+    if (result?.[0]?.email === user?.email) {
       setNickname(nickname);
+      navigate(`/auth/mypage/${nickname}`);
+    } else {
+      setNickname(user?.nickname);
     }
   };
 
@@ -168,6 +182,15 @@ const MyPage = () => {
                 <Button type='primary' onClick={handleUpdateNickname}>
                   설정
                 </Button>
+                <p
+                  style={{
+                    fontSize: '0.7rem',
+                    color: '#E71C83',
+                    fontWeight: 'bold',
+                  }}
+                >
+                  *{TextsByLanguages[currentLanguage][11]}
+                </p>
               </div>
             ) : (
               nickname || '닉네임을 입력해주세요. '

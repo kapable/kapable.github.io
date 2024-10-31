@@ -2540,7 +2540,7 @@ class Result extends Component {
           <Link
             to={
               this.props?.users
-                ? `/auth/mypage/${this.props?.user?.email?.split('@')?.[0]}`
+                ? `/auth/mypage/${this.props?.user?.nickname}`
                 : `/auth/signup/`
             }
             onClick={() =>

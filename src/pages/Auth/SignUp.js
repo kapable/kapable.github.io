@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from '../../tools/supabaseClient';
 import { _eventSenderGA } from '../../tools/tools';
 import googleLoginButton from '../../api/DefaultImg/android_light_sq_SI.svg';
+import kakaoLoginButton from '../../api/DefaultImg/kakao_login_large_narrow_en.png';
 import googleLoginButtonGrey from '../../api/DefaultImg/android_neutral_sq_SI.svg';
+import styles from './myReport.module.css';
 
 const SocialSignUp = () => {
   const [loading, setLoading] = useState(false);
@@ -47,7 +49,7 @@ const SocialSignUp = () => {
       } = await supabase.auth.getUser();
       setIsLoggedIn(!!user);
       if (user) {
-        window.location.href = `/auth/mypage/${user.email.split('@')[0]}`;
+        window.location.href = `/auth/mypage/${user.nickname}`;
       }
     };
 
@@ -57,7 +59,7 @@ const SocialSignUp = () => {
       (event, session) => {
         setIsLoggedIn(!!session);
         if (session) {
-          window.location.href = `/auth/mypage/${session.email.split('@')[0]}`;
+          window.location.href = `/auth/mypage/${session.nickname}`;
         }
       }
     );
@@ -74,16 +76,36 @@ const SocialSignUp = () => {
   return (
     <div className='social-signup-container'>
       <h2>Sign In</h2>
+      <img
+        className={styles.signInLogo}
+        src='https://images.ktestone.com/auth/signInPage/signInLogo.avif'
+        alt='signInLogo'
+      />
       {loading ? (
         <img src={googleLoginButtonGrey} alt='Google Login' />
       ) : (
-        <img
-          src={googleLoginButton}
-          onClick={() => handleSocialSignUp('google')}
-          alt='Google Login'
-          style={{ cursor: 'pointer' }}
-        />
+        <>
+          <img
+            className={styles.signInButton}
+            src={googleLoginButton}
+            onClick={() => handleSocialSignUp('google')}
+            alt='Google Login'
+            style={{ cursor: 'pointer' }}
+          />
+          <img
+            className={styles.signInButton}
+            src={kakaoLoginButton}
+            onClick={() => handleSocialSignUp('kakao')}
+            alt='Kakao Login'
+            style={{ cursor: 'pointer' }}
+          />
+        </>
       )}
+      <img
+        className={styles.signInBanner}
+        src='https://images.ktestone.com/auth/signInPage/signInBanner.avif'
+        alt='signInBanner'
+      />
       {loading && <p>Loading...</p>}
     </div>
   );

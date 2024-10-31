@@ -65,14 +65,15 @@ export const upsertUserNickname = async (nickname) => {
       .single();
     if (nicknameError && nicknameError.code !== 'PGRST116') {
       console.error('Error checking existing nickname:', nicknameError);
-      return;
+      return nicknameError;
     }
     if (
       nicknameData &&
       data?.user?.id !== nicknameData?.user_id &&
       nickname !== ''
     ) {
-      return alert('이미 존재하는 닉네임입니다.');
+      alert('Nickname EXIST!');
+      return { error: '이미 존재하는 닉네임입니다.' };
     }
 
     const { data: existingData, error: checkError } = await supabase
@@ -82,20 +83,26 @@ export const upsertUserNickname = async (nickname) => {
       .single();
     if (checkError && checkError.code !== 'PGRST116') {
       console.error('Error checking existing data:', checkError);
-      return;
+      return checkError;
     }
 
     if (existingData) {
-      await supabase
+      const { data: existingSucces } = await supabase
         .from(USER_INFO_TABLE)
         .update({ nickname: nickname })
+        .select()
         .eq('user_id', data.user.id);
+      return existingSucces;
     } else {
       const upsertData = {
         user_id: data.user.id,
         nickname: nickname,
       };
-      await supabase.from(USER_INFO_TABLE).upsert(upsertData);
+      const { data: newSucces } = await supabase
+        .from(USER_INFO_TABLE)
+        .upsert(upsertData)
+        .select();
+      return newSucces;
     }
   }
 };

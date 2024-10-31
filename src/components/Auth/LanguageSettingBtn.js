@@ -27,7 +27,8 @@ const LanguageSettingBtn = ({
           await supabase
             .from(USER_INFO_TABLE)
             .update({ language: lang })
-            .eq('email', `${userid}@gmail.com`);
+            // .like('email', `${userid}@%`);
+            .eq('nickname', userid);
         }
       }
     },

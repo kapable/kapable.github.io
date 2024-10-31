@@ -12,7 +12,7 @@ const UserProfileFloatingBtn = ({ user }) => {
 
   const onMyPageClick = () => {
     _eventSenderGA('Paging', `Click go-to-MyReport Button`, 'main page');
-    return navigate(`/auth/mypage/${user?.email?.split('@')?.[0]}`);
+    return navigate(`/auth/mypage/${user?.nickname}`);
   };
   return (
     <div
