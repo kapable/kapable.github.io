@@ -24,19 +24,6 @@ const UserDoneTestList = ({
   setMBTIType,
 }) => {
   const navigate = useNavigate();
-  // const [userDoneTests, setUserDoneTests] = useState([]);
-  // const [userNotDoneTests, setUserNotDoneTests] = useState([]);
-  // const [mbtiScores, setMbtiScores] = useState({
-  //   E: 0,
-  //   I: 0,
-  //   S: 0,
-  //   N: 0,
-  //   T: 0,
-  //   F: 0,
-  //   J: 0,
-  //   P: 0,
-  // });
-  // const [MBTIType, setMBTIType] = useState('');
 
   const [testListMode, setTestListMode] = useState(texts[4]);
 
@@ -116,9 +103,14 @@ const UserDoneTestList = ({
     ];
     const finalMbtiTypes = mbtiPairs
       .map(([left, right]) => {
-        return mbtiScores[left] >= mbtiScores[right] ? left : right;
+        return mbtiScores[left] > 0 || mbtiScores[right] > 0
+          ? mbtiScores[left] >= mbtiScores[right]
+            ? left
+            : right
+          : '';
       })
       .join('');
+
     setMBTIType(finalMbtiTypes);
   }, [mbtiScores, setMBTIType]);
 

@@ -4,6 +4,7 @@ import { LogoutOutlined, ShareAltOutlined } from '@ant-design/icons';
 import { supabase } from '../../tools/supabaseClient';
 import { useNavigate } from 'react-router';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import { _eventSenderGA } from '../../tools/tools';
 
 const ProfileButtonGroup = ({
   userid,
@@ -72,7 +73,16 @@ const ProfileButtonGroup = ({
         </div>
         <Divider type='vertical' />
         <CopyToClipboard text={`https://ktestone.com/auth/mypage/${userid}`}>
-          <div onClick={() => alert('프로필 링크가 복사됐어요!')}>
+          <div
+            onClick={() => {
+              _eventSenderGA(
+                'Sharing',
+                `Click Copy-My-Link Button`,
+                'myReport page'
+              );
+              alert('프로필 링크가 복사됐어요!');
+            }}
+          >
             <ShareAltOutlined
               style={{
                 fontWeight: 'bold',

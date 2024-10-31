@@ -2543,10 +2543,29 @@ class Result extends Component {
                 ? `/auth/mypage/${this.props?.user?.email?.split('@')?.[0]}`
                 : `/auth/signup/`
             }
+            onClick={() =>
+              this.props?.users
+                ? _eventSenderGA(
+                    'Paging',
+                    `Click go-to-MyReport Banner`,
+                    'result page'
+                  )
+                : _eventSenderGA(
+                    'Paging',
+                    `Click go-to-LogIn Banner`,
+                    'result page'
+                  )
+            }
           >
             <img
               style={{ width: '100%' }}
-              src={`https://images.ktestone.com/auth/banner/go_to_myreport_${'Kor'}.avif`}
+              src={`https://images.ktestone.com/auth/banner/go_to_myreport_${
+                ['Kor', 'Eng', 'CN', 'JP'].includes(
+                  this.state.current_test_contents?.info?.lang
+                )
+                  ? this.state.current_test_contents?.info?.lang
+                  : 'Eng'
+              }.jpeg`}
               alt='go_to_myreport'
             />
           </Link>
@@ -2599,15 +2618,9 @@ class Result extends Component {
                 '/'
               }
               testTitle={
-                TESTS.find(
-                  (test) => test?.info?.mainUrl === this.state.current_test
-                )?.info?.mainTitle
+                this.state.current_test_contents?.info?.info?.mainTitle
               }
-              hashTag={
-                TESTS.find(
-                  (test) => test?.info?.mainUrl === this.state.current_test
-                )?.info?.hashTag
-              }
+              hashTag={this.state.current_test_contents?.info?.info?.hashTag}
             />
             <div className='share'>
               {/* if facialExpAnalyzer, copy url is test home, other tests' urls are result urls */}
@@ -2660,10 +2673,7 @@ class Result extends Component {
           </div>
         </div>
         <OtherTestBannerRenderer
-          lang={
-            TESTS.find((test) => test.info.mainUrl === this.state.current_test)
-              .info.lang
-          }
+          lang={this.state.current_test_contents?.info?.lang}
           mainUrl={this.state.current_test}
         />
         {/* {AdplusAdvertiser()} */}

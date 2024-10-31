@@ -28,7 +28,7 @@ const AuthCallback = () => {
               '_' +
               faker.music.artist(),
             email: user.email,
-            profile_image_url: faker.image.avatar(),
+            profile_image_url: `https://images.ktestone.com/auth/profile/${Math.floor(Math.random() * 8) + 1}.avif`,
             language: 'Kor',
           };
 

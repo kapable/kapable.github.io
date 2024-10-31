@@ -59,7 +59,9 @@ const RadarChartRenderer = ({ mbtiScores, MBTIType }) => {
       const Hashtags = await getMBTIHashtags(MBTIType);
       setTypeHashtags(Hashtags);
     };
-    hashtagGetter();
+    if (MBTIType) {
+      hashtagGetter();
+    }
   }, [MBTIType]);
 
   return (

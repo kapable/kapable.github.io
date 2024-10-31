@@ -1,14 +1,17 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
+import { _eventSenderGA } from '../../tools/tools';
 
 const UserProfileFloatingBtn = ({ user }) => {
   const navigate = useNavigate();
 
   const onSignInClick = () => {
+    _eventSenderGA('Paging', `Click go-to-LogIn Button`, 'main page');
     return navigate('/auth/signup/');
   };
 
   const onMyPageClick = () => {
+    _eventSenderGA('Paging', `Click go-to-MyReport Button`, 'main page');
     return navigate(`/auth/mypage/${user?.email?.split('@')?.[0]}`);
   };
   return (

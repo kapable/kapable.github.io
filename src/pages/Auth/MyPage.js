@@ -216,7 +216,7 @@ const MyPage = () => {
           setMBTIType={setMBTIType}
         />
 
-        <GoToHomeBtn page='mypage' />
+        <GoToHomeBtn page='myReport' />
         <LanguageSettingBtn
           currentLanguage={currentLanguage}
           setCurrentLanguage={setCurrentLanguage}
