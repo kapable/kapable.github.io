@@ -32,11 +32,13 @@ const MainPage = ({ lang, category }) => {
   useEffect(() => {
     const checkUserLoggedIn = async () => {
       const { data } = await supabase.auth.getUser();
-      const { data: userInfo } = await supabase
-        .from(USER_INFO_TABLE)
-        .select('*')
-        .eq('user_id', data?.user?.id);
-      return userInfo[0] ? setUser(userInfo[0]) : setUser(null);
+      if (data) {
+        const { data: userInfo } = await supabase
+          .from(USER_INFO_TABLE)
+          .select('*')
+          .eq('user_id', data?.user?.id);
+        return userInfo ? setUser(userInfo[0]) : setUser(null);
+      }
     };
     checkUserLoggedIn();
   }, []);
