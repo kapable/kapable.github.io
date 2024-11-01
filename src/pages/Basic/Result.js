@@ -65,6 +65,7 @@ class Result extends Component {
         'dawnText',
         'nobelTest',
         'changeChar',
+        'useless',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
