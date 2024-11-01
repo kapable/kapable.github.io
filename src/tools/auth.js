@@ -146,3 +146,14 @@ export const getAllUserNumber = async () => {
     .select('*', { count: 'exact' });
   return count;
 };
+
+export const getAllUsers = async () => {
+  const { data } = await supabase
+    .from(USER_INFO_TABLE)
+    .select('id, created_at')
+    .gte(
+      'created_at',
+      new Date(new Date().setDate(new Date().getDate() - 7)).toISOString() // the last 7 days
+    );
+  return data;
+};
