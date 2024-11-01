@@ -17,6 +17,7 @@ import { bingo } from '../../api/BINGO';
 import { shortAnswerQuizes } from '../../api/SHORTANSWERQUIZ';
 import { supabase } from '../../tools/supabaseClient';
 import UserProfileFloatingBtn from '../../components/Sub/UserProfileFloatingBtn';
+import { USER_INFO_TABLE } from '../../tools/auth';
 
 const MainPage = ({ lang, category }) => {
   const render_range_points = [7, 11];
@@ -31,10 +32,14 @@ const MainPage = ({ lang, category }) => {
   useEffect(() => {
     const checkUserLoggedIn = async () => {
       const { data } = await supabase.auth.getUser();
-      return data?.user ? setUser(data?.user) : setUser(null);
+      const { data: userInfo } = await supabase
+        .from(USER_INFO_TABLE)
+        .select('*')
+        .eq('user_id', data?.user?.id);
+      return userInfo[0] ? setUser(userInfo[0]) : setUser(null);
     };
     checkUserLoggedIn();
-  }, [user]);
+  }, []);
 
   useEffect(() => {
     // reloadPage();

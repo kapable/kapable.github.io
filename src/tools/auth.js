@@ -119,3 +119,30 @@ export const getMBTIHashtags = async (type) => {
   }
   return data?.[0]?.hashtags || [];
 };
+
+// Check Admin User
+export const checkAdminUser = async () => {
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (user) {
+    const { data: userInfo } = await supabase
+      .from(USER_INFO_TABLE)
+      .select('id, email, admin')
+      .eq('user_id', user.id);
+    if (userInfo[0]?.admin) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  return false;
+};
+
+// Get the number of All Users
+export const getAllUserNumber = async () => {
+  const { count } = await supabase
+    .from(USER_INFO_TABLE)
+    .select('*', { count: 'exact' });
+  return count;
+};

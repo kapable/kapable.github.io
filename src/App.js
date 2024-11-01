@@ -40,6 +40,7 @@ import ShortAnswerQuiz from './components/TestTypes/ShortAnswerQuiz/ShortAnswerQ
 import ShortAnswerQuizResult from './components/TestTypes/ShortAnswerQuiz/ShortAnswerQuizResult';
 import { shortAnswerQuizesTitle } from './api/SHORTANSWERQUIZ';
 import AuthCallback from './pages/Auth/AuthCallback';
+import Admin from './pages/admin/Admin';
 
 let mbti_results_set = [];
 
@@ -476,6 +477,8 @@ function App() {
         <Route path='/auth/signup' element={<SignUp />} />
         <Route path='/auth/mypage' element={<AuthCallback />} />
         <Route path='/auth/mypage/:userid' element={<MyPage />} />
+        {/* Admin */}
+        <Route path='/admin' element={<Admin />} />
       </Routes>
     </div>
   );
