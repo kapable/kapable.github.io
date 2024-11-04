@@ -67,6 +67,7 @@ class Result extends Component {
         'nobelTest',
         'changeChar',
         'useless',
+        'clipboardChar',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
