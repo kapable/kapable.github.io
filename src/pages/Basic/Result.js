@@ -18,7 +18,11 @@ import OtherTestBannerRenderer from '../../components/Sub/OtherTestBannerRendere
 import { withRouter } from '../../tools/withRouter';
 import WatchFaceModal from '../../components/Sub/WatchFaceModal';
 import BackgroundModal from '../../components/Sub/BackgroudnModal';
-import { checkIfMainUrlExists, upsertUserDoneTest } from '../../tools/auth';
+import {
+  checkIfMainUrlExists,
+  upsertUserDoneTest,
+  USER_INFO_TABLE,
+} from '../../tools/auth';
 import { Link } from 'react-router-dom';
 import { supabase } from '../../tools/supabaseClient';
 import UserProfileFloatingBtn from '../../components/Sub/UserProfileFloatingBtn';
@@ -142,7 +146,14 @@ class Result extends Component {
     }
     const checkUserLoggedIn = async () => {
       const { data } = await supabase.auth.getUser();
-      this.setState({ user: data?.user ? data?.user : null });
+      if (data) {
+        const { data: userInfo } = await supabase
+          .from(USER_INFO_TABLE)
+          .select('*')
+          .eq('user_id', data?.user?.id);
+
+        this.setState({ user: userInfo?.[0] });
+      }
     };
     checkUserLoggedIn();
   }
