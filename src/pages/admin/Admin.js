@@ -3,6 +3,7 @@ import {
   checkAdminUser,
   getAllUserNumber,
   getAllUsers,
+  overNcountUsers,
 } from '../../tools/auth';
 import { useNavigate } from 'react-router';
 import { Line } from 'react-chartjs-2';
@@ -31,6 +32,7 @@ const Admin = () => {
   const [isAdminUser, setIsAdminUser] = useState(false);
   const [allUserCount, setAllUserCount] = useState(0);
   const [allUsers, setAllUsers] = useState([]);
+  const [allUserDoneCount, setAllUserDoneCount] = useState([]);
 
   useEffect(() => {
     checkAdminUser().then((isAdmin) => {
@@ -51,6 +53,7 @@ const Admin = () => {
       getAllUsers().then((data) => {
         setAllUsers(data);
       });
+      overNcountUsers().then((data) => setAllUserDoneCount(data));
     }
   }, [isAdminUser]);
 
@@ -75,7 +78,7 @@ const Admin = () => {
     labels: dailyCounts?.map((data) => data?.date),
     datasets: [
       {
-        label: 'My First Dataset',
+        label: '일별 가입자수',
         data: dailyCounts?.map((data) => data?.count),
         fill: false,
         borderColor: '#e62182',
@@ -97,10 +100,9 @@ const Admin = () => {
 
   return (
     <div>
-      <h1>KTEST DASHBOARD</h1>
-      <h2>All User Count</h2>
+      <h1>KTEST 대시보드</h1>
+      <h2>총 가입자수</h2>
       <h3>{allUserCount}</h3>
-
       <Line
         style={{
           width: '100%',
@@ -111,6 +113,22 @@ const Admin = () => {
         data={data}
         options={options}
       />
+      <h2>5개 이상 테스트 유저 비율</h2>
+      <h3>테스트 했던 유저 中</h3>
+      {allUserDoneCount?.filter((data) => data.count >= 5)?.length}/
+      {allUserDoneCount?.length}
+      <br />
+      {(allUserDoneCount?.filter((data) => data.count >= 5)?.length /
+        allUserDoneCount?.length) *
+        100}{' '}
+      %<h3>총 유저 中</h3>
+      {allUserDoneCount?.filter((data) => data.count >= 5)?.length}/
+      {allUserCount}
+      <br />
+      {(allUserDoneCount?.filter((data) => data.count >= 5)?.length /
+        allUserCount) *
+        100}{' '}
+      %
     </div>
   );
 };

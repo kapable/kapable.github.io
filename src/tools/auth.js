@@ -157,3 +157,11 @@ export const getAllUsers = async () => {
     );
   return data;
 };
+
+export const overNcountUsers = async () => {
+  const { data } = await supabase
+    .from(USER_DONE_TEST_TABLE)
+    .select('user_id, test_query.count()');
+
+  return data;
+};
