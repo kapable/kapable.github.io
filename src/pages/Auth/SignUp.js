@@ -5,6 +5,7 @@ import googleLoginButton from '../../api/DefaultImg/android_light_sq_SI.svg';
 import kakaoLoginButton from '../../api/DefaultImg/kakao_login_large_narrow_en.png';
 import googleLoginButtonGrey from '../../api/DefaultImg/android_neutral_sq_SI.svg';
 import styles from './myReport.module.css';
+import { USER_INFO_TABLE } from '../../tools/auth';
 
 const SocialSignUp = () => {
   const [loading, setLoading] = useState(false);
@@ -49,24 +50,29 @@ const SocialSignUp = () => {
       } = await supabase.auth.getUser();
       setIsLoggedIn(!!user);
       if (user) {
-        window.location.href = `/auth/mypage/${user.nickname}`;
+        const { data: userInfo } = await supabase
+          .from(USER_INFO_TABLE)
+          .select('*')
+          .eq('user_id', user?.id);
+
+        window.location.href = `/auth/mypage/${userInfo?.[0].nickname}`;
       }
     };
 
     checkLoginStatus();
 
-    const { data: authListener } = supabase.auth.onAuthStateChange(
-      (event, session) => {
-        setIsLoggedIn(!!session);
-        if (session) {
-          window.location.href = `/auth/mypage/${session.nickname}`;
-        }
-      }
-    );
+    // const { data: authListener } = supabase.auth.onAuthStateChange(
+    //   (event, session) => {
+    //     setIsLoggedIn(!!session);
+    //     if (session) {
+    //       window.location.href = `/auth/mypage/${session.nickname}`;
+    //     }
+    //   }
+    // );
 
-    return () => {
-      authListener.subscription.unsubscribe();
-    };
+    // return () => {
+    //   authListener.subscription.unsubscribe();
+    // };
   }, []);
 
   if (isLoggedIn) {

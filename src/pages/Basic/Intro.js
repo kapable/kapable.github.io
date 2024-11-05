@@ -20,6 +20,10 @@ import { _eventSenderGA, reloadPage } from '../../tools/tools';
 import AdsenseAdvertiser from '../../components/Sub/AdsenseAdvertiser';
 import './css/typeCountingMBTIName.css';
 import { withRouter } from '../../tools/withRouter';
+import UserProfileFloatingBtn from '../../components/Sub/UserProfileFloatingBtn';
+import { supabase } from '../../tools/supabaseClient';
+import { USER_INFO_TABLE } from '../../tools/auth';
+import { Tooltip } from 'antd';
 
 class Intro extends Component {
   constructor(props) {
@@ -66,6 +70,13 @@ class Intro extends Component {
       custom_name: '',
       custom_option: '',
       name_input: '', // < ----------------------- for typeCountingMBTIName test type
+      user: null,
+      TextsByLanguages: {
+        Kor: ['로그인시 나의 성격 리포트 발급'],
+        Eng: ['Get my personality report upon login'],
+        JP: ['ログイン時に私の性格レポートを発行'],
+        CN: ['登录时获取我的性格报告'],
+      },
     };
     this._metaTagRenderer = this._metaTagRenderer.bind(this);
     this._onStartButtonClick = this._onStartButtonClick.bind(this);
@@ -134,6 +145,18 @@ class Intro extends Component {
       });
     }
     // return this.mainImgRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const checkUserLoggedIn = async () => {
+      const { data } = await supabase.auth.getUser();
+      if (data) {
+        const { data: userInfo } = await supabase
+          .from(USER_INFO_TABLE)
+          .select('*')
+          .eq('user_id', data?.user?.id);
+
+        this.setState({ user: userInfo?.[0] });
+      }
+    };
+    checkUserLoggedIn();
   }
   _onStartButtonClick() {
     let testQuery = '';
@@ -632,6 +655,16 @@ class Intro extends Component {
             />
           </div>
         </div>
+        <Tooltip
+          title={
+            ['Kor', 'Eng', 'JP', 'CN'].includes(this.state.lang)
+              ? this.state.TextsByLanguages[this.state.lang][0]
+              : this.state.TextsByLanguages['Eng'][0]
+          }
+          open={!this.state.user}
+        >
+          <UserProfileFloatingBtn user={this.state.user} />
+        </Tooltip>
       </Fragment>
     );
   }
