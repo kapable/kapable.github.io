@@ -65,6 +65,7 @@ class Result extends Component {
         'wealthluck',
       ],
       new_release_list: [
+        'personalTaro',
         'alienChar',
         'onigiriChar',
         'fishShapedBun',
