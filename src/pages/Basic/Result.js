@@ -76,6 +76,7 @@ class Result extends Component {
         'changeChar',
         'useless',
         'clipboardChar',
+        'daengDaengEdition',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,

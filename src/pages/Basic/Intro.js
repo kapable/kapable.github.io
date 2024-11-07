@@ -581,7 +581,7 @@ class Intro extends Component {
           {this._metaTagRenderer(this.state.lang)}
           <div
             ref={this.mainImgRef}
-            style={{ lineHeight: '0.6rem', marginTop: '2.5rem' }}
+            style={{ lineHeight: '2rem', marginTop: '2.5rem' }}
           >
             <h2>{this.state.current_test.info.mainTitle}</h2>
             <h4 style={{ color: 'grey' }}>
