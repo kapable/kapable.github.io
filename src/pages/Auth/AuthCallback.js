@@ -30,7 +30,7 @@ const AuthCallback = () => {
             user_id: user.id,
             nickname: random_nickname,
             email: user.email,
-            profile_image_url: `https://images.ktestone.com/auth/profile/${Math.floor(Math.random() * 8) + 1}.avif`,
+            profile_image_url: `https://images.ktestone.com/auth/profile/${Math.floor(Math.random() * 16) + 1}.avif`,
             language: 'Kor',
           };
 

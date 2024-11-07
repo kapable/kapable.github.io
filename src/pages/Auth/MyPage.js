@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from '../../tools/supabaseClient';
 import { useNavigate, useParams } from 'react-router';
 import UserDoneTestList from '../../components/Auth/UserDoneTestList';
-import { Button, Input, Tooltip } from 'antd';
+import { Button, Input } from 'antd';
 import GoToHomeBtn from '../../components/Sub/GoToHomeBtn';
 import { upsertUserNickname } from '../../tools/auth';
 import { EditOutlined } from '@ant-design/icons';
@@ -158,14 +158,12 @@ const MyPage = () => {
         {TextsByLanguages[currentLanguage][0]}
       </h1>
       <div className='profile-info'>
-        <Tooltip title={"'Edit' coming soon!"} placement='rightTop' open>
-          <img
-            src={user.profile_image_url}
-            alt='Profile'
-            className='profile-avatar'
-            style={{ borderRadius: '100%', width: '3rem' }}
-          />
-        </Tooltip>
+        <img
+          src={user.profile_image_url}
+          alt='Profile'
+          className='profile-avatar'
+          style={{ borderRadius: '100%', width: '3rem' }}
+        />
         {isMyPage ? (
           <p>
             {isNicknameEditMode ? (
