@@ -23,7 +23,6 @@ import { withRouter } from '../../tools/withRouter';
 import UserProfileFloatingBtn from '../../components/Sub/UserProfileFloatingBtn';
 import { supabase } from '../../tools/supabaseClient';
 import { USER_INFO_TABLE } from '../../tools/auth';
-import { Tooltip } from 'antd';
 
 class Intro extends Component {
   constructor(props) {
@@ -655,16 +654,29 @@ class Intro extends Component {
             />
           </div>
         </div>
-        <Tooltip
-          title={
-            ['Kor', 'Eng', 'JP', 'CN'].includes(this.state.lang)
+        <UserProfileFloatingBtn user={this.state.user} />
+        {!this.state.user && (
+          <div
+            style={{
+              position: 'fixed',
+              bottom: '100px',
+              right: '80px',
+              width: '190px',
+              backgroundColor: 'rgba(0, 0, 0, 0.7)',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '0.5rem',
+              borderBottomRightRadius: '0',
+              cursor: 'pointer',
+              zIndex: 1000,
+              fontSize: '0.9rem',
+            }}
+          >
+            {['Kor', 'Eng', 'JP', 'CN'].includes(this.state.lang)
               ? this.state.TextsByLanguages[this.state.lang][0]
-              : this.state.TextsByLanguages['Eng'][0]
-          }
-          open={!this.state.user}
-        >
-          <UserProfileFloatingBtn user={this.state.user} />
-        </Tooltip>
+              : this.state.TextsByLanguages['Eng'][0]}
+          </div>
+        )}
       </Fragment>
     );
   }
