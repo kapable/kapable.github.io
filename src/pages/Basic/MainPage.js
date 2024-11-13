@@ -346,7 +346,7 @@ const MainPage = ({ lang, category }) => {
         />
         <meta
           name='description'
-          content='あなたの本当の性格をテストで探してみてください！: パーソナルカラーテスト、愛の性格テスト、16の性格テストがあります, MBTI'
+          content='あなたの本当の性格をテストで探してみてください！: パーソナルカラーテスト、性格診断, 愛の性格テスト、16の性格テストがあります, 診断 MBTI, えむ びー て ぃ ー あい'
           data-react-helmet='true'
         />
         <meta
