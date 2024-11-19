@@ -79,6 +79,7 @@ class Result extends Component {
         'daengDaengEdition',
         'capybaraSpa',
         'selfReflection',
+        'lolLineChar',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
