@@ -118,17 +118,24 @@ const Admin = () => {
       {allUserDoneCount?.filter((data) => data.count >= 5)?.length}/
       {allUserDoneCount?.length}
       <br />
-      {(allUserDoneCount?.filter((data) => data.count >= 5)?.length /
-        allUserDoneCount?.length) *
-        100}{' '}
+      {(
+        (allUserDoneCount?.filter((data) => data.count >= 5)?.length /
+          allUserDoneCount?.length) *
+        100
+      ).toFixed(2)}{' '}
       %<h3>총 유저 中</h3>
       {allUserDoneCount?.filter((data) => data.count >= 5)?.length}/
       {allUserCount}
       <br />
-      {(allUserDoneCount?.filter((data) => data.count >= 5)?.length /
-        allUserCount) *
-        100}{' '}
-      %
+      {(
+        (allUserDoneCount?.filter((data) => data.count >= 5)?.length /
+          allUserCount) *
+        100
+      ).toFixed(2)}{' '}
+      %<h2>총 유저 中 한 번이라도 테스트 한 유저</h2>
+      {allUserDoneCount?.length}/{allUserCount}
+      <br />
+      {((allUserDoneCount?.length / allUserCount) * 100).toFixed(2)} %
     </div>
   );
 };
