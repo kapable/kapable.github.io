@@ -148,20 +148,66 @@ export const getAllUserNumber = async () => {
 };
 
 export const getAllUsers = async () => {
-  const { data } = await supabase
-    .from(USER_INFO_TABLE)
-    .select('id, created_at')
-    .gte(
-      'created_at',
-      new Date(new Date().setDate(new Date().getDate() - 7)).toISOString() // the last 7 days
-    );
-  return data;
+  const batchSize = 1000;
+  let allData = [];
+  let offset = 0;
+  let fetchMore = true;
+
+  while (fetchMore) {
+    const { data, error } = await supabase
+      .from(USER_INFO_TABLE)
+      .select('id, created_at')
+      .gte(
+        'created_at',
+        new Date(new Date().setDate(new Date().getDate() - 7)).toISOString() // the last 7 days
+      )
+      .range(offset, offset + batchSize - 1);
+
+    if (error) {
+      console.error('Error fetching all users:', error);
+      return [];
+    }
+
+    allData = [...allData, ...data];
+    offset += batchSize;
+    fetchMore = data.length === batchSize;
+  }
+
+  return allData;
+  // const { data } = await supabase
+  //   .from(USER_INFO_TABLE)
+  //   .select('id, created_at')
+  //   .gte(
+  //     'created_at',
+  //     new Date(new Date().setDate(new Date().getDate() - 7)).toISOString() // the last 7 days
+  //   );
+  // return data;
 };
 
 export const overNcountUsers = async () => {
-  const { data } = await supabase
-    .from(USER_DONE_TEST_TABLE)
-    .select('user_id, test_query.count()');
+  const batchSize = 1000;
+  let allData = [];
+  let offset = 0;
+  let fetchMore = true;
 
-  return data;
+  while (fetchMore) {
+    const { data, error } = await supabase
+      .from(USER_DONE_TEST_TABLE)
+      .select('user_id, test_query.count()', { count: 'exact' })
+      .range(offset, offset + batchSize - 1);
+
+    if (error) {
+      console.error('Error fetching data:', error);
+      break;
+    }
+
+    allData = allData.concat(data);
+    offset += batchSize;
+
+    if (data.length < batchSize) {
+      fetchMore = false;
+    }
+  }
+
+  return allData;
 };
