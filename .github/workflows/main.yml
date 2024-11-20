@@ -27,7 +27,7 @@ jobs:
           npm cache clean --force
           rm -rf node_modules package-lock.json
           npm install --unsafe-perm
-          npm install babel-cli cross-env webpack-cli --global @babel/runtime react-lottie@latest
+          npm install babel-cli cross-env webpack-cli --global babel-runtime react-lottie@latest
 
       - name: build
         run: CI=false npm run build
