@@ -4,7 +4,6 @@
   "homepage": "https://ktestone.com",
   "private": true,
   "dependencies": {
-    "@babel/runtime": "^7.26.0",
     "@ramonak/react-progress-bar": "^5.2.0",
     "@supabase/supabase-js": "^2.45.3",
     "@testing-library/jest-dom": "^5.17.0",
@@ -12,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.17.2",
     "axios": "^1.6.8",
+    "babel-runtime": "^6.26.0",
     "core-js": "^3.37.1",
     "crypto-js": "^4.2.0",
     "dayjs": "^1.11.11",
@@ -6800,7 +6800,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@babel/types": "^7.26.0",
     "@eslint/js": "^9.2.0",
     "@faker-js/faker": "^9.0.3",
     "eslint": "^8.57.0",
