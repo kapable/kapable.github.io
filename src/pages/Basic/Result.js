@@ -80,6 +80,7 @@ class Result extends Component {
         'capybaraSpa',
         'selfReflection',
         'lolLineChar',
+        'healingPikmin',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
