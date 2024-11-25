@@ -12597,6 +12597,48 @@ export default function OtherLangIcons(props) {
     }
   }
 
+  function lolLineCharTestLinkRenderer() {
+    if (props.currentTest === 'lolLineChar') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/lolLineCharEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'lolLineCharEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/lolLineChar/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
   return (
     <Fragment>
       {factBTILinkRenderer()}
@@ -12732,6 +12774,7 @@ export default function OtherLangIcons(props) {
       {changeCharTestLinkRenderer()}
       {hideLoveTestLinkRenderer()}
       {daengDaengEditionTestLinkRenderer()}
+      {lolLineCharTestLinkRenderer()}
     </Fragment>
   );
 }
