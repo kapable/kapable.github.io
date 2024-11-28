@@ -83,6 +83,7 @@ class Result extends Component {
         'healingPikmin',
         'pleaseBeLove',
         'todayDresscodeChar',
+        'christmasTreeChar',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
