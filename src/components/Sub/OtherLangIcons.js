@@ -12639,27 +12639,8 @@ export default function OtherLangIcons(props) {
     }
   }
 
-  function healingPikminEngTestLinkRenderer() {
-    if (props.currentTest === 'healingPikminEng') {
-      return (
-        <div className='go-to-each-language'>
-          <h3>▼OTHER LANGUAGES▼</h3>
-          <a
-            target='_blank'
-            rel='noopener noreferrer'
-            href='https://ktestone.com/kapable.github.io/healingPikminEngEng/'
-            className='to-personalColorOut-test-banner-text'
-          >
-            <img
-              loading='lazy'
-              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
-              className='language-icon'
-              alt='[ Go to the English version ]'
-            />
-          </a>
-        </div>
-      );
-    } else if (props.currentTest === 'healingPikminEngEng') {
+  function healingPikminTestLinkRenderer() {
+    if (props.currentTest === 'healingPikmin') {
       return (
         <div className='go-to-each-language'>
           <h3>▼OTHER LANGUAGES▼</h3>
@@ -12671,9 +12652,170 @@ export default function OtherLangIcons(props) {
           >
             <img
               loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'healingPikminEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/healingPikmin/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
               src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
               className='language-icon'
               alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
+  function capybaraSpaTestLinkRenderer() {
+    if (props.currentTest === 'capybaraSpa') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/capybaraSpaEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'capybaraSpaEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/capybaraSpa/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+        </div>
+      );
+    }
+  }
+
+  function todayDresscodeCharTestLinkRenderer() {
+    if (props.currentTest === 'todayDresscodeChar') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/todayDresscodeCharEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/todayDresscodeCharJP/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/japan-icon.png'
+              className='language-icon'
+              alt='[ 日本語バージョンをやりに行く。 ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'todayDresscodeCharEng') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/todayDresscodeChar/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/todayDresscodeCharJP/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/japan-icon.png'
+              className='language-icon'
+              alt='[ 日本語バージョンをやりに行く。 ]'
+            />
+          </a>
+        </div>
+      );
+    } else if (props.currentTest === 'todayDresscodeCharJP') {
+      return (
+        <div className='go-to-each-language'>
+          <h3>▼OTHER LANGUAGES▼</h3>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/todayDresscodeChar/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/kor-icon.png'
+              className='language-icon'
+              alt='[ 한국어 버전으로 하러가기 ]'
+            />
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://ktestone.com/kapable.github.io/todayDresscodeCharEng/'
+            className='to-personalColorOut-test-banner-text'
+          >
+            <img
+              loading='lazy'
+              src='https://images.ktestone.com/default/languageIcon/usa-icon.png'
+              className='language-icon'
+              alt='[ Go to the English version ]'
             />
           </a>
         </div>
@@ -12817,7 +12959,9 @@ export default function OtherLangIcons(props) {
       {hideLoveTestLinkRenderer()}
       {daengDaengEditionTestLinkRenderer()}
       {lolLineCharTestLinkRenderer()}
-      {healingPikminEngTestLinkRenderer()}
+      {healingPikminTestLinkRenderer()}
+      {capybaraSpaTestLinkRenderer()}
+      {todayDresscodeCharTestLinkRenderer()}
     </Fragment>
   );
 }
