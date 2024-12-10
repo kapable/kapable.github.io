@@ -41,6 +41,10 @@ import ShortAnswerQuizResult from './components/TestTypes/ShortAnswerQuiz/ShortA
 import { shortAnswerQuizesTitle } from './api/SHORTANSWERQUIZ';
 import AuthCallback from './pages/Auth/AuthCallback';
 import Admin from './pages/admin/Admin';
+import MBTICompatibility, {
+  mbti_array,
+} from './components/TestTypes/MBTICompatibility/MBTICompatibility';
+import CompatibilityResult from './components/TestTypes/MBTICompatibility/CompatibilityResult';
 
 let mbti_results_set = [];
 
@@ -234,6 +238,17 @@ function App() {
             element={<ColorPickerResult lang={item.lang} />}
           />
         ))}
+        {/* MBTI Compatibility */}
+        <Route path='/compatibility/' element={<MBTICompatibility />} />
+        {mbti_array.map((first) =>
+          mbti_array.map((second) => (
+            <Route
+              key={`/compatibility/${first.value}-${second.value}/`}
+              path={`/compatibility/${first.value}-${second.value}/`} //
+              element={<CompatibilityResult />}
+            />
+          ))
+        )}
         {/* Dual Quries Tests */}
         {/* go to "HaGender" page */}
         <Route

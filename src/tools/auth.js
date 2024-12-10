@@ -4,6 +4,7 @@ export const TESTS_TABLE_NAME = 'TESTS';
 export const USER_DONE_TEST_TABLE = 'user_done_test';
 export const USER_INFO_TABLE = 'user_info';
 export const MBTI_FEATURES_INFO = 'mbti_features_info';
+export const MBTI_COMP = 'MBTI_COMP';
 
 // set result & test info to user with supabase
 export const upsertUserDoneTest = async (mainUrl, resultType) => {

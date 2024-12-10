@@ -224,6 +224,25 @@ const MainPage = ({ lang, category }) => {
     [lang, currentCategory]
   );
 
+  const compatibilityRenderer = useCallback(() => {
+    if (lang === 'Kor') {
+      return (
+        <Link
+          to={`/compatibility/`}
+          className='main-link-block'
+          key={`compatibility-banner`}
+        >
+          <img
+            loading='lazy'
+            className='test-main-img'
+            src={`https://images.ktestone.com/main-thumbnail/compatibilityRenderer-thumb.jpeg`}
+            alt={`compatibility-banner`}
+          />
+        </Link>
+      );
+    }
+  }, [lang, currentCategory]);
+
   const mainMetaTagRenderer = (lang) => {
     const _metaTagKor = (
       <Helmet>
@@ -438,6 +457,7 @@ const MainPage = ({ lang, category }) => {
         responsive='true'
         style={{ display: 'block' }}
       />
+      {compatibilityRenderer()}
       {/* Main Test Banners(Top) */}
       <div className='main-link-div'>
         {currentTestList.slice(0, render_range_points[0]).map((item, idx) => {
