@@ -6,6 +6,7 @@ import { Modal } from 'antd';
 import Lottie from 'react-lottie';
 import * as loading from '../../../loading-animation.json';
 import GoToHomeBtn from '../../Sub/GoToHomeBtn';
+import { Helmet } from 'react-helmet-async';
 
 export const mbti_array = [
   { value: 'ESTJ', label: 'ESTJ' },
