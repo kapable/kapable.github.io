@@ -241,7 +241,7 @@ const MainPage = ({ lang, category }) => {
         </Link>
       );
     }
-  }, [lang, currentCategory]);
+  }, [lang]);
 
   const mainMetaTagRenderer = (lang) => {
     const _metaTagKor = (
