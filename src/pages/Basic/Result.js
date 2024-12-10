@@ -85,6 +85,7 @@ class Result extends Component {
         'todayDresscodeChar',
         'christmasTreeChar',
         'christmasCookieChar',
+        'oldCropChar',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
