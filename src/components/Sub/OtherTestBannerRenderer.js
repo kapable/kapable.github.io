@@ -100,6 +100,31 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
         </>
       ) : (
         <>
+          {current_lang === 'Kor' && (
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href={`https://ktestone.com/compatibility/`}
+              className='to-ppl-banner-text'
+            >
+              {' '}
+              <img
+                loading='lazy'
+                src={
+                  'https://images.ktestone.com/main-thumbnail/compatibility-thumb.png'
+                }
+                className='ppl-banner-img'
+                alt={`compatibility-thumb`}
+                onClick={() =>
+                  _eventSenderGA(
+                    'Paging',
+                    'Click Go-another-Test-Banner Button',
+                    'result page'
+                  )
+                }
+              />{' '}
+            </a>
+          )}
           {bottom_test_list.map((test) => {
             return (
               <Fragment key={test?.info?.mainUrl + '-test-key'}>
