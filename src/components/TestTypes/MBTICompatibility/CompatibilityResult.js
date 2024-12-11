@@ -49,6 +49,15 @@ const CompatibilityResult = () => {
       {result ? (
         <>
           <CompatibilityScores result={result} />
+          <img
+            style={{
+              width: '100%',
+              margin: '3rem auto 0',
+              borderRadius: '1rem',
+            }}
+            src='https://images.ktestone.com/meta/compatibility/compatibility-result-banner.jpg'
+            alt='result-desc-banner'
+          />
           <CompatibilityDesc result={result} />
           <Button
             style={{ width: '100%', height: '3rem' }}

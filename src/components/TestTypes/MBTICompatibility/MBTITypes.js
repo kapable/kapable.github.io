@@ -4,8 +4,11 @@ import React from 'react';
 const MBTITypes = ({ myType, yourType }) => {
   return (
     <div>
-      <h1>MBTI 연애 궁합 테스트 결과</h1>
-      <h3 style={{ color: '#E71C83' }}>by 케이테스트</h3>
+      <img
+        style={{ width: '100%', borderRadius: '1rem' }}
+        src='https://images.ktestone.com/meta/compatibility/compatibility-result-top.jpg'
+        alt='result-top'
+      />
       <Row
         style={{
           border: '1px solid black',

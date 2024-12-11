@@ -1,0 +1,38 @@
+.mbtiCol {
+  background-color: #ffdce5;
+  color: #fe5787;
+  height: 4rem;
+  font-weight: bold;
+  align-content: center;
+  margin: 0.5rem auto;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.mbtiCol:focus,
+.mbtiCol:hover {
+  background-color: #ff5486;
+  color: white;
+}
+
+.mbtiCol.active {
+  background-color: #ff5486; /* Change to desired active color */
+  color: white;
+}
+
+.mbtiTypeDisplay {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff5486;
+}
+
+.mbtiTypeDisplayTitle {
+  color: #ff5486;
+  font-weight: bold;
+  margin: 0.5rem auto;
+  padding-top: 0.5rem;
+}
+
+.selectorTitle {
+  color: #ff5486;
+}

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ProgramTItle from './ProgramTItle';
 import MBTISelector from './MBTISelector';
 import ProgramButtonGroup from './ProgramButtonGroup';
 import { Modal } from 'antd';
@@ -8,6 +7,7 @@ import * as loading from '../../../loading-animation.json';
 import GoToHomeBtn from '../../Sub/GoToHomeBtn';
 import { Helmet } from 'react-helmet-async';
 import AdsenseAdvertiser from '../../Sub/AdsenseAdvertiser';
+import MBTIDisplay from './MBTIDisplay';
 
 export const mbti_array = [
   { value: 'ESTJ', label: 'ESTJ' },
@@ -38,8 +38,8 @@ const defaultOptions = {
 };
 
 const MBTICompatibility = () => {
-  const [myTypes, setMyType] = useState(mbti_array[0].value);
-  const [yourTypes, setYourType] = useState(mbti_array[0].value);
+  const [myTypes, setMyType] = useState('');
+  const [yourTypes, setYourType] = useState('');
   const [mode, setMode] = useState('intro');
 
   const mainMetaTagRenderer = () => {
@@ -109,11 +109,20 @@ const MBTICompatibility = () => {
   return (
     <div style={{ width: '100%', maxWidth: '25rem', margin: '0 auto' }}>
       {mainMetaTagRenderer()}
-      <ProgramTItle />
+      <img
+        src='https://images.ktestone.com/introImages/compatibility-intro.jpg'
+        alt='MBTI 성격유형 궁합'
+        style={{ width: '100%', borderRadius: '1rem' }}
+      />
+      <MBTIDisplay myTypes={myTypes} yourTypes={yourTypes} />
       <MBTISelector
         mbti_array={mbti_array}
+        myTypes={myTypes}
+        yourTypes={yourTypes}
         setMyType={setMyType}
         setYourType={setYourType}
+        mode={mode}
+        setMode={setMode}
       />
       <AdsenseAdvertiser
         client={`ca-pub-2382342018701919`}
@@ -127,7 +136,10 @@ const MBTICompatibility = () => {
         yourTypes={yourTypes}
         setMode={setMode}
         mode={mode}
+        setMyType={setMyType}
+        setYourType={setYourType}
       />
+      <h5>소중한 사람과의 MBTI 연애 궁합을 알아보세요😍</h5>
       {mode === 'loading' && (
         <Modal
           title={<Lottie options={defaultOptions} height={120} width={120} />}
