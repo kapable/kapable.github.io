@@ -5,6 +5,7 @@ import { difficulties } from '../../api/COLORPICKING';
 import { _eventSenderGA } from '../../tools/tools';
 import { balanceTests } from '../../api/BALANCEGAME';
 import { bingo } from '../../api/BINGO';
+import KakaoAds from './KakaoAds';
 
 const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
   const current_lang = lang;
@@ -134,6 +135,8 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
               </Fragment>
             );
           })}
+          <KakaoAds unit='banner' />
+          <KakaoAds unit='square' />
           {bingoListArray.map((test) => {
             return (
               <Fragment key={test.title + '-test-key'}>
