@@ -47,10 +47,13 @@ const MBTICompatibility = () => {
       <Helmet>
         {/* <!-- Primary Meta Tags --> */}
         <title>MBTI 연애 궁합 테스트 - 케이테스트</title>
-        <meta name='title' content='MBTI 연애 궁합 테스트  - 케이테스트' />
+        <meta
+          name='title'
+          content='MBTI 연애 궁합 테스트  - 케이테스트 | MBTI 궁합 연애편 내 mbti와 상대방 mbti 궁합을 알아보세요 | 나와 상대방의 MBTI 연애 궁합은 어떨까?'
+        />
         <meta
           name='description'
-          content='MBTI 연애 궁합 테스트  - 케이테스트 | 우리의 연애 MBTI 연애 궁합은 어떨까 ?'
+          content='MBTI 연애 궁합 테스트  - 케이테스트 | MBTI 궁합 연애편 내 mbti와 상대방 mbti 궁합을 알아보세요 | 나와 상대방의 MBTI 연애 궁합은 어떨까?'
           data-react-helmet='true'
         />
         <meta
@@ -68,7 +71,7 @@ const MBTICompatibility = () => {
         />
         <meta
           property='og:description'
-          content='MBTI 연애 궁합 테스트  - 케이테스트 | 우리의 연애 MBTI 연애 궁합은 어떨까 ?'
+          content='MBTI 연애 궁합 테스트  - 케이테스트 | MBTI 궁합 연애편 내 mbti와 상대방 mbti 궁합을 알아보세요 | 나와 상대방의 MBTI 연애 궁합은 어떨까?'
         />
         <meta
           property='og:image'
@@ -76,7 +79,7 @@ const MBTICompatibility = () => {
         />
         <meta
           property='og:image:alt'
-          content='MBTI 연애 궁합 테스트  - 케이테스트 | 우리의 연애 MBTI 연애 궁합은 어떨까 ?'
+          content='MBTI 연애 궁합 테스트  - 케이테스트 | MBTI 궁합 연애편 내 mbti와 상대방 mbti 궁합을 알아보세요 | 나와 상대방의 MBTI 연애 궁합은 어떨까?'
         />
 
         {/* <!-- Twitter --> */}
@@ -91,7 +94,7 @@ const MBTICompatibility = () => {
         />
         <meta
           property='twitter:description'
-          content='MBTI 연애 궁합 테스트  - 케이테스트 | 우리의 연애 MBTI 연애 궁합은 어떨까 ?'
+          content='MBTI 연애 궁합 테스트  - 케이테스트 | MBTI 궁합 연애편 내 mbti와 상대방 mbti 궁합을 알아보세요 | 나와 상대방의 MBTI 연애 궁합은 어떨까?'
         />
         <meta
           property='twitter:image'
@@ -99,7 +102,7 @@ const MBTICompatibility = () => {
         />
         <meta
           property='twitter:image:alt'
-          content='MBTI 연애 궁합 테스트  - 케이테스트 | 우리의 연애 MBTI 연애 궁합은 어떨까 ?'
+          content='MBTI 연애 궁합 테스트  - 케이테스트 | MBTI 궁합 연애편 내 mbti와 상대방 mbti 궁합을 알아보세요 | 나와 상대방의 MBTI 연애 궁합은 어떨까?'
         />
       </Helmet>
     );
@@ -139,7 +142,13 @@ const MBTICompatibility = () => {
         setMyType={setMyType}
         setYourType={setYourType}
       />
-      <h5>소중한 사람과의 MBTI 연애 궁합을 알아보세요😍</h5>
+      <h4>MBTI 궁합 연애편</h4>
+      <p style={{ fontSize: '0.7rem' }}>
+        내 mbti와 상대방 mbti 궁합을 알아보세요
+        <br />
+        나와 상대방의 MBTI 연애 궁합은 어떨까?
+      </p>
+
       {mode === 'loading' && (
         <Modal
           title={
