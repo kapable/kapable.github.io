@@ -56,11 +56,11 @@ const MBTICompatibility = () => {
           name='purpleads-verification'
           content='67e5e9a6f3495f65f6b05cee'
         />
-        <link rel='main-url' href={`https://ktestone.com/alcoholGames/`} />
+        <link rel='main-url' href={`https://ktestone.com/compatibility/`} />
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://ktestone.com/alcoholGames/' />
+        <meta property='og:url' content='https://ktestone.com/compatibility/' />
         <meta
           property='og:title'
           content='MBTI 연애 궁합 테스트  - 케이테스트'
@@ -71,7 +71,7 @@ const MBTICompatibility = () => {
         />
         <meta
           property='og:image'
-          content='https://images.ktestone.com/default/alcoholGames-main-header.png'
+          content='https://images.ktestone.com/introImages/compatibility-intro.jpg'
         />
         <meta
           property='og:image:alt'
@@ -82,7 +82,7 @@ const MBTICompatibility = () => {
         <meta property='twitter:card' content='summary_large_image' />
         <meta
           property='twitter:url'
-          content='https://ktestone.com/alcoholGames/'
+          content='https://ktestone.com/compatibility/'
         />
         <meta
           property='twitter:title'
@@ -94,7 +94,7 @@ const MBTICompatibility = () => {
         />
         <meta
           property='twitter:image'
-          content='https://images.ktestone.com/default/alcoholGames-main-header.png'
+          content='https://images.ktestone.com/introImages/compatibility-intro.jpg'
         />
         <meta
           property='twitter:image:alt'
