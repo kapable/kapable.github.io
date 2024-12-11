@@ -31,14 +31,6 @@ const ProgramButtonGroup = ({
         navigate(`/compatibility/${myTypes}-${yourTypes}`, {
           state: { myTypes, yourTypes },
         });
-        // navigate(`/${title}/result/`, {
-        //   state: {
-        //     title,
-        //     contents,
-        //     selectedNumArray,
-        //     size,
-        //   },
-        // });
         return () => {
           clearTimeout(setTimeoutId);
         };

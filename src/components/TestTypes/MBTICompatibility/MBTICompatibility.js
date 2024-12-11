@@ -142,7 +142,12 @@ const MBTICompatibility = () => {
       <h5>소중한 사람과의 MBTI 연애 궁합을 알아보세요😍</h5>
       {mode === 'loading' && (
         <Modal
-          title={<Lottie options={defaultOptions} height={120} width={120} />}
+          title={
+            <div>
+              <h3>분석중..</h3>
+              <Lottie options={defaultOptions} height={120} width={120} />
+            </div>
+          }
           open={mode === 'loading'}
           footer={null}
           closable={false}

@@ -21,7 +21,7 @@ const MBTISelector = ({
     // setMode('loading');
   };
   return (
-    <div style={{ margin: '3rem auto' }}>
+    <div style={{ margin: '0 auto 3rem' }}>
       {/* <Row align={'middle'} justify={'center'}>
         <Col span={11}>
           <div style={{ margin: '0.5rem auto' }}>나</div>

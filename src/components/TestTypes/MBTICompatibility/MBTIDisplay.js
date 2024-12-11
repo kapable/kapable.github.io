@@ -1,4 +1,4 @@
-import { Col, Divider, Row } from 'antd';
+import { Col, Row } from 'antd';
 import React from 'react';
 import style from './mbtiSelector.module.css';
 
