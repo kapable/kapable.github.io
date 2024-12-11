@@ -235,7 +235,7 @@ const MainPage = ({ lang, category }) => {
           <img
             loading='lazy'
             className='test-main-img'
-            src={`https://images.ktestone.com/main-thumbnail/compatibilityRenderer-thumb.png`}
+            src={`https://images.ktestone.com/main-thumbnail/compatibility-thumb.png`}
             alt={`compatibility-banner`}
           />
         </Link>
