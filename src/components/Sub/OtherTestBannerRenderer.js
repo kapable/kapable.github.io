@@ -100,7 +100,7 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
         </>
       ) : (
         <>
-          {current_lang === 'Kor' && (
+          {current_lang === 'Kor' && mainUrl !== 'compatibility' && (
             <a
               target='_blank'
               rel='noopener noreferrer'

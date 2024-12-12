@@ -8,6 +8,8 @@ import CompatibilityDesc from './CompatibilityDesc';
 import GoToHomeBtn from '../../Sub/GoToHomeBtn';
 import { LoadingOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
+import AdsenseAdvertiser from '../../Sub/AdsenseAdvertiser';
+import OtherTestBannerRenderer from '../../Sub/OtherTestBannerRenderer';
 
 const CompatibilityResult = () => {
   const navigate = useNavigate();
@@ -44,7 +46,7 @@ const CompatibilityResult = () => {
   }, [myType, yourType]);
 
   return (
-    <div style={{ width: '100%', maxWidth: '25rem', margin: '0 auto' }}>
+    <div style={{ width: '100%', maxWidth: '40rem', margin: '0 auto' }}>
       <MBTITypes myType={myType} yourType={yourType} />
       {result ? (
         <>
@@ -59,6 +61,13 @@ const CompatibilityResult = () => {
             alt='result-desc-banner'
           />
           <CompatibilityDesc result={result} />
+          <AdsenseAdvertiser
+            client={`ca-pub-2382342018701919`}
+            slot={'9210802615'}
+            format='auto'
+            responsive='true'
+            style={{ display: 'block' }}
+          />
           <Button
             style={{ width: '100%', height: '3rem' }}
             type='primary'
@@ -71,6 +80,7 @@ const CompatibilityResult = () => {
         <LoadingOutlined style={{ fontSize: '7rem', margin: '2rem auto' }} />
       )}
       <GoToHomeBtn page={`compatibility result`} />
+      <OtherTestBannerRenderer lang='Kor' mainUrl={'compatibility'} />
     </div>
   );
 };
