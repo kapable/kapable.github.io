@@ -247,14 +247,17 @@ const MainPage = ({ lang, category }) => {
     const _metaTagKor = (
       <Helmet>
         {/* <!-- Primary Meta Tags --> */}
-        <title>취향 분석 테스트 - 케이테스트</title>
+        <title>
+          케이테스트 - 취향분석 테스트(MBTI 검사,연애 성격 검사,MBTI
+          궁합,사주,맞추기게임)
+        </title>
         <meta
           name='title'
           content='케이테스트 - 취향분석 테스트(MBTI 검사,연애 성격 검사,MBTI 궁합,사주,맞추기게임)'
         />
         <meta
           name='description'
-          content='진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트 진단, 퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러'
+          content='진짜 내 모습을 찾아가는 심리 분석 테스트 : 케이테스트,MBTI검사,성격유형검사,무료성격테스트,MBTI궁합,16personalities, 심리테스트, 연애성격테스트,MBTI유형,엠비티아이검사,MBTI성격 테스트'
           data-react-helmet='true'
         />
         <meta
@@ -272,7 +275,7 @@ const MainPage = ({ lang, category }) => {
         />
         <meta
           property='og:description'
-          content='진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트 진단, 퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러'
+          content='진짜 내 모습을 찾아가는 심리 분석 테스트 : 케이테스트,MBTI검사,성격유형검사,무료성격테스트,MBTI궁합,16personalities, 심리테스트, 연애성격테스트,MBTI유형,엠비티아이검사,MBTI성격 테스트'
         />
         <meta
           property='og:image'
@@ -292,7 +295,7 @@ const MainPage = ({ lang, category }) => {
         />
         <meta
           property='twitter:description'
-          content='진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트 진단, 퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러'
+          content='진짜 내 모습을 찾아가는 심리 분석 테스트 : 케이테스트,MBTI검사,성격유형검사,무료성격테스트,MBTI궁합,16personalities, 심리테스트, 연애성격테스트,MBTI유형,엠비티아이검사,MBTI성격 테스트'
         />
         <meta
           property='twitter:image'
