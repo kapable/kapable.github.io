@@ -248,10 +248,13 @@ const MainPage = ({ lang, category }) => {
       <Helmet>
         {/* <!-- Primary Meta Tags --> */}
         <title>취향 분석 테스트 - 케이테스트</title>
-        <meta name='title' content='케이테스트 - 퍼스널 컬러 테스트 진단' />
+        <meta
+          name='title'
+          content='케이테스트 - 취향분석 테스트(MBTI 검사,연애 성격 검사,MBTI 궁합,사주,맞추기게임)'
+        />
         <meta
           name='description'
-          content='케이테스트 - 취향분석 테스트(MBTI 검사,연애 성격 검사,MBTI 궁합,사주,맞추기게임) | 진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트 진단, 퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러'
+          content='진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트 진단, 퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러'
           data-react-helmet='true'
         />
         <meta
@@ -265,11 +268,11 @@ const MainPage = ({ lang, category }) => {
         <meta property='og:url' content='https://ktestone.com/' />
         <meta
           property='og:title'
-          content='케이테스트 - 퍼스널 컬러 테스트 진단'
+          content='케이테스트 - 취향분석 테스트(MBTI 검사,연애 성격 검사,MBTI 궁합,사주,맞추기게임)'
         />
         <meta
           property='og:description'
-          content='케이테스트 - 취향분석 테스트(MBTI 검사,연애 성격 검사,MBTI 궁합,사주,맞추기게임) | 진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트 진단, 퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러'
+          content='진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트 진단, 퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러'
         />
         <meta
           property='og:image'
@@ -285,11 +288,11 @@ const MainPage = ({ lang, category }) => {
         <meta property='twitter:url' content='https://ktestone.com/' />
         <meta
           property='twitter:title'
-          content='케이테스트 - 퍼스널 컬러 테스트 진단'
+          content='케이테스트 - 취향분석 테스트(MBTI 검사,연애 성격 검사,MBTI 궁합,사주,맞추기게임)'
         />
         <meta
           property='twitter:description'
-          content='케이테스트 - 취향분석 테스트(MBTI 검사,연애 성격 검사,MBTI 궁합,사주,맞추기게임) | 진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트 진단, 퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러'
+          content='진짜 내 모습을 찾아가는 심리 분석 테스트 : 퍼스널 컬러 테스트 진단, 퍼스널컬러테스트 , 퍼스널컬러 궁합 테스트, 강아지로보는나테스트 , 심리테스트, 케이테스트, 색깔테스트, 퍼스널컬러'
         />
         <meta
           property='twitter:image'
