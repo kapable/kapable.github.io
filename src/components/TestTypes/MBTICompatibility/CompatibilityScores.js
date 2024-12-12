@@ -3,13 +3,13 @@ import React from 'react';
 
 const CompatibilityScores = ({ result }) => {
   const keyDict = {
-    expression: '로맨틱 표현력',
-    intimacy: '의사소통의 친밀도',
+    expression: '감정 표현 방식',
+    intimacy: '의사소통 방식',
     resolution: '갈등 해결 능력',
-    contribution: '장기적 헌신 가능성',
-    passion: '열정과 설렘 유지',
+    contribution: '장기연애 가능성',
+    passion: '설렘 점수',
     understanding: '서로에 대한 이해',
-    interest: '공유된 관심사',
+    interest: '공통 관심사',
     date: '데이트 만족도',
     reliability: '신뢰 수준',
     marriage: '결혼 가능성 점수',
