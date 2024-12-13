@@ -94,8 +94,6 @@ const MyPage = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await supabase.auth.getUser();
-
       // get user's info
       const { data: userInfo, error: userInfoError } = await supabase
         .from('user_info')
@@ -106,7 +104,7 @@ const MyPage = () => {
         .single();
 
       // fot checking this user is mine
-      if (!data.user || userid !== userInfo?.nickname) {
+      if (!userInfo || userid !== userInfo?.nickname) {
         setIsMyPage(false);
       } else {
         setIsMyPage(true);
@@ -167,7 +165,7 @@ const MyPage = () => {
         {isMyPage ? (
           <p>
             {isNicknameEditMode ? (
-              <div className='nickname-edit' style={{ display: 'contents' }}>
+              <span className='nickname-edit' style={{ display: 'contents' }}>
                 <Input
                   showCount
                   type='text'
@@ -189,7 +187,7 @@ const MyPage = () => {
                 >
                   *{TextsByLanguages[currentLanguage][11]}
                 </p>
-              </div>
+              </span>
             ) : (
               nickname || '닉네임을 입력해주세요. '
             )}
