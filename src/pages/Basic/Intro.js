@@ -79,6 +79,7 @@ class Intro extends Component {
     };
     this._metaTagRenderer = this._metaTagRenderer.bind(this);
     this._onStartButtonClick = this._onStartButtonClick.bind(this);
+    this._onAiSimulatorButtonClick = this._onAiSimulatorButtonClick.bind(this);
     this._onMainButtonClick = this._onMainButtonClick.bind(this);
     this._onShareButtonClick = this._onShareButtonClick.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -172,6 +173,14 @@ class Intro extends Component {
     this.setState({
       mode: 'quiz',
     });
+  }
+
+  _onAiSimulatorButtonClick() {
+    _eventSenderGA(
+      'Paging',
+      `Click ${this.state.current_test.info.mainUrl}Start-test Button`,
+      'intro page'
+    );
   }
 
   _onMainButtonClick() {
@@ -620,18 +629,32 @@ class Intro extends Component {
             >
               {this.state.current_test.info?.description
                 ? this.state.current_test.info?.description
-                : `${this.state.current_test.info?.subTitle}\n${this.state.lang === 'Kor' ? '지금 케이테스트를 통해 살펴보세요✨' : 'Find it NOW with the TEST✨'}`}
+                : `${this.state.current_test.info?.subTitle}\n${this.state.lang === 'Kor' ? '지글 케이테스트를 통해 살펴보세요✨' : 'Find it NOW with the TEST✨'}`}
             </p>
           </div>
 
           <OtherLangIcons currentTest={this.state.current_test.info.mainUrl} />
-
-          <img
-            style={{ width: '100%', maxWidth: '20rem', cursor: 'pointer' }}
-            src={this.state.lang === 'Kor' ? STARTBTN : STARTBTNENG}
-            alt={`${this.state.current_test.info.mainTitle}-start-button`}
-            onClick={this._onStartButtonClick}
-          />
+          {this.state.scoreType === 'aiSimulation' ? (
+            <a
+              href={this.state.current_test.info.gptUrl}
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              <img
+                style={{ width: '100%', maxWidth: '20rem', cursor: 'pointer' }}
+                src={this.state.lang === 'Kor' ? STARTBTN : STARTBTNENG}
+                alt={`${this.state.current_test.info.mainTitle}-start-button`}
+                onClick={this._onAiSimulatorButtonClick}
+              />
+            </a>
+          ) : (
+            <img
+              style={{ width: '100%', maxWidth: '20rem', cursor: 'pointer' }}
+              src={this.state.lang === 'Kor' ? STARTBTN : STARTBTNENG}
+              alt={`${this.state.current_test.info.mainTitle}-start-button`}
+              onClick={this._onStartButtonClick}
+            />
+          )}
 
           <div className='test-intro-with-friend'>
             <CopyToClipboard text={this.state.quiz_url + '/'}>

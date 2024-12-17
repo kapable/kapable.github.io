@@ -7048,7 +7048,9 @@
       "/kapable.github.io/idealTypeBingoMale",
       "/idealTypeBingoFemale",
       "/kapable.github.io/idealTypeBingoFemale",
-      "/compatibility"
+      "/compatibility",
+      "/FMaleFluttingSimulation",
+      "/kapable.github.io/FMaleFluttingSimulation"
     ]
   },
   "eslintConfig": {
