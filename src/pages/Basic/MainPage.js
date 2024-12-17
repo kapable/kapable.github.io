@@ -20,7 +20,7 @@ import UserProfileFloatingBtn from '../../components/Sub/UserProfileFloatingBtn'
 import { USER_INFO_TABLE } from '../../tools/auth';
 
 const MainPage = ({ lang, category }) => {
-  const render_range_points = [7, 11];
+  const render_range_points = [20, 31];
   const mainImgRef = useRef(null);
   const [currentCategory, setCurrentCategory] = useState(category);
   const [currentTestList, setCurrentTestList] = useState(
