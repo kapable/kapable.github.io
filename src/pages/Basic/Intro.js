@@ -349,8 +349,72 @@ class Intro extends Component {
             }
             //   data-react-helmet='true'
           />
-          <link rel='main-url' href={this.state.quiz_url} />
-          <link rel='alternate' href={this.state.quiz_url} hrefLang='en' />
+          <link rel='main-url' href={`${this.state.quiz_url}/`} />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('Eng', '')}/`}
+            hrefLang='ko'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('Eng', '')}Eng/`}
+            hrefLang='en'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('Eng', '')}CN/`}
+            hrefLang='zh-Hans'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('Eng', '')}JP/`}
+            hrefLang='ja'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('Eng', '')}ES/`}
+            hrefLang='es'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('Eng', '')}Rus/`}
+            hrefLang='ru'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('Eng', '')}Ger/`}
+            hrefLang='de'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('Eng', '')}IT/`}
+            hrefLang='it'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('Eng', '')}Arb/`}
+            hrefLang='ar'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('Eng', '')}Fra/`}
+            hrefLang='fr'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('Eng', '')}Ind/`}
+            hrefLang='hi'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('Eng', '')}Malay/`}
+            hrefLang='ms'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('Eng', '')}/`}
+            hrefLang='x-default'
+          />
 
           {/* <!-- Open Graph / Facebook --> */}
           <meta property='og:type' content='website' />
@@ -427,8 +491,72 @@ class Intro extends Component {
             }
             //   data-react-helmet='true'
           />
-          <link rel='main-url' href={this.state.quiz_url} />
-          <link rel='alternate' href={this.state.quiz_url} hrefLang='ja' />
+          <link rel='main-url' href={`${this.state.quiz_url}/`} />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('JP', '')}/`}
+            hrefLang='ko'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('JP', '')}Eng/`}
+            hrefLang='en'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('JP', '')}CN/`}
+            hrefLang='zh-Hans'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('JP', '')}JP/`}
+            hrefLang='ja'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('JP', '')}ES/`}
+            hrefLang='es'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('JP', '')}Rus/`}
+            hrefLang='ru'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('JP', '')}Ger/`}
+            hrefLang='de'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('JP', '')}IT/`}
+            hrefLang='it'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('JP', '')}Arb/`}
+            hrefLang='ar'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('JP', '')}Fra/`}
+            hrefLang='fr'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('JP', '')}Ind/`}
+            hrefLang='hi'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('JP', '')}Malay/`}
+            hrefLang='ms'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace('JP', '')}/`}
+            hrefLang='x-default'
+          />
 
           {/* <!-- Open Graph / Facebook --> */}
           <meta property='og:type' content='website' />
@@ -503,8 +631,72 @@ class Intro extends Component {
             }
             //   data-react-helmet='true'
           />
-          <link rel='main-url' href={this.state.quiz_url} />
-          {/* <link rel='alternate' href={this.state.quiz_url} hrefLang='' /> */}
+          <link rel='main-url' href={`${this.state.quiz_url}/`} />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace(this.state.lang, '')}/`}
+            hrefLang='ko'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace(this.state.lang, '')}Eng/`}
+            hrefLang='en'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace(this.state.lang, '')}CN/`}
+            hrefLang='zh-Hans'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace(this.state.lang, '')}JP/`}
+            hrefLang='ja'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace(this.state.lang, '')}ES/`}
+            hrefLang='es'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace(this.state.lang, '')}Rus/`}
+            hrefLang='ru'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace(this.state.lang, '')}Ger/`}
+            hrefLang='de'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace(this.state.lang, '')}IT/`}
+            hrefLang='it'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace(this.state.lang, '')}Arb/`}
+            hrefLang='ar'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace(this.state.lang, '')}Fra/`}
+            hrefLang='fr'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace(this.state.lang, '')}Ind/`}
+            hrefLang='hi'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace(this.state.lang, '')}Malay/`}
+            hrefLang='ms'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url.replace(this.state.lang, '')}/`}
+            hrefLang='x-default'
+          />
 
           {/* <!-- Open Graph / Facebook --> */}
           <meta property='og:type' content='website' />
