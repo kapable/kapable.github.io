@@ -84,6 +84,7 @@ function App() {
     'characteristic',
     'love',
     'ai',
+    'aiSimulation',
     'etc',
   ]);
 
