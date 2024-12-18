@@ -209,7 +209,72 @@ class Intro extends Component {
             }
             //   data-react-helmet='true'
           />
-          <link rel='main-url' href={this.state.quiz_url} />
+          <link rel='main-url' href={`${this.state.quiz_url}/`} />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url}/`}
+            hrefLang='ko'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url}Eng/`}
+            hrefLang='en'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url}CN/`}
+            hrefLang='zh-Hans'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url}JP/`}
+            hrefLang='ja'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url}ES/`}
+            hrefLang='es'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url}Rus/`}
+            hrefLang='ru'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url}Ger/`}
+            hrefLang='de'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url}IT/`}
+            hrefLang='it'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url}Arb/`}
+            hrefLang='ar'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url}Fra/`}
+            hrefLang='fr'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url}Ind/`}
+            hrefLang='hi'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url}Malay/`}
+            hrefLang='ms'
+          />
+          <link
+            rel='alternate'
+            href={`${this.state.quiz_url}/`}
+            hrefLang='x-default'
+          />
 
           {/* <!-- Open Graph / Facebook --> */}
           <meta property='og:type' content='website' />
@@ -285,6 +350,7 @@ class Intro extends Component {
             //   data-react-helmet='true'
           />
           <link rel='main-url' href={this.state.quiz_url} />
+          <link rel='alternate' href={this.state.quiz_url} hrefLang='en' />
 
           {/* <!-- Open Graph / Facebook --> */}
           <meta property='og:type' content='website' />
@@ -362,6 +428,7 @@ class Intro extends Component {
             //   data-react-helmet='true'
           />
           <link rel='main-url' href={this.state.quiz_url} />
+          <link rel='alternate' href={this.state.quiz_url} hrefLang='ja' />
 
           {/* <!-- Open Graph / Facebook --> */}
           <meta property='og:type' content='website' />
@@ -437,6 +504,7 @@ class Intro extends Component {
             //   data-react-helmet='true'
           />
           <link rel='main-url' href={this.state.quiz_url} />
+          {/* <link rel='alternate' href={this.state.quiz_url} hrefLang='' /> */}
 
           {/* <!-- Open Graph / Facebook --> */}
           <meta property='og:type' content='website' />
