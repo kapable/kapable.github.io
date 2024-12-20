@@ -198,14 +198,14 @@ class Intro extends Component {
             name='title'
             content={
               this.state.current_test.info.mainTitle +
-              '- 케이테스트 | MBTI 테스트 검사'
+              '- 케이테스트 | MBTI 테스트 검사 | 사주, 궁합'
             }
           />
           <meta
             name='description'
             content={
               this.state.current_test.info.subTitle +
-              '- 케이테스트 | MBTI 테스트 검사'
+              '- 케이테스트 | MBTI 테스트 검사 | 사주, 궁합'
             }
             //   data-react-helmet='true'
           />
@@ -283,14 +283,14 @@ class Intro extends Component {
             property='og:title'
             content={
               this.state.current_test.info.mainTitle +
-              '- 케이테스트 | MBTI 테스트 검사'
+              '- 케이테스트 | MBTI 테스트 검사 | 사주, 궁합'
             }
           />
           <meta
             property='og:description'
             content={
               this.state.current_test.info.subTitle +
-              '- 케이테스트 | MBTI 테스트 검사'
+              '- 케이테스트 | MBTI 테스트 검사 | 사주, 궁합'
             }
           />
           <meta
@@ -309,14 +309,14 @@ class Intro extends Component {
             property='twitter:title'
             content={
               this.state.current_test.info.mainTitle +
-              '- 케이테스트 | MBTI 테스트 검사'
+              '- 케이테스트 | MBTI 테스트 검사 | 사주, 궁합'
             }
           />
           <meta
             property='twitter:description'
             content={
               this.state.current_test.info.subTitle +
-              '- 케이테스트 | MBTI 테스트 검사'
+              '- 케이테스트 | MBTI 테스트 검사 | 사주, 궁합'
             }
           />
           <meta
