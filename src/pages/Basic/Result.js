@@ -90,6 +90,7 @@ class Result extends Component {
         'marryMeInvitation',
         'loveMarshmallow',
         'jellyComicChar',
+        'cremeBreadChar',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,
