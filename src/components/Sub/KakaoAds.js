@@ -21,7 +21,7 @@ const KakaoAds = ({ unit }) => {
           className='kakao_ad_area'
           style={{ display: 'none' }}
           data-ad-unit={
-            unit === 'banner' ? 'DAN-fbbw90FYOqpIXWYx' : 'DAN-V36blE3aMpLtsx0g'
+            unit === 'banner' ? 'DAN-yOkueBylYJuSA4fb' : 'DAN-6ItjeAExCKSBoequ'
           }
           data-ad-width={unit === 'banner' ? '320' : '300'}
           data-ad-height={unit === 'banner' ? '50' : '250'}
