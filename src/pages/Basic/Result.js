@@ -75,6 +75,7 @@ class Result extends Component {
         'jellyComicChar',
         'cremeBreadChar',
         'mbtiCharTree',
+        'squidGameWinLose',
       ],
       coupangCookies: Cookies.get('coupang') || null,
       isOpened: false,

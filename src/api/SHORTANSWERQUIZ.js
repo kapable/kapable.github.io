@@ -648,226 +648,631 @@ export const shortAnswerQuizes = [
     },
     questions: [
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/achuPing.png',
         answer: ['아츄핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/aingPing.png',
         answer: ['아잉핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/akdongPing.png',
         answer: ['악동핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/angdaePing.png',
         answer: ['앙대핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/azaPing.png',
         answer: ['아자핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/banePing.png',
         answer: ['바네핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/baroPing.png',
         answer: ['바로핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/bebePing.png',
         answer: ['베베핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/bookkPing.png',
         answer: ['부끄핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/bootooPing.png',
         answer: ['부투핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chachaPing.png',
         answer: ['차차핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chakePing.png',
         answer: ['차캐핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chanaPing.png',
         answer: ['차나핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/cozaPing.png',
         answer: ['코자핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/dajoPing.png',
         answer: ['다조핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddakpoolPing.png',
         answer: ['딱풀핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddaraPing.png',
         answer: ['따라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddiyongPing.png',
         answer: ['띠용핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddokddokPing.png',
         answer: ['똑똑핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddokkaPing.png',
         answer: ['또까핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddubulPing.png',
         answer: ['떠벌핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/duldulPing.png',
         answer: ['덜덜핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ggambbakPing.png',
         answer: ['깜빡핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ggongggonPing.png',
         answer: ['꽁꽁핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/gguggulPing.png',
         answer: ['꺼꿀핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/grimPing.png',
         answer: ['그림핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/haPing.png',
         answer: ['헤핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/heartyouPing.png',
         answer: ['하츄핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/holoPing.png',
         answer: ['홀로핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
         answer: ['모야핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/hwanaPing.png',
         answer: ['화나핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/jjiritPing.png',
         answer: ['찌릿핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/kikiPing.png',
         answer: ['키키핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/lalaPing.png',
         answer: ['라라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
         answer: ['모야핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/mooguPing.png',
         answer: ['무거핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/mooshirPing.png',
         answer: ['무셔핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/narPing.png',
         answer: ['나르핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/noraPing.png',
         answer: ['노라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/noriPing.png',
         answer: ['노리핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/plaPing.png',
         answer: ['플라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/sirorPing.png',
         answer: ['시러핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ssingssingPing.png',
         answer: ['씽씽핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/toyPing.png',
         answer: ['토이핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/twotwoPing.png',
         answer: ['투투핑'],
@@ -891,226 +1296,631 @@ export const shortAnswerQuizes = [
     },
     questions: [
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/achuPing.png',
         answer: ['아츄핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/aingPing.png',
         answer: ['아잉핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/akdongPing.png',
         answer: ['악동핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/angdaePing.png',
         answer: ['앙대핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/azaPing.png',
         answer: ['아자핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/banePing.png',
         answer: ['바네핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/baroPing.png',
         answer: ['바로핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/bebePing.png',
         answer: ['베베핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/bookkPing.png',
         answer: ['부끄핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/bootooPing.png',
         answer: ['부투핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chachaPing.png',
         answer: ['차차핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chakePing.png',
         answer: ['차캐핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chanaPing.png',
         answer: ['차나핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/cozaPing.png',
         answer: ['코자핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/dajoPing.png',
         answer: ['다조핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddakpoolPing.png',
         answer: ['딱풀핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddaraPing.png',
         answer: ['따라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddiyongPing.png',
         answer: ['띠용핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddokddokPing.png',
         answer: ['똑똑핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddokkaPing.png',
         answer: ['또까핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddubulPing.png',
         answer: ['떠벌핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/duldulPing.png',
         answer: ['덜덜핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ggambbakPing.png',
         answer: ['깜빡핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ggongggonPing.png',
         answer: ['꽁꽁핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/gguggulPing.png',
         answer: ['꺼꿀핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/grimPing.png',
         answer: ['그림핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/haPing.png',
         answer: ['헤핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/heartyouPing.png',
         answer: ['하츄핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/holoPing.png',
         answer: ['홀로핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
         answer: ['모야핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/hwanaPing.png',
         answer: ['화나핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/jjiritPing.png',
         answer: ['찌릿핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/kikiPing.png',
         answer: ['키키핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/lalaPing.png',
         answer: ['라라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
         answer: ['모야핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/mooguPing.png',
         answer: ['무거핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/mooshirPing.png',
         answer: ['무셔핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/narPing.png',
         answer: ['나르핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/noraPing.png',
         answer: ['노라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/noriPing.png',
         answer: ['노리핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/plaPing.png',
         answer: ['플라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/sirorPing.png',
         answer: ['시러핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ssingssingPing.png',
         answer: ['씽씽핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/toyPing.png',
         answer: ['토이핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/twotwoPing.png',
         answer: ['투투핑'],
@@ -1134,226 +1944,631 @@ export const shortAnswerQuizes = [
     },
     questions: [
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/achuPing.png',
         answer: ['아츄핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/aingPing.png',
         answer: ['아잉핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/akdongPing.png',
         answer: ['악동핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/angdaePing.png',
         answer: ['앙대핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/azaPing.png',
         answer: ['아자핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/banePing.png',
         answer: ['바네핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/baroPing.png',
         answer: ['바로핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/bebePing.png',
         answer: ['베베핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/bookkPing.png',
         answer: ['부끄핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/bootooPing.png',
         answer: ['부투핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chachaPing.png',
         answer: ['차차핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chakePing.png',
         answer: ['차캐핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chanaPing.png',
         answer: ['차나핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/cozaPing.png',
         answer: ['코자핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/dajoPing.png',
         answer: ['다조핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddakpoolPing.png',
         answer: ['딱풀핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddaraPing.png',
         answer: ['따라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddiyongPing.png',
         answer: ['띠용핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddokddokPing.png',
         answer: ['똑똑핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddokkaPing.png',
         answer: ['또까핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddubulPing.png',
         answer: ['떠벌핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/duldulPing.png',
         answer: ['덜덜핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ggambbakPing.png',
         answer: ['깜빡핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ggongggonPing.png',
         answer: ['꽁꽁핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/gguggulPing.png',
         answer: ['꺼꿀핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/grimPing.png',
         answer: ['그림핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/haPing.png',
         answer: ['헤핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/heartyouPing.png',
         answer: ['하츄핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/holoPing.png',
         answer: ['홀로핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
         answer: ['모야핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/hwanaPing.png',
         answer: ['화나핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/jjiritPing.png',
         answer: ['찌릿핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/kikiPing.png',
         answer: ['키키핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/lalaPing.png',
         answer: ['라라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
         answer: ['모야핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/mooguPing.png',
         answer: ['무거핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/mooshirPing.png',
         answer: ['무셔핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/narPing.png',
         answer: ['나르핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/noraPing.png',
         answer: ['노라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/noriPing.png',
         answer: ['노리핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/plaPing.png',
         answer: ['플라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/sirorPing.png',
         answer: ['시러핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ssingssingPing.png',
         answer: ['씽씽핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/toyPing.png',
         answer: ['토이핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/twotwoPing.png',
         answer: ['투투핑'],
@@ -1377,226 +2592,631 @@ export const shortAnswerQuizes = [
     },
     questions: [
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/achuPing.png',
         answer: ['아츄핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/aingPing.png',
         answer: ['아잉핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/akdongPing.png',
         answer: ['악동핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/angdaePing.png',
         answer: ['앙대핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/azaPing.png',
         answer: ['아자핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/banePing.png',
         answer: ['바네핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/baroPing.png',
         answer: ['바로핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/bebePing.png',
         answer: ['베베핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/bookkPing.png',
         answer: ['부끄핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/bootooPing.png',
         answer: ['부투핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chachaPing.png',
         answer: ['차차핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chakePing.png',
         answer: ['차캐핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/chanaPing.png',
         answer: ['차나핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/cozaPing.png',
         answer: ['코자핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/dajoPing.png',
         answer: ['다조핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddakpoolPing.png',
         answer: ['딱풀핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddaraPing.png',
         answer: ['따라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddiyongPing.png',
         answer: ['띠용핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddokddokPing.png',
         answer: ['똑똑핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddokkaPing.png',
         answer: ['또까핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ddubulPing.png',
         answer: ['떠벌핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/duldulPing.png',
         answer: ['덜덜핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ggambbakPing.png',
         answer: ['깜빡핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ggongggonPing.png',
         answer: ['꽁꽁핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/gguggulPing.png',
         answer: ['꺼꿀핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/grimPing.png',
         answer: ['그림핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/haPing.png',
         answer: ['헤핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/heartyouPing.png',
         answer: ['하츄핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/holoPing.png',
         answer: ['홀로핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
         answer: ['모야핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/hwanaPing.png',
         answer: ['화나핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/jjiritPing.png',
         answer: ['찌릿핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/kikiPing.png',
         answer: ['키키핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/lalaPing.png',
         answer: ['라라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/modaPing.png',
         answer: ['모야핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/mooguPing.png',
         answer: ['무거핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/mooshirPing.png',
         answer: ['무셔핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/narPing.png',
         answer: ['나르핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/noraPing.png',
         answer: ['노라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/noriPing.png',
         answer: ['노리핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/plaPing.png',
         answer: ['플라핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/sirorPing.png',
         answer: ['시러핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/ssingssingPing.png',
         answer: ['씽씽핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/toyPing.png',
         answer: ['토이핑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image:
           'https://images.ktestone.com/meta/catchTeeniepingQuiz/twotwoPing.png',
         answer: ['투투핑'],
