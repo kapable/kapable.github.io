@@ -7017,7 +7017,6 @@
       "/kapable.github.io/acrostic/",
       "/kapable.github.io/fortuneCookie/",
       "/kapable.github.io/todayLuck/",
-      "/kapable.github.io/lifetimeSaju/",
       "/kapable.github.io/fatecharmtest/",
       "/kapable.github.io/blog/",
       "/kapable.github.io/blog/DNAblog",
@@ -7098,7 +7097,9 @@
       "/sajuTotalAi",
       "/kapable.github.io/sajuTotalAi",
       "/sajuMatchingAi",
-      "/kapable.github.io/sajuMatchingAi"
+      "/kapable.github.io/sajuMatchingAi",
+      "/lifetimeSaju",
+      "/kapable.github.io/lifetimeSaju"
     ]
   },
   "eslintConfig": {

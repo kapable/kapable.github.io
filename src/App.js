@@ -20,8 +20,6 @@ import ColorPickerResult from './components/TestTypes/ColorPicker/ColorPickerRes
 import TwoSplitedIntro from './components/TestTypes/TwoSplitedIntro/TwoSplitedIntro';
 import LifeInterpreting from './components/TestTypes/Saju/LifeInterpreting';
 import LifeInterpretingResult from './components/TestTypes/Saju/LifeInterpretingResult';
-import LifetimeSaju from './components/TestTypes/Saju/LifetimeSaju';
-import LifetimeSajuResult from './components/TestTypes/Saju/LifetimeSajuResult';
 import TodayLuck from './components/TestTypes/Saju/TodayLuck';
 import TodayLuckResult from './components/TestTypes/Saju/TodayLuckResult';
 import FortuneCookie from './components/TestTypes/FortuneCookie/FortuneCookie';
@@ -45,6 +43,8 @@ import MBTICompatibility, {
   mbti_array,
 } from './components/TestTypes/MBTICompatibility/MBTICompatibility';
 import CompatibilityResult from './components/TestTypes/MBTICompatibility/CompatibilityResult';
+// import LifetimeSaju from './components/TestTypes/Saju/LifetimeSaju';
+// import LifetimeSajuResult from './components/TestTypes/Saju/LifetimeSajuResult';
 
 let mbti_results_set = [];
 
@@ -473,8 +473,8 @@ function App() {
           element={<LifeInterpretingResult />}
         />
         {/* go to "lifetimeSaju" page */}
-        <Route path='/lifetimeSaju/' element={<LifetimeSaju />} />
-        <Route path='/lifetimeSaju/:query/' element={<LifetimeSajuResult />} />
+        {/* <Route path='/lifetimeSaju/' element={<LifetimeSaju />} />
+        <Route path='/lifetimeSaju/:query/' element={<LifetimeSajuResult />} /> */}
         {/* go to "todayLuck" page */}
         <Route path='/todayLuck/' element={<TodayLuck />} />
         <Route path='/todayLuck/:query/' element={<TodayLuckResult />} />
