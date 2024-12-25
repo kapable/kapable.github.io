@@ -16,134 +16,431 @@ export const shortAnswerQuizes = [
     },
     questions: [
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/1.jpg',
         answer: ['김도윤'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/2.jpg',
         answer: ['김승민'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/3.jpg',
         answer: ['남정석'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/4.jpg',
         answer: ['박준우'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/5.jpg',
         answer: ['방기수'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/6.jpg',
         answer: ['선경 롱게스트', '선경'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/7.jpg',
         answer: ['안유성'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/8.jpg',
         answer: ['에드워드 리'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/9.jpg',
         answer: ['여경래'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/10.jpg',
         answer: ['오세득'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/11.jpg',
         answer: ['이영숙'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/12.jpg',
         answer: ['장호준'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/13.jpg',
         answer: ['정지선'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/14.jpg',
         answer: ['조셉 리저우드', '조셉'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/15.jpg',
         answer: ['조은주'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/16.jpg',
         answer: ['최강록'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/17.jpg',
         answer: ['최지형'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/18.jpg',
         answer: ['최현석'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/19.jpg',
         answer: ['파브리치오 페라리', '파브리치오'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/20.jpg',
         answer: ['황진선'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/1.jpg',
         answer: ['간귀', '현상욱'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/2.jpg',
         answer: ['고기 깡패', '고기깡패', '데이비드 리'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/4.jpg',
         answer: ['골목식당 1호', '골목식당', '골목식당1호', '이창재'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/6.jpg',
         answer: ['광속 요리사', '광속요리사', '우현일'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/8.jpg',
         answer: ['급식 대가', '급식대가', '이미영'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/9.jpg',
         answer: ['껌이지 형', '껌이지형', '챔보', '크리스 햄버수미언'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/10.jpg',
         answer: ['나폴리 맛피아', '나폴리맛피아', '권성준'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/11.jpg',
         answer: ['남극셰프', '남극 셰프', '강경갑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/14.jpg',
         answer: ['돌아온 소년', '돌아온소년', '채낙영'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/16.jpg',
         answer: ['레시피 뱅크', '레시피뱅크', '심광섭'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/17.jpg',
         answer: ['만찢남', '조광효'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/19.jpg',
         answer: ['반찬 셰프', '반찬셰프', '송하슬람'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/21.jpg',
         answer: [
           '본업도 잘하는 남자',
@@ -153,138 +450,444 @@ export const shortAnswerQuizes = [
         ],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/22.jpg',
         answer: ['봉주부', '김봉수'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/23.jpg',
         answer: ['불꽃 남자', '불꽃남자', '박성우'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/24.jpg',
         answer: ['뷔페집 둘째딸', '뷔페집둘째딸', '최서우'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/25.jpg',
         answer: ['비빔대왕', '유비빔'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/27.jpg',
         answer: ['셀럽의 셰프', '셀럽의셰프', '임희원'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/28.jpg',
         answer: ['슈퍼 땅콩', '슈퍼땅콩', '정혜민'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/30.jpg',
         answer: ['승우아빠', '목진화'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/31.jpg',
         answer: ['시크릿 코스', '시크릿코스', '박준승'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/32.jpg',
         answer: ['안산 백종원', '안산백종원', '강기복'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/33.jpg',
         answer: ['야키토리왕', '김병묵'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/34.jpg',
         answer: ['영탉', '오준탁'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/36.jpg',
         answer: ['요리하는 돌아이', '윤남노'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/38.jpg',
         answer: ['원투쓰리', '배경준'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/39.jpg',
         answer: ['월클 레시피', '월클레시피', '최현목'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/40.jpg',
         answer: ['은수저', '오창현'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/41.jpg',
         answer: ['이모카세 1호', '이모카세', '이모카세 1호', '김미령'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/42.jpg',
         answer: ['일식 타짜', '일식타짜', '박세진'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/44.jpg',
         answer: ['장사천재 조사장', '장사천재조사장', '조서형'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/45.jpg',
         answer: ['정육맨', '차원대'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/46.jpg',
         answer: ['제빵 요리사', '제빵요리사', '코바야시 스스무'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/47.jpg',
         answer: ['제주 게하 셰프', '제주게하셰프', '제주게하', '황태원'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/48.jpg',
         answer: ['중식 여신', '중식여신', '박은영'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/49.jpg',
         answer: ['짹짹이', '김지훈태'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/51.jpg',
         answer: ['철가방 요리사', '철가방요리사', '임태훈'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/52.jpg',
         answer: ['청와대 셰프', '청와대셰프', '장지수'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/53.jpg',
         answer: ['치킨 대통령', '치킨대통령', '안병태'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/58.jpg',
         answer: ['키친 갱스터', '키친갱스터', '박지영'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/62.jpg',
         answer: ['트리플 스타', '트리플스타', '강승원'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/63.jpg',
         answer: ['평가절하', '박정현'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/64.jpg',
         answer: ['포커페이스', '김현빈'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/66.jpg',
         answer: ['프렌치돌', '장한이'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/68.jpg',
         answer: ['해피버스데이', '김원기'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/74.jpg',
         answer: ['히든 천재', '히든천재', '김태성'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/75.jpg',
         answer: [
           'B급 셰프',
@@ -297,10 +900,28 @@ export const shortAnswerQuizes = [
         ],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/78.jpg',
         answer: ['300억 반찬 CEO', '300억반찬CEO', '민요한'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/80.jpg',
         answer: ['50억 초밥왕', '50억초밥왕', '이경재'],
       },
@@ -323,54 +944,171 @@ export const shortAnswerQuizes = [
     },
     questions: [
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/1.jpg',
         answer: ['간귀', '현상욱'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/2.jpg',
         answer: ['고기 깡패', '고기깡패', '데이비드 리'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/4.jpg',
         answer: ['골목식당 1호', '골목식당', '골목식당1호', '이창재'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/6.jpg',
         answer: ['광속 요리사', '광속요리사', '우현일'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/8.jpg',
         answer: ['급식 대가', '급식대가', '이미영'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/9.jpg',
         answer: ['껌이지 형', '껌이지형', '챔보', '크리스 햄버수미언'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/10.jpg',
         answer: ['나폴리 맛피아', '나폴리맛피아', '권성준'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/11.jpg',
         answer: ['남극셰프', '남극 셰프', '강경갑'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/14.jpg',
         answer: ['돌아온 소년', '돌아온소년', '채낙영'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/16.jpg',
         answer: ['레시피 뱅크', '레시피뱅크', '심광섭'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/17.jpg',
         answer: ['만찢남', '조광효'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/19.jpg',
         answer: ['반찬 셰프', '반찬셰프', '송하슬람'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/21.jpg',
         answer: [
           '본업도 잘하는 남자',
@@ -380,138 +1118,444 @@ export const shortAnswerQuizes = [
         ],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/22.jpg',
         answer: ['봉주부', '김봉수'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/23.jpg',
         answer: ['불꽃 남자', '불꽃남자', '박성우'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/24.jpg',
         answer: ['뷔페집 둘째딸', '뷔페집둘째딸', '최서우'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/25.jpg',
         answer: ['비빔대왕', '유비빔'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/27.jpg',
         answer: ['셀럽의 셰프', '셀럽의셰프', '임희원'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/28.jpg',
         answer: ['슈퍼 땅콩', '슈퍼땅콩', '정혜민'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/30.jpg',
         answer: ['승우아빠', '목진화'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/31.jpg',
         answer: ['시크릿 코스', '시크릿코스', '박준승'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/32.jpg',
         answer: ['안산 백종원', '안산백종원', '강기복'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/33.jpg',
         answer: ['야키토리왕', '김병묵'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/34.jpg',
         answer: ['영탉', '오준탁'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/36.jpg',
         answer: ['요리하는 돌아이', '윤남노'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/38.jpg',
         answer: ['원투쓰리', '배경준'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/39.jpg',
         answer: ['월클 레시피', '월클레시피', '최현목'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/40.jpg',
         answer: ['은수저', '오창현'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/41.jpg',
         answer: ['이모카세 1호', '이모카세', '이모카세 1호', '김미령'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/42.jpg',
         answer: ['일식 타짜', '일식타짜', '박세진'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/44.jpg',
         answer: ['장사천재 조사장', '장사천재조사장', '조서형'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/45.jpg',
         answer: ['정육맨', '차원대'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/46.jpg',
         answer: ['제빵 요리사', '제빵요리사', '코바야시 스스무'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/47.jpg',
         answer: ['제주 게하 셰프', '제주게하셰프', '제주게하', '황태원'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/48.jpg',
         answer: ['중식 여신', '중식여신', '박은영'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/49.jpg',
         answer: ['짹짹이', '김지훈태'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/51.jpg',
         answer: ['철가방 요리사', '철가방요리사', '임태훈'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/52.jpg',
         answer: ['청와대 셰프', '청와대셰프', '장지수'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/53.jpg',
         answer: ['치킨 대통령', '치킨대통령', '안병태'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/58.jpg',
         answer: ['키친 갱스터', '키친갱스터', '박지영'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/62.jpg',
         answer: ['트리플 스타', '트리플스타', '강승원'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/63.jpg',
         answer: ['평가절하', '박정현'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/64.jpg',
         answer: ['포커페이스', '김현빈'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/66.jpg',
         answer: ['프렌치돌', '장한이'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/68.jpg',
         answer: ['해피버스데이', '김원기'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/74.jpg',
         answer: ['히든 천재', '히든천재', '김태성'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/75.jpg',
         answer: [
           'B급 셰프',
@@ -524,10 +1568,28 @@ export const shortAnswerQuizes = [
         ],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/78.jpg',
         answer: ['300억 반찬 CEO', '300억반찬CEO', '민요한'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsBlack/80.jpg',
         answer: ['50억 초밥왕', '50억초밥왕', '이경재'],
       },
@@ -550,82 +1612,262 @@ export const shortAnswerQuizes = [
     },
     questions: [
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/1.jpg',
         answer: ['김도윤'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/2.jpg',
         answer: ['김승민'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/3.jpg',
         answer: ['남정석'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/4.jpg',
         answer: ['박준우'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/5.jpg',
         answer: ['방기수'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/6.jpg',
         answer: ['선경 롱게스트', '선경'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/7.jpg',
         answer: ['안유성'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/8.jpg',
         answer: ['에드워드 리'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/9.jpg',
         answer: ['여경래'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/10.jpg',
         answer: ['오세득'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/11.jpg',
         answer: ['이영숙'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/12.jpg',
         answer: ['장호준'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/13.jpg',
         answer: ['정지선'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/14.jpg',
         answer: ['조셉 리저우드', '조셉'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/15.jpg',
         answer: ['조은주'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/16.jpg',
         answer: ['최강록'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/17.jpg',
         answer: ['최지형'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/18.jpg',
         answer: ['최현석'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/19.jpg',
         answer: ['파브리치오 페라리', '파브리치오'],
       },
       {
+        which: '',
+        question: '',
+        answers: [
+          {
+            type: '',
+            score: 0,
+            content: ``,
+          },
+        ],
         image: 'https://images.ktestone.com/meta/culinaryClassWarsWhite/20.jpg',
         answer: ['황진선'],
       },
