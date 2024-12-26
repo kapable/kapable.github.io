@@ -157,7 +157,7 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
                   responsive='true'
                   style={{ display: 'block' }}
                 />
-                {index !== 0 && index % 3 === 0 && (
+                {index !== 0 && index % 3 === 0 && current_lang === 'Kor' && (
                   <CoupangDynamicBanner page={'loading'} />
                 )}
               </Fragment>

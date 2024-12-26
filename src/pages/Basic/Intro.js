@@ -927,7 +927,9 @@ class Intro extends Component {
               alt='다른 테스트 하러 뒤로가기'
             />
           </div>
-          <CoupangDynamicBanner page={'loading'} />
+          {this.state.lang === 'Kor' && (
+            <CoupangDynamicBanner page={'loading'} />
+          )}
         </div>
         <UserProfileFloatingBtn user={this.state.user} />
         {!this.state.user && (
