@@ -5,7 +5,7 @@ import { difficulties } from '../../api/COLORPICKING';
 import { _eventSenderGA } from '../../tools/tools';
 import { balanceTests } from '../../api/BALANCEGAME';
 import { bingo } from '../../api/BINGO';
-import KakaoAds from './KakaoAds';
+import CoupangDynamicBanner from './CoupangDynamicBanner';
 
 const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
   const current_lang = lang;
@@ -125,7 +125,7 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
               />{' '}
             </a>
           )}
-          {bottom_test_list.map((test) => {
+          {bottom_test_list.map((test, index) => {
             return (
               <Fragment key={test?.info?.mainUrl + '-test-key'}>
                 <a
@@ -157,11 +157,12 @@ const OtherTestBannerRenderer = ({ lang, mainUrl }) => {
                   responsive='true'
                   style={{ display: 'block' }}
                 />
+                {index !== 0 && index % 3 === 0 && (
+                  <CoupangDynamicBanner page={'loading'} />
+                )}
               </Fragment>
             );
           })}
-          <KakaoAds unit='banner' />
-          <KakaoAds unit='square' />
           {bingoListArray.map((test) => {
             return (
               <Fragment key={test.title + '-test-key'}>

@@ -23,6 +23,7 @@ import { withRouter } from '../../tools/withRouter';
 import UserProfileFloatingBtn from '../../components/Sub/UserProfileFloatingBtn';
 import { supabase } from '../../tools/supabaseClient';
 import { USER_INFO_TABLE } from '../../tools/auth';
+import CoupangDynamicBanner from '../../components/Sub/CoupangDynamicBanner';
 
 class Intro extends Component {
   constructor(props) {
@@ -926,6 +927,7 @@ class Intro extends Component {
               alt='다른 테스트 하러 뒤로가기'
             />
           </div>
+          <CoupangDynamicBanner page={'loading'} />
         </div>
         <UserProfileFloatingBtn user={this.state.user} />
         {!this.state.user && (
